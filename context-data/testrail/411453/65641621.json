@@ -9,27 +9,27 @@
   "steps": [
     "1. Open the Device Settings screen.",
     "2. Navigate to the fit test screen.",
-    "3. On the second screen of the fit test, tap the 'Cancel' button.",
-    "4. Observe that the fit test screen closes and the user is returned to the Device Settings screen.",
+    "3. On the second screen of the fit test, tap 'Cancel'.",
+    "4. Observe that the fit test screen closes and returns to the Device Settings screen.",
     "5. From the Device Settings screen, tap 'Cancel' again.",
-    "6. Observe the behavior after pressing Cancel again."
+    "6. Verify the behavior of pressing Cancel again after the test is closed."
   ],
-  "expected": "Tapping \"Cancel\" or failing the test on the second screen closes the fit test screen and returns the user to the Device Settings screen. Pressing Cancel again after the test is closed should behave correctly (e.g., no crash, no unexpected navigation).",
+  "expected": "Tapping \"Cancel\" on the second screen of the fit test closes the fit test screen and returns the user to the Device Settings screen. Pressing Cancel again after the test is closed should behave correctly (e.g., no crash, no unexpected navigation).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "fit test",
     "Cancel button",
+    "fit test",
     "Device Settings",
     "second screen",
     "close fit test",
     "navigation",
-    "return to settings",
-    "cancel behavior"
+    "fit test cancellation",
+    "return to settings"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "862b09fd9404ce6a560e7e72ddb610ed30c57638e2917e5f83eb1487e2d3aa33",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.394212Z",
+  "processed_at": "2026-04-24T11:50:53.232463Z",
   "status": "active"
 }
