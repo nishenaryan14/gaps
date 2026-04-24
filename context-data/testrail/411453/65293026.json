@@ -1,0 +1,41 @@
+{
+  "id": "65293026",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Complete on-boarding flow",
+  "feature": "Onboarding",
+  "scenario": "Complete first-time on-boarding flow from app launch to Home screen, handling all modals and tutorial screens.",
+  "steps": [
+    "Start the app for the first time",
+    "Handle notification modal",
+    "Accept license agreement",
+    "Continue as guest",
+    "Respond to 'Help us improve your experience' modal",
+    "Respond to Location modal",
+    "View 'Welcome to Poly Studio' screen",
+    "Tap Get Started",
+    "Swipe through 'Organized' screen",
+    "Swipe through 'Up-to-Date' screen",
+    "Swipe through 'Personal' screen",
+    "Tap Continue to reach the app Home screen"
+  ],
+  "expected": "User completes the full on-boarding flow and reaches the app Home screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "first-time onboarding",
+    "app launch flow",
+    "notification modal",
+    "license agreement",
+    "guest login",
+    "location permission",
+    "tutorial screens",
+    "welcome screen"
+  ],
+  "source_last_updated": "1768392863",
+  "source_hash": "396e93e0be99d0a9cc2d8684723dae2095cb3981be64bc00998d36b79839243a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "status": "active"
+}
