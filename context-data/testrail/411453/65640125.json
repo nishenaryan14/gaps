@@ -1,0 +1,31 @@
+{
+  "id": "65640125",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Policy: Policies Applied - Restart the app",
+  "feature": "Policy",
+  "scenario": "Verify that policies applied to a device persist and update correctly after app restarts",
+  "steps": [
+    "Start the app, log in, and create a policy for the device.",
+    "Re-launch the app and check that settings affected by the policy are still locked.",
+    "Turn off the app, make changes to the policy, then start the app again and verify the changes are properly applied."
+  ],
+  "expected": "Policies applied to a device persist after restarting the app. Settings affected by the policy remain locked after re-launch, and any changes made to the policy are properly applied upon restart.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "policy persistence",
+    "policy update",
+    "app restart",
+    "device policy",
+    "policy verification",
+    "policy enforcement",
+    "policy change propagation"
+  ],
+  "source_last_updated": "1760949373",
+  "source_hash": "aad7077667aa415712daea04670ef3c7e74da3c6c494d575e2d11f978b6fe3e9",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.421344Z",
+  "status": "active"
+}
