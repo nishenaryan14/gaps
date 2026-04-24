@@ -1,0 +1,30 @@
+{
+  "id": "65248804",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Screen with No Devices Connected",
+  "feature": "Find My Device",
+  "scenario": "Verify the \"No Devices Connected\" screen displays correctly when opening Find My Device from App Settings",
+  "steps": [
+    "1. Open the Find My Device feature from App Settings.",
+    "2. Observe the screen that appears when no devices are connected."
+  ],
+  "expected": "The screen displays a map, a warning sign, the text \"No devices were found. Connect your Poly device using Bluetooth and try again.\", and a \"Not seeing your device?\" button.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "No Devices Connected",
+    "App Settings",
+    "empty state",
+    "device list",
+    "screen display",
+    "verification"
+  ],
+  "source_last_updated": "1762437205",
+  "source_hash": "84243257d6679e5a76506d27552ab66fc719bd4467b40b1a2282ea748abc43ce",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.460400Z",
+  "status": "active"
+}
