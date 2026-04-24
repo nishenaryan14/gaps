@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "[Cloud] Flamingo - Unpairing the charge case from the headset",
   "feature": "Cloud - Device Unpairing",
-  "scenario": "Verify that unpairing the charge case from the headset results in the device being removed from the app, phone, and cloud, and reconnecting shows only the standalone headset without charge case info.",
+  "scenario": "Verify that unpairing the charge case from the headset results in the device appearing as a standalone headset (\"Voyager Legend 50\") with only headset info on the cloud web page.",
   "steps": [
-    "In app, go to device settings > Reset Device, tap 'Clear' next to Clear Trusted Device list",
-    "Remove device from app and phone Bluetooth settings",
-    "On cloud web page, find and remove device",
-    "Connect headset to app",
-    "On cloud web page, find device"
+    "1) In the app, go to Device Settings > Reset Device, then tap 'Clear' next to 'Clear Trusted Device list'.",
+    "2) Remove the device from the app and from the phone's Bluetooth settings.",
+    "3) On the cloud web page, find and remove the device.",
+    "4) Reconnect the headset to the app.",
+    "5) Go to the cloud web page and find the device."
   ],
-  "expected": "Device visible as \"Voyager Legend 50\" with only headset info and image",
+  "expected": "After unpairing, the device appears as a standalone headset only (\"Voyager Legend 50\") with only headset info/image visible on the cloud web page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "unpair charge case",
-    "remove device from app",
-    "remove device from phone Bluetooth",
-    "remove device from cloud",
-    "reconnect headset",
     "standalone headset",
+    "Voyager Legend 50",
+    "cloud web page",
     "clear trusted device list",
-    "device reset"
+    "remove device",
+    "reconnect headset",
+    "device info"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "3136932b413394d928d56d7cca36f8e2e65ef6c7608dd47ab41c617074f08efe",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "processed_at": "2026-04-24T11:50:53.349973Z",
   "status": "active"
 }
