@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Support - App, user not logged ever, login, Continue, login",
   "feature": "Support - App",
-  "scenario": "Guest user sees white screen with spinner instead of support data after logging in from Support > App > Login flow",
+  "scenario": "Guest user logs in via Support flow and sees a white screen with spinner instead of card data after login",
   "steps": [
     "Install the mobile app",
     "Go through onboarding as Guest",
@@ -13,24 +13,24 @@
     "Click the App button",
     "Click Login",
     "Click Continue",
-    "Complete the login process"
+    "Complete the login process to log into the Lens account"
   ],
-  "expected": "The screen displays the correct data: App version, tenant name, tenant ID, user ID, app ID, last connection.",
+  "expected": "After login, the user should see card data including App version, tenant name, tenant ID, user ID, app ID, and last connection.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "guest user",
-    "white screen",
-    "spinner",
-    "support data",
-    "login flow",
-    "mobile app",
-    "onboarding",
-    "hamburger menu"
+    "Guest user login",
+    "Support flow",
+    "White screen",
+    "Spinner",
+    "Card data not loading",
+    "Mobile app onboarding",
+    "Lens account login",
+    "Hamburger menu navigation"
   ],
   "source_last_updated": "1759751931",
   "source_hash": "efbd95c884c51834fedc0bf152c5437c820c3b1ee63e3590e157e2f13bcbccda",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.360909Z",
+  "processed_at": "2026-04-24T11:50:53.184962Z",
   "status": "active"
 }
