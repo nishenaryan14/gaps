@@ -1,0 +1,36 @@
+{
+  "id": "LMW-2337",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS \ud83d\udfe5 Incorrect name and inaccessible settings after deleting device ",
+  "feature": "iOS App - Device Management",
+  "scenario": "After deleting a paired device, the remaining device's name and connection status incorrectly reflect the deleted device, and its settings become inaccessible until the app is restarted.",
+  "description_clean": "After deleting a paired device from the app, the user is returned to the home screen of the remaining device, but the name and connection status incorrectly reflect the deleted device. Additionally, the user cannot open settings for the remaining device. Restarting the app resolves the issue.",
+  "steps": [
+    "Open the app and ensure at least two devices are paired.",
+    "Navigate to the device list and select a paired device.",
+    "Delete the selected device from the app.",
+    "Observe the home screen that appears after deletion.",
+    "Attempt to open settings for the remaining device."
+  ],
+  "expected": "After deleting a device, the home screen should display the correct name and connection status of the remaining device, and the user should be able to open settings for the remaining device.",
+  "actual": "After deleting a device, the home screen shows the name and connection status of the deleted device instead of the remaining device, and the user cannot open settings for the remaining device. Restarting the app resolves the issue.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "paired device deletion",
+    "device name mismatch",
+    "connection status error",
+    "settings inaccessible",
+    "app restart required",
+    "device list UI bug",
+    "remaining device state"
+  ],
+  "source_last_updated": "2026-04-20T13:29:52.000+0000",
+  "source_hash": "c5642b495a72eac6c54e9c0c7b5686e55dc36594ee9f2ccc1abb02fcb07e3c94",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.039497Z",
+  "status": "active"
+}
