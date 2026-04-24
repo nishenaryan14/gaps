@@ -1,0 +1,39 @@
+{
+  "id": "LMW-2512",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS | User can get stuck on Supported Devices screen",
+  "feature": "iOS App - Supported Devices Screen",
+  "scenario": "User gets stuck on Supported Devices screen when navigating back and forth within 2 seconds with no headset connected",
+  "description_clean": "User can get stuck on the Supported Devices screen if it is closed and reopened within ~2 seconds. This occurs when accessing the screen from the home screen while no headset is connected. Steps: launch app with no device connected, tap \"Select Device\", go back via \"<\", tap \"Select Device\" again within 2 seconds, then tap \"<\" again. Expected: user should be able to navigate freely.",
+  "steps": [
+    "Launch the app with no device connected.",
+    "Tap 'Select Device'.",
+    "Go back via '<'.",
+    "Tap 'Select Device' again within 2 seconds.",
+    "Tap '<' again."
+  ],
+  "expected": "User should be able to navigate freely.",
+  "actual": "User can get stuck on the Supported Devices screen.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [
+    "NeedsEngineeringReview"
+  ],
+  "keywords": [
+    "Supported Devices screen",
+    "navigation stuck",
+    "back button",
+    "Select Device",
+    "no headset connected",
+    "rapid navigation",
+    "UI freeze",
+    "2 seconds"
+  ],
+  "source_last_updated": "2026-04-15T08:55:23.000+0000",
+  "source_hash": "0c6f17de704111a0acac2651ac859501c24009ab168170b8f4f7b1c2da4b7d3d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.056019Z",
+  "status": "active"
+}
