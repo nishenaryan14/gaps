@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Verify software update flow in guest mode",
   "feature": "Guest Mode / Software Update",
-  "scenario": "Verify the software update flow works correctly when the user is in guest mode",
+  "scenario": "Verify software update flow works correctly when user is in guest mode with Spanish language selected",
   "steps": [
     "1. Launch the Poly Studio app.",
-    "2. Select 'Continue as Guest' to enter guest mode.",
+    "2. Select 'Continue as guest' to enter guest mode.",
     "3. Navigate to the menu.",
     "4. Change the language to Spanish.",
-    "5. Access the support menu.",
-    "6. Check the device button behavior.",
-    "7. Verify the help guide page loads."
+    "5. Access the Support page.",
+    "6. Access the Device page.",
+    "7. Verify the expected UI behavior on all accessed pages."
   ],
-  "expected": "The software update flow works correctly in guest mode. The help guide page loads successfully.",
+  "expected": "The software update flow works correctly in guest mode. All UI elements display properly in Spanish on the Support and Device pages, with no errors or inconsistencies.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "guest mode",
+    "Spanish language",
     "software update",
     "Poly Studio app",
-    "language change",
-    "Spanish",
-    "support menu",
-    "device button",
-    "help guide"
+    "Support page",
+    "Device page",
+    "UI verification",
+    "localization"
   ],
   "source_last_updated": "1775727607",
   "source_hash": "e0fe4dcdc158b9d209a91f9db5f7c52234ae4c09172196d3adfdef2772f34a41",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:11.668024Z",
+  "processed_at": "2026-04-24T11:50:53.987450Z",
   "status": "active"
 }
