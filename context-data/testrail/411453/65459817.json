@@ -1,0 +1,34 @@
+{
+  "id": "65459817",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "PPIP - Share data button presented after log out",
+  "feature": "PPIP (Privacy & Permissions)",
+  "scenario": "After logging out, the \"Share Data\" toggle incorrectly reappears in app settings instead of remaining hidden as it should after Poly login.",
+  "steps": [
+    "1. Open the app and navigate to Settings.",
+    "2. Log in using Poly credentials.",
+    "3. Observe the 'Share Data' toggle in Settings.",
+    "4. Log out of the app.",
+    "5. Observe the 'Share Data' toggle in Settings again."
+  ],
+  "expected": "After logging in with Poly credentials, the Share Data toggle should no longer be visible in Settings.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Share Data toggle",
+    "logout",
+    "Poly login",
+    "Settings",
+    "toggle visibility",
+    "reappears",
+    "hidden state",
+    "authentication state"
+  ],
+  "source_last_updated": "1762435364",
+  "source_hash": "fe13128cdb13d0e1427234c468f1d370d92bb9e94e7243c2a2cdb52520eb702c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.060270Z",
+  "status": "active"
+}
