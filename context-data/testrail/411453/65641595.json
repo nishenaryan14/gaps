@@ -1,0 +1,36 @@
+{
+  "id": "65641595",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Changes to EQ settings are heard in real time",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Verify that EQ setting changes (presets and custom sliders) are heard in real time while music is playing.",
+  "steps": [
+    "1) Play music on the phone.",
+    "2) Start the app with a device that supports EQ.",
+    "3) Go to Device Settings and tap on the EQ tab.",
+    "4) Change between Bass, Flat, and Bright settings \u2014 changes in the music should be noticeable.",
+    "5) Switch to Custom EQ and move sliders around \u2014 changes in music should be noticeable (user must release the slider for changes to take effect)."
+  ],
+  "expected": "Changes to EQ settings are heard in real time.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ",
+    "equalizer",
+    "presets",
+    "custom sliders",
+    "real-time audio",
+    "music playback",
+    "Bass",
+    "Flat",
+    "Bright",
+    "Device Settings"
+  ],
+  "source_last_updated": "1760956310",
+  "source_hash": "1a07ab20e947f45ac215768be5566229b75488a62d6773707154f073ebd272dd",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "status": "active"
+}
