@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Charge Case update popup should NOT appear for Free 60+ when case can be updated via app",
+    "steps": [
+      "Launch the app with Free 60+ earbuds already paired.",
+      "Ensure the connected Free 60+ Charge Case has outdated firmware that supports in-app update.",
+      "Observe the app home screen after launch completes.",
+      "Check if the Charge Case update popup appears.",
+      "Verify that the Charge Case update option is available within the app settings/device menu."
+    ],
+    "expected": "The Charge Case update popup does NOT appear on app launch. The user can navigate to the device settings and find the Charge Case firmware update option available in-app."
+  },
+  {
+    "title": "Free 60+ Charge Case update popup suppressed when in-app update path exists",
+    "steps": [
+      "Pair Free 60+ earbuds with the mobile app.",
+      "Ensure the Charge Case firmware version is outdated and can be updated via the app.",
+      "Close and restart the app completely.",
+      "Monitor the UI for any popup or modal related to Charge Case firmware update during the splash/loading screen.",
+      "After app fully loads, navigate to the device details or firmware update section."
+    ],
+    "expected": "No Charge Case update popup is displayed during or after app launch. The firmware update option is accessible within the app's device settings, confirming the popup was correctly suppressed."
+  },
+  {
+    "title": "Free 60+ with outdated Charge Case firmware: app restart does not trigger update popup",
+    "steps": [
+      "Connect Free 60+ earbuds with a Charge Case running outdated firmware.",
+      "Open the app and verify the Charge Case can be updated in-app (do not update yet).",
+      "Force close the app.",
+      "Re-launch the app.",
+      "Observe the screen for any popup prompting Charge Case update."
+    ],
+    "expected": "The Charge Case update popup does not appear after app restart. The in-app update option remains available in the device settings."
+  },
+  {
+    "title": "Conditional logic validation: Charge Case update popup hidden when in-app update is available",
+    "steps": [
+      "Set up Free 60+ with a Charge Case that has an available firmware update via the app.",
+      "Launch the app and verify the in-app update option is present in the device menu.",
+      "Restart the app and capture the sequence of UI elements during initialization.",
+      "Assert that no popup or dialog related to Charge Case update is shown.",
+      "Confirm the in-app update option is still accessible after the restart."
+    ],
+    "expected": "The app correctly suppresses the Charge Case update popup when the firmware can be updated directly through the app. The popup is not shown on launch, and the update path remains available in-app."
+  },
+  {
+    "title": "Regression: Free 60+ Charge Case update popup absent after app cold start with updatable firmware",
+    "steps": [
+      "Ensure Free 60+ earbuds are paired and the Charge Case has a pending firmware update available via the app.",
+      "Kill the app process completely (cold start).",
+      "Launch the app from scratch.",
+      "Wait for the app to fully initialize and display the home screen.",
+      "Check for any popup, dialog, or toast message about Charge Case firmware update.",
+      "Navigate to device settings to verify the update option is present."
+    ],
+    "expected": "No Charge Case update popup appears on cold start. The firmware update option is available within the app's device settings, confirming the popup suppression logic works correctly."
+  }
+]
