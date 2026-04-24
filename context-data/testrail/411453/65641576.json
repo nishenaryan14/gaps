@@ -7,13 +7,13 @@
   "feature": "EQ (Equalizer)",
   "scenario": "Verify that the selected EQ value persists after killing and reopening the app for all EQ options (Bass, Flat, Bright, Custom EQ).",
   "steps": [
-    "1. Open the app and navigate to the EQ settings.",
+    "1. Launch the app and navigate to the EQ settings.",
     "2. Select an EQ value (e.g., Bass, Flat, Bright, or Custom EQ).",
-    "3. Kill the app (force close it from the app switcher or device settings).",
+    "3. Force kill the app (close it completely from the app switcher or recent apps).",
     "4. Reopen the app.",
     "5. Navigate back to the EQ settings.",
     "6. Verify that the previously selected EQ value is still selected.",
-    "7. Repeat steps 1-6 for each possible EQ value (Bass, Flat, Bright, Custom EQ)."
+    "7. Repeat steps 1-6 for each of the remaining EQ values (Bass, Flat, Bright, Custom EQ)."
   ],
   "expected": "The selected EQ value persists after killing and reopening the app for all EQ values (Bass, Flat, Bright, Custom EQ).",
   "coverage": [],
@@ -25,12 +25,12 @@
     "Flat",
     "Bright",
     "Custom EQ",
-    "app kill and reopen",
-    "force close app"
+    "force kill app",
+    "app relaunch"
   ],
   "source_last_updated": "1761144534",
   "source_hash": "115285574bcf8f7ff9dba2be09543ca22063e16da487b801b8f082e64e89339b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.400307Z",
+  "processed_at": "2026-04-24T11:50:53.253330Z",
   "status": "active"
 }
