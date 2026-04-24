@@ -5,15 +5,15 @@
   "project": "411453",
   "title": "App Settings - General - Notifications & Device Alerts - Navigation",
   "feature": "App Settings - General - Notifications & Device Alerts",
-  "scenario": "Verify navigation from app settings to Notifications & Device Alerts and back to App Settings page.",
+  "scenario": "Verify navigation from App Settings to Notifications & Device Alerts and back matches Figma design",
   "steps": [
-    "Start app",
-    "Tap App Settings icon (hamburger)",
+    "Start the app",
+    "Tap the App Settings icon (hamburger menu)",
     "Tap General",
     "Tap Notifications & Device Alerts",
     "Tap back"
   ],
-  "expected": "The tab is present as per Figma design. Then user is returned to App Settings page.",
+  "expected": "The Notifications & Device Alerts tab matches Figma design (https://www.figma.com/file/IgfSERyqCoRH3Iyejre5oE/Lens-Mobile?node-id=17096%3A132638). After tapping back, the user returns to the App Settings page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,14 +21,14 @@
     "Notifications & Device Alerts",
     "Navigation",
     "Hamburger menu",
-    "General settings",
+    "General",
     "Back navigation",
-    "Mobile app",
-    "Settings page"
+    "Figma design",
+    "UI verification"
   ],
   "source_last_updated": "1759416431",
   "source_hash": "8cb620288a75e740611cfcaeacc690acdc64e1ddb21358b077a36c3592a4045e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.353822Z",
+  "processed_at": "2026-04-24T11:50:53.144442Z",
   "status": "active"
 }
