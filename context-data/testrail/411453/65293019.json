@@ -1,0 +1,34 @@
+{
+  "id": "65293019",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Eula page - App in the background",
+  "feature": "Onboarding - EULA Page",
+  "scenario": "Verify that after backgrounding the app for 1-2 minutes during EULA onboarding, the app returns to the same page with animation still working and Continue button still blurred.",
+  "steps": [
+    "Open the app and navigate to the EULA page during the onboarding flow.",
+    "Put the app in the background for 1-2 minutes.",
+    "Bring the app back to the foreground.",
+    "Observe the current page displayed.",
+    "Check if the animation on the EULA page is still working.",
+    "Check if the Continue button is still blurred."
+  ],
+  "expected": "The app returns to the same EULA page, the animation is still working, and the Continue button remains blurred.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EULA onboarding",
+    "background app",
+    "foreground resume",
+    "animation working",
+    "Continue button blurred",
+    "app state persistence",
+    "onboarding flow"
+  ],
+  "source_last_updated": "1760528309",
+  "source_hash": "3698b0f0e9c6d603f714fd19b41e4f5946e315e30ecabda61142923dfd6c7304",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.056019Z",
+  "status": "active"
+}
