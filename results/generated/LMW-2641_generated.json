@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Verify no repeated charging notification when one Free20 earbud is worn and other is in open charging case on iOS",
+    "steps": [
+      "1. Launch the app on an iOS device (build 53 or 54).",
+      "2. Ensure Bluetooth is enabled and the Free20 earbuds are paired.",
+      "3. Wear one Free20 earbud (e.g., left) and confirm it is connected and playing audio.",
+      "4. Place the other Free20 earbud (e.g., right) into the open charging case.",
+      "5. Observe the notification area on the iOS device for any charging-related notifications.",
+      "6. Wait for 30 seconds and continue observing for any repeated or duplicate charging notifications.",
+      "7. Remove the earbud from the charging case and place it back in again.",
+      "8. Observe the notification area again for any repeated or duplicate charging notifications."
+    ],
+    "expected": "No repeated or duplicate charging notifications appear on the iOS device when one Free20 earbud is worn and the other is placed in the open charging case. A single charging notification may appear once but must not repeat or duplicate."
+  },
+  {
+    "title": "Verify charging notification appears only once when Free20 earbud is placed in open charging case while other is worn on iOS",
+    "steps": [
+      "1. Launch the app on an iOS device (build 53 or 54).",
+      "2. Ensure Bluetooth is enabled and the Free20 earbuds are paired and connected.",
+      "3. Wear the left Free20 earbud and confirm it is actively connected.",
+      "4. Place the right Free20 earbud into the open charging case.",
+      "5. Observe the iOS notification center for a charging notification.",
+      "6. Dismiss the notification if it appears.",
+      "7. Wait 10 seconds and check if the same charging notification reappears.",
+      "8. Repeat steps 5-7 for a total of 3 cycles."
+    ],
+    "expected": "A charging notification may appear once when the earbud is placed in the case, but it must not reappear or duplicate after being dismissed. No repeated notifications should be observed."
+  },
+  {
+    "title": "Verify no duplicate charging notifications when swapping worn Free20 earbud on iOS",
+    "steps": [
+      "1. Launch the app on an iOS device (build 53 or 54).",
+      "2. Ensure Bluetooth is enabled and the Free20 earbuds are paired.",
+      "3. Wear the left Free20 earbud and place the right earbud in the open charging case.",
+      "4. Observe and note any charging notifications.",
+      "5. After 10 seconds, remove the left earbud from your ear and place it in the charging case.",
+      "6. Remove the right earbud from the charging case and wear it.",
+      "7. Observe the notification area for any charging notifications.",
+      "8. Repeat steps 3-7 two more times, alternating which earbud is worn."
+    ],
+    "expected": "Each time an earbud is placed in the charging case, at most one charging notification should appear. No duplicate or repeated notifications for the same earbud placement event should occur."
+  },
+  {
+    "title": "Verify charging notification behavior when both Free20 earbuds are placed in open charging case on iOS",
+    "steps": [
+      "1. Launch the app on an iOS device (build 53 or 54).",
+      "2. Ensure Bluetooth is enabled and the Free20 earbuds are paired and connected.",
+      "3. Wear both Free20 earbuds and confirm audio playback.",
+      "4. Remove both earbuds and place them simultaneously into the open charging case.",
+      "5. Observe the notification area for charging notifications.",
+      "6. Wait 30 seconds and check for any repeated or duplicate notifications.",
+      "7. Remove both earbuds from the case, wear them again, then place them back in the case one at a time (left first, then right after 5 seconds).",
+      "8. Observe the notification area for charging notifications."
+    ],
+    "expected": "When both earbuds are placed in the charging case simultaneously, at most one charging notification should appear. When placed one at a time, at most two notifications may appear (one per earbud), but no duplicate or repeated notifications should occur for the same earbud."
+  },
+  {
+    "title": "Verify charging notification does not appear when Free20 earbud is removed from open charging case on iOS",
+    "steps": [
+      "1. Launch the app on an iOS device (build 53 or 54).",
+      "2. Ensure Bluetooth is enabled and the Free20 earbuds are paired.",
+      "3. Place one Free20 earbud in the open charging case (with the other already worn).",
+      "4. Observe that a charging notification may appear.",
+      "5. After 10 seconds, remove the earbud from the charging case.",
+      "6. Observe the notification area for any new notifications.",
+      "7. Wait 15 seconds and check again for any notifications."
+    ],
+    "expected": "No charging notification should appear when an earbud is removed from the charging case. Notifications should only trigger when an earbud is placed into the case, not when removed."
+  }
+]
