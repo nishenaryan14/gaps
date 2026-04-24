@@ -1,0 +1,113 @@
+{
+  "bug_id": "LMW-2608",
+  "matched_testcases": [
+    "65458387",
+    "65293009",
+    "65293034",
+    "65293028",
+    "65293010",
+    "65293019",
+    "65293025",
+    "65293011",
+    "65293016",
+    "65293012",
+    "65293013",
+    "65293014",
+    "65293015",
+    "65293021",
+    "65293022"
+  ],
+  "coverage_status": "none",
+  "gaps": [
+    "No existing test case covers device management, policy management, or device visibility in Manage -> Policies -> Individual Device list.",
+    "No test case covers the scenario of a specific device model (VFree 60+) being absent from the policy management list while present in Inventory.",
+    "No test case covers policy assignment or removal from Inventory for any device.",
+    "All existing test cases are focused on onboarding/EULA screens, location permissions, and splash screen display - none relate to device management or policy workflows."
+  ],
+  "generated_testcases": [
+    {
+      "title": "Verify VFree 60+ device appears in Inventory after onboarding",
+      "steps": [
+        "Navigate to the Inventory section of the application.",
+        "Locate the search or filter field.",
+        "Enter 'VFree 60+' as the search term.",
+        "Verify that the VFree 60+ device is listed in the Inventory results.",
+        "Record the device ID or serial number of the VFree 60+ device."
+      ],
+      "expected": "The VFree 60+ device is visible in the Inventory list with its device details (ID, serial number, status) displayed."
+    },
+    {
+      "title": "Verify VFree 60+ device is absent from Manage -> Policies -> Individual Device list",
+      "steps": [
+        "Navigate to Manage -> Policies section.",
+        "Click on 'Individual Device' tab or sub-section.",
+        "Locate the search or filter field within the Individual Device list.",
+        "Enter the device ID or serial number of the VFree 60+ device (previously recorded from Inventory).",
+        "Press Enter or click Search.",
+        "Observe the search results."
+      ],
+      "expected": "The VFree 60+ device is NOT displayed in the Individual Device list under Manage -> Policies, despite being present in Inventory."
+    },
+    {
+      "title": "Verify policy removal is blocked when VFree 60+ device is missing from Individual Device list",
+      "steps": [
+        "Navigate to Manage -> Policies -> Individual Device list.",
+        "Attempt to locate the VFree 60+ device using its device ID or serial number.",
+        "Confirm the device is not listed in the Individual Device list.",
+        "Attempt to perform a policy removal action (e.g., click 'Remove Policy' or similar button) for the VFree 60+ device.",
+        "Observe the system response."
+      ],
+      "expected": "The system does not allow policy removal for the VFree 60+ device because it is not present in the Individual Device list. An appropriate error message or disabled action is displayed."
+    },
+    {
+      "title": "Verify device visibility consistency between Inventory and Manage -> Policies for VFree 60+",
+      "steps": [
+        "Navigate to the Inventory section.",
+        "Search for 'VFree 60+' and confirm the device is listed.",
+        "Record the exact device name, ID, and status from Inventory.",
+        "Navigate to Manage -> Policies -> Individual Device list.",
+        "Search for the same device using the recorded ID or name.",
+        "Compare the visibility status of the device between the two sections."
+      ],
+      "expected": "The VFree 60+ device is present in Inventory but absent from the Manage -> Policies -> Individual Device list, indicating an inconsistency in device visibility across sections."
+    },
+    {
+      "title": "Verify other device models appear correctly in both Inventory and Manage -> Policies -> Individual Device list",
+      "steps": [
+        "Navigate to the Inventory section.",
+        "Select a device model that is NOT VFree 60+ (e.g., a standard device model).",
+        "Record its device ID or serial number.",
+        "Navigate to Manage -> Policies -> Individual Device list.",
+        "Search for the non-VFree 60+ device using its recorded ID or serial number.",
+        "Verify the device appears in the Individual Device list.",
+        "Attempt to remove a policy from this device.",
+        "Observe the result."
+      ],
+      "expected": "The non-VFree 60+ device appears in both Inventory and Manage -> Policies -> Individual Device list, and policy removal can be performed successfully on this device."
+    },
+    {
+      "title": "Verify policy assignment from Inventory for VFree 60+ device",
+      "steps": [
+        "Navigate to the Inventory section.",
+        "Search for and select the VFree 60+ device.",
+        "Look for a 'Assign Policy' or 'Manage Policy' option in the device details or action menu.",
+        "Attempt to assign a policy to the VFree 60+ device from Inventory.",
+        "Observe the system response and any error messages."
+      ],
+      "expected": "The system either successfully assigns the policy from Inventory, or displays an appropriate message indicating that policy management must be done from Manage -> Policies section. If the latter, verify that the device is missing from that section."
+    },
+    {
+      "title": "Verify policy removal from Inventory for VFree 60+ device",
+      "steps": [
+        "Navigate to the Inventory section.",
+        "Search for and select the VFree 60+ device.",
+        "Look for a 'Remove Policy' or 'Unassign Policy' option in the device details or action menu.",
+        "Attempt to remove the policy from the VFree 60+ device directly from Inventory.",
+        "Observe the system response and any error messages."
+      ],
+      "expected": "The system either successfully removes the policy from Inventory, or displays an appropriate message indicating that policy removal must be done from Manage -> Policies section. If the latter, verify that the device is missing from that section, confirming the bug."
+    }
+  ],
+  "analysis_version": "v1",
+  "processed_at": "2026-04-24T12:05:41.599019Z"
+}
