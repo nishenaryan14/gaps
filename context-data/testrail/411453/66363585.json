@@ -1,0 +1,41 @@
+{
+  "id": "66363585",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "DFU - Software Update Page - Disconnecting/Connecting earbuds to check DFU pop up",
+  "feature": "DFU - Software Update Page",
+  "scenario": "Verify that disconnecting and reconnecting earbuds during a DFU process shows a persistent \"Update currently not available\" popup on the Software Update page.",
+  "steps": [
+    "Connect both earbuds to the device.",
+    "Navigate to the Software Update page.",
+    "Disconnect the right earbud.",
+    "Verify that a popup appears with the message: \"Update currently not available, please try back later\".",
+    "Reconnect the right earbud.",
+    "Confirm that the popup persists after reconnection.",
+    "Dismiss the popup.",
+    "Disconnect the left earbud.",
+    "Verify that the same popup appears again.",
+    "Reconnect the left earbud.",
+    "Confirm that the popup persists after reconnection.",
+    "Dismiss the popup."
+  ],
+  "expected": "The popup \"Update currently not available, please try back later\" appears when either earbud is disconnected during a DFU process, and persists after reconnection until dismissed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU process",
+    "earbuds disconnect reconnect",
+    "Software Update page",
+    "Update currently not available popup",
+    "persistent popup",
+    "firmware update",
+    "bluetooth earbuds",
+    "update unavailable"
+  ],
+  "source_last_updated": "1762331664",
+  "source_hash": "7c378dfdf43addfd216ac367341a7f6b57b373fcc21b552fe84015af0e4502c3",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:11.929499Z",
+  "status": "active"
+}
