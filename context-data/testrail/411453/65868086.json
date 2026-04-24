@@ -1,0 +1,32 @@
+{
+  "id": "65868086",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Power on Headset while in the app",
+  "feature": "Device Home Screen",
+  "scenario": "Power on the headset while already inside the app and verify it shows as connected in the UI.",
+  "steps": [
+    "1. Pair and connect headset with the app.",
+    "2. Turn headset off.",
+    "3. Go to the app.",
+    "4. Turn on the headset."
+  ],
+  "expected": "Headset shown as connected in the app's UI.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "headset power on",
+    "app connection status",
+    "headset pairing",
+    "headset reconnect",
+    "UI connected indicator",
+    "headset off/on cycle",
+    "app headset connectivity"
+  ],
+  "source_last_updated": "1761834387",
+  "source_hash": "b1b2acca2fd7dac7a0c8ba14cbe1b29671a0c6b9092e2461b1c58a6570c949b6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.086402Z",
+  "status": "active"
+}
