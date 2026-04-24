@@ -5,27 +5,28 @@
   "project": "411453",
   "title": "Headset settings are changed",
   "feature": "Headset Settings Sync",
-  "scenario": "Verify that headset settings changed on the mobile app are reflected on the Lens tenant after refreshing the page.",
+  "scenario": "Verify that headset settings changed on the mobile app are correctly reflected on the Lens tenant after refreshing the page.",
   "steps": [
     "A mobile user registers a headset to a Lens tenant.",
     "On the Lens tenant, navigate to the device (Inventory or Device user profile) and check the headset's settings values \u2014 they should match the mobile app.",
-    "Change a setting value on the mobile app, refresh the Lens tenant page, and check the headset's settings again \u2014 the new values should now be present on the Lens tenant."
+    "Change a setting value on the mobile app, refresh the Lens tenant page, and verify the new values are now present on the Lens tenant."
   ],
-  "expected": "Headset settings changed on the mobile app are reflected on the Lens tenant after refreshing the page.",
+  "expected": "Headset settings changed on the mobile app are correctly reflected on the Lens tenant after refreshing the page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "headset settings",
     "mobile app",
     "Lens tenant",
-    "device inventory",
     "settings synchronization",
+    "device inventory",
+    "device user profile",
     "page refresh",
-    "device user profile"
+    "settings verification"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "9008db5bcac2b2c964a1708e4767df9acf82cd83ff5ab9e13576eaff86a390f8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "processed_at": "2026-04-24T11:50:53.321465Z",
   "status": "active"
 }
