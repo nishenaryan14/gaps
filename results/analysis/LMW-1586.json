@@ -1,0 +1,135 @@
+{
+  "bug_id": "LMW-1586",
+  "matched_testcases": [
+    "65641608",
+    "65641609",
+    "65641610",
+    "65641611",
+    "65641612",
+    "65641613",
+    "65641620",
+    "65641621",
+    "65641614",
+    "65641615",
+    "65641625",
+    "65641626",
+    "65641627",
+    "65458387",
+    "65293009"
+  ],
+  "coverage_status": "none",
+  "gaps": [
+    "No existing test case covers the scenario of tapping a button on either the primary or non-primary earbud during an active Fit Test.",
+    "No test case verifies the app's behavior/response when a button tap occurs on an earbud while the fit test is running.",
+    "No test case distinguishes between primary and non-primary earbud button taps during the fit test.",
+    "The existing tests cover UI layout, navigation (start/cancel/close/retry), success/fail results, and disconnection scenarios, but none address the interaction of physical button presses during the test."
+  ],
+  "generated_testcases": [
+    {
+      "title": "Fit Test - Tap button on primary earbud during active test shows appropriate feedback",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test",
+        "3. While the fit test is actively running, tap the physical button on the primary earbud",
+        "4. Observe the app's response on screen"
+      ],
+      "expected": "The app displays a clear notification or on-screen message indicating that a button tap was detected on the primary earbud during the fit test. The fit test continues running without crashing or freezing."
+    },
+    {
+      "title": "Fit Test - Tap button on non-primary earbud during active test shows appropriate feedback",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test",
+        "3. While the fit test is actively running, tap the physical button on the non-primary earbud",
+        "4. Observe the app's response on screen"
+      ],
+      "expected": "The app displays a clear notification or on-screen message indicating that a button tap was detected on the non-primary earbud during the fit test. The fit test continues running without crashing or freezing."
+    },
+    {
+      "title": "Fit Test - Tap button on both earbuds sequentially during active test",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test",
+        "3. While the fit test is actively running, tap the button on the primary earbud",
+        "4. Immediately after, tap the button on the non-primary earbud",
+        "5. Observe the app's response on screen"
+      ],
+      "expected": "The app handles both button taps gracefully, displaying appropriate feedback for each tap. The fit test continues running without crashing, freezing, or prematurely ending."
+    },
+    {
+      "title": "Fit Test - Tap button on primary earbud at the exact moment fit test completes",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test",
+        "3. At the precise moment the fit test is completing (showing results), tap the button on the primary earbud",
+        "4. Observe the app's response"
+      ],
+      "expected": "The fit test results are displayed correctly. The button tap does not interfere with the result display, navigation, or any retry/close actions. No crash or inconsistent state occurs."
+    },
+    {
+      "title": "Fit Test - Tap button on non-primary earbud at the exact moment fit test completes",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test",
+        "3. At the precise moment the fit test is completing (showing results), tap the button on the non-primary earbud",
+        "4. Observe the app's response"
+      ],
+      "expected": "The fit test results are displayed correctly. The button tap does not interfere with the result display, navigation, or any retry/close actions. No crash or inconsistent state occurs."
+    },
+    {
+      "title": "Fit Test - Rapidly tap button on primary earbud multiple times during active test",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test",
+        "3. While the fit test is actively running, rapidly tap the button on the primary earbud 5 times in quick succession",
+        "4. Observe the app's response on screen"
+      ],
+      "expected": "The app handles rapid button taps gracefully without crashing. The fit test continues running normally. No unexpected behavior such as test cancellation, result screen appearing prematurely, or UI freezes occurs."
+    },
+    {
+      "title": "Fit Test - Tap button on primary earbud then immediately cancel the fit test",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test",
+        "3. While the fit test is actively running, tap the button on the primary earbud",
+        "4. Immediately tap the 'Cancel' button on screen",
+        "5. Observe the app's response"
+      ],
+      "expected": "The fit test is cancelled successfully. The app returns to the Fit Test start screen without any residual state from the button tap. No crash or UI inconsistency occurs."
+    },
+    {
+      "title": "Fit Test - Tap button on non-primary earbud then immediately retry the fit test",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test and let it complete to show results",
+        "3. Tap the button on the non-primary earbud",
+        "4. Immediately tap the 'Retry' button on screen",
+        "5. Observe the app's response"
+      ],
+      "expected": "A new fit test starts successfully. The button tap on the non-primary earbud does not interfere with the retry action. The fit test runs normally without any inconsistent behavior."
+    },
+    {
+      "title": "Fit Test - Long press button on primary earbud during active test",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test",
+        "3. While the fit test is actively running, long-press the button on the primary earbud for 3 seconds",
+        "4. Observe the app's response on screen"
+      ],
+      "expected": "The app handles the long press appropriately. The fit test continues running or shows appropriate feedback. No crash, freeze, or premature test termination occurs."
+    },
+    {
+      "title": "Fit Test - Tap button on primary earbud during fit test with poor connection",
+      "steps": [
+        "1. Launch the app and navigate to the Fit Test screen",
+        "2. Start a new Fit Test",
+        "3. While the fit test is actively running, simulate a poor Bluetooth connection",
+        "4. Tap the button on the primary earbud",
+        "5. Observe the app's response"
+      ],
+      "expected": "The app handles the combination of poor connection and button tap gracefully. An appropriate error or notification message is displayed. The app does not crash or enter an inconsistent state."
+    }
+  ],
+  "analysis_version": "v1",
+  "processed_at": "2026-04-24T12:05:47.448587Z"
+}
