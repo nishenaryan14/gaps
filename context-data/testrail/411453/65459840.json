@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Notifications - Low battery after unplugging the power cable",
   "feature": "Notifications",
-  "scenario": "Verify that when a device with low battery (below 5%) is unplugged from charging, the notification changes from charging to low battery notification.",
+  "scenario": "Verify that after unplugging the power cable on a device with low battery (below 5%), the charging notification changes to a low battery notification.",
   "steps": [
-    "1. Ensure the device battery is below 5%.",
-    "2. Plug the device into a power source.",
-    "3. Observe the charging notification displayed on the device.",
-    "4. Unplug the power cable from the device.",
-    "5. Observe the notification on the device after unplugging."
+    "Ensure the device battery is below 5%.",
+    "Plug the device into a power source.",
+    "Observe the notification displayed on the app.",
+    "Unplug the power cable from the device.",
+    "Observe the notification displayed on the app after unplugging."
   ],
-  "expected": "After unplugging the power cable, the notification should change to a low battery notification.",
+  "expected": "When the device is plugged in, the app shows a charging notification. After unplugging, the notification changes to a low battery notification.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "low battery",
+    "low battery notification",
     "charging notification",
+    "unplug power cable",
     "battery below 5%",
-    "unplugged",
-    "notification change",
-    "power source",
-    "device charging"
+    "power source disconnect",
+    "charging state change",
+    "battery status notification"
   ],
   "source_last_updated": "1761228671",
   "source_hash": "0b6d98eaabcb1913458084755d7740a5b09b9fc63e26b3aa2859bfb62dcc10da",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "processed_at": "2026-04-24T11:50:53.304002Z",
   "status": "active"
 }
