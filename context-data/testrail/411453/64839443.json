@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Limited Support After Launch Date When LM Version Is Below Required",
   "feature": "Device Home Screen",
-  "scenario": "When a new device is released and the app version does not support it yet, if the current date is after the device's Launch Date and the installed LM version is lower than the required version, the device home screen shows limited support. Tapping the \"i\" icon displays a pop-up message: \"Device support is limited. Update the Poly Lens Mobile app to enable full functionality.\" Tapping outside the pop-up closes it.",
+  "scenario": "When a new device is released and the app version does not support it yet, if the current date is after the device's Launch Date and the installed LM version is lower than the required version, the device home screen shows limited support with a pop-up message.",
   "steps": [
     "1. Ensure a new device is released that the current app version does not support.",
     "2. Verify the current date is after the device's Launch Date.",
-    "3. Confirm the installed LM version is lower than the required version.",
-    "4. Observe the device home screen shows limited support.",
-    "5. Tap the \"i\" icon on the device home screen.",
-    "6. Observe the pop-up message: \"Device support is limited. Update the Poly Lens Mobile app to enable full functionality.\"",
-    "7. Tap outside the pop-up to close it."
+    "3. Confirm the installed LM (Lens Mobile) version is lower than the required version.",
+    "4. Navigate to the device home screen.",
+    "5. Observe the home screen for limited support indication.",
+    "6. Check for the pop-up message."
   ],
-  "expected": "The device home screen shows limited support. Tapping the \"i\" icon displays the pop-up message: \"Device support is limited. Update the Poly Lens Mobile app to enable full functionality.\" Tapping outside the pop-up closes it.",
+  "expected": "The device home screen shows limited support. A pop-up message is displayed: \"Device support is limited. Update the Poly Lens Mobile app to enable full functionality.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "new device release",
-    "limited support",
-    "Poly Lens Mobile app",
-    "app version compatibility",
+    "app version not supported",
     "Launch Date",
-    "LM version",
-    "pop-up message",
-    "device home screen"
+    "LM version lower than required",
+    "limited support",
+    "home screen pop-up message",
+    "device compatibility",
+    "Lens Mobile version"
   ],
   "source_last_updated": "1764663034",
   "source_hash": "b2eff7b230cd463a1c2f4de0cf8e076bc84138e4534ce555c22319ec81dd00de",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.750622Z",
+  "processed_at": "2026-04-24T11:23:05.343114Z",
   "status": "active"
 }
