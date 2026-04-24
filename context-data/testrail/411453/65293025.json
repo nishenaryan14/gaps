@@ -5,31 +5,33 @@
   "project": "411453",
   "title": "Onboarding - Eula page - License Agreement and Privacy Policy links when the internet is turned off",
   "feature": "Onboarding - EULA Page",
-  "scenario": "User taps License Agreement or Privacy Policy links on EULA page without internet and sees \"Something went wrong\" screen, then returns to \"Well hello, first things first...\" screen after tapping Cancel",
+  "scenario": "User taps License Agreement or Privacy Policy links on EULA page without internet connection and sees \"Something went wrong\" screen, then taps Cancel to return to the welcome screen.",
   "steps": [
-    "Turn off internet connection on the device.",
+    "Turn off the internet connection.",
     "Open the app and navigate to the EULA page.",
     "Tap the License Agreement link.",
-    "Observe the screen displayed.",
+    "Observe the result.",
+    "Tap the Privacy Policy link.",
+    "Observe the result.",
     "Tap the Cancel button.",
-    "Observe the resulting screen."
+    "Observe the result."
   ],
-  "expected": "Tapping the License Agreement or Privacy Policy links should display the respective agreement content.",
+  "expected": "Tapping the License Agreement or Privacy Policy links should load the respective content or show an appropriate error message. Tapping Cancel should return to the \"Well hello, first things first...\" screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "EULA",
+    "EULA page",
     "License Agreement",
     "Privacy Policy",
-    "offline",
-    "no internet",
-    "error screen",
+    "no internet connection",
+    "Something went wrong",
     "Cancel button",
-    "app navigation"
+    "welcome screen",
+    "offline behavior"
   ],
   "source_last_updated": "1760528315",
   "source_hash": "0eb2aa1ed38ea63c0fb8a78c84604e51fdcd7d6fcea6253bae5fc7e7f9352691",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.703985Z",
+  "processed_at": "2026-04-24T11:23:05.305793Z",
   "status": "active"
 }
