@@ -5,35 +5,32 @@
   "project": "411453",
   "title": "Mobile user registered on Lens tenant, mobile app data correct",
   "feature": "Mobile App - Lens Tenant",
-  "scenario": "Verify that a mobile user registered on a Lens tenant sees correct tenant data (app version, tenant name, tenant ID, user ID, app ID, last connection date) in the mobile app.",
+  "scenario": "Verify that a mobile user registered on a Lens tenant sees correct tenant data (app version, tenant name, tenant id, user id, app id, last connection date) in the mobile app.",
   "steps": [
     "Open the Poly Support mobile app on the registered device.",
-    "Navigate to the app settings or account/profile section.",
-    "Locate the tenant information section (e.g., 'Tenant Info', 'Account Details', or similar).",
-    "Verify the following fields are displayed and match the expected tenant data:\n   - App version\n   - Tenant name\n   - Tenant ID\n   - User ID\n   - App ID\n   - Last connection date",
-    "Cross-check the displayed values against the actual tenant configuration in the Lens admin portal (if accessible)."
+    "Log in using the credentials of a mobile user registered on a Lens tenant.",
+    "Navigate to the account or settings section where tenant information is displayed.",
+    "Locate and review the displayed tenant data fields.",
+    "Verify that the following fields are present and correctly populated: app version, tenant name, tenant id, user id, app id, and last connection date."
   ],
-  "expected": "The mobile app displays the correct tenant data: app version, tenant name, tenant ID, user ID, app ID, and last connection date, all matching the registered Lens tenant configuration.",
+  "expected": "The mobile app displays all required tenant data fields (app version, tenant name, tenant id, user id, app id, and last connection date) correctly for the registered Lens tenant user.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "mobile user registration",
+    "mobile user",
     "Lens tenant",
-    "tenant data verification",
+    "tenant data",
     "app version",
     "tenant name",
-    "tenant ID",
-    "user ID",
-    "app ID",
+    "tenant id",
+    "user id",
+    "app id",
     "last connection date",
-    "Poly Support mobile app",
-    "tenant info",
-    "account details",
-    "Lens admin portal"
+    "Poly Support mobile app"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "4f7ea0c4661fe018dd4173272903999fd68264d0b904202fb8b66b30e08f9eb2",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "processed_at": "2026-04-24T11:50:53.322651Z",
   "status": "active"
 }
