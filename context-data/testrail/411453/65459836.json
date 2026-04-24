@@ -1,0 +1,37 @@
+{
+  "id": "65459836",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications - Onboarding - Don't Allow, allowed in OS settings, new UI",
+  "feature": "Notifications - Onboarding",
+  "scenario": "Verify notification UI updates correctly when user denies notifications during onboarding but later enables them via OS settings",
+  "steps": [
+    "Install and start the app",
+    "During onboarding, select \"Don't Allow\" for notifications",
+    "Finish onboarding and open the app",
+    "Navigate to App Settings > General > Notifications",
+    "Try to switch the Notifications toggle ON",
+    "Click \"Go to Settings\"",
+    "Enable notifications in OS settings",
+    "Check the new UI in the app for notifications"
+  ],
+  "expected": "All notification settings are unlocked and set to ON, and the user can modify them.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "notification UI",
+    "onboarding",
+    "deny notifications",
+    "OS settings",
+    "enable notifications",
+    "notification toggle",
+    "Go to Settings",
+    "notification permission"
+  ],
+  "source_last_updated": "1761229691",
+  "source_hash": "e78b9f5cac27b0efaaf139d38d91588c7ca16f6af0d93d5e6f1f3c55fcb80725",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "status": "active"
+}
