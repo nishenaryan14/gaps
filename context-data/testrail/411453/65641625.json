@@ -5,27 +5,27 @@
   "project": "411453",
   "title": "Fit test - both earbuds are disconnected, not possible to start the Fit test [TO BE UPDATED]",
   "feature": "Fit Test",
-  "scenario": "Fit test cannot be started when both earbuds are disconnected because the Test button is disabled.",
+  "scenario": "Fit test cannot be started because both earbuds are disconnected, causing the Test button to be disabled in Tutorials, Onboarding, or User Guides.",
   "steps": [
-    "Disconnect both earbuds from the device.",
-    "Open the Fit test feature on the device.",
-    "Observe the state of the Test button."
+    "Open the app and navigate to Tutorials, Onboarding, or User Guides.",
+    "Attempt to start the Fit test.",
+    "Observe the Test button status."
   ],
-  "expected": "The Test button should be enabled to allow the user to start the Fit test.",
+  "expected": "The Test button should be enabled and the Fit test should start.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "fit test",
+    "fit test cannot start",
     "earbuds disconnected",
-    "Test button disabled",
-    "cannot start fit test",
-    "both earbuds disconnected",
-    "fit test feature",
-    "Test button state"
+    "test button disabled",
+    "tutorials onboarding user guides",
+    "fit test troubleshooting",
+    "bluetooth connection issue",
+    "app fit test error"
   ],
   "source_last_updated": "1760963205",
   "source_hash": "831e04a816d64e44bfc84d48e8748d582edd4e12eb6e82a9b7b0dcd5bcb07fee",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.391539Z",
+  "processed_at": "2026-04-24T11:50:53.231451Z",
   "status": "active"
 }
