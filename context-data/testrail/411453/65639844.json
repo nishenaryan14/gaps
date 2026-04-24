@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "1 step DFU - Language update when only CC has update",
   "feature": "DFU (Device Firmware Update)",
-  "scenario": "Verify that a 1-step DFU triggered by a language change correctly updates the Charge Case firmware and applies the selected language when only the Charge Case needs a firmware update and the Earbuds are already on the latest version.",
+  "scenario": "Verify that a 1-step DFU triggered by a language change correctly updates the Charge Case firmware and applies the selected language to the Charge Case UI when only the Charge Case has a pending firmware update.",
   "steps": [
     "Ensure the Earbuds (EB) are on the latest firmware version.",
     "Ensure the Charge Case (CC) has a pending firmware update available.",
     "Initiate a 1-step DFU (Device Firmware Update) by changing the language setting.",
     "Allow the DFU process to complete.",
     "Verify that the Charge Case firmware has been updated to the latest version.",
-    "Verify that the selected language has been applied to the Charge Case interface."
+    "Verify that the selected language is applied to the Charge Case UI."
   ],
-  "expected": "The Charge Case firmware is successfully updated to the latest version, and the selected language is correctly applied to the Charge Case interface.",
+  "expected": "The Charge Case firmware is updated to the latest version, and the selected language is correctly applied to the Charge Case UI.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "1-step DFU",
-    "language change",
     "Charge Case firmware update",
-    "Earbuds latest firmware",
+    "language change",
+    "Charge Case UI",
+    "pending firmware update",
     "Device Firmware Update",
-    "language setting",
-    "Charge Case interface"
+    "firmware version verification"
   ],
   "source_last_updated": "1763381953",
   "source_hash": "3c220543e85a39edb83089113a4d5c45d7a7c5aba1466f412054ff4439d7221b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "processed_at": "2026-04-24T11:50:53.295914Z",
   "status": "active"
 }
