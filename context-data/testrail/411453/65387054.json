@@ -5,28 +5,29 @@
   "project": "411453",
   "title": "User Guides - 'New' tag",
   "feature": "User Guides",
-  "scenario": "Verify that a newly released device displays a 'New' tag in the User Guides list, which remains visible for 6 months from the release date.",
+  "scenario": "Verify that a newly released device displays a 'New' tag in the User Guides list, and that the tag remains visible for 6 months from the device's release date.",
   "steps": [
     "1. Ensure a device has been newly released (within the last 6 months).",
     "2. Navigate to the User Guides list.",
     "3. Locate the newly released device in the list.",
-    "4. Check if a 'New' tag is displayed next to or associated with the device."
+    "4. Observe whether a 'New' tag is displayed next to or associated with the device entry."
   ],
-  "expected": "The 'New' tag is displayed for the newly released device in the User Guides list.",
+  "expected": "The newly released device displays a 'New' tag in the User Guides list. The 'New' tag remains visible for 6 months from the device's release date.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "New tag",
     "User Guides list",
     "newly released device",
-    "6 months",
+    "6 months visibility",
     "release date",
-    "device visibility",
-    "tag display"
+    "device entry",
+    "tag display",
+    "UI verification"
   ],
   "source_last_updated": "1760351784",
   "source_hash": "5e65658530b8af0d6599c02348c8a6fb9fadf19ad19e22bc91ddd357cac187d4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.358898Z",
+  "processed_at": "2026-04-24T11:50:53.171314Z",
   "status": "active"
 }
