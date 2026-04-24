@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Personal User - no headset policy, all settings unlocked",
   "feature": "Personal User - Headset Policy",
-  "scenario": "Personal user with a headset can access and change all headset settings without any locks.",
+  "scenario": "Personal user with a headset can unlock and change all headset settings in the mobile app.",
   "steps": [
-    "Personal user with a headset downloads/installs/logs in (or as Guest) with the mobile app.",
-    "Navigate to the headset settings.",
-    "Check the status and change all settings."
+    "Personal user with headset downloads/installs/logs in (or as Guest) with the mobile app.",
+    "Navigate to headset settings.",
+    "Check status and change all settings."
   ],
-  "expected": "The settings are not locked, all can be changed.",
+  "expected": "Settings are not locked, all can be changed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "personal user",
-    "headset settings",
+    "headset",
     "mobile app",
-    "guest access",
-    "settings change",
-    "no locks",
-    "status check",
-    "headset configuration"
+    "headset settings",
+    "unlock settings",
+    "change settings",
+    "guest login",
+    "device configuration"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "189ee3fd10dbcb73a387a58fedf5fc844098072a90a88589ea25d39f0caf4abf",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.421344Z",
+  "processed_at": "2026-04-24T11:50:53.318318Z",
   "status": "active"
 }
