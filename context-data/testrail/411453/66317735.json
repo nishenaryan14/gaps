@@ -1,0 +1,33 @@
+{
+  "id": "66317735",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - new name on the FMD connected card",
+  "feature": "Device Rename / FMD",
+  "scenario": "Verify that renaming a device updates the device name displayed on the Find My Device connected card.",
+  "steps": [
+    "Start the app with a device that supports rename.",
+    "Navigate to Settings > Rename.",
+    "Change the device name.",
+    "Go to Find My Device (FMD).",
+    "Click on the device name.",
+    "Verify the connected card displays the new name."
+  ],
+  "expected": "The connected card on FMD displays the new device name.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "rename device",
+    "Find My Device",
+    "connected card",
+    "device name update",
+    "Settings rename",
+    "FMD verification"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "7afa80bfc8f6c9e9df39f97ebb03fba7a7a86f907536a2f6405b548cd18c52e2",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.378141Z",
+  "status": "active"
+}
