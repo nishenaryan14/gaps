@@ -1,0 +1,39 @@
+{
+  "id": "65640110",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Headset connection status change reflected on the Cloud",
+  "feature": "Headset Connection Status",
+  "scenario": "Verify headset connection status (green/red mark) is correctly reflected across Device Users, Inventory, Mobile Profile, and Device Profile pages when headset is turned on/off.",
+  "steps": [
+    "1. Turn on the headset.",
+    "2. Navigate to the Device Users/Mobile User page and check the headset connection status.",
+    "3. Navigate to the Inventory page and check the headset connection status.",
+    "4. Navigate to the Mobile Profile page and check the headset connection status.",
+    "5. Navigate to the Device Profile page and check the headset connection status.",
+    "6. Turn off the headset.",
+    "7. Navigate to the Device Users/Mobile User page and check the headset connection status.",
+    "8. Navigate to the Inventory page and check the headset connection status.",
+    "9. Navigate to the Mobile Profile page and check the headset connection status.",
+    "10. Navigate to the Device Profile page and check the headset connection status."
+  ],
+  "expected": "When the headset is turned on, the status should show a green mark across all pages (Device Users/Mobile User, Inventory, Mobile Profile, Device Profile). When the headset is turned off, the status should show a red mark across all pages.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "headset connection status",
+    "green/red mark",
+    "Device Users",
+    "Mobile Profile",
+    "Device Profile",
+    "Inventory page",
+    "turn on/off headset",
+    "connection status verification"
+  ],
+  "source_last_updated": "1760949362",
+  "source_hash": "94b0f9111056c4683fe423cd3ec5d5b51805180b41d674110eb917149ed211ea",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "status": "active"
+}
