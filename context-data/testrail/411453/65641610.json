@@ -1,0 +1,32 @@
+{
+  "id": "65641610",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit test - 1st screen Start Test button",
+  "feature": "Fit Test",
+  "scenario": "Tapping 'Start Test' on the Fit Test first screen should navigate to the second screen as per Figma design.",
+  "steps": [
+    "Start the app with a supported device connected.",
+    "Open Device Settings.",
+    "Navigate to Fit Test.",
+    "Tap the 'Start Test' button."
+  ],
+  "expected": "The 'Start Test' button on the first screen of the Fit Test feature should open the second screen as shown in the Figma design.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Fit Test",
+    "Start Test",
+    "navigation",
+    "screen transition",
+    "Figma design",
+    "device settings",
+    "button tap"
+  ],
+  "source_last_updated": "1760963417",
+  "source_hash": "24895d4b587e5b1e25bcc65aa5c5b3cb2d324e753aaf1b49fa89ad05d080f9d1",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.391539Z",
+  "status": "active"
+}
