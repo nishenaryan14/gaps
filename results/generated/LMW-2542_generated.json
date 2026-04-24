@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Custom EQ slider settings are saved and persist after reopening settings panel (Falcon device)",
+    "steps": [
+      "1. Launch the app and complete onboarding (if required).",
+      "2. Navigate to the Falcon device settings panel.",
+      "3. Locate the EQ settings section.",
+      "4. Adjust one or more EQ sliders to non-default values (e.g., Bass +3dB, Treble -2dB).",
+      "5. Click the 'Save EQ' button.",
+      "6. Confirm the save dialog by clicking 'Save' or 'Confirm'.",
+      "7. Close the settings panel.",
+      "8. Reopen the settings panel for the Falcon device.",
+      "9. Observe the EQ slider positions."
+    ],
+    "expected": "The EQ sliders retain the custom values set in step 4 (e.g., Bass +3dB, Treble -2dB) after reopening the settings panel."
+  },
+  {
+    "title": "Custom EQ settings are not lost when switching away from and back to Falcon device",
+    "steps": [
+      "1. Launch the app and complete onboarding (if required).",
+      "2. Navigate to the Falcon device settings panel.",
+      "3. Adjust EQ sliders to custom values (e.g., Bass +5dB, Mid 0dB, Treble -1dB).",
+      "4. Click 'Save EQ' and confirm the dialog.",
+      "5. Navigate away from the Falcon device (e.g., switch to another device or go to the home screen).",
+      "6. Navigate back to the Falcon device settings panel.",
+      "7. Observe the EQ slider positions."
+    ],
+    "expected": "The EQ sliders still display the custom values saved in step 4 after navigating away and back."
+  },
+  {
+    "title": "Save EQ confirmation dialog appears and can be dismissed via Cancel",
+    "steps": [
+      "1. Launch the app and complete onboarding (if required).",
+      "2. Navigate to the Falcon device settings panel.",
+      "3. Adjust at least one EQ slider to a non-default value.",
+      "4. Click the 'Save EQ' button.",
+      "5. Observe the confirmation dialog.",
+      "6. Click 'Cancel' or 'Dismiss' on the dialog.",
+      "7. Close the settings panel without saving again.",
+      "8. Reopen the settings panel for the Falcon device."
+    ],
+    "expected": "Step 5: A confirmation dialog appears asking to save the EQ settings. Step 8: The EQ sliders have reverted to their previous saved state (or defaults if never saved), confirming that Cancel did not save the changes."
+  },
+  {
+    "title": "EQ settings persist after app restart (Falcon device)",
+    "steps": [
+      "1. Launch the app and complete onboarding (if required).",
+      "2. Navigate to the Falcon device settings panel.",
+      "3. Adjust EQ sliders to custom values (e.g., Bass +4dB, Treble +2dB).",
+      "4. Click 'Save EQ' and confirm the dialog.",
+      "5. Close the settings panel.",
+      "6. Fully close/terminate the app.",
+      "7. Relaunch the app and complete onboarding (if required).",
+      "8. Navigate to the Falcon device settings panel.",
+      "9. Observe the EQ slider positions."
+    ],
+    "expected": "The EQ sliders retain the custom values saved in step 4 after the app is fully restarted."
+  },
+  {
+    "title": "Default EQ values are restored when Reset EQ is used (Falcon device)",
+    "steps": [
+      "1. Launch the app and complete onboarding (if required).",
+      "2. Navigate to the Falcon device settings panel.",
+      "3. Adjust EQ sliders to custom values (e.g., Bass +5dB, Treble -3dB).",
+      "4. Click 'Save EQ' and confirm the dialog.",
+      "5. Locate and click the 'Reset EQ' or 'Restore Defaults' button.",
+      "6. Confirm the reset dialog if prompted.",
+      "7. Observe the EQ slider positions.",
+      "8. Close and reopen the settings panel.",
+      "9. Observe the EQ slider positions again."
+    ],
+    "expected": "Step 7: All EQ sliders return to their default (flat/0dB) positions. Step 9: The default positions persist after reopening the settings panel."
+  },
+  {
+    "title": "Multiple EQ sliders can be adjusted simultaneously before saving (Falcon device)",
+    "steps": [
+      "1. Launch the app and complete onboarding (if required).",
+      "2. Navigate to the Falcon device settings panel.",
+      "3. Adjust all available EQ sliders to distinct non-default values (e.g., 31Hz: +2dB, 63Hz: -1dB, 125Hz: +3dB, 250Hz: -2dB, 500Hz: +1dB, 1kHz: 0dB, 2kHz: -1dB, 4kHz: +2dB, 8kHz: -3dB, 16kHz: +1dB).",
+      "4. Click 'Save EQ' and confirm the dialog.",
+      "5. Close the settings panel.",
+      "6. Reopen the settings panel.",
+      "7. Observe all EQ slider positions."
+    ],
+    "expected": "All EQ sliders retain their distinct custom values from step 3 after reopening the settings panel."
+  }
+]
