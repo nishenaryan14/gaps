@@ -5,16 +5,14 @@
   "project": "411453",
   "title": "Device Home screen - Connection status",
   "feature": "Device Home Screen",
-  "scenario": "Verify that the Device Home Screen correctly displays 'Connected' with a green marker when the headset is paired and connected, and changes to 'Disconnected' with a red marker when the headset is turned off.",
+  "scenario": "Verify that the Device Home Screen correctly displays 'Connected' with a green marker when HS is paired and connected, and changes to 'Disconnected' with a red marker when HS is turned off.",
   "steps": [
-    "1. Ensure the headset (HS) is paired with the device.",
-    "2. Turn on the headset and confirm it is connected.",
-    "3. Navigate to the Device Home Screen.",
-    "4. Observe the connection status display.",
-    "5. Turn off the headset.",
-    "6. Observe the connection status display again."
+    "Ensure the device (HS) is paired and connected to the Home Screen (HS).",
+    "Observe the connection status display on the Device Home Screen.",
+    "Turn off the device (HS).",
+    "Observe the connection status display again on the Device Home Screen."
   ],
-  "expected": "When the headset is paired and connected, the status should show 'Connected' with a green marker. When the headset is turned off, the status should change to 'Disconnected' with a red marker.",
+  "expected": "When HS is paired and connected, status shows 'Connected' with a green marker. When HS is turned off, status changes to 'Disconnected' with a red marker.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,13 +21,13 @@
     "green marker",
     "Disconnected",
     "red marker",
-    "headset paired",
+    "paired",
     "connection status",
-    "headset turned off"
+    "HS"
   ],
   "source_last_updated": "1762181274",
   "source_hash": "7fa3abe4ca5e15e897f97742dbe986539567e580e54d05f2637e1f4098f4287f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.335995Z",
+  "processed_at": "2026-04-24T11:50:53.116929Z",
   "status": "active"
 }
