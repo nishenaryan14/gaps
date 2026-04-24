@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Swipe right, next screen",
   "feature": "Onboarding",
-  "scenario": "Verify that swiping right from the Onboarding screen navigates through all screens in sequence, advancing the dot indicator correctly per the Figma design.",
+  "scenario": "Verify that swiping right from the Onboarding screen navigates sequentially through all screens, advancing the dot indicator correctly per the Figma design.",
   "steps": [
     "Start from the Onboarding screen (first screen).",
     "Swipe right from the current Onboarding screen.",
@@ -32,13 +32,13 @@
     "swipe right",
     "dot indicator",
     "screen navigation",
+    "sequential advancement",
     "Figma design",
-    "sequence verification",
-    "carousel"
+    "screen progression"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "51007c4a673aca191dd68a7ee7076fb11bf76c7d6528347a7677350afcc6320d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.412172Z",
+  "processed_at": "2026-04-24T11:50:53.286095Z",
   "status": "active"
 }
