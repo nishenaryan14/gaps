@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - Charge Case battery charging icon",
   "feature": "Device Home Screen",
-  "scenario": "Verify Charge Case battery icon shows charging sign when charger is plugged in and no charging sign when unplugged, with earbuds inside and case opened (Tern/Emu).",
+  "scenario": "Verify Charge Case battery charging icon toggles correctly when charger is plugged in and unplugged on the Device Home Screen",
   "steps": [
-    "1. Plug the charger into the Charge Case.",
-    "2. For Tern and Emu: Ensure both earbuds are inside the Charge Case and the case is opened.",
-    "3. Observe the Charge Case battery icon on the display.",
-    "4. Verify that the battery icon shows a charging sign (e.g., lightning bolt or similar indicator).",
-    "5. Unplug the charger from the Charge Case.",
-    "6. Observe the Charge Case battery icon again.",
-    "7. Verify that the charging sign is no longer displayed."
+    "Launch the app and pair the device.",
+    "Check the battery icon \u2014 the Charge Case battery icon should show NO charging sign (both earbuds must be inside the Charge Case and the case must be opened for Tern and Emu).",
+    "Plug the charger into the Charge Case \u2014 the battery icon should display a charging sign.",
+    "Unplug the charger \u2014 the battery icon should show NO charging sign."
   ],
-  "expected": "The Charge Case battery icon shows a charging sign when the charger is plugged in, and no charging sign when unplugged.",
+  "expected": "1. Charge Case battery icon shows NO charging sign when charger is not plugged in (with both earbuds inside the case and case opened for Tern and Emu).\\n2. Charge Case battery icon displays a charging sign when charger is plugged in.\\n3. Charge Case battery icon shows NO charging sign when charger is unplugged.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Charge Case",
-    "battery icon",
-    "charging sign",
-    "charger plugged",
+    "battery charging icon",
+    "charger plugged in",
     "charger unplugged",
-    "Tern",
-    "Emu",
-    "earbuds"
+    "Device Home Screen",
+    "charging sign toggle",
+    "earbuds in case",
+    "case opened"
   ],
   "source_last_updated": "1773155558",
   "source_hash": "564406552c5478e464ec2bd6eea2e94ca299c5c3cadaa13b123266935d04ef69",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.342104Z",
+  "processed_at": "2026-04-24T11:50:53.126143Z",
   "status": "active"
 }
