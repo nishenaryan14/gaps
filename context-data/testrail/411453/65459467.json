@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Application - Fresh install mobile application",
   "feature": "Application - Fresh Install",
-  "scenario": "Verify fresh installation of Lens mobile app from Play Store or App Store and successful onboarding initiation",
+  "scenario": "Verify fresh installation of the mobile app from the Play Store/App Store and successful onboarding start.",
   "steps": [
-    "Uninstall the Lens mobile app if it is already present on the device.",
-    "Navigate to the Play Store (Android) or App Store (iOS).",
+    "Uninstall the mobile app from the device.",
+    "Go to the Play Store (Android) or App Store (iOS).",
     "Search for and select the Lens mobile app.",
-    "Tap the Install button to download and install the app.",
-    "Confirm the app is installed successfully (e.g., app icon appears on the home screen or app drawer).",
-    "Open the app and verify that the user can begin the onboarding process."
+    "Install the app.",
+    "Open the app after installation.",
+    "Verify the app is installed successfully and the user can start the onboarding process."
   ],
-  "expected": "The Lens mobile app is installed successfully, and the user is able to start the onboarding process.",
+  "expected": "The app is installed successfully and the user can start the onboarding process.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Lens mobile app",
-    "fresh install",
+    "fresh installation",
+    "mobile app",
     "Play Store",
     "App Store",
     "onboarding",
-    "app installation",
-    "mobile app verification"
+    "install",
+    "verify installation"
   ],
   "source_last_updated": "1760615599",
   "source_hash": "899c8c2ab44a359ef6855a2bb6396dd8268db0ef6d762f793a1da42da4a3087c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.410659Z",
+  "processed_at": "2026-04-24T11:50:53.274616Z",
   "status": "active"
 }
