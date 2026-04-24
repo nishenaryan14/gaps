@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Support - Device - No Devices Connected screen",
   "feature": "Support - Device",
-  "scenario": "Verify the \"No Devices Connected\" screen displays the correct Poly Support message when accessing Support > Device from the menu.",
+  "scenario": "Verify the \"No Devices Connected\" screen displays correct Poly Support content when navigating through the menu.",
   "steps": [
     "Open Lens App with \"No Devices Connected\" screen.",
     "Tap Menu (hamburger icon) in upper left corner.",
     "Tap Support.",
     "Tap Device."
   ],
-  "expected": "Poly Support screen is visible with the message: \"No previously connected devices were found. Please connect devices using the mobile device's Bluetooth Settings prior to requesting device support.\" Image reference per Figma.",
+  "expected": "Poly Support screen is visible with image per Figma. Text displayed: \"No previously connected devices were found. Please connect devices using the mobile device's Bluetooth Settings prior to requesting device support.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "No Devices Connected",
-    "Poly Support message",
-    "Support menu",
-    "Device menu",
+    "Poly Support",
     "Lens App",
-    "hamburger icon",
-    "menu navigation"
+    "Menu",
+    "Hamburger icon",
+    "Support",
+    "Device"
   ],
   "source_last_updated": "1759761658",
   "source_hash": "4e4d3786b5542f0628b93234c875144cd580fe7b7c780de129e8988fb40f85fd",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:33.737692Z",
+  "processed_at": "2026-04-24T11:23:05.359907Z",
   "status": "active"
 }
