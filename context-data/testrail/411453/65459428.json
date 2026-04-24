@@ -1,0 +1,33 @@
+{
+  "id": "65459428",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Putting app in background during update",
+  "feature": "Software Update - DFU",
+  "scenario": "Verify successful Device Firmware Update (DFU) when app is backgrounded during the update and returns to foreground",
+  "steps": [
+    "Start a Device Firmware Update (DFU) from the app.",
+    "While the DFU is in progress, put the app into the background (e.g., press the Home button or switch to another app).",
+    "Wait for a reasonable period to allow the DFU to continue in the background.",
+    "Return to the app (bring it back to the foreground).",
+    "Observe the DFU status and wait for the update to complete."
+  ],
+  "expected": "The DFU continues successfully while the app is in the background, and the update completes properly when returning to the app.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Device Firmware Update",
+    "DFU",
+    "background",
+    "foreground",
+    "app lifecycle",
+    "firmware update completion",
+    "backgrounded app"
+  ],
+  "source_last_updated": "1763371340",
+  "source_hash": "6664cb65ba0dea23381235c678dbf78686b65e4c24e5bdc6438007762c0e337c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.413695Z",
+  "status": "active"
+}
