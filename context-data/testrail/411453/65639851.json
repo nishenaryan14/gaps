@@ -1,0 +1,33 @@
+{
+  "id": "65639851",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "1 step DFU - Houston screen during CC update (during Update all)",
+  "feature": "DFU (Device Firmware Update)",
+  "scenario": "During a 1-step DFU \"Update All\" process, updating the Charge Case with both earbuds placed inside causes the app to display a Houston screen instead of the expected behavior.",
+  "steps": [
+    "Initiate a 1-step DFU 'Update All' process",
+    "Wait for the Charge Case to begin updating",
+    "Place both earbuds into the Charge Case",
+    "Observe the app screen"
+  ],
+  "expected": "The app should show the normal/expected DFU update screen or progress",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "1-step DFU",
+    "Update All",
+    "Charge Case",
+    "earbuds placed inside",
+    "Houston screen",
+    "app display",
+    "firmware update",
+    "unexpected behavior"
+  ],
+  "source_last_updated": "1760949167",
+  "source_hash": "3041ba4ab2ec4e66a2208476a8be62297792c47b69e85f9028e6b3abf57b86cb",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "status": "active"
+}
