@@ -18,7 +18,7 @@
     "9. Verify that battery icons are displayed.",
     "10. Verify that the version number is displayed."
   ],
-  "expected": "The Device Home Screen displays: Device Name (with \"i\" icon if applicable), green dot and \"Connected\" label, device image, quick settings (if enabled), \"...\" button, battery icons, and version number.",
+  "expected": "The Device Home Screen displays: Device Name (with \"i\" icon if unencrypted or limited support), green dot and \"Connected\" label, device image, quick settings (if enabled), \"...\" button, battery icons, and version number.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -36,6 +36,6 @@
   "source_last_updated": "1761663315",
   "source_hash": "2c04d08e719582a22c576691acafbd9e26ba1649a3269055a7783a7dc419b5b3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.340593Z",
+  "processed_at": "2026-04-24T11:50:53.124627Z",
   "status": "active"
 }
