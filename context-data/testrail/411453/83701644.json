@@ -1,0 +1,34 @@
+{
+  "id": "83701644",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - Privacy Policy no wifi [New]",
+  "feature": "App Settings - General - Privacy Policy",
+  "scenario": "When WiFi is off and the app is started, navigating to Main Menu > General > Privacy Policy shows a \"Something is wrong\" error instead of loading the Privacy Policy content.",
+  "steps": [
+    "Turn off WiFi on the device.",
+    "Start the app.",
+    "Navigate to Main Menu.",
+    "Go to General.",
+    "Select Privacy Policy."
+  ],
+  "expected": "The Privacy Policy content should load and display properly.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "WiFi off",
+    "Privacy Policy",
+    "error loading",
+    "offline",
+    "Main Menu",
+    "General settings",
+    "Something is wrong",
+    "network error"
+  ],
+  "source_last_updated": "1773152996",
+  "source_hash": "367a2a34bf7864a6e860df66b7dd3fcdd7fe483ce6855e473a09a91f304be063",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.104578Z",
+  "status": "active"
+}
