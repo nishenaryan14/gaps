@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Onboarding - Permission for location tracking is not accepted [Android]",
-  "feature": "Onboarding / Find My Device",
-  "scenario": "Denying location tracking permission during onboarding on the \"Organized\" screen leaves the FMD window open and shows a secondary pop-up instead of returning the user to skip that step.",
+  "feature": "Onboarding",
+  "scenario": "User denies location permission during Android onboarding but the permission flow does not properly handle the rejection and fails to proceed.",
   "steps": [
-    "1. Start onboarding on Android",
-    "2. Navigate to the 'Organized' screen",
-    "3. When prompted for location tracking permission, deny the system location permission",
-    "4. Observe the behavior after denying"
+    "1. Launch the app on an Android device",
+    "2. Begin the onboarding process",
+    "3. Proceed to the 'Find My Device' flow",
+    "4. When the location permission prompt appears, tap 'Deny'",
+    "5. Observe the behavior after denying the permission"
   ],
-  "expected": "Denying location tracking should return the user to the \"Organized\" screen and allow them to skip that step in onboarding.",
+  "expected": "The user should be able to skip the location permission step and continue with the onboarding process after denying the permission.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "location tracking permission",
-    "onboarding",
-    "Organized screen",
-    "FMD window",
-    "secondary pop-up",
     "Android",
-    "permission denied",
-    "skip step"
+    "onboarding",
+    "location permission",
+    "deny",
+    "permission flow",
+    "rejection handling",
+    "Find My Device",
+    "permission prompt"
   ],
   "source_last_updated": "1760528516",
   "source_hash": "7b0f7649c0991056344df6269d173b865b56602c261fe44d749b85e45fd7d1e2",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.303721Z",
+  "processed_at": "2026-04-24T11:50:53.086335Z",
   "status": "active"
 }
