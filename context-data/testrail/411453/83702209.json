@@ -5,31 +5,33 @@
   "project": "411453",
   "title": "App Settings - General - About - Up to date, release notes no wifi [New]",
   "feature": "App Settings - General - About",
-  "scenario": "Release Notes link in About section fails to show expected offline dialog when WiFi is not available",
+  "scenario": "User views Release Notes in About section while offline and sees an error dialog that can be dismissed with OK.",
   "steps": [
-    "Open App Settings",
-    "Navigate to General section",
-    "Tap on About",
-    "Observe the status displayed (should show 'Up to date')",
-    "Disable WiFi connection",
-    "Tap on the Release Notes link"
+    "Open the app.",
+    "Go to App Settings.",
+    "Navigate to the General section.",
+    "Tap on 'About'.",
+    "Ensure the device is offline (no WiFi / no internet).",
+    "Tap the 'Release Notes' link.",
+    "Observe the dialog that appears.",
+    "Tap the 'OK' button to dismiss the dialog."
   ],
-  "expected": "A dialog appears with the message \"Information about this update isn't available at the moment\" and an OK button.",
+  "expected": "The dialog \"Information about this update isn't available at the moment.\" appears with an OK button to dismiss it. The app is up to date.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Release Notes",
     "About section",
-    "offline dialog",
-    "WiFi unavailable",
-    "App Settings",
-    "General section",
-    "Up to date",
-    "network connectivity"
+    "offline",
+    "error dialog",
+    "dismiss",
+    "OK button",
+    "no internet",
+    "app settings"
   ],
   "source_last_updated": "1773153616",
   "source_hash": "43aed825c499572a9ebef43b8a39d661943b5ef7917cb685f3b12b8481f1b5df",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.101212Z",
+  "processed_at": "2026-04-24T10:51:32.751623Z",
   "status": "active"
 }
