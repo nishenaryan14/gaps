@@ -1,0 +1,33 @@
+{
+  "id": "65459439",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Animations on Software Update screen",
+  "feature": "Software Update - DFU",
+  "scenario": "Verify slide animations and animated picture on the Software Update screen during DFU process",
+  "steps": [
+    "Navigate to HS device settings and open SW update tab, click Update button \u2192 Software Update screen slides in from the right.",
+    "Tap Continue \u2192 Three Easy Steps screen slides in from the right.",
+    "Tap back arrow \u2192 Software Update screen slides in from the left.",
+    "On Three Easy Steps screen, tap \"Start Update\" \u2192 Updating screen slides from the right, with an animated picture in the middle."
+  ],
+  "expected": "All screen transitions are smooth and correctly slide in from the expected directions. The animated picture appears on the Updating screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "slide animation",
+    "animated picture",
+    "Software Update screen",
+    "DFU process",
+    "Three Easy Steps screen",
+    "Updating screen",
+    "screen transition",
+    "HS device settings"
+  ],
+  "source_last_updated": "1763369558",
+  "source_hash": "d587edff5e7214bcfab3dde6954c37d5506948b9ad51b83ad8e3dbc00e9eef14",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.413186Z",
+  "status": "active"
+}
