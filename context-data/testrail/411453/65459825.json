@@ -1,0 +1,33 @@
+{
+  "id": "65459825",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications - Update failed OFF",
+  "feature": "Notifications",
+  "scenario": "No notification appears when a device software update fails and the \"Software Update Notification\" setting is turned off.",
+  "steps": [
+    "Start the app.",
+    "Go to Device Settings > Software Update.",
+    "Start the DFU process.",
+    "Put the app in the background.",
+    "Turn off the device (safe only during first 20% of DFU)."
+  ],
+  "expected": "No notification should pop up upon update failure.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Software Update Notification",
+    "DFU process",
+    "Device Settings",
+    "notification failure",
+    "device software update",
+    "background app",
+    "device power off"
+  ],
+  "source_last_updated": "1761223976",
+  "source_hash": "53756cf06bbbdc0249970a5c3362da5c35be915f9e01874e8c056ee022a67943",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "status": "active"
+}
