@@ -7,25 +7,24 @@
   "feature": "Studio UI",
   "scenario": "Quick Settings are disabled",
   "steps": [
-    "Open the Quick Settings panel (swipe down from the top of the screen with two fingers, or swipe down once and tap the gear icon or expand button).",
-    "Observe the state of the Quick Settings toggles."
+    "Open the Quick Settings panel (swipe down from the top of the screen)",
+    "Observe the state of the Quick Settings toggles"
   ],
-  "expected": "Quick Settings toggles should be interactive and functional.",
+  "expected": "Quick Settings toggles should be interactive and functional",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Quick Settings disabled",
     "Quick Settings panel",
     "Quick Settings toggles",
-    "swipe down gesture",
-    "gear icon",
-    "expand button",
+    "swipe down",
     "settings disabled",
-    "notification panel"
+    "notification panel",
+    "toggle state"
   ],
   "source_last_updated": "1759226530",
   "source_hash": "2cde4669f15e724d24a5f70d9acbc4694d5573022d90cf59b92a1a75e4e5e6a6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "processed_at": "2026-04-24T11:50:53.336654Z",
   "status": "active"
 }
