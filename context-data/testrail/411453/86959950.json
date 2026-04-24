@@ -1,0 +1,43 @@
+{
+  "id": "86959950",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "End-to-end user journey through feedback submission, general app settings (licenses and privacy policy), and notifications configuration",
+  "feature": "Poly Studio App - Main Menu & Settings",
+  "scenario": "As a guest user with no device connected, navigate the main menu to submit feedback, browse general settings (licenses and privacy policy), and configure notifications and device alerts.",
+  "steps": [
+    "1. Launch the Poly Studio app on your mobile device (Android/iOS).",
+    "2. Complete the onboarding process as a guest user (no device connected).",
+    "3. Navigate to the main menu by tapping the menu icon (hamburger icon or equivalent).",
+    "4. From the main menu, select 'Feedback' to access the feedback submission page.",
+    "5. Submit feedback (or browse the feedback page).",
+    "6. Return to the main menu.",
+    "7. Select 'General Settings' from the main menu.",
+    "8. Within General Settings, tap on 'Licenses' to view license information.",
+    "9. Return to General Settings.",
+    "10. Tap on 'Privacy Policy' to view the privacy policy.",
+    "11. Return to General Settings, then go back to the main menu.",
+    "12. Navigate to 'Notifications' or 'Notifications Configuration' from the main menu.",
+    "13. Configure notification preferences (e.g., enable/disable device alerts, push notifications, etc.).",
+    "14. Save or apply the notification settings."
+  ],
+  "expected": "User can successfully navigate through the entire journey: access feedback page, view licenses and privacy policy in general settings, and configure notifications/device alerts without errors.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Poly Studio app",
+    "guest user",
+    "main menu",
+    "feedback submission",
+    "general settings",
+    "licenses",
+    "privacy policy",
+    "notifications configuration"
+  ],
+  "source_last_updated": "1776940763",
+  "source_hash": "b83094c6efd82686bbf70df3e1f10d30ee56df19aa22468b3b41801ae4cef891",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:11.781895Z",
+  "status": "active"
+}
