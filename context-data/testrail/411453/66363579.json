@@ -5,27 +5,27 @@
   "project": "411453",
   "title": "Home Screen - Both earbuds are disconnected",
   "feature": "Home Screen",
-  "scenario": "Verify that the Lens App correctly updates the status box and device image when both earbuds are placed in the case after being connected.",
+  "scenario": "Verify that when both earbuds are placed in the case, the app shows greyed-out battery fields and a disconnected status with red indicator.",
   "steps": [
-    "Pair and connect Osprey device.",
-    "Open Lens App.",
-    "Put both earbuds in the case."
+    "1. Pair and connect Osprey device.",
+    "2. Open Lens App.",
+    "3. Put both earbuds in the case."
   ],
-  "expected": "After step 2, the Status Box shows \"Left\", \"Right\", and \"Case\" fields with battery level and green indicator, and a \"Status\" field showing \"connected\" with green indicator. The device image shows left and right earbuds. After step 3, the \"Left\", \"Right\", and \"Case\" fields are greyed out showing only the % symbol (not the exact percentage), the \"Status\" field shows \"disconnected\" with red indicator, and the image for both earbuds is greyed out.",
+  "expected": "After step 2: The Status Box shows \"Left\", \"Right\", and \"Case\" fields with battery level and green indicator, and a \"Status\" field showing \"connected\" with green indicator. The device image shows left and right earbuds. Note: Tern does not show case field.\\n\\nAfter step 3: \"Left\", \"Right\", and \"Case\" fields are greyed out showing only the % symbol (not exact percentage). \"Status\" field shows \"disconnected\" with red indicator. Image for both earbuds is greyed out.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Lens App",
-    "status box",
-    "device image",
     "earbuds in case",
+    "greyed-out battery",
+    "disconnected status",
+    "red indicator",
+    "Lens App",
     "Osprey device",
-    "connected",
-    "pairing"
+    "battery fields"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "9611247ccd39866963e5201584e8f345e2a78011c7877967ac46cd26499f1cb6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:06.574726Z",
+  "processed_at": "2026-04-24T11:50:53.352481Z",
   "status": "active"
 }
