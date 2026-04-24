@@ -1,0 +1,34 @@
+{
+  "id": "64907514",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support  - Poly Product Support screen color in light mode",
+  "feature": "Poly Product Support",
+  "scenario": "Verify that the top box color on the Product Support screen matches the main body color in light mode.",
+  "steps": [
+    "1. Pair and connect a headset.",
+    "2. Start the app in light mode.",
+    "3. Navigate to Poly Lens Menu > Support.",
+    "4. Tap on Product Support link.",
+    "5. Check the top box of the screen."
+  ],
+  "expected": "1. User is redirected to the Poly support page. 2. The color of the top box should match the color of the main body of the screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "top box color",
+    "Product Support screen",
+    "main body color",
+    "light mode",
+    "Poly Lens Menu",
+    "Support",
+    "Product Support link",
+    "color verification"
+  ],
+  "source_last_updated": "1759752624",
+  "source_hash": "21771027176d87452737e889a37041278e668e8e05f7899e6a2369f4c7b60c22",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.361909Z",
+  "status": "active"
+}
