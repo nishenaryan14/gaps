@@ -1,0 +1,37 @@
+{
+  "id": "LMW-2345",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS \ud83d\udfe5 HSFWCH-10257 | FALCON \ud83c\udfa7 Custom EQ settings are not saved",
+  "feature": "iOS / FALCON - Custom EQ Settings",
+  "scenario": "Custom EQ slider adjustments are not persisted after saving and reopening the EQ settings",
+  "description_clean": "Custom EQ settings are not saved. Steps: Pair Falcon with the app, go to Device Settings > Sound > Tune, select Custom, change sliders, tap Save EQ, then close and reopen EQ settings. Observed: Custom EQ is selected but all sliders reset to default (middle) position. Expected: Changes to custom EQ sliders should be properly saved.",
+  "steps": [
+    "Pair Falcon with the app",
+    "Go to Device Settings > Sound > Tune",
+    "Select Custom",
+    "Change sliders",
+    "Tap Save EQ",
+    "Close and reopen EQ settings"
+  ],
+  "expected": "Changes to custom EQ sliders should be properly saved.",
+  "actual": "Custom EQ is selected but all sliders reset to default (middle) position.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "EQ slider",
+    "Custom EQ",
+    "EQ settings not saving",
+    "EQ preset persistence",
+    "Falcon EQ save issue",
+    "EQ adjustments lost",
+    "Tune settings"
+  ],
+  "source_last_updated": "2026-04-23T12:48:00.000+0000",
+  "source_hash": "43becb06d7b9aeb653c13273b4413b7745f762ce3c1525f50005dfd9841c397b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:22.622282Z",
+  "status": "active"
+}
