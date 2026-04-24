@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Device Settings  - Custom button - Teams Not Detected",
   "feature": "Device Settings - Custom Button",
-  "scenario": "Verify Teams Custom button UI shows Other Providers options when Microsoft Teams is not connected, and all custom actions can be selected.",
+  "scenario": "When Microsoft Teams is not connected, selecting the Teams custom button shows a modal prompting the user to choose Other Providers to assign custom actions.",
   "steps": [
-    "Verify the new UI layout shows Microsoft Teams (selected by default) and Other Providers options.",
-    "Select Other Providers to see additional options: Play/Pause, Voice Assistant, Hold/Resume Call, ANC/Transparency Mode, Do Nothing.",
-    "Verify all options under Other Providers can be selected.",
-    "Select Microsoft Teams when Teams is not detected/connected.",
-    "Observe the modal that appears prompting the user to select 'Other Providers' to assign custom actions."
+    "Open the Teams Custom button settings on a Falcon headset.",
+    "Observe the default UI layout showing two options: Microsoft Teams (selected by default) and Other Providers.",
+    "With Microsoft Teams selected and not connected, observe the UI message prompting to select Other Providers to assign custom actions.",
+    "Select Other Providers to reveal additional options: Play/Pause, Voice Assistant, Hold/Resume Call, ANC/Transparency Mode, and Do Nothing.",
+    "Select Microsoft Teams again while Teams is not connected.",
+    "Observe the modal that appears."
   ],
-  "expected": "When Microsoft Teams is not detected/connected and the user selects Microsoft Teams, a modal appears prompting the user to select \"Other Providers\" to assign custom actions. The UI layout shows Microsoft Teams selected by default alongside Other Providers, and all Other Providers options (Play/Pause, Voice Assistant, Hold/Resume Call, ANC/Transparency Mode, Do Nothing) are selectable.",
+  "expected": "A modal appears with the message: \"Microsoft Teams is not connected. Select Other Providers to assign other custom actions.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Teams Custom button UI",
-    "Other Providers options",
-    "Microsoft Teams not connected",
-    "custom actions selection",
-    "Play/Pause",
-    "Voice Assistant",
-    "Hold/Resume Call",
-    "ANC/Transparency Mode"
+    "Microsoft Teams",
+    "Teams not connected",
+    "Other Providers",
+    "custom button settings",
+    "Falcon headset",
+    "modal prompt",
+    "custom actions assignment"
   ],
   "source_last_updated": "1769430808",
   "source_hash": "a0e9584d6fa09ad5df52b19f2313ca01c3a122a99b2a3769a9e311f7927426e5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "processed_at": "2026-04-24T11:50:53.213672Z",
   "status": "active"
 }
