@@ -1,0 +1,33 @@
+{
+  "id": "65871625",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Home Screen - Onboarding in not displayed over DFU screens after connecting new device",
+  "feature": "Home Screen / Onboarding",
+  "scenario": "Onboarding dialog is not displayed over DFU screens after connecting a new device during firmware update",
+  "steps": [
+    "Start the app with a device and begin DFU process.",
+    "Pair a new device that supports onboarding (Emu, Tern, Osprey) in phone settings.",
+    "Check the app - it remains at the DFU screen and onboarding for the newly connected device is NOT displayed.",
+    "Wait for DFU to finish and click Close."
+  ],
+  "expected": "After returning to the Home screen, the Onboarding dialog should be present.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "onboarding dialog",
+    "DFU screen",
+    "firmware update",
+    "new device connection",
+    "pairing",
+    "onboarding not displayed",
+    "Emu Tern Osprey",
+    "DFU completion"
+  ],
+  "source_last_updated": "1763381751",
+  "source_hash": "35666c47341454f508f34164d2b272579703a4238695e87c951eebf684d4843b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "status": "active"
+}
