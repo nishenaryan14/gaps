@@ -1,0 +1,33 @@
+{
+  "id": "65640181",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Find My Device Opened",
+  "feature": "Analytics",
+  "scenario": "Logs \"findMyDevice_opened\" event when user opens the \"Find My Device\" screen, with event counts updated after a few hours.",
+  "steps": [
+    "Open the 'Find My Device' screen.",
+    "Check logs for the event 'findMyDevice_opened'.",
+    "Wait a few hours for event counts to update.",
+    "Verify the dashboard includes the following elements: graph for the event, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment."
+  ],
+  "expected": "The event 'findMyDevice_opened' is logged when the user opens the 'Find My Device' screen. Event counts are updated after a few hours. The default dashboard displays all specified elements: graph for the event, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "findMyDevice_opened",
+    "event tracking",
+    "dashboard verification",
+    "event counts",
+    "analytics logs",
+    "app version",
+    "event metrics"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "feff8cfd6b10ff5a87df450547cb66e55759853bb0b0b9ba73c041f79568dfee",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "status": "active"
+}
