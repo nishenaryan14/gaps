@@ -1,0 +1,33 @@
+{
+  "id": "64839441",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Limited Support Before Launch Date",
+  "feature": "Device Home Screen",
+  "scenario": "Show limited support pop-up on home screen when current date is before device launch date",
+  "steps": [
+    "1. Set the device's current date to a date before the device's launch date.",
+    "2. Navigate to the device home screen.",
+    "3. Observe the home screen for any pop-up or limited support indication.",
+    "4. If a pop-up appears, read the message displayed.",
+    "5. Tap outside the pop-up to dismiss it."
+  ],
+  "expected": "A pop-up displays the message: \"Device support coming soon. In-app functionality may be limited.\" The pop-up can be dismissed by tapping outside of it.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "limited support pop-up",
+    "home screen",
+    "current date",
+    "device launch date",
+    "pre-launch date",
+    "pop-up dismissal",
+    "limited support indication"
+  ],
+  "source_last_updated": "1764663020",
+  "source_hash": "7516386f09b73bfb1dbc8550354edd253239a76aa4b7120e292ebf09251520d4",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.092578Z",
+  "status": "active"
+}
