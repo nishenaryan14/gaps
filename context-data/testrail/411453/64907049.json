@@ -1,0 +1,43 @@
+{
+  "id": "64907049",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - Account - Account delete - Starting with no WiFi connection",
+  "feature": "App Settings - General - Account - Account Delete",
+  "scenario": "Delete account with no WiFi connection, then retry after reconnecting to verify account removal on device and cloud.",
+  "steps": [
+    "Log in to the application.",
+    "Disconnect WiFi.",
+    "Navigate to General > Account tab.",
+    "Tap the Delete icon.",
+    "Tap Confirm.",
+    "Observe the popup: 'Unable to perform task...'",
+    "Tap 'Later' and verify the popup closes and returns to Device Settings.",
+    "Tap Delete icon again, then Confirm.",
+    "Tap 'Retry' and verify the same error popup appears.",
+    "Turn on WiFi.",
+    "Tap 'Retry' and observe a spinner followed by a confirmation dialog.",
+    "Verify the user is logged out and returned to the account screen.",
+    "Verify the user is not logged in via Poly Lens Menu > Support > Account.",
+    "On the cloud side, verify the account was properly removed."
+  ],
+  "expected": "\"Unable to perform task...\" popup appears when WiFi is off. Tapping \"Later\" closes the popup and returns to Device Settings. Tapping Delete + Confirm again, then \"Retry\" shows the same error. After turning on WiFi and tapping \"Retry\", a spinner appears followed by a confirmation dialog, user is logged out and returned to the account screen. User is not logged in via Poly Lens Menu > Support > Account. On cloud side, the account is properly removed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "delete account",
+    "no WiFi",
+    "offline retry",
+    "account removal",
+    "cloud verification",
+    "reconnect WiFi",
+    "account deletion confirmation",
+    "logout verification"
+  ],
+  "source_last_updated": "1759416362",
+  "source_hash": "78cdb7d9e0881a1b79bba3f0490af813e36060203006e8679f83520ec96374e0",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.111219Z",
+  "status": "active"
+}
