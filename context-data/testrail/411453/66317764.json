@@ -1,0 +1,37 @@
+{
+  "id": "66317764",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Reset Device - Clear Trusted Devices - Clear - Yes",
+  "feature": "Reset Device / Clear Trusted Devices",
+  "scenario": "Verify that tapping \"Clear\" then \"Yes\" in the Reset Device tab clears trusted devices, disconnects the device, and makes it available for re-pairing.",
+  "steps": [
+    "Open the Reset Device tab.",
+    "Tap 'Clear'.",
+    "Tap 'Yes' in the confirmation popup.",
+    "Observe the device disconnects and returns to the home screen.",
+    "Check Bluetooth settings to see the device shows as 'Not Connected'.",
+    "Tap the device in Bluetooth settings.",
+    "Verify the device disappears from 'My Devices'.",
+    "Check that the device appears in 'Other Devices' and is available for re-pairing."
+  ],
+  "expected": "A confirmation popup appears, the device disconnects and returns to home screen, the device shows as \"Not Connected\" in Bluetooth settings, and after tapping the device it disappears from \"My Devices\" and becomes available for re-pairing in \"Other Devices\".",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Reset Device",
+    "Clear",
+    "confirmation popup",
+    "trusted devices",
+    "disconnect",
+    "re-pairing",
+    "Bluetooth settings",
+    "Not Connected"
+  ],
+  "source_last_updated": "1762260983",
+  "source_hash": "954ddfdeb12d796ae960fb0500492c98a903ca742c6e54ff8d1d05afbc5e9c5b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.413695Z",
+  "status": "active"
+}
