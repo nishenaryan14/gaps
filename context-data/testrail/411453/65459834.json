@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, dialog",
   "feature": "Notifications - Onboarding",
-  "scenario": "When a user denies notifications during onboarding and later tries to enable the Notifications toggle in App Settings, a dialog instructing them to go to OS settings should appear.",
+  "scenario": "When a user denies notification permission during onboarding and later attempts to enable the Notifications toggle in App Settings, a dialog instructing them to go to OS settings should appear.",
   "steps": [
-    "1. Start onboarding flow.",
-    "2. When prompted for notification permission, deny/do not allow notifications.",
-    "3. Complete onboarding and enter the app.",
+    "1. Start onboarding process.",
+    "2. When prompted for notification permission, do NOT allow notifications.",
+    "3. Complete the onboarding process.",
     "4. Navigate to App Settings > General > Notifications.",
-    "5. Attempt to switch the 'Notifications' toggle ON."
+    "5. Tap the 'Notifications' toggle to switch it ON."
   ],
-  "expected": "A dialog appears stating: \"You must go to your OS settings to turn back on Notifications\", with Cancel and Go to Settings buttons.",
+  "expected": "A dialog appears saying: \"You must go to your OS settings to turn back on Notifications\" with Cancel and Go to Settings buttons.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "notifications denied onboarding",
-    "enable notifications toggle",
-    "app settings notifications",
-    "OS settings dialog",
     "notification permission denied",
-    "toggle notifications ON",
-    "onboarding notification prompt"
+    "onboarding",
+    "app settings",
+    "notifications toggle",
+    "OS settings dialog",
+    "permission re-enable",
+    "iOS settings redirect",
+    "notification permission flow"
   ],
   "source_last_updated": "1761229604",
   "source_hash": "cbfecf81e93ce8c88b9d4202366a2076e02ce2597272f3d40c90f7109a0e698a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.419263Z",
+  "processed_at": "2026-04-24T11:50:53.317806Z",
   "status": "active"
 }
