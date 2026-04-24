@@ -5,29 +5,27 @@
   "project": "411453",
   "title": "EB and CC have update - Earbuds can be updated and popup for Charge Chase will be displayed",
   "feature": "Earbuds & Charge Case Update",
-  "scenario": "After triggering DFU for Earbuds, returning to the device home screen shows a popup informing the user that Lens Desktop needs to update the Charge Case.",
+  "scenario": "After successfully updating Earbuds via DFU, a popup incorrectly prompts the user to use Lens Desktop to update the Charge Case.",
   "steps": [
-    "1. Ensure both Earbuds (EB) and Charge Case (CC) are connected.",
-    "2. Trigger the DFU (Device Firmware Update) for the Earbuds successfully.",
-    "3. Return to the device home screen.",
-    "4. Observe the popup displayed on the home screen."
+    "Start a DFU update for both Earbuds (EB) and Charge Case (CC).",
+    "Trigger and complete the DFU for the Earbuds successfully.",
+    "Return to the device home screen."
   ],
-  "expected": "A popup should appear informing the user that Lens Desktop needs to update the Charge Case.",
+  "expected": "After returning to the device home screen, a popup is displayed informing the user that Lens Desktop is needed to update the Charge Case.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU",
+    "DFU update",
     "Earbuds",
     "Charge Case",
     "Lens Desktop",
-    "Firmware Update",
-    "Popup",
-    "Home Screen",
-    "Device Connection"
+    "popup error",
+    "firmware update",
+    "device home screen"
   ],
   "source_last_updated": "1762331320",
   "source_hash": "dc52b3647047e9e551cf5bef3090b123f0987c6e12ecb93dc7ce586a8cf631d0",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "processed_at": "2026-04-24T11:50:53.344816Z",
   "status": "active"
 }
