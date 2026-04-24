@@ -1,0 +1,36 @@
+{
+  "id": "65641579",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Bass, Flat, Bright screens",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Verify that EQ presets (Bass, Flat, Bright) are selectable, visually match Figma design, and have locked sliders that cannot be adjusted by the user.",
+  "steps": [
+    "Open Device Settings > EQ tab.",
+    "Select the Bass preset and verify the UI matches the Figma design.",
+    "Attempt to change slider values and confirm sliders are locked (user cannot change values).",
+    "Select the Flat preset and verify the UI matches the Figma design.",
+    "Attempt to change slider values and confirm sliders are locked (user cannot change values).",
+    "Select the Bright preset and verify the UI matches the Figma design.",
+    "Attempt to change slider values and confirm sliders are locked (user cannot change values)."
+  ],
+  "expected": "Each preset (Bass, Flat, Bright) is selectable, properly applied, UI matches Figma, and sliders remain locked.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ presets",
+    "Bass",
+    "Flat",
+    "Bright",
+    "Figma design",
+    "locked sliders",
+    "slider values",
+    "Device Settings"
+  ],
+  "source_last_updated": "1760956310",
+  "source_hash": "e7f71d699512ef7e4553840a29df40447f625475caf44e08311487f6bb7b81ed",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "status": "active"
+}
