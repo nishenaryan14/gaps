@@ -1,0 +1,37 @@
+{
+  "id": "65641606",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "CCL - During  Call - Settings are locked",
+  "feature": "Close Conversation Limiting (CCL)",
+  "scenario": "CCL settings in Device Settings > Advanced are locked and greyed out during an active call, showing a dialog that the setting cannot be adjusted, and become available again after the call ends.",
+  "steps": [
+    "Start or join an active call on the device.",
+    "Navigate to Device Settings > Advanced.",
+    "Observe the CCL (Call Control List) settings section.",
+    "Attempt to tap on any CCL option.",
+    "Observe the dialog that appears.",
+    "Tap the 'OK' button on the dialog.",
+    "End the active call.",
+    "Return to Device Settings > Advanced and check the CCL settings."
+  ],
+  "expected": "During an active call, CCL settings should be locked and greyed out. Tapping any CCL option should show a dialog: \"This setting cannot be adjusted when on a call\". After tapping OK, the dialog should disappear and settings should remain unchanged. After ending the call, CCL settings should become available and can be changed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "CCL",
+    "Call Control List",
+    "Device Settings",
+    "Advanced settings",
+    "active call",
+    "greyed out",
+    "locked settings",
+    "call state"
+  ],
+  "source_last_updated": "1760956340",
+  "source_hash": "fe73780fed6e032eafd6aa75113df5ce6d126cd8719aee8d67484e9446c7f6c3",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.405970Z",
+  "status": "active"
+}
