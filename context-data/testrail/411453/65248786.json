@@ -5,29 +5,32 @@
   "project": "411453",
   "title": "Find My Device -  Pin for headset location",
   "feature": "Find My Device",
-  "scenario": "Verify that the Find My Device pin display shows blue geo icons for connected headsets, gray for disconnected ones, and merges multiple devices at the same location into a numbered pin.",
+  "scenario": "Verify pin display behavior for headset locations: blue geo icon when connected, gray when disconnected, and merged pins with count for multiple devices at same location.",
   "steps": [
-    "Start the app with headset connected/disconnected.",
-    "Go to App Menu.",
-    "Tap on Find My Device (allow GPS location if prompted).",
-    "Connect a second headset (or component) in the same location."
+    "1. Connect a headset to the device.",
+    "2. Open the Find My Device feature.",
+    "3. Observe the geo icon for the connected headset location.",
+    "4. Disconnect the headset from the device.",
+    "5. Observe the geo icon for the disconnected headset location.",
+    "6. Place multiple devices at the same location.",
+    "7. Observe the pin display for devices at the same location."
   ],
-  "expected": "Geo icon for connected headsets is blue, for disconnected ones is gray. If multiple devices are located in the same place, pins merge into one with a number.",
+  "expected": "- When a headset is connected, the geo icon should be blue.<br>- When a headset is disconnected, the geo icon should be gray.<br>- If multiple devices are located in the same place, their pins should merge into a single pin showing a count number.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Find My Device",
     "pin display",
-    "blue geo icon",
-    "gray geo icon",
-    "connected headset",
-    "disconnected headset",
-    "numbered pin",
-    "device merging"
+    "headset location",
+    "geo icon",
+    "connected",
+    "disconnected",
+    "merged pins",
+    "multiple devices",
+    "Find My Device"
   ],
   "source_last_updated": "1759927301",
   "source_hash": "cc484ef7bdac10718acd9b8a127bdb30d120704b0b9bc599bae1d70c99d83bfa",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.900316Z",
+  "processed_at": "2026-04-24T11:23:05.355862Z",
   "status": "active"
 }
