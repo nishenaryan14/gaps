@@ -1,0 +1,34 @@
+{
+  "id": "66363555",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EB has update, CC on the latest - Earbuds can be updated and popup for Charge Chase will NOT be displayed",
+  "feature": "Earbuds Update / Charge Chase Popup",
+  "scenario": "After updating earbuds to latest version while charge case is already up-to-date, the charge case update popup should not appear on the device home screen.",
+  "steps": [
+    "Ensure the Earbuds (EB) have an update available.",
+    "Ensure the Charge Case (CC) is on the latest version.",
+    "Update the earbuds successfully.",
+    "Return to the Device Home Screen.",
+    "Observe whether the Charge Case popup card is displayed."
+  ],
+  "expected": "The Charge Case popup card should NOT be displayed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "earbuds update",
+    "charge case update",
+    "firmware update",
+    "update popup",
+    "device home screen",
+    "popup card",
+    "latest version",
+    "update suppression"
+  ],
+  "source_last_updated": "1762331320",
+  "source_hash": "5c5f04e079da441ff1c2864e431fb3f19b39b8bfadacce7b0be954510c4081fb",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "status": "active"
+}
