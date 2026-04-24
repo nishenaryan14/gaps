@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Device Home Screen - Unpair connected Headset",
   "feature": "Device Home Screen",
-  "scenario": "Verify that unpairing a connected headset via phone Bluetooth settings correctly shows it as disconnected in the app.",
+  "scenario": "Verify that when a paired and connected headset is unpaired via the phone's Bluetooth settings, the app correctly shows the headset as disconnected.",
   "steps": [
     "1. Ensure a headset is paired and connected to the phone via Bluetooth.",
     "2. Open the phone's Bluetooth settings.",
-    "3. Unpair (forget) the headset from the phone's Bluetooth settings.",
-    "4. Open the app and observe the headset status."
+    "3. Unpair the headset from the phone's Bluetooth settings.",
+    "4. Open the app and check the headset status."
   ],
   "expected": "The app correctly shows the headset as disconnected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "headset unpairing",
-    "Bluetooth disconnect",
-    "app status update",
-    "forget Bluetooth device",
-    "headset connection state",
-    "Bluetooth settings unpair",
-    "device disconnected status"
+    "headset",
+    "Bluetooth",
+    "unpair",
+    "disconnected",
+    "connection status",
+    "Bluetooth settings",
+    "paired device"
   ],
   "source_last_updated": "1762179531",
   "source_hash": "6e0c1564e332817116ab70596c11dd2f2853eb90036c655919034e9276adcc53",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.737346Z",
+  "processed_at": "2026-04-24T11:23:05.333929Z",
   "status": "active"
 }
