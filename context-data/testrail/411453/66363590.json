@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "FMD - Both earbuds connected - Play button",
   "feature": "Find My Device",
-  "scenario": "Play tone on both connected earbuds via Find My Device and verify tone plays, UI states, and return to pre-play state after stopping.",
+  "scenario": "Verify that playing and stopping a tone on both connected Osprey earbuds via Find My Device works correctly, with proper map recognition, tone playback, and state restoration.",
   "steps": [
     "Open Lens app with Osprey device connected",
-    "Go to App Settings > Find My Device",
-    "Tap on Osprey HS card",
+    "Tap App Settings icon",
+    "Tap Find My Device",
+    "Tap HS card for Osprey",
     "Tap Play button",
-    "Tap 'Ok got it'",
-    "Tap Play again",
-    "Tap Stop"
+    "Tap Ok got it button",
+    "Tap Play button again",
+    "Tap Stop button"
   ],
-  "expected": "Osprey recognized on map; tone plays on both earbuds with flashing lights, \"Sending tone...\" message with animated stop button and illustration; after stop, state returns to pre-play state.",
+  "expected": "After step 3, Osprey device is recognized on the map as one device. After step 7, tone is played on both earbuds with flashing lights, \"Sending tone...\" message is shown with an animated stop button and illustration. After step 8, state returns to same as after step 4.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "Osprey earbuds",
     "Find My Device",
-    "Play tone",
-    "Earbuds",
-    "Osprey HS",
+    "tone playback",
+    "map recognition",
+    "state restoration",
     "Lens app",
-    "Stop tone",
-    "UI states",
-    "Audio verification"
+    "Play/Stop button",
+    "HS card"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "8ac0c4b0c99f6f65016c87afc6dfbd4e082888ab81c3269b4e973287666cdf34",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.433691Z",
+  "processed_at": "2026-04-24T11:50:53.383425Z",
   "status": "active"
 }
