@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Find My Device - Playing Tone - app in the background",
   "feature": "Find My Device - Playing Tone",
-  "scenario": "Find My Device tone stops when app is backgrounded and does not resume when brought to foreground",
+  "scenario": "Find My Device tone stops when app is backgrounded and does not resume when returning to foreground",
   "steps": [
     "Open the Find My Device app.",
     "Start playing a tone on a device.",
@@ -14,7 +14,7 @@
     "Bring the app back to the foreground.",
     "Observe the state of the Play button and whether any tone is heard."
   ],
-  "expected": "The tone should continue playing when the app is moved to the background. When brought back to the foreground, the tone should still be playing or the Play button should indicate the tone is active.",
+  "expected": "The tone should continue playing when the app is moved to the background. When brought back to the foreground, the tone should still be playing or the Play button should indicate the ongoing state.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +24,12 @@
     "foreground",
     "Play button",
     "audio resume",
-    "app lifecycle",
+    "app state",
     "device tone"
   ],
   "source_last_updated": "1759933511",
   "source_hash": "8e8597152ebeca9ee564e7a84894dfc071bb5a8ea49b22c9ca8ed4011a984129",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.358898Z",
+  "processed_at": "2026-04-24T11:50:53.169275Z",
   "status": "active"
 }
