@@ -1,0 +1,33 @@
+{
+  "id": "65248805",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Warning dialog for Play button",
+  "feature": "Find My Device",
+  "scenario": "Verify the warning dialog for the Play button on the Find My Device screen matches the Figma design when a connected headset is selected and the Play button is clicked.",
+  "steps": [
+    "1. Open the Find My Device screen.",
+    "2. Ensure a connected headset is selected.",
+    "3. Click the Play button.",
+    "4. Observe the warning dialog that appears."
+  ],
+  "expected": "The warning dialog matches the Figma design.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "warning dialog",
+    "Play button",
+    "connected headset",
+    "Figma design",
+    "UI verification",
+    "dialog matching",
+    "device selection"
+  ],
+  "source_last_updated": "1760013661",
+  "source_hash": "20d53172a7bda88abba5cc972e5f51ed45e3d95a28220af9a75b645533468b15",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.107360Z",
+  "status": "active"
+}
