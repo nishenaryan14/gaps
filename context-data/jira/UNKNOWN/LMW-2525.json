@@ -1,0 +1,37 @@
+{
+  "id": "LMW-2525",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS \ud83d\udfe5 FLAMINGO | FALCON | Language change does not update FW on Charge Case",
+  "feature": "iOS App / DFU (Device Firmware Update)",
+  "scenario": "Language change does not trigger firmware update on Charge Case after DFU completes",
+  "description_clean": "When a language change is triggered, the Charge Case does not receive the firmware update. After DFU completes, the Charge Case remains on outdated firmware. Expected behavior: language change should trigger firmware update on all components, including the Charge Case.",
+  "steps": [
+    "1. Trigger a language change on the device.",
+    "2. Observe the firmware update process.",
+    "3. Wait for DFU (Device Firmware Update) to complete.",
+    "4. Check the firmware version on the Charge Case."
+  ],
+  "expected": "Language change should trigger firmware update on all components, including the Charge Case. After DFU completes, the Charge Case should be on the updated firmware.",
+  "actual": "After DFU completes, the Charge Case remains on outdated firmware. The Charge Case does not receive the firmware update when a language change is triggered.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [
+    "NeedsEngineeringReview"
+  ],
+  "keywords": [
+    "language change",
+    "firmware update",
+    "DFU",
+    "Charge Case",
+    "firmware version",
+    "device firmware update",
+    "firmware not updating"
+  ],
+  "source_last_updated": "2026-04-20T14:21:25.000+0000",
+  "source_hash": "b1e64b58afb44ae0f6be620dddf7eae9445a7c55ad23ce4267a0c8dea201bcce",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.038961Z",
+  "status": "active"
+}
