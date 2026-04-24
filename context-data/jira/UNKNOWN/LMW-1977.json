@@ -1,0 +1,36 @@
+{
+  "id": "LMW-1977",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS \u26d4 HSFWCH-10248 | INTERMITTENT | OSPREY \ud83e\udd85 Putting one earbud in CC sometimes causes both earbuds to disconnect",
+  "feature": "Osprey / Free 60+",
+  "scenario": "Placing one earbud in the charging case causes both earbuds to disconnect instead of only the placed one.",
+  "description_clean": "Putting one earbud in the charging case sometimes causes both earbuds to disconnect. Steps: pair Free 60+ with app, take both earbuds out of case, place only one earbud (presumably the primary) in the case. Expected: only the placed earbud should disconnect; the other should remain connected.",
+  "steps": [
+    "Pair the Free 60+ earbuds with the app.",
+    "Take both earbuds out of the charging case.",
+    "Place only one earbud (presumably the primary) back into the charging case."
+  ],
+  "expected": "Only the placed earbud should disconnect; the other earbud should remain connected.",
+  "actual": "Both earbuds disconnect.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [
+    "Intermittent"
+  ],
+  "keywords": [
+    "earbud disconnect",
+    "charging case",
+    "both earbuds disconnect",
+    "primary earbud",
+    "Free 60+",
+    "pairing issue",
+    "single earbud placement"
+  ],
+  "source_last_updated": "2026-04-15T08:48:09.000+0000",
+  "source_hash": "c403860808412266c56c33ce58aa595bc4c620be1accad9250ba4c4ae5aee290",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.056019Z",
+  "status": "active"
+}
