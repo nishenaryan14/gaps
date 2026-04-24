@@ -1,0 +1,31 @@
+{
+  "id": "64907052",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - Notifications & Device Alerts - Tab UI",
+  "feature": "App Settings - General - Notifications & Device Alerts",
+  "scenario": "Verify the Notification tab UI under General settings matches the Figma design",
+  "steps": [
+    "Navigate to General settings.",
+    "Click on the Notification tab.",
+    "Check the menu."
+  ],
+  "expected": "The tab is present as shown in Figma design.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Notification tab",
+    "General settings",
+    "UI verification",
+    "Figma design",
+    "menu check",
+    "settings UI",
+    "notification settings"
+  ],
+  "source_last_updated": "1759416420",
+  "source_hash": "9290dda9f56da59096a74c37e517fdfe4c3b02f217142f7a28c93c59471794cb",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.098669Z",
+  "status": "active"
+}
