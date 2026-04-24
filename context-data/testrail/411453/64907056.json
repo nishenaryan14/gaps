@@ -5,32 +5,30 @@
   "project": "411453",
   "title": "App Settings - General - Notifications & Device Alerts - Navigation",
   "feature": "App Settings - General - Notifications & Device Alerts",
-  "scenario": "Verify navigation flow from App Settings to Notifications & Device Alerts and back to App Settings page.",
+  "scenario": "Verify navigation from app settings to Notifications & Device Alerts and back to App Settings page.",
   "steps": [
-    "Start the app",
-    "Tap the App Settings icon (hamburger menu)",
+    "Start app",
+    "Tap App Settings icon (hamburger)",
     "Tap General",
     "Tap Notifications & Device Alerts",
-    "Confirm the tab matches the Figma design",
-    "Tap back",
-    "Verify user returns to the App Settings page"
+    "Tap back"
   ],
-  "expected": "The Notifications & Device Alerts tab matches the Figma design, and tapping back returns the user to the App Settings page.",
+  "expected": "The tab is present as per Figma design. Then user is returned to App Settings page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "App Settings",
     "Notifications & Device Alerts",
-    "Navigation flow",
+    "Navigation",
     "Hamburger menu",
     "General settings",
     "Back navigation",
-    "Figma design verification",
+    "Mobile app",
     "Settings page"
   ],
   "source_last_updated": "1759416431",
   "source_hash": "8cb620288a75e740611cfcaeacc690acdc64e1ddb21358b077a36c3592a4045e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.750622Z",
+  "processed_at": "2026-04-24T11:23:05.353822Z",
   "status": "active"
 }
