@@ -1,0 +1,33 @@
+{
+  "id": "64907507",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - Tenant info persists after updating the app",
+  "feature": "Support",
+  "scenario": "Tenant information persists across mobile app updates after registration",
+  "steps": [
+    "Register a mobile user on a tenant.",
+    "Verify tenant info is present in Poly Lens Menu > Support > App.",
+    "Install a new version of the mobile app.",
+    "Launch the new version of the mobile app.",
+    "Verify the tenant info is still present and matches the previous tenant info."
+  ],
+  "expected": "Tenant information persists and matches the previous tenant info after updating the mobile app.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "tenant information persistence",
+    "mobile app update",
+    "tenant registration",
+    "Poly Lens",
+    "app upgrade data retention",
+    "cross-version tenant verification",
+    "mobile app data persistence"
+  ],
+  "source_last_updated": "1759752032",
+  "source_hash": "3ede487d871c29b92d8d4609f8c684a821c980ac12effd4a027cf7ef43502879",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.361909Z",
+  "status": "active"
+}
