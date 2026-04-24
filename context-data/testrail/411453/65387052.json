@@ -7,18 +7,16 @@
   "feature": "App Settings Menu - User Guide",
   "scenario": "User Guide page displays supported devices with images, sections for onboarding and user guides, and an \"Other devices\" button linking to Poly support.",
   "steps": [
-    "Navigate to the User Guide page.",
+    "Open the User Guide page.",
     "Observe the list of supported devices with images.",
     "Verify the page is split into two sections: 'Onboarding for Free 20 / Free60 / Free 60+' and 'User Guides for all other devices'.",
     "Scroll to the bottom of the page.",
-    "Verify the text 'Not seeing your device?' is displayed.",
-    "Verify an 'Other devices' button is present.",
+    "Locate the text 'Not seeing your device?' and the 'Other devices' button.",
     "Click the 'Other devices' button.",
-    "Verify it opens the Poly support web page.",
-    "Navigate back to the User Guide page.",
-    "Verify a Back button is present in the top left corner."
+    "Verify that clicking the button opens the Poly support web page.",
+    "Locate the Back button in the top left corner of the page."
   ],
-  "expected": "The User Guide page displays a list of supported devices with images, split into two sections: \"Onboarding for Free 20 / Free60 / Free 60+\" and \"User Guides for all other devices\". At the bottom, the text \"Not seeing your device?\" and an \"Other devices\" button are present. Clicking the \"Other devices\" button opens the Poly support web page. A Back button is present in the top left corner.",
+  "expected": "The User Guide page displays a list of supported devices with images, split into two sections: \"Onboarding for Free 20 / Free60 / Free 60+\" and \"User Guides for all other devices\". At the bottom, there is text \"Not seeing your device?\" and an \"Other devices\" button that opens the Poly support web page. A Back button is present in the top left corner.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -29,11 +27,11 @@
     "Other devices button",
     "Poly support",
     "Back button",
-    "device images"
+    "device list"
   ],
   "source_last_updated": "1760437544",
   "source_hash": "e16f68ef9e4dd06ac53dffe609ed7dbc0b405558786e8d5ef89295ceabfc1390",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:34.561901Z",
+  "processed_at": "2026-04-24T11:23:05.360909Z",
   "status": "active"
 }
