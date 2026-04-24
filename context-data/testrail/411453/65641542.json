@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "ANC - Switch from ANC Mode to Transparency Mode",
   "feature": "ANC (Active Noise Cancellation)",
-  "scenario": "Verify switching from ANC Mode to Transparency Mode disables ANC and enables Transparency with Environment selected",
+  "scenario": "Verify that switching from ANC Mode to Transparency Mode correctly disables ANC, greys out ANC options, and enables Transparency Mode with Environment selected by default on first switch.",
   "steps": [
-    "Start the app with a device that supports ANC.",
-    "Go to Device Settings > ANC.",
-    "Ensure ANC Mode is ON.",
-    "Switch Transparency Mode to ON.",
-    "Check the screen."
+    "1. Open the audio settings menu.",
+    "2. Ensure the device is currently in ANC (Active Noise Cancellation) Mode.",
+    "3. Switch from ANC Mode to Transparency Mode.",
+    "4. Check that ANC is turned off.",
+    "5. Verify that ANC options (Adaptive/Standard) are disabled or greyed out.",
+    "6. Confirm that Transparency Mode is enabled.",
+    "7. On the first switch, verify that 'Environment' is selected by default."
   ],
-  "expected": "Transparency is set to ON with Environment selected (if first switch). ANC switches to OFF, with the previously selected value (Adaptive or Standard) and both values are disabled/greyed out.",
+  "expected": "Switching from ANC Mode to Transparency Mode correctly turns off ANC, disables/greys out ANC options (Adaptive/Standard), and enables Transparency Mode with Environment selected by default on first switch.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "ANC Mode",
     "Transparency Mode",
-    "ANC disabled",
-    "Environment selected",
-    "Device Settings",
-    "Noise Control",
-    "Audio Mode Switching"
+    "Active Noise Cancellation",
+    "Environment default",
+    "ANC options disabled",
+    "audio settings",
+    "mode switching"
   ],
   "source_last_updated": "1761045491",
   "source_hash": "1aac5c591bf3460b44db3f13374590561b2d7b034f63f80ef6e81ea9353d9c10",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.395741Z",
+  "processed_at": "2026-04-24T11:50:53.234982Z",
   "status": "active"
 }
