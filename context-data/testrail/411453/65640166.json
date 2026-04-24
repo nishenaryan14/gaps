@@ -7,11 +7,12 @@
   "feature": "Analytics",
   "scenario": "Firebase events are gathered for logged-out users who have opted into data-sharing",
   "steps": [
-    "Precondition: User is not logged in but has opted into data-sharing via App Settings > General > Account > Share Data toggle.",
+    "Log out of the application.",
+    "Ensure the user has opted into data-sharing.",
     "Trigger any Firebase event (e.g., device_added which gathers the device's serial number).",
-    "Verify on Firebase that the event count for that device's serial number increases."
+    "Check Firebase to verify that the event count for that device's serial number has increased."
   ],
-  "expected": "Events are gathered even when the user is logged out but has opted into data-sharing. The event count for the device's serial number should increase on Firebase.",
+  "expected": "The event count for the device's serial number increases on Firebase.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -19,14 +20,13 @@
     "logged-out users",
     "data-sharing opt-in",
     "device serial number",
-    "event count",
-    "App Settings",
-    "Share Data toggle",
-    "device_added"
+    "event count verification",
+    "device_added event",
+    "Firebase analytics"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "08279c2539ff67314735d11d8c4c808177795be9c8cb2ba865d2f49674638324",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "processed_at": "2026-04-24T11:50:53.321465Z",
   "status": "active"
 }
