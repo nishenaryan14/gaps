@@ -1,0 +1,34 @@
+{
+  "id": "66317763",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Reset Device - Clear Trusted Devices - Clear - No",
+  "feature": "Reset Device - Clear Trusted Devices",
+  "scenario": "Verify that tapping \"No\" on the confirmation popup cancels the \"Clear Trusted Devices\" action and keeps the headset connected.",
+  "steps": [
+    "Start Lens App with a headset connected.",
+    "Go to Device Settings (\"...\" button).",
+    "Tap on Reset Device tab.",
+    "Tap the \"Clear\" button next to \"Clear Trusted Devices\".",
+    "Tap \"No\" on the confirmation popup."
+  ],
+  "expected": "The popup closes, the headset is not cleared, the Reset Device tab remains open, and the headset stays connected.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Clear Trusted Devices",
+    "confirmation popup",
+    "cancel action",
+    "No button",
+    "headset connected",
+    "Device Settings",
+    "Reset Device tab",
+    "Lens App"
+  ],
+  "source_last_updated": "1762260877",
+  "source_hash": "cdc2b36dd2f3e7e097fe1c19c05317c763616a53133440f77f54050e77ee6b4f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.412172Z",
+  "status": "active"
+}
