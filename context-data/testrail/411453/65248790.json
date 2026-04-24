@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Find My Device - Connected / Nearby device details",
   "feature": "Find My Device",
-  "scenario": "Verify the Connected / Nearby device details screen displays device name, status, description, and Play button when accessing Find My Device with a paired headset.",
+  "scenario": "Verify the Connected/Nearby device details screen displays device name, status, description, and Play button when HS is paired and connected.",
   "steps": [
-    "Start the app with headset paired and connected.",
+    "Start the App with HS paired and connected.",
     "Go to App Settings.",
-    "Tap on Find My Device (allow GPS location if prompted).",
-    "Tap on the Blue Geo icon."
+    "Tap on Find My Device (if prompted allow access to GPS location).",
+    "Tap on Blue Geo icon."
   ],
-  "expected": "A new window displays the device name, status (Connected), a description \"Make sure this device is being used as your main audio source to play tone\", and a Play button.",
+  "expected": "New window shows Device name, Status (Connected), description \"Make sure this device is being used as your main audio source to play tone\", and a Play Button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Find My Device",
     "Connected device details",
-    "Paired headset",
-    "Device name",
-    "Device status",
+    "Nearby device screen",
+    "HS paired connected",
+    "Device name status description",
     "Play button",
+    "Find My Device",
     "Blue Geo icon",
-    "GPS location"
+    "App Settings"
   ],
   "source_last_updated": "1759928440",
   "source_hash": "ecaf3032835267094300f02f0aa5ea9903fde256c84772523a36b0d4d1ec1b7f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.764645Z",
+  "processed_at": "2026-04-24T11:23:05.358391Z",
   "status": "active"
 }
