@@ -1,0 +1,36 @@
+{
+  "id": "LMW-2154",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS \ud83d\udfe5 FLAMINGO \ud83e\udda9 Unable to update Charge Case",
+  "feature": "iOS App - Device Settings / Software Update",
+  "scenario": "When a Legend 50 headset is paired and the Charge Case is on outdated firmware, the mobile app fails to show an update button for the Charge Case, displaying a message directing the user to use the desktop app instead.",
+  "description_clean": "When a Legend 50 headset is paired with the app and the Charge Case is on outdated firmware, navigating to Device Settings > Software shows no update button for the Charge Case. Instead, a message is displayed: \"This product can't be updated in HP Poly Studio Mobile. Use HP Poly Studio Desktop to update this product.\" Expected behavior is that the user should be able to update the Charge Case via the mobile app.",
+  "steps": [
+    "1. Pair a Legend 50 headset with the HP Poly Studio Mobile app.",
+    "2. Ensure the Charge Case is on outdated firmware.",
+    "3. Navigate to Device Settings > Software.",
+    "4. Observe the displayed information for the Charge Case."
+  ],
+  "expected": "The user should see an update button for the Charge Case and be able to update it via the mobile app.",
+  "actual": "No update button is shown for the Charge Case. Instead, a message is displayed: \"This product can't be updated in HP Poly Studio Mobile. Use HP Poly Studio Desktop to update this product.\"",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "Legend 50 headset",
+    "Charge Case",
+    "outdated firmware",
+    "HP Poly Studio Mobile app",
+    "update button missing",
+    "desktop app",
+    "Device Settings",
+    "Software"
+  ],
+  "source_last_updated": "2026-04-16T14:13:54.000+0000",
+  "source_hash": "5dbcc58a8d439a2557628a5ff6ac88debfaabc7c3b28a89b46745b9332298475",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.050477Z",
+  "status": "active"
+}
