@@ -1,0 +1,33 @@
+{
+  "id": "65641551",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - changes are present after putting the app in the background",
+  "feature": "ANC (Active Noise Cancellation)",
+  "scenario": "Verify ANC settings persist after app is moved to background and foreground",
+  "steps": [
+    "Start the app with the device.",
+    "Open the ANC tab.",
+    "Set up ANC to some value.",
+    "Put the app in/out of the background.",
+    "Check the setting."
+  ],
+  "expected": "The values should remain as set in step 3.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "ANC settings",
+    "background foreground",
+    "persist",
+    "app state",
+    "noise cancellation",
+    "settings verification",
+    "audio settings"
+  ],
+  "source_last_updated": "1760956286",
+  "source_hash": "6795768c98e55837dae731f4f6f28a46ab65e96d5f4ea9e9e7ece8b4eddc0b18",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
