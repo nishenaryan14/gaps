@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Allow While Using App is selected",
   "feature": "Location Sharing / Permissions",
-  "scenario": "User selects \"Allow While Using App\" for location permission and expects no further location consent prompts during the session or after app restart.",
+  "scenario": "After selecting \"Allow While Using App\" in the location sharing dialogue, the app should not prompt for location consent again upon restart when accessing Find My Device.",
   "steps": [
-    "Open the app and navigate to the location sharing dialogue.",
-    "Select 'Allow While Using App' from the location sharing options.",
-    "Observe that the FMD screen loads without any additional location consent prompt.",
-    "Close and restart the app.",
-    "Observe that the app does not ask for location permission again."
+    "Start app for first time and finish onboarding.",
+    "User lands on Home Screen and is prompted with location sharing dialogue options: 'Allow Once', 'Allow While Using App', 'Don't Allow'.",
+    "Tap 'Allow While Using App'.",
+    "Open App Settings (hamburger icon) and tap 'Find My Device'.",
+    "FMD screen is visible with no location sharing dialogue.",
+    "Restart the app and open FMD again - user should not be asked for consent again."
   ],
-  "expected": "After selecting \"Allow While Using App\", the FMD screen loads without re-prompting for location consent. After restarting the app, the user is not asked again for location permission.",
+  "expected": "After restarting the app and opening FMD again, the user should not be asked for location consent again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Allow While Using App",
-    "location permission",
-    "location consent prompt",
-    "app restart",
-    "FMD screen",
     "location sharing dialogue",
-    "persistent permission"
+    "Allow While Using App",
+    "Find My Device",
+    "location consent",
+    "app restart",
+    "persistent permission",
+    "FMD screen"
   ],
   "source_last_updated": "1759149575",
   "source_hash": "b142b7dd9a41356808f99d2073e414d7c083945a4664a43200b9e2a0a8631ee8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.720830Z",
+  "processed_at": "2026-04-24T11:23:05.334469Z",
   "status": "active"
 }
