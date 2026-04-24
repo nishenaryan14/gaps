@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device Home screen - Connection status",
   "feature": "Device Home Screen",
-  "scenario": "Verify connection status display on Device Home Screen shows 'Connected' with green marker when paired and connected, and 'Disconnected' with red marker when turned off.",
+  "scenario": "Verify that the Device Home Screen correctly displays 'Connected' with a green marker when the headset is paired and connected, and changes to 'Disconnected' with a red marker when the headset is turned off.",
   "steps": [
-    "Ensure the Headset (HS) is paired with the device.",
-    "Turn on the Headset (HS) and confirm it is connected.",
-    "Observe the status display on the Device Home Screen.",
-    "Verify that the status shows 'Connected' with a green marker.",
-    "Turn off the Headset (HS).",
-    "Observe the status display on the Device Home Screen again.",
-    "Verify that the status changes to 'Disconnected' with a red marker."
+    "1. Ensure the headset (HS) is paired with the device.",
+    "2. Turn on the headset and confirm it is connected.",
+    "3. Navigate to the Device Home Screen.",
+    "4. Observe the connection status display.",
+    "5. Turn off the headset.",
+    "6. Observe the connection status display again."
   ],
-  "expected": "When HS is paired and connected, status shows 'Connected' with a green marker. When HS is turned off, status changes to 'Disconnected' with a red marker.",
+  "expected": "When the headset is paired and connected, the status should show 'Connected' with a green marker. When the headset is turned off, the status should change to 'Disconnected' with a red marker.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Connection status display",
     "Device Home Screen",
-    "Connected green marker",
-    "Disconnected red marker",
-    "Headset paired",
-    "Headset turned off",
-    "Bluetooth connection status"
+    "Connected",
+    "green marker",
+    "Disconnected",
+    "red marker",
+    "headset paired",
+    "connection status",
+    "headset turned off"
   ],
   "source_last_updated": "1762181274",
   "source_hash": "7fa3abe4ca5e15e897f97742dbe986539567e580e54d05f2637e1f4098f4287f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.741502Z",
+  "processed_at": "2026-04-24T11:23:05.335995Z",
   "status": "active"
 }
