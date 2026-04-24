@@ -5,17 +5,19 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 ANC | Settings for Transparency mode are not properly applied/saved",
   "feature": "iOS ANC Settings",
-  "scenario": "Transparency mode sub-settings (Environment/Speech) are not saved and revert to defaults when reopening the settings page.",
-  "description_clean": "Transparency mode settings (Environment/Speech) are not properly applied or saved. When switching between Environment and Speech sub-settings for Transparency mode and reopening the settings page, the device reverts to a default (Surround 85 reverts to Speech; Free 60 and Free 20 revert to Environment) instead of saving the user's selection.",
+  "scenario": "Transparency mode sub-settings (Environment/Speech) are not saved and revert to defaults when switching between them.",
+  "description_clean": "Transparency mode settings (Environment/Speech) are not properly applied or saved. When switching between Environment and Speech sub-settings for Transparency mode, the device reverts to a default (Surround 85 reverts to Speech, Free 60 and Free 20 revert to Environment) instead of saving the user's selection.",
   "steps": [
     "Open Transparency mode settings.",
     "Select Environment sub-setting (e.g., Surround 85).",
-    "Switch to Speech sub-setting (e.g., Free 60 or Free 20).",
-    "Close the settings page.",
-    "Reopen the Transparency mode settings page."
+    "Switch to Speech sub-setting.",
+    "Observe the current selection.",
+    "Return to Environment sub-setting.",
+    "Check if the previous selection (Surround 85) is retained or reverted to default (Speech).",
+    "Repeat steps 2-6 with Free 60 and Free 20 sub-settings, switching between Environment and Speech."
   ],
-  "expected": "The previously selected sub-setting (e.g., Surround 85 or Free 60/Free 20) should be saved and displayed upon reopening.",
-  "actual": "The device reverts to a default: Surround 85 reverts to Speech; Free 60 and Free 20 revert to Environment.",
+  "expected": "The user's selected sub-setting (e.g., Surround 85, Free 60, Free 20) should be saved and retained when switching between Environment and Speech modes.",
+  "actual": "When switching between Environment and Speech sub-settings, the device reverts to a default: Surround 85 reverts to Speech, Free 60 and Free 20 revert to Environment.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -26,12 +28,12 @@
     "Speech",
     "settings not saved",
     "revert to defaults",
-    "settings page reopen",
-    "audio settings bug"
+    "switching",
+    "audio settings"
   ],
   "source_last_updated": "2026-04-13T09:59:05.000+0000",
   "source_hash": "526d84780e2d8536aad684076cab27747abf369a183a806fc17a3333f1f589ba",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.057531Z",
+  "processed_at": "2026-04-24T10:51:32.703985Z",
   "status": "active"
 }
