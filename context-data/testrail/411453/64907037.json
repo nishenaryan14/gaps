@@ -5,34 +5,35 @@
   "project": "411453",
   "title": "[IOS]App Settings - General - Account - Log in - Log out - Continue",
   "feature": "App Settings - General - Account - Login/Logout",
-  "scenario": "Verify user can log in and log out via App Settings > General > Account, with correct UI states before and after.",
+  "scenario": "Verify user can log in and log out via App Settings > General > Account, with correct UI states after each action.",
   "steps": [
     "Start the app",
-    "Tap hamburger icon",
+    "Tap the hamburger icon",
     "Go to General > Account",
     "Tap Log in",
     "Tap Continue and log in with credentials",
     "Verify 'Your account' text with Name and Email fields populated",
     "Tap Log out",
-    "Verify a login dialog with Cancel and Continue options appears",
+    "Verify login dialog opens with Cancel and Continue options",
     "Tap Continue",
     "Verify user is logged out, 'Your account' text shows 'You aren't currently logged in', and Log in button is visible"
   ],
-  "expected": "User can log in successfully, see their account info (Name and Email fields populated), then log out and see the login dialog with Cancel and Continue options. After tapping Continue, user is logged out, sees \"You aren't currently logged in\" text, and the Log in button is visible.",
+  "expected": "User can log in successfully (Name and Email fields populated under 'Your account'), then log out successfully (dialog with Cancel and Continue appears, after tapping Continue user is logged out, 'Your account' shows 'You aren't currently logged in', and Log in button is visible).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "login",
     "logout",
     "account settings",
-    "UI state verification",
+    "UI states",
     "authentication",
-    "user session",
-    "app settings"
+    "user credentials",
+    "app settings",
+    "account verification"
   ],
   "source_last_updated": "1764319845",
   "source_hash": "5be07691c8a9306facad9f3d236084de6d5ea3dc71871470ac976d19169fa7b0",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.101212Z",
+  "processed_at": "2026-04-24T10:51:32.751623Z",
   "status": "active"
 }
