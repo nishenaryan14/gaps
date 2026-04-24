@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Mobile user changes the Lens tenant, the change in the mobile app",
   "feature": "Mobile App - Lens Tenant Switching",
-  "scenario": "Mobile app should display updated tenant information (tenant name, tenant ID, user ID, app ID) on the Poly Support/App page after switching Lens tenants, either automatically (if invite accepted in-app) or after restart (if invite accepted externally).",
+  "scenario": "Mobile user switches Lens tenant and the app displays the new tenant data on the Poly Support/App page, either automatically (if accepted in-app) or after restart (if accepted externally).",
   "steps": [
-    "1. Have a mobile user on a current Lens tenant.",
-    "2. Change the user's Lens tenant by accepting an invite to another Lens tenant.",
-    "3. If the invite is accepted within the mobile app, verify the change is applied automatically.",
-    "4. If the invite is accepted via an external source (e.g., laptop), restart the mobile app.",
-    "5. After switching tenants, navigate to the Poly Support/App page.",
-    "6. Verify the app data displays the new tenant information: tenant name, tenant ID, user ID, and app ID."
+    "1. Change the Lens tenant of a mobile user (e.g., by accepting an invite to another Lens tenant).",
+    "2. If the invite is accepted within the mobile app, verify the change is applied automatically.",
+    "3. If the invite is accepted via an external source (e.g., laptop), restart the mobile app.",
+    "4. Navigate to the Poly Support/App page.",
+    "5. Verify the app displays the new tenant data (tenant name, tenant ID, user ID, app ID)."
   ],
-  "expected": "The mobile app reflects the tenant change. If accepted in-app, the change applies automatically. If accepted externally, the change applies after restart. The Poly Support/App page shows the new tenant name, tenant ID, user ID, and app ID.",
+  "expected": "The mobile app reflects the tenant change. If accepted within the app, the change applies automatically. If accepted externally, the change applies after restart. The Poly Support/App page shows the new tenant name, tenant ID, user ID, and app ID.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Lens tenant switching",
-    "tenant information display",
+    "Lens tenant switch",
+    "mobile app",
     "Poly Support/App page",
-    "invite acceptance",
-    "mobile app restart",
-    "tenant name",
-    "tenant ID",
-    "user ID"
+    "tenant data display",
+    "in-app acceptance",
+    "external acceptance",
+    "app restart",
+    "tenant verification"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "fccd2d78a86994e50e65bfa5b51ec9965469764b350af0bc40bf67b9dd08e3a4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "processed_at": "2026-04-24T11:50:53.325358Z",
   "status": "active"
 }
