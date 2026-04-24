@@ -1,0 +1,34 @@
+{
+  "id": "65639840",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "1 step DFU - Content of the Software Update tab when there is update available only for Earbuds",
+  "feature": "Software Update",
+  "scenario": "Verify the Software Update tab displays Earbuds update details (versions, release notes, Update button) and marks Charge Case as up to date when only an Earbuds update is available.",
+  "steps": [
+    "1. Open the Software Update tab.",
+    "2. Check that the Earbuds section shows the current version and available version.",
+    "3. Verify that release notes are displayed for the Earbuds update.",
+    "4. Confirm that an Update button is shown for the Earbuds.",
+    "5. Check that the Charge Case section is marked as 'Up to date'."
+  ],
+  "expected": "Earbuds: current version, available version, release notes, and Update button are displayed. Charge Case is marked as up to date.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Software Update tab",
+    "Earbuds update",
+    "firmware version",
+    "release notes",
+    "Update button",
+    "Charge Case",
+    "up to date",
+    "firmware update details"
+  ],
+  "source_last_updated": "1760949167",
+  "source_hash": "55779b747527aa18c83f5ce7e314c8d6eea23e5dd75f4414bcd7eb83f4191fb6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "status": "active"
+}
