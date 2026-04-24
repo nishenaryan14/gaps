@@ -1,0 +1,34 @@
+{
+  "id": "65640129",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Policy: Policy applied - Turn off WiFi",
+  "feature": "Policy",
+  "scenario": "Verify that policy-affected settings remain locked and show an offline modification popup when Wi-Fi is turned off and the app is restarted on a device with policies applied.",
+  "steps": [
+    "Ensure the device has policies applied.",
+    "Turn off Wi-Fi on the device.",
+    "Restart the app.",
+    "Attempt to modify a policy-affected (locked) setting.",
+    "Observe the popup message displayed."
+  ],
+  "expected": "Policy-affected settings remain locked after restarting the app with Wi-Fi off. Attempting to modify a locked setting shows a popup indicating settings cannot be modified offline.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "policy-affected settings",
+    "locked settings",
+    "offline modification popup",
+    "Wi-Fi off",
+    "app restart",
+    "policy enforcement",
+    "settings modification",
+    "device policy"
+  ],
+  "source_last_updated": "1760949373",
+  "source_hash": "8694f6b90522f23987b69d0c61dba041518ba9646da131081eaeb1b5d3e65491",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.420783Z",
+  "status": "active"
+}
