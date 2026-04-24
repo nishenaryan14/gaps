@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Verify User Guides section loads under App Settings",
+    "steps": [
+      "1. Launch the application.",
+      "2. Navigate to App Settings.",
+      "3. Locate and tap on 'User Guides' option.",
+      "4. Observe the User Guides section is displayed."
+    ],
+    "expected": "The User Guides section opens successfully under App Settings without errors."
+  },
+  {
+    "title": "Verify first 6 device images load correctly in User Guides",
+    "steps": [
+      "1. Launch the application.",
+      "2. Navigate to App Settings > User Guides.",
+      "3. Observe the device list displayed in the User Guides section.",
+      "4. Check the images for the first 6 devices in the list."
+    ],
+    "expected": "The first 6 devices display actual device images (not placeholders)."
+  },
+  {
+    "title": "Verify devices beyond the 6th show placeholder images in User Guides",
+    "steps": [
+      "1. Launch the application.",
+      "2. Navigate to App Settings > User Guides.",
+      "3. Scroll down the device list beyond the first 6 devices.",
+      "4. Observe the images for devices from the 7th position onward."
+    ],
+    "expected": "Devices from the 7th position onward display placeholder images instead of actual device images."
+  },
+  {
+    "title": "Verify placeholder image is visually distinct from actual device image",
+    "steps": [
+      "1. Launch the application.",
+      "2. Navigate to App Settings > User Guides.",
+      "3. Capture the image of the first device (actual image).",
+      "4. Scroll to the 7th device and capture its image (placeholder).",
+      "5. Compare the two images for visual differences."
+    ],
+    "expected": "The placeholder image is visually distinct (e.g., gray box, icon, or missing image indicator) compared to the actual device image."
+  },
+  {
+    "title": "Verify image loading behavior persists after app restart",
+    "steps": [
+      "1. Launch the application.",
+      "2. Navigate to App Settings > User Guides.",
+      "3. Verify first 6 devices show actual images and 7th+ show placeholders.",
+      "4. Close the app completely.",
+      "5. Relaunch the application.",
+      "6. Navigate to App Settings > User Guides again.",
+      "7. Observe the device images."
+    ],
+    "expected": "The same behavior persists: first 6 devices display actual images, devices from the 7th position onward display placeholders."
+  },
+  {
+    "title": "Verify device images load correctly when scrolling back up in User Guides",
+    "steps": [
+      "1. Launch the application.",
+      "2. Navigate to App Settings > User Guides.",
+      "3. Scroll down past the 6th device so that the 7th device is visible (placeholder).",
+      "4. Scroll back up to the top of the device list.",
+      "5. Observe the images for the first 6 devices."
+    ],
+    "expected": "The first 6 devices still display actual device images after scrolling back up; no regression to placeholders."
+  },
+  {
+    "title": "Verify placeholder images do not break layout or functionality in User Guides",
+    "steps": [
+      "1. Launch the application.",
+      "2. Navigate to App Settings > User Guides.",
+      "3. Scroll to a device beyond the 6th that shows a placeholder image.",
+      "4. Tap on the device with the placeholder image.",
+      "5. Observe the behavior."
+    ],
+    "expected": "Tapping on a device with a placeholder image still navigates to the corresponding user guide content; the placeholder does not break functionality."
+  }
+]
