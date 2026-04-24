@@ -1,0 +1,34 @@
+{
+  "id": "65871622",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - No Device Connected - Internet is off - Supported List",
+  "feature": "Device Home Screen",
+  "scenario": "When no devices are connected and internet is off, tapping \"Supported Devices\" shows an internet-required dialog that can be dismissed with \"Ok got it\".",
+  "steps": [
+    "Ensure no devices are connected.",
+    "Turn off internet connection.",
+    "Tap the 'Supported Devices' link.",
+    "Observe the dialog that appears.",
+    "Tap the 'Ok got it' button."
+  ],
+  "expected": "A dialog appears with the message: \"Feature unavailable. An internet connection is required to access this feature.\" and an \"Ok got it\" button. Tapping the button closes the dialog and returns to the No Devices screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "no devices connected",
+    "internet off",
+    "Supported Devices",
+    "internet-required dialog",
+    "Ok got it",
+    "offline",
+    "dismiss dialog",
+    "no internet"
+  ],
+  "source_last_updated": "1762181111",
+  "source_hash": "48fcc4940d2f99e7cf0dcd7ca90e15851d7e0f45b2c7038a1f3113cea2aca099",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.064322Z",
+  "status": "active"
+}
