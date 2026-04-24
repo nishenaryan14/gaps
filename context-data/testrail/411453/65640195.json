@@ -1,0 +1,34 @@
+{
+  "id": "65640195",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Soak Test - Headset connected, app in the foreground, idle",
+  "feature": "Soak Test / Memory Leak Detection",
+  "scenario": "Verify no memory leaks or crashes after prolonged idle foreground use with a paired headset",
+  "steps": [
+    "Install and launch the app",
+    "Pair the headset with the phone",
+    "Go to the home screen",
+    "Leave the phone idle for multiple hours (ideally overnight)",
+    "Check that the app is still running and responsive"
+  ],
+  "expected": "The app remains running and responsive after prolonged idle time with a headset connected.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "memory leaks",
+    "crashes",
+    "idle foreground",
+    "paired headset",
+    "prolonged idle",
+    "app responsiveness",
+    "stability test",
+    "overnight test"
+  ],
+  "source_last_updated": "1760949727",
+  "source_hash": "01663ad7e8e92873e6ed292fa777d8a2e040fda3a444ef56bc09a8ff451c29ef",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.428522Z",
+  "status": "active"
+}
