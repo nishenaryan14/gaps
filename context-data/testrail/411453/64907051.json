@@ -5,28 +5,26 @@
   "project": "411453",
   "title": "App Settings - General - Notifications & Device Alerts - Tab is present",
   "feature": "App Settings - General",
-  "scenario": "Verify the \"Notifications & Device Alerts\" tab is present under General in App Settings as per Figma design.",
+  "scenario": "Verify that the Notifications & Device Alerts tab is present under General in App Settings.",
   "steps": [
-    "Open the app settings.",
-    "Navigate to the 'General' section.",
-    "Locate the 'Notifications & Device Alerts' tab.",
-    "Compare the tab's presence and appearance against the Figma design."
+    "1. Navigate to General.",
+    "2. Check for the Notifications & Device Alerts tab."
   ],
-  "expected": "The \"Notifications & Device Alerts\" tab is present under General in App Settings and matches the Figma design.",
+  "expected": "The tab is present as shown in Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Notifications & Device Alerts",
+    "General",
     "App Settings",
-    "General section",
-    "Figma design",
-    "tab presence",
-    "UI verification",
-    "device alerts"
+    "tab",
+    "verify",
+    "present",
+    "navigation"
   ],
   "source_last_updated": "1759416416",
   "source_hash": "32ebd4cc91f526ed078e412af4272f18648fc7569ed516e8c41f5facac71f065",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.750622Z",
+  "processed_at": "2026-04-24T11:23:05.349306Z",
   "status": "active"
 }
