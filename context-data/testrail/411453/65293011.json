@@ -1,0 +1,33 @@
+{
+  "id": "65293011",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Eula page - License Agreement and Privacy Policy check box",
+  "feature": "Onboarding - Eula Page",
+  "scenario": "Verify that the License Agreement and Privacy Policy check box on the EULA page must be checked to enable the Continue button and proceed with onboarding.",
+  "steps": [
+    "Start the app for the first time.",
+    "After the initial screen, tap Continue.",
+    "Check the box for license agreement and privacy policy.",
+    "Tap Continue."
+  ],
+  "expected": "1. User cannot continue because the license check box is unchecked.\n2. Checkmark appears and Continue button becomes active.\n3. User can proceed with the onboarding flow.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "License Agreement",
+    "Privacy Policy",
+    "EULA",
+    "check box",
+    "Continue button",
+    "onboarding",
+    "accept terms",
+    "enable button"
+  ],
+  "source_last_updated": "1760528320",
+  "source_hash": "583c39b2abb90d42e2c712d7c2348c22c64c7bda2af10563fcfc5939fae03f89",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.057531Z",
+  "status": "active"
+}
