@@ -1,0 +1,34 @@
+{
+  "id": "65641620",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit test - 2nd screen Fail and Retry",
+  "feature": "Fit Test",
+  "scenario": "User can retry a fit test on a connected device after failing or canceling on the second screen and see the result.",
+  "steps": [
+    "1. Connect a device to the system.",
+    "2. Initiate a fit test on the connected device.",
+    "3. On the second screen of the fit test, either fail the test or cancel the process.",
+    "4. Tap the 'Retry' button that appears.",
+    "5. Perform the fit test again.",
+    "6. Observe the result of the retried fit test."
+  ],
+  "expected": "The user should be able to tap the Retry button, perform the test again, and see the result.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "fit test",
+    "retry",
+    "connected device",
+    "second screen",
+    "fail",
+    "cancel",
+    "result"
+  ],
+  "source_last_updated": "1760963417",
+  "source_hash": "26a6f63ff58bd0342c2d353726784333d8b1b422e0c10cd1503d8355d47d21e1",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.392549Z",
+  "status": "active"
+}
