@@ -4,27 +4,28 @@
   "type": "testcase",
   "project": "411453",
   "title": "Two earbuds screen/second screen, right zoom in",
-  "feature": "Earbuds Screen / Second Screen",
-  "scenario": "Clicking the right circle button on the QSG screen causes zoom-in and displays new text.",
+  "feature": "Earbuds / Second Screen",
+  "scenario": "On the second screen of the earbuds UI, clicking the right circle button causes the screen to zoom in and display new text.",
   "steps": [
-    "Navigate to the second screen (QSG).",
+    "Navigate to the second screen of the earbuds UI.",
     "Click the right circle button."
   ],
   "expected": "The screen zooms in and displays new text.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "QSG screen",
+    "earbuds UI",
+    "second screen",
     "right circle button",
-    "zoom-in",
+    "zoom in",
     "display text",
     "click button",
-    "second screen",
-    "circle button"
+    "screen navigation",
+    "UI interaction"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "27632c44fc9cfe1d4ae3be71b909f0c69f544ae41846687b056663c8b6e8b5f1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "processed_at": "2026-04-24T11:50:53.265985Z",
   "status": "active"
 }
