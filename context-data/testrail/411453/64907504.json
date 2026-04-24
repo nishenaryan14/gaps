@@ -1,0 +1,32 @@
+{
+  "id": "64907504",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - App, user is logged out, correct data",
+  "feature": "Support - App",
+  "scenario": "Verify that after a mobile user is logged out from the tenant, the Support/App card shows tenant name, tenant id, and user id as None, App ID unchanged, and Last connection as unknown.",
+  "steps": [
+    "1. Log in as a mobile user to the tenant.",
+    "2. Note the current values displayed on the Support/App card (Tenant name, Tenant ID, User ID, App ID, Last connection).",
+    "3. Log out the mobile user from the tenant.",
+    "4. Observe the Support/App card after logout."
+  ],
+  "expected": "After logout: Tenant name, Tenant ID, and User ID should display as None. App ID should remain the same as when the user was logged in. Last connection should show as unknown.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "mobile user logout",
+    "Support/App card",
+    "tenant name",
+    "tenant id",
+    "user id",
+    "app id unchanged",
+    "last connection unknown"
+  ],
+  "source_last_updated": "1759751986",
+  "source_hash": "0fcf2b1e37228aaed39297e49b64db9cda5b8785250daee519df832dc1c6e240",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.361909Z",
+  "status": "active"
+}
