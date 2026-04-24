@@ -1,0 +1,33 @@
+{
+  "id": "65640139",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Personal user - no tenant data in the mobile app",
+  "feature": "Mobile App - Personal User",
+  "scenario": "Guest user with no tenant data sees \"None\" for tenant info and \"Unknown\" for last connected after tapping \"Later\" in App Support menu",
+  "steps": [
+    "Install the mobile app",
+    "Log in as Guest",
+    "Navigate to Poly Lens Menu > Support > App",
+    "Tap 'Later'"
+  ],
+  "expected": "Tenant name, Tenant ID, and User ID show \"None\", and Last connected shows \"Unknown\"",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Guest user",
+    "No tenant data",
+    "None tenant info",
+    "Unknown last connected",
+    "Later button",
+    "App Support menu",
+    "Poly Lens",
+    "Mobile app"
+  ],
+  "source_last_updated": "1760949388",
+  "source_hash": "f4730afc86fb3c114bca643218b3bb723eb5634dc57b14f5e7c5a507db72a70e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "status": "active"
+}
