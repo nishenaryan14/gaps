@@ -1,0 +1,35 @@
+{
+  "id": "65868307",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings - Unpair Headset from Charge Stand",
+  "feature": "Device Settings",
+  "scenario": "Verify that after unpairing the headset from the Charge Stand, the Software Update section no longer shows Charge Stand information.",
+  "steps": [
+    "Clear the trusted device list on the Charge Stand.",
+    "Remove the headset from the companion app.",
+    "Remove the headset from the phone's Bluetooth settings.",
+    "Open Device Settings on the headset.",
+    "Navigate to the Software Update section.",
+    "Observe whether any information about the Charge Stand is displayed."
+  ],
+  "expected": "The Software Update section in Device Settings no longer shows any information about the Charge Stand.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "unpair headset",
+    "Charge Stand",
+    "Software Update section",
+    "trusted device list",
+    "companion app",
+    "Bluetooth settings",
+    "Device Settings",
+    "headset"
+  ],
+  "source_last_updated": "1769430362",
+  "source_hash": "08d8776a6e678a3bcd735952d35df8e25661640e8365febfa2806082a9f8e783",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.374106Z",
+  "status": "active"
+}
