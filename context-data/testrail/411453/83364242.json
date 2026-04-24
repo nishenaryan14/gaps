@@ -1,0 +1,34 @@
+{
+  "id": "83364242",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Perform DFU with no internet [New]",
+  "feature": "Software Update - DFU",
+  "scenario": "Perform DFU with no internet connection and verify appropriate error handling when Wi-Fi is off",
+  "steps": [
+    "Pair headset and launch app, then turn off Wi-Fi.",
+    "Go to Device Settings > Software Update.",
+    "Tap the Update button - expect 'Feature unavailable' dialog.",
+    "Turn on Wi-Fi and tap Update again - expect 3-step DFU screens.",
+    "Turn off Wi-Fi and tap Continue - expect 'Feature unavailable' dialog."
+  ],
+  "expected": "When Wi-Fi is off, tapping Update or Continue should show the 'Feature unavailable' dialog. When Wi-Fi is on, tapping Update should show the 3-step DFU screens.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU",
+    "Device Firmware Update",
+    "Wi-Fi off",
+    "error handling",
+    "Feature unavailable",
+    "no internet connection",
+    "offline update",
+    "software update"
+  ],
+  "source_last_updated": "1772713947",
+  "source_hash": "5edef2ae912351a8d7da2cfe19e8674f25969ac31ec1c62387369fff75cec3cf",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "status": "active"
+}
