@@ -1,0 +1,147 @@
+[
+  {
+    "title": "TC_UPDATE_001: Verify Free 60 artwork display after updating from v231.591.0.5046 (MR1.5) to latest on Studio iOS",
+    "steps": [
+      "Precondition: Device is on Studio iOS with app version v231.591.0.5046 (MR1.5).",
+      "1. Launch the app on Studio iOS.",
+      "2. Navigate to the Free 60 artwork section.",
+      "3. Capture a screenshot of the currently displayed artwork.",
+      "4. Trigger the update process from v231.591.0.5046 (MR1.5) to the latest available version.",
+      "5. Wait for the update to complete and the app to restart.",
+      "6. Navigate again to the Free 60 artwork section.",
+      "7. Capture a screenshot of the artwork displayed post-update.",
+      "8. Compare the pre-update and post-update artwork screenshots for consistency and correct rendering."
+    ],
+    "expected": "The Free 60 artwork is displayed correctly after the update, with no blank/empty spaces, missing images, or rendering errors. The post-update artwork matches the expected content."
+  },
+  {
+    "title": "TC_UPDATE_002: Verify Free 60 artwork display after updating from v231.591.0.5046 (MR1.5) to latest on PTT",
+    "steps": [
+      "Precondition: Device is on PTT with app version v231.591.0.5046 (MR1.5).",
+      "1. Launch the app on PTT.",
+      "2. Navigate to the Free 60 artwork section.",
+      "3. Verify that artwork thumbnails and full-size images are loaded.",
+      "4. Trigger the update process from v231.591.0.5046 (MR1.5) to the latest available version.",
+      "5. Wait for the update to complete and the app to restart.",
+      "6. Navigate again to the Free 60 artwork section.",
+      "7. Verify that artwork thumbnails and full-size images are loaded.",
+      "8. Scroll through the entire Free 60 artwork gallery to ensure all items render."
+    ],
+    "expected": "All Free 60 artwork items are displayed correctly post-update on PTT. No missing images, broken placeholders, or loading failures occur."
+  },
+  {
+    "title": "TC_UPDATE_003: Verify DFU is blocked when iPhone battery is low after update",
+    "steps": [
+      "Precondition: iPhone battery level is at or below the low battery threshold (e.g., \u2264 20%).",
+      "1. Launch the app on Studio iOS or PTT with app version v231.591.0.5046 (MR1.5).",
+      "2. Update the app to the latest version.",
+      "3. After update completes, navigate to the Device Firmware Update (DFU) section.",
+      "4. Attempt to initiate a DFU process.",
+      "5. Observe the system response.",
+      "6. Check if any warning or blocking message is displayed regarding low battery.",
+      "7. Verify that the DFU process does not proceed."
+    ],
+    "expected": "The DFU process is blocked with a clear warning message indicating that the iPhone battery is too low to perform the firmware update. The user cannot proceed with DFU until the battery is sufficiently charged."
+  },
+  {
+    "title": "TC_UPDATE_004: Verify DFU becomes available after charging iPhone from low battery state post-update",
+    "steps": [
+      "Precondition: iPhone battery level is at or below the low battery threshold (e.g., \u2264 20%).",
+      "1. Launch the app on Studio iOS or PTT with app version v231.591.0.5046 (MR1.5).",
+      "2. Update the app to the latest version.",
+      "3. After update completes, navigate to the DFU section and attempt DFU.",
+      "4. Verify DFU is blocked with a low battery warning.",
+      "5. Connect the iPhone to a charger and charge the battery above the low battery threshold (e.g., > 30%).",
+      "6. Navigate again to the DFU section.",
+      "7. Attempt to initiate the DFU process."
+    ],
+    "expected": "After charging the iPhone above the low battery threshold, the DFU process becomes available and can be initiated without the low battery warning."
+  },
+  {
+    "title": "TC_UPDATE_005: Verify post-update UI validation for artwork and media content on Studio iOS",
+    "steps": [
+      "Precondition: Device is on Studio iOS with app version v231.591.0.5046 (MR1.5).",
+      "1. Launch the app and update to the latest version.",
+      "2. After update completes, navigate to the main media/artwork gallery.",
+      "3. Verify that all UI elements (headers, titles, navigation bars) are correctly displayed.",
+      "4. Verify that artwork thumbnails load within 5 seconds.",
+      "5. Tap on a Free 60 artwork item to open full-screen view.",
+      "6. Verify the full-screen artwork renders without distortion, cropping, or missing areas.",
+      "7. Verify that metadata (title, artist, date) associated with the artwork is displayed correctly.",
+      "8. Navigate back and repeat steps 5-7 for 3 additional artwork items."
+    ],
+    "expected": "All UI elements are correctly rendered post-update. Artwork thumbnails and full-screen views load correctly with no distortion or missing content. Associated metadata is accurate and displayed."
+  },
+  {
+    "title": "TC_UPDATE_006: Verify post-update UI validation for artwork and media content on PTT",
+    "steps": [
+      "Precondition: Device is on PTT with app version v231.591.0.5046 (MR1.5).",
+      "1. Launch the app and update to the latest version.",
+      "2. After update completes, navigate to the main media/artwork gallery.",
+      "3. Verify that all UI elements (headers, titles, navigation bars) are correctly displayed.",
+      "4. Verify that artwork thumbnails load within 5 seconds.",
+      "5. Tap on a Free 60 artwork item to open full-screen view.",
+      "6. Verify the full-screen artwork renders without distortion, cropping, or missing areas.",
+      "7. Verify that metadata (title, artist, date) associated with the artwork is displayed correctly.",
+      "8. Navigate back and repeat steps 5-7 for 3 additional artwork items."
+    ],
+    "expected": "All UI elements are correctly rendered post-update on PTT. Artwork thumbnails and full-screen views load correctly with no distortion or missing content. Associated metadata is accurate and displayed."
+  },
+  {
+    "title": "TC_UPDATE_007: Verify low battery warning persists across app restarts after update",
+    "steps": [
+      "Precondition: iPhone battery level is at or below the low battery threshold (e.g., \u2264 20%).",
+      "1. Launch the app on Studio iOS or PTT with app version v231.591.0.5046 (MR1.5).",
+      "2. Update the app to the latest version.",
+      "3. After update completes, navigate to the DFU section and verify DFU is blocked.",
+      "4. Force close the app.",
+      "5. Re-launch the app.",
+      "6. Navigate to the DFU section again.",
+      "7. Attempt to initiate DFU."
+    ],
+    "expected": "The low battery warning persists across app restarts. DFU remains blocked until the battery is charged above the threshold, even after force-closing and re-launching the app."
+  },
+  {
+    "title": "TC_UPDATE_008: Verify artwork display is not affected by low battery state after update",
+    "steps": [
+      "Precondition: iPhone battery level is at or below the low battery threshold (e.g., \u2264 20%).",
+      "1. Launch the app on Studio iOS or PTT with app version v231.591.0.5046 (MR1.5).",
+      "2. Update the app to the latest version.",
+      "3. After update completes, navigate to the Free 60 artwork section.",
+      "4. Verify that artwork thumbnails load correctly.",
+      "5. Tap on an artwork item to open full-screen view.",
+      "6. Verify the artwork renders correctly.",
+      "7. Verify that the low battery warning (if shown) does not overlap or obscure the artwork display."
+    ],
+    "expected": "Free 60 artwork is displayed correctly even when the iPhone battery is low. The low battery state only affects DFU functionality, not artwork rendering or media content display."
+  },
+  {
+    "title": "TC_UPDATE_009: Verify DFU button state (enabled/disabled) reflects battery level after update",
+    "steps": [
+      "Precondition: iPhone battery level is at or below the low battery threshold (e.g., \u2264 20%).",
+      "1. Launch the app on Studio iOS or PTT with app version v231.591.0.5046 (MR1.5).",
+      "2. Update the app to the latest version.",
+      "3. After update completes, navigate to the DFU section.",
+      "4. Observe the DFU button state (should be disabled/greyed out).",
+      "5. Verify a tooltip or label explains the button is disabled due to low battery.",
+      "6. Charge the iPhone above the low battery threshold.",
+      "7. Navigate back to the DFU section.",
+      "8. Observe the DFU button state (should be enabled/active)."
+    ],
+    "expected": "The DFU button is disabled/greyed out when the battery is low, with an explanatory tooltip or label. After charging, the button becomes enabled/active, allowing DFU to proceed."
+  },
+  {
+    "title": "TC_UPDATE_010: Verify no data loss of Free 60 artwork after update from v231.591.0.5046 (MR1.5) to latest",
+    "steps": [
+      "Precondition: Device is on Studio iOS or PTT with app version v231.591.0.5046 (MR1.5) and has Free 60 artwork content cached or downloaded.",
+      "1. Launch the app and note the total count of Free 60 artwork items available.",
+      "2. Capture screenshots of all artwork items for reference.",
+      "3. Update the app to the latest version.",
+      "4. After update completes, navigate to the Free 60 artwork section.",
+      "5. Verify the total count of artwork items matches the pre-update count.",
+      "6. Compare each artwork item against the pre-update screenshots.",
+      "7. Verify that no artwork items are missing, corrupted, or replaced with placeholders."
+    ],
+    "expected": "No data loss occurs during the update. All Free 60 artwork items are preserved with correct rendering, matching the pre-update state in both count and content."
+  }
+]
