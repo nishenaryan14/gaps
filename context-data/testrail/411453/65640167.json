@@ -1,0 +1,35 @@
+{
+  "id": "65640167",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Events are gathered if user is logged in",
+  "feature": "Analytics",
+  "scenario": "Verify that events (e.g., device_added) are only gathered and logged to Firebase when the user is logged in, and that the event count for the device's serial number increases after a delay.",
+  "steps": [
+    "1. Ensure the user is logged into the application.",
+    "2. Trigger a specific event (e.g., device_added) that captures the device's serial number.",
+    "3. Note the current event count for that serial number in Firebase.",
+    "4. Wait for the event count to update (note: this may take a few hours, so testing is best done overnight).",
+    "5. Check the event count for the same serial number in Firebase again.",
+    "6. Verify that the event count has increased."
+  ],
+  "expected": "The event count for the captured serial number in Firebase increases after the event is triggered.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Firebase event logging",
+    "device_added event",
+    "serial number tracking",
+    "event count verification",
+    "user authentication",
+    "event gathering delay",
+    "Firebase analytics",
+    "event count increment"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "6403e6ced2dfc3bdc5d9da5fb2494e377e0658474cd4d65dbf14302fc23f7ff2",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.425393Z",
+  "status": "active"
+}
