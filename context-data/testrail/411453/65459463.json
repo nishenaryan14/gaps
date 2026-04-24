@@ -1,0 +1,35 @@
+{
+  "id": "65459463",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU -  Houston... screen Cancel button",
+  "feature": "Software Update - DFU",
+  "scenario": "Verify that canceling a DFU update after turning off the headset at ~10% progress returns the user to the home screen of the connected device.",
+  "steps": [
+    "Pair headset with the device.",
+    "Launch the companion app.",
+    "Navigate to Device Settings > Software Update.",
+    "Tap Update, then Continue, then Start Update.",
+    "Turn off the headset at approximately 10% progress to trigger a DFU failure.",
+    "Tap Cancel on the Houston screen."
+  ],
+  "expected": "User is directed back to the home screen for the currently connected device.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU update",
+    "cancel update",
+    "headset power off",
+    "10% progress",
+    "home screen",
+    "companion app",
+    "DFU failure",
+    "Houston screen"
+  ],
+  "source_last_updated": "1763130666",
+  "source_hash": "d387f3f3b2130fe5fe1e50215bdfde6ae5dbbb0f82f8be2159873365c3f95931",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.413695Z",
+  "status": "active"
+}
