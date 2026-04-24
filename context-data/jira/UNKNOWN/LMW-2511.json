@@ -4,15 +4,15 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS | OSPREY | Popup about update for Charge Case appears after launching the app",
-  "feature": "iOS | OSPREY",
-  "scenario": "Charge Case update popup appears briefly after app launch for Free 60+ despite being updatable via the mobile app",
-  "description_clean": "Popup about update for Charge Case appears briefly after launching the app. Steps: Pair Free 60+ with the app, ensure Charge Case is on outdated firmware, restart the app. Observed: Popup informing user about update for Charge Case appears for a split second after launching the app. Expected: This popup should not appear for Free 60+ charge case since it can be updated via the mobile app.",
+  "feature": "iOS / OSPREY",
+  "scenario": "Charge Case update popup appears briefly for Free 60+ after app launch, even though it should not appear since the case can be updated via the app.",
+  "description_clean": "Popup about update for Charge Case appears briefly after launching the app. Steps: Pair Free 60+ with the app, ensure Charge Case is on outdated firmware, restart the app. Observed: Popup informing user about update for Charge Case appears for a split second after launching. Expected: This popup should not appear for Free 60+ charge case since it can be updated via the mobile app.",
   "steps": [
     "Pair Free 60+ with the app",
     "Ensure Charge Case is on outdated firmware",
     "Restart the app"
   ],
-  "expected": "This popup should not appear for Free 60+ charge case since it can be updated via the mobile app.",
+  "expected": "The popup about updating the Charge Case should not appear for Free 60+ charge case since it can be updated via the mobile app.",
   "actual": "Popup informing user about update for Charge Case appears for a split second after launching the app.",
   "priority": "P1: High",
   "severity": "",
@@ -21,17 +21,17 @@
   ],
   "keywords": [
     "Free 60+",
-    "Charge Case",
-    "firmware update",
-    "popup",
+    "Charge Case update popup",
     "app launch",
-    "pairing",
     "outdated firmware",
-    "mobile app"
+    "pairing",
+    "app restart",
+    "firmware update",
+    "bug"
   ],
   "source_last_updated": "2026-04-15T08:55:37.000+0000",
   "source_hash": "3387de25661c56696d4d058577e58de6cb2df437061175b595c47ea9ed03c1d9",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.243221Z",
+  "processed_at": "2026-04-24T11:50:53.076200Z",
   "status": "active"
 }
