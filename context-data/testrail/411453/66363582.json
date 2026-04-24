@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "DFU - Low Battery - Checking DFU pop up if at least one earbud is at low battery",
   "feature": "DFU (Device Firmware Update)",
-  "scenario": "DFU/Software Update shows \"Update currently not available, please try back later\" popup when at least one earbud has low battery (<5%)",
+  "scenario": "Verify that a DFU update shows a pop-up and returns to Software Update screen when one or both earbuds have low battery (less than 5%).",
   "steps": [
-    "Ensure at least one earbud has low battery (less than 5%) \u2014 this can be the right earbud, left earbud, or both.",
-    "Navigate to Device Settings > Software Update.",
-    "Attempt to perform a DFU/Software Update.",
-    "Observe the popup that appears.",
-    "Tap OK on the popup."
+    "1. Ensure at least one earbud has low battery (less than 5%).",
+    "2. Attempt a DFU update.",
+    "3. Observe the pop-up that appears.",
+    "4. Tap OK on the pop-up.",
+    "5. Check the screen displayed after tapping OK."
   ],
-  "expected": "A popup appears with the message: \"Update currently not available, please try back later\". After tapping OK, the user is returned to the Device Settings > Software Update screen.",
+  "expected": "A pop-up should appear saying \"Update currently not available, please try back later\". After tapping OK, the user should return to the Device Settings > Software Update screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU",
-    "Software Update",
+    "DFU update",
     "low battery",
-    "earbud",
-    "update not available",
-    "popup",
+    "earbuds",
+    "pop-up",
+    "Software Update screen",
     "battery level",
-    "Device Settings"
+    "firmware update",
+    "less than 5%"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "a13a2380ff6f8a8cd5eb9daa33c25e05d72c850f14788b18a7b9943b2e5ec55f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.433691Z",
+  "processed_at": "2026-04-24T11:50:53.355494Z",
   "status": "active"
 }
