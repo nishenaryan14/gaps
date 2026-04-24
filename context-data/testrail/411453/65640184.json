@@ -5,27 +5,28 @@
   "project": "411453",
   "title": "Analytics - Fit Test Opened",
   "feature": "Analytics",
-  "scenario": "Fit Test screen logs an event with Device PID, and Firebase dashboard updates event counts after a few hours.",
+  "scenario": "Fit Test screen opening logs an event with Device PID, with event counts updating after a few hours on the Firebase dashboard.",
   "steps": [
     "Open the Fit Test screen.",
-    "Wait for a few hours for event counts to update.",
-    "Check the Firebase dashboard."
+    "Wait for event counts to update (a few hours).",
+    "Open the Firebase dashboard.",
+    "Check the displayed elements."
   ],
   "expected": "The Firebase dashboard displays default elements (graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, App Environment) plus Device PID.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Fit Test screen",
-    "Device PID",
-    "Firebase dashboard",
-    "event counts",
     "event logging",
+    "Device PID",
+    "event counts",
+    "Firebase dashboard",
     "analytics update",
-    "data sync delay"
+    "screen open event"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "135380f9db72cfe8ddd827d0392be3ca8b3ecfab3c3cd27ae981162a4033944c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "processed_at": "2026-04-24T11:50:53.329403Z",
   "status": "active"
 }
