@@ -4,19 +4,21 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS | Morpheus | Unable to track inCall status",
-  "feature": "iOS / Morpheus Device Integration",
-  "scenario": "iOS app fails to detect active call state on Morpheus devices due to missing deckardId 0x0E35 support, requiring fallback to deckardId 0x0E22 for correct in-call status, DFU blocking, and ANC transparency control.",
-  "description_clean": "The iOS application cannot reliably determine if a user is in a call when connected to Morpheus devices. This prevents the app from showing appropriate alerts or blocking DFU initiation and ANC transparency mode switching during active calls. Root cause: Morpheus devices do not send or respond to deckardId 0x0E35. The fix is to also use deckardId 0x0E22, which correctly reflects call state on Morpheus devices. Acceptance criteria: all devices correctly respond to in-call status; DFU availability is enabled/blocked based on call state; ANC transparency control is enabled/disabled accordingly.",
+  "feature": "iOS / Morpheus",
+  "scenario": "Morpheus devices fail to report in-call status via deckardId 0x0E35, causing DFU and ANC transparency mode to be incorrectly enabled during active calls.",
+  "description_clean": "The iOS application cannot reliably detect whether a user is in a call when connected to Morpheus devices. This prevents the app from showing appropriate alerts or blocking DFU initiation and ANC transparency mode switching during active calls. The root cause is that Morpheus devices do not send or respond to deckardId 0x0E35. The fix is to also use deckardId 0x0E22, which correctly reflects call state on Morpheus devices. Acceptance criteria: all devices correctly respond to in-call status; DFU availability is enabled/blocked based on call state; ANC transparency control is enabled/disabled accordingly.",
   "steps": [
-    "Connect iOS app to a Morpheus device",
-    "Initiate a phone call on the iOS device",
-    "Observe the app's ability to detect the in-call state",
-    "Attempt to initiate DFU (Device Firmware Update) while in a call",
-    "Attempt to switch ANC transparency mode while in a call",
-    "Verify that the app shows appropriate alerts or blocks these actions during the active call"
+    "1. Connect the iOS application to a Morpheus device.",
+    "2. Initiate an active call on the iOS device while connected to the Morpheus device.",
+    "3. Observe whether the app detects the in-call state using deckardId 0x0E35.",
+    "4. Note that the Morpheus device does not send or respond to deckardId 0x0E35, so the app fails to detect the call.",
+    "5. Implement the fix by also using deckardId 0x0E22 to check call state on Morpheus devices.",
+    "6. Verify that all devices correctly respond to in-call status.",
+    "7. Verify that DFU availability is enabled or blocked based on the call state.",
+    "8. Verify that ANC transparency mode control is enabled or disabled based on the call state."
   ],
-  "expected": "The app correctly detects the in-call state via deckardId 0x0E22, shows appropriate alerts, blocks DFU initiation, and disables ANC transparency mode switching during active calls on Morpheus devices.",
-  "actual": "The app cannot reliably detect the in-call state because Morpheus devices do not send or respond to deckardId 0x0E35. DFU initiation and ANC transparency mode switching are not blocked during active calls.",
+  "expected": "The iOS application correctly detects whether a user is in a call when connected to Morpheus devices. DFU initiation is blocked during active calls and allowed when not in a call. ANC transparency mode switching is disabled during active calls and enabled when not in a call. All devices correctly respond to in-call status.",
+  "actual": "The iOS application cannot reliably detect whether a user is in a call when connected to Morpheus devices. This prevents the app from showing appropriate alerts or blocking DFU initiation and ANC transparency mode switching during active calls. The root cause is that Morpheus devices do not send or respond to deckardId 0x0E35.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -25,18 +27,18 @@
     "iOS15"
   ],
   "keywords": [
-    "iOS app",
-    "active call state",
     "Morpheus devices",
     "deckardId 0x0E35",
-    "deckardId 0x0E22",
     "in-call status",
-    "DFU blocking",
-    "ANC transparency control"
+    "DFU availability",
+    "ANC transparency mode",
+    "deckardId 0x0E22",
+    "call state detection",
+    "iOS application"
   ],
   "source_last_updated": "2026-04-22T06:49:29.000+0000",
   "source_hash": "e337b587d4b165194746a1aad623b2b8b64dc5d2f3ff0e55c426cdf26d4b9e71",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.055500Z",
+  "processed_at": "2026-04-24T10:51:32.707064Z",
   "status": "active"
 }
