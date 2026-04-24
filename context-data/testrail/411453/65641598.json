@@ -1,0 +1,32 @@
+{
+  "id": "65641598",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "CCL - Selecting No Noise Block",
+  "feature": "CCL (Camera Control Lock)",
+  "scenario": "Verify that the \"No Noise Block\" option can be selected in Device Settings > Advanced on a device that supports CCL.",
+  "steps": [
+    "1. Open Device Settings.",
+    "2. Navigate to Advanced settings.",
+    "3. Locate the 'No Noise Block' option.",
+    "4. Select the 'No Noise Block' option."
+  ],
+  "expected": "The \"No Noise Block\" option can be selected successfully.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "No Noise Block",
+    "Device Settings",
+    "Advanced settings",
+    "CCL",
+    "select option",
+    "audio settings",
+    "noise cancellation"
+  ],
+  "source_last_updated": "1772468639",
+  "source_hash": "6ae09597e06e994f94f8e266955ebfcffd22e185e1cc9516f6bf0d233c485728",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.401301Z",
+  "status": "active"
+}
