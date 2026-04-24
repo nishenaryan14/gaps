@@ -5,17 +5,17 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \u26d4 HSFWCH-9500 \ud83d\udfe5 INTERMITTENT | TERN | EMU | OSPREY \ud83e\udd85 Tapping on button on earbud during fit test will cause it to fail",
   "feature": "Fit Test",
-  "scenario": "Fit test fails or behaves inconsistently when tapping an earbud button on supported devices",
+  "scenario": "Fit test fails inconsistently when tapping earbud buttons, showing false disconnect for primary earbud or stalling for non-primary earbud",
   "description_clean": "During a Fit Test on supported devices (Emu, Tern, Osprey), tapping a button on an earbud causes the test to fail or behave inconsistently. If the primary earbud button is pressed, the fit test displays a false \"device disconnected\" failure message while the second earbud continues playing test audio. If the non-primary earbud button is pressed, the test lingers and eventually shows a message that it cannot be completed at this time. Expected behavior: tapping the earbud button should not affect the fit test, or the app should handle it gracefully and consistently for both primary and non-primary earbuds.",
   "steps": [
     "1. Ensure you have a supported device (Emu, Tern, or Osprey) paired and connected.",
-    "2. Open the Fit Test feature in the app.",
-    "3. Start the fit test.",
-    "4. While the fit test is running, tap the button on the primary earbud.",
-    "5. Observe the result on screen.",
-    "6. Restart the fit test.",
-    "7. While the fit test is running, tap the button on the non-primary earbud.",
-    "8. Observe the result on screen."
+    "2. Open the Fit Test feature on the app.",
+    "3. Start the Fit Test.",
+    "4. While the test is running, tap a button on the primary earbud.",
+    "5. Observe the result on the app.",
+    "6. Restart the Fit Test.",
+    "7. While the test is running, tap a button on the non-primary earbud.",
+    "8. Observe the result on the app."
   ],
   "expected": "Tapping the earbud button should not affect the fit test, or the app should handle it gracefully and consistently for both primary and non-primary earbuds.",
   "actual": "If the primary earbud button is pressed, the fit test displays a false \"device disconnected\" failure message while the second earbud continues playing test audio. If the non-primary earbud button is pressed, the test lingers and eventually shows a message that it cannot be completed at this time.",
@@ -24,17 +24,17 @@
   "labels": [],
   "keywords": [
     "fit test",
-    "earbud button",
-    "tap",
-    "inconsistent",
+    "earbud buttons",
+    "false disconnect",
     "primary earbud",
     "non-primary earbud",
-    "supported devices",
-    "Emu Tern Osprey"
+    "stalling",
+    "tap button",
+    "fit test failure"
   ],
   "source_last_updated": "2026-04-16T11:10:13.000+0000",
   "source_hash": "516c2cd27cf901939f3c08a6e8b63d77c3a120eefb0fde4fa6cb50270e2a483b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.703985Z",
+  "processed_at": "2026-04-24T11:23:05.245400Z",
   "status": "active"
 }
