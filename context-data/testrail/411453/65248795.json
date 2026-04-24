@@ -7,10 +7,10 @@
   "feature": "Find My Device",
   "scenario": "When using Find My Device with a headset paired and connected, tapping the back arrow after playing a tone stops the sound and returns to App Settings.",
   "steps": [
-    "1. Pair and connect a headset to the device.",
-    "2. Open the Find My Device app.",
-    "3. Play a tone on the headset.",
-    "4. Tap the back arrow in the top left corner."
+    "Pair and connect a headset to the device.",
+    "Open the Find My Device app.",
+    "Play a tone on the headset.",
+    "Tap the back arrow in the top left corner."
   ],
   "expected": "The sound stops and the user is brought back to the App Settings page.",
   "coverage": [],
@@ -18,16 +18,16 @@
   "keywords": [
     "Find My Device",
     "headset",
+    "paired",
+    "connected",
     "play tone",
     "back arrow",
     "stop sound",
-    "App Settings",
-    "paired",
-    "connected"
+    "App Settings"
   ],
   "source_last_updated": "1759930862",
   "source_hash": "0563118ac914e15957756b8f5ebd64aab10211f96dc150c00559baae6d5d548c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.357381Z",
+  "processed_at": "2026-04-24T11:50:53.152705Z",
   "status": "active"
 }
