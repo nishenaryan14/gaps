@@ -5,32 +5,35 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Don't Allow is selected",
   "feature": "Location Sharing / Permissions",
-  "scenario": "User taps \"Don't Allow\" on location sharing during first launch, then accesses Find My Device via hamburger menu and sees \"Cancel\" and \"Enable Now\" options, persisting after app restart.",
+  "scenario": "Tapping \"Don't Allow\" on location sharing dialogue should show permission prompt with \"Cancel\" and \"Enable Now\" options when accessing Find My Device via hamburger menu, and should reappear after app restart.",
   "steps": [
-    "Launch the app for the first time.",
-    "When the location sharing dialogue appears, tap \"Don't Allow\".",
-    "Open the hamburger menu.",
-    "Tap on \"Find My Device\" (FMD).",
-    "Observe the permission window that appears.",
-    "Restart the app.",
-    "Repeat steps 3-5."
+    "Launch the app",
+    "Tap the hamburger menu",
+    "Select 'Find My Device (FMD)' from the menu",
+    "When the location sharing dialogue appears, tap 'Don't Allow'",
+    "Observe the permission window that appears",
+    "Check the options available in the permission window",
+    "Close/restart the app",
+    "Reopen the app",
+    "Navigate to Find My Device (FMD) via the hamburger menu again",
+    "Observe whether the same permission prompt appears"
   ],
-  "expected": "After tapping \"Don't Allow\" on the location sharing dialogue, accessing Find My Device via the hamburger menu shows a permission window with \"Cancel\" and \"Enable Now\" options. This behavior persists after restarting the app.",
+  "expected": "After tapping \"Don't Allow\", a permission window with \"Cancel\" and \"Enable Now\" options should appear. After restarting the app and opening FMD again, the same permission prompt should appear again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Don't Allow",
-    "location sharing",
+    "location sharing dialogue",
+    "permission prompt",
     "Find My Device",
     "hamburger menu",
-    "permission window",
     "Cancel",
     "Enable Now",
-    "persisting after restart"
+    "app restart"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "a6367c385c3ee2007ce25ae1cb88fe4a8ce85d33043cf86c50cd803658dda995",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.318568Z",
+  "processed_at": "2026-04-24T11:50:53.114408Z",
   "status": "active"
 }
