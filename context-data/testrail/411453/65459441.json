@@ -4,32 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Charge Case at low battery - Software update tab in device settings",
-  "feature": "Software Update / DFU",
-  "scenario": "Verify DFU is blocked with a popup when charge case battery is low (<5%) and not plugged in, but proceeds successfully once the charge case is connected to a charger.",
+  "feature": "Software Update - DFU",
+  "scenario": "Verify DFU is blocked with a popup when charge case battery is below 5% and not plugged in, but proceeds successfully once the case is connected to a charger.",
   "steps": [
-    "1. Ensure the charge case battery is low (less than 5%) and NOT plugged into a charger.",
-    "2. Attempt to perform a DFU (Device Firmware Update) on the headset.",
-    "3. Observe the popup message displayed on the screen.",
-    "4. Plug the charge case into a charger.",
+    "1. Ensure the charge case battery is below 5% and not plugged into power.",
+    "2. Attempt to perform a DFU (Device Firmware Update) on the headset/charge case.",
+    "3. Observe the system response.",
+    "4. Connect the charge case to a charger.",
     "5. Attempt the DFU again.",
-    "6. Observe whether the DFU proceeds and completes successfully."
+    "6. Observe the system response."
   ],
-  "expected": "When the charge case is at low battery and not plugged in, a popup should appear saying \"Update currently not available, please try back later\". Once the charge case is plugged into a charger, the DFU should proceed and complete successfully.",
+  "expected": "1. When battery is below 5% and not plugged in, attempting DFU shows a popup: \"Update currently not available, please try back later\".\\n2. After connecting to a charger, the DFU should proceed and complete successfully.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU blocked",
-    "charge case battery low",
-    "popup message",
-    "battery below 5%",
+    "DFU",
+    "Device Firmware Update",
+    "charge case battery",
+    "low battery",
+    "popup blocked",
     "charger connected",
-    "DFU proceeds",
-    "firmware update blocked",
-    "low battery warning"
+    "battery below 5%",
+    "firmware update blocked"
   ],
   "source_last_updated": "1763369632",
   "source_hash": "2fa50f275a2b8df92cf5bafd12c8b567932e35e17eca3c654393c5a472307dcc",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "processed_at": "2026-04-24T11:50:53.290466Z",
   "status": "active"
 }
