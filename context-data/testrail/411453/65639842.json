@@ -10,10 +10,11 @@
     "Start app with Osprey EB and CC (both at least version 5039) with updates available for both.",
     "Go to Device Settings > Language.",
     "Select any language.",
-    "Tap Update Now button.",
-    "Complete the language change DFU."
+    "Tap Update Now.",
+    "Complete the language change DFU.",
+    "Check language on Charge Case via touch screen menus."
   ],
-  "expected": "Software update screen is displayed. Language change and DFU finish successfully; Earbuds and Charge Case are on latest firmware. Language was properly changed for Charge Case (verify via touch screen menus).",
+  "expected": "Software update screen is displayed. Language change and DFU finish successfully; Earbuds and Charge Case are on latest firmware. Language was properly changed for Charge Case.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,12 +24,12 @@
     "Earbuds",
     "Charge Case",
     "Osprey",
-    "Device Settings",
-    "firmware update"
+    "touch screen menus",
+    "Device Settings"
   ],
   "source_last_updated": "1763381953",
   "source_hash": "aaa067303eff0079efcdcbdd9a9111335b908ae6d97560859a849b357927d0a8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "processed_at": "2026-04-24T11:50:53.299890Z",
   "status": "active"
 }
