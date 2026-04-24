@@ -4,29 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "PPIP -  Dialog after Onboarding - Tap on Share Data",
-  "feature": "PPIP (Privacy & Product Improvement Program) - Onboarding",
-  "scenario": "Verify that after onboarding, tapping \"Share Data\" on the PPIP dialog enables the Share Data toggle in Account settings and displays the Home screen.",
+  "feature": "PPIP (Privacy & Product Improvement Program)",
+  "scenario": "Verify that after onboarding, the PPIP dialog appears, accepting it enables the Share Data toggle in Account settings with correct privacy description, and the Home screen is displayed.",
   "steps": [
-    "Start app fresh, go through onboarding, tap \"Continue as Guest\" \u2192 PPIP dialog appears with \"Help us improve your experience.\"",
-    "Tap \"Share Data\" on the dialog, then handle location permission (iOS only) \u2192 Dialog closes and Home screen is displayed.",
-    "Navigate to App Settings > General > Account \u2192 \"Share data\" toggle is ON with description text explaining data sharing (device model, serial number, software version, feature usage; no personal info shared with third parties)."
+    "Start the app for the first time, go through onboarding, and tap \"Continue as Guest\".",
+    "Verify the PPIP dialog \"Help us improve your experience\" appears.",
+    "Tap \"Share Data\" and handle location permission (iOS only).",
+    "Verify the dialog closes and the Home screen displays.",
+    "Go to App Settings > General > Account.",
+    "Verify the Share Data toggle is ON.",
+    "Verify the description explains that basic device/app info (model, serial number, software version, feature usage) is shared, no personal data is collected, and it is not shared with third parties."
   ],
-  "expected": "PPIP dialog appears with \"Help us improve your experience.\" after tapping \"Continue as Guest\". After tapping \"Share Data\", dialog closes and Home screen is displayed. In App Settings > General > Account, the \"Share data\" toggle is ON with description text explaining data sharing (device model, serial number, software version, feature usage; no personal info shared with third parties).",
+  "expected": "The PPIP dialog appears after onboarding. After tapping \"Share Data\", the dialog closes and the Home screen displays. In App Settings > General > Account, the Share Data toggle is ON with a description stating that basic device/app info (model, serial number, software version, feature usage) is shared, no personal data is collected, and it is not shared with third parties.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding",
     "PPIP dialog",
     "Share Data toggle",
+    "onboarding",
     "Account settings",
+    "privacy description",
     "Home screen",
-    "location permission",
-    "data sharing",
-    "Continue as Guest"
+    "Continue as Guest",
+    "location permission"
   ],
   "source_last_updated": "1760537171",
   "source_hash": "facc8d99f41a864bb09982690181efd49b794faba31ecec2bd8527ac3845c2c1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.327173Z",
+  "processed_at": "2026-04-24T11:50:53.109312Z",
   "status": "active"
 }
