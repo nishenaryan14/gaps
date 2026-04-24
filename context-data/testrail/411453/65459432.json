@@ -1,0 +1,34 @@
+{
+  "id": "65459432",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU is not available during a call",
+  "feature": "Software Update",
+  "scenario": "DFU is blocked with a pop-up when attempting to update device firmware during an active call",
+  "steps": [
+    "Ensure the headset is on outdated firmware.",
+    "Initiate an active call on the paired device.",
+    "While on the call, navigate to the Software Update page in Device Settings.",
+    "Tap the update button.",
+    "Observe the pop-up that appears.",
+    "Tap OK on the pop-up."
+  ],
+  "expected": "A pop-up appears stating \"Cannot update this device during a call\". After tapping OK, the pop-up closes and the user is returned to the Software Update tab without starting the DFU.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU blocked",
+    "firmware update during call",
+    "active call firmware block",
+    "pop-up firmware update",
+    "software update call restriction",
+    "headset firmware update blocked",
+    "device firmware update call"
+  ],
+  "source_last_updated": "1763042058",
+  "source_hash": "0b903097a6059f97cd827c270b88cbe303f20450d3504b9bc95e1bb59355efbc",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.413186Z",
+  "status": "active"
+}
