@@ -5,29 +5,33 @@
   "project": "411453",
   "title": "App Settings - General - Account - Invite sent, user logs during the installation, not registered on Cloud",
   "feature": "App Settings - General - Account",
-  "scenario": "IT admin invites mobile user; user installs app and logs in on mobile without accepting invite externally, resulting in login with no tenant association and missing Tenant ID/Name on the card.",
+  "scenario": "IT admin sends invite to mobile user; user installs app, logs in via mobile without accepting invite externally, and sees no tenant info on Poly Support/App card despite invite appearing in General/Account.",
   "steps": [
     "IT admin sends an invite to a mobile user.",
-    "Mobile user does not accept the invite via an external source (e.g., laptop).",
-    "Mobile user installs the app on their mobile phone.",
-    "Mobile user logs in during onboarding."
+    "User does not accept the invite via an external source (e.g., laptop).",
+    "User installs the app on their mobile phone.",
+    "User logs in during onboarding.",
+    "User navigates to Poly Support/App.",
+    "User checks the card for Tenant ID/Name rows.",
+    "Admin checks the tenant info on cloud to see if the mobile user is registered.",
+    "User navigates to General/Account in the app."
   ],
-  "expected": "The mobile user should be properly registered on Cloud with the tenant assigned (Tenant ID/Name rows should be present on the card).",
+  "expected": "The user should be fully registered with the tenant. Tenant ID/Name rows should be present on the card in Poly Support/App, and the cloud should show the mobile user as registered.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "IT admin invite",
-    "mobile user login",
-    "no tenant association",
-    "missing Tenant ID",
-    "onboarding without invite acceptance",
-    "tenantless login",
-    "mobile app installation",
-    "invite acceptance flow"
+    "mobile user onboarding",
+    "Poly Support app card",
+    "tenant ID missing",
+    "mobile login without external accept",
+    "General Account invite",
+    "tenant registration status",
+    "mobile app tenant info"
   ],
   "source_last_updated": "1759416375",
   "source_hash": "22db7ea724dad989b29d4b2ce4e05000538c076eefd6b853ebde20c8ec71c2bf",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.752624Z",
+  "processed_at": "2026-04-24T11:23:05.355862Z",
   "status": "active"
 }
