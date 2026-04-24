@@ -1,0 +1,34 @@
+{
+  "id": "65640136",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Personal User - download/install, Login with Gmail, not present on any Lens tenant",
+  "feature": "Personal User - Login with Gmail",
+  "scenario": "Verify that a personal user with a paired headset, who logs in with Gmail during onboarding, sees correct headset data in the app and is not registered on any Lens tenant.",
+  "steps": [
+    "1. Pair a headset with a personal user's mobile device.",
+    "2. User downloads/installs the app and logs in with their Gmail account during onboarding.",
+    "3. Ensure the user is not present on any Lens tenant.",
+    "4. Verify that the headset appears in the app with correct data (image, settings).",
+    "5. Verify that the personal user is not registered on any Lens tenant."
+  ],
+  "expected": "The headset appears in the app with correct data (image, settings), and the personal user is not registered on any Lens tenant.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "personal user",
+    "paired headset",
+    "Gmail login",
+    "onboarding",
+    "headset data",
+    "Lens tenant",
+    "app verification",
+    "headset registration"
+  ],
+  "source_last_updated": "1760949388",
+  "source_hash": "d868da9ad3d789a07fc81aa45d718874559428697f3f8a0daef0aef535d29c2d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "status": "active"
+}
