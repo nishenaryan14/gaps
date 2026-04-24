@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "Device Home Screen - Multiple devices - Deleting devices",
   "feature": "Device Home Screen",
-  "scenario": "Verify that deleting devices from the paired and connected device list properly removes the selected device while preserving remaining devices and their connection states, and that all remaining devices can also be deleted.",
+  "scenario": "Verify that deleting a device from the device list works correctly when multiple devices are paired and connected, and that remaining devices are still displayed with proper connected/disconnected states.",
   "steps": [
-    "Pair and connect multiple devices to the system.",
-    "Open the device list to view all paired and connected devices.",
+    "Pair and connect at least 3 devices.",
+    "Start the app.",
+    "Turn off 2 devices.",
     "Delete one device from the device list.",
-    "Verify that the deleted device is no longer present in the list.",
-    "Verify that all remaining devices are still present in the list.",
-    "Check that each remaining device correctly displays its connected/disconnected state.",
-    "Delete each of the remaining devices one by one from the list.",
-    "Verify that each device is successfully removed from the list after deletion."
+    "Verify the deleted device is properly removed from the list.",
+    "Verify remaining devices are still present and properly displayed with connected/disconnected state.",
+    "Turn off and delete the remaining devices.",
+    "Verify all devices can be properly removed from the list."
   ],
-  "expected": "When a device is deleted, it is properly removed from the list. Remaining devices are still present and correctly display their connected/disconnected state. All remaining devices can be successfully deleted from the list.",
+  "expected": "The device is properly removed from the list. Remaining devices are still present and properly displayed with connected/disconnected state. All devices can be properly removed from the list.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "delete device",
+    "device deletion",
+    "device list",
     "paired devices",
     "connected devices",
-    "device list",
-    "connection state",
-    "remove device",
-    "device management",
-    "device deletion"
+    "disconnected devices",
+    "multi-device management",
+    "device removal verification"
   ],
   "source_last_updated": "1762178343",
   "source_hash": "eb5958e7130069b7217f1493235b79a22c603434e7cae8553ad5b048040b4d37",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.086978Z",
+  "processed_at": "2026-04-24T10:51:32.742514Z",
   "status": "active"
 }
