@@ -1,0 +1,36 @@
+{
+  "id": "LMW-1996",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "ANDROID \ud83d\udfe5 Changes to some options are not properly propagated between mobile and PC part 2",
+  "feature": "Voice Prompts & Tones",
+  "scenario": "Voice prompt and tone option changes are not properly synchronized between mobile and PC platforms via bitmasks",
+  "description_clean": "Changes to some options (Calls, Hold Reminder, Incoming Call, Active Audio Tone, Answering Call, Answer/Ignore) are not properly propagated between mobile and PC when changed in Device Settings > Voice Prompts & Tones. Both platforms should use bitmasks correctly to ensure changes on one platform are propagated to every other platform.",
+  "steps": [
+    "1. Open Device Settings on mobile.",
+    "2. Navigate to Voice Prompts & Tones.",
+    "3. Change any of the following options: Calls, Hold Reminder, Incoming Call, Active Audio Tone, Answering Call, Answer/Ignore.",
+    "4. Observe the change on the PC platform.",
+    "5. Repeat steps 1-4 but start from PC and observe the change on mobile."
+  ],
+  "expected": "Changes made to any of the listed options on one platform (mobile or PC) should be correctly propagated to the other platform using proper bitmask handling.",
+  "actual": "Changes to some options (Calls, Hold Reminder, Incoming Call, Active Audio Tone, Answering Call, Answer/Ignore) are not properly propagated between mobile and PC when changed in Device Settings > Voice Prompts & Tones.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "voice prompt synchronization",
+    "tone option sync",
+    "mobile PC platform",
+    "bitmask synchronization",
+    "cross-platform settings",
+    "audio tone settings",
+    "call settings sync"
+  ],
+  "source_last_updated": "2026-04-22T10:17:19.000+0000",
+  "source_hash": "61503134c3dcef90245372d22760c1ba7de221858102b418e760b80beaf16e36",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.042459Z",
+  "status": "active"
+}
