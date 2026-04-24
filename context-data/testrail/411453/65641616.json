@@ -5,31 +5,29 @@
   "project": "411453",
   "title": "Fit test - Onboarding flow - Fit Test is present",
   "feature": "Onboarding Flow",
-  "scenario": "Fit Test screen appears in onboarding after Pairing 2 with Skip/Test buttons matching Figma design when a fit-test-compatible device is connected.",
+  "scenario": "Verify the Fit Test screen appears in the onboarding flow with Skip/Test options matching the Figma design.",
   "steps": [
-    "1. Start the onboarding flow.",
-    "2. Navigate to the Pairing 2 screen.",
-    "3. Proceed past the Pairing 2 screen.",
-    "4. Verify that the Fit Test screen appears next.",
-    "5. Ensure a device that supports fit test is connected.",
-    "6. Check that the screen matches the Figma design.",
-    "7. Confirm that Skip and Test buttons are present at the bottom of the screen."
+    "Start the app with a device that supports fit test connected.",
+    "Go to Device Settings > Onboarding.",
+    "Navigate to the Fit test screen (after Pairing 2 screen).",
+    "Verify the screen matches the Figma design with Skip/Test options at the bottom."
   ],
-  "expected": "The Fit Test screen appears after the Pairing 2 screen in the onboarding flow, matches the Figma design, and displays Skip/Test buttons at the bottom.",
+  "expected": "Fit Test screen is present in the onboarding flow and matches the Figma design with Skip/Test options at the bottom.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Fit Test screen",
     "onboarding flow",
-    "Pairing 2",
-    "Skip button",
-    "Test button",
+    "Skip option",
+    "Test option",
     "Figma design",
-    "fit-test-compatible device"
+    "Device Settings",
+    "Pairing 2 screen",
+    "UI verification"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "fae45dc8fa67390d62594f671e16b71affc2feee9f7724b1e57c42678eafa22f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.392549Z",
+  "processed_at": "2026-04-24T11:50:53.228934Z",
   "status": "active"
 }
