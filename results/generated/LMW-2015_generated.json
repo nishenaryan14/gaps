@@ -1,0 +1,88 @@
+[
+  {
+    "title": "TC-IDLE-001: Verify stale earbud connection state after extended idle period shows both disconnected",
+    "steps": [
+      "1. Launch app and ensure both earbuds are connected (left and right show connected state).",
+      "2. Put the app in the background and leave it idle for an extended period (e.g., 30+ minutes or simulate idle timeout).",
+      "3. Bring the app back to the foreground.",
+      "4. Observe the earbud connection status displayed on the main screen.",
+      "5. Check the actual Bluetooth connection status via system Bluetooth settings."
+    ],
+    "expected": "The app should display both earbuds as disconnected. The displayed state must match the actual Bluetooth connection status (both disconnected). The stale state (left connected, right disconnected) must NOT be shown."
+  },
+  {
+    "title": "TC-IDLE-002: Verify settings access is blocked when earbuds are in stale/disconnected state",
+    "steps": [
+      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
+      "2. Attempt to navigate to the Settings screen by tapping the settings icon/button.",
+      "3. Observe if the settings screen opens or if access is blocked.",
+      "4. If settings opens, attempt to toggle any setting (e.g., EQ, sound mode, etc.)."
+    ],
+    "expected": "Settings access should be blocked or restricted when both earbuds are not properly connected. A message indicating that earbuds must be connected to access settings should be displayed. Any attempted toggle should have no effect or be prevented."
+  },
+  {
+    "title": "TC-IDLE-003: Verify toggling a setting in stale state has no effect",
+    "steps": [
+      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
+      "2. If settings are accessible (against expected behavior), navigate to Settings.",
+      "3. Toggle a specific setting (e.g., enable/disable noise cancellation, change EQ preset).",
+      "4. Exit settings and return to the main screen.",
+      "5. Re-enter settings and check the state of the toggled setting.",
+      "6. Restart the app and check the setting state again."
+    ],
+    "expected": "The toggled setting should have reverted to its original state or the toggle action should have been prevented entirely. After app restart, the setting should reflect the original value, confirming the toggle had no persistent effect."
+  },
+  {
+    "title": "TC-IDLE-004: Verify app restart recovers correct disconnected state after stale display",
+    "steps": [
+      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
+      "2. Observe the incorrect stale state displayed on screen.",
+      "3. Force close the app (swipe from recent apps or kill process).",
+      "4. Relaunch the app.",
+      "5. Observe the earbud connection status displayed on the main screen."
+    ],
+    "expected": "After app restart, both earbuds should be correctly displayed as disconnected. The app should recover from the stale state and show the actual Bluetooth connection status without requiring any additional user action."
+  },
+  {
+    "title": "TC-IDLE-005: Verify no stale state occurs when app is idle but earbuds remain connected",
+    "steps": [
+      "1. Launch app and ensure both earbuds are connected.",
+      "2. Keep earbuds physically connected and powered on.",
+      "3. Put the app in the background for an extended idle period (e.g., 30+ minutes).",
+      "4. Bring the app back to the foreground.",
+      "5. Observe the earbud connection status."
+    ],
+    "expected": "The app should continue to show both earbuds as connected. No stale or incorrect state should appear when the actual Bluetooth connection remains active and stable during the idle period."
+  },
+  {
+    "title": "TC-IDLE-006: Verify stale state does not persist after toggling Bluetooth off/on",
+    "steps": [
+      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
+      "2. Without restarting the app, turn off Bluetooth from system settings.",
+      "3. Wait 5 seconds, then turn Bluetooth back on.",
+      "4. Wait for the app to update its connection status.",
+      "5. Observe the earbud connection status displayed on the main screen."
+    ],
+    "expected": "After toggling Bluetooth off and on, the app should refresh and display the correct disconnected state (both earbuds disconnected) without requiring an app restart. The stale state should be cleared by the Bluetooth state change."
+  },
+  {
+    "title": "TC-IDLE-007: Verify stale state detection triggers reconnection attempt",
+    "steps": [
+      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
+      "2. Observe if the app automatically attempts to reconnect to the earbuds.",
+      "3. If reconnection is attempted, observe the connection status after the attempt.",
+      "4. If no reconnection is attempted, note the behavior."
+    ],
+    "expected": "The app should detect the stale/inconsistent state and automatically attempt to reconnect to both earbuds. If reconnection succeeds, both earbuds should show as connected. If reconnection fails, both should show as disconnected. The app should not remain in a mixed stale state."
+  },
+  {
+    "title": "TC-IDLE-008: Verify UI indicators reflect stale state correctly (no partial connection icons)",
+    "steps": [
+      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
+      "2. Observe all UI indicators for earbud connection status (icons, text, LED indicators, etc.).",
+      "3. Check if any UI element shows a partial or ambiguous connection state.",
+      "4. Compare with the actual Bluetooth connection status."
+    ],
+    "expected": "The UI should not display any partial connection indicators (e.g., one earbud icon showing connected, the other showing disconnected). The app should either show both as disconnected or display a clear 'connection error' or 'reconnecting' state. Ambiguous or contradictory UI states should not occur."
+  }
+]
