@@ -1,0 +1,33 @@
+{
+  "id": "64907512",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support  - Device with device connected",
+  "feature": "Support",
+  "scenario": "User views device details modal with blurred background after navigating to Menu > Support > Device and selecting a paired headset",
+  "steps": [
+    "Pair and connect a headset to the device.",
+    "Open the app.",
+    "Navigate to Menu > Support > Device.",
+    "Select a device from the list."
+  ],
+  "expected": "A modal slides up from the bottom showing detailed device information (device name, product ID, serial number, software version, HW revision, last connected) with a \"Go\" button. The background is blurred.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "device details modal",
+    "blurred background",
+    "paired headset",
+    "Menu Support Device",
+    "device selection",
+    "headset pairing",
+    "device list",
+    "support menu"
+  ],
+  "source_last_updated": "1759761692",
+  "source_hash": "b6a6977b7686cdaba259c1d82a829f34717aa25d2f5ee5435ff21536c15a2bbc",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:24.155939Z",
+  "status": "active"
+}
