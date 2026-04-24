@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Device Home Screen - Charge Case battery charging icon",
   "feature": "Device Home Screen",
-  "scenario": "Verify Charge Case battery icon shows charging sign when plugged in and no charging sign when unplugged, with earbuds inside and case opened (Tern/Emu).",
+  "scenario": "Verify Charge Case battery icon shows charging sign when charger is plugged in and no charging sign when unplugged, with earbuds inside and case opened (Tern/Emu).",
   "steps": [
-    "1. Ensure both earbuds are inside the Charge Case (for Tern and Emu).",
-    "2. Open the Charge Case.",
-    "3. Plug the charger into the Charge Case.",
-    "4. Observe the battery icon on the Charge Case.",
+    "1. Plug the charger into the Charge Case.",
+    "2. For Tern and Emu: Ensure both earbuds are inside the Charge Case and the case is opened.",
+    "3. Observe the Charge Case battery icon on the display.",
+    "4. Verify that the battery icon shows a charging sign (e.g., lightning bolt or similar indicator).",
     "5. Unplug the charger from the Charge Case.",
-    "6. Observe the battery icon on the Charge Case again."
+    "6. Observe the Charge Case battery icon again.",
+    "7. Verify that the charging sign is no longer displayed."
   ],
-  "expected": "The battery icon on the Charge Case shows a charging sign when the charger is plugged in, and no charging sign when unplugged.",
+  "expected": "The Charge Case battery icon shows a charging sign when the charger is plugged in, and no charging sign when unplugged.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Charge Case",
     "battery icon",
     "charging sign",
-    "plugged in",
-    "unplugged",
-    "earbuds inside",
-    "case opened",
-    "Tern Emu"
+    "charger plugged",
+    "charger unplugged",
+    "Tern",
+    "Emu",
+    "earbuds"
   ],
   "source_last_updated": "1773155558",
   "source_hash": "564406552c5478e464ec2bd6eea2e94ca299c5c3cadaa13b123266935d04ef69",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.739447Z",
+  "processed_at": "2026-04-24T11:23:05.342104Z",
   "status": "active"
 }
