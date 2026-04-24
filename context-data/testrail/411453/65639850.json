@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "1 step DFU - Houston screen during CC update (only CC update)",
   "feature": "DFU (Device Firmware Update)",
-  "scenario": "During a 1-step DFU with an outdated Charge Case, placing both earbuds in the case after 20% completion shows a Houston screen instead of expected behavior during a CC update.",
+  "scenario": "During a 1-step DFU with an outdated Charge Case, placing both earbuds into the case when DFU is over 20% complete causes the app to show a Houston screen instead of expected behavior.",
   "steps": [
     "Start a 1-step DFU process with Osprey and an outdated Charge Case.",
     "Wait until the DFU is over 20% complete.",
     "Place both earbuds into the Charge Case.",
     "Observe the app screen."
   ],
-  "expected": "The app should show the expected behavior (e.g., normal DFU progress screen).",
+  "expected": "The app should show the expected behavior (e.g., normal DFU progress or appropriate status).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "1-step DFU",
     "outdated Charge Case",
     "Osprey",
-    "20% completion",
     "Houston screen",
-    "earbuds in case",
-    "CC update",
-    "app screen behavior"
+    "earbuds placed in case",
+    "DFU progress 20%",
+    "app screen behavior",
+    "firmware update failure"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "716c323320ccabbd9fbfd4a304d0825704ec2b65fe9803cdac6120370d6a5c83",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "processed_at": "2026-04-24T11:50:53.302492Z",
   "status": "active"
 }
