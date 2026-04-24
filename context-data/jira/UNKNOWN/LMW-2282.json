@@ -1,0 +1,37 @@
+{
+  "id": "LMW-2282",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS | Free 60 artwork missing, and update from v231.591.0.5046 (MR1.5) to latest not working (Studio iOS or PTT)",
+  "feature": "iOS / Studio",
+  "scenario": "Free 60 artwork is missing after updating from v231.591.0.5046 (MR1.5) to the latest version on Studio iOS or PTT",
+  "description_clean": "Free 60 artwork missing. Update from v231.591.0.5046 (MR1.5) to latest version not working on Studio iOS or PTT. No artwork displayed.",
+  "steps": [
+    "1. Start with Studio iOS or PTT on version v231.591.0.5046 (MR1.5).",
+    "2. Update to the latest version.",
+    "3. Check the Free 60 artwork section."
+  ],
+  "expected": "Free 60 artwork should be displayed.",
+  "actual": "Free 60 artwork is missing. No artwork displayed.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [
+    "NeedsEngineeringReview"
+  ],
+  "keywords": [
+    "Free 60 artwork missing",
+    "Studio iOS update",
+    "PTT update",
+    "v231.591.0.5046 MR1.5",
+    "latest version upgrade",
+    "artwork not showing",
+    "iOS artwork issue",
+    "PTT artwork missing"
+  ],
+  "source_last_updated": "2026-04-15T08:55:53.000+0000",
+  "source_hash": "69ee9443598565007bef5314c9016caf53790522b13437dd68320862bc1f6dee",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.052978Z",
+  "status": "active"
+}
