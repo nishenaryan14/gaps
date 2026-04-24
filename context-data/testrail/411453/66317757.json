@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Device Settings - Headset disconnected on Settings screen",
   "feature": "Device Settings",
-  "scenario": "Headset disconnected while on Device Settings screen should update to show only available options",
+  "scenario": "Disconnect headset while on Device Settings screen and verify page updates to show only available options",
   "steps": [
     "1. Connect a headset to the device.",
     "2. Navigate to the Device Settings screen.",
@@ -16,18 +16,18 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "headset disconnected",
+    "headset disconnect",
     "Device Settings screen",
+    "settings page update",
     "available options",
-    "settings update",
-    "audio device",
-    "connectivity change",
-    "UI refresh",
-    "settings page"
+    "audio device removal",
+    "UI dynamic update",
+    "settings visibility",
+    "device configuration"
   ],
   "source_last_updated": "1762433859",
   "source_hash": "49f3c0f6536e7e4f9f2b37532f604668dbd86f8a4aa528872b3800e571b211a6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.364460Z",
+  "processed_at": "2026-04-24T11:50:53.202571Z",
   "status": "active"
 }
