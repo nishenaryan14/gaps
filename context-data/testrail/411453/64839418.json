@@ -1,0 +1,33 @@
+{
+  "id": "64839418",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Battery life",
+  "feature": "Device Home Screen",
+  "scenario": "Battery life display on Device Home Screen shows color-coded icons for headsets, headsets with charge case, and earbuds, with greyed-out icons when headset is turned off.",
+  "steps": [
+    "1. Pair and connect the headset, start the app, and navigate to the Device Home Screen.",
+    "2. Verify that the battery percentage is shown.",
+    "3. Turn off the headset.",
+    "4. Verify that the battery icons are greyed out with the last known percentage displayed."
+  ],
+  "expected": "For Headsets: A single battery icon is shown. For Headsets with a Charge case: Two icons marked \"H\" and \"C\" are displayed. For Earbuds: Three icons marked \"L\", \"R\", and \"C\" are shown. The battery icon reflects the charge level with color coding: 100%-40% = black (white in dark mode), 39%-20% = yellow, 19%-1% = red, 0% = empty. When the headset is turned off, the battery icons are greyed out with the last known percentage displayed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "battery life display",
+    "color-coded icons",
+    "Device Home Screen",
+    "headset battery",
+    "charge case",
+    "earbuds",
+    "greyed-out icons",
+    "last known percentage"
+  ],
+  "source_last_updated": "1776242372",
+  "source_hash": "abecc50b7e2e1bebd4ad89e32eb493dc652a020128cdfca5a2e27432253ceaf3",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.096150Z",
+  "status": "active"
+}
