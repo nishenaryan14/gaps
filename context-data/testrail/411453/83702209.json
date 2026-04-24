@@ -5,33 +5,30 @@
   "project": "411453",
   "title": "App Settings - General - About - Up to date, release notes no wifi [New]",
   "feature": "App Settings - General - About",
-  "scenario": "When viewing the About section in App Settings, clicking Release Notes without WiFi shows an error dialog instead of loading release notes.",
+  "scenario": "User views Release Notes in About section while offline and sees an error dialog that can be dismissed.",
   "steps": [
     "Open App Settings",
     "Navigate to General section",
     "Tap on About",
-    "Observe the status displayed (should show 'Up to date')",
-    "Disable WiFi (ensure no internet connection)",
-    "Tap on the Release Notes link",
-    "Observe the dialog that appears",
-    "Tap the Ok button to dismiss the dialog"
+    "Disconnect from WiFi (go offline)",
+    "Tap on Release Notes link"
   ],
-  "expected": "When tapping the Release Notes link without WiFi, the release notes should load gracefully (e.g., show cached content or a friendly offline message).",
+  "expected": "The Release Notes page should load and display the update information.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "App Settings",
-    "About section",
     "Release Notes",
-    "WiFi disabled",
+    "About section",
+    "offline",
     "error dialog",
-    "no internet connection",
-    "offline behavior",
-    "release notes loading"
+    "dismiss",
+    "App Settings",
+    "General section",
+    "WiFi disconnect"
   ],
   "source_last_updated": "1773153616",
   "source_hash": "43aed825c499572a9ebef43b8a39d661943b5ef7917cb685f3b12b8481f1b5df",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.355332Z",
+  "processed_at": "2026-04-24T11:50:53.144442Z",
   "status": "active"
 }
