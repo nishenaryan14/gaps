@@ -1,0 +1,33 @@
+{
+  "id": "65810673",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "QSG - X button",
+  "feature": "Quick Start Guide (QSG)",
+  "scenario": "Verify that clicking the X button on any Quick Start Guide screen closes the QSG page and returns to the Device Settings screen.",
+  "steps": [
+    "1. Open the Device Settings screen.",
+    "2. Navigate to any Quick Start Guide (QSG) screen.",
+    "3. Click the X button on the Quick Start Guide screen.",
+    "4. Observe the result."
+  ],
+  "expected": "The Quick Start Guide page closes and the user is returned to the Device Settings screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Quick Start Guide",
+    "QSG",
+    "X button",
+    "close",
+    "Device Settings",
+    "navigation",
+    "screen transition",
+    "return"
+  ],
+  "source_last_updated": "1761316060",
+  "source_hash": "516376bbd0bcd52085b317942c0b0f2585febe3ff9f97688ba79106f5c97bd97",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "status": "active"
+}
