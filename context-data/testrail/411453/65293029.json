@@ -5,29 +5,33 @@
   "project": "411453",
   "title": "Onboarding - Login",
   "feature": "Onboarding - Login",
-  "scenario": "Verify the onboarding and login flow: after accepting license and skipping optional steps, tapping login shows a dialog, then Continue leads to login options (Microsoft, Apple, Google, username/password), and completing login displays the Home Screen.",
+  "scenario": "Verify that a first-time user can complete the onboarding login flow from app launch to the Home Screen via social or username/password sign-in.",
   "steps": [
-    "Start the app for the first time, accept license agreement, tap Continue, Skip, then Continue.",
-    "Tap login \u2014 expected: Login dialog with Cancel and Continue buttons.",
-    "Tap Continue \u2014 expected: Login page with options to login/sign up via Microsoft, Apple, or Google, plus username/password fields and login button.",
-    "Finish login or sign up \u2014 expected: Home Screen is visible."
+    "Start the app for the first time",
+    "Accept the license agreement",
+    "Tap Skip/Continue",
+    "Tap Login",
+    "Verify the login dialog appears with Cancel and Continue buttons",
+    "Tap Continue to reach the login page",
+    "Verify the login page shows options to sign in via Microsoft, Apple, or Google, plus username/password fields",
+    "Complete login/signup to reach the Home Screen"
   ],
-  "expected": "Home Screen is visible after completing login or sign up.",
+  "expected": "User successfully reaches the Home Screen after completing the login/signup process.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding flow",
+    "onboarding",
     "login flow",
+    "first-time user",
+    "social sign-in",
+    "username/password",
+    "Home Screen",
     "license agreement",
-    "login dialog",
-    "login options",
-    "Microsoft login",
-    "Apple login",
-    "Google login"
+    "authentication"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "2dca91b312a00ccef138b289545814ad87eb7402c75b97bbeef3cc1bfec43304",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.302607Z",
+  "processed_at": "2026-04-24T11:50:53.087343Z",
   "status": "active"
 }
