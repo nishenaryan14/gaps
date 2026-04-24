@@ -1,0 +1,32 @@
+{
+  "id": "64907034",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "[IOS]App Settings - General - Account - Log in - Cancel",
+  "feature": "App Settings - General - Account - Login",
+  "scenario": "Verify that tapping Cancel on the Login dialog closes the dialog and returns the user to the previous screen with Login and Share Data buttons still visible.",
+  "steps": [
+    "Open the app and navigate to the screen where the Login dialog appears.",
+    "Tap the Cancel button on the Login dialog.",
+    "Observe the dialog behavior and the resulting screen."
+  ],
+  "expected": "The Login dialog closes, the user is returned to the previous screen, and the Login and Share Data buttons remain visible.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Login dialog",
+    "Cancel button",
+    "dialog close",
+    "dismiss dialog",
+    "return to previous screen",
+    "Login button visible",
+    "Share Data button visible",
+    "dialog behavior"
+  ],
+  "source_last_updated": "1764319819",
+  "source_hash": "b51e91048a8b888dfefd143e3916000ee13ced165071da00ac4c9236e153f505",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.092578Z",
+  "status": "active"
+}
