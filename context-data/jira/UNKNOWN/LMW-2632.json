@@ -1,0 +1,34 @@
+{
+  "id": "LMW-2632",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "ANDROID \ud83d\udfe5 | CCL | CCL during call is blinking for blocking settings",
+  "feature": "CCL (Call Control Layer)",
+  "scenario": "Locked CCL settings blink during an active call instead of remaining stable",
+  "description_clean": "During a call, CCL settings that should be locked are blinking instead.",
+  "steps": [
+    "Initiate or join a call.",
+    "Access the CCL (Call Control Lock) settings during the call.",
+    "Observe the behavior of the CCL settings that are supposed to be locked."
+  ],
+  "expected": "The CCL settings that are locked should remain static and not blink.",
+  "actual": "The CCL settings that are locked are blinking instead of remaining static.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "CCL settings blinking",
+    "Call Control Lock unstable",
+    "locked CCL settings active call",
+    "CCL settings behavior during call",
+    "Call Control Lock flickering",
+    "CCL settings not stable",
+    "locked settings blinking issue"
+  ],
+  "source_last_updated": "2026-04-23T06:17:58.000+0000",
+  "source_hash": "a7c27afaec7dab1295b62c37675cea103deea76ebad1d868c03852468cb0307f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:22.253052Z",
+  "status": "active"
+}
