@@ -1,0 +1,33 @@
+{
+  "id": "65640186",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Support Device Opened",
+  "feature": "Analytics",
+  "scenario": "Support Device Opened event is logged when the Support > Device screen is opened, with event counts updating after a few hours and Firebase dashboard displaying default analytics elements.",
+  "steps": [
+    "Open the Support > Device screen.",
+    "Verify that the 'Support Device Opened' event is logged.",
+    "Wait a few hours for event counts to update.",
+    "Check the Firebase dashboard.",
+    "Verify that the dashboard displays default elements: a graph, events in the last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
+  ],
+  "expected": "The 'Support Device Opened' event is logged when the Support > Device screen is opened. After a few hours, the Firebase dashboard shows updated event counts and displays all default elements: a graph, events in the last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Support Device Opened",
+    "Firebase dashboard",
+    "event logging",
+    "analytics",
+    "event counts",
+    "default analytics elements",
+    "Support > Device screen"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "a1d07777524c30f0b895829918a079de109eff8068fb6fc95db4cad58536ba0a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "status": "active"
+}
