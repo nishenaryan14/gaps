@@ -3,13 +3,13 @@
   "source": "jira",
   "type": "bug",
   "project": "UNKNOWN",
-  "summary": "iOS | Free20 | Repeat Notifications [DRAFT]",
-  "feature": "iOS | Free20 | Notifications",
-  "scenario": "Repeated charging notifications appear when wearing one earbud and placing the other in an unplugged, open case",
-  "description_clean": "When wearing one earbud and placing the other in the case (case unplugged, lid open), repeat charging notifications appear. Expected behavior is only one charging notification since only one earbud is charging.",
+  "summary": "iOS | Free20 | Repeat Notifications",
+  "feature": "iOS | Free20 | Repeat Notifications",
+  "scenario": "Repeat charging notifications appear when wearing one earbud and placing the other in an open, unplugged case",
+  "description_clean": "When wearing one earbud and placing the other in the case (case unplugged and left open), repeat charging notifications appear. Expected behavior is only one charging notification since only one earbud is charging.",
   "steps": [
     "Wear one earbud.",
-    "Place the other earbud in the case (case unplugged, lid open).",
+    "Place the other earbud in the case (case unplugged and left open).",
     "Observe the charging notifications."
   ],
   "expected": "Only one charging notification appears, since only one earbud is charging.",
@@ -20,18 +20,17 @@
     "NeedsQAReview"
   ],
   "keywords": [
-    "repeated charging notifications",
+    "repeat charging notifications",
     "one earbud",
-    "unplugged case",
     "open case",
-    "charging indicator",
+    "unplugged case",
+    "charging notification",
     "earbud case",
-    "false charging detection",
-    "single earbud usage"
+    "false charging detection"
   ],
-  "source_last_updated": "2026-04-24T09:04:35.000+0000",
-  "source_hash": "bdd48f3ec61bbd613ac3d0b880880ac6aede6b8185784be2a15bf1f7e405bb2c",
+  "source_last_updated": "2026-04-24T11:07:15.000+0000",
+  "source_hash": "6c3dd0e464b34e06c4df62a976f44645c170d79d32c6b31c9aad97cafe00d85e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.360072Z",
+  "processed_at": "2026-04-24T11:23:04.747089Z",
   "status": "active"
 }
