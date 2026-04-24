@@ -1,0 +1,33 @@
+{
+  "id": "66363595",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "DFU - Case Update Needed popup is not present if Charge Case is on latest FW",
+  "feature": "DFU (Device Firmware Update)",
+  "scenario": "Verify that the \"Case Update Needed\" popup is not displayed when the Charge Case is already on the latest firmware version after earbuds DFU completes.",
+  "steps": [
+    "Launch the app and connect the device (both earbuds).",
+    "Trigger DFU for Earbuds.",
+    "Once the update is done, go back to Home Screen.",
+    "Restart the app and verify the card is still not visible."
+  ],
+  "expected": "\"Case Update Needed\" card is not visible on the Home Screen, even after restarting the app.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Case Update Needed",
+    "popup",
+    "Charge Case",
+    "firmware version",
+    "earbuds DFU",
+    "latest firmware",
+    "Home Screen",
+    "card visibility"
+  ],
+  "source_last_updated": "1762331664",
+  "source_hash": "a66fb4b06f6ce3d27d090e2b5c846cdf1a2505fb1a7529b8b07b2264bd03a4c5",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:06.914553Z",
+  "status": "active"
+}
