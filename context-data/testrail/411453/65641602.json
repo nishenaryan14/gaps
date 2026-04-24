@@ -1,0 +1,34 @@
+{
+  "id": "65641602",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "CCL - Put the app in the background",
+  "feature": "CCL (Camera Color Lens)",
+  "scenario": "Verify that the previously selected CCL setting persists after the app is backgrounded and then brought back to the foreground.",
+  "steps": [
+    "Launch the app.",
+    "Select a CCL setting.",
+    "Put the app in the background (e.g., press the Home button or switch to another app).",
+    "Bring the app back to the foreground (e.g., tap the app icon or switch back to it).",
+    "Observe the displayed CCL setting."
+  ],
+  "expected": "The previously selected CCL setting is still displayed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "CCL setting",
+    "persist",
+    "background",
+    "foreground",
+    "app state",
+    "setting retention",
+    "backgrounding",
+    "foregrounding"
+  ],
+  "source_last_updated": "1772468639",
+  "source_hash": "d1b30a7c25ac568daabad0dcecada69bcd5103be540e11165b0d4d587dc029e2",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "status": "active"
+}
