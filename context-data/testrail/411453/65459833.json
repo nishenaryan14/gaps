@@ -15,7 +15,7 @@
     "6. Observe the master toggle for notifications.",
     "7. Observe the individual notification toggles."
   ],
-  "expected": "The master toggle in the Notifications section is set to OFF. All individual notification toggles are greyed out and set to OFF, and the user cannot change any of them.",
+  "expected": "The master toggle in the Notifications section is set to OFF. All individual notification toggles are greyed out, set to OFF, and cannot be changed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,14 +23,14 @@
     "onboarding",
     "master toggle",
     "app settings",
-    "general settings",
     "notification permissions",
     "greyed out toggles",
-    "disabled toggles"
+    "disabled toggles",
+    "iOS notifications"
   ],
   "source_last_updated": "1761296616",
   "source_hash": "26818fc0b335f37451bf87c5c2046d83db78603e5f4946c1d1bb77f37604a5fc",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.421344Z",
+  "processed_at": "2026-04-24T11:50:53.314655Z",
   "status": "active"
 }
