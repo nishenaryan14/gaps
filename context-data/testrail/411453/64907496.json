@@ -1,0 +1,33 @@
+{
+  "id": "64907496",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - Device page with headset disconnected",
+  "feature": "Support - Device Page",
+  "scenario": "User navigates to Support section, taps on a previously disconnected headset visible on Home Screen, and expects a device details modal to slide up from the bottom.",
+  "steps": [
+    "Close the app",
+    "Ensure a previously disconnected headset is visible on the Home Screen",
+    "Navigate to the Support section",
+    "Tap on a device",
+    "Tap on a specific device"
+  ],
+  "expected": "A modal slides up from the bottom of the screen displaying device details (Device Name, Device Product ID, Serial Number, Software Version, Headset Revision, Last Connected) along with instructions to send detailed information to Support, and a \"Go\" button.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Support section",
+    "disconnected headset",
+    "Home Screen",
+    "device details modal",
+    "slide up",
+    "tap device",
+    "navigation"
+  ],
+  "source_last_updated": "1759761384",
+  "source_hash": "d8e6e21576097264dbf0df1d2a29f3aeff799400c9982337133219dcd2d36e63",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:24.310140Z",
+  "status": "active"
+}
