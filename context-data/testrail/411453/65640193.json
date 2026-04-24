@@ -4,30 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Soak Test - No Headset connected, app in the foreground, phone idle",
-  "feature": "Soak Test / App Stability",
-  "scenario": "Soak test: App remains stable and usable after prolonged idle foreground use with no headset connected",
+  "feature": "Soak Test / Stability",
+  "scenario": "Soak test: App remains stable and usable after prolonged idle foreground use with no headset connected.",
   "steps": [
-    "Install and launch the app",
-    "Go to the home screen (no headset connected)",
-    "Leave the phone idle with the app in the foreground",
-    "Wait for several hours (e.g., overnight)",
-    "Check that the app is still running and usable"
+    "Install and launch the app, go to the Home Screen (no headset connected).",
+    "Leave the phone idle with the app in the foreground.",
+    "After several hours (ideally overnight or multiple hours), check that the app is still running and usable."
   ],
-  "expected": "App remains running and usable after prolonged idle time with no crashes or memory leaks.",
+  "expected": "App remains running and usable with no memory leaks or crashes after prolonged idle time.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "soak test",
     "idle foreground",
-    "no headset",
     "stability",
+    "no headset",
     "prolonged idle",
-    "app remains usable",
-    "overnight test"
+    "app usability",
+    "overnight test",
+    "background persistence"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "6b72793655e75c4fd405ea079a64b6b475c55bacdcbef9f8078607e324e087a7",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "processed_at": "2026-04-24T11:50:53.337160Z",
   "status": "active"
 }
