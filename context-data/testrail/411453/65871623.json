@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Internet is off - User Guide",
   "feature": "Device Home Screen",
-  "scenario": "User Guide shows \"Something went wrong\" screen when opened offline after connecting a new Bluetooth device",
+  "scenario": "User Guide shows \"Something went wrong\" screen instead of \"Feature unavailable\" dialog when internet is off and app is restarted",
   "steps": [
-    "Connect a new device in Bluetooth settings.",
-    "Open Lens app.",
-    "Turn off the internet.",
-    "Tap on 3 dots -> Device Settings page is displayed.",
-    "Tap on User Guide -> 'Something went wrong' screen is displayed.",
-    "Tap on 'X' in upper right corner -> 'Something went wrong' screen is closed and Device Settings page is displayed."
+    "1. Connect a new device in Bluetooth settings",
+    "2. Open Lens app",
+    "3. Turn off internet",
+    "4. Tap on 3 dots -> Device Settings page is displayed",
+    "5. Tap on User Guide -> 'Something went wrong' screen is displayed",
+    "6. Tap on 'X' -> 'Something went wrong' screen closes and Device Settings page is displayed"
   ],
-  "expected": "When internet is off, tapping User Guide shows a \"Something went wrong\" screen. Tapping the \"X\" closes that screen and returns to the Device Settings page.",
+  "expected": "If the User Guide was previously opened while internet was on, reopening it will display the guide properly. However, if the app is restarted, a \"Feature unavailable\" dialog should appear.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Bluetooth",
     "User Guide",
-    "offline",
     "Something went wrong",
+    "Feature unavailable",
+    "internet off",
+    "app restart",
     "Device Settings",
-    "Lens app",
-    "error screen",
-    "no internet"
+    "Bluetooth",
+    "Lens app"
   ],
   "source_last_updated": "1769426297",
   "source_hash": "81750f5a19091883bcf991507d7396e553f0f692215d872fd30edb1c0cf91cec",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.345630Z",
+  "processed_at": "2026-04-24T11:50:53.133774Z",
   "status": "active"
 }
