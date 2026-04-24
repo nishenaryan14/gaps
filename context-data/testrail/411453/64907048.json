@@ -1,0 +1,35 @@
+{
+  "id": "64907048",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - Account - Account delete",
+  "feature": "App Settings - General - Account",
+  "scenario": "Verify account deletion flow in App Settings: Cancel dismisses dialog and keeps user logged in, while Confirm deletes account, logs user out, and removes them from the Cloud tenant.",
+  "steps": [
+    "Open the delete icon in App Settings under General > Account tab.",
+    "Verify a confirmation dialog appears.",
+    "Test Cancel: Click Cancel on the dialog.",
+    "Verify the dialog closes, user stays logged in, and user remains on the Cloud tenant.",
+    "Test Confirm: Click Confirm on the dialog.",
+    "Verify the dialog closes, a spinner appears, an 'Account Deleted' popup appears briefly, then the user is logged out and removed from the Cloud tenant."
+  ],
+  "expected": "Cancel: Dialog closes, user stays logged in, user remains on Cloud tenant. Confirm: Dialog closes, spinner appears, \"Account Deleted\" popup appears briefly, user is logged out and removed from Cloud tenant.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "account deletion",
+    "app settings",
+    "confirmation dialog",
+    "cancel dismiss",
+    "confirm delete",
+    "logout",
+    "cloud tenant removal",
+    "account deleted popup"
+  ],
+  "source_last_updated": "1759416351",
+  "source_hash": "ef1bca0dd99bd73e13692a05ba0080a50a35e5685057bc585f0ed6c6b483ae7e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.105690Z",
+  "status": "active"
+}
