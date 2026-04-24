@@ -1,0 +1,33 @@
+{
+  "id": "65459844",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications - Master Toggle OFF - Update failed",
+  "feature": "Notifications",
+  "scenario": "DFU failure notification appears despite Notifications master toggle being OFF",
+  "steps": [
+    "Start the app",
+    "Go to Device Settings > Software Update",
+    "Start DFU (Device Firmware Update)",
+    "Put the app in the background",
+    "Turn off the device (safe only during first 20%)"
+  ],
+  "expected": "No notification should appear upon update failure.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU failure notification",
+    "Notifications master toggle OFF",
+    "Device Firmware Update",
+    "background app",
+    "device turned off during DFU",
+    "Software Update settings",
+    "false notification bug"
+  ],
+  "source_last_updated": "1761230695",
+  "source_hash": "a04197a0a28650073363035e7a00b3c31b2b4b2a98feab525486b90bb9c461b9",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.419263Z",
+  "status": "active"
+}
