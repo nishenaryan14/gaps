@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Internet is off - User Guide",
   "feature": "Device Home Screen",
-  "scenario": "User Guide shows \"Something went wrong\" when internet is off after app restart, instead of \"Feature unavailable\" dialog",
+  "scenario": "User Guide shows \"Something went wrong\" screen when opened offline after connecting a new Bluetooth device",
   "steps": [
-    "1. Connect new device in Bluetooth settings",
-    "2. Open Lens app",
-    "3. Turn off internet",
-    "4. Tap on 3 dots -> Device Settings page displayed",
-    "5. Tap on User Guide -> \"Something went wrong\" screen displayed",
-    "6. Tap on \"X\" -> Screen closes and Device settings page is displayed"
+    "Connect a new device in Bluetooth settings.",
+    "Open Lens app.",
+    "Turn off the internet.",
+    "Tap on 3 dots -> Device Settings page is displayed.",
+    "Tap on User Guide -> 'Something went wrong' screen is displayed.",
+    "Tap on 'X' in upper right corner -> 'Something went wrong' screen is closed and Device Settings page is displayed."
   ],
-  "expected": "If the app is restarted, a \"Feature unavailable\" dialog should appear.",
+  "expected": "When internet is off, tapping User Guide shows a \"Something went wrong\" screen. Tapping the \"X\" closes that screen and returns to the Device Settings page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "Bluetooth",
     "User Guide",
+    "offline",
     "Something went wrong",
-    "internet off",
-    "app restart",
-    "Feature unavailable",
-    "Bluetooth settings",
+    "Device Settings",
     "Lens app",
-    "Device Settings"
+    "error screen",
+    "no internet"
   ],
   "source_last_updated": "1769426297",
   "source_hash": "81750f5a19091883bcf991507d7396e553f0f692215d872fd30edb1c0cf91cec",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.750622Z",
+  "processed_at": "2026-04-24T11:23:05.345630Z",
   "status": "active"
 }
