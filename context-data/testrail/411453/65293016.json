@@ -1,0 +1,34 @@
+{
+  "id": "65293016",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Eula page - Continue",
+  "feature": "Onboarding - Eula Page",
+  "scenario": "Verify EULA onboarding flow: user must check agreement box before Continue button becomes active and navigates to Up-to-Date page.",
+  "steps": [
+    "Launch the app for the first time.",
+    "Verify the EULA screen displays the agreement text, license/privacy policy links, a blurred Continue button, and animation.",
+    "Tap Continue without checking the agreement box (should do nothing).",
+    "Check the agreement box.",
+    "Tap Continue again to navigate to the \"Up-to-Date\" page."
+  ],
+  "expected": "The \"Up-to-Date\" page is displayed with update messaging, a Skip button, and animation.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EULA",
+    "onboarding",
+    "agreement checkbox",
+    "Continue button",
+    "Up-to-Date page",
+    "license policy",
+    "privacy policy",
+    "button state"
+  ],
+  "source_last_updated": "1760528496",
+  "source_hash": "f232f918d9128c42fdc8c76309d7fdc0b745d9990d40d03a05a9f8662fdc4b07",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058178Z",
+  "status": "active"
+}
