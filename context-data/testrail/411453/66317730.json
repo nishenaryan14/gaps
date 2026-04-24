@@ -5,10 +5,10 @@
   "project": "411453",
   "title": "Rename device - Rename, max chars",
   "feature": "Rename Device",
-  "scenario": "Verify that a device name can be renamed to a maximum of 30 bytes (30 English characters)",
+  "scenario": "Verify that a device name can be renamed with up to 30 bytes (30 English characters)",
   "steps": [
     "Navigate to Device Settings > General",
-    "Click on the device's official name",
+    "Click the device's official name",
     "Enter 30 characters",
     "Click Done"
   ],
@@ -16,18 +16,17 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device name",
-    "rename",
-    "30 bytes",
-    "30 characters",
-    "character limit",
+    "device rename",
+    "30 bytes limit",
     "device settings",
-    "name validation",
-    "max length"
+    "general settings",
+    "character limit",
+    "device name validation",
+    "rename device"
   ],
   "source_last_updated": "1772624686",
   "source_hash": "d2421490694c55660a929ab9bf4f5469facf1122b712789e2f7345856698e4a7",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "processed_at": "2026-04-24T11:50:53.213672Z",
   "status": "active"
 }
