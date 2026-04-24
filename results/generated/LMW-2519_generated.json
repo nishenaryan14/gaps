@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Verify device state updates to 'Disconnected' after headset disconnection via Bluetooth menu",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, location permissions, splash screen).",
+      "Connect a Bluetooth headset to the device.",
+      "Navigate to the app's main screen and verify the headset is shown as 'Connected'.",
+      "Minimize the app (send to background).",
+      "Open the system Bluetooth settings menu.",
+      "Disconnect the previously connected headset from the Bluetooth settings.",
+      "Return to the app (bring to foreground).",
+      "Observe the device status indicator on the main screen."
+    ],
+    "expected": "The app's UI should reflect the updated state: the headset should be displayed as 'Disconnected' (or equivalent status like 'Not Connected'). The device state should synchronize with the actual Bluetooth connection status."
+  },
+  {
+    "title": "Verify app reflects disconnection when headset is disconnected while app is in foreground",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, location permissions, splash screen).",
+      "Connect a Bluetooth headset to the device.",
+      "Navigate to the app's main screen and verify the headset is shown as 'Connected'.",
+      "While the app remains in the foreground, open the system Bluetooth settings (e.g., via quick settings or notification drawer).",
+      "Disconnect the Bluetooth headset from the system settings.",
+      "Return to the app (if needed, switch back to app).",
+      "Observe the device status indicator on the main screen."
+    ],
+    "expected": "The app's UI should update to show the headset as 'Disconnected' shortly after the Bluetooth disconnection occurs. The state change should be reflected either immediately or within a reasonable timeout period."
+  },
+  {
+    "title": "Verify device state remains 'Disconnected' after app restart following Bluetooth disconnection",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, location permissions, splash screen).",
+      "Connect a Bluetooth headset to the device.",
+      "Navigate to the app's main screen and verify the headset is shown as 'Connected'.",
+      "Minimize the app.",
+      "Open system Bluetooth settings and disconnect the headset.",
+      "Return to the app and verify the headset is shown as 'Disconnected'.",
+      "Force close the app (swipe from recent apps).",
+      "Re-launch the app.",
+      "Observe the device status indicator on the main screen."
+    ],
+    "expected": "After re-launching the app, the headset should still be shown as 'Disconnected' (or 'Not Connected'), reflecting the persistent Bluetooth state. The app should not incorrectly show the headset as 'Connected'."
+  },
+  {
+    "title": "Verify app handles rapid connect-disconnect-connect cycle via Bluetooth menu",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, location permissions, splash screen).",
+      "Connect a Bluetooth headset to the device.",
+      "Navigate to the app's main screen and verify the headset is shown as 'Connected'.",
+      "Minimize the app.",
+      "Open system Bluetooth settings and disconnect the headset.",
+      "Immediately reconnect the same headset via Bluetooth settings.",
+      "Return to the app.",
+      "Observe the device status indicator on the main screen."
+    ],
+    "expected": "The app should correctly reflect the final Bluetooth state: the headset should be shown as 'Connected' after reconnection. The app should handle rapid state transitions without crashing or displaying stale/incorrect status."
+  },
+  {
+    "title": "Verify no crash or UI freeze when returning to app after Bluetooth disconnection",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, location permissions, splash screen).",
+      "Connect a Bluetooth headset to the device.",
+      "Navigate to the app's main screen and verify the headset is shown as 'Connected'.",
+      "Minimize the app.",
+      "Open system Bluetooth settings and disconnect the headset.",
+      "Return to the app by tapping the app icon or switching via the app switcher.",
+      "Interact with the app UI (tap buttons, scroll, navigate to other screens)."
+    ],
+    "expected": "The app should not crash, freeze, or become unresponsive. All UI elements should be interactive and functional. The device status should be updated to 'Disconnected' without any visual glitches or errors."
+  }
+]
