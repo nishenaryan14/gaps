@@ -1,0 +1,34 @@
+{
+  "id": "65248794",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Playing sound from 2 different devices",
+  "feature": "Find My Device",
+  "scenario": "When two devices are paired and connected, playing a sound on the second device fails with an error pop-up until the first device is disconnected.",
+  "steps": [
+    "Pair and connect two devices.",
+    "Play a sound on the first device.",
+    "Attempt to play a sound on the second device.",
+    "Observe the error pop-up.",
+    "Disconnect the first device.",
+    "Play a sound on the second device again."
+  ],
+  "expected": "Playing a sound on the second device should work correctly while both devices are connected.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "paired devices",
+    "connected devices",
+    "play sound",
+    "error pop-up",
+    "disconnect device",
+    "audio playback failure",
+    "multi-device audio"
+  ],
+  "source_last_updated": "1759930181",
+  "source_hash": "2207134fbd8939ffa5af4f8d4d848b218c2b858ad376876d622e29fdbd2f28b5",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.289721Z",
+  "status": "active"
+}
