@@ -5,26 +5,26 @@
   "project": "411453",
   "title": "Device Home Screen - Starting app with one connected Headset",
   "feature": "Device Home Screen",
-  "scenario": "Start the app with one connected headset and verify it appears in the device list.",
+  "scenario": "App displays connected headset in device list upon startup after pairing",
   "steps": [
     "Pair and connect headset.",
     "Start the app."
   ],
-  "expected": "Connected headset shown in device list.",
+  "expected": "Connected headset is shown in the device list.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "app startup",
-    "headset connection",
+    "headset",
     "device list",
     "pairing",
-    "bluetooth headset",
-    "device discovery",
-    "connected devices"
+    "connection",
+    "app startup",
+    "connected devices",
+    "bluetooth"
   ],
   "source_last_updated": "1761742088",
   "source_hash": "907b93b0c2268e739cac48d46061a2feb08ecaf29faecd5f0889519f67d44d37",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.075485Z",
+  "processed_at": "2026-04-24T10:51:32.726437Z",
   "status": "active"
 }
