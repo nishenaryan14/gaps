@@ -1,0 +1,36 @@
+{
+  "id": "85082474",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "E2E for supported device page and color theme flow",
+  "feature": "Onboarding & Color Theme",
+  "scenario": "E2E test for supported device page and color theme flow, including onboarding, no-device page, device selection, color theme, and About page navigation.",
+  "steps": [
+    "Accept notifications, EULA, and PPIP prompts",
+    "Navigate through onboarding screens: Welcome, Up to Date, Organized",
+    "Verify the 'No Device Connected' page is displayed",
+    "Access the device selection page and return to the previous page",
+    "Navigate to the color theme page via the main menu",
+    "Verify the About page under General settings",
+    "Verify back navigation returns to the no-device page"
+  ],
+  "expected": "User can successfully complete the onboarding flow, view the \"No Device Connected\" page, navigate to device selection and return, access and view the color theme page, verify the About page under General settings, and navigate back to the no-device page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "E2E test",
+    "supported device page",
+    "color theme flow",
+    "onboarding",
+    "no-device page",
+    "device selection",
+    "About page navigation",
+    "General settings"
+  ],
+  "source_last_updated": "1776941879",
+  "source_hash": "7dac4c426f224a3a7fa7deb1d5d3ef9db6680cd16bb4476cb54b77cceab561a5",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:11.710657Z",
+  "status": "active"
+}
