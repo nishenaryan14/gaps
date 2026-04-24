@@ -1,0 +1,37 @@
+{
+  "id": "66317770",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Language Change  - Tab when the internet is off",
+  "feature": "Language Settings",
+  "scenario": "When offline, tapping the Language tab shows a greyed-out state and displays an \"internet required\" dialog that dismisses back to the greyed-out state.",
+  "steps": [
+    "Turn off internet connection on the device.",
+    "Open Device Settings.",
+    "Tap on the Language tab.",
+    "Observe the tab text appearance.",
+    "Tap inside the Language tab.",
+    "Observe the dialog that appears.",
+    "Tap the 'Ok got it' button on the dialog.",
+    "Observe the resulting state."
+  ],
+  "expected": "The Language tab text is greyed out. Tapping inside the tab shows a dialog: \"Feature unavailable. An internet connection is required to access this feature.\" with an \"Ok got it\" button. Tapping the button closes the dialog and returns to the greyed-out state.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "offline",
+    "Language tab",
+    "greyed-out",
+    "internet required dialog",
+    "no internet connection",
+    "dismiss dialog",
+    "disabled state",
+    "network error"
+  ],
+  "source_last_updated": "1762252670",
+  "source_hash": "5113a2fd808bae90f2dc0b8346bc60366cfa3d8220925b930592f326b49e1827",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.384900Z",
+  "status": "active"
+}
