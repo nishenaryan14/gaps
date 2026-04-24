@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Notifications -  Device updating",
   "feature": "Notifications",
-  "scenario": "Verify that a \"Device software is updating...\" notification appears when a device update begins, and tapping it while the app is in the background opens the Software Update screen with the DFU progress bar.",
+  "scenario": "User taps on \"Device software is updating...\" notification while app is in background and is taken to Software Update screen with DFU progress bar",
   "steps": [
-    "Start a device software update process.",
-    "Observe the notification area for the message \"Device software is updating...\".",
-    "Send the app to the background (e.g., press the Home button).",
-    "Tap the notification \"Device software is updating...\".",
-    "Observe the app opening and the screen displayed."
+    "Ensure the device has a firmware version lower than the current version on the server (Cloud).",
+    "Initiate a device software update.",
+    "Observe the notification that appears: 'Device software is updating...'.",
+    "Send the app to the background.",
+    "Tap the notification while the app is in the background."
   ],
-  "expected": "1. The notification \"Device software is updating...\" appears when the update begins. 2. Tapping the notification while the app is in the background opens the app to the Software Update screen showing the DFU progress bar.",
+  "expected": "The app opens to the Software Update screen showing the DFU progress bar.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Device software update",
-    "Notification",
-    "Background app",
-    "DFU progress bar",
-    "Software Update screen",
-    "Tap notification",
-    "Firmware update",
-    "App foreground"
+    "DFU",
+    "Device Firmware Update",
+    "Software Update Notification",
+    "Background App",
+    "Notification Tap",
+    "Progress Bar",
+    "Firmware Version",
+    "OTA Update"
   ],
   "source_last_updated": "1761222555",
   "source_hash": "b9b4913f6577e3f20197653d645ce19d36fc67a79ef4ce6f9fb351c06dc2a77a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.419263Z",
+  "processed_at": "2026-04-24T11:50:53.304002Z",
   "status": "active"
 }
