@@ -1,0 +1,34 @@
+{
+  "id": "65640185",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Fit Test Competed",
+  "feature": "Analytics",
+  "scenario": "Verify that after completing the Fit Test on mobile, the Firebase page displays default elements and updated event counts.",
+  "steps": [
+    "Open the Firebase page.",
+    "Verify that the page loads properly and contains the following default elements: Graph, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, App Environment, and Device PID.",
+    "Complete the Fit Test on the mobile device.",
+    "Wait a few hours for event counts to be updated.",
+    "Check that the event count for related elements has increased."
+  ],
+  "expected": "The Firebase page opens properly with all default elements displayed. After completing the Fit Test on mobile and waiting a few hours, the event count for related elements increases.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Fit Test",
+    "Firebase page",
+    "event counts",
+    "default elements",
+    "mobile device",
+    "Graph",
+    "Events per session",
+    "App Version"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "feab6477e73a92f0b0ab5cc5850f02bbb73c8790c517b4ed4d8645d15253455a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.426001Z",
+  "status": "active"
+}
