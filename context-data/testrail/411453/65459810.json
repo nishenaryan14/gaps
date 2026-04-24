@@ -5,27 +5,28 @@
   "project": "411453",
   "title": "PPIP - Dialog after Onboarding - UI",
   "feature": "Onboarding / PPIP Dialog",
-  "scenario": "After completing onboarding and tapping \"Continue as Guest\", verify that the PPIP dialog appears with \"Help us improve your experience\" message and options to \"Don't Share\" or \"Share Data\".",
+  "scenario": "After completing onboarding and tapping \"Continue as Guest\", verify the PPIP dialog appears with privacy notice and \"Don't Share\" / \"Share Data\" options.",
   "steps": [
-    "Complete the onboarding screens",
-    "Tap 'Continue as Guest'"
+    "Complete the onboarding screens.",
+    "Tap 'Continue as Guest'.",
+    "Observe the dialog that appears."
   ],
-  "expected": "A PPIP (Product Performance Improvement Program) dialog should appear with the title \"Help us improve your experience.\" The dialog explains that HP may collect basic device and app information (model, serial number, software version, feature usage) to improve performance and support. It clarifies that no personal information is collected or shared with third parties, and preferences can be changed anytime in Settings. The dialog provides two options: \"Don't Share\" and \"Share Data\".",
+  "expected": "A PPIP (Product Performance Improvement Program) dialog should appear displaying: \"Help us improve your experience.\" followed by a privacy notice explaining that HP may collect basic device and app information (model, serial number, software version, feature usage) to improve performance and support, with clarification that no personal information is collected or shared with third parties, and that preferences can be changed anytime in Settings. The dialog includes two options: \"Don't Share\" and \"Share Data\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "PPIP dialog",
+    "privacy notice",
     "Continue as Guest",
-    "Help us improve your experience",
+    "onboarding",
     "Don't Share",
     "Share Data",
-    "onboarding",
-    "privacy consent",
-    "data sharing prompt"
+    "privacy prompt",
+    "data sharing consent"
   ],
   "source_last_updated": "1760536922",
   "source_hash": "5124052491945a95b02769748f4dbf40e8773d251cb84960e2ef6daae5f1e39e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.722887Z",
+  "processed_at": "2026-04-24T11:23:05.314081Z",
   "status": "active"
 }
