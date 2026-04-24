@@ -1,0 +1,34 @@
+{
+  "id": "65641581",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Custom EQ - White circle when changing value on sliders",
+  "feature": "EQ - Custom EQ",
+  "scenario": "Custom EQ slider dot shows a white circle that follows movement while dragging and disappears on release for all 7 sliders",
+  "steps": [
+    "Open the Custom EQ interface.",
+    "Locate any of the 7 sliders.",
+    "Press and hold the dot on the slider.",
+    "While holding, slide the dot left or right.",
+    "Release the dot."
+  ],
+  "expected": "A white circle appears around the dot while holding it, follows the dot's movement when sliding left/right, and disappears upon release. This behavior applies to all 7 sliders.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Custom EQ",
+    "slider dot",
+    "white circle",
+    "dragging",
+    "slider movement",
+    "EQ interface",
+    "7 sliders",
+    "dot release"
+  ],
+  "source_last_updated": "1760956310",
+  "source_hash": "6180b2dd6d57b87c4674d05b1067eadafe2966cebec098af1182b100e2a0d618",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.400307Z",
+  "status": "active"
+}
