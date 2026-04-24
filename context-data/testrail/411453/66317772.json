@@ -5,27 +5,28 @@
   "project": "411453",
   "title": "Device Settings - List of supported settings vs UI headset spec",
   "feature": "Device Settings",
-  "scenario": "Verify that the Lens app's headset settings list matches all supported headsets from the headset UI specification.",
+  "scenario": "Verify that the Lens app's headset settings list matches all supported headsets from the UI specification.",
   "steps": [
-    "1) Acquire the UI spec of the tested headset.",
-    "2) Open the app and navigate to headset settings.",
-    "3) Compare the settings list against the headset spec."
+    "Acquire the UI spec of the tested headset.",
+    "Open the app and navigate to headset settings.",
+    "Compare the settings list against the headset spec."
   ],
-  "expected": "All supported headsets for mobile from the spec are present in the Lens app.",
+  "expected": "All supported headsets for mobile listed in the spec are present in the Lens app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Lens app",
     "headset settings",
-    "headset UI specification",
+    "UI specification",
     "supported headsets",
-    "settings list comparison",
-    "headset compatibility",
-    "UI spec verification"
+    "settings list",
+    "headset spec",
+    "verification",
+    "compatibility"
   ],
   "source_last_updated": "1762351152",
   "source_hash": "4bde86ea1b94796d4ea89b1643efa4a47fb020725f5c9709effbc47856d17e41",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.364460Z",
+  "processed_at": "2026-04-24T11:50:53.198552Z",
   "status": "active"
 }
