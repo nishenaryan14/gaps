@@ -1,0 +1,35 @@
+{
+  "id": "65640182",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Find My Device Sound Played",
+  "feature": "Analytics",
+  "scenario": "Verify that playing sound from Find My Device screen logs the \"findMyDevice_soundplayed\" event and that the Firebase dashboard reflects the increased event count after a delay.",
+  "steps": [
+    "1. Open the Firebase page for the 'findMyDevice_soundplayed' event.",
+    "2. Verify that the page displays default elements: graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+    "3. Note the current event count for 'findMyDevice_soundplayed'.",
+    "4. From the Find My Device screen, trigger the sound on a connected device.",
+    "5. Wait for a few hours for the event counts to update.",
+    "6. Return to the Firebase page and check the updated event count for 'findMyDevice_soundplayed'.",
+    "7. Verify that the event count has increased compared to the previously noted count."
+  ],
+  "expected": "The Firebase page for the 'findMyDevice_soundplayed' event opens successfully with all default elements (graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment) displayed. After triggering the sound on a connected device and waiting a few hours, the event count for 'findMyDevice_soundplayed' increases.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "sound played",
+    "Firebase",
+    "event count",
+    "analytics dashboard",
+    "event tracking",
+    "sound trigger"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "68cb614e6a2f781db7f4c3f10005482677a15d43c408a6d2471b7428cb18d666",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.428522Z",
+  "status": "active"
+}
