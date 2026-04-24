@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Find My Device - Don't Allow - Enable Now - Allow While Using App [Deprecated for IOS]",
   "feature": "Find My Device",
-  "scenario": "Grant \"While Using the App\" location permission via Find My Device flow after initially denying it, and verify the permission screen disappears.",
+  "scenario": "Verify Find My Device permission flow: grant \"While Using the App\" location permission after initial denial and confirm the screen opens without permission prompt.",
   "steps": [
     "Start the app with the headset (HS) connected.",
     "Go to the main menu.",
@@ -19,18 +19,18 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "While Using the App",
-    "location permission",
     "Find My Device",
-    "permission dialog",
-    "Don't Allow",
+    "location permission",
+    "While Using the App",
+    "permission grant",
+    "permission denial",
     "Enable Now",
-    "Lens app",
-    "permission screen disappears"
+    "Don't Allow",
+    "Lens app"
   ],
   "source_last_updated": "1760352232",
   "source_hash": "3ca702ea9176c05b6e6f50b71bc51a5f3fc8c29c1af325e11733fe4d921669b7",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.358898Z",
+  "processed_at": "2026-04-24T11:50:53.171314Z",
   "status": "active"
 }
