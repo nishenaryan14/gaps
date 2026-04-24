@@ -1,0 +1,32 @@
+{
+  "id": "65641554",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - ANC and Transparency are Off, make a call, ANC is off but active and Transparency is disabled",
+  "feature": "ANC (Active Noise Cancellation) & Transparency",
+  "scenario": "When ANC and Transparency are both off, making a call causes ANC to appear off but remain active and changeable, while Transparency becomes disabled and greyed out.",
+  "steps": [
+    "Set ANC (Active Noise Cancellation) to OFF (no selected values).",
+    "Set Transparency to OFF (no selected values).",
+    "Make a call."
+  ],
+  "expected": "ANC should appear off but remain active and changeable by the user. Transparency should become disabled (greyed out, not changeable by the user) with no selected values.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "ANC",
+    "Active Noise Cancellation",
+    "Transparency",
+    "call",
+    "disabled",
+    "greyed out",
+    "audio mode",
+    "noise control"
+  ],
+  "source_last_updated": "1760956286",
+  "source_hash": "939d908fc6a9c201afca61547ff3226e8494ff4e94b2cf1400e0a1ae24a6cc7a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
