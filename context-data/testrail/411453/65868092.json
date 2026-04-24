@@ -10,24 +10,27 @@
     "Turn off one device.",
     "Observe that the turned-off device displays as disconnected.",
     "Verify that the remaining devices stay connected.",
-    "Turn off the remaining devices one by one.",
-    "Observe that each turned-off device displays as disconnected properly."
+    "Turn off another remaining device.",
+    "Observe that this device now displays as disconnected.",
+    "Verify that the other remaining devices (if any) stay connected.",
+    "Repeat turning off remaining devices one by one.",
+    "After each turn-off, confirm the device shows as disconnected and others remain connected."
   ],
-  "expected": "When a device is turned off, it displays as disconnected while other devices remain connected. Turning off remaining devices one by one shows each as disconnected properly.",
+  "expected": "Each turned-off device displays as disconnected immediately, while all other devices remain connected throughout the process.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "device disconnection",
-    "device status",
-    "connected devices",
-    "sequential power off",
-    "disconnect detection",
-    "device monitoring",
-    "remaining devices connected"
+    "sequential turn-off",
+    "remaining devices connected",
+    "device status verification",
+    "multi-device monitoring",
+    "disconnect confirmation",
+    "device-by-device testing"
   ],
   "source_last_updated": "1762178330",
   "source_hash": "41139ad4095a627cc19807ca6eab170c4b8e23dd6b29fcbf32efe3b4597eb74d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.334469Z",
+  "processed_at": "2026-04-24T11:50:53.120054Z",
   "status": "active"
 }
