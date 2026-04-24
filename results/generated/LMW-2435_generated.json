@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Verify Free60+ earbuds battery level displays correctly after successful connection",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
+      "Navigate to the device connection screen.",
+      "Connect to Free60+ device.",
+      "Wait for the 'Connected' status to appear.",
+      "Observe the battery level indicator for the left earbud.",
+      "Observe the battery level indicator for the right earbud.",
+      "Record the displayed battery percentage for each earbud."
+    ],
+    "expected": "After connection, the battery level for both left and right earbuds displays a value between 1% and 100% (not 0%) within a reasonable time after 'Connected' status appears."
+  },
+  {
+    "title": "Verify Free60+ charging case battery level displays correctly after successful connection",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
+      "Navigate to the device connection screen.",
+      "Connect to Free60+ device.",
+      "Wait for the 'Connected' status to appear.",
+      "Observe the battery level indicator for the charging case.",
+      "Record the displayed battery percentage for the charging case."
+    ],
+    "expected": "After connection, the battery level for the charging case displays a value between 1% and 100% (not 0%) within a reasonable time after 'Connected' status appears."
+  },
+  {
+    "title": "Verify Free60+ battery levels update dynamically over time after connection",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
+      "Connect to Free60+ device.",
+      "Wait for 'Connected' status and record initial battery levels for left earbud, right earbud, and charging case.",
+      "Wait for 30 seconds without disconnecting.",
+      "Re-check and record the battery levels for left earbud, right earbud, and charging case.",
+      "Wait for another 30 seconds.",
+      "Re-check and record the battery levels again."
+    ],
+    "expected": "Battery levels for earbuds and charging case update dynamically over time and do not remain stuck at the same value (especially 0%) for the entire monitoring period."
+  },
+  {
+    "title": "Verify Free60+ battery levels do not show 0% for an extended period after connection",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
+      "Connect to Free60+ device.",
+      "Wait for 'Connected' status to appear.",
+      "Immediately check and record battery levels for left earbud, right earbud, and charging case.",
+      "Wait for 60 seconds, checking battery levels every 10 seconds.",
+      "Note any instances where battery level shows 0%."
+    ],
+    "expected": "Battery levels for earbuds and charging case should not show 0% for more than 10 seconds after 'Connected' status appears. If 0% is shown initially, it should update to a valid percentage within 10 seconds."
+  },
+  {
+    "title": "Verify Free60+ battery level display consistency after reconnection",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
+      "Connect to Free60+ device and wait for 'Connected' status.",
+      "Record battery levels for left earbud, right earbud, and charging case.",
+      "Disconnect the Free60+ device.",
+      "Reconnect to the Free60+ device.",
+      "Wait for 'Connected' status to reappear.",
+      "Record battery levels again for left earbud, right earbud, and charging case."
+    ],
+    "expected": "After reconnection, battery levels for earbuds and charging case display valid percentages (1%-100%) and are not stuck at 0%. Battery values should be consistent with the device's actual battery state."
+  },
+  {
+    "title": "Verify Free60+ battery level does not display 0% when device battery is known to be charged",
+    "steps": [
+      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
+      "Ensure Free60+ device has been charged (e.g., earbuds in case, case charged).",
+      "Connect to Free60+ device.",
+      "Wait for 'Connected' status to appear.",
+      "Observe battery level indicators for left earbud, right earbud, and charging case."
+    ],
+    "expected": "When the Free60+ device is known to have charge, battery levels for earbuds and charging case display values greater than 0% after connection."
+  }
+]
