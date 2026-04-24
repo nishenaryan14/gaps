@@ -1,0 +1,33 @@
+{
+  "id": "65387056",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "User Guides - Onboarding > Fit test for currently connected device",
+  "feature": "User Guides - Onboarding",
+  "scenario": "Verify that the Fit test can be started for the currently connected device via User Guides > Onboarding section in App Settings.",
+  "steps": [
+    "Open the App Settings.",
+    "Navigate to User Guides > Onboarding section.",
+    "Ensure a device (Osprey/Tern/Emu) is currently connected.",
+    "Attempt to start the Fit test from the Onboarding section."
+  ],
+  "expected": "The Fit test can be started successfully for the connected device.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Fit test",
+    "Onboarding",
+    "User Guides",
+    "App Settings",
+    "Osprey",
+    "Tern",
+    "Emu",
+    "connected device"
+  ],
+  "source_last_updated": "1760437629",
+  "source_hash": "aa081092c1a54e08cbf9c50ac6f0d43602cc6469e670c7b4469a222e00f57733",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.423951Z",
+  "status": "active"
+}
