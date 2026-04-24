@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Notifications - Device charging",
   "feature": "Notifications",
-  "scenario": "Verify that a charging notification with the headset name and app icon appears when the app is in the background and a connected headset is plugged into the charger, and that tapping it redirects to the app's Home screen.",
+  "scenario": "Charging notification for headset appears only when app is in background, showing headset name and \"Charging\" text, and redirects to Poly Lens home screen on tap.",
   "steps": [
-    "1. Launch the app and connect any Headset (ensure it is not fully charged).",
-    "2. Put the app in the background.",
-    "3. Plug the Headset into the charger."
+    "Launch the app and connect any Headset (ensure Headset is not fully charged).",
+    "Put the app in the background.",
+    "Plug the Headset to charger."
   ],
-  "expected": "A notification about charging the headset appears, containing the headset name and \"Charging\" text. Clicking the notification redirects the user to the Poly Lens app's Home screen of the device.",
+  "expected": "Notification about charging headset appears containing the name of the headset and \"Charging\" text. Clicking on the notification redirects the user to the Poly Lens application - Home screen of the device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "charging notification",
-    "headset name",
-    "app icon",
-    "background app",
-    "connected headset",
-    "plugged into charger",
-    "tap redirect",
-    "Home screen"
+    "headset",
+    "Poly Lens app",
+    "background mode",
+    "notification redirect",
+    "headset charging",
+    "Poly Lens home screen",
+    "notification tap"
   ],
   "source_last_updated": "1761224568",
   "source_hash": "e36f313df11dc952517a1ff1ed647627680f8436be479c07041e7d4f84e319aa",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.419263Z",
+  "processed_at": "2026-04-24T11:50:53.308032Z",
   "status": "active"
 }
