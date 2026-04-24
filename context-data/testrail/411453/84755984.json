@@ -1,0 +1,33 @@
+{
+  "id": "84755984",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - App page Go button no wifi [New]",
+  "feature": "Support - App Page",
+  "scenario": "When WiFi is off, tapping the Go Button on the Support > App page shows an error screen instead of expected behavior.",
+  "steps": [
+    "Open the Support page",
+    "Navigate to the App tab",
+    "Turn off WiFi",
+    "Tap the Go Button"
+  ],
+  "expected": "The app should proceed without error or show a relevant network-related message",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "WiFi off",
+    "Go Button",
+    "Support page",
+    "App tab",
+    "error screen",
+    "offline behavior",
+    "network connectivity",
+    "button tap"
+  ],
+  "source_last_updated": "1773312447",
+  "source_hash": "f89e803a6a5e6a265937877bc733a0ec3a9e444fbfcea3fa4a1eac5128237bc6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.362417Z",
+  "status": "active"
+}
