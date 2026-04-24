@@ -1,0 +1,34 @@
+{
+  "id": "65871614",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - No device connected - Select Device link",
+  "feature": "Device Home Screen",
+  "scenario": "When no device is connected, tapping \"Select Device\" shows a list of supported devices with images and an \"Other devices\" button that opens the Poly support web page.",
+  "steps": [
+    "Ensure no device is connected.",
+    "Tap the 'Select Device' link.",
+    "Observe the list of supported devices with images.",
+    "Scroll to the bottom of the list.",
+    "Tap the 'Other devices' button.",
+    "Observe the web page that opens."
+  ],
+  "expected": "A list of supported devices with images is displayed. Tapping the \"Other devices\" button opens the Poly support web page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Select Device",
+    "supported devices list",
+    "device images",
+    "Other devices button",
+    "Poly support web page",
+    "no device connected",
+    "device selection UI"
+  ],
+  "source_last_updated": "1774958838",
+  "source_hash": "9f4e7748d9cd731530d28706109ee05f8f4558126860e641ea893979a8283061",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.065318Z",
+  "status": "active"
+}
