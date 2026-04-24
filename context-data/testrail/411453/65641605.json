@@ -1,0 +1,34 @@
+{
+  "id": "65641605",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "CCL - Restore defaults",
+  "feature": "CCL (Clear Calling)",
+  "scenario": "Verify that after restoring device to default settings, the CCL setting reverts to \"UC Noise Block\" from any other selected noise block mode.",
+  "steps": [
+    "Start the app on a CCL-supported device.",
+    "Go to Device Settings > Advanced.",
+    "Select 'No Noise Block' or 'AI Noise Block'.",
+    "Restore device defaults by navigating to Device Settings > Reset Device > Restore.",
+    "Go back to Device Settings > Advanced.",
+    "Verify the CCL setting is reset to 'UC Noise Block'."
+  ],
+  "expected": "The CCL setting should revert to \"UC Noise Block\".",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "CCL setting",
+    "UC Noise Block",
+    "restore device defaults",
+    "Noise Block mode",
+    "Reset Device",
+    "device settings",
+    "factory reset verification"
+  ],
+  "source_last_updated": "1772468639",
+  "source_hash": "f1c6b242cc315ddd7b9f518563851b4251562caf16495138afda9c47dde89e5f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "status": "active"
+}
