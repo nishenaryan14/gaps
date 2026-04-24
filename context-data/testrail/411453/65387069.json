@@ -1,0 +1,38 @@
+{
+  "id": "65387069",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Feedback - back button",
+  "feature": "Feedback",
+  "scenario": "Back button in Feedback tab returns user to Menu screen before and after submitting feedback",
+  "steps": [
+    "Open App Settings.",
+    "Navigate to the Feedback tab.",
+    "Press the back button.",
+    "Observe the screen that appears.",
+    "Reopen the Feedback tab.",
+    "Enter text, name, and email.",
+    "Click Send.",
+    "Press the back button again.",
+    "Observe the screen that appears."
+  ],
+  "expected": "The back button returns the user to the Menu screen both before and after submitting feedback.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Back button",
+    "Feedback tab",
+    "Menu screen",
+    "Navigation",
+    "Submit feedback",
+    "App Settings",
+    "Screen transition",
+    "User flow"
+  ],
+  "source_last_updated": "1776241074",
+  "source_hash": "a1ac5ae4a401b17bbe37407c41ca5d928c199b4f442d0474bb5e3cacdbb3ac5c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.364460Z",
+  "status": "active"
+}
