@@ -1,0 +1,32 @@
+{
+  "id": "65639846",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "1 step DFU - Settings/Update tab both on the lates",
+  "feature": "DFU / Settings - SW Update",
+  "scenario": "Verify the \"Up to date\" display on Fab/Settings/SW update when app starts with latest Osprey, EB, and CC versions in a 1-step DFU scenario.",
+  "steps": [
+    "Launch the app with Osprey, EB, and CC all on the latest versions.",
+    "Navigate to Fab > Settings > SW update.",
+    "Observe the displayed message."
+  ],
+  "expected": "The screen shows \"Up to date\" with no update available. The design for this 1-step DFU scenario should be verified.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Up to date",
+    "Fab/Settings/SW update",
+    "Osprey",
+    "EB",
+    "CC",
+    "1-step DFU",
+    "latest versions",
+    "app launch"
+  ],
+  "source_last_updated": "1760949167",
+  "source_hash": "a80ce2f77c745c6a0bfeb7b561df8a27ea2c4071781d09e3f4edcecfda77b583",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "status": "active"
+}
