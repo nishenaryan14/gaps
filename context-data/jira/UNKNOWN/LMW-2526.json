@@ -1,0 +1,39 @@
+{
+  "id": "LMW-2526",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS | FALCON | Custom Button setting is not properly refreshed after disconnecting headset from PC",
+  "feature": "iOS | FALCON",
+  "scenario": "Custom Button setting fails to refresh available options after disconnecting the headset from PC, requiring an app restart to update.",
+  "description_clean": "Custom Button setting is not properly refreshed after disconnecting headset from PC. After unplugging Falcon from the PC, the custom button setting still shows MS Teams as connected and does not update to reflect the change in available options. Only restarting the app refreshes the setting, allowing the user to change other providers. Expected: After disconnecting the headset from PC, the user should be able to change Custom Button settings immediately.",
+  "steps": [
+    "1. Connect the Falcon headset to the PC.",
+    "2. Open the app and navigate to Custom Button settings.",
+    "3. Verify that MS Teams is shown as a connected option.",
+    "4. Disconnect (unplug) the headset from the PC.",
+    "5. Observe the Custom Button setting display without restarting the app."
+  ],
+  "expected": "After disconnecting the headset from PC, the user should be able to change Custom Button settings immediately. The available options should update to reflect the disconnection (e.g., MS Teams should no longer appear as connected).",
+  "actual": "After unplugging Falcon from the PC, the custom button setting still shows MS Teams as connected and does not update to reflect the change in available options. Only restarting the app refreshes the setting, allowing the user to change other providers.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [
+    "NeedsEngineeringReview"
+  ],
+  "keywords": [
+    "Falcon headset",
+    "Custom Button setting",
+    "refresh",
+    "disconnect",
+    "PC",
+    "app restart",
+    "MS Teams",
+    "available options"
+  ],
+  "source_last_updated": "2026-04-15T08:56:37.000+0000",
+  "source_hash": "cc652422d252219379f2f64e310de01aed7ec949a4973067a7310f73ade4db5e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.056019Z",
+  "status": "active"
+}
