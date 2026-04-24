@@ -5,12 +5,13 @@
   "project": "411453",
   "title": "Analytics - Login",
   "feature": "Analytics",
-  "scenario": "Verify that login and logout events are logged in Firebase with default elements, and that event counts update after a few hours.",
+  "scenario": "Verify that login and logout events are logged in Firebase with correct default elements and that event counts update after a delay.",
   "steps": [
-    "Open Login event in Firebase - page opens properly and contains default elements, Screen name, User Type, and Action.",
-    "Trigger login and logout event on mobile - after some time (usually a few hours), event count for related elements increases."
+    "Open Login event in Firebase - page opens properly and contains default elements: Graph for this event, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, App Environment, Screen name, User Type, Action.",
+    "Trigger login and logout event on mobile.",
+    "After some time, verify that event count for related elements increases."
   ],
-  "expected": "Event counts are updated after a few hours. Default elements present for every event include: Graph for this event, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, and App Environment.",
+  "expected": "Event counts for related elements increase after triggering login and logout events.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -19,13 +20,13 @@
     "logout event",
     "event count",
     "default elements",
-    "Screen name",
-    "User Type",
-    "Action"
+    "event logging",
+    "mobile analytics",
+    "event verification"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "2dc95871af4d576d93346d19b7f37bf56b7aa1c415d0f7695da3b6b005206028",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "processed_at": "2026-04-24T11:50:53.321465Z",
   "status": "active"
 }
