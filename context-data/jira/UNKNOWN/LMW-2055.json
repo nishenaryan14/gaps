@@ -5,34 +5,35 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 INTERMITTENT | Newly connected device not always appear in the app",
   "feature": "iOS App - Device Pairing",
-  "scenario": "Newly paired device does not appear in the app's device list until app restart, and turning on an already-displayed device does not always update its status to \"connected\".",
+  "scenario": "Newly paired device does not appear in the app's device list until the app is restarted, and turning on an already-displayed device does not always update its status to \"connected\".",
   "description_clean": "Newly connected device does not always appear in the app's device list after pairing. The device only shows up after restarting the app. Reproducible with multiple device types (Focus 2, Legend 30, Voyager 6200). Additionally, turning on an already-displayed device does not always update its status to \"connected\".",
   "steps": [
     "Pair a new device (e.g., Focus 2, Legend 30, or Voyager 6200) with the app.",
     "Check the app's device list immediately after pairing.",
     "Observe whether the newly paired device appears in the list.",
     "If the device does not appear, restart the app.",
-    "Check the device list again after restarting.",
+    "Check the device list again after restarting the app.",
     "Turn on an already-displayed device that is currently shown in the list.",
     "Observe whether the device's status updates to 'connected'."
   ],
-  "expected": "Newly paired devices should appear in the app's device list immediately without requiring an app restart. Turning on an already-displayed device should update its status to \"connected\" in real-time.",
+  "expected": "Newly paired devices should appear in the app's device list immediately after pairing. Turning on an already-displayed device should update its status to \"connected\" without delay.",
   "actual": "Newly connected device does not always appear in the app's device list after pairing. The device only shows up after restarting the app. Additionally, turning on an already-displayed device does not always update its status to \"connected\".",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
+    "device pairing",
     "device list not updating",
-    "paired device not appearing",
     "app restart required",
+    "connection status stuck",
+    "Bluetooth device not appearing",
     "status not updating to connected",
-    "Bluetooth device pairing issue",
-    "device discovery delay",
-    "connection status sync failure"
+    "device discovery issue",
+    "app refresh bug"
   ],
   "source_last_updated": "2026-04-15T08:40:46.000+0000",
   "source_hash": "4e9896283e67f3f5ed183353529259c29170e5451f16e31c20679e7cc12f160f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.708140Z",
+  "processed_at": "2026-04-24T11:23:05.253067Z",
   "status": "active"
 }
