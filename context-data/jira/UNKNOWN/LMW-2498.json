@@ -5,31 +5,29 @@
   "project": "UNKNOWN",
   "summary": "iOS | FOCUS 2 | Apps settings section is missing",
   "feature": "iOS App / Focus 2",
-  "scenario": "Missing \"Apps\" settings section on Focus 2 device in iOS app",
-  "description_clean": "The \"Apps\" settings section is missing on the Focus 2 device when navigating to Device settings in the iOS app. According to the Focus 2 UI specs, the Apps section should be present with Amazon Alexa and Tile options.",
+  "scenario": "Missing \"Apps\" settings section with Amazon Alexa and Tile options when pairing Focus 2 and navigating to Device settings",
+  "description_clean": "The \"Apps\" settings section is missing when pairing Focus 2 with the app and navigating to Device settings. According to Focus 2 UI specs, the Apps section should be present with Amazon Alexa and Tile options.",
   "steps": [
-    "Open the iOS app",
-    "Navigate to Device settings for the Focus 2 device",
-    "Look for the 'Apps' settings section"
+    "Pair Focus 2 with the app",
+    "Navigate to Device settings"
   ],
-  "expected": "The 'Apps' settings section should be present with Amazon Alexa and Tile options.",
-  "actual": "The 'Apps' settings section is missing.",
+  "expected": "The \"Apps\" settings section should be present with Amazon Alexa and Tile options.",
+  "actual": "The \"Apps\" settings section is missing.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "Focus 2",
-    "iOS app",
-    "Apps settings section",
+    "Apps settings",
+    "Amazon Alexa",
+    "Tile",
     "Device settings",
-    "Missing settings",
-    "Focus 2 device",
-    "iOS settings navigation",
-    "App configuration"
+    "pairing",
+    "missing options"
   ],
   "source_last_updated": "2026-04-14T11:48:13.000+0000",
   "source_hash": "d13c99ba4e87e42cd3404a31450a5eace4691ade83174b86c5082c72cb5f4448",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.045787Z",
+  "processed_at": "2026-04-24T10:51:32.691789Z",
   "status": "active"
 }
