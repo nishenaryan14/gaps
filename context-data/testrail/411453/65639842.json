@@ -1,0 +1,34 @@
+{
+  "id": "65639842",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "1 step DFU - Language update when both EB and CC have updates",
+  "feature": "DFU (Device Firmware Update)",
+  "scenario": "Verify language update during a 1-step DFU when both Earbuds and Charge Case have updates available",
+  "steps": [
+    "Start app with Osprey EB and CC (both at least version 5039) with updates available for both.",
+    "Go to Device Settings > Language.",
+    "Select any language.",
+    "Tap Update Now button.",
+    "Complete the language change DFU."
+  ],
+  "expected": "Software update screen is displayed. Language change and DFU finish successfully; Earbuds and Charge Case are on latest firmware. Language was properly changed for Charge Case (verify via touch screen menus).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "language update",
+    "DFU",
+    "Device Firmware Update",
+    "Earbuds",
+    "Charge Case",
+    "Osprey",
+    "Device Settings",
+    "firmware update"
+  ],
+  "source_last_updated": "1763381953",
+  "source_hash": "aaa067303eff0079efcdcbdd9a9111335b908ae6d97560859a849b357927d0a8",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "status": "active"
+}
