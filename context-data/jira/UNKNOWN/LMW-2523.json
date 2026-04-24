@@ -1,0 +1,39 @@
+{
+  "id": "LMW-2523",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS \ud83d\udc40 | 5200 | 4320 | DFU is NOT blocked during the call",
+  "feature": "iOS App - DFU / Software Update",
+  "scenario": "DFU is not blocked during an active softphone call; user can trigger DFU from Software Update screen without a warning popup.",
+  "description_clean": "DFU is not blocked during an active call. When a user is on a softphone call (e.g., Zoom) and navigates to Device Settings > Software to tap Update, they are taken to the Software Update screen and can trigger DFU. Expected behavior: a popup message should inform the user that DFU is not available during a call.",
+  "steps": [
+    "1. Start or join a softphone call (e.g., Zoom).",
+    "2. While the call is active, navigate to Device Settings > Software.",
+    "3. Tap the 'Update' button.",
+    "4. Observe the Software Update screen.",
+    "5. Attempt to trigger DFU (Device Firmware Update)."
+  ],
+  "expected": "A popup message should inform the user that DFU is not available during a call.",
+  "actual": "The user is taken to the Software Update screen and can trigger DFU without any popup or restriction.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [
+    "ReadyForPlanning"
+  ],
+  "keywords": [
+    "DFU",
+    "Device Firmware Update",
+    "softphone call",
+    "Software Update",
+    "warning popup",
+    "active call",
+    "firmware update during call",
+    "update blocking"
+  ],
+  "source_last_updated": "2026-04-16T08:14:02.000+0000",
+  "source_hash": "614f60f952732d5fc152a61bfe2ab0d4bdc59bd2ef3b8130c66382cfecbf1738",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.050477Z",
+  "status": "active"
+}
