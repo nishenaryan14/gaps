@@ -1,0 +1,34 @@
+{
+  "id": "65459841",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications - Master Toggle OFF -  Update Available",
+  "feature": "Notifications",
+  "scenario": "When Notifications master toggle is OFF, pairing a device with lower firmware version incorrectly shows an update available notification",
+  "steps": [
+    "Go to App Settings > General > Notifications & Device Alerts.",
+    "Turn OFF the Notifications master toggle.",
+    "Ensure the Poly App is running in the background on the mobile phone.",
+    "Pair a device whose firmware version is lower than the current version on the server (Cloud).",
+    "Observe the notification upon successful pairing."
+  ],
+  "expected": "No notification should appear upon successful pairing.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Notifications master toggle",
+    "firmware version mismatch",
+    "pairing notification bug",
+    "update available notification",
+    "Poly App background",
+    "device pairing",
+    "notification settings",
+    "false update alert"
+  ],
+  "source_last_updated": "1761230695",
+  "source_hash": "8aa44cfc0b1315989d5a470d6000326394abbed79e176f18500af33895198541",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.420275Z",
+  "status": "active"
+}
