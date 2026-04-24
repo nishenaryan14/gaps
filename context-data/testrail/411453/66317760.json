@@ -5,19 +5,16 @@
   "project": "411453",
   "title": "Reset Device - Restore Defaults - Restore - No",
   "feature": "Reset Device / Restore Defaults",
-  "scenario": "Verify that tapping \"No\" on the Restore Defaults confirmation popup closes the popup without resetting the device and keeps the user on the settings screen.",
+  "scenario": "Verify that tapping \"No\" on the Restore Defaults confirmation popup closes the popup without resetting the device.",
   "steps": [
-    "Open Lens App with a headset connected.",
-    "Go to Device Settings.",
-    "Tap the Reset Device tab.",
-    "Verify the 'Restore Defaults' field is displayed with a 'Restore' button and explanatory text.",
-    "Verify the 'Clear Trusted Devices' field is displayed with a 'Clear' button and text.",
-    "Tap the 'Restore' button.",
-    "Verify a confirmation popup appears with the message 'Are you sure you want to restore to default settings?' and two buttons: 'No' and 'Yes'.",
-    "Tap the 'No' button.",
-    "Verify the popup closes, the device is not reset, and the user remains on the same settings screen."
+    "Open Lens App with a headset connected, go to Device Settings, tap Reset Device tab.",
+    "Verify \"Restore Defaults\" field with \"Restore\" button and explanatory text, and \"Clear Trusted Devices\" field with \"Clear\" button and text.",
+    "Tap \"Restore\" button.",
+    "Verify a confirmation popup appears with \"Are you sure you want to restore to default settings?\" and two buttons: \"No\" and \"Yes\".",
+    "Tap \"No\".",
+    "Verify the popup closes, device is not reset, and user remains on the same screen."
   ],
-  "expected": "The confirmation popup closes, the device is not reset, and the user remains on the same settings screen.",
+  "expected": "Popup closes, device is not reset, and user remains on the same screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,14 +22,14 @@
     "confirmation popup",
     "No button",
     "cancel reset",
-    "Device Settings",
+    "device settings",
+    "Lens App",
     "Reset Device tab",
-    "settings screen",
-    "Lens App"
+    "popup close"
   ],
   "source_last_updated": "1762260719",
   "source_hash": "cddf6bb9546eafb2156bbc28dbeb0dc40bd3a10ee78e2238d3ab3dd49cbf845d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.413695Z",
+  "processed_at": "2026-04-24T11:50:53.284970Z",
   "status": "active"
 }
