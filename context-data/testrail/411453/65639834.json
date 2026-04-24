@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "1 step DFU - new DFU screen from Settings for both updates",
   "feature": "DFU (Device Firmware Update) / Settings",
-  "scenario": "Verify that the new unified DFU screen appears in Settings when both Osprey EB and CC have updates available, replacing the old separate update sections.",
+  "scenario": "Verify the new unified DFU screen appears in Settings when both Osprey EB and CC have updates available, replacing the old separate update sections.",
   "steps": [
     "Start app with Osprey EB and CC (both at least version 5039) with updates available for both.",
     "Navigate to Fab/Settings/SW update and open it.",
@@ -17,10 +17,10 @@
   "edge_cases": [],
   "keywords": [
     "DFU screen",
+    "unified update",
     "Settings",
     "Osprey EB",
     "CC",
-    "unified update",
     "SW update",
     "Flamingo",
     "Emu"
@@ -28,6 +28,6 @@
   "source_last_updated": "1760949167",
   "source_hash": "8aca5af79f628a800456b580c557ec6254c0716445f21770951f0a17d4d4e13c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "processed_at": "2026-04-24T11:50:53.298439Z",
   "status": "active"
 }
