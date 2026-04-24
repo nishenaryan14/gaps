@@ -7,17 +7,15 @@
   "feature": "Falcon - Pair Headset with Charge Stand",
   "scenario": "Verify that an unpaired headset can be paired via the charge stand, and that the stand info persists in Device Settings > Software Update after removal, restart, and app restart.",
   "steps": [
-    "1. Ensure the headset has not been previously paired with the charge stand.",
+    "1. Ensure the headset is not previously paired with the charge stand.",
     "2. Place the headset on the charge stand to initiate pairing.",
-    "3. After pairing, navigate to Device Settings > Software Update tab.",
-    "4. Verify that the charge stand info appears in the Software Update tab.",
-    "5. Remove the headset from the charge stand.",
-    "6. Restart the device.",
-    "7. Restart the app.",
-    "8. Navigate back to Device Settings > Software Update tab.",
-    "9. Verify that the charge stand info still persists."
+    "3. Verify that the charge stand info appears in Device Settings > Software Update.",
+    "4. Remove the headset from the charge stand.",
+    "5. Restart the device.",
+    "6. Restart the app.",
+    "7. Check that the charge stand info still persists in Device Settings > Software Update."
   ],
-  "expected": "The charge stand info should appear in Device Settings > Software Update tab after pairing and persist after removing the headset, restarting the device, and restarting the app.",
+  "expected": "The headset pairs with the charge stand when placed on it. The charge stand info appears in Device Settings > Software Update and persists after removing the headset, restarting the device, and restarting the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -33,6 +31,6 @@
   "source_last_updated": "1762331223",
   "source_hash": "a175e3ba8a01b9ca18ac8a839a7353f39a6b24522265ae3c132f690597a7f790",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "processed_at": "2026-04-24T11:50:53.348449Z",
   "status": "active"
 }
