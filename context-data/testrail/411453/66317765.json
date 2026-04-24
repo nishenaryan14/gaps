@@ -1,0 +1,33 @@
+{
+  "id": "66317765",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings - Check if setting's value persist after closing tab, settings page or app",
+  "feature": "Device Settings",
+  "scenario": "Verify that all HS settings values persist after closing and reopening the tab, navigating away and back, and killing and restarting the app.",
+  "steps": [
+    "Open the HS settings page.",
+    "Change values in all settings (should be changeable).",
+    "Close and reopen the tab, then check values (should persist).",
+    "Go to Home page and return to settings, then check values (should persist).",
+    "Kill and restart the app, then check values (should persist)."
+  ],
+  "expected": "Setting values persist after closing the tab, settings page, or the app.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "HS settings",
+    "settings persistence",
+    "tab reopen",
+    "navigation",
+    "app restart",
+    "value retention",
+    "settings verification"
+  ],
+  "source_last_updated": "1762432129",
+  "source_hash": "2b8b6c6bad51096dc51df3a3702d8bec341b0697f99bf88cfe0db6612bf5591b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.374106Z",
+  "status": "active"
+}
