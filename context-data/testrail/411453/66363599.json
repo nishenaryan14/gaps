@@ -1,0 +1,30 @@
+{
+  "id": "66363599",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Emu/Tern CC battery - CC battery level less than 30%, yellow icon",
+  "feature": "Battery Indicator",
+  "scenario": "Verify that the battery icon on the Home screen turns yellow when the Emu/Tern CC battery level drops below 30%.",
+  "steps": [
+    "Check the battery level of the Emu/Tern CC.",
+    "If the battery level is less than 30%, observe the battery icon on the Home screen."
+  ],
+  "expected": "The battery icon on the Home screen displays as yellow.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "battery icon",
+    "Home screen",
+    "yellow",
+    "Emu/Tern CC",
+    "battery level",
+    "below 30%",
+    "low battery indicator"
+  ],
+  "source_last_updated": "1762331664",
+  "source_hash": "4df2bca123082bfd31d8568b508bf4ce2810ee5ea3eefbcbdb9543e630aefe98",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.433155Z",
+  "status": "active"
+}
