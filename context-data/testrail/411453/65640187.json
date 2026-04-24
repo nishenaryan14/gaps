@@ -1,0 +1,34 @@
+{
+  "id": "65640187",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Support App Opened",
+  "feature": "Analytics",
+  "scenario": "Support App Opened event is logged when the Support > App screen is opened, tracking occurrences with default analytics elements, and event counts update after a few hours.",
+  "steps": [
+    "Open the Support App.",
+    "Navigate to the Support > App screen.",
+    "Observe that the 'Support App Opened' event is logged.",
+    "Check the analytics for the event, including the graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+    "Wait a few hours and check if the event counts have updated."
+  ],
+  "expected": "The 'Support App Opened' event is logged when the Support > App screen is opened. The event tracks occurrences and includes default analytics elements such as a graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment. Event counts are updated after a few hours.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Support App Opened",
+    "event logged",
+    "analytics",
+    "event count",
+    "app version",
+    "app build",
+    "app environment",
+    "Support > App screen"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "704427ab4b8e8e0c3d0dbcf834b6d6e67854aeaf9694b2b1db190342ec6e7c79",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "status": "active"
+}
