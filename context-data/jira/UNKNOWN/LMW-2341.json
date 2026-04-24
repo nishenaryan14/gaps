@@ -1,0 +1,34 @@
+{
+  "id": "LMW-2341",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS | Images in User Guides section (PLACEHOLDER)",
+  "feature": "iOS - User Guides",
+  "scenario": "Only the top 6 device images load in User Guides; remaining devices show placeholder images instead of loading properly.",
+  "description_clean": "In the User Guides section under App Settings, only images for the top 6 devices are loaded; all other devices show placeholder images instead. Expected behavior is that all images load properly when opening the User Guides page.",
+  "steps": [
+    "Navigate to App Settings.",
+    "Locate and open the User Guides section.",
+    "Observe the device images displayed on the page."
+  ],
+  "expected": "All device images load properly when opening the User Guides page.",
+  "actual": "Only images for the top 6 devices are loaded; all other devices show placeholder images instead.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "device images not loading",
+    "placeholder images",
+    "User Guides",
+    "top 6 images load",
+    "image loading issue",
+    "device images broken",
+    "App Settings"
+  ],
+  "source_last_updated": "2026-04-23T08:37:02.000+0000",
+  "source_hash": "86f232d474ddd682f5de6a3d5cd81ce6db2947b438f12a904203ab1825be7eb1",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:22.587650Z",
+  "status": "active"
+}
