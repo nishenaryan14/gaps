@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "User Guides - Onboarding > Fit test for a device that is not currently connected",
   "feature": "User Guides - Onboarding",
-  "scenario": "Fit Test page should not be displayed or accessible during onboarding when the device is not connected",
+  "scenario": "Fit Test page should not be displayed or accessible when viewing onboarding user guides for a device that is not currently connected.",
   "steps": [
-    "Navigate to the onboarding user guides section.",
-    "Select a device that is not currently connected.",
-    "Observe the list of onboarding screens presented.",
-    "Check if the Fit Test page appears in the onboarding screens.",
-    "Attempt to start a Fit Test for the disconnected device."
+    "1. Start the app with any device connected.",
+    "2. Navigate to App Settings > User Guides.",
+    "3. Click on a device in the Onboarding section that is not currently connected.",
+    "4. Navigate through onboarding screens."
   ],
-  "expected": "The Fit Test page should not be displayed as part of the onboarding screens for a device that is not connected. Starting a Fit Test for a device that is not connected should not be possible.",
+  "expected": "Fit Test page is not displayed as part of the onboarding screens, and it should not be possible to start the Fit Test for a device that is not connected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Fit Test",
-    "onboarding",
+    "Fit Test page",
+    "onboarding user guides",
     "device not connected",
-    "accessibility",
-    "page visibility",
-    "disconnected device",
-    "user guides",
-    "restrict access"
+    "App Settings",
+    "User Guides",
+    "Onboarding section",
+    "accessibility restriction",
+    "device connection status"
   ],
   "source_last_updated": "1760532159",
   "source_hash": "a583eaf4f66a06cd3774cf44e24f905e260725fa51b143953df23e7ffcab94a8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.359907Z",
+  "processed_at": "2026-04-24T11:50:53.177377Z",
   "status": "active"
 }
