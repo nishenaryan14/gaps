@@ -1,0 +1,40 @@
+{
+  "id": "65641615",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit test - Failing the fit test",
+  "feature": "Fit Test",
+  "scenario": "Verify fit test failure handling on Voyager Free earbuds, including retry and cancel actions with correct fail/good tags, icons, messages, and navigation.",
+  "steps": [
+    "Open the Poly Lens app on a paired device with Voyager Free 60/60+ or Voyager Free 20 earbuds.",
+    "Navigate to the fit test feature.",
+    "Run the fit test with one earbud not properly seated in the ear.",
+    "Observe the result for the improperly seated earbud.",
+    "Run the fit test with both earbuds not properly seated in the ear.",
+    "Observe the result for both earbuds.",
+    "Tap the retry button on the fit test failure screen.",
+    "Run the fit test again with proper earbud seating.",
+    "Observe the result after retry.",
+    "Run the fit test with one earbud failing, then tap the cancel/back button.",
+    "Observe navigation behavior after cancel."
+  ],
+  "expected": "- When one earbud fails: appropriate fail tag/icon/message for that earbud, good tag/icon/message for the other earbud.\\n- When both earbuds fail: fail tags/icons/messages for both earbuds.\\n- After retry with proper seating: all earbuds show good tags/icons/messages.\\n- After cancel: user navigates back to the previous screen without saving or applying changes.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Voyager Free earbuds",
+    "fit test",
+    "failure handling",
+    "retry",
+    "cancel",
+    "Poly Lens app",
+    "fit test failure screen",
+    "earbud seating"
+  ],
+  "source_last_updated": "1760959703",
+  "source_hash": "0d9a081ce8f1627375b2b92c3cf071835e6a3d9b38d62687ac48d4c7b2fc5cd1",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
