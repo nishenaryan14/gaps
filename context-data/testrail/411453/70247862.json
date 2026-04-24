@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Onboarding - Welcome to Poly Studio - Fresh install",
   "feature": "Onboarding",
-  "scenario": "Fresh install onboarding: User reaches \"Organized\" screen, sees \"Welcome to Poly Studio\" overlay, taps \"Get Started\" and returns to continue onboarding.",
+  "scenario": "User completes fresh install onboarding, reaches \"Organized\" screen, sees \"Welcome to Poly Studio\" overlay, and taps \"Get Started\" to return to onboarding flow.",
   "steps": [
     "Install and launch the app for the first time.",
-    "Go through the onboarding flow until reaching the \"Organized\" screen.",
-    "Observe that a \"Welcome to Poly Studio\" screen appears.",
-    "Tap \"Get Started\" on the \"Welcome to Poly Studio\" screen."
+    "Go through the onboarding flow until reaching the 'Organized' screen.",
+    "Observe the 'Welcome to Poly Studio' screen that appears.",
+    "Tap 'Get Started' on the 'Welcome to Poly Studio' screen."
   ],
-  "expected": "The \"Welcome to Poly Studio\" screen closes and the user is returned to the \"Organized\" screen to continue onboarding.",
+  "expected": "The 'Welcome to Poly Studio' screen closes and the user is returned to the 'Organized' screen to continue the onboarding process.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fresh install onboarding",
-    "Welcome to Poly Studio overlay",
     "Organized screen",
+    "Welcome to Poly Studio overlay",
     "Get Started button",
-    "first launch",
     "onboarding flow",
-    "Poly Studio app"
+    "first launch",
+    "Poly Studio"
   ],
   "source_last_updated": "1771845442",
   "source_hash": "435aa362e2fece453ed83b3578a2484120b8715579dcb6c7a4bc2012eab340ec",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.253606Z",
+  "processed_at": "2026-04-24T11:50:53.087343Z",
   "status": "active"
 }
