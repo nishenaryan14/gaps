@@ -5,27 +5,27 @@
   "project": "411453",
   "title": "Trouble screen, User Guide",
   "feature": "Onboarding",
-  "scenario": "On the \"Having trouble\" screen of Onboarding, clicking the User Guide button opens the device's user guide web page.",
+  "scenario": "On the \"Having trouble\" screen (sixth screen of onboarding), clicking the User Guide button opens the device's user guide web page.",
   "steps": [
-    "Navigate to the 'Having trouble' screen (sixth screen of Onboarding).",
+    "Navigate to the 'Having trouble' screen (sixth screen of onboarding).",
     "Click the 'User Guide' button."
   ],
-  "expected": "The device's user guide web page opens.",
+  "expected": "The device's user guide web page should open.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Onboarding",
     "Having trouble screen",
+    "onboarding",
     "User Guide button",
-    "device user guide",
-    "web page",
+    "user guide web page",
     "sixth screen",
-    "click",
-    "navigate"
+    "device user guide",
+    "onboarding flow",
+    "help screen"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "7d7eb5553a17801ca940445d662503566f4c6740bd97c1fa2e9568c4be7f20ad",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.408510Z",
+  "processed_at": "2026-04-24T11:50:53.271805Z",
   "status": "active"
 }
