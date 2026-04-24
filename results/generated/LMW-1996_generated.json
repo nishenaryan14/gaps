@@ -1,0 +1,138 @@
+[
+  {
+    "title": "Verify Voice Prompts & Tones settings sync from mobile to PC with correct bitmask",
+    "steps": [
+      "1. Launch the mobile app and navigate to Device Settings.",
+      "2. Open 'Voice Prompts & Tones' section.",
+      "3. Enable 'Voice Prompts' toggle.",
+      "4. Set 'Tone' option to a specific value (e.g., Tone 1).",
+      "5. Enable 'Calls' -> 'Hold Reminder' toggle.",
+      "6. Enable 'Calls' -> 'Incoming Call' toggle.",
+      "7. Set 'Active Audio Tone' to a specific option (e.g., Continuous).",
+      "8. Enable 'Answering Call' toggle.",
+      "9. Enable 'Answer/Ignore' toggle.",
+      "10. Sync the device settings to the paired PC.",
+      "11. On the PC app, navigate to Device Settings -> Voice Prompts & Tones.",
+      "12. Verify that 'Voice Prompts' is enabled.",
+      "13. Verify that 'Tone' matches the value set on mobile.",
+      "14. Verify that 'Hold Reminder' is enabled.",
+      "15. Verify that 'Incoming Call' is enabled.",
+      "16. Verify that 'Active Audio Tone' matches the value set on mobile.",
+      "17. Verify that 'Answering Call' is enabled.",
+      "18. Verify that 'Answer/Ignore' is enabled."
+    ],
+    "expected": "All Voice Prompts & Tones settings (Voice Prompts, Tone, Hold Reminder, Incoming Call, Active Audio Tone, Answering Call, Answer/Ignore) are correctly synchronized from mobile to PC, indicating proper bitmask handling."
+  },
+  {
+    "title": "Verify Voice Prompts & Tones settings sync from PC to mobile with correct bitmask",
+    "steps": [
+      "1. Launch the PC app and navigate to Device Settings.",
+      "2. Open 'Voice Prompts & Tones' section.",
+      "3. Enable 'Voice Prompts' toggle.",
+      "4. Set 'Tone' option to a specific value (e.g., Tone 2).",
+      "5. Enable 'Calls' -> 'Hold Reminder' toggle.",
+      "6. Disable 'Calls' -> 'Incoming Call' toggle.",
+      "7. Set 'Active Audio Tone' to a different option (e.g., Once).",
+      "8. Disable 'Answering Call' toggle.",
+      "9. Enable 'Answer/Ignore' toggle.",
+      "10. Sync the device settings to the paired mobile device.",
+      "11. On the mobile app, navigate to Device Settings -> Voice Prompts & Tones.",
+      "12. Verify that 'Voice Prompts' is enabled.",
+      "13. Verify that 'Tone' matches the value set on PC.",
+      "14. Verify that 'Hold Reminder' is enabled.",
+      "15. Verify that 'Incoming Call' is disabled.",
+      "16. Verify that 'Active Audio Tone' matches the value set on PC.",
+      "17. Verify that 'Answering Call' is disabled.",
+      "18. Verify that 'Answer/Ignore' is enabled."
+    ],
+    "expected": "All Voice Prompts & Tones settings are correctly synchronized from PC to mobile, confirming bidirectional sync with correct bitmask handling."
+  },
+  {
+    "title": "Verify partial bitmask update does not corrupt other Voice Prompts & Tones settings during sync",
+    "steps": [
+      "1. On mobile, configure Voice Prompts & Tones with a known baseline: Voice Prompts=ON, Tone=Tone1, Hold Reminder=ON, Incoming Call=ON, Active Audio Tone=Continuous, Answering Call=ON, Answer/Ignore=ON.",
+      "2. Sync to PC and confirm all settings match.",
+      "3. On PC, change ONLY the 'Tone' option to Tone3 (leave all other settings unchanged).",
+      "4. Sync from PC back to mobile.",
+      "5. On mobile, verify that 'Tone' is now Tone3.",
+      "6. Verify that all other settings (Voice Prompts, Hold Reminder, Incoming Call, Active Audio Tone, Answering Call, Answer/Ignore) remain unchanged from the baseline."
+    ],
+    "expected": "Changing a single setting (Tone) on PC and syncing back to mobile updates only that setting without corrupting or resetting any other Voice Prompts & Tones settings, confirming correct bitmask partial update handling."
+  },
+  {
+    "title": "Verify bitmask integrity when all Voice Prompts & Tones options are disabled on mobile and synced to PC",
+    "steps": [
+      "1. On mobile, navigate to Device Settings -> Voice Prompts & Tones.",
+      "2. Disable 'Voice Prompts' toggle.",
+      "3. Disable 'Calls' -> 'Hold Reminder' toggle.",
+      "4. Disable 'Calls' -> 'Incoming Call' toggle.",
+      "5. Disable 'Answering Call' toggle.",
+      "6. Disable 'Answer/Ignore' toggle.",
+      "7. Set 'Active Audio Tone' to 'None' (if available) or the lowest value.",
+      "8. Sync the settings to the paired PC.",
+      "9. On PC, navigate to Device Settings -> Voice Prompts & Tones.",
+      "10. Verify that 'Voice Prompts' is disabled.",
+      "11. Verify that 'Hold Reminder' is disabled.",
+      "12. Verify that 'Incoming Call' is disabled.",
+      "13. Verify that 'Answering Call' is disabled.",
+      "14. Verify that 'Answer/Ignore' is disabled.",
+      "15. Verify that 'Active Audio Tone' reflects the expected disabled/lowest state."
+    ],
+    "expected": "All Voice Prompts & Tones settings are correctly synchronized as disabled from mobile to PC, confirming bitmask correctly represents the all-disabled state."
+  },
+  {
+    "title": "Verify bitmask integrity when all Voice Prompts & Tones options are enabled on PC and synced to mobile",
+    "steps": [
+      "1. On PC, navigate to Device Settings -> Voice Prompts & Tones.",
+      "2. Enable 'Voice Prompts' toggle.",
+      "3. Set 'Tone' to the highest available value.",
+      "4. Enable 'Calls' -> 'Hold Reminder' toggle.",
+      "5. Enable 'Calls' -> 'Incoming Call' toggle.",
+      "6. Set 'Active Audio Tone' to the highest available value.",
+      "7. Enable 'Answering Call' toggle.",
+      "8. Enable 'Answer/Ignore' toggle.",
+      "9. Sync the settings to the paired mobile device.",
+      "10. On mobile, navigate to Device Settings -> Voice Prompts & Tones.",
+      "11. Verify that 'Voice Prompts' is enabled.",
+      "12. Verify that 'Tone' matches the highest value set on PC.",
+      "13. Verify that 'Hold Reminder' is enabled.",
+      "14. Verify that 'Incoming Call' is enabled.",
+      "15. Verify that 'Active Audio Tone' matches the highest value set on PC.",
+      "16. Verify that 'Answering Call' is enabled.",
+      "17. Verify that 'Answer/Ignore' is enabled."
+    ],
+    "expected": "All Voice Prompts & Tones settings are correctly synchronized as enabled with maximum values from PC to mobile, confirming bitmask correctly represents the all-enabled state."
+  },
+  {
+    "title": "Verify rapid successive changes to Voice Prompts & Tones do not cause bitmask corruption during sync",
+    "steps": [
+      "1. On mobile, rapidly toggle the following settings in quick succession (within 2 seconds):",
+      "   a. Voice Prompts: ON -> OFF -> ON",
+      "   b. Tone: Tone1 -> Tone2 -> Tone3",
+      "   c. Hold Reminder: ON -> OFF -> ON",
+      "   d. Incoming Call: OFF -> ON -> OFF",
+      "   e. Active Audio Tone: Continuous -> Once -> Continuous",
+      "   f. Answering Call: ON -> OFF -> ON",
+      "   g. Answer/Ignore: OFF -> ON -> OFF",
+      "2. Immediately trigger a sync to PC.",
+      "3. On PC, verify the final state of each setting matches the last action performed on mobile.",
+      "4. On PC, change a single setting (e.g., set Tone to Tone1) and sync back to mobile.",
+      "5. On mobile, verify that only Tone changed to Tone1 and all other settings remain as they were after step 1."
+    ],
+    "expected": "Rapid successive changes do not corrupt the bitmask; the final state is correctly synced, and subsequent partial updates work correctly without data loss or corruption."
+  },
+  {
+    "title": "Verify Voice Prompts & Tones settings survive app restart and re-sync with correct bitmask",
+    "steps": [
+      "1. On mobile, configure Voice Prompts & Tones with a mixed state: Voice Prompts=ON, Tone=Tone2, Hold Reminder=OFF, Incoming Call=ON, Active Audio Tone=Once, Answering Call=OFF, Answer/Ignore=ON.",
+      "2. Sync to PC and verify all settings match.",
+      "3. Close the mobile app completely.",
+      "4. Re-launch the mobile app.",
+      "5. Navigate to Device Settings -> Voice Prompts & Tones.",
+      "6. Verify all settings still reflect the configured state from step 1.",
+      "7. Trigger a re-sync to PC.",
+      "8. On PC, verify all settings still match the configured state."
+    ],
+    "expected": "Voice Prompts & Tones settings persist across app restart and re-sync without bitmask corruption or data loss."
+  }
+]
