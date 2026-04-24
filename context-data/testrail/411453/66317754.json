@@ -1,0 +1,33 @@
+{
+  "id": "66317754",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings - Settings description",
+  "feature": "Device Settings",
+  "scenario": "Verify all settings descriptions display correctly when navigating Device Settings after pairing and connecting a headset",
+  "steps": [
+    "Pair and connect a headset to the device.",
+    "Navigate to Device Settings.",
+    "Go through each setting option available.",
+    "Observe the description text displayed for each setting."
+  ],
+  "expected": "All settings descriptions are displayed correctly, clearly, and without any truncation, errors, or formatting issues.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Device Settings",
+    "headset pairing",
+    "headset connection",
+    "settings descriptions",
+    "setting options",
+    "description text",
+    "Bluetooth settings",
+    "audio settings"
+  ],
+  "source_last_updated": "1762264858",
+  "source_hash": "cf817da69c271543806b8eeb62f13a9dae9ac7dc2cd1ee6e8c0be0501e57ceb0",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.364460Z",
+  "status": "active"
+}
