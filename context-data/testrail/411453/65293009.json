@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "Onboarding - Screens in dark mode",
   "feature": "Onboarding",
-  "scenario": "Verify all onboarding screens display correctly in dark mode when the phone is set to dark mode, matching Figma specifications.",
+  "scenario": "Verify all onboarding screens display correctly in dark mode when the phone is set to dark mode before installing and opening the app.",
   "steps": [
-    "1. Set the phone to dark mode via system settings.",
-    "2. Open the app.",
-    "3. Navigate through all onboarding screens.",
-    "4. Verify that all elements, images, and colors are displayed correctly.",
-    "5. Compare the actual display against the Figma specification for dark mode."
+    "Set phone to dark mode in settings.",
+    "Install and open the Lens app.",
+    "Go through all onboarding screens."
   ],
-  "expected": "All onboarding screens display correctly in dark mode. All elements, images, and colors match the Figma specification.",
+  "expected": "All onboarding screens are displayed correctly in dark mode, with all elements, images, and colors matching the Figma specification.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding screens",
     "dark mode",
-    "Figma specifications",
-    "UI verification",
-    "display correctness",
-    "color accuracy",
-    "system settings"
+    "onboarding screens",
+    "display verification",
+    "Lens app",
+    "installation",
+    "phone settings",
+    "UI appearance",
+    "first launch"
   ],
   "source_last_updated": "1760524200",
   "source_hash": "3f990d6859d6895c8d07cf35199c2be6909c4f145f04e9d57b460261b208b152",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:32:10.444095Z",
+  "processed_at": "2026-04-24T10:33:28.340391Z",
   "status": "active"
 }
