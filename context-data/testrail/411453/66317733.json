@@ -1,0 +1,41 @@
+{
+  "id": "66317733",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - old FW no rename, new FW rename present",
+  "feature": "Device Settings - General",
+  "scenario": "Verify that the \"Device Name\" setting is absent on old firmware and present after updating to new firmware on supported devices (Free 60+/Osprey, Free 60/Tern, Free 20/Emu, Sync 20, Sync 20M, Sync 40).",
+  "steps": [
+    "1. Check the current firmware version on the device.",
+    "2. Navigate to the device settings menu.",
+    "3. Look for the 'Device Name' setting.",
+    "4. Verify that the 'Device Name' setting is NOT present on the old firmware.",
+    "5. Update the device to the new firmware.",
+    "6. After the update, navigate to the device settings menu again.",
+    "7. Look for the 'Device Name' setting.",
+    "8. Verify that the 'Device Name' setting IS present on the new firmware."
+  ],
+  "expected": "The \"Device Name\" setting should not be present on old firmware but should be present after updating to new firmware on supported devices (Free 60+/Osprey, Free 60/Tern, Free 20/Emu, Sync 20, Sync 20M, Sync 40).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Device Name setting",
+    "firmware update",
+    "old firmware",
+    "new firmware",
+    "Free 60+ Osprey",
+    "Free 60 Tern",
+    "Free 20 Emu",
+    "Sync 20",
+    "Sync 20M",
+    "Sync 40",
+    "device settings menu",
+    "firmware version"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "a653f67b88e0a20b9e69ff9a358b75608776bbe76b00e9603063e64daec62a7f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.391539Z",
+  "status": "active"
+}
