@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Support - Device page Go button",
   "feature": "Support - Device page",
-  "scenario": "Tapping the \"Go\" button on a paired device's detail modal opens the Poly Contact Support page in a browser.",
+  "scenario": "Verify that tapping the \"Go\" button on a paired device's detail modal opens the Poly Contact Support page in a browser.",
   "steps": [
-    "1. Navigate to the Support section.",
-    "2. Open the Device page.",
-    "3. Observe the list of paired devices displayed.",
-    "4. Tap on a device from the list.",
-    "5. Observe the modal that appears with device details (name, product ID, serial number, software version, headset revision, last connected) and a 'Go' button.",
-    "6. Tap the 'Go' button.",
-    "7. Observe the browser opening to the Poly Contact Support page."
+    "Navigate to the Support section.",
+    "Open the Device page.",
+    "Verify that a list of paired devices is displayed.",
+    "Tap on a device from the list.",
+    "Verify that a modal appears showing device details: name, product ID, serial number, software version, headset revision, and last connected.",
+    "Verify that the modal contains a 'Go' button.",
+    "Tap the 'Go' button.",
+    "Verify that the Poly Contact Support page opens in a browser."
   ],
-  "expected": "A modal appears with device details (name, product ID, serial number, software version, headset revision, last connected) and a \"Go\" button. Tapping \"Go\" opens the Poly Contact Support page in a browser.",
+  "expected": "Tapping the \"Go\" button opens the Poly Contact Support page in a browser.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Go button",
+    "device detail modal",
     "paired device",
-    "detail modal",
-    "Poly Contact Support",
-    "device details",
+    "Poly Contact Support page",
     "browser navigation",
-    "support page"
+    "device details",
+    "support section"
   ],
   "source_last_updated": "1759752387",
   "source_hash": "3d741f06cb9532ec40f76144c5d0347f15699d8c59f83def18c52af73b5e357c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.360909Z",
+  "processed_at": "2026-04-24T11:50:53.177377Z",
   "status": "active"
 }
