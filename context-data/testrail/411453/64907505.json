@@ -1,0 +1,38 @@
+{
+  "id": "64907505",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - Verify that data is correct after moving from Account linked to Tenant to Account not linked to any Tenant",
+  "feature": "Support - Account/Tenant Linking",
+  "scenario": "Verify data correctness when switching from a Tenant-linked account to a non-Tenant account, ensuring Tenant info is absent.",
+  "steps": [
+    "Log in with Account linked to Tenant A.",
+    "Go to Poly Lens Menu > Support > App.",
+    "Verify Tenant A info is present.",
+    "Go to Poly Lens Menu > General > Account.",
+    "Logout.",
+    "Log in with an account not linked to any Tenant.",
+    "Go to Poly Lens Menu > Support > App.",
+    "Verify Account information is displayed.",
+    "Verify Tenant name and Tenant ID are not present on the card."
+  ],
+  "expected": "After moving from an Account linked to a Tenant to an Account not linked to any Tenant, the Support > App page should show Account information but no Tenant name or Tenant ID on the card.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Tenant-linked account",
+    "non-Tenant account",
+    "Tenant info absent",
+    "Account switching",
+    "Tenant name",
+    "Tenant ID",
+    "Support App page",
+    "Account information verification"
+  ],
+  "source_last_updated": "1759751999",
+  "source_hash": "bf5e8e09e2de54b71c58cd3ab93478cc6547c5a2be0c26953024b941b14bd207",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.361909Z",
+  "status": "active"
+}
