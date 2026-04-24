@@ -1,0 +1,32 @@
+{
+  "id": "65641568",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Reset EQ and Save EQ becomes active only after moving slider",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Reset EQ and Save EQ buttons remain disabled until a slider is moved, instead of becoming active immediately upon interacting with any EQ slider in Custom EQ mode.",
+  "steps": [
+    "Open the Custom EQ mode.",
+    "Observe the state of the 'Reset EQ' and 'Save EQ' buttons.",
+    "Move any EQ slider.",
+    "Observe the state of the 'Reset EQ' and 'Save EQ' buttons after moving the slider."
+  ],
+  "expected": "The 'Reset EQ' and 'Save EQ' buttons should become active (not greyed out) immediately when the user interacts with any EQ slider in Custom EQ mode.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Reset EQ button disabled",
+    "Save EQ button disabled",
+    "Custom EQ mode",
+    "EQ slider interaction",
+    "button state update",
+    "UI bug",
+    "equalizer controls"
+  ],
+  "source_last_updated": "1761143529",
+  "source_hash": "35c0881bc14ca3afc3f26ea9e183d54061b83ae147e4f2e9f24e0007e7a87e16",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.398291Z",
+  "status": "active"
+}
