@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Two earbuds screen/second screen, left zoom in/out",
   "feature": "Two Earbuds / Second Screen",
-  "scenario": "Clicking the left circle button on the second screen toggles zoom and text display",
+  "scenario": "On the second screen with two earbuds, clicking the left circle button toggles zoom and displays new text.",
   "steps": [
-    "Navigate to the second screen (two earbuds).",
+    "Navigate to the second screen with two earbuds displayed.",
     "Click the left circle button.",
     "Observe the screen zoom in and new text appear.",
-    "Click the left circle button again.",
+    "Click the same circle button again.",
     "Observe the screen zoom out to the original view."
   ],
-  "expected": "Clicking the left circle button zooms in and displays new text. Clicking it again zooms out to the original screen.",
+  "expected": "Clicking the left circle button zooms in and shows new text; clicking again zooms out to the original screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "left circle button",
     "second screen",
-    "zoom toggle",
-    "text display",
-    "earbuds interface",
-    "screen zoom",
-    "button interaction"
+    "two earbuds",
+    "left circle button",
+    "toggle zoom",
+    "zoom in",
+    "zoom out",
+    "new text appear",
+    "original view"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "bce66374d8d8dd866f3780c04169aa72c36f1b7f0ba41d44cae4ecfaf121ffb1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "processed_at": "2026-04-24T11:50:53.266996Z",
   "status": "active"
 }
