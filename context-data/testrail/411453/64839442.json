@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Device Home Screen - Limited Support After Launch Date When LM Version Is Empty",
   "feature": "Device Home Screen",
-  "scenario": "Home screen shows limited support popup for a newly released but unsupported device with empty LM version info after the launch date",
+  "scenario": "When a newly released but unsupported device is connected after its launch date with empty LM version info, the home screen shows limited support with a green ring connection icon and an \"i\" icon that displays a \"Device support coming soon\" pop-up.",
   "steps": [
-    "1) Launch app and pair with headset. Expect green connection ring and black \"i\" icon.",
-    "2) Tap the \"i\" icon. Expect popup: \"Device support coming soon. In-app functionality may be limited.\"",
-    "3) Tap outside popup. Expect popup closes."
+    "Launch app and pair with headset; headset should be ON and properly connected.",
+    "Tap the \"i\" icon.",
+    "Tap anywhere outside the pop-up."
   ],
-  "expected": "Home screen shows limited support with green connection ring, black \"i\" icon, and the popup displays \"Device support coming soon. In-app functionality may be limited.\" when tapping the \"i\" icon. Tapping outside dismisses the popup.",
+  "expected": "1) Connection status icon is a green ring, and a black \"i\" icon appears on the top right corner. 2) A pop-up displays the message \"Device support coming soon. In-app functionality may be limited.\" 3) The pop-up closes.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "home screen",
-    "limited support popup",
     "unsupported device",
-    "LM version info",
-    "launch date",
-    "device support coming soon",
-    "green connection ring",
-    "black i icon"
+    "green ring connection icon",
+    "i icon",
+    "Device support coming soon",
+    "pop-up",
+    "newly released device",
+    "limited support",
+    "empty LM version"
   ],
   "source_last_updated": "1764663027",
   "source_hash": "ccc29fb0fe0ec34f8c1561739828cf65e836ad6d31cf746651921df4034b9b05",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.345630Z",
+  "processed_at": "2026-04-24T11:50:53.134784Z",
   "status": "active"
 }
