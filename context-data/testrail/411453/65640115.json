@@ -12,21 +12,21 @@
     "3. Navigate to the Manage/Device Users page on the Lens tenant.",
     "4. Check the status of the user."
   ],
-  "expected": "The user's status should change to \"inactive\" after uninstalling the mobile app.",
+  "expected": "The user's status on the Lens tenant (Manage/Device Users page) should change to \"inactive\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Lens tenant",
     "mobile user inactive",
+    "Lens tenant",
     "uninstall mobile app",
     "device user status",
     "Manage Device Users",
-    "registered user",
-    "user status change"
+    "registered user inactive",
+    "app uninstallation"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "e5736a65aa66932c5957ae56eabe8aadc954c269397852d75ae1151453b2431e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "processed_at": "2026-04-24T11:50:53.321465Z",
   "status": "active"
 }
