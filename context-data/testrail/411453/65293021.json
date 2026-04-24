@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Onboarding - Permission for location tracking - Don't Allow - Cancel [Deprecated for IOS]",
   "feature": "Onboarding / Location Permissions",
-  "scenario": "User denies location tracking during onboarding and cancels permission prompt on Find My Device screen, then navigates back to Poly Lens Menu",
+  "scenario": "Verify that denying location tracking during iOS onboarding shows correct permission popups and navigates back to the Poly Lens Menu after cancellation.",
   "steps": [
     "Start app for first time",
     "Accept license/privacy",
@@ -15,26 +15,26 @@
     "Tap Don't Allow",
     "Tap Continue",
     "Log in or continue as guest",
-    "Open Poly Lens Menu",
+    "Open Poly Lens menu",
     "Tap Find My Device",
     "Tap Cancel"
   ],
-  "expected": "After step 5, a location permission popup appears with options (Allow Once, Allow While Using App, Don't Allow). After step 10, a permission window with Cancel and Enable Now appears with FMD screen visible in background. After step 11, app navigates back to the Poly Lens Menu.",
+  "expected": "After step 5, a location permission popup appears with options \"Allow Once\", \"Allow while using app\", \"Don't Allow\" (Android shows \"Only This Time\" instead of \"Allow Once\") and text about location usage. After step 10, a permission popup appears with \"Cancel\" and \"Enable Now\". After step 11, the app navigates back to the Poly Lens Menu.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "deny location tracking",
-    "Find My Device",
-    "cancel permission",
+    "iOS onboarding",
+    "location tracking",
+    "permission popup",
+    "deny location",
     "Poly Lens Menu",
-    "onboarding",
-    "permission prompt",
-    "location services denied",
-    "app navigation"
+    "Find My Device",
+    "cancel navigation",
+    "first-time setup"
   ],
   "source_last_updated": "1760528550",
   "source_hash": "62bf66158149f437004441ed58354ae7e63af9140236fff468bfa844b5c679ce",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.316249Z",
+  "processed_at": "2026-04-24T11:50:53.094152Z",
   "status": "active"
 }
