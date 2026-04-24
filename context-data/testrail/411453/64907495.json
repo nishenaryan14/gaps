@@ -1,0 +1,32 @@
+{
+  "id": "64907495",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - Device page Cancel",
+  "feature": "Support - Device page",
+  "scenario": "Verify tapping Cancel (X) on device details modal closes it and returns to Support page with device list",
+  "steps": [
+    "Pair and connect a headset, launch the app, navigate to Menu > Poly Support > Device.",
+    "Tap on a specific device.",
+    "Tap the Cancel (X) button."
+  ],
+  "expected": "Modal closes and user is back at the Support page showing the list of devices.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Cancel",
+    "X button",
+    "device details modal",
+    "close modal",
+    "Support page",
+    "device list",
+    "Poly Support",
+    "modal dismissal"
+  ],
+  "source_last_updated": "1759761737",
+  "source_hash": "b100068ac6a8eaa513a6ae20fdedde0fc6962ad076f3d07815807fac79dffabb",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.832134Z",
+  "status": "active"
+}
