@@ -5,34 +5,29 @@
   "project": "411453",
   "title": "PPIP - Login from settings - Share Data toggle disappears",
   "feature": "PPIP - Login from Settings",
-  "scenario": "After logging in with Poly credentials from the Account screen, the Share Data toggle disappears.",
+  "scenario": "After logging in with Poly credentials from the Account screen, the Share Data toggle disappears as expected.",
   "steps": [
-    "Start the app fresh",
-    "Go through onboarding",
-    "Tap 'Continue as Guest'",
-    "Choose 'Share' or 'Don't Share'",
-    "Navigate to Settings > General > Account",
-    "Observe the Share Data toggle is present",
-    "Tap 'Log in'",
-    "Log in with Poly credentials",
-    "Observe the Account screen again"
+    "Start app for first time, go through onboarding, tap Continue as Guest.",
+    "Tap Don't Share or Share button.",
+    "Go to App Settings > General > Account. The Share Data toggle should be present with setting ON/OFF based on choice, along with description text.",
+    "Tap Log in and log in with Poly credentials."
   ],
-  "expected": "The Share Data toggle should remain visible after logging in with Poly credentials.",
+  "expected": "Share Data toggle should no longer be present.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Share Data toggle",
-    "Account screen",
     "Poly credentials",
+    "Account screen",
+    "Share Data toggle",
     "Login",
     "Guest mode",
-    "Settings",
-    "Toggle disappears",
-    "Onboarding"
+    "App Settings",
+    "Onboarding",
+    "Data sharing"
   ],
   "source_last_updated": "1760538045",
   "source_hash": "479fa81840340ef2505c52aa3494402e536f04427d5c316f23899f459dbdc1f8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.314081Z",
+  "processed_at": "2026-04-24T11:50:53.102219Z",
   "status": "active"
 }
