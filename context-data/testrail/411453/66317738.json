@@ -1,0 +1,33 @@
+{
+  "id": "66317738",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - new name on the Support device card",
+  "feature": "Device Rename",
+  "scenario": "Verify that renaming a device updates the device name displayed on the Support device card.",
+  "steps": [
+    "Start the app with a device that has rename setting.",
+    "Change the device name.",
+    "Navigate to Menu/Support.",
+    "Click on the device name.",
+    "Verify the device name shows the new name."
+  ],
+  "expected": "The device name on the Support device card shows the new name.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "rename device",
+    "device name update",
+    "Support device card",
+    "device card display",
+    "Menu Support",
+    "device name verification",
+    "rename setting"
+  ],
+  "source_last_updated": "1776241193",
+  "source_hash": "a1551c3d0eede8e35c3d71157d3a977b9cd6e61a733394ea841dabe2b7e39ed2",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "status": "active"
+}
