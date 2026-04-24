@@ -1,0 +1,99 @@
+{
+  "bug_id": "LMW-2522",
+  "matched_testcases": [
+    "65458387",
+    "65293009",
+    "65293034",
+    "65293028",
+    "65293010",
+    "65293019",
+    "65293025",
+    "65293011",
+    "65293016",
+    "65293012",
+    "65293013",
+    "65293014",
+    "65293015",
+    "65293021",
+    "65293022"
+  ],
+  "coverage_status": "none",
+  "gaps": [
+    "No existing test case covers language change functionality in settings.",
+    "No test case verifies that the settings UI updates to reflect the newly selected language after a change.",
+    "No test case covers the error dialog 'Update currently not available' when attempting to change language again without restart.",
+    "No test case verifies the language persistence or state after app restart.",
+    "No test case covers the firmware version display after language change and restart (step 6 of bug scenario)."
+  ],
+  "generated_testcases": [
+    {
+      "title": "Verify language change updates settings UI immediately",
+      "steps": [
+        "1. Launch the app and navigate to Settings screen.",
+        "2. Note the currently selected language in the language picker.",
+        "3. Change the language to a different available option (e.g., from English to Spanish).",
+        "4. Observe the language picker/selection UI element after the change is confirmed.",
+        "5. Check the displayed language label next to the language option."
+      ],
+      "expected": "The settings UI should immediately reflect the newly selected language. The language picker should show the new language as selected, and any language labels should update accordingly without requiring an app restart."
+    },
+    {
+      "title": "Verify error dialog appears when changing language again without restart",
+      "steps": [
+        "1. Launch the app and navigate to Settings screen.",
+        "2. Change the language to a different option (e.g., from English to French).",
+        "3. Without restarting the app, attempt to change the language again to another option (e.g., from French to German).",
+        "4. Observe the system response."
+      ],
+      "expected": "An error dialog with the message 'Update currently not available' should be displayed, preventing the second language change. The language selection should remain at the previously selected language (French)."
+    },
+    {
+      "title": "Verify language persistence after app restart",
+      "steps": [
+        "1. Launch the app and navigate to Settings screen.",
+        "2. Change the language to a different option (e.g., from English to German).",
+        "3. Close/terminate the app completely.",
+        "4. Relaunch the app and navigate to Settings screen.",
+        "5. Check the language picker/selection UI element."
+      ],
+      "expected": "The language selection should persist after restart. The settings UI should show the language selected in step 2 (German) as the current language, confirming that the language change was saved and restored correctly."
+    },
+    {
+      "title": "Verify firmware version display after language change and restart",
+      "steps": [
+        "1. Launch the app and navigate to Settings screen.",
+        "2. Note the current firmware version displayed.",
+        "3. Change the language to a different option (e.g., from English to Spanish).",
+        "4. Close/terminate the app completely.",
+        "5. Relaunch the app and navigate to Settings screen.",
+        "6. Locate the firmware version information in the settings."
+      ],
+      "expected": "The firmware version should be correctly displayed after the language change and app restart. The version number should match the version noted in step 2, and the display should be properly formatted in the newly selected language (Spanish)."
+    },
+    {
+      "title": "Verify language change from non-default language back to default",
+      "steps": [
+        "1. Launch the app and navigate to Settings screen.",
+        "2. Change the language from default (e.g., English) to another language (e.g., French).",
+        "3. Restart the app and navigate to Settings screen.",
+        "4. Change the language back to the default (English).",
+        "5. Verify the settings UI updates immediately.",
+        "6. Restart the app again and verify the language persists."
+      ],
+      "expected": "Changing back to the default language should work correctly. The settings UI should update immediately after the change (step 5), and the default language should persist after the second restart (step 6). No error dialog should appear when changing back to the default language."
+    },
+    {
+      "title": "Verify all UI text elements update after language change",
+      "steps": [
+        "1. Launch the app and navigate to Settings screen.",
+        "2. Take a screenshot or note all visible text labels, button names, and menu items.",
+        "3. Change the language to a different option (e.g., from English to Spanish).",
+        "4. Observe all text elements on the Settings screen.",
+        "5. Navigate to other screens (e.g., Home, Profile) and observe text elements."
+      ],
+      "expected": "All UI text elements should be displayed in the newly selected language (Spanish) immediately after the language change. This includes labels, buttons, menu items, titles, and any other translatable text across all screens, without requiring an app restart."
+    }
+  ],
+  "analysis_version": "v1",
+  "processed_at": "2026-04-24T12:05:41.612402Z"
+}
