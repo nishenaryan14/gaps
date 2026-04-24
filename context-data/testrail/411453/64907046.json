@@ -1,0 +1,32 @@
+{
+  "id": "64907046",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - Account - Account delete UI",
+  "feature": "App Settings - General - Account",
+  "scenario": "Verify the delete icon is displayed below the Log out button in the Account tab under General settings, consistent with the Figma design.",
+  "steps": [
+    "1. Navigate to the Account tab under General settings.",
+    "2. Scroll down to locate the Log out button.",
+    "3. Check below the Log out button for the presence of a delete icon.",
+    "4. Compare the delete icon's appearance (position, style, size) with the Figma design."
+  ],
+  "expected": "The delete icon is present below the Log out button in the Account tab under General settings, matching the Figma design.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "delete icon",
+    "Log out button",
+    "Account tab",
+    "General settings",
+    "Figma design",
+    "icon verification",
+    "UI consistency"
+  ],
+  "source_last_updated": "1759416328",
+  "source_hash": "a4c1a518b125136c4439bd2194abbadfbd6cf60a27ca4edbe2dabdbe588a060b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.100217Z",
+  "status": "active"
+}
