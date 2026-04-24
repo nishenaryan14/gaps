@@ -5,28 +5,27 @@
   "project": "411453",
   "title": "Onboarding - Eula page - License Agreement link",
   "feature": "Onboarding - Eula page",
-  "scenario": "Verify that tapping the License Agreement link on the EULA page navigates to the latest license agreement URL (https://www.hp.com/go/sweula).",
+  "scenario": "Verify tapping the License Agreement link on the EULA page navigates to the latest License Agreement page at https://www.hp.com/go/sweula",
   "steps": [
     "Open the EULA page.",
     "Locate and tap the License Agreement link.",
-    "Observe the page that opens."
+    "Observe the resulting page."
   ],
-  "expected": "The user is directed to the License Agreement page with the latest license agreement URL (https://www.hp.com/go/sweula).",
+  "expected": "The user is directed to the latest License Agreement page at https://www.hp.com/go/sweula.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "EULA page",
     "License Agreement link",
+    "EULA page",
     "navigate",
-    "license agreement URL",
-    "sweula",
-    "tap link",
-    "page redirect",
-    "HP software license"
+    "https://www.hp.com/go/sweula",
+    "tap",
+    "License Agreement page",
+    "HP software EULA"
   ],
   "source_last_updated": "1760528300",
   "source_hash": "6f6e5af6400b178e8b00c257ceec74315458761a45cb21bd5152d2e3d810a489",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.056019Z",
+  "processed_at": "2026-04-24T10:51:32.696811Z",
   "status": "active"
 }
