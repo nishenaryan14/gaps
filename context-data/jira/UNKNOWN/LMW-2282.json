@@ -4,17 +4,17 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS | Free 60 artwork missing, and update from v231.591.0.5046 (MR1.5) to latest not working (Studio iOS or PTT)",
-  "feature": "iOS / Studio",
-  "scenario": "Free 60 artwork missing after updating from v231.591.0.5046 (MR1.5) to latest on Studio iOS or PTT, with DFU blocked by low iPhone battery.",
-  "description_clean": "Free 60 artwork missing. Update from v231.591.0.5046 (MR1.5) to latest not working on Studio iOS or PTT. DFU not possible due to low iPhone battery. No artwork displayed.",
+  "feature": "iOS / Studio / PTT",
+  "scenario": "Free 60 artwork missing after updating from v231.591.0.5046 (MR1.5) to latest on Studio iOS or PTT, with no artwork displayed and DFU not possible due to low iPhone battery.",
+  "description_clean": "Free 60 artwork missing. Update from v231.591.0.5046 (MR1.5) to latest not working on Studio iOS or PTT. No artwork displayed. DFU not possible due to low iPhone battery.",
   "steps": [
-    "1. Ensure iPhone has sufficient battery charge (currently too low for DFU).",
-    "2. Charge the iPhone to at least 50% battery.",
-    "3. Update from v231.591.0.5046 (MR1.5) to the latest version on Studio iOS or PTT.",
-    "4. After update, check if the Free 60 artwork is displayed."
+    "1. Start from version v231.591.0.5046 (MR1.5) on Studio iOS or PTT.",
+    "2. Attempt to update to the latest version.",
+    "3. Observe that no artwork is displayed after the update.",
+    "4. Note that DFU (Device Firmware Update) is not possible due to low iPhone battery."
   ],
-  "expected": "Free 60 artwork is displayed correctly after the update.",
-  "actual": "Free 60 artwork is missing. No artwork displayed. Update from v231.591.0.5046 (MR1.5) to latest not working on Studio iOS or PTT. DFU not possible due to low iPhone battery.",
+  "expected": "Free 60 artwork should be displayed after updating to the latest version.",
+  "actual": "Free 60 artwork is missing. No artwork displayed after update. DFU cannot be performed due to low iPhone battery.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -22,17 +22,18 @@
   ],
   "keywords": [
     "Free 60 artwork missing",
-    "Studio iOS update",
-    "PTT update",
-    "v231.591.0.5046 MR1.5",
-    "DFU blocked low battery",
-    "iPhone battery charge",
-    "artwork display issue",
-    "firmware update artwork"
+    "Studio iOS",
+    "PTT",
+    "v231.591.0.5046",
+    "MR1.5",
+    "update",
+    "no artwork displayed",
+    "DFU not possible",
+    "low iPhone battery"
   ],
   "source_last_updated": "2026-04-15T08:55:53.000+0000",
   "source_hash": "69ee9443598565007bef5314c9016caf53790522b13437dd68320862bc1f6dee",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.243768Z",
+  "processed_at": "2026-04-24T11:50:53.078715Z",
   "status": "active"
 }
