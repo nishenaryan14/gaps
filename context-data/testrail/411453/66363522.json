@@ -1,0 +1,33 @@
+{
+  "id": "66363522",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "[App] Flamingo/Spoonbill - Connect headset as standalone",
+  "feature": "App - Flamingo/Spoonbill",
+  "scenario": "Verify that a standalone headset (not paired with Charge Case) displays only headset battery indicator and shows only headset information in Settings > Software update.",
+  "steps": [
+    "Connect the headset as a standalone device (not paired with the Charge Case).",
+    "Verify that the device is displayed as a standalone headset.",
+    "Check that only the battery indicator for the headset is shown.",
+    "Navigate to Settings > Software update.",
+    "Verify that only information about the headset is displayed."
+  ],
+  "expected": "The device is displayed as a standalone headset with only the headset battery indicator. In Settings > Software update, only headset-related information is shown.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "standalone headset",
+    "battery indicator",
+    "headset information",
+    "Settings Software update",
+    "not paired with Charge Case",
+    "device display",
+    "headset only"
+  ],
+  "source_last_updated": "1762331223",
+  "source_hash": "7d325c94457c6cd8770ef14726f779426f6dbb28fdd2b357191ce1c9eb9f7e35",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.429534Z",
+  "status": "active"
+}
