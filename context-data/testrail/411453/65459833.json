@@ -1,0 +1,36 @@
+{
+  "id": "65459833",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications - Onboarding - Don't Allow, UI",
+  "feature": "Notifications - Onboarding",
+  "scenario": "When notifications are denied during onboarding, the master toggle in App Settings > General is OFF and all individual notification toggles are greyed out and disabled.",
+  "steps": [
+    "1. Open the app and go through the onboarding process.",
+    "2. When prompted for notification permissions, do NOT allow notifications (deny/decline).",
+    "3. Complete the onboarding flow.",
+    "4. Navigate to App Settings > General.",
+    "5. Locate the Notifications section.",
+    "6. Observe the master toggle for notifications.",
+    "7. Observe the individual notification toggles."
+  ],
+  "expected": "The master toggle in the Notifications section is set to OFF. All individual notification toggles are greyed out and set to OFF, and the user cannot change any of them.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "notifications denied",
+    "onboarding",
+    "master toggle",
+    "app settings",
+    "general settings",
+    "notification permissions",
+    "greyed out toggles",
+    "disabled toggles"
+  ],
+  "source_last_updated": "1761296616",
+  "source_hash": "26818fc0b335f37451bf87c5c2046d83db78603e5f4946c1d1bb77f37604a5fc",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.421344Z",
+  "status": "active"
+}
