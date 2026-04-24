@@ -1,0 +1,37 @@
+{
+  "id": "65868094",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Multiple devices - Deleting devices",
+  "feature": "Device Home Screen",
+  "scenario": "Verify that deleting devices from the paired and connected device list properly removes the selected device while preserving remaining devices and their connection states, and that all remaining devices can also be deleted.",
+  "steps": [
+    "Pair and connect multiple devices to the system.",
+    "Open the device list to view all paired and connected devices.",
+    "Delete one device from the device list.",
+    "Verify that the deleted device is no longer present in the list.",
+    "Verify that all remaining devices are still present in the list.",
+    "Check that each remaining device correctly displays its connected/disconnected state.",
+    "Delete each of the remaining devices one by one from the list.",
+    "Verify that each device is successfully removed from the list after deletion."
+  ],
+  "expected": "When a device is deleted, it is properly removed from the list. Remaining devices are still present and correctly display their connected/disconnected state. All remaining devices can be successfully deleted from the list.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "delete device",
+    "paired devices",
+    "connected devices",
+    "device list",
+    "connection state",
+    "remove device",
+    "device management",
+    "device deletion"
+  ],
+  "source_last_updated": "1762178343",
+  "source_hash": "eb5958e7130069b7217f1493235b79a22c603434e7cae8553ad5b048040b4d37",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.086978Z",
+  "status": "active"
+}
