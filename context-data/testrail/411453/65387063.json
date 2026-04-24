@@ -1,0 +1,36 @@
+{
+  "id": "65387063",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Feedback - send a Suggestion feedback with names/email",
+  "feature": "Feedback",
+  "scenario": "Send a suggestion feedback with name and email attached via App Settings > Feedback tab",
+  "steps": [
+    "Start the app",
+    "Navigate to App Settings",
+    "Tap on Feedback tab",
+    "Select 'Suggestion' option",
+    "Enter text for feedback",
+    "Enter names and email",
+    "Click Send"
+  ],
+  "expected": "Feedback is sent with name and email attached.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "app settings",
+    "feedback",
+    "suggestion",
+    "send feedback",
+    "name",
+    "email",
+    "feedback tab",
+    "submit suggestion"
+  ],
+  "source_last_updated": "1776241074",
+  "source_hash": "096d189162dab7f9844552bfe3bb50c3b08a52efdc295b4834eda24a7265a814",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.363453Z",
+  "status": "active"
+}
