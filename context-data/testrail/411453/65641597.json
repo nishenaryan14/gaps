@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "CCL - UI",
   "feature": "CCL - UI",
-  "scenario": "CCL settings UI in Device Settings > Advanced displays three radio button options (No Noise Block, AI Noise Block, UC Noise Block) with descriptions for microphone noise control.",
+  "scenario": "CCL settings with three noise block options should appear in Device Settings > Advanced with the specified description.",
   "steps": [
     "Open Device Settings.",
     "Navigate to Advanced settings.",
-    "Locate the CCL settings UI.",
-    "Read the description: 'Limit the amount of nearby conversation transmitted through your microphone. (Note: changes will take effect on the next call.)'",
-    "Observe the three radio button options: No Noise Block ('Optimized for voice isolation'), AI Noise Block ('Enhanced for hybrid work environments'), and UC Noise Block ('Best for open office environments')."
+    "Locate the CCL (Conversation Clarity Level) settings section.",
+    "Verify the description text reads: \"Limit the amount of nearby conversation transmitted through your microphone. (Note: changes will take effect on the next call.)\"",
+    "Confirm there are 3 radio button options: No Noise Block (\"Optimized for voice isolation\"), AI Noise Block (\"Enhanced for hybrid work environments\"), UC Noise Block (\"Best for open office environments\")."
   ],
-  "expected": "The CCL settings UI displays the description and three radio button options as described.",
+  "expected": "CCL settings are present in Device Settings > Advanced with the correct description and 3 radio button options: No Noise Block (\"Optimized for voice isolation\"), AI Noise Block (\"Enhanced for hybrid work environments\"), UC Noise Block (\"Best for open office environments\").",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "CCL settings",
-    "Noise Block",
-    "microphone noise control",
+    "Conversation Clarity Level",
+    "Noise Block options",
     "Device Settings Advanced",
+    "microphone conversation limit",
+    "No Noise Block",
     "AI Noise Block",
-    "UC Noise Block",
-    "voice isolation",
-    "radio button options"
+    "UC Noise Block"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "02b284d4d6339ccfc60bce07af7755849b8072a78385ed3b3bc0cdd9f7337aef",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "processed_at": "2026-04-24T11:50:53.268503Z",
   "status": "active"
 }
