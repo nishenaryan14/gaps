@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Support - App, user not logged ever, login, dialog, Cancel",
   "feature": "Support - App",
-  "scenario": "Guest user navigates to Support, clicks App button, then Login, and verifies Cancel returns to Later/Login dialog",
+  "scenario": "Guest user cancels login from Support's App section and is returned to the Later/Login dialog",
   "steps": [
     "Install the mobile app",
     "Go through onboarding as a Guest",
     "Navigate to Support via the hamburger menu",
     "Click the App button",
     "Click Login",
-    "Click Cancel on the login dialog"
+    "A login dialog with Cancel/Continue buttons appears",
+    "Click Cancel"
   ],
-  "expected": "A login dialog with Cancel/Continue buttons should appear. After clicking Cancel, the user should be returned to the Later/Login dialog.",
+  "expected": "User is returned to the Later/Login dialog",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Guest user",
-    "Support",
-    "App button",
-    "Login",
-    "Cancel",
-    "Login dialog",
-    "Mobile app",
-    "Onboarding"
+    "guest user",
+    "login cancellation",
+    "support app section",
+    "later/login dialog",
+    "mobile app onboarding",
+    "hamburger menu",
+    "cancel button",
+    "authentication flow"
   ],
   "source_last_updated": "1759751912",
   "source_hash": "711a0fc59e89d1f04a8d6056a66730f56e67d8bd0d460756fe20aacbb7927ea0",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.359907Z",
+  "processed_at": "2026-04-24T11:50:53.181414Z",
   "status": "active"
 }
