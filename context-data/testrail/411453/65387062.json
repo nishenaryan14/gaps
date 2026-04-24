@@ -1,0 +1,35 @@
+{
+  "id": "65387062",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Feedback - send a Suggestion feedback without names/email",
+  "feature": "Feedback",
+  "scenario": "Send suggestion feedback without providing name or email",
+  "steps": [
+    "Start the app",
+    "Navigate to App Settings",
+    "Tap on Feedback tab",
+    "Select the 'Suggestion' option",
+    "Enter text for the feedback",
+    "Click Send"
+  ],
+  "expected": "Option is selected and feedback is sent.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "suggestion feedback",
+    "anonymous feedback",
+    "app settings",
+    "feedback tab",
+    "send feedback",
+    "no name",
+    "no email",
+    "submit suggestion"
+  ],
+  "source_last_updated": "1776241074",
+  "source_hash": "0301a1538e0bd8d1927ac08ecfe27e6bc1aee7f3ee6373b5a5d09ab057c2dd32",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.362417Z",
+  "status": "active"
+}
