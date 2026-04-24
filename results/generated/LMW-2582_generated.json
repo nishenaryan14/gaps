@@ -1,0 +1,43 @@
+[
+  {
+    "title": "DFU Language Pack Update - Timeout and Recovery at 99%",
+    "steps": [
+      "1. Connect a Morpheus device to the system.",
+      "2. Initiate a DFU language pack update.",
+      "3. Monitor the update progress and observe when it reaches 99%.",
+      "4. Start a timer as soon as the progress hits 99%.",
+      "5. Verify that the update does NOT complete within 5 minutes (i.e., stuck at 99%).",
+      "6. After 8 minutes, verify that the update either completes or a timeout recovery mechanism is triggered (e.g., rollback, retry, error message).",
+      "7. Check system logs for any timeout or hang events during the language pack update."
+    ],
+    "expected": "The language pack update should not remain stuck at 99% indefinitely. Either the update completes within a reasonable time (< 8 minutes), or a proper timeout/error handling mechanism is triggered (e.g., rollback to previous version, clear error message, or automatic retry). No silent hang should occur."
+  },
+  {
+    "title": "Post-Update State Refresh - FW Update Still Showing as Available After Successful Update",
+    "steps": [
+      "1. Connect a Morpheus device with an available FW update.",
+      "2. Initiate and complete the FW update successfully.",
+      "3. After the update completes and the device reboots, navigate to the system update/DFU settings page.",
+      "4. Observe the displayed update status for the just-installed FW version.",
+      "5. Refresh the update status page manually (e.g., pull-to-refresh or re-query).",
+      "6. Check the backend/API response for the current firmware version vs. available update.",
+      "7. Reboot the device again and re-check the update status."
+    ],
+    "expected": "After a successful FW update, the device should NOT show the same update as still available. The UI should reflect the current firmware version and indicate that no updates are pending. The state should persist across page refreshes and device reboots."
+  },
+  {
+    "title": "In-Call DFU Interruption Handling - DFU Stuck at 26% During Active Call",
+    "steps": [
+      "1. Connect a Morpheus device and ensure it is not on a call.",
+      "2. Initiate a DFU firmware update process.",
+      "3. While the DFU is in progress, place or receive an active phone call on the device.",
+      "4. Observe the DFU progress bar when the call becomes active.",
+      "5. Check if a pop-up or notification appears warning about DFU interruption during the call.",
+      "6. Monitor whether the DFU progress stalls at a specific percentage (e.g., 26%).",
+      "7. End the phone call and observe whether the DFU resumes automatically.",
+      "8. If DFU remains stuck, attempt to manually resume or restart the DFU process.",
+      "9. Check system logs for any DFU interruption handling events during the call."
+    ],
+    "expected": "When a DFU update is in progress and an active call is initiated, the system should display a clear pop-up or notification warning the user that the DFU may be interrupted. The DFU should not get permanently stuck at 26% \u2014 either it pauses and resumes after the call ends, or it fails gracefully with a clear error and option to retry. No silent indefinite hang should occur."
+  }
+]
