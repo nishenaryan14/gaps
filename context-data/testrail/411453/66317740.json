@@ -7,31 +7,31 @@
   "feature": "Device Settings - Rename",
   "scenario": "Verify that renaming a device persists after closing and reopening the Settings screen.",
   "steps": [
-    "Start the app with a device attached.",
-    "Navigate to Device Settings > General.",
-    "Click the device's official name.",
-    "Enter a new name.",
-    "Tap Done.",
-    "Close the Settings screen.",
-    "Reopen Settings and navigate to the General tab.",
-    "Check that the new name is still displayed."
+    "Start app with device attached",
+    "Navigate to Device Settings > General",
+    "Click device's official name",
+    "Enter new name",
+    "Tap Done",
+    "Close Settings",
+    "Reopen Settings to General tab",
+    "Check that the new name is still displayed"
   ],
   "expected": "The new device name is still displayed after closing and reopening the Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "rename device",
-    "persist",
+    "device name persistence",
     "Settings screen",
     "General tab",
-    "device name",
-    "close and reopen",
-    "name change persists",
-    "Device Settings"
+    "device settings",
+    "name change verification",
+    "close and reopen Settings",
+    "device naming"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "0899afcdc846955b524bd0e58866aece877ba7a51645f5e2d1fb9e725c75e2a6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.378141Z",
+  "processed_at": "2026-04-24T11:50:53.217724Z",
   "status": "active"
 }
