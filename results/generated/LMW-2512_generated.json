@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Navigate to Supported Devices screen from home screen with no headset connected",
+    "steps": [
+      "Launch the application with no headset connected.",
+      "Observe the home screen is displayed.",
+      "Tap on 'Select Device' button on the home screen.",
+      "Verify the Supported Devices screen appears."
+    ],
+    "expected": "The Supported Devices screen is displayed, showing available devices or a message indicating no devices are connected."
+  },
+  {
+    "title": "Back navigation from Supported Devices screen with no headset connected",
+    "steps": [
+      "Launch the application with no headset connected.",
+      "Tap 'Select Device' to navigate to the Supported Devices screen.",
+      "Tap the back button (hardware or software) to return to the home screen.",
+      "Verify the home screen is displayed and interactive."
+    ],
+    "expected": "User successfully returns to the home screen. The home screen is fully functional and responsive."
+  },
+  {
+    "title": "Rapid re-entry into Supported Devices screen within 2 seconds",
+    "steps": [
+      "Launch the application with no headset connected.",
+      "Tap 'Select Device' to navigate to the Supported Devices screen.",
+      "Immediately tap the back button to return to the home screen.",
+      "Within 2 seconds of returning to the home screen, tap 'Select Device' again.",
+      "Verify the Supported Devices screen is displayed correctly.",
+      "Tap the back button again to return to the home screen."
+    ],
+    "expected": "The Supported Devices screen appears correctly on the second entry. User can navigate back to the home screen without getting stuck."
+  },
+  {
+    "title": "Rapid re-entry into Supported Devices screen exactly at 2-second boundary",
+    "steps": [
+      "Launch the application with no headset connected.",
+      "Tap 'Select Device' to navigate to the Supported Devices screen.",
+      "Tap the back button to return to the home screen.",
+      "Wait exactly 2 seconds.",
+      "Tap 'Select Device' again.",
+      "Verify the Supported Devices screen is displayed.",
+      "Tap the back button to return to the home screen."
+    ],
+    "expected": "The Supported Devices screen displays correctly. Back navigation works and user is not stuck on the Supported Devices screen."
+  },
+  {
+    "title": "Multiple rapid re-entries into Supported Devices screen (stress test)",
+    "steps": [
+      "Launch the application with no headset connected.",
+      "Rapidly tap 'Select Device' and then back button 5 times in succession, each cycle completed within 2 seconds.",
+      "After the 5th cycle, verify the current screen.",
+      "Attempt to navigate using the back button if on Supported Devices screen, or tap 'Select Device' if on home screen.",
+      "Verify the application remains responsive and not stuck on any screen."
+    ],
+    "expected": "The application remains responsive throughout. No screen gets stuck. User can freely navigate between home and Supported Devices screens."
+  },
+  {
+    "title": "Select Device from home screen with no device connected - verify empty state",
+    "steps": [
+      "Launch the application with no headset connected.",
+      "Tap 'Select Device' on the home screen.",
+      "Observe the Supported Devices screen content.",
+      "Verify the screen shows appropriate empty state messaging (e.g., 'No devices found' or 'Connect a device').",
+      "Verify any available actions on the empty state (e.g., 'Scan again' or 'Refresh')."
+    ],
+    "expected": "The Supported Devices screen displays an appropriate empty state message indicating no headset is connected. Any available actions are functional."
+  },
+  {
+    "title": "Back navigation from Supported Devices screen after rapid re-entry - verify home screen state",
+    "steps": [
+      "Launch the application with no headset connected.",
+      "Tap 'Select Device' to go to Supported Devices screen.",
+      "Tap back to return to home screen.",
+      "Within 2 seconds, tap 'Select Device' again.",
+      "Tap back to return to home screen.",
+      "Verify the home screen is fully displayed.",
+      "Verify all home screen elements are interactive (e.g., buttons, menus).",
+      "Tap 'Select Device' once more to confirm navigation still works."
+    ],
+    "expected": "Home screen is fully displayed and interactive after rapid re-entry and back navigation. Subsequent navigation to Supported Devices screen works correctly."
+  }
+]
