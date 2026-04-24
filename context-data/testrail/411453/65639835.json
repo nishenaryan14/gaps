@@ -1,0 +1,36 @@
+{
+  "id": "65639835",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "1 step DFU - new DFU screen Release notes link",
+  "feature": "DFU (Device Firmware Update)",
+  "scenario": "Verify that clicking the release notes link on the new DFU screen opens the correct web page for Osprey EB and CC when an update is available.",
+  "steps": [
+    "1. Ensure Osprey EB and CC are both at least version 5039 and an update is available for both.",
+    "2. Navigate to the new DFU screen.",
+    "3. Click the release notes link on the new DFU screen.",
+    "4. Verify that the correct web page opens.",
+    "5. Navigate to the Settings screen.",
+    "6. Click the release notes link on the Settings screen.",
+    "7. Verify that the correct web page opens."
+  ],
+  "expected": "Clicking the release notes link on both the new DFU screen and the Settings screen opens the correct web page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "release notes link",
+    "DFU screen",
+    "Osprey EB",
+    "Osprey CC",
+    "update available",
+    "Settings screen",
+    "web page verification",
+    "firmware update"
+  ],
+  "source_last_updated": "1760949167",
+  "source_hash": "a6f74abdc5bd7d40ee91a999a1dc9ff529d5379107f789f3041edbb7a56000b3",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "status": "active"
+}
