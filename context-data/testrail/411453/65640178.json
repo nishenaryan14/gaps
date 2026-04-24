@@ -1,0 +1,35 @@
+{
+  "id": "65640178",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Device Deleted",
+  "feature": "Analytics",
+  "scenario": "Log device removal event with default analytics and device-specific fields when a device is deleted in the app",
+  "steps": [
+    "Open the app and navigate to the device list.",
+    "Select a device to remove.",
+    "Confirm the device deletion action.",
+    "Observe the analytics dashboard for the event.",
+    "Check the tracked fields: Device Name, Device PID, Device Serial.",
+    "Verify default analytics elements: graph, events in last 30 minutes, event count by country and gender, events per session, app version, app build, app environment.",
+    "Wait a few hours and check if event counts update."
+  ],
+  "expected": "The device removal event is logged with all default analytics elements and additional fields (Device Name, Device PID, Device Serial). Event counts update after a few hours.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "device removal event",
+    "device deletion",
+    "analytics dashboard",
+    "device-specific fields",
+    "default analytics",
+    "event tracking",
+    "device analytics"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "0795ae12e1291c414a5988d74f767e650212da16233ca2dba5f128b97ac92967",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.425393Z",
+  "status": "active"
+}
