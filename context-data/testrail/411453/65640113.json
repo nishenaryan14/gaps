@@ -1,0 +1,35 @@
+{
+  "id": "65640113",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Mobile app version is changed",
+  "feature": "Mobile App Version Display",
+  "scenario": "Verify that the upgraded mobile app version is correctly displayed on the Device user, Inventory, Mobile profile, and Device profile pages after a mobile user upgrades their app on a headset registered to a Lens tenant.",
+  "steps": [
+    "1. Ensure the mobile user's headset is registered to a Lens tenant.",
+    "2. Upgrade the mobile app on the user's device to the latest version.",
+    "3. Navigate to the Device user / Mobile user page and verify the new mobile app version is displayed correctly.",
+    "4. Navigate to the Inventory page and verify the new mobile app version is displayed correctly.",
+    "5. Navigate to the Mobile profile page and verify the new mobile app version is displayed correctly.",
+    "6. Navigate to the Device profile page and verify the new mobile app version is displayed correctly."
+  ],
+  "expected": "The new mobile app version is correctly displayed on the Device user/mobile user page, Inventory page, Mobile profile page, and Device profile page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "mobile app version",
+    "upgrade",
+    "Lens tenant",
+    "headset",
+    "Device user page",
+    "Inventory page",
+    "Mobile profile page",
+    "Device profile page"
+  ],
+  "source_last_updated": "1760949362",
+  "source_hash": "bd435874bb25119e6c9ffb3de8f42ca2c983be44063ad00e5bbb009b69a3564d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "status": "active"
+}
