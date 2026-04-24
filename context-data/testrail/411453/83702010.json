@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "App Settings - General - Licenses no wifi  [New]",
   "feature": "App Settings - General - Licenses",
-  "scenario": "Verify license and source links behavior when app is opened without WiFi",
+  "scenario": "Verify license and source links in the app when offline show correct content for licenses but display an error for source links.",
   "steps": [
-    "Turn off WiFi on the device.",
-    "Open/start the app.",
-    "Tap the hamburger icon (menu).",
-    "Navigate to General > Licenses.",
-    "Tap each license link (e.g., MIT, Apache 2.0, etc.).",
-    "Verify the license opens with a headline, description, and Cancel (X) button visible.",
-    "Tap the Source link for each license.",
-    "Verify an error screen appears."
+    "Turn off WiFi and start the app.",
+    "Tap the hamburger icon (App Settings).",
+    "Go to General > Licenses.",
+    "Tap each license link (MIT, Apache 2.0, etc.).",
+    "Tap the Source link for each license."
   ],
-  "expected": "Each license link opens with a headline, description, and Cancel (X) button visible. Each Source link displays an error screen.",
+  "expected": "Each license link opens with headline, description, and Cancel (X) button visible in the upper right. Each Source link opens the corresponding source page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "offline",
     "license links",
     "source links",
-    "offline behavior",
+    "error display",
     "WiFi off",
-    "error screen",
-    "hamburger menu",
-    "licenses screen",
-    "app without internet"
+    "app settings",
+    "licenses",
+    "MIT",
+    "Apache 2.0"
   ],
   "source_last_updated": "1773153247",
   "source_hash": "2e93d9b4c7225be05dbc61b0134372e2649fd9f6911f6aaa7bc99b5fc499913d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.755649Z",
+  "processed_at": "2026-04-24T11:23:05.358391Z",
   "status": "active"
 }
