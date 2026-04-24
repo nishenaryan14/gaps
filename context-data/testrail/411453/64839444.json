@@ -1,0 +1,31 @@
+{
+  "id": "64839444",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Full Support After Launch Date When LM Version Meets or Exceeds Required",
+  "feature": "Device Home Screen",
+  "scenario": "Verify full support is shown on the Device Home Screen after the device's launch date when the installed LM version meets or exceeds the required version.",
+  "steps": [
+    "Launch the app and pair with headset.",
+    "Ensure headset is ON and properly connected."
+  ],
+  "expected": "Connection status icon shows a green dot. Full support is shown on the Device Home Screen after the device's launch date when the installed LM version meets or exceeds the required version.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Device Home Screen",
+    "launch date",
+    "LM version",
+    "required version",
+    "app launch",
+    "headset pairing",
+    "headset connection",
+    "full support verification"
+  ],
+  "source_last_updated": "1764663042",
+  "source_hash": "86bade47ff68390bec222842ebb9d28fadda0c7ecea40ecef18f81a043aede9c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.086978Z",
+  "status": "active"
+}
