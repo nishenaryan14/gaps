@@ -1,0 +1,34 @@
+{
+  "id": "65640189",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Product Support Opened",
+  "feature": "Analytics",
+  "scenario": "Verify that opening the Product Support page logs a \"product_support_opened\" event and that event count increases after navigating to Support > Product Support on mobile.",
+  "steps": [
+    "Open the Product Support page in Firebase.",
+    "Confirm default elements are present: graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment.",
+    "On mobile, navigate to Support > Product Support.",
+    "Wait a few hours.",
+    "Check that the event count for 'product_support_opened' has increased."
+  ],
+  "expected": "The event \"product_support_opened\" is logged when the Product Support page is opened. Default elements (graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment) are present in Firebase. The event count increases after a few hours on mobile.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Product Support page",
+    "product_support_opened event",
+    "event count increase",
+    "Firebase analytics",
+    "mobile navigation",
+    "Support menu",
+    "event tracking verification",
+    "analytics dashboard"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "62d22b29714c5195c2b1741ac4b90b3504e88719c57c7413f08d7cf311f3fe63",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.429534Z",
+  "status": "active"
+}
