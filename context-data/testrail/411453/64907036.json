@@ -5,30 +5,28 @@
   "project": "411453",
   "title": "[IOS]App Settings - General - Account - Log in - Log out - Cancel",
   "feature": "App Settings - Account",
-  "scenario": "Verify login/logout flow in App Settings: user can log in, see account details, then cancel logout and remain logged in.",
+  "scenario": "Verify login/logout flow in App Settings under General > Account, including successful login display, logout dialog, and cancel behavior.",
   "steps": [
-    "Start the app as a quest and tap the App Settings (hamburger) icon.",
-    "Navigate to General > Account.",
-    "Tap Log in, then Continue, and log in with credentials.",
+    "Start the app as a quest, tap the hamburger icon, go to General > Account, tap Log in, then Continue and log in with credentials.",
     "Tap Log out.",
     "Tap Cancel."
   ],
-  "expected": "Step 3: \"Your account\" text is visible with Name and Email fields populated. Step 4: Login dialog opens with Cancel and Continue options. Step 5: Dialog disappears and user remains logged in.",
+  "expected": "1) \"Your account\" text is visible with Name and Email fields populated. 2) Login dialog opens with Cancel and Continue options. 3) Dialog disappears and user remains logged in.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "login",
     "logout",
-    "cancel logout",
-    "app settings",
-    "account details",
+    "App Settings",
+    "General",
+    "Account",
     "authentication",
-    "session management",
-    "user remains logged in"
+    "dialog",
+    "cancel"
   ],
   "source_last_updated": "1764319833",
   "source_hash": "f207772853feee11205ea923e80eb7baefc3d14d44246d5bd6eac636521c064d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.750622Z",
+  "processed_at": "2026-04-24T11:23:05.353822Z",
   "status": "active"
 }
