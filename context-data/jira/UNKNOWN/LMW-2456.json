@@ -1,0 +1,35 @@
+{
+  "id": "LMW-2456",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "ANDROID \ud83d\udfe5 FALCON \ud83c\udfa7 \"Falcon\" code name on onboarding screens",
+  "feature": "Onboarding",
+  "scenario": "Onboarding screens display device code name \"Falcon\" instead of the proper product name after pairing a Falcon device and navigating to Device Settings > Onboarding.",
+  "description_clean": "On the onboarding screens, the device code name \"Falcon\" is displayed instead of the proper product name. This occurs after pairing a Falcon device and navigating to Device Settings > Onboarding. Expected behavior is that the proper name is shown on onboarding screens.",
+  "steps": [
+    "Pair a Falcon device",
+    "Navigate to Device Settings",
+    "Navigate to Onboarding"
+  ],
+  "expected": "The proper product name is shown on onboarding screens.",
+  "actual": "The device code name \"Falcon\" is displayed instead of the proper product name.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "Falcon",
+    "device code name",
+    "product name",
+    "Onboarding screens",
+    "Device Settings",
+    "pairing",
+    "display issue",
+    "Falcon device"
+  ],
+  "source_last_updated": "2026-04-20T13:03:02.000+0000",
+  "source_hash": "94495772c4eda2cf2691037a59f15ca8effe7505713e8f0374b85d5e0b0fc958",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.040587Z",
+  "status": "active"
+}
