@@ -1,0 +1,86 @@
+[
+  {
+    "title": "TC-BT-001: Placing left earbud in charging case should only disconnect left earbud",
+    "steps": [
+      "1. Ensure both earbuds are fully charged and powered on.",
+      "2. Open the Bluetooth settings on the connected device and confirm both earbuds are paired and connected.",
+      "3. Launch the companion app (if applicable) and verify both earbuds show as 'Connected'.",
+      "4. Place the left earbud into the charging case and close the lid.",
+      "5. Observe the connection status of both earbuds on the connected device's Bluetooth settings.",
+      "6. Observe the connection status of both earbuds in the companion app (if available)."
+    ],
+    "expected": "Only the left earbud disconnects from the device. The right earbud remains connected and functional. The companion app shows the left earbud as 'In Case' or 'Disconnected' and the right earbud as 'Connected'."
+  },
+  {
+    "title": "TC-BT-002: Placing right earbud in charging case should only disconnect right earbud",
+    "steps": [
+      "1. Ensure both earbuds are fully charged and powered on.",
+      "2. Open the Bluetooth settings on the connected device and confirm both earbuds are paired and connected.",
+      "3. Launch the companion app (if applicable) and verify both earbuds show as 'Connected'.",
+      "4. Place the right earbud into the charging case and close the lid.",
+      "5. Observe the connection status of both earbuds on the connected device's Bluetooth settings.",
+      "6. Observe the connection status of both earbuds in the companion app (if available)."
+    ],
+    "expected": "Only the right earbud disconnects from the device. The left earbud remains connected and functional. The companion app shows the right earbud as 'In Case' or 'Disconnected' and the left earbud as 'Connected'."
+  },
+  {
+    "title": "TC-BT-003: Placing one earbud in case while audio is playing should not interrupt audio on the other earbud",
+    "steps": [
+      "1. Ensure both earbuds are fully charged, powered on, and connected to a device.",
+      "2. Start playing audio (music or podcast) on the connected device.",
+      "3. Verify audio is playing through both earbuds.",
+      "4. Place the left earbud into the charging case and close the lid.",
+      "5. Listen to the audio output from the right earbud.",
+      "6. Check the Bluetooth connection status on the device."
+    ],
+    "expected": "Audio continues to play uninterrupted through the right earbud. The left earbud disconnects cleanly without causing the right earbud to drop or stutter. The device shows only the left earbud as disconnected."
+  },
+  {
+    "title": "TC-BT-004: Removing earbud from charging case after placing it should restore single earbud connection",
+    "steps": [
+      "1. Ensure both earbuds are fully charged, powered on, and connected to a device.",
+      "2. Place the left earbud into the charging case and close the lid.",
+      "3. Verify that only the left earbud disconnects and the right earbud remains connected.",
+      "4. Open the charging case and remove the left earbud.",
+      "5. Observe the connection status of the left earbud on the device's Bluetooth settings.",
+      "6. Observe the connection status in the companion app (if available)."
+    ],
+    "expected": "The left earbud automatically reconnects to the device without affecting the right earbud's connection. Both earbuds show as 'Connected' again. No manual re-pairing is required."
+  },
+  {
+    "title": "TC-BT-005: Placing both earbuds in charging case sequentially should disconnect both independently",
+    "steps": [
+      "1. Ensure both earbuds are fully charged, powered on, and connected to a device.",
+      "2. Place the left earbud into the charging case and close the lid.",
+      "3. Verify only the left earbud disconnects.",
+      "4. Place the right earbud into the charging case and close the lid.",
+      "5. Observe the connection status of both earbuds on the device's Bluetooth settings.",
+      "6. Observe the connection status in the companion app (if available)."
+    ],
+    "expected": "After placing the left earbud, only the left earbud disconnects. After subsequently placing the right earbud, only the right earbud disconnects. Both earbuds show as 'Disconnected' or 'In Case' without any error states. The device's Bluetooth connection list shows both earbuds as disconnected but still paired."
+  },
+  {
+    "title": "TC-BT-006: Placing one earbud in case during a phone call should keep the other earbud active for the call",
+    "steps": [
+      "1. Ensure both earbuds are fully charged, powered on, and connected to a paired smartphone.",
+      "2. Initiate or receive a phone call on the smartphone.",
+      "3. Verify audio is routed through both earbuds during the call.",
+      "4. Place the left earbud into the charging case and close the lid.",
+      "5. Continue the phone call and listen to audio from the right earbud.",
+      "6. Check the call status and audio routing on the smartphone."
+    ],
+    "expected": "The phone call continues without interruption. Audio is seamlessly routed to the right earbud only. The left earbud disconnects without affecting the call. The smartphone still shows the call as active with audio output through the right earbud."
+  },
+  {
+    "title": "TC-BT-007: Placing one earbud in case should not trigger unpairing or require re-pairing",
+    "steps": [
+      "1. Ensure both earbuds are fully charged, powered on, and connected to a device.",
+      "2. Note the Bluetooth pairing details (device names, MAC addresses if visible).",
+      "3. Place the left earbud into the charging case and close the lid.",
+      "4. Wait 10 seconds, then open the Bluetooth settings on the device.",
+      "5. Check if the left earbud is still listed as a paired device.",
+      "6. Check if the right earbud is still listed as a connected device."
+    ],
+    "expected": "The left earbud remains in the paired devices list (not unpaired). The right earbud remains connected. No devices show as 'unpaired' or require re-pairing. The left earbud can be reconnected by simply removing it from the case."
+  }
+]
