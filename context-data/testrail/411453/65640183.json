@@ -10,26 +10,26 @@
     "Open the app",
     "Change a setting in the app",
     "Observe the logged event",
-    "Check Firebase Analytics dashboard for 'setting_changed' event",
-    "Verify default dashboard elements: Graph for this event, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, App Environment",
-    "Verify tracked parameters: Device PID, Global Setting ID, Settings Value"
+    "Check Firebase for the 'setting_changed' event",
+    "Verify the default dashboard elements are present: Graph for this event, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, App Environment",
+    "Verify additional tracked parameters: Device PID, Global Setting ID, Settings Value"
   ],
-  "expected": "The 'setting_changed' event is logged to Firebase Analytics when a setting is changed in the app or synced to the device. The dashboard displays the default elements (Graph, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, App Environment) and includes the tracked parameters (Device PID, Global Setting ID, Settings Value).",
+  "expected": "The 'setting_changed' event is logged in Firebase with the correct parameters (Device PID, Global Setting ID, Settings Value) and the default dashboard elements are displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "setting_changed",
     "Firebase event",
-    "Firebase Analytics",
     "Device PID",
     "Global Setting ID",
     "Settings Value",
+    "analytics dashboard",
     "event tracking",
-    "analytics dashboard"
+    "app settings sync"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "e752ae2786119cc06ff7c5a82101f97cccf5c93a6070edf991ce0a7030bc1b3e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "processed_at": "2026-04-24T11:50:53.333589Z",
   "status": "active"
 }
