@@ -9,24 +9,24 @@
   "steps": [
     "Set phone to dark mode in settings.",
     "Install and open the Lens app.",
-    "Go through all onboarding screens."
+    "Go through all onboarding screens and verify that all elements, images, and colors match the Figma specification."
   ],
-  "expected": "All onboarding screens are displayed correctly in dark mode, with all elements, images, and colors matching the Figma specification.",
+  "expected": "All onboarding screens display correctly in dark mode, with all elements, images, and colors matching the Figma specification.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dark mode",
     "onboarding screens",
-    "display verification",
     "Lens app",
-    "installation",
-    "phone settings",
-    "UI appearance",
-    "first launch"
+    "Figma specification",
+    "UI verification",
+    "display verification",
+    "theme testing",
+    "visual regression"
   ],
   "source_last_updated": "1760524200",
   "source_hash": "3f990d6859d6895c8d07cf35199c2be6909c4f145f04e9d57b460261b208b152",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:33:28.340391Z",
+  "processed_at": "2026-04-24T10:40:23.056019Z",
   "status": "active"
 }
