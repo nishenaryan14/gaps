@@ -1,0 +1,31 @@
+{
+  "id": "65459460",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Three easy steps screen",
+  "feature": "Software Update - DFU",
+  "scenario": "DFU software update shows \"Three easy steps\" screen with active \"Start Update\" button after tapping Continue on the Update button",
+  "steps": [
+    "Tap Continue on the Update button.",
+    "Observe the screen that appears."
+  ],
+  "expected": "The \"Three easy steps\" title screen is displayed with a picture and textual instructions. The \"Start Update\" button is available and active.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU software update",
+    "Three easy steps screen",
+    "Start Update button",
+    "Continue button",
+    "Update button",
+    "firmware update screen",
+    "update initiation",
+    "software update flow"
+  ],
+  "source_last_updated": "1763369567",
+  "source_hash": "3b28feceb9dacb22102ad5be3d852e44392986b9140dc98e660ccf6dfad40b18",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.412172Z",
+  "status": "active"
+}
