@@ -12,12 +12,12 @@
     "Tap each license link (e.g., MIT, Apache 2.0).",
     "Verify that each license displays two links: Source and License link.",
     "Tap each License link.",
-    "Verify that the view opens with a headline, description, and a Cancel button (X) in the upper right corner.",
+    "Verify that the view shows a headline, description, and a Cancel button (X) in the upper right corner.",
     "Open Phone Settings.",
     "Navigate to Poly Lens > Acknowledgements.",
     "Confirm that the same licenses appear in the Acknowledgements section."
   ],
-  "expected": "Each license link displays Source and License links. Tapping a License link opens a view with a headline, description, and a Cancel (X) button. The same licenses appear in Phone Settings > Poly Lens > Acknowledgements.",
+  "expected": "Each license link displays Source and License links. Tapping a License link opens a view with a headline, description, and a Cancel (X) button. The same licenses are listed in Phone Settings > Poly Lens > Acknowledgements.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -27,12 +27,12 @@
     "Source link",
     "License link",
     "Acknowledgements",
-    "Phone Settings",
-    "Poly Lens"
+    "Poly Lens",
+    "Phone Settings"
   ],
   "source_last_updated": "1759416210",
   "source_hash": "f4f9b45265d0c4ffcf309c4ba1248f00826c053c3c558ed4f8bd7a458471d879",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.756158Z",
+  "processed_at": "2026-04-24T11:23:05.355862Z",
   "status": "active"
 }
