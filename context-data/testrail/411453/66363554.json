@@ -1,0 +1,40 @@
+{
+  "id": "66363554",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EB has update, CC on the latest -  Update button, Release notes and Poly Lens links are available",
+  "feature": "Software Update",
+  "scenario": "When an Earbud update is available and the Charge Case is up-to-date, tapping the Update button on the home screen navigates to Device Settings with the Software Update tab expanded, showing an Earbud-only update button and relevant links.",
+  "steps": [
+    "Ensure the Charge Case (CC) is on the latest version.",
+    "Ensure an Earbud (EB) update is available.",
+    "Observe the device home screen.",
+    "Tap the Update button on the device home screen.",
+    "Observe the Device Settings screen.",
+    "Verify the Software Update tab is expanded.",
+    "Observe the Settings tab for an update button for Earbuds only.",
+    "Check for a '1' tag on the Settings tab.",
+    "Observe the information displayed under Charge Case.",
+    "Check for a link to Release Notes (for Earbuds).",
+    "Check for a link to Poly Lens App (for Charge Case)."
+  ],
+  "expected": "The Update button is displayed on the device home screen. Tapping it navigates to Device Settings with the Software Update tab expanded. An update button for Earbuds only is shown with a '1' tag on the Settings tab. Information about needing Poly Lens Desktop is displayed under Charge Case. Links to Release Notes (for Earbuds) and Poly Lens App (for Charge Case) are present.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Earbud update",
+    "Charge Case",
+    "Software Update tab",
+    "Device Settings",
+    "home screen",
+    "Update button",
+    "Release Notes",
+    "Poly Lens App"
+  ],
+  "source_last_updated": "1762331320",
+  "source_hash": "021962d17b1dc51b5676b08f71c5102d68bd44f8f17ad220aad7e34115ea26b0",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.433691Z",
+  "status": "active"
+}
