@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Software Update - DFU - Back buttons",
   "feature": "Software Update / DFU",
-  "scenario": "Verify back button navigation works correctly at each step of the DFU flow, returning to the previous screen.",
+  "scenario": "Verify back button navigation during DFU flow returns user to correct previous screens",
   "steps": [
     "Pair headset and launch app.",
     "Go to Device Settings > Software Update.",
@@ -24,11 +24,11 @@
     "Software Update",
     "return to previous screen",
     "navigation verification",
-    "device settings"
+    "headset settings"
   ],
   "source_last_updated": "1763134292",
   "source_hash": "db7bea9451ea7f921f50c5f7b46c5821033e1d72e2a6279ec1fc84092c0b6b2d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.412172Z",
+  "processed_at": "2026-04-24T11:50:53.275156Z",
   "status": "active"
 }
