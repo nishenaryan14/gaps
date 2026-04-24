@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "EQ - Select a value, close the Settings screen, reopen it - the selected value persists",
   "feature": "EQ (Equalizer)",
-  "scenario": "Verify that the selected EQ value persists after closing and reopening the Settings screen for all possible values (Bass, Flat, Bright, Custom EQ).",
+  "scenario": "Verify that the selected EQ value persists after closing and reopening the Settings screen for all possible values.",
   "steps": [
     "Open the Settings screen.",
     "Select an EQ value (e.g., Bass, Flat, Bright, or Custom EQ).",
@@ -13,7 +13,7 @@
     "Reopen the Settings screen.",
     "Check the currently selected EQ value."
   ],
-  "expected": "The EQ value selected before closing the Settings screen should still be selected after reopening it.",
+  "expected": "The EQ value selected before closing the Settings screen should still be selected after reopening it. This should hold true for all possible EQ values (Bass, Flat, Bright, Custom EQ).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -29,6 +29,6 @@
   "source_last_updated": "1761144515",
   "source_hash": "fc29ae97a9d934eae0d210d2d5eb2f4fd5e8ec723a170c2e507e1e11a2f96319",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.399301Z",
+  "processed_at": "2026-04-24T11:50:53.250815Z",
   "status": "active"
 }
