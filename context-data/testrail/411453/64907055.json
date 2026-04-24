@@ -5,21 +5,20 @@
   "project": "411453",
   "title": "App Settings - General - Account",
   "feature": "App Settings - General - Account",
-  "scenario": "Verify that tapping \"Account\" under \"General\" in App Settings expands to show \"Your Account\" section with \"Log in\" button and \"You are not currently logged in\" message, plus \"Share Data\" toggle, and tapping back returns to App Settings.",
+  "scenario": "Verify that tapping \"Account\" under \"General\" in App Settings expands to show \"Your Account\" section with \"Log in\" button and \"You are not currently logged in\" message, and \"Share Data\" section with toggle and description, then tapping back returns to App Settings.",
   "steps": [
-    "1. Open the App Settings page.",
-    "2. Tap on \"Account\" under the \"General\" section.",
+    "1. Open App Settings.",
+    "2. Tap on \"Account\" under \"General\".",
     "3. Observe the expanded view.",
     "4. Verify that a \"Your Account\" section is displayed.",
     "5. Verify that the \"Your Account\" section contains an active \"Log in\" button.",
     "6. Verify that the \"Your Account\" section displays the message \"You are not currently logged in\".",
     "7. Verify that a \"Share Data\" section is displayed.",
     "8. Verify that the \"Share Data\" section contains a toggle.",
-    "9. Verify that the \"Share Data\" section contains a description about sharing basic device and app information.",
-    "10. Tap the back button/gesture to return to the App Settings page.",
-    "11. Verify that the App Settings page is displayed."
+    "9. Verify that the \"Share Data\" section contains a description about sharing basic device/app information.",
+    "10. Tap the back button to return to the App Settings page."
   ],
-  "expected": "Tapping \"Account\" under \"General\" in App Settings expands to show a \"Your Account\" section with an active \"Log in\" button and a \"You are not currently logged in\" message, along with a \"Share Data\" section with a toggle and description about sharing basic device and app information. Tapping back returns the user to the App Settings page.",
+  "expected": "Tapping \\\"Account\\\" under \\\"General\\\" in App Settings expands to show a \\\"Your Account\\\" section with an active \\\"Log in\\\" button and message \\\"You are not currently logged in\\\", along with a \\\"Share Data\\\" section with a toggle and description about sharing basic device/app information. Tapping back returns the user to the App Settings page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -35,6 +34,6 @@
   "source_last_updated": "1759413909",
   "source_hash": "5a8c6ebd979d1c91133c5fe3d3fd348a6310214fbb0f1bfd54388debf805b986",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.353822Z",
+  "processed_at": "2026-04-24T11:50:53.143442Z",
   "status": "active"
 }
