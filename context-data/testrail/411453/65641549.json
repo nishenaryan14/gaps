@@ -1,0 +1,34 @@
+{
+  "id": "65641549",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - changes are present after closing/opening the Settings screen",
+  "feature": "ANC (Active Noise Cancellation)",
+  "scenario": "ANC settings revert after closing and reopening the Settings screen",
+  "steps": [
+    "1. Start the app with the device.",
+    "2. Open the ANC tab.",
+    "3. Set up ANC to some value.",
+    "4. Close/open the Settings screen.",
+    "5. Check the setting."
+  ],
+  "expected": "The values should remain as set in step 3.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "ANC",
+    "settings revert",
+    "Settings screen",
+    "close/open",
+    "ANC value",
+    "persistence",
+    "audio settings",
+    "noise cancellation"
+  ],
+  "source_last_updated": "1760956286",
+  "source_hash": "6180721fb1c2bb8000319ebca0d008becfd31613a476c4230f9cd1facfbffded",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.395741Z",
+  "status": "active"
+}
