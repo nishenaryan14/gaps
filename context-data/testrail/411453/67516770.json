@@ -5,10 +5,10 @@
   "project": "411453",
   "title": "Device Home Screen - Device image updates after changing earcups",
   "feature": "Device Home Screen",
-  "scenario": "Headset image updates immediately when earcups are swapped on supported devices",
+  "scenario": "Device headset image updates immediately when swappable earcups are changed on supported devices",
   "steps": [
     "Pair a device that supports different earcups and go to Device Home Screen - headset image should show currently attached earcups.",
-    "Remove earcups - image remains the same as before.",
+    "Remove earcups - image remains the same.",
     "Attach different earcups - the headset image in the app updates immediately after the earcups are changed."
   ],
   "expected": "The headset image in the app updates immediately after the earcups are changed.",
@@ -16,7 +16,7 @@
   "edge_cases": [],
   "keywords": [
     "headset image update",
-    "earcup swap",
+    "swappable earcups",
     "earcup detection",
     "device home screen",
     "earcup change",
@@ -27,6 +27,6 @@
   "source_last_updated": "1769426592",
   "source_hash": "1abb9f74fa7bcdb1d02f7ec1d0cdd43b30a101db9d1a36d6ff6c9f9953436791",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.334469Z",
+  "processed_at": "2026-04-24T11:50:53.115917Z",
   "status": "active"
 }
