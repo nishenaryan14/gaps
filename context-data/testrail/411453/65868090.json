@@ -9,8 +9,8 @@
   "steps": [
     "Pair an unsupported device (e.g., BB Fit, Sync60) with the mobile app.",
     "Ensure the device is connected.",
-    "Navigate to the home screen of the mobile app.",
-    "Observe the device list displayed on the home screen."
+    "Open the home screen of the mobile app.",
+    "Check the device list displayed on the home screen."
   ],
   "expected": "The unsupported device should not appear in the device list on the home screen.",
   "coverage": [],
@@ -22,13 +22,12 @@
     "paired",
     "connected",
     "mobile app",
-    "device visibility",
     "BB Fit",
     "Sync60"
   ],
   "source_last_updated": "1761837100",
   "source_hash": "a72aa3be5070c15755d5c5bcda9d936e6d0390612062963581fda73f3be52fc3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.329455Z",
+  "processed_at": "2026-04-24T11:50:53.114408Z",
   "status": "active"
 }
