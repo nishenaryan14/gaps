@@ -1,0 +1,33 @@
+{
+  "id": "66317729",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - Rename, min chars",
+  "feature": "Rename Device",
+  "scenario": "Verify that renaming a device with a single character is handled correctly",
+  "steps": [
+    "Navigate to Device Settings > General",
+    "Click on the device's official name",
+    "Enter 1 character for the name",
+    "Click Done"
+  ],
+  "expected": "The device's name is changed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "rename device",
+    "single character",
+    "device name validation",
+    "device settings",
+    "name length limit",
+    "device naming",
+    "character limit",
+    "name update"
+  ],
+  "source_last_updated": "1772624495",
+  "source_hash": "3146ae9d7cd9d7354e062d1369edff03db5cfb30b3411147756db43b3460702f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.375617Z",
+  "status": "active"
+}
