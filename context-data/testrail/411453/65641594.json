@@ -1,0 +1,33 @@
+{
+  "id": "65641594",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Changed custom EQ, not saved, exit/return to EQ, changes are present",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Custom EQ changes persist after exiting and returning to the EQ screen without being saved",
+  "steps": [
+    "Open the EQ screen",
+    "Modify custom EQ values",
+    "Exit the EQ screen",
+    "Return to the EQ screen"
+  ],
+  "expected": "Changed custom EQ values should be saved, or if not saved, they should be reverted to the previous values after exiting and returning.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ screen",
+    "custom EQ",
+    "EQ values",
+    "persist",
+    "unsaved changes",
+    "exit",
+    "return",
+    "audio settings"
+  ],
+  "source_last_updated": "1761213340",
+  "source_hash": "4e0a08866a1edac4cba9373669535fb75a2076e201c5e1affa32bbe92503e8bd",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.401301Z",
+  "status": "active"
+}
