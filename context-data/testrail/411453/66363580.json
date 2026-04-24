@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Home Screen - Update Available - Both earbuds are connected",
   "feature": "Home Screen",
-  "scenario": "Verify that when both earbuds are connected and an update is available, the Status Box displays battery levels, connection status, and version info, and tapping it hides the software fields.",
+  "scenario": "Verify that when both earbuds are connected and an update is available, the Status Box displays battery levels, connection status, and software version details, and tapping it hides the software fields.",
   "steps": [
     "Ensure both earbuds are connected to the device.",
     "Confirm that a firmware update is available for the earbuds.",
@@ -17,22 +17,22 @@
     "Tap on the Status Box.",
     "Verify that the Software and Available fields are hidden after tapping."
   ],
-  "expected": "The Status Box shows Left, Right, and Case battery levels, a \"connected\" status with green indicator, current software version with red indicator, and the available update version. After tapping, the Software and Available fields are hidden.",
+  "expected": "The Status Box shows Left, Right, and Case battery levels, a \"connected\" status with green indicator, current software version with red indicator, and the available update version. After tapping the Status Box, the Software and Available fields are hidden.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Status Box",
+    "earbuds connected",
     "battery levels",
-    "connection status",
     "software version",
     "firmware update",
-    "earbuds",
-    "tap to hide",
-    "version info"
+    "connection status",
+    "green indicator",
+    "red indicator"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "fa494266b8f3136e2bb8c09a90f96c57e06282d2f084542fa2d84c86270526d7",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.434220Z",
+  "processed_at": "2026-04-24T11:50:53.350967Z",
   "status": "active"
 }
