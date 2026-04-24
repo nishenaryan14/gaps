@@ -1,0 +1,31 @@
+{
+  "id": "65387059",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Feedback - Mopinion form is opened",
+  "feature": "Feedback - Mopinion",
+  "scenario": "Verify the Mopinion feedback form displays correctly with empty fields (Your Feedback, Name, Last name, email), options (Bug, Suggestion, Compliment, Other), and a Send button under App Settings > Feedback tab.",
+  "steps": [
+    "Navigate to App Settings.",
+    "Click on the Feedback tab.",
+    "Observe the Mopinion feedback form displayed."
+  ],
+  "expected": "The Mopinion feedback form is displayed as a web page containing empty fields and options. Options include: Bug, Suggestion, Compliment, Other. Fields include: Your Feedback, Name, Last name, email. A Send button is present at the bottom.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Mopinion feedback form",
+    "App Settings",
+    "Feedback tab",
+    "empty fields",
+    "form display verification",
+    "Bug Suggestion Compliment Other",
+    "Send button"
+  ],
+  "source_last_updated": "1776241074",
+  "source_hash": "d2aec0986eb39f4cb29960a5b820141089b6a0573dcc1c94a8d2e469e98b7c13",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.363453Z",
+  "status": "active"
+}
