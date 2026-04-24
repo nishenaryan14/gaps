@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "Analytics - Logout Initiated",
   "feature": "Analytics",
-  "scenario": "Verify that after a user logs out, the Firebase dashboard displays all default and additional event elements with updated event counts after a few hours.",
+  "scenario": "Verify that after a user logs out, the Firebase dashboard for the Logout Initiated event displays default elements and updates event counts after a few hours.",
   "steps": [
-    "Log out from the application.",
+    "Open the Logout Initiated Firebase page \u2013 verify the page opens properly and contains default elements: graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment, screen name, user type, and action.",
+    "Log out of your account on mobile.",
     "Wait for a few hours for event counts to update.",
-    "Navigate to the Firebase dashboard page for this event.",
-    "Observe the default elements displayed: graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment.",
-    "Check for additional elements: Screen name, User Type, and Action.",
-    "Verify that the event count for related elements has increased after the logout."
+    "Check the Firebase dashboard page for the Logout Initiated event \u2013 verify that the event count for related elements has increased."
   ],
-  "expected": "The Firebase dashboard displays all default elements (graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, App Environment) and additional elements (Screen name, User Type, Action). The event count for related elements increases after the user logs out.",
+  "expected": "The Logout Initiated Firebase page displays all default elements (graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment, screen name, user type, and action). After logging out and waiting a few hours, the event count for related elements increases.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Firebase dashboard",
-    "event count update",
-    "logout verification",
-    "default event elements",
-    "additional event elements",
-    "event analytics",
-    "user logout"
+    "Logout Initiated event",
+    "event count",
+    "logout",
+    "mobile logout",
+    "analytics",
+    "event tracking",
+    "dashboard elements"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "cd2636a2ad732cc814c85f4e6c9b9dacc4dd6a5972ccb161744941094de5914f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "processed_at": "2026-04-24T11:50:53.335141Z",
   "status": "active"
 }
