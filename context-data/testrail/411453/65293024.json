@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "[IOS]Onboarding - Organized page has a continue button",
   "feature": "Onboarding",
-  "scenario": "Navigate to POLY LENS Login screen by tapping Continue on the Organized page after skipping initial screens",
+  "scenario": "After tapping Skip on initial screens, the Organized page shows a Continue button that navigates to the POLY LENS Login screen with Login and Continue as Guest options.",
   "steps": [
     "Open the app and tap Skip on the initial screens.",
     "Observe the Organized page that appears.",
@@ -16,18 +16,18 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "POLY LENS",
-    "Login screen",
+    "Skip",
     "Organized page",
     "Continue button",
-    "Skip",
-    "initial screens",
-    "app navigation",
-    "onboarding"
+    "POLY LENS Login",
+    "Login",
+    "Continue as Guest",
+    "navigation",
+    "initial screens"
   ],
   "source_last_updated": "1764319860",
   "source_hash": "815e7efb7f3f8ba69170856220818683e683d5c03b6622e5572c9ecfa3c83bed",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.310357Z",
+  "processed_at": "2026-04-24T11:50:53.092151Z",
   "status": "active"
 }
