@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Software Update - Headset and all other components are up to date - UI",
   "feature": "Software Update - UI",
-  "scenario": "Verify Software Update tab displays \"up to date\" status with correct entries and firmware info for single headsets, headsets with charge stand, and earbuds with charge case.",
+  "scenario": "Verify Software Update tab displays \"up to date\" status with correct device entries, images, names, messages, and firmware versions for single headsets, headsets with charge stand, and earbuds with charge case.",
   "steps": [
-    "Open the Software Update tab.",
-    "Check the displayed content for a single headset.",
-    "Verify there is one entry with a device image, device name, the message \"Your Headset is Up To Date\", and the current firmware version.",
-    "Check the displayed content for a headset with a charge stand.",
-    "Verify there are two entries (headset and stand), each with a device image, device name, the message \"up to date\", and the firmware version.",
-    "Check the displayed content for earbuds with a charge case.",
-    "Verify there are two entries (earbuds and case), each with a device image, device name, the message \"up to date\", and the firmware version."
+    "Open the Software Update tab in the application.",
+    "Check the display for a single headset connected.",
+    "Verify that a single entry is shown with: device image, device name, 'Your Headset is Up To Date' message, and current firmware version.",
+    "Check the display for a headset with a charge stand connected.",
+    "Verify that two entries are shown (headset and stand), each with: device image, device name, appropriate 'up to date' message, and current firmware version.",
+    "Check the display for earbuds with a charge case connected.",
+    "Verify that two entries are shown (earbuds and case), each with: device image, device name, appropriate 'up to date' message, and current firmware version."
   ],
-  "expected": "The Software Update tab displays \\\"up to date\\\" status for all connected components with the correct number of entries and details per device type.",
+  "expected": "The Software Update tab displays 'up to date' status for all connected components. Single headsets show one entry with device image, name, 'Your Headset is Up To Date' message, and current firmware version. Headsets with charge stand show two entries (headset and stand) each with device image, name, appropriate 'up to date' message, and current firmware. Earbuds with charge case show two entries (earbuds and case) each with device image, name, appropriate 'up to date' message, and current firmware.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Software Update tab",
-    "up to date",
-    "firmware version",
-    "headset",
+    "up to date status",
+    "device entries",
+    "firmware versions",
+    "single headset",
     "charge stand",
-    "earbuds",
-    "charge case",
-    "device entries"
+    "earbuds charge case",
+    "device image and name"
   ],
   "source_last_updated": "1763377484",
   "source_hash": "e43741e93a8d6119aec4664fbd26e34174c72d67eeed746c7c0bfac1d80e0eb0",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "processed_at": "2026-04-24T11:50:53.292091Z",
   "status": "active"
 }
