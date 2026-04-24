@@ -9,12 +9,14 @@
   "steps": [
     "Pair and connect multiple headsets to the system.",
     "Navigate to the device home page.",
-    "Observe the displayed devices on the home page.",
-    "Check the dots at the bottom of the screen to see the number of connected devices and which device is currently displayed.",
-    "Swipe left to navigate to the next connected device.",
-    "Swipe right to navigate to the previous connected device."
+    "Observe the dots at the bottom of the screen indicating the number of connected devices.",
+    "Check that the number of dots matches the number of connected devices.",
+    "Identify which dot is highlighted to indicate the currently displayed device.",
+    "Swipe left to view the next connected device.",
+    "Swipe right to view the previous connected device.",
+    "Verify that all connected devices are properly displayed when swiping through them."
   ],
-  "expected": "All connected devices are properly displayed on the device home page. Dots at the bottom indicate the number of connected devices and which device is currently displayed. The user can swipe left or right to navigate between connected devices.",
+  "expected": "All connected devices are properly displayed on the device home page. Dots at the bottom indicate the number of connected devices and which device is currently displayed. Users can swipe left or right to view each connected device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,11 +26,12 @@
     "navigation dots",
     "swipe functionality",
     "connected devices display",
+    "dot highlighting",
     "device navigation"
   ],
   "source_last_updated": "1761749623",
   "source_hash": "5464078184de509e68e3afb507374ea512ba3582da474bb167200e349b07dfaa",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.738923Z",
+  "processed_at": "2026-04-24T11:23:05.337518Z",
   "status": "active"
 }
