@@ -5,28 +5,27 @@
   "project": "411453",
   "title": "Device Home Screen - Quick Settings disabled",
   "feature": "Device Home Screen",
-  "scenario": "Quick Settings are hidden from the Device Home Screen when the Quick Settings toggle is set to OFF in Device Settings.",
+  "scenario": "Verify that Quick Settings are not displayed on the Device Home Screen when the Quick Settings Selection toggle is turned OFF in Device Settings.",
   "steps": [
-    "Go to Device Settings",
-    "Select Quick Settings Selection",
-    "Set Quick Settings toggle to OFF",
-    "Return to Device Home Screen"
+    "Pair Headset and go to Device Settings > Quick Settings Selection.",
+    "Change toggle to OFF.",
+    "Go back to Device Home Screen."
   ],
-  "expected": "Quick Settings are not displayed on the Device Home Screen",
+  "expected": "Quick Settings are not displayed on Device Home Screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Quick Settings",
     "Device Home Screen",
-    "Quick Settings toggle",
+    "Quick Settings Selection toggle",
     "Device Settings",
-    "Quick Settings Selection",
     "toggle OFF",
-    "hidden"
+    "Headset",
+    "Pair"
   ],
   "source_last_updated": "1764601183",
   "source_hash": "3309f8697019c57b509501245cfb18badbc4003b1aca8493d1586977c015652b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.086978Z",
+  "processed_at": "2026-04-24T10:51:32.737874Z",
   "status": "active"
 }
