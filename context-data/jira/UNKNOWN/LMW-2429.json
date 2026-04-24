@@ -1,0 +1,39 @@
+{
+  "id": "LMW-2429",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "ANDROID \ud83d\udfe5 Correct Firmware version for Charge Case but Update available on Software tab after DFU",
+  "feature": "Android App - Device Settings / Software",
+  "scenario": "After DFU update on Charge Case, correct firmware version shown but Update button remains active with same build number, causing immediate DFU failure until app restart.",
+  "description_clean": "After performing a DFU update on the Charge Case, the correct firmware version is displayed but the \"Update\" button remains available with the same build number. Tapping the update button causes DFU to fail immediately. The proper firmware version only appears after restarting the app.",
+  "steps": [
+    "Perform a DFU update on the Charge Case.",
+    "Observe the firmware version displayed after the update.",
+    "Check if the 'Update' button is still available with the same build number.",
+    "Tap the 'Update' button.",
+    "Observe the result of tapping the update button.",
+    "Restart the app.",
+    "Observe the firmware version displayed after restarting the app."
+  ],
+  "expected": "After the DFU update, the correct firmware version should be displayed, the \"Update\" button should no longer be available (or should reflect the new build number), and tapping it should not cause a DFU failure. The correct firmware version should persist without needing to restart the app.",
+  "actual": "After the DFU update, the correct firmware version is displayed but the \"Update\" button remains available with the same build number. Tapping the update button causes DFU to fail immediately. The proper firmware version only appears after restarting the app.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "DFU update",
+    "Charge Case",
+    "firmware version",
+    "Update button",
+    "build number",
+    "DFU failure",
+    "app restart",
+    "firmware update stuck"
+  ],
+  "source_last_updated": "2026-04-21T13:41:03.000+0000",
+  "source_hash": "9474086ca2965b2f193c9a25c2c7556a55ccfc22755f4c8b55124f5cae611a02",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.044153Z",
+  "status": "active"
+}
