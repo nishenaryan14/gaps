@@ -1,0 +1,37 @@
+{
+  "id": "65248799",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Don't Allow - Cancel [Deprecated for IOS]",
+  "feature": "Find My Device",
+  "scenario": "Verify the \"Don't Allow\" and \"Cancel\" flow in Find My Device when location permission is denied and then cancelled, ensuring the permission prompt reappears after app restart.",
+  "steps": [
+    "Start app with HS connected.",
+    "Go to main menu.",
+    "Tap \"Find My Device\".",
+    "Tap \"Don't Allow\" on location permission prompt.",
+    "Tap \"Cancel\".",
+    "Tap \"Find My Device\" again.",
+    "Tap \"Cancel\" again.",
+    "Restart app and open FMD."
+  ],
+  "expected": "1. After step 3, location permission prompt appears with options: \"Allow Once\", \"Allow while using app\", \"Don't Allow\".<br>2. After step 4, permission prompt shows \"Cancel\" and \"Enable Now\" with FMD screen visible in background.<br>3. After step 5, navigates back to Poly Lens Menu.<br>4. Steps 6-8 repeat similar behavior as steps 4-5.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "location permission",
+    "Don't Allow",
+    "Cancel",
+    "permission prompt",
+    "app restart",
+    "permission denied",
+    "permission flow"
+  ],
+  "source_last_updated": "1760352207",
+  "source_hash": "b23fd6cd33c2f7963d15da86bc45580659a4ab5bcab2e2067a6cd88b9b00dd0f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:24.322042Z",
+  "status": "active"
+}
