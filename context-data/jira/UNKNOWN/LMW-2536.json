@@ -1,0 +1,36 @@
+{
+  "id": "LMW-2536",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "ANDROID | Log In - When user is Logged out button does not work but user is Logged out",
+  "feature": "Android - Log In / Log Out",
+  "scenario": "Tapping Log Out button does not update UI to show Log In button, but user is logged out successfully.",
+  "description_clean": "When a user taps the Log Out button, the button does not respond visually (no action observed), but the user is actually logged out. Upon re-entering the Account tab, the user is logged out correctly. The issue appears to be a UI-only bug where the Log Out button remains displayed instead of switching to the Log In button after logout.",
+  "steps": [
+    "1. Open the app and navigate to the Account tab.",
+    "2. Tap the Log Out button.",
+    "3. Observe the visual response of the button after tapping.",
+    "4. Check if the user is logged out by navigating away and returning to the Account tab."
+  ],
+  "expected": "After tapping Log Out, the button should visually respond (e.g., loading state, disabled) and immediately switch to a Log In button. The user should be logged out.",
+  "actual": "The Log Out button does not respond visually (no action observed), but the user is actually logged out. Upon re-entering the Account tab, the user is logged out correctly, but the Log Out button remains displayed instead of switching to the Log In button.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "Log Out button",
+    "UI not updating",
+    "Log In button not showing",
+    "Account tab",
+    "visual response",
+    "session state",
+    "button state not refreshing",
+    "logout UI bug"
+  ],
+  "source_last_updated": "2026-04-20T13:41:07.000+0000",
+  "source_hash": "1b550c8a93cc0093fec68c8dd24ef51c88899b42b248ad42fe638d5fa3681573",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.043036Z",
+  "status": "active"
+}
