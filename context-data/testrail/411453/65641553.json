@@ -1,0 +1,33 @@
+{
+  "id": "65641553",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - Transparency mode behavior during the call",
+  "feature": "ANC (Active Noise Cancellation)",
+  "scenario": "Verify Transparency mode is disabled and cannot be selected during an active call on an ANC-supporting device.",
+  "steps": [
+    "Launch app with ANC-supporting device.",
+    "Make a call (mobile or Teams/Zoom).",
+    "Open Device Settings and expand ANC tab.",
+    "Attempt to select Transparency.",
+    "Tap Ok."
+  ],
+  "expected": "Transparency Mode is greyed out. Pop-up appears with message \"This setting cannot be adjusted while on a call\" and an \"Ok\" button. Dialog closes after tapping Ok.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Transparency mode disabled",
+    "ANC-supporting device",
+    "active call",
+    "Device Settings ANC tab",
+    "Transparency selection blocked",
+    "call scenario ANC",
+    "noise control mode restriction"
+  ],
+  "source_last_updated": "1760956286",
+  "source_hash": "f49d3079b3e31938fdc247ad36d398d61b3e520fd19203bae7abb06418a253ab",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
