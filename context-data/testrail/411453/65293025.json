@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Onboarding - Eula page - License Agreement and Privacy Policy links when the internet is turned off",
   "feature": "Onboarding - EULA Page",
-  "scenario": "User taps License Agreement or Privacy Policy links on EULA page without internet connection and sees \"Something went wrong\" screen, then taps Cancel to return to the welcome screen.",
+  "scenario": "User taps License Agreement or Privacy Policy links on EULA page without internet and sees \"Something went wrong\" screen, then taps Cancel to return to the \"Well hello, first things first...\" screen.",
   "steps": [
-    "Turn off the internet connection.",
+    "Turn off the internet connection on the device.",
     "Open the app and navigate to the EULA page.",
     "Tap the License Agreement link.",
-    "Observe the result.",
-    "Tap the Privacy Policy link.",
-    "Observe the result.",
+    "Observe the screen that appears.",
     "Tap the Cancel button.",
-    "Observe the result."
+    "Observe the resulting screen."
   ],
-  "expected": "Tapping the License Agreement or Privacy Policy links should load the respective content or show an appropriate error message. Tapping Cancel should return to the \"Well hello, first things first...\" screen.",
+  "expected": "Tapping the License Agreement or Privacy Policy links should load the respective content or show an appropriate error message. Tapping Cancel should return the user to the \"Well hello, first things first...\" screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "EULA page",
     "License Agreement",
     "Privacy Policy",
-    "no internet connection",
+    "no internet",
+    "offline",
     "Something went wrong",
     "Cancel button",
-    "welcome screen",
-    "offline behavior"
+    "error handling"
   ],
   "source_last_updated": "1760528315",
   "source_hash": "0eb2aa1ed38ea63c0fb8a78c84604e51fdcd7d6fcea6253bae5fc7e7f9352691",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.305793Z",
+  "processed_at": "2026-04-24T11:50:53.086335Z",
   "status": "active"
 }
