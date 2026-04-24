@@ -7,29 +7,27 @@
   "feature": "User Guides - Onboarding",
   "scenario": "Fit Test page should not be displayed or accessible during onboarding when the device is not connected",
   "steps": [
-    "Navigate to the onboarding user guides section.",
-    "Select a device that is not currently connected.",
-    "Observe the list of onboarding screens presented.",
-    "Check if the Fit Test page appears in the onboarding screens.",
-    "Attempt to start a fit test for the disconnected device.",
-    "Observe the system response."
+    "1. Ensure a device is not currently connected.",
+    "2. Navigate to the onboarding screens for that device.",
+    "3. Observe the list of onboarding screens displayed.",
+    "4. Attempt to start a Fit Test for the device that is not connected."
   ],
-  "expected": "The Fit Test page should not be displayed as part of the onboarding screens for a device that is not connected. Starting a fit test for a device that is not connected should not be possible.",
+  "expected": "The Fit Test page should not be displayed as part of the onboarding screens. Starting a Fit Test for a device that is not connected should not be possible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Fit Test page",
+    "Fit Test",
     "onboarding",
     "device not connected",
     "accessibility",
-    "disconnected device",
-    "user guides",
-    "fit test start",
-    "system response"
+    "screen visibility",
+    "device connection",
+    "onboarding screens",
+    "Fit Test access"
   ],
   "source_last_updated": "1760532159",
   "source_hash": "a583eaf4f66a06cd3774cf44e24f905e260725fa51b143953df23e7ffcab94a8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.635014Z",
+  "processed_at": "2026-04-24T10:51:33.404084Z",
   "status": "active"
 }
