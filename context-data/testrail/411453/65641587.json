@@ -1,0 +1,38 @@
+{
+  "id": "65641587",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Custom EQ, save a custom EQ, change some values, Save EQ",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Verify that after modifying a saved custom EQ and clicking \"Save EQ\" again, the updated values are correctly persisted.",
+  "steps": [
+    "Open the EQ (Equalizer) interface.",
+    "Create or load a custom EQ preset.",
+    "Adjust some EQ values (e.g., frequency bands, gain, Q-factor).",
+    "Click the 'Save EQ' button to save the preset.",
+    "Change some EQ values again (different positions/values from the previous save).",
+    "Click the 'Save EQ' button again to overwrite the existing preset.",
+    "Close and reopen the EQ interface, or reload the preset.",
+    "Verify that the new positions/values (from the second save) are correctly displayed and applied."
+  ],
+  "expected": "After saving the custom EQ a second time, the EQ should retain and display the latest saved values/positions correctly upon reloading.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ",
+    "Equalizer",
+    "custom preset",
+    "Save EQ",
+    "persist",
+    "overwrite",
+    "frequency bands",
+    "gain",
+    "Q-factor"
+  ],
+  "source_last_updated": "1761210811",
+  "source_hash": "6477fb92fbbb29a518452b1eebf51cd62b8e4d8e159a57c98a08f4590fe82ffc",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "status": "active"
+}
