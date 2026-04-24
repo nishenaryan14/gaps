@@ -5,13 +5,13 @@
   "project": "411453",
   "title": "DFU - Emu/Tern - Charge Case update needed popup after earbud DFU",
   "feature": "DFU / Firmware Update",
-  "scenario": "After completing a DFU for earbuds, verify that a \"Case Update Needed\" popup appears on the Device Home Screen when the charge case firmware is outdated.",
+  "scenario": "After completing a DFU for earbuds, verify that a \"Case Update Needed\" popup appears on the Device Home Screen instructing the user to use the Poly Lens Desktop app for case updates.",
   "steps": [
     "Ensure the charge case and earbuds are on outdated firmware.",
     "Perform a Device Firmware Update (DFU) for the earbuds.",
     "Observe the Device Home Screen after the DFU completes."
   ],
-  "expected": "A popup appears on the Device Home Screen stating \"Case Update Needed\" with a message that the earbuds have been updated but the charge case requires updating via the Poly Lens Desktop app.",
+  "expected": "A popup appears on the Device Home Screen stating \"Case Update Needed\" with a message that earbuds have been updated but case updates must be made using the Poly Lens Desktop app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -19,14 +19,14 @@
     "Device Firmware Update",
     "Case Update Needed",
     "popup",
-    "charge case firmware",
-    "outdated firmware",
     "Device Home Screen",
-    "earbuds"
+    "Poly Lens Desktop",
+    "earbuds",
+    "charge case"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "a4c24963db074d8790b9c7300aed625f773a899faad801748db4da62a4fe52c6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:11.716289Z",
+  "processed_at": "2026-04-24T11:50:53.526317Z",
   "status": "active"
 }
