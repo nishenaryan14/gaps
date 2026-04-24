@@ -1,0 +1,88 @@
+{
+  "bug_id": "LMW-2536",
+  "matched_testcases": [
+    "65458387",
+    "65293009",
+    "65293034",
+    "65293028",
+    "65293010",
+    "65293019",
+    "65293025",
+    "65293011",
+    "65293016",
+    "65293012",
+    "65293013",
+    "65293014",
+    "65293015",
+    "65293021",
+    "65293022"
+  ],
+  "coverage_status": "none",
+  "gaps": [
+    "No existing test case covers the Log Out functionality or the UI update behavior after logging out.",
+    "No test case verifies that the Account tab UI updates immediately (showing Log In button) upon tapping Log Out.",
+    "No test case covers the scenario where the user must navigate away and back to see the UI reflect the logged-out state.",
+    "All existing test cases focus on onboarding, EULA, splash screen, and location permissions \u2014 none address post-login/logout behavior."
+  ],
+  "generated_testcases": [
+    {
+      "title": "Verify Log Out updates Account tab UI immediately to show Log In button",
+      "steps": [
+        "1. Launch the app and complete the onboarding flow.",
+        "2. Log in with valid credentials.",
+        "3. Navigate to the Account tab.",
+        "4. Tap the Log Out button.",
+        "5. Observe the Account tab UI immediately after tapping Log Out."
+      ],
+      "expected": "After tapping Log Out, the Account tab UI updates immediately to display the Log In button without requiring the user to navigate away and back."
+    },
+    {
+      "title": "Verify Log Out does not require re-entering Account tab to reflect logged-out state",
+      "steps": [
+        "1. Launch the app and complete the onboarding flow.",
+        "2. Log in with valid credentials.",
+        "3. Navigate to the Account tab.",
+        "4. Tap the Log Out button.",
+        "5. Stay on the Account tab and verify the UI state."
+      ],
+      "expected": "The Account tab shows the logged-out state (Log In button visible, user-specific details removed) immediately after Log Out, without needing to leave and re-enter the tab."
+    },
+    {
+      "title": "Verify Log Out persists logged-out state after navigating away and back to Account tab",
+      "steps": [
+        "1. Launch the app and complete the onboarding flow.",
+        "2. Log in with valid credentials.",
+        "3. Navigate to the Account tab.",
+        "4. Tap the Log Out button.",
+        "5. Navigate to a different tab (e.g., Home or Settings).",
+        "6. Navigate back to the Account tab.",
+        "7. Verify the UI state."
+      ],
+      "expected": "The Account tab still shows the Log In button and logged-out state after navigating away and back, confirming the logout action persisted correctly."
+    },
+    {
+      "title": "Verify Log Out clears user-specific data from Account tab",
+      "steps": [
+        "1. Launch the app and complete the onboarding flow.",
+        "2. Log in with valid credentials.",
+        "3. Navigate to the Account tab and note user-specific details (e.g., username, email, profile info).",
+        "4. Tap the Log Out button.",
+        "5. Verify the Account tab UI."
+      ],
+      "expected": "All user-specific data (username, email, profile picture, etc.) is removed from the Account tab immediately after Log Out, and the Log In button is displayed."
+    },
+    {
+      "title": "Verify Log Out button is not visible after successful logout",
+      "steps": [
+        "1. Launch the app and complete the onboarding flow.",
+        "2. Log in with valid credentials.",
+        "3. Navigate to the Account tab.",
+        "4. Tap the Log Out button.",
+        "5. Verify the visibility of the Log Out button."
+      ],
+      "expected": "The Log Out button is no longer visible on the Account tab after logging out. Only the Log In button (and optionally Sign Up) is displayed."
+    }
+  ],
+  "analysis_version": "v1",
+  "processed_at": "2026-04-24T12:05:41.599548Z"
+}
