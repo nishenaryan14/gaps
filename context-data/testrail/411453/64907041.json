@@ -1,0 +1,32 @@
+{
+  "id": "64907041",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - About - UI",
+  "feature": "App Settings - General - About",
+  "scenario": "Verify the About tab is displayed under App Settings > General",
+  "steps": [
+    "Start the app",
+    "Tap the hamburger icon",
+    "Tap General",
+    "Check for the About tab"
+  ],
+  "expected": "The About tab is displayed as per Figma design.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "About tab",
+    "App Settings",
+    "General",
+    "Hamburger icon",
+    "Settings menu",
+    "Navigation",
+    "Tab verification"
+  ],
+  "source_last_updated": "1759416397",
+  "source_hash": "89e782a1fa8e5b85294bc1603c23400c9e298f98f4d1d9dc56b94a538d1dcc8c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.095642Z",
+  "status": "active"
+}
