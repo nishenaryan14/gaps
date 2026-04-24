@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "Language Change",
   "feature": "Language Settings",
-  "scenario": "Verify that changing the headset language via Device Settings successfully applies after completing the DFU software update process.",
+  "scenario": "Change the language on a paired headset via Device Settings and confirm the update is applied after a software update.",
   "steps": [
     "Pair and connect the headset to the device.",
-    "Launch the app on the connected device.",
-    "Navigate to Device Settings within the app.",
+    "Launch the app.",
+    "Navigate to Device Settings.",
     "Tap on the Language section.",
     "Select a new language from the scrollable list.",
-    "Confirm the language update via the popup by tapping 'Update now' (options: 'Later' or 'Update now').",
-    "Proceed through the software update (DFU) process.",
-    "Verify that the language change is applied successfully after the update completes."
+    "Confirm the update via the popup by tapping 'Update now' (or 'Later').",
+    "Wait for the software update to complete.",
+    "Observe that the user is returned to the Home Screen.",
+    "Verify that the selected language is properly applied throughout the interface."
   ],
-  "expected": "The headset's language is successfully changed to the newly selected language after the DFU update completes.",
+  "expected": "After the software update completes, the user is returned to the Home Screen and the selected language is properly applied.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "headset language change",
-    "Device Settings",
-    "DFU software update",
-    "language update confirmation",
-    "post-update verification",
-    "firmware update language",
-    "app language settings"
+    "device settings language",
+    "software update language",
+    "headset firmware update",
+    "language selection headset",
+    "update language confirmation",
+    "headset interface language"
   ],
   "source_last_updated": "1762244218",
   "source_hash": "0d1e2685e2fe0d37ef7519d21974a1297a6b378c5a31c1fcec0a0940ffa9e10d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.379308Z",
+  "processed_at": "2026-04-24T11:50:53.222303Z",
   "status": "active"
 }
