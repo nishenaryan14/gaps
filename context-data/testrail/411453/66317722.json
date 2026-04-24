@@ -1,0 +1,33 @@
+{
+  "id": "66317722",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - dialog",
+  "feature": "Device Settings - General",
+  "scenario": "Verify the rename device dialog with Cancel/Done buttons, name input field, and keyboard appears when clicking the device's official name in Device Settings - General, matching the Figma design.",
+  "steps": [
+    "Open Device Settings.",
+    "Navigate to the General section.",
+    "Locate the device's official name.",
+    "Click on the device's official name.",
+    "Observe the dialog that appears."
+  ],
+  "expected": "A rename device dialog appears containing Cancel and Done buttons, a name input field, and a keyboard, matching the Figma design.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "rename device dialog",
+    "Cancel Done buttons",
+    "name input field",
+    "keyboard appears",
+    "Device Settings General",
+    "device official name",
+    "Figma design match"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "24367938404cdf2b6a28d73faf30b5cc531fdde68ce06362dc467f175c13b8c1",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.375617Z",
+  "status": "active"
+}
