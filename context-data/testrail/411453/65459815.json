@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "PPIP - Login during Onboarding - Share Data toggle is not present",
   "feature": "Onboarding / Login",
-  "scenario": "Share Data toggle is missing from App Settings > General > Account after logging in with Poly credentials during onboarding",
+  "scenario": "After logging in with Poly credentials, the \"Share Data\" toggle is absent from App Settings > General > Account, as expected since authenticated users are automatically allowed to send data.",
   "steps": [
-    "Log in with Poly credentials during onboarding",
-    "Navigate to App Settings",
-    "Go to General",
-    "Go to Account",
-    "Check for the Share Data toggle"
+    "Log in with Poly credentials during the onboarding flow.",
+    "Navigate to App Settings.",
+    "Go to General.",
+    "Select Account."
   ],
-  "expected": "The Share Data toggle/info should not be present because logged-in users are automatically allowed to send data.",
+  "expected": "The \"Share Data\" toggle should not be present in App Settings > General > Account.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Share Data toggle missing",
-    "App Settings General Account",
-    "Poly credentials login",
-    "onboarding",
-    "Account settings",
-    "toggle not appearing",
-    "data sharing setting"
+    "Poly credentials",
+    "Share Data toggle",
+    "App Settings",
+    "General",
+    "Account",
+    "authenticated users",
+    "onboarding flow",
+    "data sharing"
   ],
   "source_last_updated": "1760538032",
   "source_hash": "03ff497493e93e0893a649797c4b9913b69db2b9d283cbd74bae0ca484d45d75",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.312878Z",
+  "processed_at": "2026-04-24T11:50:53.095153Z",
   "status": "active"
 }
