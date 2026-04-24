@@ -1,0 +1,91 @@
+{
+  "bug_id": "LMW-2456",
+  "matched_testcases": [
+    "65293009",
+    "65293012",
+    "65293013",
+    "65293030",
+    "70247862",
+    "70247933",
+    "65293018",
+    "65293035",
+    "65293020",
+    "65293026",
+    "65293024",
+    "65293031",
+    "83194081",
+    "66363537",
+    "66363538"
+  ],
+  "coverage_status": "none",
+  "gaps": [
+    "No existing test case verifies that the correct product name (e.g., 'Poly Studio' or proper marketing name) is displayed on onboarding screens when a specific device (like Falcon) is paired.",
+    "No test case covers the scenario of navigating to Device Settings > Onboarding after pairing a device and checking the displayed device name.",
+    "No test case validates that device code names (e.g., 'Falcon') are not shown in place of proper product names in the onboarding UI."
+  ],
+  "generated_testcases": [
+    {
+      "title": "Verify proper product name is displayed on onboarding screen after pairing a Falcon device",
+      "steps": [
+        "1. Pair a Falcon device (code name) with the system.",
+        "2. Navigate to Device Settings.",
+        "3. Select the paired Falcon device from the device list.",
+        "4. Click on 'Onboarding' from the device settings menu.",
+        "5. Observe the device name displayed on the onboarding screen."
+      ],
+      "expected": "The onboarding screen displays the proper product name (e.g., 'Poly Studio' or the official marketing name) for the Falcon device, not the code name 'Falcon'."
+    },
+    {
+      "title": "Verify device code name is not shown on onboarding screen after pairing a Falcon device",
+      "steps": [
+        "1. Pair a Falcon device (code name) with the system.",
+        "2. Navigate to Device Settings.",
+        "3. Select the paired Falcon device from the device list.",
+        "4. Click on 'Onboarding' from the device settings menu.",
+        "5. Check the device name displayed on the onboarding screen for any occurrence of the code name 'Falcon'."
+      ],
+      "expected": "The onboarding screen does NOT display the code name 'Falcon'. Only the proper product name (e.g., 'Poly Studio' or official marketing name) is shown."
+    },
+    {
+      "title": "Verify onboarding screen displays correct product name after navigating from Device Settings for a paired Falcon device",
+      "steps": [
+        "1. Pair a Falcon device (code name) with the system.",
+        "2. Navigate to Device Settings.",
+        "3. Locate the paired Falcon device in the device list and select it.",
+        "4. Navigate to the 'Onboarding' option within the device settings.",
+        "5. Capture the device name displayed on the onboarding screen.",
+        "6. Compare the captured name against the expected proper product name (e.g., 'Poly Studio')."
+      ],
+      "expected": "The device name displayed on the onboarding screen matches the proper product name (e.g., 'Poly Studio') and does not contain the code name 'Falcon'."
+    },
+    {
+      "title": "Verify onboarding screen product name consistency across multiple Falcon device pairings",
+      "steps": [
+        "1. Pair a first Falcon device (code name) with the system.",
+        "2. Navigate to Device Settings > select the device > Onboarding.",
+        "3. Record the displayed device name.",
+        "4. Unpair the first Falcon device.",
+        "5. Pair a second Falcon device (code name) with the system.",
+        "6. Navigate to Device Settings > select the device > Onboarding.",
+        "7. Record the displayed device name.",
+        "8. Compare the recorded names from both devices."
+      ],
+      "expected": "Both Falcon devices display the same proper product name (e.g., 'Poly Studio' or official marketing name) on their respective onboarding screens, and neither shows the code name 'Falcon'."
+    },
+    {
+      "title": "Verify onboarding screen product name persists after device reconnection for a Falcon device",
+      "steps": [
+        "1. Pair a Falcon device (code name) with the system.",
+        "2. Navigate to Device Settings > select the device > Onboarding.",
+        "3. Verify the proper product name is displayed.",
+        "4. Disconnect the Falcon device.",
+        "5. Reconnect the Falcon device.",
+        "6. Navigate to Device Settings > select the device > Onboarding.",
+        "7. Observe the device name displayed on the onboarding screen."
+      ],
+      "expected": "After reconnection, the onboarding screen still displays the proper product name (e.g., 'Poly Studio' or official marketing name) and not the code name 'Falcon'."
+    }
+  ],
+  "analysis_version": "v1",
+  "processed_at": "2026-04-24T12:05:41.601818Z"
+}
