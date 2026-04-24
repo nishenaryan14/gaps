@@ -1,0 +1,35 @@
+{
+  "id": "64907054",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General",
+  "feature": "App Settings - General",
+  "scenario": "Verify that tapping the hamburger icon and selecting General opens a screen with Account, About, Notifications & Device Alerts, Privacy Policy, and Licenses sections, and that going back returns to the Poly Lens Menu.",
+  "steps": [
+    "1. Tap the App Settings icon (hamburger icon).",
+    "2. Select 'General' from the menu.",
+    "3. Observe the new screen that opens.",
+    "4. Verify the screen displays the following sections: Account, About, Notifications & Device Alerts, Privacy Policy, and Licenses.",
+    "5. Navigate back (e.g., tap the back button or gesture).",
+    "6. Verify that the user is returned to the Poly Lens Menu."
+  ],
+  "expected": "Tapping the App Settings icon and selecting General opens a new screen displaying the sections: Account, About, Notifications & Device Alerts, Privacy Policy, and Licenses. Going back returns the user to the Poly Lens Menu.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "hamburger icon",
+    "General",
+    "Account",
+    "About",
+    "Notifications & Device Alerts",
+    "Privacy Policy",
+    "Licenses",
+    "Poly Lens Menu"
+  ],
+  "source_last_updated": "1762436500",
+  "source_hash": "208dbfe322158cfbe6ccc2ca9750e18718a1deeba344ed4533b810102e12fc3e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.095642Z",
+  "status": "active"
+}
