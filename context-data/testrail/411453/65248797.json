@@ -5,13 +5,13 @@
   "project": "411453",
   "title": "Find My Device - Allow Once - IOS [Only This Time - Android] [Deprecated for IOS]",
   "feature": "Find My Device",
-  "scenario": "Test the \"Allow Once\" option for Find My Device when a headset is connected, verifying that after tapping \"Allow Once\" the Location and Geo icons become visible.",
+  "scenario": "Test the \"Allow Once\" option for Find My Device when a headset is connected, verifying that location and geo icons become visible after granting location permission.",
   "steps": [
-    "Start the app with headset connected.",
-    "Go to main menu.",
-    "Tap on Find My Device.",
-    "Tap on \"Allow Once\".",
-    "Tap on back button in upper left corner."
+    "1. Start the app with headset connected.",
+    "2. Go to main menu.",
+    "3. Tap on Find My Device.",
+    "4. Tap on 'Allow Once'.",
+    "5. Tap on back button in upper left corner."
   ],
   "expected": "After step 3, a \"Allow lens to use your location\" window pops up with options \"Allow Once\", \"Allow while using app\", \"Don't allow\". After step 4, Location and Geo icons are visible.",
   "coverage": [],
@@ -20,15 +20,15 @@
     "Allow Once",
     "Find My Device",
     "headset connected",
-    "Location icon",
-    "Geo icon",
-    "main menu",
-    "permission",
-    "device visibility"
+    "location permission",
+    "geo icons",
+    "location icons",
+    "grant permission",
+    "main menu"
   ],
   "source_last_updated": "1760352183",
   "source_hash": "e9bb0199bc5d41bc7891b0674fa52845f2e2c0d4fed9f4a999d47bd8ead43721",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.764645Z",
+  "processed_at": "2026-04-24T11:23:05.358898Z",
   "status": "active"
 }
