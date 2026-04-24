@@ -4,31 +4,31 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS | Images in User Guides section (PLACEHOLDER)",
-  "feature": "iOS - User Guides",
-  "scenario": "Only the top 6 device images load in User Guides; remaining devices show placeholder images instead of loading properly.",
-  "description_clean": "In the User Guides section under App Settings, only images for the top 6 devices are loaded; all other devices show placeholder images instead. Expected behavior is that all images load properly when opening the User Guides page.",
+  "feature": "iOS App - User Guides",
+  "scenario": "In User Guides under App Settings, only the top 6 devices load correct images while others show placeholders.",
+  "description_clean": "In the User Guides section under App Settings, only images for the top 6 devices are loaded; all other devices show placeholder images instead of the correct device images.",
   "steps": [
     "Navigate to App Settings.",
-    "Locate and open the User Guides section.",
-    "Observe the device images displayed on the page."
+    "Go to the User Guides section.",
+    "Observe the device images displayed."
   ],
-  "expected": "All device images load properly when opening the User Guides page.",
-  "actual": "Only images for the top 6 devices are loaded; all other devices show placeholder images instead.",
+  "expected": "All devices should display their correct device images.",
+  "actual": "Only the top 6 devices show correct images; all other devices show placeholder images.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "device images not loading",
-    "placeholder images",
     "User Guides",
-    "top 6 images load",
-    "image loading issue",
-    "device images broken",
-    "App Settings"
+    "App Settings",
+    "device images",
+    "placeholders",
+    "image loading",
+    "top 6 devices",
+    "display issue"
   ],
   "source_last_updated": "2026-04-23T08:37:02.000+0000",
   "source_hash": "86f232d474ddd682f5de6a3d5cd81ce6db2947b438f12a904203ab1825be7eb1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:04.470353Z",
+  "processed_at": "2026-04-24T11:50:52.131889Z",
   "status": "active"
 }
