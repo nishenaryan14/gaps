@@ -1,0 +1,33 @@
+{
+  "id": "70247862",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Welcome to Poly Studio - Fresh install",
+  "feature": "Onboarding",
+  "scenario": "Fresh install onboarding: User reaches \"Organized\" screen, sees \"Welcome to Poly Studio\" overlay, taps \"Get Started\", and returns to \"Organized\" screen to continue onboarding.",
+  "steps": [
+    "Install and launch the app for the first time.",
+    "Go through the onboarding flow until reaching the \"Organized\" screen.",
+    "Observe that a \"Welcome to Poly Studio\" screen appears.",
+    "Tap \"Get Started\" on the \"Welcome to Poly Studio\" screen."
+  ],
+  "expected": "The \"Welcome to Poly Studio\" screen closes and the user is returned to the \"Organized\" screen to continue onboarding.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "fresh install",
+    "onboarding",
+    "Organized screen",
+    "Welcome to Poly Studio",
+    "overlay",
+    "Get Started",
+    "first launch",
+    "onboarding flow"
+  ],
+  "source_last_updated": "1771845442",
+  "source_hash": "435aa362e2fece453ed83b3578a2484120b8715579dcb6c7a4bc2012eab340ec",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "status": "active"
+}
