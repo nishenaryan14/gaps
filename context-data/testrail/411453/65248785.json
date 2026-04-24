@@ -1,0 +1,34 @@
+{
+  "id": "65248785",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Device list with more then 4 devices",
+  "feature": "Find My Device",
+  "scenario": "Verify that the device list expands and becomes scrollable with a bottom fade indicator when more than 4 headsets are present",
+  "steps": [
+    "Ensure more than 4 headsets are present on the device list (connected or disconnected).",
+    "Observe the device list UI.",
+    "Check if the list can be expanded.",
+    "Check if the list is scrollable.",
+    "Look for a slight fade at the bottom of the list indicating scrolling ability."
+  ],
+  "expected": "When more than 4 headsets are present, the list is expandable, scrollable, and shows a slight fade at the bottom indicating scrolling ability.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "device list",
+    "scrollable",
+    "bottom fade indicator",
+    "headsets",
+    "expandable list",
+    "UI scrolling",
+    "overflow indicator",
+    "device list UI"
+  ],
+  "source_last_updated": "1761208524",
+  "source_hash": "ba0c4cc8a3ca0598ec36ff146bb806b84d0cd5a50d45b36418cf88798aa0364b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.106820Z",
+  "status": "active"
+}
