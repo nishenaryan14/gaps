@@ -5,7 +5,7 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 Incorrect device state displayed after prolonged app idle; wrong headset shown as connected and settings accessible",
   "feature": "Device State / Connection UI",
-  "scenario": "After prolonged idle, app on launch shows incorrect earbud connection state and allows inaccessible settings until restart",
+  "scenario": "After prolonged idle, app launches showing incorrect earbud connection state and allows inaccessible settings until restart",
   "description_clean": "After prolonged app idle (e.g., overnight), the app displays incorrect device state on launch. Earbuds are shown as partially connected (left connected, right disconnected) even though both are in the case and fully disconnected in system Bluetooth. The actually connected device (Surround 80) is not shown. The app also incorrectly allows access to earbuds settings when they are disconnected; toggling settings produces no response. Correct state is only shown after restarting the app.",
   "steps": [
     "Leave the app idle for a prolonged period (e.g., overnight).",
@@ -17,24 +17,24 @@
     "Restart the app.",
     "Observe the displayed device state after restart."
   ],
-  "expected": "On launch after prolonged idle, the app should correctly show both earbuds as disconnected (since they are in the case and fully disconnected in system Bluetooth) and display the actually connected device (Surround 80). Earbuds settings should not be accessible when earbuds are disconnected.",
-  "actual": "On launch after prolonged idle, the app incorrectly shows earbuds as partially connected (left connected, right disconnected). The actually connected device (Surround 80) is not shown. The app incorrectly allows access to earbuds settings when they are disconnected, and toggling settings produces no response. Correct state is only shown after restarting the app.",
+  "expected": "On launch after prolonged idle, the app should correctly show the actual device state: both earbuds disconnected (since they are in the case and fully disconnected in system Bluetooth) and the actually connected device (Surround 80) displayed. Earbuds settings should not be accessible when earbuds are disconnected.",
+  "actual": "On launch after prolonged idle, the app incorrectly shows earbuds as partially connected (left connected, right disconnected) even though both are in the case and fully disconnected in system Bluetooth. The actually connected device (Surround 80) is not shown. The app incorrectly allows access to earbuds settings when they are disconnected; toggling settings produces no response. Correct state is only shown after restarting the app.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "earbud connection state",
-    "app idle state",
-    "stale Bluetooth state",
-    "app restart required",
-    "inaccessible settings",
+    "app idle",
+    "stale state",
     "Bluetooth state mismatch",
+    "inaccessible settings",
+    "app restart required",
     "prolonged idle",
-    "connection state sync"
+    "device state display"
   ],
   "source_last_updated": "2026-04-22T10:51:55.000+0000",
   "source_hash": "593fb7d6b1d023402a716a585c33f5a5ed564d745f62ecd5c1cfb4d705a5092d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.687007Z",
+  "processed_at": "2026-04-24T11:23:04.987049Z",
   "status": "active"
 }
