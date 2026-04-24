@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "Find My Device - Play/Stop - multiple tries and exits",
   "feature": "Find My Device",
-  "scenario": "Repeatedly pressing Play/Stop on Find My Device tone causes app to exit or require multiple attempts to function correctly",
+  "scenario": "Repeatedly pressing Play/Stop on Find My Device tone causes app to exit or behave incorrectly",
   "steps": [
-    "Open the Find My Device app",
-    "Select a device to locate",
-    "Tap the Play button to start the tone",
-    "Tap the Stop button to stop the tone",
-    "Repeat steps 3 and 4 multiple times in succession"
+    "Open the Find My Device feature in the app.",
+    "Press the Play button to start the tone.",
+    "Press the Stop button to stop the tone.",
+    "Repeat steps 2 and 3 multiple times in succession."
   ],
-  "expected": "The app should remain open and responsive, and the tone should start/stop correctly with each Play/Stop action.",
+  "expected": "The app should remain open and function correctly after each Play/Stop action. The sound should play and stop as expected each time.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Find My Device",
-    "Play/Stop tone",
+    "Play/Stop",
+    "tone",
     "app crash",
-    "rapid button pressing",
+    "rapid pressing",
     "audio playback",
-    "device locator",
-    "app stability",
-    "tone control"
+    "app exit",
+    "button spam"
   ],
   "source_last_updated": "1759932186",
   "source_hash": "1f8a7852716e60e4bc01fe4020042334aeddec3d09fe9c463b6cdb56732f0ce5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.756158Z",
+  "processed_at": "2026-04-24T11:23:05.357381Z",
   "status": "active"
 }
