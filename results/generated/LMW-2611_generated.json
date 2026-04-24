@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Verify Falcon Charge Stand does NOT appear as sub-device on User Guides screen",
+    "steps": [
+      "1. Launch the application and complete onboarding flow (EULA, splash screen, location permissions).",
+      "2. Navigate to the User Guides screen from the main menu/settings.",
+      "3. Observe the list of devices displayed on the User Guides screen.",
+      "4. Check if any sub-devices (e.g., Falcon Charge Stand) are listed under any main device."
+    ],
+    "expected": "The Falcon Charge Stand (or any other sub-device/accessory) should NOT appear on the User Guides screen. Only main devices should be listed, and no sub-devices should be visible."
+  },
+  {
+    "title": "Verify only main devices are displayed on User Guides screen",
+    "steps": [
+      "1. Launch the application and complete onboarding flow.",
+      "2. Navigate to the User Guides screen.",
+      "3. Examine the list of devices shown on the screen.",
+      "4. Verify that each entry corresponds to a main device (e.g., Falcon, Falcon+, etc.) and not an accessory or sub-device."
+    ],
+    "expected": "The User Guides screen displays only main devices. No sub-devices, accessories, or add-ons (such as Falcon Charge Stand) are shown in the list."
+  },
+  {
+    "title": "Verify User Guides screen does not show any sub-devices after navigating from device details",
+    "steps": [
+      "1. Launch the application and complete onboarding flow.",
+      "2. Navigate to the main device list or dashboard.",
+      "3. Select a main device (e.g., Falcon) and view its details.",
+      "4. From the device details screen, navigate to the User Guides screen.",
+      "5. Observe the list of devices/guides displayed."
+    ],
+    "expected": "The User Guides screen should only show main devices. No sub-devices or accessories (including Falcon Charge Stand) should appear, regardless of how the user navigated to the screen."
+  },
+  {
+    "title": "Verify User Guides screen content after pairing a Falcon Charge Stand",
+    "steps": [
+      "1. Launch the application and complete onboarding flow.",
+      "2. Pair a Falcon Charge Stand with the application.",
+      "3. Navigate to the User Guides screen.",
+      "4. Observe the list of devices and guides displayed."
+    ],
+    "expected": "Even after pairing a Falcon Charge Stand, it should NOT appear as a separate entry or sub-device on the User Guides screen. The screen should only list main devices."
+  },
+  {
+    "title": "Verify User Guides screen does not list accessories when no main devices are paired",
+    "steps": [
+      "1. Launch the application and complete onboarding flow without pairing any main device.",
+      "2. Pair only a Falcon Charge Stand (accessory) with the application.",
+      "3. Navigate to the User Guides screen.",
+      "4. Observe the content displayed on the screen."
+    ],
+    "expected": "The User Guides screen should not display the Falcon Charge Stand or any other accessory. If no main devices are paired, the screen may show an empty state or a message indicating no guides are available, but no sub-devices should be listed."
+  }
+]
