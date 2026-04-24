@@ -5,12 +5,12 @@
   "project": "411453",
   "title": "Fit test - Onboarding flow - Test all Fit Test screens",
   "feature": "Onboarding Flow - Fit Test",
-  "scenario": "Verify the entire Fit Test onboarding flow works properly when accessed through Device Settings > Onboarding with a supported device connected.",
+  "scenario": "Verify the entire Fit Test onboarding flow works properly when accessed through Device Settings > Onboarding on a supported device.",
   "steps": [
     "Start the app with a device that supports Fit Test connected.",
     "Navigate to Device Settings > Onboarding > Fit Test screen (after Pairing 2).",
     "Verify the Fit Test screen is displayed correctly.",
-    "Click the Test button.",
+    "Click the 'Test' button.",
     "Test the entire Fit Test flow across all screens."
   ],
   "expected": "The whole Fit Test flow works properly when accessed through Device Settings > Onboarding.",
@@ -22,13 +22,12 @@
     "Device Settings",
     "Pairing",
     "Test button",
-    "supported device",
     "Fit Test flow",
-    "onboarding flow"
+    "supported device"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "7217b4a8019f7d573d20fd8479566a4c7dcb4cbfaaac579a16174130fb27f4e7",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.392549Z",
+  "processed_at": "2026-04-24T11:50:53.227426Z",
   "status": "active"
 }
