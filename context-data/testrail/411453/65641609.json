@@ -8,23 +8,24 @@
   "scenario": "Close button on the first screen of the Fit Test closes the Fit Test and returns to Device Settings",
   "steps": [
     "Open the Fit Test on the first screen.",
-    "Tap the close button."
+    "Locate and tap the close button."
   ],
   "expected": "The Fit Test screen closes and the user is returned to the Device Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "Fit Test",
     "close button",
-    "fit test",
     "first screen",
-    "device settings",
+    "Device Settings",
     "exit",
     "dismiss",
-    "cancel"
+    "cancel",
+    "navigation"
   ],
   "source_last_updated": "1760958387",
   "source_hash": "929b5f3622464fe6b8517c1ae1bb0b4cb737375ad453a65932d824feadb46ce5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.379308Z",
+  "processed_at": "2026-04-24T11:50:53.223816Z",
   "status": "active"
 }
