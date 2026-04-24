@@ -1,0 +1,38 @@
+{
+  "id": "LMW-2542",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "ANDROID| Falcon | Custom EQ - Save button do not work for Falcon Custom",
+  "feature": "Falcon Custom EQ",
+  "scenario": "Custom EQ slider settings for a Falcon device are not saved after clicking Save EQ and confirming the dialog, reverting to defaults upon reopening.",
+  "description_clean": "When a user sets Custom EQ sliders for a Falcon device and clicks the Save EQ button (confirming the dialog), the slider settings are not saved and revert to defaults upon reopening the Custom EQ settings. Additionally, there is a minor issue with the dialog description text that needs fixing.",
+  "steps": [
+    "Open the Falcon device settings.",
+    "Navigate to the Custom EQ section.",
+    "Adjust the EQ sliders to custom values.",
+    "Click the Save EQ button.",
+    "Confirm the save dialog when prompted.",
+    "Close the Custom EQ settings.",
+    "Reopen the Custom EQ settings."
+  ],
+  "expected": "The custom EQ slider settings should be saved and persist when reopening the Custom EQ settings.",
+  "actual": "The slider settings are not saved and revert to defaults upon reopening the Custom EQ settings.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "Falcon device",
+    "Custom EQ",
+    "EQ slider settings",
+    "not saved",
+    "reverting to defaults",
+    "Save EQ button",
+    "save dialog"
+  ],
+  "source_last_updated": "2026-04-18T13:05:23.000+0000",
+  "source_hash": "ec2845c27667ad3ad7c512f3c1b4076a361c997a6ccee5e3dab3a86929fe0de3",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.039497Z",
+  "status": "active"
+}
