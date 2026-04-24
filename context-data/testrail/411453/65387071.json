@@ -1,0 +1,41 @@
+{
+  "id": "65387071",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Color Theme - Switching theme while Phone is set to Dark Theme",
+  "feature": "Color Theme",
+  "scenario": "Verify that switching between color themes (Follow Phone Theme, Light, Dark) applies immediately, persists across app restarts, and re-selecting the active theme has no effect.",
+  "steps": [
+    "1. Set phone to Dark Mode.",
+    "2. Open the app and ensure the theme is set to default (Follow Phone Theme).",
+    "3. Change the app theme to Light.",
+    "4. Verify the Light theme displays correctly throughout the app.",
+    "5. Close and restart the app.",
+    "6. Confirm the Light theme setting is still active after restart.",
+    "7. Change the app theme to Dark.",
+    "8. Verify the Dark theme displays correctly throughout the app.",
+    "9. Close and restart the app.",
+    "10. Confirm the Dark theme setting is still active after restart.",
+    "11. Re-select the currently active theme (e.g., tap Dark again while Dark is already selected).",
+    "12. Verify that re-selecting the same theme has no visible effect (no change in appearance)."
+  ],
+  "expected": "The selected theme (Light or Dark) is applied immediately, displays correctly throughout the app, and persists across app restarts. Re-selecting the currently active theme has no effect.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "color theme switching",
+    "dark mode",
+    "light mode",
+    "follow phone theme",
+    "theme persistence",
+    "app restart",
+    "theme re-selection",
+    "theme consistency"
+  ],
+  "source_last_updated": "1760437493",
+  "source_hash": "83ce67ad16aac42326b07518f75f652361aa0127f1072c12cd5956c0461fa1a0",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.364460Z",
+  "status": "active"
+}
