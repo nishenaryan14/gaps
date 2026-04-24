@@ -5,28 +5,29 @@
   "project": "411453",
   "title": "[IOS]App Settings - General - Account - Log in - Log out - Cancel",
   "feature": "App Settings - Account",
-  "scenario": "Verify login/logout flow in App Settings under General > Account, including successful login display, logout dialog, and cancel behavior.",
+  "scenario": "Verify login/logout flow in Account settings: user can log in, see account details, and cancel logout to remain logged in.",
   "steps": [
-    "Start the app as a quest, tap the hamburger icon, go to General > Account, tap Log in, then Continue and log in with credentials.",
-    "Tap Log out.",
-    "Tap Cancel."
+    "Start the app as a quest, tap the App Settings icon, then go to General > Account.",
+    "Tap Log in, then Continue, and log in with valid credentials.",
+    "Verify that 'Your account' text is visible with Name and Email fields populated.",
+    "Tap Log out and verify that a login dialog opens with Cancel and Continue options.",
+    "Tap Cancel and verify that the dialog disappears and the user remains logged in."
   ],
-  "expected": "1) \"Your account\" text is visible with Name and Email fields populated. 2) Login dialog opens with Cancel and Continue options. 3) Dialog disappears and user remains logged in.",
+  "expected": "After logging in, 'Your account' text is visible with Name and Email fields populated. After tapping Log out, a login dialog appears with Cancel and Continue options. After tapping Cancel, the dialog disappears and the user remains logged in.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "login",
     "logout",
-    "App Settings",
-    "General",
-    "Account",
+    "account settings",
+    "cancel logout",
     "authentication",
-    "dialog",
-    "cancel"
+    "account details",
+    "login dialog"
   ],
   "source_last_updated": "1764319833",
   "source_hash": "f207772853feee11205ea923e80eb7baefc3d14d44246d5bd6eac636521c064d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.353822Z",
+  "processed_at": "2026-04-24T11:50:53.136294Z",
   "status": "active"
 }
