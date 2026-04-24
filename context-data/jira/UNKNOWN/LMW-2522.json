@@ -5,7 +5,7 @@
   "project": "UNKNOWN",
   "summary": "ANDROID | Language change - After succesful Lang change previous one is selected in settings, after second change unavailable dialog appears",
   "feature": "Android Language Change",
-  "scenario": "After changing the language successfully, the settings still show the previous language selection and show 'Update currently not available' dialog on next change attempt until the app is restarted.",
+  "scenario": "After changing the language successfully, the settings still show the previous language selection, and attempting to change again shows 'Update currently not available' until the app is restarted.",
   "description_clean": "After a successful language change, the previous language selection is still displayed in settings. When attempting to change the language again, a dialog saying 'Update currently not available' appears. After restarting the app, the correct firmware version is displayed.",
   "steps": [
     "1. Change the language in the app settings.",
@@ -15,7 +15,7 @@
     "5. Restart the app.",
     "6. Check the firmware version displayed."
   ],
-  "expected": "After a successful language change, the new language should be displayed in settings. Changing the language again should work without issues. The correct firmware version should be displayed at all times.",
+  "expected": "After a successful language change, the new language should be displayed in settings. Changing the language again should work without issues. The correct firmware version should be displayed without needing a restart.",
   "actual": "After a successful language change, the previous language selection is still displayed in settings. When attempting to change the language again, a dialog saying 'Update currently not available' appears. After restarting the app, the correct firmware version is displayed.",
   "priority": "P1: High",
   "severity": "",
@@ -23,15 +23,15 @@
   "keywords": [
     "language change",
     "settings display bug",
-    "update not available dialog",
+    "update not available",
     "app restart required",
     "firmware version",
-    "UI refresh issue",
-    "language selection persistence"
+    "language selection persistence",
+    "UI refresh issue"
   ],
   "source_last_updated": "2026-04-16T07:58:20.000+0000",
   "source_hash": "bb96bd6f98e528193fce56cb80306b72b19a97fc8fd971455f972a6f8045318d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.236081Z",
+  "processed_at": "2026-04-24T11:50:53.074693Z",
   "status": "active"
 }
