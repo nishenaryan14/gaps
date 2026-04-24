@@ -1,0 +1,32 @@
+{
+  "id": "64907511",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support  - App page Cancel",
+  "feature": "Support - App page",
+  "scenario": "Verify that tapping the Cancel (X) button on the Support App page dismisses the screen and returns the user to the Support first screen.",
+  "steps": [
+    "Open the Support App.",
+    "Navigate to a secondary page within the app.",
+    "Tap the Cancel (X) button on the page."
+  ],
+  "expected": "The screen is dismissed and the user is returned to the Support first screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Cancel button",
+    "X button",
+    "dismiss screen",
+    "Support App",
+    "return to first screen",
+    "navigation back",
+    "secondary page",
+    "UI dismissal"
+  ],
+  "source_last_updated": "1759762356",
+  "source_hash": "e958a43206c7c5bfe7541a175cca2d33467bfafcdadea8158a21ab27ced12210",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.359907Z",
+  "status": "active"
+}
