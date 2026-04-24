@@ -5,12 +5,12 @@
   "project": "411453",
   "title": "Onboarding - Permission for location tracking - Don't Allow - Cancel [Deprecated for IOS]",
   "feature": "Onboarding / Location Permissions",
-  "scenario": "User denies location tracking during onboarding and cancels permission prompt on Find My Device screen, then returns to Poly Lens Menu.",
+  "scenario": "User denies location tracking during onboarding and cancels permission prompt on Find My Device screen, then navigates back to Poly Lens Menu",
   "steps": [
-    "Start app fresh",
+    "Start app for first time",
     "Accept license/privacy",
     "Tap Continue",
-    "Reach Organized screen",
+    "Go to Organized screen",
     "Tap Enable Now",
     "Tap Don't Allow",
     "Tap Continue",
@@ -19,22 +19,22 @@
     "Tap Find My Device",
     "Tap Cancel"
   ],
-  "expected": "After step 5, a location permission popup appears with options (Allow Once, Allow While Using App, Don't Allow). After step 10, a permission prompt with Cancel and Enable Now appears. After step 11, the app navigates back to the Poly Lens Menu.",
+  "expected": "After step 5, a location permission popup appears with options (Allow Once, Allow While Using App, Don't Allow). After step 10, a permission window with Cancel and Enable Now appears with FMD screen visible in background. After step 11, app navigates back to the Poly Lens Menu.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "location tracking denied",
+    "deny location tracking",
     "Find My Device",
-    "permission prompt cancelled",
+    "cancel permission",
     "Poly Lens Menu",
     "onboarding",
-    "Don't Allow",
-    "Cancel",
-    "guest login"
+    "permission prompt",
+    "location services denied",
+    "app navigation"
   ],
   "source_last_updated": "1760528550",
   "source_hash": "62bf66158149f437004441ed58354ae7e63af9140236fff468bfa844b5c679ce",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.717778Z",
+  "processed_at": "2026-04-24T11:23:05.316249Z",
   "status": "active"
 }
