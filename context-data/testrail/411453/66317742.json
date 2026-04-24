@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Rename device - the app in/out the background",
   "feature": "Device Settings - Rename Device",
-  "scenario": "Verify that a renamed device persists after the app is backgrounded and restored",
+  "scenario": "Verify that a renamed device persists after the app is backgrounded and foregrounded",
   "steps": [
     "Start app with device attached",
     "Navigate to Device Settings > General",
     "Click the device's official name",
-    "Enter new text",
-    "Click Done",
+    "Enter a new name",
+    "Tap Done",
     "Put app in background",
-    "Pull app out of background",
-    "Check the name"
+    "Bring app back to foreground",
+    "Verify the new name is still displayed"
   ],
-  "expected": "The new name should still be present after bringing the app back from the background.",
+  "expected": "The new name should still be present after bringing the app back to the foreground.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device rename",
-    "persist",
-    "background app",
-    "restore app",
+    "rename device",
+    "persist rename",
+    "background foreground",
     "device settings",
-    "name verification",
-    "iOS backgrounding"
+    "device name persistence",
+    "app backgrounding",
+    "rename verification"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "0ca24dba338049847df21affe86e2f32d2a378c4c1e5f1e96e3bbef4f1f0f85f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "processed_at": "2026-04-24T11:50:53.220761Z",
   "status": "active"
 }
