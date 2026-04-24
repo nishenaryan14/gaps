@@ -5,33 +5,29 @@
   "project": "411453",
   "title": "EQ - Dialog for \"i\" button is present and can be closed",
   "feature": "EQ (Equalizer)",
-  "scenario": "Verify that the EQ information dialog can be opened via the \"i\" icon next to the headline and dismissed by clicking anywhere on the screen.",
+  "scenario": "Verify that the \"i\" information button dialog is present next to the EQ headline in Device Settings and can be closed by clicking on it or anywhere on the screen.",
   "steps": [
-    "Start the app with an EQ-supporting device connected.",
     "Open Device Settings and navigate to the EQ tab.",
-    "Check for the 'i' (information) icon next to the EQ headline.",
-    "Click the 'i' icon.",
-    "Verify that a centered dialog appears over the EQ controls.",
-    "Verify the dialog contains the text: \"Equalizer (EQ) enhances clarity by adjusting the frequency for your preferred sound signature. Changes affect music streaming, not telephony.\"",
-    "Click on the dialog or anywhere on the screen to close it.",
-    "Verify the dialog closes successfully."
+    "Check that the \"i\" icon is present next to the headline.",
+    "Click the \"i\" icon and verify a centered dialog appears over the EQ controls with the text: \"Equalizer (EQ) enhances clarity by adjusting the frequency for your preferred sound signature. Changes affect music streaming, not telephony.\"",
+    "Click on the dialog or anywhere on the screen to close it."
   ],
-  "expected": "A centered dialog appears over the EQ controls with the specified informational text, and it can be closed by clicking on the dialog or anywhere on the screen.",
+  "expected": "The \"i\" (information) button dialog is present next to the EQ headline in Device Settings and can be closed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "EQ information dialog",
-    "\"i\" icon",
-    "EQ tab",
+    "EQ",
+    "Equalizer",
+    "information button",
+    "i icon",
+    "dialog",
     "Device Settings",
-    "Equalizer (EQ) dialog",
-    "dialog dismiss",
-    "EQ controls",
-    "frequency adjustment"
+    "close dialog",
+    "EQ headline"
   ],
   "source_last_updated": "1761143067",
   "source_hash": "76477cfe547feeb21837022f49f28c0e9db9344af5c35924c2cad58ed915fbe6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.401301Z",
+  "processed_at": "2026-04-24T11:50:53.250815Z",
   "status": "active"
 }
