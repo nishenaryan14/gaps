@@ -1,0 +1,35 @@
+{
+  "id": "65641603",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "CCL - Close/reopen the app",
+  "feature": "CCL (Camera Color Lens)",
+  "scenario": "Verify that the CCL setting in Device Settings > Advanced is retained and displayed correctly after closing and reopening the app.",
+  "steps": [
+    "Open the app and navigate to Device Settings > Advanced.",
+    "Select a CCL setting (e.g., a specific value or option).",
+    "Close the app completely (force close or exit).",
+    "Reopen the app.",
+    "Navigate back to Device Settings > Advanced.",
+    "Check the displayed CCL setting."
+  ],
+  "expected": "The previously selected CCL setting should be retained and displayed correctly after reopening the app.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "CCL setting",
+    "Device Settings",
+    "Advanced",
+    "retention",
+    "persistence",
+    "force close",
+    "reopen app",
+    "display verification"
+  ],
+  "source_last_updated": "1772468639",
+  "source_hash": "6d9d51d42fb2e470871be973f011e8de4c813e8149a1c76e62a4680b702a4882",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "status": "active"
+}
