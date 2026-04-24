@@ -5,14 +5,15 @@
   "project": "411453",
   "title": "Device Home Screen - Battery life",
   "feature": "Device Home Screen",
-  "scenario": "Battery life display on Device Home Screen shows correct icons (single for headset, H/C for headset with case, L/R/C for earbuds) with color-coded charge levels and greys out with last known percentage when headset is turned off.",
+  "scenario": "Verify battery life display on Device Home Screen shows correct icons and colors for different device types and charge levels, and greys out when headset is turned off.",
   "steps": [
-    "1. Pair and connect headset, start app, go to Device Home Screen.",
-    "2. Observe battery percentage display on Device Home Screen.",
-    "3. Turn off headset.",
-    "4. Observe battery icons on Device Home Screen."
+    "1. Pair and connect the headset.",
+    "2. Start the app and navigate to the Device Home Screen.",
+    "3. Observe the battery percentage displayed.",
+    "4. Turn off the headset.",
+    "5. Observe the battery icons on the Device Home Screen."
   ],
-  "expected": "Step 1-2: Battery percentage is shown. For headsets, a single battery icon is shown. For headsets with a charge case, two icons marked \"H\" and \"C\" are displayed. For earbuds, three icons marked \"L\", \"R\", and \"C\" are shown. Battery icon color corresponds to charge level: 100%-40% black (white in dark mode), 39%-20% yellow, 19%-1% red, 0% empty. Step 3-4: Battery icons are greyed out with last known percentage displayed.",
+  "expected": "For Headsets: A single battery icon is shown. For Headsets with a Charge case: Two icons marked \"H\" and \"C\" are displayed. For Earbuds: Three icons marked \"L\", \"R\", and \"C\" are shown. Battery icon color corresponds to charge level: 100%-40% = black (white in dark mode), 39%-20% = yellow, 19%-1% = red, 0% = empty. When the headset is turned off, the battery icons are greyed out with the last known percentage displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -20,14 +21,14 @@
     "Device Home Screen",
     "battery icons",
     "charge levels",
+    "device types",
     "headset turned off",
-    "color-coded",
-    "last known percentage",
-    "grey out"
+    "greyed out",
+    "battery percentage"
   ],
   "source_last_updated": "1776242372",
   "source_hash": "abecc50b7e2e1bebd4ad89e32eb493dc652a020128cdfca5a2e27432253ceaf3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.750622Z",
+  "processed_at": "2026-04-24T11:23:05.342104Z",
   "status": "active"
 }
