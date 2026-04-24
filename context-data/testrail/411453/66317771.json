@@ -1,0 +1,34 @@
+{
+  "id": "66317771",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings - Setting change propagation",
+  "feature": "Device Settings",
+  "scenario": "Verify that setting changes made in the Lens app are propagated and visible on the hub mobile/desktop app.",
+  "steps": [
+    "Pair and connect the headset to the first device.",
+    "Pair the same headset with a second device (phone or desktop).",
+    "Start the Lens app on the first device.",
+    "Go to Device Settings in the Lens app.",
+    "Change values for all available settings.",
+    "Check that the changes are reflected on the second device."
+  ],
+  "expected": "All setting changes made on the first device are propagated and visible on the second device (hub mobile/desktop app).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Lens app",
+    "Device Settings",
+    "setting changes propagation",
+    "hub mobile app",
+    "hub desktop app",
+    "headset pairing",
+    "multi-device sync"
+  ],
+  "source_last_updated": "1762431573",
+  "source_hash": "05a85f8dee0cc14f79c13586587b8af18c4a365434abf088c230043576a5b588",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.364460Z",
+  "status": "active"
+}
