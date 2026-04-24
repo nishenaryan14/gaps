@@ -1,0 +1,36 @@
+{
+  "id": "65810676",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Swipe right, next screen",
+  "feature": "Quick Start Guide (QSG)",
+  "scenario": "Verify that swiping right through the Quick Start Guide screens displays the correct content (second screen with two earbuds, third screen with charge case outside, fourth screen with charge case inside) matching Figma design.",
+  "steps": [
+    "Open Quick Start Guide (QSG)",
+    "Swipe from the right side of the screen",
+    "Check that the screen shows the second screen with two earbuds",
+    "Swipe from the right side of the screen",
+    "Check that the screen shows the third screen with the charge case outside",
+    "Swipe from the right side of the screen",
+    "Check that the screen shows the fourth screen with the charge case inside"
+  ],
+  "expected": "All screens should match the Figma design.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Quick Start Guide",
+    "QSG",
+    "swipe right",
+    "earbuds",
+    "charge case",
+    "Figma design",
+    "onboarding screens",
+    "screen verification"
+  ],
+  "source_last_updated": "1761315357",
+  "source_hash": "22341cdda76b21748508c112ec6394807128808564f7a34ddb4850155f482aa4",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.405970Z",
+  "status": "active"
+}
