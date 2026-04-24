@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "Fit test - Successfully completing the Fit Test",
   "feature": "Fit Test",
-  "scenario": "Successfully complete the Fit Test and return to the Device Home Screen after tapping \"Done\".",
+  "scenario": "Successfully complete the Fit Test with connected earbuds and verify \"This is a good fit!\" message, \"Good\" tags, and \"Done\" button appear, then return to Device Home Screen.",
   "steps": [
     "Open the app with Osprey/Tern/Emu connected and correctly positioned in the ears.",
     "Go to Device Settings > Fit Test.",
-    "Start and successfully complete fit test.",
-    "Tap 'Done' button."
+    "Start and successfully complete fit test."
   ],
-  "expected": "\"This is a good fit!\" appears on screen, both earbuds marked with icon and \"Good\" tag, \"Done\" button displayed. After tapping \"Done\", user returns to Device Home Screen (or Onboarding if fit test was triggered during Onboarding).",
+  "expected": "\"This is a good fit!\" appears on screen; both earbuds marked with icon and \"Good\" tag; \"Done\" button displayed. After tapping \"Done\", user is returned to Device Home Screen (or Onboarding if triggered during Onboarding).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Fit Test",
-    "Device Home Screen",
-    "Done button",
+    "earbuds",
+    "good fit",
     "Device Settings",
     "Osprey",
     "Tern",
     "Emu",
-    "ear positioning"
+    "Device Home Screen"
   ],
   "source_last_updated": "1760959668",
   "source_hash": "acaf0b803d0b9896e2b42a8df7dfa18fa128b0e8cbba359d4769cc2c083c49ec",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.394212Z",
+  "processed_at": "2026-04-24T11:50:53.233970Z",
   "status": "active"
 }
