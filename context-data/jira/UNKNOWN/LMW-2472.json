@@ -12,11 +12,11 @@
     "Select Environment sub-setting (e.g., Surround 85).",
     "Switch to Speech sub-setting.",
     "Observe the current selection.",
-    "Return to Environment sub-setting.",
-    "Check if the previous selection (Surround 85) is retained or reverted to default (Speech).",
-    "Repeat steps 2-6 with Free 60 and Free 20 sub-settings, switching between Environment and Speech."
+    "Switch back to Environment sub-setting.",
+    "Observe the current selection.",
+    "Repeat with Free 60 and Free 20 sub-settings."
   ],
-  "expected": "The user's selected sub-setting (e.g., Surround 85, Free 60, Free 20) should be saved and retained when switching between Environment and Speech modes.",
+  "expected": "The device should save and retain the user's selected sub-setting (Environment or Speech) for Transparency mode.",
   "actual": "When switching between Environment and Speech sub-settings, the device reverts to a default: Surround 85 reverts to Speech, Free 60 and Free 20 revert to Environment.",
   "priority": "P1: High",
   "severity": "",
@@ -34,6 +34,6 @@
   "source_last_updated": "2026-04-13T09:59:05.000+0000",
   "source_hash": "526d84780e2d8536aad684076cab27747abf369a183a806fc17a3333f1f589ba",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.703985Z",
+  "processed_at": "2026-04-24T11:23:05.249816Z",
   "status": "active"
 }
