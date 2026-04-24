@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - Battery Charging Icon",
   "feature": "Device Home Screen",
-  "scenario": "Verify battery charging icon behavior on Device Home Screen: bolt icon appears when charger connected, percentage value returns when disconnected",
+  "scenario": "Verify battery charging icon toggles between bolt icon and percentage value when charger is connected and disconnected on the Device Home Screen.",
   "steps": [
-    "Ensure a headset/earbuds is paired and connected to the device.",
-    "Observe the battery icon on the Device Home Screen.",
-    "Connect the device to a charger.",
-    "Observe the battery icon on the Device Home Screen.",
-    "Disconnect the device from the charger.",
-    "Observe the battery icon on the Device Home Screen."
+    "1. Pair and connect the headset/earbuds to the device.",
+    "2. Observe the Device Home Screen to confirm the battery icon is displayed.",
+    "3. Connect the device to a charger.",
+    "4. Observe the battery icon on the Device Home Screen.",
+    "5. Disconnect the charger from the device.",
+    "6. Observe the battery icon on the Device Home Screen."
   ],
-  "expected": "When the device is connected to a charger, the battery icon changes to show a bolt icon instead of the percentage value. When the charger is disconnected, the bolt icon disappears and the percentage value is displayed again.",
+  "expected": "When the headset/earbuds are paired and connected, the battery icon is displayed. When the device is connected to a charger, the battery icon changes to show a bolt icon instead of the percentage value. When the charger is disconnected, the bolt icon disappears and the percentage value is displayed again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "battery charging icon",
     "bolt icon",
-    "battery percentage",
-    "Device Home Screen",
+    "percentage value",
     "charger connected",
     "charger disconnected",
-    "battery icon behavior"
+    "Device Home Screen",
+    "battery icon toggle"
   ],
   "source_last_updated": "1759151666",
   "source_hash": "9d716e3a625947a65ea9af5fb4c2bb5bb3758e19385e20d3bc741154ca129723",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.339585Z",
+  "processed_at": "2026-04-24T11:50:53.126143Z",
   "status": "active"
 }
