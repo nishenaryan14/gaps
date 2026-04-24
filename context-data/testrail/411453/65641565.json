@@ -1,0 +1,31 @@
+{
+  "id": "65641565",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Tab is present in Device Settings",
+  "feature": "EQ",
+  "scenario": "Verify the EQ tab appears in Device Settings for EQ-supported devices",
+  "steps": [
+    "1. Open Device Settings.",
+    "2. Navigate to the device that supports EQ.",
+    "3. Check if the EQ tab is present."
+  ],
+  "expected": "The EQ tab should be present in Device Settings when using a device that supports EQ.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ tab",
+    "Device Settings",
+    "EQ-supported devices",
+    "equalizer settings",
+    "audio settings",
+    "device configuration",
+    "EQ visibility"
+  ],
+  "source_last_updated": "1761142093",
+  "source_hash": "15a206bdce172b5f46c90cc033b2a46f2b82c9352b6195dd0623203d57d5ae2c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
