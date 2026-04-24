@@ -1,0 +1,34 @@
+{
+  "id": "65640171",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Share Data",
+  "feature": "Analytics",
+  "scenario": "Log user consent choice for analytics tracking when the \"Share Data\" event is triggered via login or toggling the Share Data setting.",
+  "steps": [
+    "1. Trigger the 'Share Data' event by logging in or toggling the Share Data setting in App Settings > General > Account.",
+    "2. Observe that the user's consent choice for analytics tracking is logged.",
+    "3. Wait a few hours for the event count to update.",
+    "4. Navigate to the Firebase dashboard page.",
+    "5. Verify that the dashboard displays default elements: a graph, events in the last 30 minutes, event count by country and gender, events per session, app version, app build, app environment, consent status, and screen name."
+  ],
+  "expected": "The user's consent choice for analytics tracking is logged when the \"Share Data\" event is triggered. After a few hours, the event count updates. The Firebase dashboard page displays all default elements: a graph, events in the last 30 minutes, event count by country and gender, events per session, app version, app build, app environment, consent status, and screen name.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "consent choice",
+    "analytics tracking",
+    "Share Data event",
+    "login",
+    "toggle setting",
+    "Firebase dashboard",
+    "event count",
+    "consent status"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "f732ed9325a60542c99488be18080eb3ac65ff7d18e5e7a91e425a9152a424a8",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "status": "active"
+}
