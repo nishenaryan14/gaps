@@ -5,27 +5,31 @@
   "project": "411453",
   "title": "ANC - changes are present after closing/opening the ANC tab",
   "feature": "ANC (Active Noise Cancellation)",
-  "scenario": "ANC setting does not persist after closing and reopening the ANC tab",
+  "scenario": "ANC settings are lost after closing and reopening the ANC tab",
   "steps": [
-    "1. Set ANC to a specific value.",
-    "2. Close the ANC tab.",
-    "3. Reopen the ANC tab."
+    "Start the app with the device",
+    "Open the ANC tab",
+    "Set ANC to some value",
+    "Close the ANC tab",
+    "Reopen the ANC tab",
+    "Check the setting"
   ],
-  "expected": "The ANC setting should persist after closing and reopening the tab.",
+  "expected": "The values should remain as set.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "ANC setting",
-    "persist",
-    "tab close",
-    "tab reopen",
-    "value retention",
+    "ANC settings",
     "ANC tab",
-    "setting not saved"
+    "settings lost",
+    "closing tab",
+    "reopening tab",
+    "persistence",
+    "state retention",
+    "audio settings"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "f6acf65166997d34f7ea7dcce867e3f5694f374a644459b2c60bf56a02feadef",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.392549Z",
+  "processed_at": "2026-04-24T11:50:53.235981Z",
   "status": "active"
 }
