@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Software Update - DFU  - Onboarding in not displayed over DFU screens after connecting new device",
   "feature": "Software Update / DFU",
-  "scenario": "Onboarding dialog is suppressed during DFU and should appear on the Home screen after DFU completes and the DFU screen is closed.",
+  "scenario": "Onboarding dialog is not displayed over DFU screens after connecting a new device that supports onboarding; it only appears on the Home screen after DFU finishes and the user closes the DFU screen.",
   "steps": [
-    "Connect a new device that supports onboarding (e.g., Emu, Tern, Osprey).",
-    "Observe that the DFU screen appears and DFU begins running.",
-    "Note that the onboarding dialog does not appear while DFU is running.",
+    "Connect a new device that supports onboarding (e.g., Emu, Tern, Osprey) while DFU is running.",
+    "Observe the app screen during the DFU process.",
     "Wait for DFU to finish.",
     "Close the DFU screen.",
-    "Observe the Home screen."
+    "Check the Home screen for the onboarding dialog."
   ],
-  "expected": "After DFU finishes and the user closes the DFU screen, the onboarding dialog should appear on the Home screen.",
+  "expected": "The onboarding dialog should appear on the Home screen after the user closes the DFU screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "onboarding dialog",
-    "DFU",
+    "DFU screen",
     "device firmware update",
     "Home screen",
-    "DFU screen",
-    "suppressed",
-    "DFU completes",
-    "new device connection"
+    "onboarding not displayed",
+    "new device connection",
+    "DFU process",
+    "onboarding overlay"
   ],
   "source_last_updated": "1763378013",
   "source_hash": "7fc59a8f3017aa12ae366fa0b0615836289ac7e7ef61be9007be5f020227ff45",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "processed_at": "2026-04-24T11:50:53.293800Z",
   "status": "active"
 }
