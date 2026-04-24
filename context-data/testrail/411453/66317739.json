@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Rename device - close/open the General tab",
   "feature": "Device Settings - General",
-  "scenario": "Verify that renaming a device via the General tab persists after closing and reopening the tab.",
+  "scenario": "Verify that a device's renamed value persists after closing and reopening the General settings tab.",
   "steps": [
-    "Open the General tab for the device.",
-    "Rename the device via the General tab.",
+    "Open Device Settings.",
+    "Navigate to the General tab.",
+    "Enter a new name for the device.",
     "Close the General tab.",
-    "Reopen the General tab.",
-    "Observe the device name displayed."
+    "Reopen the General tab."
   ],
-  "expected": "The General tab should display the new device name after reopening.",
+  "expected": "The new name should still be present in the General tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "rename device",
-    "General tab",
-    "persist",
-    "close tab",
-    "reopen tab",
-    "device name",
-    "verification"
+    "device rename",
+    "persist value",
+    "General settings",
+    "close reopen tab",
+    "settings verification",
+    "device name persistence",
+    "settings tab navigation"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "8098be9bfe30d77f0f6204a2e8ab7fe6dbe4001011832378ad7e68f07f70bf03",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "processed_at": "2026-04-24T11:50:53.216183Z",
   "status": "active"
 }
