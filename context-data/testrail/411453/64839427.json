@@ -1,0 +1,35 @@
+{
+  "id": "64839427",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "[IOS] Location Sharing Dialogue - Don't Allow - Cancel",
+  "feature": "Location Sharing / Find My Device",
+  "scenario": "User taps \"Cancel\" on the permission dialog after denying location sharing during onboarding and navigating to Find My Device settings, expecting to return to the Poly Lens Menu screen.",
+  "steps": [
+    "During onboarding, select \"Don't Allow\" in the Location Sharing dialogue.",
+    "Open the Lens app.",
+    "Navigate to App Settings.",
+    "Navigate to Find My Device.",
+    "Observe the permission dialog with \"Cancel\" and \"Enable Now\" options.",
+    "Tap \"Cancel\"."
+  ],
+  "expected": "The user is navigated back to the Poly Lens Menu screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Cancel",
+    "permission dialog",
+    "deny location sharing",
+    "onboarding",
+    "Find My Device settings",
+    "return to Poly Lens Menu",
+    "Don't Allow",
+    "Enable Now"
+  ],
+  "source_last_updated": "1759150486",
+  "source_hash": "62f7efea81a876f1627372dd7e7c2f56f14a07f7f4163a75c1e8a3a5861ab981",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.064322Z",
+  "status": "active"
+}
