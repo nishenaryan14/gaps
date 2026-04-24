@@ -1,0 +1,32 @@
+{
+  "id": "65640198",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Soak Test - Headset disconnected, app in the background, phone idle",
+  "feature": "Soak Test / Headset Connectivity",
+  "scenario": "Soak test: app remains responsive and shows headset as disconnected after prolonged idle period following pairing and headset power-off",
+  "steps": [
+    "Install and launch the app, pair the headset, turn off the headset, then go to the Home Screen.",
+    "Put the app in the background and leave the phone idle for several hours.",
+    "After several hours, check that the app is still running and responsive."
+  ],
+  "expected": "Headset is shown as disconnected on the Home Screen. After several hours, the app is still running and responsive with no memory leaks or crashes.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "soak test",
+    "idle",
+    "headset disconnected",
+    "app responsiveness",
+    "prolonged idle",
+    "background",
+    "pairing",
+    "power-off"
+  ],
+  "source_last_updated": "1760949727",
+  "source_hash": "f6e4db42218142e4c0f485ff7b34367f8035ef26544468a6893770b305f89e15",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.428522Z",
+  "status": "active"
+}
