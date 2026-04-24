@@ -5,28 +5,33 @@
   "project": "411453",
   "title": "ANC - 6.-ANC is OFF and Transparency is OFF, both without selected values",
   "feature": "ANC / Transparency Mode",
-  "scenario": "Verify that when both ANC and Transparency modes are OFF, the Transparency toggle is disabled during a call with a popup message, and both modes remain OFF and functional after the call ends.",
+  "scenario": "When both ANC and Transparency modes are off, during a call Transparency mode becomes greyed out with a popup explaining it's unavailable, and after the call both modes remain off but can be toggled normally.",
   "steps": [
-    "Start/join a call (Zoom, Teams, Mobile) \u2014 ANC remains OFF, Transparency becomes greyed out/inaccessible.",
-    "Tap Transparency toggle \u2014 popup informs user option is unavailable during call.",
-    "Leave call \u2014 both ANC and Transparency remain OFF.",
-    "Tap ANC and Transparency toggles \u2014 user can switch between modes normally."
+    "Ensure ANC Mode is OFF and Transparency Mode is OFF (both without any selected values).",
+    "Start a call (e.g., Zoom, Teams, or Mobile call).",
+    "Observe the state of ANC Mode and Transparency Mode during the call.",
+    "Tap the Transparency Mode toggle.",
+    "Observe the popup that appears.",
+    "End the call.",
+    "Observe the state of ANC Mode and Transparency Mode after the call ends.",
+    "Try toggling between ANC and Transparency modes."
   ],
-  "expected": "When ANC Mode is OFF and Transparency Mode is OFF, during a call ANC stays OFF and Transparency is greyed out/inaccessible. Tapping Transparency shows a popup that the option is unavailable during a call. After leaving the call, both modes remain OFF and the user can switch between modes normally.",
+  "expected": "During the call, ANC Mode remains OFF and Transparency Mode is greyed out/inaccessible. Tapping the Transparency Mode toggle shows a popup informing the user this option is not available during a call. After leaving the call, both modes remain OFF and the user can toggle between ANC and Transparency modes normally.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "ANC off",
-    "Transparency disabled",
-    "Transparency toggle greyed out",
-    "popup message during call",
-    "call mode restriction",
-    "post-call mode restoration",
-    "ANC Transparency toggle functionality"
+    "Transparency off",
+    "call",
+    "Transparency greyed out",
+    "popup",
+    "unavailable",
+    "after call",
+    "toggle modes"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "6f555f1e25ce94bde093faebe620a2af3ec59798f723425396c0a97a18654fd9",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.399301Z",
+  "processed_at": "2026-04-24T11:50:53.253330Z",
   "status": "active"
 }
