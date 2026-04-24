@@ -5,14 +5,14 @@
   "project": "411453",
   "title": "ANC - 8.-User starts the app and opens Settings>ANC while being in active call",
   "feature": "ANC (Active Noise Cancellation) / Transparency Mode",
-  "scenario": "User opens Settings > ANC during an active call, then leaves the call and verifies ANC/Transparency mode behavior.",
+  "scenario": "User opens Settings > ANC during an active call, then leaves the call and verifies mode toggles return to normal behavior.",
   "steps": [
     "Start/join a call (Zoom, Teams, Mobile).",
     "Open the app.",
     "Go to Device Settings > ANC.",
     "Tap Transparency Mode toggle.",
     "Leave the call.",
-    "Tap ANC and Transparency toggles."
+    "Tap ANC Mode and Transparency Mode toggles."
   ],
   "expected": "1) ANC turns ON with previously selected option, Transparency Mode becomes greyed out and turned OFF. 2) Popup informs user this option is not available during call. 3) ANC turns OFF, Transparency Mode becomes accessible again and turns ON with previously selected option. 4) User can move between ANC and Transparency modes.",
   "coverage": [],
@@ -22,14 +22,14 @@
     "Active Noise Cancellation",
     "Transparency Mode",
     "call",
-    "Device Settings",
     "toggle",
+    "Device Settings",
     "audio mode",
     "call behavior"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "1339e97239cd0625a452073449729c1222b08299336ed8ef0448a95535e41231",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.399301Z",
+  "processed_at": "2026-04-24T11:50:53.249298Z",
   "status": "active"
 }
