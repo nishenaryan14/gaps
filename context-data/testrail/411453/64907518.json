@@ -1,0 +1,30 @@
+{
+  "id": "64907518",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - Verify that data is correct after moving from Guest to Account linked to a Tenant",
+  "feature": "Support",
+  "scenario": "Verify data correctness after transitioning from Guest to an Account linked to a Tenant",
+  "steps": [
+    "1) Install the app and go as Guest. Check data in Poly Lens Menu > Support > App.",
+    "2) Go to Poly Lens Menu > General > Account, login with account linked to a Tenant, then go to Poly Lens Menu > Support > App."
+  ],
+  "expected": "1) App version is correct; Tenant name, tenant id, user id are None; Last connected: unknown. 2) Tenant info is properly displayed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Guest to Account transition",
+    "Tenant linking",
+    "Data correctness verification",
+    "Poly Lens app",
+    "Account login",
+    "Support menu",
+    "App data validation"
+  ],
+  "source_last_updated": "1759752659",
+  "source_hash": "2ef35aedfa07dd732c3f8839c0868a39a706e825500ef3121fcb62b79932d992",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.361909Z",
+  "status": "active"
+}
