@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "EQ - Tap on button to change presets, blurred screen",
   "feature": "EQ (Equalizer)",
-  "scenario": "Tapping the preset picker button in EQ settings blurs the background screen when the dialog opens",
+  "scenario": "Tapping the preset picker button in EQ settings blurs the background screen when the preset selection dialog opens.",
   "steps": [
     "Start the app with a device that supports custom EQ.",
     "Go to Device Settings > EQ.",
@@ -16,17 +16,16 @@
   "edge_cases": [],
   "keywords": [
     "EQ settings",
-    "preset picker button",
-    "dialog opens",
+    "preset picker",
     "background blur",
+    "preset selection dialog",
+    "device settings",
     "custom EQ",
-    "Device Settings",
-    "UI bug",
-    "visual glitch"
+    "UI bug"
   ],
   "source_last_updated": "1761143940",
   "source_hash": "fbf2941c582dc8b3929bb9d4894225f96857d028481b10ad5be8d1f525c67ce6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.398291Z",
+  "processed_at": "2026-04-24T11:50:53.247786Z",
   "status": "active"
 }
