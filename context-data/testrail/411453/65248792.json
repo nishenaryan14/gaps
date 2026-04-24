@@ -1,0 +1,34 @@
+{
+  "id": "65248792",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Stop button",
+  "feature": "Find My Device",
+  "scenario": "Stop button fails to stop the tone and restore the play button when using Find My Device with a connected headset",
+  "steps": [
+    "1. Pair and connect a headset to the device.",
+    "2. Open the Find My Device app.",
+    "3. Tap the Blue Geo icon to locate the device.",
+    "4. Tap the Play button to play a tone on the device.",
+    "5. Tap the Stop button to stop the tone."
+  ],
+  "expected": "The tone stops playing, and the Play button becomes available again.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Stop button",
+    "Find My Device",
+    "headset",
+    "tone",
+    "Play button",
+    "Bluetooth",
+    "audio",
+    "device location"
+  ],
+  "source_last_updated": "1759929949",
+  "source_hash": "8004f6e32be76e83fccb8017e3b02740aa910acf9e72acba822e73cf076f88eb",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.109523Z",
+  "status": "active"
+}
