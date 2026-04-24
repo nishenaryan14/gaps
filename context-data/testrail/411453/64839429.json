@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "[IOS] Location Sharing Dialogue - Don't Allow - Enable Now - Allow While Using App",
   "feature": "Location Sharing / Find My Device",
-  "scenario": "After onboarding with \"Don't Allow\" selected, tapping \"Enable Now\" on the Find My Device permission popup navigates to phone settings, and granting \"While Using the App\" permission returns to the app with the FMD screen displayed and permission window dismissed.",
+  "scenario": "After onboarding with \"Don't Allow\" selected, tapping \"Enable Now\" on the Find My Device permission popup navigates to phone settings, and granting \"While Using the App\" permission returns to the FMD screen with the permission window dismissed.",
   "steps": [
     "After onboarding, select \"Don't Allow\" when prompted for location permission.",
     "Tap on App Settings > Find My Device.",
     "Observe the permission popup with \"Cancel\" and \"Enable Now\" options.",
-    "Tap \"Enable Now\" to navigate to phone settings.",
-    "Grant \"While Using the App\" permission.",
+    "Tap \"Enable Now\".",
+    "In phone settings, grant \"While Using the App\" permission.",
     "Return to the app.",
-    "Observe the FMD screen is displayed and the permission window is dismissed."
+    "Observe the Find My Device (FMD) screen is displayed and the permission window is dismissed."
   ],
   "expected": "The FMD screen is displayed and the permission window is dismissed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Find My Device",
-    "permission popup",
+    "location permission",
     "Enable Now",
     "While Using the App",
-    "location permission",
+    "permission popup",
+    "Don't Allow",
     "phone settings",
-    "FMD screen",
-    "onboarding"
+    "FMD screen"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "70dd6e57d57b180a7975da950ca006e1daf01a559f527302ca9f0f25341f53ec",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.075485Z",
+  "processed_at": "2026-04-24T10:51:32.728438Z",
   "status": "active"
 }
