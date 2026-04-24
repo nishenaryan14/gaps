@@ -1,0 +1,38 @@
+{
+  "id": "66317755",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Language Change - Consecutive language change",
+  "feature": "Language Settings",
+  "scenario": "Verify that consecutive language changes complete successfully after software update confirmation",
+  "steps": [
+    "Pair and connect the headset (HS).",
+    "Start the app.",
+    "Go to Device Settings.",
+    "Tap on the Language section.",
+    "Select a language to change.",
+    "Confirm the popup message about the software update.",
+    "Proceed with the update.",
+    "Verify the language change completes successfully.",
+    "Repeat the entire process to ensure consecutive language changes are also successful."
+  ],
+  "expected": "Language changes complete successfully, including consecutive language changes.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "language change",
+    "software update",
+    "headset",
+    "device settings",
+    "consecutive changes",
+    "update confirmation",
+    "language selection",
+    "popup message"
+  ],
+  "source_last_updated": "1762244318",
+  "source_hash": "00f16ae118e19fa6fee7392513ac1c12012ded3ade250a810f2705bb0607feec",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.380320Z",
+  "status": "active"
+}
