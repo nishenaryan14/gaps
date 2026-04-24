@@ -1,0 +1,35 @@
+{
+  "id": "65641545",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - Switch both ANC and Transparency to Off",
+  "feature": "ANC (Active Noise Cancellation)",
+  "scenario": "Verify that when both ANC and Transparency are set to Off, both values are disabled/greyed out and none of the sub-options are selected for both combinations: ANC on or Transparency on.",
+  "steps": [
+    "1. Set ANC to Off.",
+    "2. Set Transparency to Off.",
+    "3. Check that both ANC and Transparency values are disabled/greyed out.",
+    "4. Verify that none of the sub-options under ANC or Transparency are selected.",
+    "5. Repeat the test for the combination: ANC On and Transparency Off.",
+    "6. Repeat the test for the combination: ANC Off and Transparency On."
+  ],
+  "expected": "When both ANC and Transparency are Off, both values are disabled/greyed out and none of the sub-options are selected. The same behavior is expected when either ANC is On or Transparency is On.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "ANC",
+    "Transparency",
+    "Off",
+    "disabled",
+    "greyed out",
+    "sub-options",
+    "On",
+    "combination"
+  ],
+  "source_last_updated": "1761046304",
+  "source_hash": "ef1a7607f4dfc844ae35a20082537c0ffc9022586cbdfe61857e5e5fb2225a6d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
