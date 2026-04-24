@@ -1,0 +1,32 @@
+{
+  "id": "65640123",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Policy: Manage Policies for Multiple Devices",
+  "feature": "Policy Management",
+  "scenario": "Verify that when multiple devices are connected and policies are applied, each device's settings page correctly reflects its respective policy with locked and unlocked states.",
+  "steps": [
+    "Start the app with multiple devices connected.",
+    "Navigate to the device settings page for each device.",
+    "Check the settings for each device."
+  ],
+  "expected": "Settings for each device reflect their respective policies, with locked and unlocked states.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "multiple devices",
+    "policies applied",
+    "device settings page",
+    "locked state",
+    "unlocked state",
+    "policy reflection",
+    "settings verification",
+    "device configuration"
+  ],
+  "source_last_updated": "1760949373",
+  "source_hash": "072fd36096afa303cf81eaa677ea20520e92c2aedbff481b77c8ad8f8e48e774",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.420275Z",
+  "status": "active"
+}
