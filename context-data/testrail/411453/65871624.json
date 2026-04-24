@@ -1,0 +1,32 @@
+{
+  "id": "65871624",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - No Device Connected - Supported List - Other Devices",
+  "feature": "Device Home Screen - No Device Connected",
+  "scenario": "When no devices are connected, tapping \"Supported Devices\" link and then \"Other devices\" button displays correct text and opens Poly support products web page.",
+  "steps": [
+    "Ensure no devices are connected.",
+    "Tap the 'Supported Devices' link.",
+    "Tap the 'Other devices' button."
+  ],
+  "expected": "Tapping the \"Supported Devices\" link displays text matching the Figma design. Tapping the \"Other devices\" button opens the Poly support products web page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "no devices connected",
+    "Supported Devices link",
+    "Other devices button",
+    "correct text displayed",
+    "Poly support products",
+    "web page opens",
+    "device connection status",
+    "support navigation"
+  ],
+  "source_last_updated": "1761657130",
+  "source_hash": "58d47865c6e84c1cb4e89fcc28c86ffacaedcaaedf0d57fb0230beb4b977e3de",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.076495Z",
+  "status": "active"
+}
