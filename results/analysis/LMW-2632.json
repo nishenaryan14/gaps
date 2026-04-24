@@ -1,0 +1,93 @@
+{
+  "bug_id": "LMW-2632",
+  "matched_testcases": [
+    "65458387",
+    "65293009",
+    "65293034",
+    "65293028",
+    "65293010",
+    "65293019",
+    "65293025",
+    "65293011",
+    "65293016",
+    "65293012",
+    "65293013",
+    "65293014",
+    "65293015",
+    "65293021",
+    "65293022"
+  ],
+  "coverage_status": "none",
+  "gaps": [
+    "No existing test case covers CCL (Current Call Limit) settings behavior during an active call.",
+    "No existing test case verifies UI stability (blinking vs. stable) of locked settings during a call.",
+    "All existing test cases focus on onboarding, EULA, splash screen, and location permissions \u2014 none relate to in-call CCL settings."
+  ],
+  "generated_testcases": [
+    {
+      "title": "Verify locked CCL settings remain stable during an active call",
+      "steps": [
+        "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
+        "2. Navigate to CCL (Current Call Limit) settings.",
+        "3. Lock the CCL settings (e.g., toggle lock icon or enable lock via settings menu).",
+        "4. Initiate or receive an active call (simulate in-call state).",
+        "5. While the call is active, observe the CCL settings UI for any visual changes.",
+        "6. Monitor the locked CCL settings display for at least 30 seconds during the call."
+      ],
+      "expected": "The locked CCL settings UI remains stable and does not blink, flash, or flicker during the entire duration of the active call. All locked values and indicators stay consistently visible without any visual instability."
+    },
+    {
+      "title": "Verify locked CCL settings persist after ending an active call",
+      "steps": [
+        "1. Launch the application and complete onboarding.",
+        "2. Navigate to CCL settings and lock a specific CCL value.",
+        "3. Initiate an active call.",
+        "4. During the call, verify the locked CCL setting remains stable (no blinking).",
+        "5. End the active call.",
+        "6. Return to the CCL settings screen."
+      ],
+      "expected": "The locked CCL setting persists after the call ends. The value remains unchanged and the lock indicator is still active. No blinking or UI instability occurs during or after the call."
+    },
+    {
+      "title": "Verify unlocked CCL settings behavior during an active call (baseline comparison)",
+      "steps": [
+        "1. Launch the application and complete onboarding.",
+        "2. Navigate to CCL settings and ensure settings are unlocked.",
+        "3. Initiate an active call.",
+        "4. During the call, observe the CCL settings UI for any visual changes or blinking.",
+        "5. Attempt to modify a CCL setting while the call is active.",
+        "6. End the call and verify the final state of CCL settings."
+      ],
+      "expected": "Unlocked CCL settings may allow modification during a call (if designed). The UI should not blink or flicker regardless of lock state. This test serves as a baseline to confirm the blinking issue is specific to locked state."
+    },
+    {
+      "title": "Verify locked CCL settings stability across multiple consecutive calls",
+      "steps": [
+        "1. Launch the application and complete onboarding.",
+        "2. Navigate to CCL settings and lock the settings.",
+        "3. Initiate a first active call and observe CCL UI for 15 seconds \u2014 verify no blinking.",
+        "4. End the first call.",
+        "5. Initiate a second active call and observe CCL UI for 15 seconds \u2014 verify no blinking.",
+        "6. End the second call.",
+        "7. Initiate a third active call and observe CCL UI for 15 seconds \u2014 verify no blinking.",
+        "8. End the third call."
+      ],
+      "expected": "Locked CCL settings remain stable (no blinking) across all three consecutive calls. The UI does not exhibit any flickering or visual instability in any of the call sessions."
+    },
+    {
+      "title": "Verify locked CCL settings stability during incoming call notification",
+      "steps": [
+        "1. Launch the application and complete onboarding.",
+        "2. Navigate to CCL settings and lock the settings.",
+        "3. Simulate an incoming call (do not answer yet \u2014 ringing state).",
+        "4. Observe the CCL settings UI during the incoming call notification.",
+        "5. Answer the incoming call.",
+        "6. Observe the CCL settings UI during the active call.",
+        "7. End the call."
+      ],
+      "expected": "Locked CCL settings remain stable (no blinking) during both the incoming call notification (ringing) state and the active call state. No visual flickering or instability occurs."
+    }
+  ],
+  "analysis_version": "v1",
+  "processed_at": "2026-04-24T12:05:41.592349Z"
+}
