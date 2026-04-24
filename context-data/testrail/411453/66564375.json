@@ -1,0 +1,34 @@
+{
+  "id": "66564375",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "PPIP - Share Data toggle can be changed to ON or OFF while on Guest account",
+  "feature": "PPIP (Privacy & Personal Information Preferences)",
+  "scenario": "Guest user should not be able to toggle the Share Data setting ON or OFF",
+  "steps": [
+    "Log in as a Guest user.",
+    "Navigate to the settings or data sharing section.",
+    "Locate the 'Share Data' toggle.",
+    "Attempt to toggle the 'Share Data' switch to ON.",
+    "Attempt to toggle the 'Share Data' switch to OFF."
+  ],
+  "expected": "The 'Share Data' toggle should be disabled or not changeable for Guest users. Guest users should not be allowed to modify the Share Data setting.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Guest user",
+    "Share Data toggle",
+    "Settings",
+    "Data sharing",
+    "Permission restriction",
+    "Toggle disabled",
+    "Access control",
+    "UI permissions"
+  ],
+  "source_last_updated": "1762435234",
+  "source_hash": "be1ee8a93470bccda4e92ecad80771ca31b31d44632fc12fc02e4d001454498c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.059262Z",
+  "status": "active"
+}
