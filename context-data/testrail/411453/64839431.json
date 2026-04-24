@@ -5,18 +5,17 @@
   "project": "411453",
   "title": "Device Home Screen - Device Onboarding Screens",
   "feature": "Device Home Screen - Device Onboarding",
-  "scenario": "Verify the full onboarding flow for first-time connected devices (Osprey/Tern/Emu), including welcome popup, navigation, content alignment, fit test, and completion for both single and second paired devices.",
+  "scenario": "Verify the full onboarding flow for first-time device connection (Osprey/Tern/Emu), including welcome popup, navigation, content alignment, fit test, and completion.",
   "steps": [
     "Connect a supported device (Osprey/Tern/Emu) for the first time.",
-    "Observe that the welcome popup is displayed.",
-    "Navigate through onboarding screens using swipe gestures or navigation buttons.",
-    "Verify that content and animations match the Figma designs.",
-    "Test the fit test functionality, checking both pass and fail states.",
-    "Complete the onboarding flow by tapping either the 'Done' or 'User Guide' button.",
-    "Pair and connect a second supported device.",
-    "Verify that onboarding screens are displayed for the second device as well."
+    "Verify the welcome popup is displayed.",
+    "Navigate through onboarding screens using swiping or the navigation buttons.",
+    "Check that content and animations match the Figma designs (https://www.figma.com/design/IgfSERyqCoRH3Iyejre5oE/Lens-Mobile-%7C-Archive?node-id=50024-76867&t=Y8SevCnF1q6QyVis-0).",
+    "Test the fit test functionality and verify both pass and fail states.",
+    "Complete the onboarding flow by tapping the 'Done' or 'User Guide' button.",
+    "Connect a second device and verify the onboarding flow is displayed again."
   ],
-  "expected": "Onboarding screens are displayed for each supported device (Osprey/Tern/Emu) when connected for the first time. The full flow works correctly: welcome popup appears, navigation via swiping or buttons functions, content and animations match Figma designs, fit test handles pass/fail states, and completion via 'Done' or 'User Guide' buttons works. Onboarding also triggers correctly for a second paired device.",
+  "expected": "Onboarding screens are displayed for the first-time connection of a supported device (Osprey/Tern/Emu). The full flow works correctly: welcome popup appears, navigation (swiping/buttons) functions, content and animations match Figma designs, fit test handles pass/fail states, completion buttons ('Done'/'User Guide') work, and onboarding is shown again for a second device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,14 +23,14 @@
     "first-time device connection",
     "welcome popup",
     "fit test",
-    "paired devices",
     "Osprey/Tern/Emu",
-    "navigation gestures",
-    "Figma design alignment"
+    "navigation swiping",
+    "Figma design alignment",
+    "second device onboarding"
   ],
   "source_last_updated": "1759158377",
   "source_hash": "589fd75bad621f84e5d612cf208afb087e12b3776b8318975285d417a9f8a1e3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.346639Z",
+  "processed_at": "2026-04-24T11:50:53.141432Z",
   "status": "active"
 }
