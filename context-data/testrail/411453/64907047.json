@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "App Settings - General - Account - Account delete - dialog",
   "feature": "App Settings - General - Account",
-  "scenario": "Verify the account delete dialog in App Settings > General > Account matches the Figma design.",
+  "scenario": "Verify the delete account dialog appears correctly when clicking the delete icon in the Account tab under General settings, matching the Figma design reference.",
   "steps": [
-    "Start the app and log in to a Lens tenant account on the Cloud.",
-    "Navigate to App Settings > General.",
-    "Open the Account tab.",
-    "Click the delete icon.",
-    "Check the dialog."
+    "Navigate to General settings",
+    "Go to the Account tab",
+    "Click the delete icon",
+    "Observe the delete account dialog that appears"
   ],
-  "expected": "The dialog is present and matches the Figma design.",
+  "expected": "The delete account dialog appears and matches the Figma design reference.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Account delete dialog",
-    "App Settings General",
+    "delete account dialog",
     "Account tab",
-    "Delete icon",
-    "Figma design verification",
-    "Lens tenant",
-    "Cloud app",
-    "Dialog UI matching"
+    "General settings",
+    "delete icon",
+    "Figma design",
+    "dialog appearance",
+    "account deletion",
+    "settings UI"
   ],
   "source_last_updated": "1759416338",
   "source_hash": "af28e7292ae4408418d0e6f91893b5f52168ed1d54279031feb4ce1cd89d4db4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.748540Z",
+  "processed_at": "2026-04-24T11:23:05.348298Z",
   "status": "active"
 }
