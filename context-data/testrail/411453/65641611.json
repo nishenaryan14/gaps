@@ -1,0 +1,32 @@
+{
+  "id": "65641611",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit test - 2nd screen UI",
+  "feature": "Fit Test",
+  "scenario": "Verify the 2nd screen UI for Fit Test matches Figma design (Osprey/Tern and Emu variants) when starting a test from Device Settings.",
+  "steps": [
+    "Start the app with a device that supports fit test connected.",
+    "Open Device Settings > Fit Test.",
+    "Tap on \"Start Test\" button."
+  ],
+  "expected": "The UI matches the Figma design (Osprey/Tern and Emu variants).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Fit Test",
+    "2nd screen UI",
+    "Figma design",
+    "Osprey variant",
+    "Tern variant",
+    "Emu variant",
+    "Device Settings",
+    "Start Test"
+  ],
+  "source_last_updated": "1760963417",
+  "source_hash": "704d4698a62ce390485063bdf04fd44662c61982d3b590454aa08c5102219730",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.391539Z",
+  "status": "active"
+}
