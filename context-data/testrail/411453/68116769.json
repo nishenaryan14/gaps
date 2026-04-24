@@ -1,0 +1,41 @@
+{
+  "id": "68116769",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Custom Quick Settings",
+  "feature": "Device Home Screen - Custom Quick Settings",
+  "scenario": "Verify Device Home Screen displays Quick Settings based on user selection in Device Settings > Quick Settings Selection, with varying counts (3, 2, 1, 0) reflecting saved selections.",
+  "steps": [
+    "Go to Device Settings > Quick Settings Selection.",
+    "Select 3 options and save.",
+    "Verify that the Device Home Screen displays 3 quick settings.",
+    "Go back to Device Settings > Quick Settings Selection.",
+    "Select 2 options and save.",
+    "Verify that the Device Home Screen displays 2 quick settings.",
+    "Go back to Device Settings > Quick Settings Selection.",
+    "Select 1 option and save.",
+    "Verify that the Device Home Screen displays 1 quick setting.",
+    "Go back to Device Settings > Quick Settings Selection.",
+    "Deselect all options while keeping the toggle ON, then save.",
+    "Verify that the Device Home Screen displays no quick settings."
+  ],
+  "expected": "The Device Home Screen displays quick settings based on the user's selection: 3 quick settings when 3 options are selected, 2 quick settings when 2 options are selected, 1 quick setting when 1 option is selected, and no quick settings when all options are deselected (toggle remains ON).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Device Home Screen",
+    "Quick Settings",
+    "Quick Settings Selection",
+    "Device Settings",
+    "Toggle",
+    "Save",
+    "Display",
+    "Configuration"
+  ],
+  "source_last_updated": "1764601183",
+  "source_hash": "2e8a2aa733a33783bea57a342bbfea9d0b65184b538fcf597168685238317a20",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.095642Z",
+  "status": "active"
+}
