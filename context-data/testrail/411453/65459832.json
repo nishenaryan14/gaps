@@ -7,29 +7,27 @@
   "feature": "Notifications - Onboarding",
   "scenario": "Verify that after allowing notifications during onboarding, the Notification settings screen shows a master toggle set to ON and allows individual notification toggles to be changed.",
   "steps": [
-    "1. Launch the app and begin the onboarding flow.",
+    "1. Launch the app and proceed through the onboarding flow.",
     "2. When prompted, allow notifications.",
-    "3. Complete the onboarding process.",
-    "4. Navigate to the Notification settings screen.",
-    "5. Observe the master toggle for notifications.",
-    "6. Attempt to change individual notification toggles."
+    "3. Navigate to the Notification settings screen.",
+    "4. Observe the master toggle for notifications.",
+    "5. Attempt to change individual notification toggles."
   ],
-  "expected": "The Notification settings screen shows a master toggle set to ON, and individual notification toggles can be changed.",
+  "expected": "The Notification settings screen shows a master toggle set to ON and allows individual notification toggles to be changed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "notifications",
-    "onboarding",
-    "master toggle",
     "notification settings",
-    "toggle",
-    "permissions",
+    "master toggle",
+    "individual notification toggles",
+    "onboarding",
     "allow notifications",
-    "individual toggles"
+    "toggle ON",
+    "notification permissions"
   ],
   "source_last_updated": "1761227849",
   "source_hash": "38c93f85d50c71fddfa0c72ded23e9753a15e360e45e4fc5479d9f1e03885f31",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.419263Z",
+  "processed_at": "2026-04-24T11:50:53.312120Z",
   "status": "active"
 }
