@@ -5,27 +5,28 @@
   "project": "411453",
   "title": "Device Home Screen - Default Quick Settings",
   "feature": "Device Home Screen",
-  "scenario": "Verify that the default Quick Settings on the Device Home Screen display the first three options from the settings screen when a device is paired.",
+  "scenario": "Verify that the three quick settings displayed on the Device Home Screen match the first three options from the settings screen when a device is paired.",
   "steps": [
-    "Pair a device with the app.",
-    "Navigate to the Device Home Screen.",
-    "Observe the quick settings displayed under the device's image."
+    "1. Pair a device with the app.",
+    "2. Navigate to the Device Home Screen.",
+    "3. Observe the quick settings displayed under the device's image."
   ],
-  "expected": "Three quick settings should be displayed under the device's image, and they should always be the first three options from the settings screen.",
+  "expected": "Three quick settings should be displayed under the device's image, and they must always be the first three options from the settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Quick Settings",
+    "quick settings",
     "Device Home Screen",
     "paired device",
     "settings screen",
-    "default display",
-    "device pairing",
-    "quick settings options"
+    "first three options",
+    "device image",
+    "settings verification",
+    "quick settings matching"
   ],
   "source_last_updated": "1764600389",
   "source_hash": "2e3d4581ca6c966baa703ae0f47c08abf7bdb57a712458d53145167b8dff10b4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.341596Z",
+  "processed_at": "2026-04-24T11:50:53.121100Z",
   "status": "active"
 }
