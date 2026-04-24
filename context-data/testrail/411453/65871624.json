@@ -4,31 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - No Device Connected - Supported List - Other Devices",
-  "feature": "Device Home Screen - No Device Connected - Supported List - Other Devices",
-  "scenario": "Verify \"Supported Devices\" link and \"Other devices\" button behavior when no devices are connected",
+  "feature": "Device Home Screen - No Device Connected",
+  "scenario": "When no devices are connected, tapping \"Supported Devices\" link and then \"Other devices\" button displays correct text and opens Poly support products web page.",
   "steps": [
     "Ensure no devices are connected.",
-    "Tap the 'Supported Devices' link on the home screen.",
-    "Verify the bottom text matches the Figma design.",
-    "Tap the 'Other devices' button.",
-    "Confirm it opens the Poly support products web page."
+    "Tap the 'Supported Devices' link.",
+    "Tap the 'Other devices' button."
   ],
-  "expected": "The bottom text matches the Figma design, and tapping the \"Other devices\" button opens the Poly support products web page.",
+  "expected": "Tapping the \"Supported Devices\" link displays text matching the Figma design. Tapping the \"Other devices\" button opens the Poly support products web page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "no devices connected",
     "Supported Devices link",
     "Other devices button",
-    "no devices connected",
-    "bottom text verification",
-    "Figma design",
+    "correct text displayed",
     "Poly support products",
-    "web page navigation",
-    "home screen"
+    "web page opens",
+    "device connection status",
+    "support navigation"
   ],
   "source_last_updated": "1761657130",
   "source_hash": "58d47865c6e84c1cb4e89fcc28c86ffacaedcaaedf0d57fb0230beb4b977e3de",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.333929Z",
+  "processed_at": "2026-04-24T11:50:53.113398Z",
   "status": "active"
 }
