@@ -1,0 +1,39 @@
+{
+  "id": "65641540",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - UI",
+  "feature": "ANC - UI",
+  "scenario": "Default ANC/Adaptive is ON while Transparency/Environment is OFF and disabled/greyed out",
+  "steps": [
+    "1. Open the audio settings UI.",
+    "2. Observe the default state of the ANC (Active Noise Cancellation) section.",
+    "3. Verify that ANC/Adaptive is set to ON by default.",
+    "4. Observe the Transparency/Environment section.",
+    "5. Verify that Transparency/Environment is set to OFF by default.",
+    "6. Check that all values in the Transparency section are disabled/greyed out.",
+    "7. Confirm the ANC section displays the Adaptive option with description: 'Automatically adjusts to provide the best ANC experience.'",
+    "8. Confirm the ANC section displays the Standard option with description: 'Provide a more natural audio experience and enhanced sidetone comfort.'",
+    "9. Confirm the Transparency section displays the Environment option with description: 'Optimized to hear your surroundings.'",
+    "10. Confirm the Transparency section displays the Speech option with description: 'Best for face-to-face communication.'"
+  ],
+  "expected": "Default state: ANC/Adaptive is ON. Transparency/Environment is OFF with all values disabled/greyed out. ANC section shows Adaptive and Standard options with correct descriptions. Transparency section shows Environment and Speech options with correct descriptions.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "ANC",
+    "Adaptive",
+    "Transparency",
+    "Environment",
+    "default state",
+    "disabled",
+    "greyed out",
+    "audio settings UI"
+  ],
+  "source_last_updated": "1761045502",
+  "source_hash": "60c462c9b5b7bb7c8f96c56056183c84d3960e11a011449eb4e7832bdc0b6e18",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
