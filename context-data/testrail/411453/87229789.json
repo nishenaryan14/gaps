@@ -1,0 +1,35 @@
+{
+  "id": "87229789",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Verify Poly studio Settings",
+  "feature": "Poly Studio Settings",
+  "scenario": "Verify all Poly Studio Settings menu options (General, Find My Device, User Guides, Support, Color Theme, Feedback) display and function correctly.",
+  "steps": [
+    "Open app as guest, tap hamburger menu, go to General - verify options: Account, About, Notifications & Device Alerts, Privacy Policy, Licenses.",
+    "Navigate back, click Find My Device - verify screen displays.",
+    "Click User Guides - verify Onboarding page displays.",
+    "Navigate back, click Support - verify Support page displays.",
+    "Navigate back, click Color Theme - verify options: Follow Phone Theme, Light Theme, Dark Theme, and theme applies correctly.",
+    "Navigate back, click Feedback - verify Feedback page displays."
+  ],
+  "expected": "All General settings options (Account, About, Notifications & Device Alerts, Privacy Policy, Licenses) are visible. Find My Device screen displays. User Guides Onboarding page displays. Support page displays. Color Theme options (Follow Phone Theme, Light Theme, Dark Theme) are available and theme applies correctly. Feedback page displays.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Poly Studio",
+    "Settings menu",
+    "General settings",
+    "Find My Device",
+    "User Guides",
+    "Support page",
+    "Color Theme",
+    "Feedback"
+  ],
+  "source_last_updated": "1775492251",
+  "source_hash": "374ce6386b60390fd8c47a1e08f06b1505452627495618dc2c93752fe9b26760",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:11.913214Z",
+  "status": "active"
+}
