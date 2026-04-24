@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Support - App, user not logged ever, no data",
   "feature": "Support - App",
-  "scenario": "Guest user sees None/Unknown values for Tenant name, Tenant ID, User ID, and Last connected in Support card after navigating as guest and clicking App then Later.",
+  "scenario": "Guest user sees None/Unknown values for Tenant name, Tenant ID, User ID, and Last Connected in Support card after navigating as guest and clicking App then Later.",
   "steps": [
     "Install the mobile app",
     "Select 'Go as Guest' during onboarding",
@@ -13,7 +13,7 @@
     "Click the App button",
     "Click the Later button"
   ],
-  "expected": "The card should display correct values for all fields: App version, App ID, Tenant name, Tenant ID, User ID, and Last connected.",
+  "expected": "The card should display correct values for all fields: App version, App ID, Tenant name, Tenant ID, User ID, and Last Connected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,12 +23,12 @@
     "tenant ID",
     "user ID",
     "last connected",
-    "None/Unknown values",
-    "mobile app onboarding"
+    "none/unknown values",
+    "mobile app"
   ],
   "source_last_updated": "1759751902",
   "source_hash": "72c7b3767a2e86da7bdf6f480f4f57d7b07e838824a6aff9b3e0342989c642dc",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.360909Z",
+  "processed_at": "2026-04-24T11:50:53.184962Z",
   "status": "active"
 }
