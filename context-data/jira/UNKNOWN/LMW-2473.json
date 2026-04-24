@@ -1,0 +1,42 @@
+{
+  "id": "LMW-2473",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS \ud83d\udfe5 INTERMITTENT | DFU/Update all not always works properly",
+  "feature": "DFU / Update All",
+  "scenario": "DFU/Update All fails intermittently when headset was previously connected to the app while being downgraded via PC, leaving the headset outdated with no update option until app restart",
+  "description_clean": "Intermittent issue where DFU/Update All does not always work properly. Steps: Connect Falcon to app, connect Falcon to PC via cable, downgrade Falcon via PC with PTT, unplug Falcon, plug Charge Stand to PC, downgrade Charge Stand, keep Charge Stand plugged, place Headset on Charge Stand, wait for both components to appear in Software tab, tap Update All. Observed: DFU sometimes fails; after closing Houston screen and returning to Device Settings > Software tab, no option to start update again. After restarting app, Charge Stand shows as up to date while headset is outdated. Expected: DFU should work properly. Note: Only reproducible if headset was connected to app while being downgraded via PC.",
+  "steps": [
+    "Connect Falcon to the app.",
+    "Connect Falcon to PC via cable.",
+    "Downgrade Falcon via PC with PTT.",
+    "Unplug Falcon from PC.",
+    "Plug Charge Stand into PC.",
+    "Downgrade Charge Stand.",
+    "Keep Charge Stand plugged into PC.",
+    "Place Headset on Charge Stand.",
+    "Wait for both components to appear in the Software tab.",
+    "Tap Update All."
+  ],
+  "expected": "DFU should work properly. After closing Houston screen and returning to Device Settings > Software tab, the option to start the update again should be available.",
+  "actual": "DFU sometimes fails. After closing Houston screen and returning to Device Settings > Software tab, there is no option to start the update again. After restarting the app, the Charge Stand shows as up to date while the headset is outdated.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "DFU/Update All",
+    "downgrade",
+    "headset outdated",
+    "intermittent failure",
+    "Charge Stand",
+    "PC connection",
+    "app restart",
+    "Falcon"
+  ],
+  "source_last_updated": "2026-04-15T08:45:10.000+0000",
+  "source_hash": "82037ae2eea4443d551a4b28909d8145e0dcb162373928d3dcf0dae7e2d33ce3",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "status": "active"
+}
