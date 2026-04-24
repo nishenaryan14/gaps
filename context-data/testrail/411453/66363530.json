@@ -1,0 +1,35 @@
+{
+  "id": "66363530",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Falcon  - Custom Button - Teams Detected",
+  "feature": "Falcon - Custom Button",
+  "scenario": "When Falcon/Mobile detects Teams, the Custom Button settings page displays Microsoft Teams as the default selected option while Other Providers is greyed out and inaccessible upon tap.",
+  "steps": [
+    "1. Launch Falcon/Mobile and ensure Microsoft Teams is detected.",
+    "2. Navigate to the Custom Button settings page.",
+    "3. Observe the UI layout showing two options: 'Microsoft Teams' (selected by default) and 'Other Providers' (greyed out).",
+    "4. Read the message stating that Microsoft Teams is connected and Other Providers is not available.",
+    "5. Tap on 'Other Providers'.",
+    "6. Observe the result."
+  ],
+  "expected": "Tapping 'Other Providers' should result in it being grayed out and inaccessible.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Falcon/Mobile",
+    "Microsoft Teams",
+    "Custom Button settings",
+    "Other Providers greyed out",
+    "UI layout default selection",
+    "provider detection",
+    "inaccessible option",
+    "connected provider"
+  ],
+  "source_last_updated": "1762331223",
+  "source_hash": "ad25be3e0b32a8733a83c3afc8acce40b989c275cc8a7130384b10077a87500c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "status": "active"
+}
