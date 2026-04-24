@@ -1,0 +1,33 @@
+{
+  "id": "66317726",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - Rename, spec chars",
+  "feature": "Device Settings - Rename Device",
+  "scenario": "Verify that renaming a device with special characters correctly updates the device name on the Home screen.",
+  "steps": [
+    "Start app with device attached.",
+    "Navigate to Device Settings > General.",
+    "Click on the device's official name.",
+    "Enter special characters for the name (e.g., ? * \\ ! \" # $ % & ' ( ) + , - . / : ; ? @ [ ] ^ _ ` { | } ~).",
+    "Click Done."
+  ],
+  "expected": "The device name is changed and the new name appears on the Home screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "rename device",
+    "special characters",
+    "device name update",
+    "Home screen",
+    "Device Settings",
+    "name validation",
+    "special character handling"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "f149644c9a94cf43c10194b398c826906e00501cca3fc0216716ae4a12f12fc5",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "status": "active"
+}
