@@ -5,33 +5,29 @@
   "project": "411453",
   "title": "App Settings - General - Account - Invite sent, user logs during the installation, not registered on Cloud",
   "feature": "App Settings - General - Account",
-  "scenario": "IT admin invites mobile user; user installs app and logs in via mobile without accepting invite externally, resulting in no tenant ID/name on Poly Support card despite invite showing in General/Account.",
+  "scenario": "IT admin invites mobile user; user installs app and logs in on mobile without accepting invite externally, resulting in login with no tenant association and missing Tenant ID/Name on the card.",
   "steps": [
     "IT admin sends an invite to a mobile user.",
-    "User does not accept the invite via an outside source (e.g., laptop).",
-    "User installs the app on their mobile phone.",
-    "User logs in during onboarding.",
-    "User navigates to Poly Support/App.",
-    "User checks the card for Tenant ID/Name rows.",
-    "Admin checks the tenant info on cloud.",
-    "User navigates to General/Account in the app."
+    "Mobile user does not accept the invite via an external source (e.g., laptop).",
+    "Mobile user installs the app on their mobile phone.",
+    "Mobile user logs in during onboarding."
   ],
-  "expected": "The mobile user should be registered and Tenant ID/Name rows should be present on the card in Poly Support/App.",
+  "expected": "The mobile user should be properly registered on Cloud with the tenant assigned (Tenant ID/Name rows should be present on the card).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "mobile user invite",
-    "tenant ID missing",
-    "Poly Support card",
-    "app onboarding",
-    "invite not accepted",
-    "General Account",
     "IT admin invite",
-    "mobile login"
+    "mobile user login",
+    "no tenant association",
+    "missing Tenant ID",
+    "onboarding without invite acceptance",
+    "tenantless login",
+    "mobile app installation",
+    "invite acceptance flow"
   ],
   "source_last_updated": "1759416375",
   "source_hash": "22db7ea724dad989b29d4b2ce4e05000538c076eefd6b853ebde20c8ec71c2bf",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.108419Z",
+  "processed_at": "2026-04-24T10:51:32.752624Z",
   "status": "active"
 }
