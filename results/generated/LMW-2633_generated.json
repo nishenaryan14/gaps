@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Custom EQ settings persist after saving and reopening on Falcon Grey (Android)",
+    "steps": [
+      "1. Launch the app on Falcon Grey (Android) device.",
+      "2. Navigate to Settings > Audio > Equalizer (EQ).",
+      "3. Verify the EQ settings page is displayed.",
+      "4. Set a custom EQ profile by adjusting at least 3 different frequency bands to non-default values (e.g., increase bass, reduce mids, boost treble).",
+      "5. Tap 'Save' or 'Apply' to save the custom EQ settings.",
+      "6. Navigate away from the EQ settings page (e.g., go back to Settings or Audio menu).",
+      "7. Reopen the EQ settings page (Settings > Audio > Equalizer).",
+      "8. Observe the EQ band values displayed."
+    ],
+    "expected": "All custom EQ band adjustments made in step 4 are retained and displayed correctly after reopening the EQ settings page. The values should match exactly what was saved."
+  },
+  {
+    "title": "Custom EQ settings persist after app restart on Falcon Grey (Android)",
+    "steps": [
+      "1. Launch the app on Falcon Grey (Android) device.",
+      "2. Navigate to Settings > Audio > Equalizer (EQ).",
+      "3. Set a custom EQ profile by adjusting frequency bands to distinct non-default values.",
+      "4. Save the custom EQ settings.",
+      "5. Fully close the app (swipe from recent apps or force stop).",
+      "6. Relaunch the app.",
+      "7. Navigate to Settings > Audio > Equalizer (EQ).",
+      "8. Check the EQ band values."
+    ],
+    "expected": "All custom EQ band adjustments are retained after a full app restart. The EQ settings page displays the previously saved custom values."
+  },
+  {
+    "title": "Custom EQ settings persist after switching audio output device on Falcon Grey (Android)",
+    "steps": [
+      "1. Launch the app on Falcon Grey (Android) device.",
+      "2. Navigate to Settings > Audio > Equalizer (EQ).",
+      "3. Set a custom EQ profile with specific band adjustments.",
+      "4. Save the custom EQ settings.",
+      "5. Switch audio output from speaker to Bluetooth headphones (pair a Bluetooth device).",
+      "6. Play audio through Bluetooth headphones.",
+      "7. Navigate back to Settings > Audio > Equalizer (EQ).",
+      "8. Observe the EQ band values."
+    ],
+    "expected": "Custom EQ settings persist and are displayed correctly after switching the audio output device. The saved EQ profile remains unchanged."
+  },
+  {
+    "title": "Custom EQ settings persist after switching between EQ presets and back to custom on Falcon Grey (Android)",
+    "steps": [
+      "1. Launch the app on Falcon Grey (Android) device.",
+      "2. Navigate to Settings > Audio > Equalizer (EQ).",
+      "3. Set a custom EQ profile with specific band adjustments.",
+      "4. Save the custom EQ settings.",
+      "5. Select a different EQ preset (e.g., 'Rock', 'Jazz', or 'Classical').",
+      "6. Save or apply the preset.",
+      "7. Switch back to the 'Custom' EQ option.",
+      "8. Observe the EQ band values."
+    ],
+    "expected": "When switching back to the 'Custom' EQ option, the previously saved custom EQ band values are restored and displayed correctly."
+  },
+  {
+    "title": "EQ settings page loads with default values on first visit on Falcon Grey (Android)",
+    "steps": [
+      "1. Ensure the app is freshly installed or EQ settings have been reset to defaults on Falcon Grey (Android).",
+      "2. Launch the app.",
+      "3. Navigate to Settings > Audio > Equalizer (EQ).",
+      "4. Observe the EQ band values without making any changes.",
+      "5. Note the default values for each frequency band."
+    ],
+    "expected": "The EQ settings page loads with manufacturer/app default values. All frequency bands are set to neutral (0 dB) or the defined default levels."
+  },
+  {
+    "title": "EQ settings persist after device rotation on Falcon Grey (Android)",
+    "steps": [
+      "1. Launch the app on Falcon Grey (Android) device.",
+      "2. Navigate to Settings > Audio > Equalizer (EQ).",
+      "3. Set a custom EQ profile with specific band adjustments.",
+      "4. Save the custom EQ settings.",
+      "5. Rotate the device from portrait to landscape.",
+      "6. Observe the EQ band values on the rotated screen.",
+      "7. Rotate the device back to portrait.",
+      "8. Observe the EQ band values again."
+    ],
+    "expected": "Custom EQ settings persist and are displayed correctly after device rotation in both orientations. No values are reset or lost."
+  }
+]
