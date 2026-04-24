@@ -1,0 +1,33 @@
+{
+  "id": "65641617",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit test - Onboarding flow - Skip Fit Test",
+  "feature": "Onboarding Flow",
+  "scenario": "Skip the Fit Test during onboarding and verify the next onboarding screen appears",
+  "steps": [
+    "Start the app with a device that supports fit test connected.",
+    "Go to Device Settings > Onboarding.",
+    "Navigate to the Fit test screen (after Pairing 2 screen).",
+    "Check the screen and click the Skip button."
+  ],
+  "expected": "The next Onboarding screen is present.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Skip Fit Test",
+    "Onboarding",
+    "Fit Test screen",
+    "Skip button",
+    "Device Settings",
+    "Pairing screen",
+    "App onboarding flow",
+    "Fit test skip verification"
+  ],
+  "source_last_updated": "1760963417",
+  "source_hash": "1f4e373063d1b835f979757a82cda8f7d92ac7e16629aa53e503a3a490ef6a4c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.392549Z",
+  "status": "active"
+}
