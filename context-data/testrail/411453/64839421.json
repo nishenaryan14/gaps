@@ -5,12 +5,12 @@
   "project": "411453",
   "title": "Device Home Screen - Zoom out the application to verify that it remains the same",
   "feature": "Device Home Screen",
-  "scenario": "Verify that zooming out via app switcher and returning to full screen keeps the app on the same screen (home screen or settings) as before.",
+  "scenario": "Verify that zooming out via app switcher and returning to full screen keeps the app on the same screen (home or settings) as before.",
   "steps": [
-    "Open app with connected device, then open app switcher \u2014 preview should show the home screen unchanged.",
-    "Tap app for full screen \u2014 app is properly selected and remains on the same screen.",
-    "Open Device Settings via '...' button, then open app switcher \u2014 preview should show the settings screen unchanged.",
-    "Tap app for full screen \u2014 app is properly selected and remains on the same screen."
+    "Open the app with a connected device and open app switcher \u2014 preview should show the app on the home screen unchanged.",
+    "Tap the app for full screen \u2014 app is properly selected and remains on the same screen.",
+    "Open Device Settings via \"...\" button and open app switcher \u2014 preview should show the app on the settings screen unchanged.",
+    "Tap the app for full screen \u2014 app is properly selected and remains on the same screen."
   ],
   "expected": "Zooming out the application (via app switcher) and returning to full screen keeps the app on the same screen as before.",
   "coverage": [],
@@ -28,6 +28,6 @@
   "source_last_updated": "1769425374",
   "source_hash": "8999eb834ab093ac34f03e78bd8337a2a5f08f2b04ac7c20eb698ae4661a3adb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.341596Z",
+  "processed_at": "2026-04-24T11:50:53.126143Z",
   "status": "active"
 }
