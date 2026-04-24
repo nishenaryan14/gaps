@@ -1,0 +1,32 @@
+{
+  "id": "64839422",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Release Notes button opens modal with Release Notes",
+  "feature": "Device Home Screen",
+  "scenario": "User views release notes modal on Device Home screen and dismisses it by tapping OK to return to Home screen",
+  "steps": [
+    "1. Navigate to the Device Home screen.",
+    "2. Tap the 'Release Notes' button.",
+    "3. Observe the modal that appears displaying release notes for the connected device.",
+    "4. Tap the 'OK' button on the modal."
+  ],
+  "expected": "The modal is dismissed and the user is returned to the Home screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Release Notes",
+    "Modal",
+    "Device Home",
+    "Dismiss",
+    "OK button",
+    "Release Notes modal",
+    "Home screen"
+  ],
+  "source_last_updated": "1759234031",
+  "source_hash": "3d8288578bb4f71d18dddf4f2f6302d4a28e978bf38784ae35aeb0bed501d098",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.078999Z",
+  "status": "active"
+}
