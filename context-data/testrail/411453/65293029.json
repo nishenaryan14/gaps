@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Onboarding - Login",
   "feature": "Onboarding - Login",
-  "scenario": "Verify that a first-time user can complete the onboarding flow and login process to reach the Home Screen.",
+  "scenario": "Verify that a new user can complete the onboarding flow, access the login dialog, and successfully log in to reach the Home Screen.",
   "steps": [
-    "Start the app for the first time, accept license agreement, tap Continue, Skip, then Continue.",
-    "Tap login \u2014 expected: login dialog with Cancel and Continue buttons.",
-    "Tap Continue \u2014 expected: login page with options to login/sign up via Microsoft, Apple, or Google, plus username/password fields and login button.",
-    "Finish login or sign up \u2014 expected: Home Screen is visible."
+    "Start the app for the first time, accept the license agreement, skip initial setup, and continue.",
+    "Tap login.",
+    "Tap Continue.",
+    "Finish login or sign up."
   ],
-  "expected": "Home Screen is visible after completing login or sign up.",
+  "expected": "1. Login dialog appears with Cancel and Continue buttons.\\n2. User is directed to login page with options to login/sign up via Microsoft, Apple, or Google, plus username/password fields and a login button.\\n3. Home Screen is visible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "onboarding flow",
-    "first-time user",
-    "login process",
-    "license agreement",
+    "login dialog",
+    "user login",
     "Home Screen",
+    "license agreement",
+    "initial setup",
     "sign up",
-    "authentication",
-    "user verification"
+    "authentication"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "2dca91b312a00ccef138b289545814ad87eb7402c75b97bbeef3cc1bfec43304",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "processed_at": "2026-04-24T10:51:32.713198Z",
   "status": "active"
 }
