@@ -1,0 +1,35 @@
+{
+  "id": "65641578",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Select a value, disconnect/connect device - the selected value persists",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Verify that the selected EQ value persists after disconnecting and reconnecting the device, for all EQ options (Bass, Flat, Bright, Custom EQ).",
+  "steps": [
+    "1. Connect the device to the phone.",
+    "2. Select an EQ value (e.g., Bass, Flat, Bright, or Custom EQ).",
+    "3. Disconnect the device from the phone.",
+    "4. Reconnect the device to the phone.",
+    "5. Check the EQ value displayed on the phone.",
+    "6. Repeat steps 1-5 for all possible EQ values (Bass, Flat, Bright, Custom EQ)."
+  ],
+  "expected": "The previously selected EQ value persists after disconnecting and reconnecting the device, for all EQ values.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ persistence",
+    "EQ value",
+    "device reconnection",
+    "Bass",
+    "Flat",
+    "Bright",
+    "Custom EQ",
+    "audio settings"
+  ],
+  "source_last_updated": "1761144541",
+  "source_hash": "7c6e062373f8438c2c0cbb732cb752e7a201dd2ae93b429185bd13cb63c35592",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.401301Z",
+  "status": "active"
+}
