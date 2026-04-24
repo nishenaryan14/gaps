@@ -10,22 +10,22 @@
     "1) Install the app and go as Guest. Check data in Poly Lens Menu > Support > App. Tap \"Later\" button.",
     "2) Go to Poly Lens Menu > General > Account. Login with account NOT linked to any Tenant. Go to Poly Lens Menu > Support > App."
   ],
-  "expected": "Step 1: App version is correct; Tenant name, tenant id, user id are None; Last connected: unknown. Step 2: Account information displayed; Tenant name and tenant ID are not present on the card.",
+  "expected": "1) App version is correct; Tenant name, tenant id, user id are None; Last connected: unknown. 2) Account information displayed; Tenant name and tenant ID are not present on the card.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Guest to Account migration",
     "data correctness",
-    "unlinked account",
-    "no tenant",
+    "no tenant account",
     "Poly Lens app",
-    "Support > App",
     "Account login",
-    "data verification"
+    "Support > App",
+    "data verification",
+    "cross-account data"
   ],
   "source_last_updated": "1759752024",
   "source_hash": "0be81932ae13260aa3863f80b38932aef673da93d7496c00e93f1962fcab76e5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.360909Z",
+  "processed_at": "2026-04-24T11:50:53.190029Z",
   "status": "active"
 }
