@@ -1,0 +1,33 @@
+{
+  "id": "65868078",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Connecting multiple headsets",
+  "feature": "Device Home Screen",
+  "scenario": "Verify that when multiple headsets are paired and connected, all connected devices are properly displayed on the device home page with navigation dots and swipe functionality.",
+  "steps": [
+    "Pair and connect multiple headsets to the system.",
+    "Navigate to the device home page.",
+    "Observe the displayed devices on the home page.",
+    "Check the dots at the bottom of the screen to see the number of connected devices and which device is currently displayed.",
+    "Swipe left or right to view each connected device."
+  ],
+  "expected": "All connected devices are properly displayed on the device home page. Dots at the bottom indicate the number of connected devices and which device is currently displayed. Users can swipe left or right to view each connected device.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "multiple headsets",
+    "paired and connected",
+    "device home page",
+    "navigation dots",
+    "swipe functionality",
+    "connected devices display",
+    "device navigation"
+  ],
+  "source_last_updated": "1761749623",
+  "source_hash": "5464078184de509e68e3afb507374ea512ba3582da474bb167200e349b07dfaa",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.078999Z",
+  "status": "active"
+}
