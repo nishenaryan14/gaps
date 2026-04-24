@@ -1,0 +1,35 @@
+{
+  "id": "65640174",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Firmware Update Failed",
+  "feature": "Analytics",
+  "scenario": "Verify that after a failed DFU (firmware update), the Firebase dashboard displays default elements plus DFU-specific fields (Device PID, Charge Unit PID, Update Type, Error Description) and the event counts for related elements increase within a few hours.",
+  "steps": [
+    "Navigate to the Firebase dashboard page.",
+    "Verify that default elements are displayed: graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment.",
+    "Verify that additional DFU-specific elements are displayed: Device PID, Charge Unit PID, Update Type, and Error Description.",
+    "Initiate a DFU (firmware update) that is expected to fail.",
+    "Wait a few hours for the event data to propagate.",
+    "Check the event count for the DFU-related elements (Device PID, Charge Unit PID, Update Type, Error Description) and verify that the counts have increased."
+  ],
+  "expected": "The Firebase dashboard displays all default elements plus Device PID, Charge Unit PID, Update Type, and Error Description. After a failed DFU, the event counts for these DFU-related elements increase within a few hours.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Firebase dashboard",
+    "DFU",
+    "firmware update",
+    "Device PID",
+    "Charge Unit PID",
+    "Update Type",
+    "Error Description",
+    "event count"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "ae857232fabe0b515f9e2a894a382ef4160ed3c7c10de2371801efdf885b9f25",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.426001Z",
+  "status": "active"
+}
