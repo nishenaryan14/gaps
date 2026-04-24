@@ -5,33 +5,33 @@
   "project": "UNKNOWN",
   "summary": "ANDROID | FMD - When app open for first time dialog for 'Data collection' is constantly appearing after clicking on device card",
   "feature": "FMD (Find My Device)",
-  "scenario": "First-time app launch with location denied causes 'Data collection' dialog to repeatedly reappear when tapping a device card",
-  "description_clean": "When the app is opened for the first time, the 'Data collection' dialog keeps appearing repeatedly after clicking on a device card. Steps: 1) Start app with connected device. 2) During onboarding, select \"Don't Allow\" for location. 3) Go to FMD screen and click OK. 4) Dismiss second dialog by tapping outside. 5) Click on device card without exiting screen \u2014 dialog pops up constantly. Expected: Dialog is dismissed and device card is shown.",
+  "scenario": "Data collection dialog repeatedly appears after clicking on a device card when location permission is denied during onboarding",
+  "description_clean": "When the app is opened for the first time, the 'Data collection' dialog keeps appearing repeatedly after clicking on a device card. Steps: 1) Start app with connected device. 2) During onboarding, select 'Don't Allow' for location. 3) Go to FMD screen and click OK. 4) Dismiss the second dialog by clicking outside. 5) Click on device card without exiting the screen. Observed: After step 5, the dialog pops up constantly. Expected: Dialog is dismissed and device card is shown.",
   "steps": [
     "Start app with connected device.",
-    "During onboarding, select \"Don't Allow\" for location.",
+    "During onboarding, select 'Don't Allow' for location.",
     "Go to FMD screen and click OK.",
-    "Dismiss second dialog by tapping outside.",
-    "Click on device card without exiting screen."
+    "Dismiss the second dialog by clicking outside.",
+    "Click on device card without exiting the screen."
   ],
   "expected": "Dialog is dismissed and device card is shown.",
-  "actual": "The 'Data collection' dialog keeps appearing repeatedly after clicking on a device card.",
+  "actual": "After step 5, the dialog pops up constantly.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "first-time app launch",
-    "location denied",
-    "Data collection dialog",
-    "repeated reappearance",
-    "device card tap",
+    "location permission denied",
     "onboarding",
+    "device card",
+    "data collection dialog",
     "FMD screen",
-    "dialog dismissal"
+    "dialog reappears",
+    "permission prompt loop",
+    "Android"
   ],
   "source_last_updated": "2026-04-20T13:13:21.000+0000",
   "source_hash": "b858540b1908fc5563323d94bf2e8b4ab8a0e13927472eb445cc3ab0a9b37404",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.681401Z",
+  "processed_at": "2026-04-24T11:23:04.985013Z",
   "status": "active"
 }
