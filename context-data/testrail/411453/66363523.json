@@ -9,15 +9,14 @@
   "steps": [
     "Turn headset off",
     "Place headset inside charge case",
-    "Close the charge case",
-    "Wait a moment",
-    "Open the charge case",
-    "Take headset out of the charge case",
-    "Turn headset on",
+    "Close the case",
+    "Wait",
+    "Open the case",
+    "Take headset out and turn it on",
     "Connect to the app",
     "Go to Settings > Software update"
   ],
-  "expected": "After connecting to the app, two battery indicators (headset and case) are shown. 'Update all' button is present (if DFU available), info about headset and charge case is displayed.",
+  "expected": "After connecting to app, two battery indicators (headset and case) are shown. 'Update all' button is present (if DFU available), info about headset and charge case is displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -33,6 +32,6 @@
   "source_last_updated": "1762331223",
   "source_hash": "a567f5e45fb7e0877265acf688b25813ea169f7774b9b4ad5cf2e1467dbdccc2",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.429534Z",
+  "processed_at": "2026-04-24T11:50:53.346321Z",
   "status": "active"
 }
