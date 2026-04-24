@@ -5,28 +5,27 @@
   "project": "411453",
   "title": "PPIP - Dialog after Onboarding - UI",
   "feature": "Onboarding / PPIP Dialog",
-  "scenario": "After completing onboarding and tapping \"Continue as Guest\", verify the PPIP dialog appears with privacy notice and \"Don't Share\" / \"Share Data\" options.",
+  "scenario": "After onboarding, tapping \"Continue as Guest\" displays a PPIP dialog with \"Help us improve your experience\" and options \"Don't Share\" and \"Share Data\"",
   "steps": [
-    "Complete the onboarding screens.",
-    "Tap 'Continue as Guest'.",
-    "Observe the dialog that appears."
+    "Complete the onboarding screens",
+    "Tap 'Continue as Guest'"
   ],
-  "expected": "A PPIP (Product Performance Improvement Program) dialog should appear displaying: \"Help us improve your experience.\" followed by a privacy notice explaining that HP may collect basic device and app information (model, serial number, software version, feature usage) to improve performance and support, with clarification that no personal information is collected or shared with third parties, and that preferences can be changed anytime in Settings. The dialog includes two options: \"Don't Share\" and \"Share Data\".",
+  "expected": "A PPIP (Privacy, Performance, Improvement Program) dialog should appear displaying: \"Help us improve your experience.\" followed by a description about collecting basic device and app information (model, serial number, software version, feature usage) for performance and support, noting no personal data is collected or shared with third parties, and that preferences can be changed anytime in Settings. The dialog includes two options: \"Don't Share\" and \"Share Data\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "PPIP dialog",
-    "privacy notice",
-    "Continue as Guest",
     "onboarding",
+    "Continue as Guest",
+    "PPIP dialog",
+    "Help us improve your experience",
     "Don't Share",
     "Share Data",
-    "privacy prompt",
+    "guest mode",
     "data sharing consent"
   ],
   "source_last_updated": "1760536922",
   "source_hash": "5124052491945a95b02769748f4dbf40e8773d251cb84960e2ef6daae5f1e39e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.314081Z",
+  "processed_at": "2026-04-24T11:50:53.097179Z",
   "status": "active"
 }
