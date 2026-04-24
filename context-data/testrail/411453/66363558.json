@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Language Change - Earbuds/Headsets are out of date and smart Charge Chase/Stand is up to date",
   "feature": "Language Change / DFU",
-  "scenario": "Changing language on a device with multiple components causes the earbuds/headset to remain on outdated firmware while only the smart charge case/stand gets updated.",
+  "scenario": "Language change on multi-component device causes earbuds to remain on outdated firmware while smart charge case updates to latest firmware",
   "steps": [
     "Start app with device having multiple components on outdated firmware.",
     "Go to Device Settings > Language.",
@@ -17,17 +17,17 @@
   "edge_cases": [],
   "keywords": [
     "language change",
-    "firmware update",
-    "earbuds firmware",
-    "smart charge case",
-    "device settings",
-    "outdated firmware",
+    "firmware mismatch",
+    "earbuds outdated firmware",
+    "smart charge case firmware",
     "multi-component device",
+    "firmware update failure",
+    "device settings language",
     "update now"
   ],
   "source_last_updated": "1769439332",
   "source_hash": "a25eb7ea9b728feb49d2e1b9b759d2db74612894e947621a2629f2ebc44b8a84",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.383888Z",
+  "processed_at": "2026-04-24T11:50:53.226428Z",
   "status": "active"
 }
