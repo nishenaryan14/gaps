@@ -16,23 +16,23 @@
     "Turn on an already-displayed device that is currently shown in the list.",
     "Observe whether the device's status updates to 'connected'."
   ],
-  "expected": "Newly paired devices should appear in the app's device list immediately without requiring an app restart. Turning on an already-displayed device should update its status to \"connected\" in real time.",
+  "expected": "Newly paired devices should appear in the app's device list immediately without requiring an app restart. Turning on an already-displayed device should update its status to \"connected\" in real-time.",
   "actual": "Newly connected device does not always appear in the app's device list after pairing. The device only shows up after restarting the app. Additionally, turning on an already-displayed device does not always update its status to \"connected\".",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "device list not updating",
-    "newly paired device not appearing",
+    "paired device not appearing",
     "app restart required",
-    "device status stuck",
-    "connected status not updating",
-    "bluetooth pairing issue",
-    "device discovery failure"
+    "status not updating to connected",
+    "Bluetooth device pairing issue",
+    "device discovery delay",
+    "connection status sync failure"
   ],
   "source_last_updated": "2026-04-15T08:40:46.000+0000",
   "source_hash": "4e9896283e67f3f5ed183353529259c29170e5451f16e31c20679e7cc12f160f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.058178Z",
+  "processed_at": "2026-04-24T10:51:32.708140Z",
   "status": "active"
 }
