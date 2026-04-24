@@ -4,29 +4,36 @@
   "type": "testcase",
   "project": "411453",
   "title": "PPIP - Dialog after Onboarding - Tap on Don't Share",
-  "feature": "PPIP (Privacy & Personal Information Protection) - Onboarding Dialog",
-  "scenario": "User taps \"Don't Share\" on PPIP dialog after onboarding and verifies the Share Data toggle is OFF in Account settings.",
+  "feature": "PPIP (Privacy & Personal Information Preferences) - Onboarding",
+  "scenario": "Verify that after onboarding and tapping \"Continue as Guest\", the PPIP dialog appears, and tapping \"Don't Share\" closes it, shows Home, and the Share data toggle in Account settings is OFF with the correct description.",
   "steps": [
-    "Start app for first time, go through onboarding, tap \"Continue as Guest\" \u2192 PPIP dialog appears with \"Help us improve your experience.\"",
-    "Tap \"Don't Share\", handle location permission (iOS only) \u2192 Dialog closes and Home screen is displayed.",
-    "Go to App Settings > General > Account \u2192 Verify \"Share data\" toggle is OFF with description explaining data sharing (device model, serial number, software version, feature usage; no personal info, not shared with third parties)."
+    "Complete the onboarding flow.",
+    "Tap 'Continue as Guest'.",
+    "Observe the PPIP dialog titled 'Help us improve your experience.'",
+    "Tap 'Don't Share'.",
+    "Verify the dialog closes and the Home screen is displayed.",
+    "Navigate to App Settings > General > Account.",
+    "Locate the 'Share data' toggle.",
+    "Verify the toggle is set to OFF.",
+    "Read the description below the toggle.",
+    "Confirm the description states that basic device and app information (model, serial number, software version, feature usage) is shared, no personal information is included, and data is not shared with third parties."
   ],
-  "expected": "\"Share data\" toggle is OFF with description explaining data sharing (device model, serial number, software version, feature usage; no personal info, not shared with third parties).",
+  "expected": "After tapping 'Don't Share', the PPIP dialog closes, the Home screen appears, and in App Settings > General > Account, the Share data toggle is OFF with a description explaining that basic device/app info (model, serial number, software version, feature usage) is shared, no personal info is included, and data is not shared with third parties.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "PPIP dialog",
+    "Continue as Guest",
     "Don't Share",
-    "Share Data toggle",
+    "Share data toggle",
     "Account settings",
-    "data sharing opt-out",
-    "privacy preference",
     "onboarding",
-    "data sharing verification"
+    "privacy",
+    "data sharing description"
   ],
   "source_last_updated": "1760537278",
   "source_hash": "19f5cf6dd818571a59839ca84398bc8df3f26b2d4b58f2d39221b163f1f37bce",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.326107Z",
+  "processed_at": "2026-04-24T11:50:53.110831Z",
   "status": "active"
 }
