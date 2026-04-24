@@ -1,0 +1,35 @@
+{
+  "id": "65293024",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "[IOS]Onboarding - Organized page has a continue button",
+  "feature": "Onboarding",
+  "scenario": "User taps \"Skip\" on the Organized onboarding page, then taps \"Continue\" to navigate to the POLY LENS Login screen with Login and Continue as Guest options.",
+  "steps": [
+    "1. Start onboarding and navigate to the Organized page.",
+    "2. Observe the 'Continue' button displayed on the Organized page.",
+    "3. Tap the 'Skip' button.",
+    "4. Observe the Organized page is shown again with a 'Continue' button and text about Poly Lens location tracking.",
+    "5. Tap the 'Continue' button.",
+    "6. Observe the POLY LENS Login screen with 'Login' and 'Continue as Guest' buttons."
+  ],
+  "expected": "After tapping 'Skip', the Organized page is displayed with a 'Continue' button and text about Poly Lens location tracking. After tapping 'Continue', the POLY LENS Login screen appears with 'Login' and 'Continue as Guest' buttons.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Skip",
+    "Continue",
+    "Organized onboarding",
+    "POLY LENS Login",
+    "Continue as Guest",
+    "Login",
+    "onboarding navigation",
+    "location tracking"
+  ],
+  "source_last_updated": "1764319860",
+  "source_hash": "815e7efb7f3f8ba69170856220818683e683d5c03b6622e5572c9ecfa3c83bed",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "status": "active"
+}
