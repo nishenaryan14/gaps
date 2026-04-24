@@ -1,0 +1,35 @@
+{
+  "id": "65641574",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Select a value, close the EQ tab, reopen it - the selected value persists",
+  "feature": "EQ",
+  "scenario": "Verify that the selected EQ value persists after closing and reopening the EQ tab for all EQ options (Bass, Flat, Bright, Custom EQ).",
+  "steps": [
+    "1. Open the EQ tab in the application.",
+    "2. Select an EQ value (e.g., Bass, Flat, Bright, or Custom EQ).",
+    "3. Close the EQ tab.",
+    "4. Reopen the EQ tab.",
+    "5. Verify that the previously selected EQ value is still displayed and selected.",
+    "6. Repeat steps 1-5 for each of the following EQ values: Bass, Flat, Bright, Custom EQ."
+  ],
+  "expected": "The previously selected EQ value persists and is displayed as selected after reopening the EQ tab, for all EQ values (Bass, Flat, Bright, Custom EQ).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ persistence",
+    "EQ tab",
+    "Bass",
+    "Flat",
+    "Bright",
+    "Custom EQ",
+    "selected value persists",
+    "EQ settings"
+  ],
+  "source_last_updated": "1761144510",
+  "source_hash": "04c15b433f195aeded068205289b3ebbb70517b7687ddf33c565529ce789fc2b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.398291Z",
+  "status": "active"
+}
