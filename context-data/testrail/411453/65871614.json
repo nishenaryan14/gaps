@@ -8,27 +8,27 @@
   "scenario": "When no device is connected, tapping \"Select Device\" shows supported devices with images and an \"Other devices\" button linking to Poly support.",
   "steps": [
     "Ensure no device is connected.",
-    "Tap 'Select Device'.",
-    "Observe the list of supported devices displayed with their images.",
-    "Check the bottom of the list for an 'Other devices' button.",
-    "Tap the 'Other devices' button."
+    "Tap the \"Select Device\" link.",
+    "Observe the list of supported devices displayed with images.",
+    "Scroll to the bottom of the list.",
+    "Tap the \"Other devices\" button.",
+    "Observe the Poly support web page opening."
   ],
-  "expected": "A list of supported devices with images is displayed. Tapping the 'Other devices' button opens the Poly support web page.",
+  "expected": "A list of supported devices with images is displayed. Tapping the \"Other devices\" button opens the Poly support web page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Select Device",
     "supported devices",
     "device images",
-    "Other devices button",
+    "Other devices",
     "Poly support",
-    "no device connected",
     "device list",
-    "device discovery"
+    "no device connected"
   ],
   "source_last_updated": "1774958838",
   "source_hash": "9f4e7748d9cd731530d28706109ee05f8f4558126860e641ea893979a8283061",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.722887Z",
+  "processed_at": "2026-04-24T11:23:05.319626Z",
   "status": "active"
 }
