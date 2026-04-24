@@ -1,0 +1,36 @@
+{
+  "id": "65810680",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Quick Guide - Osprey/Tern - Custom Swipe animation screen",
+  "feature": "Quick Guide - Osprey/Tern",
+  "scenario": "Verify custom swipe animation and replay functionality on the Quick Guide's second screen showing two earbuds on Osprey or Tern devices",
+  "steps": [
+    "Launch the app with the device connected.",
+    "Open the Quick Guide feature.",
+    "Navigate to the second screen (showing two earbuds).",
+    "Tap the right blue circle to trigger zoom and animation.",
+    "Verify that the Replay button appears.",
+    "Test the replay functionality.",
+    "Ensure the screen zooms out correctly after the animation completes."
+  ],
+  "expected": "The Replay button appears after tapping the right blue circle, replay functionality works correctly, and the screen zooms out properly after the animation completes.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Quick Guide",
+    "swipe animation",
+    "replay functionality",
+    "second screen",
+    "two earbuds",
+    "zoom animation",
+    "Osprey",
+    "Tern"
+  ],
+  "source_last_updated": "1761315357",
+  "source_hash": "930ac17b5c345d8447d1ac160c301316002d0fc0c949018d545acf8e550696ee",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.405970Z",
+  "status": "active"
+}
