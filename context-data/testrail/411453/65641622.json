@@ -5,32 +5,30 @@
   "project": "411453",
   "title": "Fit test - All screens are properly translated to different languages",
   "feature": "Fit Test / Localization",
-  "scenario": "Verify all screens in the Fit Test flow are properly translated across different languages for both successful and failed scenarios",
+  "scenario": "Verify all Fit Test flow screens are properly translated when phone language is changed, covering both successful and failed fit test scenarios across Tutorial and Fit Test screens.",
   "steps": [
-    "Set the device language to a supported language (e.g., Spanish, French, German, etc.)",
-    "Launch the Fit Test flow",
-    "Proceed through all UI steps of the Fit Test flow for a successful fit test scenario",
-    "Observe and verify that all text, labels, buttons, and messages are properly translated",
-    "Repeat the Fit Test flow for a failed fit test scenario",
-    "Observe and verify that all text, labels, buttons, and messages are properly translated in the failed scenario",
-    "Repeat steps 1-6 for each supported language"
+    "Change the phone language to a supported language (e.g., Spanish, French, German).",
+    "Open the app and navigate to the Fit Test flow.",
+    "Complete a successful Fit Test scenario, observing all screens (Tutorial and Fit Test screens) for proper translation.",
+    "Complete a failed Fit Test scenario, observing all screens (Tutorial and Fit Test screens) for proper translation.",
+    "Repeat steps 1-4 for each supported language."
   ],
-  "expected": "All screens during the Fit Test flow (both successful and failed scenarios) display properly translated text in the selected language without any untranslated strings, truncation, or formatting issues.",
+  "expected": "All text on every screen during both successful and failed Fit Test scenarios (including Tutorial and Fit Test screens) is fully and accurately translated into the selected language.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Fit Test flow",
-    "translation verification",
-    "localization testing",
-    "multi-language support",
-    "UI text validation",
-    "successful scenario",
-    "failed scenario",
-    "language switching"
+    "Fit Test",
+    "translation",
+    "phone language",
+    "localization",
+    "Tutorial screen",
+    "successful fit test",
+    "failed fit test",
+    "supported languages"
   ],
   "source_last_updated": "1760956350",
   "source_hash": "b7462e2a94ebccee9fa41b7881a305966375236f07af9e29bb68ee5f825d1cb8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "processed_at": "2026-04-24T11:50:53.233970Z",
   "status": "active"
 }
