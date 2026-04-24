@@ -1,0 +1,35 @@
+{
+  "id": "65640122",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Policy: Modify Policy Settings",
+  "feature": "Policy",
+  "scenario": "Verify that policy changes applied via Lens Cloud are reflected as locked/greyed-out settings on the device, and that user attempts to modify them are blocked with a dialog.",
+  "steps": [
+    "Apply a policy to a device via Lens Cloud.",
+    "Change a policy setting in Lens Cloud.",
+    "Open the device settings page in the app.",
+    "Verify that the updated values from the policy are reflected on the device settings page.",
+    "Confirm that the affected settings are locked and greyed out.",
+    "Attempt to modify one of the policy-affected settings by clicking on it.",
+    "Observe that a dialog appears, blocking the modification."
+  ],
+  "expected": "Policy-affected settings are updated, locked, and greyed out on the device settings page. Clicking on them shows a dialog and prevents modification.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Lens Cloud",
+    "policy changes",
+    "locked settings",
+    "greyed-out settings",
+    "device settings page",
+    "modification blocked",
+    "dialog"
+  ],
+  "source_last_updated": "1760949373",
+  "source_hash": "b44ac44838e4555464c05b8fe1ef91c5d9d1c7bc6c693eacc41ef8297c2f9d82",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.421344Z",
+  "status": "active"
+}
