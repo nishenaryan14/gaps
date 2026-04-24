@@ -5,27 +5,27 @@
   "project": "411453",
   "title": "Flamingo - Software update for just headset",
   "feature": "Flamingo - Software Update",
-  "scenario": "Verify that a software update can be performed for just the headset (without the charge case) when both updates are available.",
+  "scenario": "Verify that a software update can be performed for just the headset (without the charge case) via the app.",
   "steps": [
     "Tap Update button on device home screen -> Device settings opens with Software Update tab expanded, showing 'Update All' button and separate update buttons for headset and charge case.",
-    "Tap 'Update' next to the headset and complete DFU -> DFU process completes for headset only, and only the headset is on the latest firmware."
+    "Tap 'Update' next to the headset and complete DFU -> DFU for just headset completes, and only the headset is on the latest firmware."
   ],
-  "expected": "DFU process completes for headset only, and only the headset is on the latest firmware.",
+  "expected": "DFU for just headset completes, and only the headset is on the latest firmware.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "headset only update",
+    "software update",
     "DFU",
     "firmware update",
-    "software update",
-    "charge case",
+    "app update",
+    "headset firmware",
     "device settings",
-    "Update All",
-    "headset firmware"
+    "update button"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "30516a67565edd28e9f246e7244c7e3b3c803db1d8926106ba6e06b86dd4ad32",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "processed_at": "2026-04-24T11:50:53.346828Z",
   "status": "active"
 }
