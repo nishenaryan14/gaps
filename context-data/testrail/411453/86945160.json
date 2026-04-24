@@ -11,21 +11,22 @@
     "Complete initial setup (license agreement, skip, continue)",
     "Tap Login"
   ],
-  "expected": "App should not crash; Login page should be displayed.",
+  "expected": "App should not crash and the Login page should be displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "WiFi off",
     "Login crash",
-    "no network",
+    "no internet",
     "initial setup",
-    "offline login",
     "app crash",
-    "network error handling"
+    "offline login",
+    "network unavailable",
+    "login button"
   ],
   "source_last_updated": "1776940160",
   "source_hash": "c3ebd658163846483163f328d5c4012dfdf693a032af96ab1096a1484f2a4e90",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:11.627331Z",
+  "processed_at": "2026-04-24T11:50:53.516136Z",
   "status": "active"
 }
