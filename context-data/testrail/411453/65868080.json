@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - Bluetooth turned off",
   "feature": "Device Home Screen",
-  "scenario": "Verify that toggling Bluetooth off and back on correctly updates the headset connection status in the device list",
+  "scenario": "Verify headset shows as connected in device list after reconnecting via Bluetooth settings when Bluetooth was toggled off and back on",
   "steps": [
     "Launch the app with a Bluetooth headset already connected.",
-    "Turn off Bluetooth on the mobile device while the app is running.",
-    "Observe the device list in the app to check the headset status.",
-    "Turn Bluetooth back on via mobile settings.",
-    "Reconnect the headset through the mobile Bluetooth settings.",
-    "Observe the device list in the app again to check the headset status."
+    "Turn off Bluetooth while the app is running.",
+    "Observe the device list in the app to confirm the headset is shown as disconnected.",
+    "Turn Bluetooth back on.",
+    "Reconnect the headset via mobile Bluetooth settings.",
+    "Observe the device list in the app."
   ],
-  "expected": "When Bluetooth is turned off, the headset is shown as disconnected in the device list. When Bluetooth is turned back on and the headset is reconnected via mobile Bluetooth settings, the headset is shown as connected in the device list.",
+  "expected": "The headset should be shown as connected in the device list.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Bluetooth toggle",
-    "headset connection status",
-    "device list update",
-    "Bluetooth off/on",
-    "headset reconnect",
     "Bluetooth headset",
-    "connection state verification"
+    "reconnect",
+    "device list",
+    "Bluetooth toggle",
+    "connection status",
+    "Bluetooth settings",
+    "disconnected"
   ],
   "source_last_updated": "1769425929",
   "source_hash": "9dbfe87c1831b6af079dfa540dbc4ac2b8da656ee0d91082b0722fe27247c145",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.094631Z",
+  "processed_at": "2026-04-24T10:51:32.746025Z",
   "status": "active"
 }
