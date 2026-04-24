@@ -8,16 +8,15 @@
   "scenario": "ANC and Transparency controls should be disabled during an active call and restore to previous values after the call ends.",
   "steps": [
     "Set ANC to Adaptive or Standard mode.",
-    "Set Transparency to OFF (Environment or Speech).",
+    "Set Transparency to OFF (Environment or Speech mode).",
     "Start an active call.",
     "Attempt to change ANC values during the call.",
     "Attempt to change Transparency values during the call.",
-    "Check that the Transparency toggle is greyed out.",
-    "Check that a popup appears indicating the option is unavailable.",
+    "Observe the Transparency toggle state and any popup.",
     "End the call.",
-    "Check that ANC returns to its previously selected value.",
-    "Check that Transparency returns to its previously selected value.",
-    "Verify that both ANC and Transparency toggles are togglable again."
+    "Check ANC mode after the call ends.",
+    "Check Transparency mode after the call ends.",
+    "Verify that both ANC and Transparency are togglable again."
   ],
   "expected": "During an active call, ANC and Transparency values cannot be changed. The Transparency toggle is greyed out and shows a popup that the option is unavailable. After the call ends, both ANC and Transparency modes return to their previously selected values and are togglable again.",
   "coverage": [],
@@ -26,15 +25,15 @@
     "ANC",
     "Transparency",
     "active call",
-    "disabled",
-    "greyed out",
-    "popup",
+    "disable controls",
     "restore previous values",
-    "toggle"
+    "call end",
+    "toggle state",
+    "popup"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "af2ead9aeb4ddf75285c591c0f2a8fe628cae9b64b2c3f64b17568daaaeb2d4d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.399301Z",
+  "processed_at": "2026-04-24T11:50:53.249298Z",
   "status": "active"
 }
