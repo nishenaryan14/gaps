@@ -1,0 +1,34 @@
+{
+  "id": "84755660",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - Product Support no wifi [New]",
+  "feature": "Support - Product Support",
+  "scenario": "User navigates to Product Support via App Settings > Support with Wi-Fi turned off and sees a \"Something is wrong\" screen, which is dismissed by tapping the Cancel (X) button to return to the Support first screen.",
+  "steps": [
+    "Turn off Wi-Fi on the device.",
+    "Open the app.",
+    "Navigate to App Settings.",
+    "Tap on 'Support'.",
+    "Observe the screen displayed."
+  ],
+  "expected": "A \"Something is wrong\" screen is displayed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Product Support",
+    "App Settings",
+    "Wi-Fi off",
+    "Something is wrong screen",
+    "Cancel button",
+    "Support first screen",
+    "offline error",
+    "dismiss error"
+  ],
+  "source_last_updated": "1773311911",
+  "source_hash": "c7e173840fe96bb63edccf1668a4a6e9b4b317d7b18a46580bf7190a0dc6103a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.362417Z",
+  "status": "active"
+}
