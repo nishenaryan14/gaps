@@ -1,0 +1,34 @@
+{
+  "id": "65868096",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device  Home Screen - Starting app without internet connection",
+  "feature": "Home Screen",
+  "scenario": "Verify that the app loads missing internet-dependent content (e.g., images) after re-establishing an internet connection.",
+  "steps": [
+    "Launch the app while the device has no internet connection.",
+    "Observe the device list \u2014 verify the device appears on the list.",
+    "Check features that require internet (e.g., images on the home page) \u2014 note that they are missing or not displayed.",
+    "Turn on the internet connection on the device.",
+    "Wait for the app to refresh or manually refresh the app.",
+    "Verify that all data and images load and display properly."
+  ],
+  "expected": "After turning on the internet, all data and images should load and display properly.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "offline mode",
+    "internet connectivity",
+    "content loading",
+    "image loading",
+    "network reconnection",
+    "app refresh",
+    "missing content"
+  ],
+  "source_last_updated": "1761837735",
+  "source_hash": "804d39e90d36b8909a435313b070366d438613f18094783d4b0a6db6e19b443f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.076495Z",
+  "status": "active"
+}
