@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Software Update - DFU - Entering airplane mode during update",
   "feature": "Software Update - DFU",
-  "scenario": "Verify that a DFU update fails gracefully when airplane mode is enabled during the update, and recovers successfully after retrying once airplane mode is turned off.",
+  "scenario": "Verify that entering airplane mode during a DFU update causes a \"Houston...\" error, and that turning off airplane mode and clicking \"Retry\" successfully restarts and completes the update.",
   "steps": [
     "Start DFU on the device.",
-    "Put the mobile device into airplane mode during 0-20% (or 0-10% if updating headset and charge case/stand simultaneously).",
+    "Put mobile device into airplane mode during 0-20% (or 0-10% if updating headset and charge case/stand simultaneously).",
     "Turn airplane mode off.",
     "Click \"Retry\" on the \"Houston...\" screen."
   ],
-  "expected": "After some time, the update should fail and the \"Houston...\" page should be displayed. Then, after turning off airplane mode and clicking \"Retry\", the update should restart and finish successfully.",
+  "expected": "After some time, the update should fail and a \"Houston...\" error page should be displayed. After turning off airplane mode and clicking \"Retry\", the update should restart and finish successfully.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "DFU update",
     "airplane mode",
-    "failure recovery",
-    "retry",
-    "Houston screen",
-    "graceful failure",
+    "Houston error",
+    "Retry button",
     "firmware update",
-    "connectivity interruption"
+    "update failure",
+    "update recovery",
+    "mobile device"
   ],
   "source_last_updated": "1763370003",
   "source_hash": "a966f65551d52f06efd2448bc5ff7322f52c7c2304fbfe765bc83e2eaaaae771",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "processed_at": "2026-04-24T11:50:53.295398Z",
   "status": "active"
 }
