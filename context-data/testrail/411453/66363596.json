@@ -1,0 +1,33 @@
+{
+  "id": "66363596",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Language change - Case Update Needed popup is not present after Language Change",
+  "feature": "Language Change",
+  "scenario": "\"Case Update Needed\" popup fails to appear after changing the app language, though it should only show after a firmware DFU for earbuds.",
+  "steps": [
+    "Open the app",
+    "Go to Settings",
+    "Change the language to a different language",
+    "Observe whether the 'Case Update Needed' popup appears"
+  ],
+  "expected": "The \"Case Update Needed\" popup should NOT appear after a language change. It should only appear after a firmware DFU for earbuds (via Settings > Software Update).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Case Update Needed popup",
+    "app language change",
+    "firmware DFU",
+    "earbuds",
+    "Settings",
+    "popup visibility",
+    "language switch",
+    "firmware update"
+  ],
+  "source_last_updated": "1763382835",
+  "source_hash": "2f7419fff0d1f7c9ff04fdab2ee49b38fbf130529d4db896bb6d3beb9be8e492",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.383888Z",
+  "status": "active"
+}
