@@ -1,0 +1,31 @@
+{
+  "id": "86945160",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Verify the application does not crash when wifi is turned off and user clicks on Login button",
+  "feature": "Login / Network Connectivity",
+  "scenario": "Verify the app does not crash when WiFi is off and the user taps Login after initial setup.",
+  "steps": [
+    "Accept notifications if prompted",
+    "Complete initial setup (license agreement, skip, continue)",
+    "Tap Login"
+  ],
+  "expected": "App should not crash; Login page should be displayed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "WiFi off",
+    "Login crash",
+    "no network",
+    "initial setup",
+    "offline login",
+    "app crash",
+    "network error handling"
+  ],
+  "source_last_updated": "1776940160",
+  "source_hash": "c3ebd658163846483163f328d5c4012dfdf693a032af96ab1096a1484f2a4e90",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:11.627331Z",
+  "status": "active"
+}
