@@ -1,0 +1,31 @@
+{
+  "id": "66363579",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Home Screen - Both earbuds are disconnected",
+  "feature": "Home Screen",
+  "scenario": "Verify that the Lens App correctly updates the status box and device image when both earbuds are placed in the case after being connected.",
+  "steps": [
+    "Pair and connect Osprey device.",
+    "Open Lens App.",
+    "Put both earbuds in the case."
+  ],
+  "expected": "After step 2, the Status Box shows \"Left\", \"Right\", and \"Case\" fields with battery level and green indicator, and a \"Status\" field showing \"connected\" with green indicator. The device image shows left and right earbuds. After step 3, the \"Left\", \"Right\", and \"Case\" fields are greyed out showing only the % symbol (not the exact percentage), the \"Status\" field shows \"disconnected\" with red indicator, and the image for both earbuds is greyed out.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Lens App",
+    "status box",
+    "device image",
+    "earbuds in case",
+    "Osprey device",
+    "connected",
+    "pairing"
+  ],
+  "source_last_updated": "1762331664",
+  "source_hash": "9611247ccd39866963e5201584e8f345e2a78011c7877967ac46cd26499f1cb6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:06.574726Z",
+  "status": "active"
+}
