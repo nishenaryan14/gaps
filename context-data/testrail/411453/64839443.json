@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Device Home Screen - Limited Support After Launch Date When LM Version Is Below Required",
   "feature": "Device Home Screen",
-  "scenario": "Show limited support pop-up when app version is below required version for a newly released device after its launch date",
+  "scenario": "When a new device is released and the app version does not support it yet, if the current date is after the device's Launch Date and the installed LM version is lower than the required version, the device home screen shows limited support. Tapping the \"i\" icon displays a pop-up message: \"Device support is limited. Update the Poly Lens Mobile app to enable full functionality.\" Tapping outside the pop-up closes it.",
   "steps": [
     "1. Ensure a new device is released that the current app version does not support.",
     "2. Verify the current date is after the device's Launch Date.",
-    "3. Confirm the installed LM (Lens Mobile) version is lower than the required version.",
-    "4. Navigate to the device home screen.",
-    "5. Observe the home screen for limited support indication.",
-    "6. Check for the pop-up message."
+    "3. Confirm the installed LM version is lower than the required version.",
+    "4. Observe the device home screen shows limited support.",
+    "5. Tap the \"i\" icon on the device home screen.",
+    "6. Observe the pop-up message: \"Device support is limited. Update the Poly Lens Mobile app to enable full functionality.\"",
+    "7. Tap outside the pop-up to close it."
   ],
-  "expected": "The device home screen shows limited support. A pop-up message is displayed: \"Device support is limited. Update the Poly Lens Mobile app to enable full functionality.\"",
+  "expected": "The device home screen shows limited support. Tapping the \"i\" icon displays the pop-up message: \"Device support is limited. Update the Poly Lens Mobile app to enable full functionality.\" Tapping outside the pop-up closes it.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "limited support pop-up",
-    "app version below required",
     "new device release",
-    "launch date",
-    "Lens Mobile version",
-    "home screen",
-    "device compatibility",
-    "version check"
+    "limited support",
+    "Poly Lens Mobile app",
+    "app version compatibility",
+    "Launch Date",
+    "LM version",
+    "pop-up message",
+    "device home screen"
   ],
   "source_last_updated": "1764663034",
   "source_hash": "b2eff7b230cd463a1c2f4de0cf8e076bc84138e4534ce555c22319ec81dd00de",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.092578Z",
+  "processed_at": "2026-04-24T10:51:32.750622Z",
   "status": "active"
 }
