@@ -1,0 +1,37 @@
+{
+  "id": "65640116",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Mobile user has few headsets, some disconnected",
+  "feature": "Mobile - Headset Management",
+  "scenario": "Verify that the Lens tenant correctly displays active (green) and disconnected (red) status for multiple paired headsets across Inventory, device profile, and user profile pages.",
+  "steps": [
+    "Pair 3 or more headsets with a mobile user's device.",
+    "Turn off or unpair at least one of the paired headsets.",
+    "Navigate to the Inventory page in the Lens tenant.",
+    "Observe the status indicators for each headset.",
+    "Navigate to the Inventory/device profile page.",
+    "Observe the status indicators for each headset.",
+    "Navigate to the Device Users/user profile page.",
+    "Observe the status indicators for each headset."
+  ],
+  "expected": "Active headsets show as active with green marks, and disconnected headsets show as inactive with red marks on the Inventory page, Inventory/device profile page, and Device Users/user profile page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Lens tenant",
+    "headset status",
+    "active green",
+    "disconnected red",
+    "Inventory page",
+    "device profile",
+    "user profile",
+    "paired headsets"
+  ],
+  "source_last_updated": "1760949362",
+  "source_hash": "d3dc811ed9937312926c234e2e1393e0e606bfe9f8c3bf255a9adb12eaa7a579",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "status": "active"
+}
