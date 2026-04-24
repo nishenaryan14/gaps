@@ -1,0 +1,36 @@
+{
+  "id": "65248791",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Play button",
+  "feature": "Find My Device",
+  "scenario": "Verify that tapping the Play button in Find My Device shows a hearing safety warning dialog on first tap, then plays a tone on the headset on subsequent tap.",
+  "steps": [
+    "Start the app with the headset paired and connected.",
+    "Go to App Settings.",
+    "Tap Find My Device (allow GPS if prompted).",
+    "Tap the blue geo icon.",
+    "Tap the Play button.",
+    "Tap 'Ok got it' on the warning dialog.",
+    "Tap the Play button again."
+  ],
+  "expected": "1. A warning dialog appears stating: \"Warning! Exposure to high sound levels may cause permanent damage to your hearing. Make sure your device is not being worn by anyone before tapping 'Play' to send a tone.\"\\n2. Dialog dismissed, user returns to device details page.\\n3. Tone plays on headset, lights flash if applicable, \"Sending tone...\" message with animated stop button is shown.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "Play button",
+    "hearing safety warning",
+    "dialog",
+    "tone",
+    "headset",
+    "paired",
+    "connected"
+  ],
+  "source_last_updated": "1759929777",
+  "source_hash": "8e0935dc6abcb223e5001280cb42c62ca743061cb78580463844ed2975612c10",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:24.050061Z",
+  "status": "active"
+}
