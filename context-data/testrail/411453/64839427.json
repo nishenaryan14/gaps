@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "[IOS] Location Sharing Dialogue - Don't Allow - Cancel",
   "feature": "Location Sharing / Find My Device",
-  "scenario": "User taps \"Cancel\" on the permission dialog after denying location sharing during onboarding and navigating to Find My Device settings, expecting to return to the Poly Lens Menu screen.",
+  "scenario": "After onboarding, when the user denies location sharing and then accesses Lens App Settings > Find My Device, a location permission popup appears; tapping \"Cancel\" returns to the Poly Lens Menu.",
   "steps": [
-    "During onboarding, select \"Don't Allow\" in the Location Sharing dialogue.",
-    "Open the Lens app.",
-    "Navigate to App Settings.",
-    "Navigate to Find My Device.",
-    "Observe the permission dialog with \"Cancel\" and \"Enable Now\" options.",
-    "Tap \"Cancel\"."
+    "1. Complete onboarding.",
+    "2. When the Location Sharing dialogue appears, select \"Don't Allow\".",
+    "3. Open the Lens app.",
+    "4. Navigate to App Settings > Find My Device.",
+    "5. Observe the permission popup for location usage with \"Cancel\" and \"Enable Now\" options, with the FMD screen visible in the background.",
+    "6. Tap \"Cancel\"."
   ],
-  "expected": "The user is navigated back to the Poly Lens Menu screen.",
+  "expected": "Navigates back to the Poly Lens Menu.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Cancel",
-    "permission dialog",
-    "deny location sharing",
     "onboarding",
-    "Find My Device settings",
-    "return to Poly Lens Menu",
-    "Don't Allow",
-    "Enable Now"
+    "location sharing denied",
+    "Find My Device",
+    "Lens App Settings",
+    "location permission popup",
+    "Cancel button",
+    "Poly Lens Menu"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "62f7efea81a876f1627372dd7e7c2f56f14a07f7f4163a75c1e8a3a5861ab981",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.327173Z",
+  "processed_at": "2026-04-24T11:50:53.109312Z",
   "status": "active"
 }
