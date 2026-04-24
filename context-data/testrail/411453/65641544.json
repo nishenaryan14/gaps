@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "ANC - Switch from Transparency Mode to ANC Mode",
   "feature": "ANC (Active Noise Cancellation)",
-  "scenario": "Verify that switching from Transparency Mode to ANC Mode correctly sets ANC to ON with its previous value, turns Transparency OFF with its previous value, and disables/greys out both settings.",
+  "scenario": "Verify switching from Transparency Mode to ANC Mode preserves previous values and disables both settings",
   "steps": [
-    "Launch the app with an ANC-supported device.",
+    "Start the app with an ANC-capable device connected.",
     "Navigate to Device Setting > ANC.",
     "Ensure Transparency Mode is ON.",
     "Switch ANC to ON."
   ],
-  "expected": "ANC is set to ON with the previously selected value; Transparency switches to OFF with its previously selected value (Environment or Speech) and both values are disabled/greyed out.",
+  "expected": "ANC is set to ON with its previously selected value; Transparency switches to OFF with its previously selected value (Environment or Speech) and both values are disabled/greyed out.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "ANC",
     "Transparency Mode",
+    "ANC Mode",
     "Active Noise Cancellation",
-    "Device Setting",
-    "Audio Mode Switching",
-    "Noise Control",
-    "ANC ON",
-    "Transparency OFF"
+    "mode switching",
+    "preserve values",
+    "device settings",
+    "audio settings",
+    "noise control"
   ],
   "source_last_updated": "1761046159",
   "source_hash": "cb1dc4ed876eef5ba1d486f94ac5ed21b9024707c3f05d13d6ce88451cf9426d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.395741Z",
+  "processed_at": "2026-04-24T11:50:53.232463Z",
   "status": "active"
 }
