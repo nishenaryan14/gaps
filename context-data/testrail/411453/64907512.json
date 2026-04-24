@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "Support  - Device with device connected",
   "feature": "Support",
-  "scenario": "User views device details modal with blurred background after navigating to Menu > Support > Device and selecting a paired headset",
+  "scenario": "User views device details modal from Support > Device menu after connecting a headset",
   "steps": [
     "Pair and connect a headset to the device.",
     "Open the app.",
     "Navigate to Menu > Support > Device.",
     "Select a device from the list."
   ],
-  "expected": "A modal slides up from the bottom showing detailed device information (device name, product ID, serial number, software version, HW revision, last connected) with a \"Go\" button. The background is blurred.",
+  "expected": "A modal slides up from the bottom showing detailed device information (Device Name, Product ID, Serial Number, Software Version, HW Revision, Last Connected) with a \"Go\" button. The background is blurred and the modal includes the message: \"Send the detailed information to Support. Take a screen shot or write down the below details for a faster process.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device details modal",
-    "blurred background",
-    "paired headset",
-    "Menu Support Device",
-    "device selection",
-    "headset pairing",
+    "device details",
+    "support menu",
+    "headset connected",
     "device list",
-    "support menu"
+    "device information",
+    "paired device",
+    "support device"
   ],
   "source_last_updated": "1759761692",
   "source_hash": "b6a6977b7686cdaba259c1d82a829f34717aa25d2f5ee5435ff21536c15a2bbc",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:24.155939Z",
+  "processed_at": "2026-04-24T10:51:33.770497Z",
   "status": "active"
 }
