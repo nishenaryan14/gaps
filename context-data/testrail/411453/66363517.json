@@ -5,27 +5,26 @@
   "project": "411453",
   "title": "[App] Flamingo - Connect headset already paired with charge case",
   "feature": "App - Flamingo",
-  "scenario": "Connect a pre-paired headset to the app and verify battery indicators and software update info display correctly.",
+  "scenario": "Connect a headset that is already paired with the charge case but not with the app, then pair it with the app and verify battery indicators and software update info.",
   "steps": [
-    "Connect a headset that is already paired with the charge case.",
     "Pair headset with the app.",
     "Go to Settings > Software Update."
   ],
-  "expected": "1) Headset appears properly, two battery indicators (headset and case) visible on home screen. 2) Update all button is present (if DFU available), info about headset and charge case is displayed.",
+  "expected": "1. Headset appears properly, two battery indicators are visible on home screen (headset and case).\\n2. Update all button is present (if DFU available), info about headset and charge case is displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "headset",
-    "app",
-    "battery indicators",
+    "headset pairing",
+    "app pairing",
+    "battery indicator",
     "software update",
-    "pairing",
     "charge case",
-    "Settings"
+    "settings",
+    "bluetooth headset"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "a728fb67f89fb820c08bc598cbf93f04a0e5ed5982e297e9692538a98051735c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.429534Z",
+  "processed_at": "2026-04-24T11:50:53.344816Z",
   "status": "active"
 }
