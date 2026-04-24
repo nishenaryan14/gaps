@@ -1,0 +1,33 @@
+{
+  "id": "65641618",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit test - Onboarding Flow - Start Fit Test",
+  "feature": "Onboarding Flow - Fit Test",
+  "scenario": "Verify that after navigating to the Fit test screen and confirming the Position screen is displayed, clicking the Test button functions correctly.",
+  "steps": [
+    "Start the app with a device that supports fit test connected.",
+    "Navigate to Device Settings > Onboarding > Fit test screen (after Pairing 2 screen).",
+    "Verify the Position screen is displayed.",
+    "Click the Test button."
+  ],
+  "expected": "The Position screen is displayed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Fit test",
+    "Position screen",
+    "Test button",
+    "Device Settings",
+    "Onboarding",
+    "Pairing 2",
+    "fit test verification",
+    "app navigation"
+  ],
+  "source_last_updated": "1760963417",
+  "source_hash": "f509c7c7ff4c7e905cee44e3deb4bce741eb90bc820743d37ec2f8e1dc9e4540",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.392549Z",
+  "status": "active"
+}
