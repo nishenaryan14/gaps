@@ -5,30 +5,26 @@
   "project": "411453",
   "title": "Find My Device - User location on the map",
   "feature": "Find My Device",
-  "scenario": "Verify user location is displayed on the map with correct zoom-dependent styling on Android (blue dot/circle) and iOS (blue dot/white circle) when accessing Find My Device from the App Menu.",
+  "scenario": "User location on the map should display correctly based on platform-specific zoom behavior when opening Find My Device from the App Menu with GPS allowed",
   "steps": [
-    "Start the app with headset connected or disconnected.",
-    "Navigate to App Menu.",
-    "Tap on Find My Device.",
-    "If prompted, allow GPS location access.",
-    "Observe the user's location on the map."
+    "Open Find My Device from the App Menu (with GPS allowed)",
+    "Observe the user's location on the map"
   ],
-  "expected": "The user's location should be displayed on the map. On Android, a full blue dot is shown when zoomed out, and a blue circle with a full blue dot in the center when zoomed in. On iOS, a full blue dot is shown when zoomed out, and a white circle when zoomed in.",
+  "expected": "On Android: a full blue dot is shown when zoomed out, and a blue circle with a full blue dot in the center when zoomed in. On iOS: a full blue dot is shown when zoomed out, and a white circle when zoomed in.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Find My Device",
-    "user location map",
-    "blue dot",
-    "zoom-dependent styling",
-    "Android blue dot circle",
-    "iOS blue dot white circle",
     "App Menu",
-    "GPS location access"
+    "GPS allowed",
+    "user location",
+    "map display",
+    "platform-specific zoom",
+    "location accuracy"
   ],
   "source_last_updated": "1759929579",
   "source_hash": "cddad7d6d3bc8e5260baa39cf4e3608f7434701aa25eb8f34b667a73f55458e9",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.357381Z",
+  "processed_at": "2026-04-24T11:50:53.154731Z",
   "status": "active"
 }
