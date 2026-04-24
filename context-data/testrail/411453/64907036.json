@@ -1,0 +1,33 @@
+{
+  "id": "64907036",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "[IOS]App Settings - General - Account - Log in - Log out - Cancel",
+  "feature": "App Settings - Account",
+  "scenario": "Verify login/logout flow in App Settings: user can log in, see account details, cancel logout, and remain logged in.",
+  "steps": [
+    "Start the app as a quest, tap App Settings icon, go to General > Account.",
+    "Tap Log in, then Continue and log in with credentials. Verify 'Your account' text is visible with Name and Email fields populated.",
+    "Tap Log out. Verify a login dialog opens with Cancel and Continue options.",
+    "Tap Cancel. Verify the dialog disappears and the user remains logged in."
+  ],
+  "expected": "After step 2: \"Your account\" text is visible with Name and Email fields populated. After step 3: A login dialog opens with Cancel and Continue options. After step 4: The dialog disappears and the user remains logged in.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "login",
+    "logout",
+    "app settings",
+    "account details",
+    "cancel logout",
+    "authentication",
+    "user session",
+    "login dialog"
+  ],
+  "source_last_updated": "1764319833",
+  "source_hash": "f207772853feee11205ea923e80eb7baefc3d14d44246d5bd6eac636521c064d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.101212Z",
+  "status": "active"
+}
