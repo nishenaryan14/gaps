@@ -1,0 +1,39 @@
+{
+  "id": "65640118",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Mobile user registered on Lens tenant, mobile app data correct",
+  "feature": "Mobile App - Lens Tenant",
+  "scenario": "Verify that a mobile user registered on a Lens tenant sees correct tenant data (app version, tenant name, tenant ID, user ID, app ID, last connection date) in the mobile app.",
+  "steps": [
+    "Open the Poly Support mobile app on the registered device.",
+    "Navigate to the app settings or account/profile section.",
+    "Locate the tenant information section (e.g., 'Tenant Info', 'Account Details', or similar).",
+    "Verify the following fields are displayed and match the expected tenant data:\n   - App version\n   - Tenant name\n   - Tenant ID\n   - User ID\n   - App ID\n   - Last connection date",
+    "Cross-check the displayed values against the actual tenant configuration in the Lens admin portal (if accessible)."
+  ],
+  "expected": "The mobile app displays the correct tenant data: app version, tenant name, tenant ID, user ID, app ID, and last connection date, all matching the registered Lens tenant configuration.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "mobile user registration",
+    "Lens tenant",
+    "tenant data verification",
+    "app version",
+    "tenant name",
+    "tenant ID",
+    "user ID",
+    "app ID",
+    "last connection date",
+    "Poly Support mobile app",
+    "tenant info",
+    "account details",
+    "Lens admin portal"
+  ],
+  "source_last_updated": "1760949362",
+  "source_hash": "4f7ea0c4661fe018dd4173272903999fd68264d0b904202fb8b66b30e08f9eb2",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "status": "active"
+}
