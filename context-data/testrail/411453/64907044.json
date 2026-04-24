@@ -1,0 +1,35 @@
+{
+  "id": "64907044",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - About - New update available",
+  "feature": "App Settings - General - About",
+  "scenario": "Verify that the About section displays update information and handles Release Notes and Update interactions correctly when an app update is available.",
+  "steps": [
+    "Ensure an app update is available on the Cloud.",
+    "Navigate to App Settings > General > About.",
+    "Observe the displayed information.",
+    "Tap the Release Notes link.",
+    "Tap the 'X' button to close the Release Notes.",
+    "Tap the 'Update' button."
+  ],
+  "expected": "The About section displays an \"App Updates Needed\" message, an \"Update\" button, current and available firmware versions, and a link to Release Notes. Tapping the Release Notes link opens the release notes page. Tapping the \"X\" button closes the Release Notes and returns to the General section with About expanded. Tapping the \"Update\" button opens the app store page for Poly Lens.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "About section",
+    "app update available",
+    "Release Notes",
+    "Update button",
+    "App Settings",
+    "General",
+    "Cloud update",
+    "update information"
+  ],
+  "source_last_updated": "1759416409",
+  "source_hash": "db8b60bb834092500c980e1eb7879bb17af81cc9cfd989804fe7437e9f846d8f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.102722Z",
+  "status": "active"
+}
