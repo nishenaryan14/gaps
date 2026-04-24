@@ -1,0 +1,40 @@
+{
+  "id": "LMW-2015",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "ANDROID \ud83d\udfe5 Incorrect device state displayed after prolonged app idle; wrong headset shown as connected and settings accessible",
+  "feature": "Device State / Connection UI",
+  "scenario": "After prolonged idle, app on launch shows incorrect earbud connection state and allows inaccessible settings until restart",
+  "description_clean": "After prolonged app idle (e.g., overnight), the app displays incorrect device state on launch. Earbuds are shown as partially connected (left connected, right disconnected) even though both are in the case and fully disconnected in system Bluetooth. The actually connected device (Surround 80) is not shown. The app also incorrectly allows access to earbuds settings when they are disconnected; toggling settings produces no response. Correct state is only shown after restarting the app.",
+  "steps": [
+    "Leave the app idle for a prolonged period (e.g., overnight).",
+    "Launch the app.",
+    "Observe the displayed device state.",
+    "Check system Bluetooth to verify actual connection status of the earbuds.",
+    "Attempt to access earbuds settings from the app.",
+    "Toggle any setting within the earbuds settings.",
+    "Restart the app.",
+    "Observe the displayed device state after restart."
+  ],
+  "expected": "On launch after prolonged idle, the app should correctly show both earbuds as disconnected (since they are in the case and fully disconnected in system Bluetooth) and display the actually connected device (Surround 80). Earbuds settings should not be accessible when earbuds are disconnected.",
+  "actual": "On launch after prolonged idle, the app incorrectly shows earbuds as partially connected (left connected, right disconnected). The actually connected device (Surround 80) is not shown. The app incorrectly allows access to earbuds settings when they are disconnected, and toggling settings produces no response. Correct state is only shown after restarting the app.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "earbud connection state",
+    "app idle state",
+    "Bluetooth state mismatch",
+    "app restart required",
+    "inaccessible settings",
+    "prolonged idle",
+    "connection status display bug",
+    "earbud settings toggle"
+  ],
+  "source_last_updated": "2026-04-22T10:51:55.000+0000",
+  "source_hash": "593fb7d6b1d023402a716a585c33f5a5ed564d745f62ecd5c1cfb4d705a5092d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.047404Z",
+  "status": "active"
+}
