@@ -1,0 +1,31 @@
+{
+  "id": "65810677",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Swipe left, previous screen",
+  "feature": "Quick Setup Guide (QSG) - Screen Navigation",
+  "scenario": "Swiping left from the left side of the screen navigates backward through the Quick Setup Guide screens in reverse order.",
+  "steps": [
+    "Start from the fourth screen of the Quick Setup Guide (QSG).",
+    "Swipe left from the left side of the screen."
+  ],
+  "expected": "The user navigates to the previous screen in the QSG: fourth \u2192 third (charge case outside) \u2192 second (two earbuds) \u2192 first (one earbud).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "swipe left",
+    "left side",
+    "navigate backward",
+    "Quick Setup Guide",
+    "QSG",
+    "reverse order",
+    "screen navigation",
+    "gesture"
+  ],
+  "source_last_updated": "1761315357",
+  "source_hash": "3023f8cf959a34aec81b41df3db7a0ffc429be5e50eaf122cd4e1bbd7d492f5c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "status": "active"
+}
