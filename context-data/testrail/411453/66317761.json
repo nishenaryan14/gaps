@@ -1,0 +1,37 @@
+{
+  "id": "66317761",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Reset Device - Restore Defaults - Restore - Yes",
+  "feature": "Device Settings - Reset Device",
+  "scenario": "Verify that resetting a device to factory defaults restores all settings to their default values via the Reset Device tab in Lens App.",
+  "steps": [
+    "Start Lens App with a headset connected.",
+    "Change all settings to non-default values.",
+    "Navigate to the Reset Device tab.",
+    "Tap Restore.",
+    "Confirm by tapping Yes.",
+    "Verify the success popup appears.",
+    "Tap OK to return to the Home Screen.",
+    "Verify all settings have been restored to default values as per UI Spec."
+  ],
+  "expected": "All settings are restored to default values as per UI Spec.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "factory reset",
+    "restore defaults",
+    "Reset Device tab",
+    "Lens App",
+    "settings restoration",
+    "headset",
+    "success popup",
+    "UI Spec"
+  ],
+  "source_last_updated": "1762260796",
+  "source_hash": "0377b4768754081af663c26bddddfe1a7a1c025f2034167f65c5a4d68df33a56",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.410659Z",
+  "status": "active"
+}
