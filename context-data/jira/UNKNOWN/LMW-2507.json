@@ -13,23 +13,23 @@
     "Start CS (Central Switch) DFU"
   ],
   "expected": "DFU process starts successfully without crashing",
-  "actual": "App crashes when CC or CS DFU is started. DFU for sub-devices does not work.",
+  "actual": "App crashes whenever CC or CS DFU is started. DFU for sub-devices does not work.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "app crash",
     "DFU",
-    "device firmware update",
+    "Device Firmware Update",
     "CC",
     "CS",
-    "sub-device",
-    "firmware update failure",
-    "central coordinator"
+    "Central Coordinator",
+    "Central Switch",
+    "sub-device"
   ],
   "source_last_updated": "2026-04-16T07:56:34.000+0000",
   "source_hash": "ea5710a9052cd1573bccb43f5f21f4eff59160a8bfa3950c3d197308aa268016",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:22.666377Z",
+  "processed_at": "2026-04-24T10:51:32.683907Z",
   "status": "active"
 }
