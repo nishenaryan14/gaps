@@ -1,0 +1,146 @@
+[
+  {
+    "title": "Morpheus device reports in-call status via deckardId 0x0E35 during active call",
+    "steps": [
+      "Connect a Morpheus device to the test system",
+      "Establish an active call on the Morpheus device",
+      "Query the call state using deckardId 0x0E35",
+      "Verify the returned status indicates an active call (e.g., 'in-call' = true)",
+      "End the active call",
+      "Query the call state again using deckardId 0x0E35",
+      "Verify the returned status indicates no active call (e.g., 'in-call' = false)"
+    ],
+    "expected": "Morpheus device correctly reports in-call status via deckardId 0x0E35, returning active call state during a call and idle state after call ends."
+  },
+  {
+    "title": "Morpheus device reports in-call status via deckardId 0x0E22 during active call",
+    "steps": [
+      "Connect a Morpheus device to the test system",
+      "Establish an active call on the Morpheus device",
+      "Query the call state using deckardId 0x0E22",
+      "Verify the returned status indicates an active call (e.g., 'in-call' = true)",
+      "End the active call",
+      "Query the call state again using deckardId 0x0E22",
+      "Verify the returned status indicates no active call (e.g., 'in-call' = false)"
+    ],
+    "expected": "Morpheus device correctly reports in-call status via deckardId 0x0E22, returning active call state during a call and idle state after call ends."
+  },
+  {
+    "title": "DFU is blocked on Morpheus device during active call",
+    "steps": [
+      "Connect a Morpheus device to the test system",
+      "Establish an active call on the Morpheus device",
+      "Attempt to initiate DFU (Device Firmware Update) on the Morpheus device",
+      "Verify that the DFU process is blocked/rejected with an appropriate error or status code",
+      "End the active call",
+      "Attempt to initiate DFU again",
+      "Verify that DFU proceeds normally after the call ends"
+    ],
+    "expected": "DFU is blocked on Morpheus device during an active call, and allowed after the call ends."
+  },
+  {
+    "title": "ANC transparency mode is disabled on Morpheus device during active call",
+    "steps": [
+      "Connect a Morpheus device to the test system",
+      "Enable ANC transparency mode on the Morpheus device",
+      "Verify ANC transparency mode is active",
+      "Establish an active call on the Morpheus device",
+      "Check the ANC transparency mode status",
+      "Verify that ANC transparency mode is automatically disabled/turned off during the active call",
+      "End the active call",
+      "Check the ANC transparency mode status again",
+      "Verify that ANC transparency mode can be re-enabled after the call ends"
+    ],
+    "expected": "ANC transparency mode is automatically disabled on Morpheus device during an active call and can be re-enabled after the call ends."
+  },
+  {
+    "title": "Morpheus device reports in-call status via deckardId 0x0E35 triggers DFU blocking",
+    "steps": [
+      "Connect a Morpheus device to the test system",
+      "Establish an active call on the Morpheus device",
+      "Query the call state using deckardId 0x0E35 and confirm 'in-call' = true",
+      "Attempt to initiate DFU on the Morpheus device",
+      "Verify that DFU is blocked/rejected",
+      "End the active call",
+      "Query the call state using deckardId 0x0E35 and confirm 'in-call' = false",
+      "Attempt to initiate DFU again",
+      "Verify that DFU proceeds normally"
+    ],
+    "expected": "In-call status reported via deckardId 0x0E35 correctly triggers DFU blocking during active calls, and DFU is allowed after call ends."
+  },
+  {
+    "title": "Morpheus device reports in-call status via deckardId 0x0E35 triggers ANC transparency mode control",
+    "steps": [
+      "Connect a Morpheus device to the test system",
+      "Enable ANC transparency mode on the Morpheus device",
+      "Verify ANC transparency mode is active",
+      "Establish an active call on the Morpheus device",
+      "Query the call state using deckardId 0x0E35 and confirm 'in-call' = true",
+      "Check the ANC transparency mode status",
+      "Verify that ANC transparency mode is automatically disabled during the active call",
+      "End the active call",
+      "Query the call state using deckardId 0x0E35 and confirm 'in-call' = false",
+      "Re-enable ANC transparency mode",
+      "Verify that ANC transparency mode can be enabled after the call ends"
+    ],
+    "expected": "In-call status reported via deckardId 0x0E35 correctly triggers ANC transparency mode to be disabled during active calls, and re-enabled after call ends."
+  },
+  {
+    "title": "Morpheus device reports in-call status via deckardId 0x0E22 triggers DFU blocking",
+    "steps": [
+      "Connect a Morpheus device to the test system",
+      "Establish an active call on the Morpheus device",
+      "Query the call state using deckardId 0x0E22 and confirm 'in-call' = true",
+      "Attempt to initiate DFU on the Morpheus device",
+      "Verify that DFU is blocked/rejected",
+      "End the active call",
+      "Query the call state using deckardId 0x0E22 and confirm 'in-call' = false",
+      "Attempt to initiate DFU again",
+      "Verify that DFU proceeds normally"
+    ],
+    "expected": "In-call status reported via deckardId 0x0E22 correctly triggers DFU blocking during active calls, and DFU is allowed after call ends."
+  },
+  {
+    "title": "Morpheus device reports in-call status via deckardId 0x0E22 triggers ANC transparency mode control",
+    "steps": [
+      "Connect a Morpheus device to the test system",
+      "Enable ANC transparency mode on the Morpheus device",
+      "Verify ANC transparency mode is active",
+      "Establish an active call on the Morpheus device",
+      "Query the call state using deckardId 0x0E22 and confirm 'in-call' = true",
+      "Check the ANC transparency mode status",
+      "Verify that ANC transparency mode is automatically disabled during the active call",
+      "End the active call",
+      "Query the call state using deckardId 0x0E22 and confirm 'in-call' = false",
+      "Re-enable ANC transparency mode",
+      "Verify that ANC transparency mode can be enabled after the call ends"
+    ],
+    "expected": "In-call status reported via deckardId 0x0E22 correctly triggers ANC transparency mode to be disabled during active calls, and re-enabled after call ends."
+  },
+  {
+    "title": "Morpheus device reports idle state via deckardId 0x0E35 when no call is active",
+    "steps": [
+      "Connect a Morpheus device to the test system with no active call",
+      "Query the call state using deckardId 0x0E35",
+      "Verify the returned status indicates no active call (e.g., 'in-call' = false)",
+      "Attempt to initiate DFU",
+      "Verify that DFU proceeds normally (not blocked)",
+      "Enable ANC transparency mode",
+      "Verify that ANC transparency mode can be enabled successfully"
+    ],
+    "expected": "Morpheus device correctly reports idle state via deckardId 0x0E35 when no call is active, allowing DFU and ANC transparency mode."
+  },
+  {
+    "title": "Morpheus device reports idle state via deckardId 0x0E22 when no call is active",
+    "steps": [
+      "Connect a Morpheus device to the test system with no active call",
+      "Query the call state using deckardId 0x0E22",
+      "Verify the returned status indicates no active call (e.g., 'in-call' = false)",
+      "Attempt to initiate DFU",
+      "Verify that DFU proceeds normally (not blocked)",
+      "Enable ANC transparency mode",
+      "Verify that ANC transparency mode can be enabled successfully"
+    ],
+    "expected": "Morpheus device correctly reports idle state via deckardId 0x0E22 when no call is active, allowing DFU and ANC transparency mode."
+  }
+]
