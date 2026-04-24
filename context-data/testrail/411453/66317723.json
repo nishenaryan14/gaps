@@ -1,0 +1,33 @@
+{
+  "id": "66317723",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - Cancel",
+  "feature": "Device Settings - Rename Device",
+  "scenario": "Verify that pressing Cancel when renaming a device does not change the device's name",
+  "steps": [
+    "Start the app with the device attached.",
+    "Navigate to Device Settings > General.",
+    "Click on the device's official name.",
+    "Enter new text.",
+    "Click Cancel."
+  ],
+  "expected": "The device name remains unchanged (stays as the official name).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Cancel button",
+    "rename device",
+    "device name unchanged",
+    "cancel rename",
+    "Device Settings",
+    "cancel action",
+    "name preservation"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "53bcad97ddffb85248afc939debfe5a5d2aba4e7e9cb87603a5b828a013a6a8e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.374106Z",
+  "status": "active"
+}
