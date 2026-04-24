@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "PPIP - Setting persistence when Share Data toggle is OFF",
   "feature": "PPIP (Privacy & Permissions)",
-  "scenario": "Verify that the Share Data toggle remains persistently OFF after restarting the app when the user initially set it to OFF.",
+  "scenario": "Verify that the Share Data toggle remains persistently OFF after restarting the app when the user had previously set it to OFF.",
   "steps": [
-    "1. Start app fresh, go through onboarding, tap 'Continue as Guest'.",
-    "2. On iOS, select any option on the location permission screen (not part of this test).",
-    "3. Go to App Settings > General > Account and confirm Share Data toggle is OFF with the correct description.",
-    "4. Restart the app and go to App Settings > General > Account again to verify the toggle is still OFF."
+    "1) Start app for first time, go through onboarding, tap Continue as Guest.",
+    "2) On iOS, select any option on location permission screen (not part of this test).",
+    "3) Go to App Settings > General > Account and confirm Share Data toggle is OFF with the expected description text.",
+    "4) Restart the app and navigate again to App Settings > General > Account to verify the toggle is still in OFF state."
   ],
-  "expected": "The Share Data toggle remains persistently OFF after restarting the app when the user initially set it to OFF.",
+  "expected": "The Share Data toggle remains persistently OFF after restarting the app when the user had previously set it to OFF.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Share Data toggle",
-    "persistent OFF",
+    "persistent OFF state",
     "app restart",
     "App Settings",
     "Account settings",
     "Guest mode",
-    "toggle state retention"
+    "toggle state persistence"
   ],
   "source_last_updated": "1760537927",
   "source_hash": "af2e9989573e736542cf3b635a0906fb7afc1decc81e90b3bb11eccc13d61120",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.060270Z",
+  "processed_at": "2026-04-24T10:51:32.722379Z",
   "status": "active"
 }
