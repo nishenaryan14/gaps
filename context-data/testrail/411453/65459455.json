@@ -14,7 +14,7 @@
     "Tap Continue, then tap Start Update.",
     "Tap OK."
   ],
-  "expected": "Nothing happens; the app remains on the \"Software Update\" screen. Then a popup appears stating \"Update currently not available, please try back later\". Then the popup closes and the user is returned to the \"Three Easy Steps\" screen.",
+  "expected": "Nothing happens; the app remains on the \"Software Update\" screen. Then, after tapping Continue and Start Update, a popup appears stating \"Update currently not available, please try back later\". After tapping OK, the popup closes and the user is returned to the \"Three Easy Steps\" screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -29,6 +29,6 @@
   "source_last_updated": "1763372941",
   "source_hash": "9737c4bc283afbe75891be29c5d122a11264e68afb4a91cd8c0f8278e4363fab",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "processed_at": "2026-04-24T11:50:53.292091Z",
   "status": "active"
 }
