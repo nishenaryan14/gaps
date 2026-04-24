@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Policy: Create Policy while WiFi is turned off",
   "feature": "Policy",
-  "scenario": "Create a policy while WiFi is off and verify it is applied after regaining WiFi connection",
+  "scenario": "Create a policy while WiFi is off, then verify it is applied and locks settings after reconnecting to the internet.",
   "steps": [
     "Launch the app",
     "Turn off internet on the phone (disable WiFi)",
@@ -17,18 +17,18 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "WiFi off",
     "policy creation",
-    "offline policy",
-    "WiFi reconnection",
-    "policy sync",
-    "cloud policy",
+    "WiFi off",
+    "policy verification",
+    "settings lock",
+    "internet reconnection",
     "device settings",
-    "policy verification"
+    "cloud policy",
+    "offline policy"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "66ae05895932f3c8a7deabb66e6476495dfa62c41db5351b3414892c8ed62bf3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.420783Z",
+  "processed_at": "2026-04-24T11:50:53.319401Z",
   "status": "active"
 }
