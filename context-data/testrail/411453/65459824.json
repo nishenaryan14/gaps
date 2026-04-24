@@ -5,28 +5,29 @@
   "project": "411453",
   "title": "Notifications -  Update successful OFF",
   "feature": "Notifications",
-  "scenario": "Verify that no notification appears after a successful DFU when device software update notifications are disabled in App Settings.",
+  "scenario": "Verify that no notification pops up after a successful DFU update when device software update notifications are disabled in App Settings.",
   "steps": [
     "1. Open App Settings.",
-    "2. Turn OFF the device software update notification.",
-    "3. Initiate a DFU (Device Firmware Update) process.",
-    "4. Allow the DFU process to complete successfully."
+    "2. Navigate to the device software update notification setting.",
+    "3. Turn OFF the device software update notification.",
+    "4. Initiate a DFU (Device Firmware Update) process.",
+    "5. Wait for the DFU process to complete successfully."
   ],
-  "expected": "No notification should pop up after the DFU process completes.",
+  "expected": "No notification should pop up upon successful update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU",
-    "Device Firmware Update",
+    "DFU update",
     "notification disabled",
+    "device software update notification",
     "App Settings",
-    "software update notification",
-    "no notification",
+    "firmware update",
+    "no notification popup",
     "successful update"
   ],
   "source_last_updated": "1761223884",
   "source_hash": "7063452386a7564c6101829f4c4b81dbee158b1c9d46691f52404289898fa292",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.419263Z",
+  "processed_at": "2026-04-24T11:50:53.305513Z",
   "status": "active"
 }
