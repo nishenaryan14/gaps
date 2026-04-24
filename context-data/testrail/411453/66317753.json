@@ -1,0 +1,36 @@
+{
+  "id": "66317753",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Language Change",
+  "feature": "Language Settings",
+  "scenario": "Verify that changing the headset language via Device Settings successfully applies after completing the DFU software update process.",
+  "steps": [
+    "Pair and connect the headset to the device.",
+    "Launch the app on the connected device.",
+    "Navigate to Device Settings within the app.",
+    "Tap on the Language section.",
+    "Select a new language from the scrollable list.",
+    "Confirm the language update via the popup by tapping 'Update now' (options: 'Later' or 'Update now').",
+    "Proceed through the software update (DFU) process.",
+    "Verify that the language change is applied successfully after the update completes."
+  ],
+  "expected": "The headset's language is successfully changed to the newly selected language after the DFU update completes.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "headset language change",
+    "Device Settings",
+    "DFU software update",
+    "language update confirmation",
+    "post-update verification",
+    "firmware update language",
+    "app language settings"
+  ],
+  "source_last_updated": "1762244218",
+  "source_hash": "0d1e2685e2fe0d37ef7519d21974a1297a6b378c5a31c1fcec0a0940ffa9e10d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.379308Z",
+  "status": "active"
+}
