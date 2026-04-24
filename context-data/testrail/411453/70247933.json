@@ -1,0 +1,35 @@
+{
+  "id": "70247933",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - What's new screen - Updating from previous app version",
+  "feature": "Onboarding",
+  "scenario": "Verify that after updating from an older app version (pre-5.0.0.X) to the latest, the \"Welcome to Poly Studio\" screen appears on launch and tapping \"Get Started\" dismisses it and navigates to the Home Screen.",
+  "steps": [
+    "1. Launch the app on a device running an older version (before 5.0.0.X).",
+    "2. Update the app to the latest version.",
+    "3. Open the app after the update.",
+    "4. Observe the screen that appears upon launch.",
+    "5. Tap the \"Get Started\" button.",
+    "6. Observe the resulting screen."
+  ],
+  "expected": "Upon launch, the \"Welcome to Poly Studio\" screen appears. After tapping \"Get Started\", the screen is dismissed and the user is navigated to the Home Screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "app update",
+    "Welcome to Poly Studio screen",
+    "Get Started button",
+    "version upgrade",
+    "onboarding flow",
+    "Home Screen navigation",
+    "post-update launch",
+    "dismiss onboarding"
+  ],
+  "source_last_updated": "1768388700",
+  "source_hash": "61c8fedd2d2ff1ab7eb910f096f580b3d9a52b7fd64cc29f029dbb51f964af1f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "status": "active"
+}
