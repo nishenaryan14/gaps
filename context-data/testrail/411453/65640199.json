@@ -1,0 +1,32 @@
+{
+  "id": "65640199",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Soak Test - Headset connected, app in background, phone actively used",
+  "feature": "Soak Test / Memory Leak Detection",
+  "scenario": "Soak test to detect memory leaks or crashes after prolonged background use with headset connected and phone actively used",
+  "steps": [
+    "Install and launch the app, pair the headset, then navigate to the Home Screen.",
+    "Put the app in the background and play music from YouTube or Spotify.",
+    "After several hours (ideally overnight or when the phone can be idle for multiple hours), check that the app is still running and usable as expected."
+  ],
+  "expected": "App remains running without crashes or memory leaks, and is fully usable after prolonged background use with headset connected.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "soak test",
+    "memory leak",
+    "crash detection",
+    "background use",
+    "headset connected",
+    "prolonged idle",
+    "app stability",
+    "audio playback"
+  ],
+  "source_last_updated": "1760949727",
+  "source_hash": "040fc00cc1d81ce84bf3dcc8a4222476d39e83caf9fe2bcb0b51e864cd12f25b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.429534Z",
+  "status": "active"
+}
