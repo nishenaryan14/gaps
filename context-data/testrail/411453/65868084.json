@@ -5,27 +5,28 @@
   "project": "411453",
   "title": "Device Home Screen - Power off Headset while in the app",
   "feature": "Device Home Screen",
-  "scenario": "Power off the headset while the app is open and verify it shows as disconnected in the UI",
+  "scenario": "Power off the headset while the app is open and verify it shows as disconnected in the UI.",
   "steps": [
-    "Pair and connect the headset.",
-    "Start the app.",
-    "Power off the headset."
+    "1. Pair and connect headset.",
+    "2. Start the app.",
+    "3. Power off the headset."
   ],
-  "expected": "The headset is shown as disconnected in the app's UI.",
+  "expected": "Headset is shown as disconnected in the app's UI.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "headset power off",
-    "disconnected status",
-    "UI verification",
-    "app connection state",
-    "headset pairing",
-    "connection loss detection",
-    "device disconnection"
+    "headset",
+    "power off",
+    "disconnected",
+    "UI status",
+    "app",
+    "pair",
+    "connect",
+    "verification"
   ],
   "source_last_updated": "1761834242",
   "source_hash": "4d0a1e021d5330bfa652bdd78b7d787ba830205eb7e5dbcbc38f8cf2b39f6707",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.736245Z",
+  "processed_at": "2026-04-24T11:23:05.327708Z",
   "status": "active"
 }
