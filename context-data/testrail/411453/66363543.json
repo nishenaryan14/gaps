@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "Onboarding - Animations",
   "feature": "Onboarding",
-  "scenario": "Verify animations play correctly during the device onboarding flow, including interactions like tapping, swiping, and replaying.",
+  "scenario": "Verify that animations play correctly during the Onboarding flow, including after repeated openings and while interacting with UI elements.",
   "steps": [
-    "Launch the app with a connected device (Osprey/Term/Emu)",
-    "Navigate to Poly Lens Menu > User Guides",
-    "Tap onboarding for the device",
-    "Tap Continue",
-    "While animations play, test the following interactions:\n   - Tap on the animation\n   - Swipe right/left\n   - Tap 'Next'\n   - Tap 'X'\n   - Tap 'Done' or 'User Guide'",
-    "Confirm animations play correctly on every screen",
-    "Replay the onboarding and confirm animations play correctly on subsequent replays"
+    "Launch the app with an Osprey/Term/Emu device connected.",
+    "Go to Poly Lens Menu > User Guides.",
+    "Tap on onboarding for your device.",
+    "Tap Continue.",
+    "Go through the entire onboarding and verify animations play correctly on each screen. While an animation is playing, test: tapping on the animation, swiping right/left, tapping the \"Next\" button, tapping \"X\", and tapping \"Done\" or \"User Guide\".",
+    "Go through Onboarding again to confirm animations play properly every time the user opens Onboarding."
   ],
-  "expected": "Animations play correctly on every screen during the onboarding flow, including on subsequent replays. All interactions (tapping on animation, swiping, tapping Next/X/Done/User Guide) work as expected without breaking the animation playback.",
+  "expected": "Animations play correctly on each screen during the Onboarding flow, and animations play properly every time the user opens Onboarding.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "animations",
     "onboarding flow",
-    "device onboarding",
+    "animation playback",
     "Poly Lens",
     "User Guides",
-    "tap",
-    "swipe",
-    "replay"
+    "Osprey/Term/Emu device",
+    "repeated openings",
+    "UI interaction",
+    "swipe navigation"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "8738226695eb78392346cc483e73743658d271a24a49e72643a0de909d74ee1d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.410659Z",
+  "processed_at": "2026-04-24T11:50:53.284970Z",
   "status": "active"
 }
