@@ -1,0 +1,35 @@
+{
+  "id": "66363559",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EB and CC on the latest - Language change",
+  "feature": "Language Change / Software Update",
+  "scenario": "After completing a language change, the Companion App pop-up card should not appear if the CC is already on the latest firmware.",
+  "steps": [
+    "Start app with no update for CC or EB.",
+    "Go to Device Settings > Language.",
+    "Select any language.",
+    "Tap Update Now.",
+    "Complete the language change.",
+    "Go back to Device Home Screen."
+  ],
+  "expected": "CC pop-up card is not present since CC is already on the latest firmware.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Companion App",
+    "pop-up card",
+    "language change",
+    "firmware update",
+    "CC firmware",
+    "Device Settings",
+    "Update Now",
+    "latest firmware"
+  ],
+  "source_last_updated": "1763382835",
+  "source_hash": "43a57e60742c28c8d70e7d41fec7e5d99d3e52cd608d48b2e6c4ff7221a00632",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.383888Z",
+  "status": "active"
+}
