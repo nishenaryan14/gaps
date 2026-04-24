@@ -1,0 +1,34 @@
+{
+  "id": "65640191",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Device Release Notes Opened",
+  "feature": "Analytics",
+  "scenario": "Logs \"device_release_notes_opened\" event when device-specific release notes are viewed, with event counts updating after a few hours.",
+  "steps": [
+    "Open the app and navigate to device-specific release notes.",
+    "View the release notes for a specific device.",
+    "Check the event logs for the event name \"device_release_notes_opened\".",
+    "Wait a few hours for event counts to update.",
+    "Verify the event count has been updated.",
+    "Check the default elements: graph for this event, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
+  ],
+  "expected": "The event \"device_release_notes_opened\" is logged when device-specific release notes are viewed. After a few hours, event counts are updated. Default elements (graph for this event, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment) are present for every event.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "device_release_notes_opened",
+    "release notes",
+    "event logs",
+    "event count",
+    "app analytics",
+    "event tracking",
+    "device-specific"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "c652329339d2514f1b91b14479bea31943db4e5a8180f328c848dd4d039c74b1",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.429534Z",
+  "status": "active"
+}
