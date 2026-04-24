@@ -1,0 +1,35 @@
+{
+  "id": "66363583",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Language Change - Disconnecting/Connecting earbuds to check DFU pop up",
+  "feature": "Language Change",
+  "scenario": "Language update fails with popup error when one earbud is disconnected, and reconnecting does not clear the popup until dismissed manually.",
+  "steps": [
+    "Open Device Settings and navigate to the Language tab.",
+    "Disconnect one earbud (place it in the charge case).",
+    "Tap 'Update Now'.",
+    "Observe the popup message.",
+    "Reconnect the disconnected earbud.",
+    "Tap 'Ok' on the popup."
+  ],
+  "expected": "After tapping 'Ok', the popup is dismissed and the user is returned to Device Settings > Language tab.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "language update",
+    "earbud disconnected",
+    "popup error",
+    "reconnect earbud",
+    "update failed",
+    "dismiss popup",
+    "firmware update",
+    "charge case"
+  ],
+  "source_last_updated": "1763382835",
+  "source_hash": "35b458874d5a066cc82004a5da98b5ee5bada6c2e459b81b4ed28ffd7f39666e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.392549Z",
+  "status": "active"
+}
