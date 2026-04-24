@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "FMD - Permission is not previously given",
   "feature": "Find My Device (FMD)",
-  "scenario": "Verify geo pin appears when granting Find My Device permission \"Allow Once\" via Lens app settings after connecting an Ospray device.",
+  "scenario": "Verify that granting \"Allow Once\" permission for Find My Device in the Lens app displays the geo pin when an Ospray device is connected.",
   "steps": [
     "Open Lens app with no devices connected",
     "Connect Ospray device",
     "Tap App settings icon",
     "Tap Find My Device",
-    "Tap 'Allow Once'",
-    "Wait for the geo pin to appear"
+    "Tap \"Allow Once\"",
+    "Wait for geo pin to appear"
   ],
-  "expected": "Geo pin is visible after step 6",
+  "expected": "Geo pin is visible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "geo pin",
+    "Allow Once permission",
     "Find My Device",
-    "Allow Once",
     "Lens app",
     "Ospray device",
+    "geo pin",
+    "device connected",
     "App settings",
-    "permission"
+    "location permission"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "d26fab24290b61d0d087d62a5bbf01b21a8ee3fe520cea34180b49723701cb11",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.433155Z",
+  "processed_at": "2026-04-24T11:50:53.352481Z",
   "status": "active"
 }
