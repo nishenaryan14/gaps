@@ -1,0 +1,30 @@
+{
+  "id": "65641609",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit test - 1st screen close button [TBD]",
+  "feature": "Fit Test",
+  "scenario": "Close button on the first screen of the Fit Test closes the Fit Test and returns to Device Settings",
+  "steps": [
+    "Open the Fit Test on the first screen.",
+    "Tap the close button."
+  ],
+  "expected": "The Fit Test screen closes and the user is returned to the Device Settings screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "close button",
+    "fit test",
+    "first screen",
+    "device settings",
+    "exit",
+    "dismiss",
+    "cancel"
+  ],
+  "source_last_updated": "1760958387",
+  "source_hash": "929b5f3622464fe6b8517c1ae1bb0b4cb737375ad453a65932d824feadb46ce5",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.379308Z",
+  "status": "active"
+}
