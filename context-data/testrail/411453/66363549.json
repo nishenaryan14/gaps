@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Tern - no charge case screens (Onboarding, Tutorial screen)",
   "feature": "Tern - Onboarding/Tutorial",
-  "scenario": "App with Tern attached fails to display smart charge case screens after step 3 of Onboarding tutorial",
+  "scenario": "Onboarding with Tern attached does not display smart charge case screens after step 3",
   "steps": [
     "Start the app with Tern attached",
     "Open the Tutorial screen",
@@ -17,16 +17,17 @@
   "edge_cases": [],
   "keywords": [
     "Tern",
+    "onboarding",
     "smart charge case",
-    "Onboarding tutorial",
+    "screens not displaying",
     "step 3",
-    "app display failure",
-    "Tutorial screen",
-    "attached accessory"
+    "tutorial screen",
+    "app startup",
+    "charge case"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "d526f46716211c0f4f356bc986c08a34c7a9bed0b37d8f2330b8d3f5a2811ad5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.407498Z",
+  "processed_at": "2026-04-24T11:50:53.274087Z",
   "status": "active"
 }
