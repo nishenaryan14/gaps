@@ -5,28 +5,27 @@
   "project": "411453",
   "title": "Next button",
   "feature": "Onboarding",
-  "scenario": "Verify that clicking the Next button on onboarding screens correctly navigates from Step 1 through all subsequent screens (screen 3 to screen 6).",
+  "scenario": "Verify that clicking the Next button on onboarding screens correctly navigates from Step 1 through all subsequent screens (3 to 6).",
   "steps": [
-    "Open the onboarding flow",
+    "Open Onboarding",
     "Navigate to Step 1",
-    "Click the Next button repeatedly",
-    "Verify that each subsequent screen (Screen 3 through Screen 6) opens correctly"
+    "Click Next repeatedly and verify each subsequent screen opens correctly (screen 3 through screen 6)"
   ],
-  "expected": "Each subsequent screen (Screen 3 through Screen 6) opens correctly after clicking Next.",
+  "expected": "Each subsequent screen (screen 3 through screen 6) opens correctly after clicking Next.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding flow",
+    "onboarding",
     "Next button",
-    "screen navigation",
+    "navigation",
+    "screen flow",
     "step progression",
-    "onboarding screens",
-    "click navigation",
-    "screen verification"
+    "click",
+    "verify"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "69ad13ce91b1e48c4a023791c556ec1bd878cfbb373b26af5864cbc43064dbc7",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.408510Z",
+  "processed_at": "2026-04-24T11:50:53.271251Z",
   "status": "active"
 }
