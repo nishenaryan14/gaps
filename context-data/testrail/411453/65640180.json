@@ -1,0 +1,31 @@
+{
+  "id": "65640180",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Location Permission Granted",
+  "feature": "Analytics",
+  "scenario": "Verify that granting location permission logs the \"location_permission_granted\" event in Firebase and that the dashboard reflects the updated event count after a few hours.",
+  "steps": [
+    "Open the Location Permission Granted Firebase page and verify it loads with default elements and success status.",
+    "Allow or deny location access on mobile; after a few hours, the event count for related elements should increase."
+  ],
+  "expected": "The event \\\"location_permission_granted\\\" is tracked in Firebase. Default dashboard elements include a graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "location permission",
+    "Firebase",
+    "event logging",
+    "location_permission_granted",
+    "dashboard",
+    "event count",
+    "analytics",
+    "mobile permission"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "7150be7e1bae407b7f0fa6f347d284b85dbea43b7fa204e7f9e9eeb2d5fbbb87",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.426001Z",
+  "status": "active"
+}
