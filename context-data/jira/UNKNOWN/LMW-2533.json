@@ -5,32 +5,32 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 FALCON | Charge Stand is not properly displayed in \"Software\" tab if it is currently unplugged ",
   "feature": "iOS FALCON - Device Settings / Software Tab",
-  "scenario": "Charge Stand name and image are incorrectly displayed in Device Settings' Software tab when unplugged, reverting to normal after reconnecting.",
-  "description_clean": "Charge Stand is not properly displayed in the \"Software\" tab under Device Settings when it is unplugged. After unplugging the Charge Stand and restarting the app, the Charge Stand's name changes to match the headset's name and its image is replaced with a placeholder. The display returns to normal once the Charge Stand is plugged back in.",
+  "scenario": "Charge Stand displays incorrect name and placeholder image in Device Settings \"Software\" tab after being unplugged and app restart",
+  "description_clean": "Charge Stand is not properly displayed in the \"Software\" tab under Device Settings when it is unplugged. After unplugging the Charge Stand and restarting the app, the Charge Stand's name changes to match the headset's name and its image is replaced with a placeholder. Plugging the Charge Stand back in refreshes the page and shows the correct information. Expected behavior: Charge Stand should be displayed correctly even when unplugged.",
   "steps": [
-    "1. Unplug the Charge Stand from the device.",
-    "2. Restart the app.",
-    "3. Navigate to Device Settings and open the 'Software' tab.",
-    "4. Observe the Charge Stand's name and image display."
+    "Unplug the Charge Stand from the device.",
+    "Restart the app.",
+    "Navigate to Device Settings and open the \"Software\" tab.",
+    "Observe the Charge Stand entry."
   ],
-  "expected": "The Charge Stand should be properly displayed with its correct name and image in the \"Software\" tab under Device Settings.",
-  "actual": "After unplugging the Charge Stand and restarting the app, the Charge Stand's name changes to match the headset's name and its image is replaced with a placeholder. The display returns to normal once the Charge Stand is plugged back in.",
+  "expected": "Charge Stand should be displayed correctly with its proper name and image in the \"Software\" tab under Device Settings, even when unplugged.",
+  "actual": "The Charge Stand's name changes to match the headset's name, and its image is replaced with a placeholder image.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "Charge Stand",
+    "incorrect name",
+    "placeholder image",
     "Device Settings",
     "Software tab",
-    "display error",
     "unplugged",
-    "name and image",
-    "reconnection",
-    "UI bug"
+    "app restart",
+    "display bug"
   ],
   "source_last_updated": "2026-04-22T17:57:57.000+0000",
   "source_hash": "16fedff2e685afea2a7bf3b469b5f68efe2dc96b4fc1dbe609733f955a83fb95",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.600598Z",
+  "processed_at": "2026-04-24T11:23:04.952665Z",
   "status": "active"
 }
