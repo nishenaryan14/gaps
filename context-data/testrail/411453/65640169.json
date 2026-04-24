@@ -1,0 +1,35 @@
+{
+  "id": "65640169",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Login Success",
+  "feature": "Analytics",
+  "scenario": "Logs a successful login to a Poly account and verifies that event counts and default dashboard elements update correctly after a few hours.",
+  "steps": [
+    "Log in to a Poly account.",
+    "Wait for event counts to update (may take a few hours).",
+    "Check the default elements: graph for the event, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
+  ],
+  "expected": "A successful login is logged, and after a few hours, event counts are updated. The default elements (graph for the event, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment) are displayed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Poly account login",
+    "event counts",
+    "default dashboard",
+    "graph event",
+    "events last 30 minutes",
+    "event count by Country",
+    "event count by Gender",
+    "events per session",
+    "App Version",
+    "App build",
+    "App Environment"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "7762487f51a505db23b9fcf7815457f22ccfb52790213dfe2615280cdefdf237",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "status": "active"
+}
