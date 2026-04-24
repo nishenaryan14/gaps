@@ -5,29 +5,33 @@
   "project": "411453",
   "title": "Device Home Screen - Quick Settings modal",
   "feature": "Device Home Screen - Quick Settings",
-  "scenario": "Verify that tapping any Quick Setting on the Device Home Screen opens a modal with all related options for changing settings, as configured via Device Settings > Quick Settings Selection.",
+  "scenario": "Verify that tapping any Quick Setting on the Device Home Screen opens a modal with all related options for changing settings.",
   "steps": [
-    "1. Go to Device Settings > Quick Settings Selection and configure at least one Quick Setting.",
-    "2. Return to the Device Home Screen.",
-    "3. Tap on the configured Quick Setting.",
-    "4. Observe the result."
+    "1. Navigate to the Device Home Screen.",
+    "2. Locate and tap any Quick Setting tile.",
+    "3. Observe that a modal opens displaying all related options for that setting.",
+    "4. Verify that the user can change the setting from the modal.",
+    "5. Repeat steps 2-4 for every available Quick Setting on the Home Screen.",
+    "6. Go to Device Settings > Quick Settings Selection and configure additional Quick Settings if available.",
+    "7. Return to the Device Home Screen and tap each newly added Quick Setting.",
+    "8. Confirm that each opens a modal with all related options and allows changing the setting."
   ],
-  "expected": "A modal opens displaying all related options for the tapped Quick Setting, allowing the user to change settings.",
+  "expected": "Tapping any Quick Setting on the Device Home Screen opens a modal with all related options, allowing the user to change settings. This works for every available setting, including those configured via Device Settings > Quick Settings Selection.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Quick Setting",
     "Device Home Screen",
     "modal",
-    "Quick Settings Selection",
-    "Device Settings",
-    "tap",
     "settings options",
-    "configure"
+    "Quick Settings Selection",
+    "change setting",
+    "tile",
+    "Device Settings"
   ],
   "source_last_updated": "1769425796",
   "source_hash": "8789a14c184357fe1c45def2277d192b633417ee92c6998999c22052329285a4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.739973Z",
+  "processed_at": "2026-04-24T11:23:05.342104Z",
   "status": "active"
 }
