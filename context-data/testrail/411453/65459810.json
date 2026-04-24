@@ -5,27 +5,27 @@
   "project": "411453",
   "title": "PPIP - Dialog after Onboarding - UI",
   "feature": "Onboarding / PPIP Dialog",
-  "scenario": "After onboarding, tapping \"Continue as Guest\" triggers a PPIP dialog with \"Help us improve your experience.\" text and \"Don't Share\" / \"Share Data\" options.",
+  "scenario": "After completing onboarding and tapping \"Continue as Guest\", verify that the PPIP dialog appears with \"Help us improve your experience\" message and options to \"Don't Share\" or \"Share Data\".",
   "steps": [
     "Complete the onboarding screens",
     "Tap 'Continue as Guest'"
   ],
-  "expected": "A PPIP (Product Performance Improvement Program) dialog should appear with the text: \"Help us improve your experience.\" followed by \"HP may collect basic device and app information, such as model, serial number, software version and feature usage, to help improve performance and support.\" and \"This data doesn't include any personal information and will not be shared with third parties. You can change your preferences at anytime in Settings.\" The dialog should provide two options: \"Don't Share\" and \"Share Data\".",
+  "expected": "A PPIP (Product Performance Improvement Program) dialog should appear with the title \"Help us improve your experience.\" The dialog explains that HP may collect basic device and app information (model, serial number, software version, feature usage) to improve performance and support. It clarifies that no personal information is collected or shared with third parties, and preferences can be changed anytime in Settings. The dialog provides two options: \"Don't Share\" and \"Share Data\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding",
-    "Continue as Guest",
     "PPIP dialog",
+    "Continue as Guest",
     "Help us improve your experience",
     "Don't Share",
     "Share Data",
+    "onboarding",
     "privacy consent",
-    "data sharing"
+    "data sharing prompt"
   ],
   "source_last_updated": "1760536922",
   "source_hash": "5124052491945a95b02769748f4dbf40e8773d251cb84960e2ef6daae5f1e39e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.063310Z",
+  "processed_at": "2026-04-24T10:51:32.722887Z",
   "status": "active"
 }
