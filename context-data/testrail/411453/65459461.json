@@ -1,0 +1,31 @@
+{
+  "id": "65459461",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Updating screen",
+  "feature": "Software Update - DFU",
+  "scenario": "Verify that after tapping \"Start update\" during a DFU, the \"Updating\" screen displays a progress bar and a warning message about call interruptions.",
+  "steps": [
+    "Open the app and navigate to the DFU (Device Firmware Update) section.",
+    "Tap the 'Start update' button.",
+    "Observe the screen that appears after tapping 'Start update'."
+  ],
+  "expected": "The \"Updating\" screen should be shown with a progress bar and a message: \"Answering a call may interrupt the update and require you to restart the update once the call ends. To avoid interruptions, we recommend completing the update before using your device for calls.\"",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU",
+    "Device Firmware Update",
+    "Start update",
+    "Updating screen",
+    "progress bar",
+    "warning message",
+    "call interruptions"
+  ],
+  "source_last_updated": "1763369574",
+  "source_hash": "974b30f6c9546699f4049c24d4a2314412280526a160d4fa66d0eb971e5c34e1",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.412172Z",
+  "status": "active"
+}
