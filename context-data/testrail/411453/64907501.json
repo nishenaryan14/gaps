@@ -1,0 +1,35 @@
+{
+  "id": "64907501",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - App, user not logged ever, login, dialog, Continue, Cancel",
+  "feature": "Support - App",
+  "scenario": "Guest user who completed onboarding navigates to Support, clicks App, then Login, and after clicking Cancel on the login dialog, is returned to the Support App section with the Later/Login modal still present.",
+  "steps": [
+    "User who went through onboarding as a Guest navigates to Support via the hamburger menu.",
+    "User clicks the App button.",
+    "User clicks Login.",
+    "A login dialog with Cancel and Continue buttons appears.",
+    "User clicks Continue \u2014 the login page opens.",
+    "User goes back and clicks Cancel (upper left corner)."
+  ],
+  "expected": "Clicking Cancel returns the user to the Poly Support App section with the Later/Login modal still present.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Guest user",
+    "onboarding",
+    "Support",
+    "Login dialog",
+    "Cancel button",
+    "Later/Login modal",
+    "navigation flow",
+    "authentication"
+  ],
+  "source_last_updated": "1759751921",
+  "source_hash": "857376c5b7e9c2fcff65ddcfea778ef7e7bce0af9d7264a0aca1105eebf1ccb6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.361909Z",
+  "status": "active"
+}
