@@ -1,0 +1,36 @@
+{
+  "id": "65640175",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Firmware Update",
+  "feature": "Analytics - Firmware Update",
+  "scenario": "After completing a DFU on any headset, the Firebase page displays default elements and event-specific parameters, with event counts increasing after a few hours.",
+  "steps": [
+    "Log the outcome of a firmware update.",
+    "Open the Firebase page.",
+    "Verify that the page displays default elements: graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment.",
+    "Verify that the page displays event-specific parameters: Success, Device Name, Firmware Update Status, Current/Target Headset Version, Current/Target Charge Case Version, Current/Target Charge Stand Version, Current/Target Language ID, Target Language Name, Headset/Charge Case/Charge Stand Progress, Headset/Charge Case/Charge Stand Update Time in Seconds, and Error Description.",
+    "Complete a DFU (Device Firmware Update) on any headset.",
+    "Wait a few hours.",
+    "Check that event counts for related elements have increased."
+  ],
+  "expected": "After completing a DFU on any headset, event counts for related elements increase after a few hours.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU",
+    "Device Firmware Update",
+    "Firebase",
+    "event parameters",
+    "firmware update verification",
+    "headset",
+    "event counts",
+    "update metrics"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "3afe2fc5df7b9fcbd603683988ce1a4042d55767aafcc9d753744593479a62a5",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.426001Z",
+  "status": "active"
+}
