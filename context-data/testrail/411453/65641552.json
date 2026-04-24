@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "ANC - changes are present after restarting the app",
   "feature": "ANC",
-  "scenario": "ANC settings are not persisted after app restart",
+  "scenario": "Verify that ANC settings persist after app restart",
   "steps": [
     "Start the app with the device.",
     "Open the ANC tab.",
-    "Set ANC to some value.",
-    "Kill and restart the app.",
+    "Set up ANC to some value.",
+    "Kill the app, restart the app.",
     "Check the ANC setting."
   ],
-  "expected": "The values should remain as set in step 3.",
+  "expected": "The values stayed as set in step 3.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "ANC",
+    "Active Noise Cancellation",
     "settings persistence",
     "app restart",
-    "noise cancellation",
     "audio settings",
     "state preservation",
-    "settings reset"
+    "settings verification"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "b75af31b92ee5885a6efba0858bbe67dd9cf9ff25aa6d62c9e86535b37172d24",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.395741Z",
+  "processed_at": "2026-04-24T11:50:53.235981Z",
   "status": "active"
 }
