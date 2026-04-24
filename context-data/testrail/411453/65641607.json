@@ -1,0 +1,31 @@
+{
+  "id": "65641607",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit Test - Tab is present and accessible in Device Settings",
+  "feature": "Device Settings",
+  "scenario": "Verify the Fit Test tab is present and accessible in Device Settings when a supported device is connected.",
+  "steps": [
+    "Start the app with a supported device connected and open Device Settings.",
+    "Check for the Fit Test tab.",
+    "Click on the Fit Test tab."
+  ],
+  "expected": "Fit Test tab is present and accessible. When clicked, the fit test screen opens.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Fit Test tab",
+    "Device Settings",
+    "supported device",
+    "connected device",
+    "tab presence",
+    "tab accessibility",
+    "device settings UI"
+  ],
+  "source_last_updated": "1760957096",
+  "source_hash": "39e370c36900d4dcd1d1465d34ff62f5888cf4e953c5521abe7401a941047f5d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.381323Z",
+  "status": "active"
+}
