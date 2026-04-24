@@ -1,0 +1,39 @@
+{
+  "id": "65640111",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Mobile app connection status change reflected on the Cloud",
+  "feature": "Mobile App Connection Status",
+  "scenario": "Verify that the mobile app connection status (online/offline) is correctly reflected with green/red marks across the Device Users, mobile user, Inventory, and Device profile pages on the Cloud.",
+  "steps": [
+    "1. Log into the mobile app with a valid user account.",
+    "2. Check the Cloud interface on the Device Users page and verify the user shows a green mark (online).",
+    "3. Check the mobile user page on the Cloud and verify the user shows a green mark (online).",
+    "4. Check the Inventory page on the Cloud and verify the user shows a green mark (online).",
+    "5. Check the Device profile page on the Cloud and verify the user shows a green mark (online).",
+    "6. Log out of the mobile app.",
+    "7. Check the Cloud interface on the Device Users page and verify the user shows a red mark (offline).",
+    "8. Check the mobile user page on the Cloud and verify the user shows a red mark (offline).",
+    "9. Check the Inventory page on the Cloud and verify the user shows a red mark (offline).",
+    "10. Check the Device profile page on the Cloud and verify the user shows a red mark (offline)."
+  ],
+  "expected": "When the user is logged into the mobile app, the status shows a green mark (online) on the Device Users page, mobile user page, Inventory page, and Device profile page. When the user logs out of the mobile app, the status shows a red mark (offline) on all those pages.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "mobile app connection status",
+    "online/offline indicator",
+    "green/red marks",
+    "Device Users page",
+    "mobile user page",
+    "Inventory page",
+    "Device profile page",
+    "Cloud interface"
+  ],
+  "source_last_updated": "1760949362",
+  "source_hash": "e96f0da2c75f9440747af513c9d2267f723af5919a2f8c1884267353ddf77300",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "status": "active"
+}
