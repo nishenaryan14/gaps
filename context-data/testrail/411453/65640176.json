@@ -1,0 +1,34 @@
+{
+  "id": "65640176",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Software Language Change",
+  "feature": "Analytics",
+  "scenario": "DFU with language change triggers Software Language Change event, displaying all default and additional parameters, with event counts increasing after a few hours.",
+  "steps": [
+    "1. Trigger a Device Firmware Update (DFU) that includes a language change on a device.",
+    "2. Open the Firebase console and navigate to the Software Language Change event page.",
+    "3. Verify that the default elements are displayed: graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment.",
+    "4. Verify that the following additional parameters are present: Success, Device Name, Firmware Update Status, Current/Target Headset Version, Current/Target Charge Case Version, Current/Target Charge Stand Version, Current/Target Language ID, Target Language Name, Headset/Charge Case/Charge Stand Progress, Headset/Charge Case/Charge Stand Update Time in Seconds, Error Description.",
+    "5. Wait a few hours after triggering the language change.",
+    "6. Check the event counts for the related elements and confirm they have increased."
+  ],
+  "expected": "The Software Language Change event is triggered by a DFU with a language change. The Firebase page displays all default elements and additional parameters. After a few hours, event counts for related elements increase.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU",
+    "Device Firmware Update",
+    "Software Language Change",
+    "Firebase",
+    "event counts",
+    "language change",
+    "firmware update parameters"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "aab776977d8819c9c9fd6d63b2babded9441c594926e58256ea6a9aa61a3df99",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "status": "active"
+}
