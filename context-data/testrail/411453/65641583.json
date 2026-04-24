@@ -8,7 +8,7 @@
   "scenario": "After changing custom EQ slider values, pressing Reset EQ returns all circles to their default middle position",
   "steps": [
     "Open the Custom EQ interface.",
-    "Change the slider values (e.g., move some circles up/down from the middle).",
+    "Change slider values (e.g., move some sliders up/down).",
     "Press the Reset EQ button."
   ],
   "expected": "All circles return to their default position (middle of the sliders).",
@@ -21,11 +21,11 @@
     "default position",
     "EQ reset button",
     "equalizer reset",
-    "slider circles"
+    "slider reset"
   ],
   "source_last_updated": "1761145016",
   "source_hash": "e69df1ada9bd233fbdd39f609ddd816ea5f2761becbedc64e3f59f3af40ffbed",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.400307Z",
+  "processed_at": "2026-04-24T11:50:53.250815Z",
   "status": "active"
 }
