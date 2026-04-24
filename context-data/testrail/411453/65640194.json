@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Soak Test - No Headset connected, app in the background, phone idle",
   "feature": "Soak Test / Background App",
-  "scenario": "Soak test: app remains stable and responsive after being left idle in the background for several hours with no headset connected.",
+  "scenario": "Soak test: app remains stable without memory leaks or crashes after being idle in background for several hours with no headset connected, then brought back to foreground.",
   "steps": [
     "Launch the app",
     "Go to home screen (no headset connected)",
-    "Put the app in background",
-    "Leave phone idle for several hours (e.g., overnight)",
-    "Bring the app to foreground"
+    "Put the app in the background",
+    "Leave the phone idle for several hours (ideally overnight)",
+    "Bring the app to the foreground"
   ],
-  "expected": "App remains running in background and user can interact normally when brought to foreground",
+  "expected": "App remains running in the background and user can interact normally when brought to foreground.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "soak test",
+    "memory leak",
+    "crash",
     "background idle",
-    "app stability",
+    "foreground",
+    "stability",
     "no headset",
-    "foreground recovery",
-    "long idle",
-    "responsiveness"
+    "app resume"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "744cdbca0dbdf17bbcf273a8f5b7c0ec07ff53155e05e6357872cff2fbaec898",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "processed_at": "2026-04-24T11:50:53.337160Z",
   "status": "active"
 }
