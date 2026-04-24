@@ -5,31 +5,28 @@
   "project": "411453",
   "title": "Device Home Screen - Limited Support After Launch Date When LM Version Is Empty",
   "feature": "Device Home Screen",
-  "scenario": "Home screen shows limited support message when a newly released but unsupported device is connected with empty LM version info after its launch date.",
+  "scenario": "Home screen shows limited support popup for a newly released but unsupported device with empty LM version info after the launch date",
   "steps": [
-    "Launch the app and pair with headset (headset ON and properly connected).",
-    "Verify connection status icon is a green ring with a black \"i\" icon on the top right corner.",
-    "Tap the \"i\" icon.",
-    "Verify pop up displays message: \"Device support coming soon. In-app functionality may be limited.\"",
-    "Tap outside the pop up.",
-    "Verify pop up closes."
+    "1) Launch app and pair with headset. Expect green connection ring and black \"i\" icon.",
+    "2) Tap the \"i\" icon. Expect popup: \"Device support coming soon. In-app functionality may be limited.\"",
+    "3) Tap outside popup. Expect popup closes."
   ],
-  "expected": "Home screen shows limited support. Connection status icon is a green ring with a black \"i\" icon. Tapping the \"i\" icon shows a pop-up with message: \"Device support coming soon. In-app functionality may be limited.\" Tapping outside the pop-up closes it.",
+  "expected": "Home screen shows limited support with green connection ring, black \"i\" icon, and the popup displays \"Device support coming soon. In-app functionality may be limited.\" when tapping the \"i\" icon. Tapping outside dismisses the popup.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "home screen",
+    "limited support popup",
     "unsupported device",
-    "limited support message",
+    "LM version info",
+    "launch date",
     "device support coming soon",
-    "empty LM version",
-    "newly released device",
-    "connection status icon",
-    "green ring with i icon",
-    "pop up message"
+    "green connection ring",
+    "black i icon"
   ],
   "source_last_updated": "1764663027",
   "source_hash": "ccc29fb0fe0ec34f8c1561739828cf65e836ad6d31cf746651921df4034b9b05",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.750622Z",
+  "processed_at": "2026-04-24T11:23:05.345630Z",
   "status": "active"
 }
