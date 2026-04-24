@@ -5,19 +5,19 @@
   "project": "411453",
   "title": "App Settings - General - About - New update available",
   "feature": "App Settings - General - About",
-  "scenario": "Verify that when an app update is available, the About section shows update details, and tapping Release Notes or Update buttons navigates correctly.",
+  "scenario": "Verify that when an app update is available, the About section displays update details, and tapping Release Notes opens and closes correctly while tapping Update opens the app store.",
   "steps": [
     "1. Ensure an app update is available on the Cloud.",
-    "2. Navigate to App Settings > General > About section.",
-    "3. Observe the About section content.",
-    "4. Tap the 'Release Notes' link.",
-    "5. Observe the release notes page opens.",
-    "6. Tap the 'X' button on the release notes page.",
-    "7. Observe the behavior after closing release notes.",
+    "2. Navigate to the About section under General.",
+    "3. Observe the displayed elements: 'App Updates Needed' message, 'Update' button, current and available firmware versions, and a link to Release Notes.",
+    "4. Tap the Release Notes link.",
+    "5. Verify that the release notes page opens at https://info.lens.poly.com/lens-mobile-rn showing info about the latest and older versions.",
+    "6. Tap the 'X' button on the Release Notes page.",
+    "7. Verify that the Release Notes closes and returns the user to the General section with About expanded.",
     "8. Tap the 'Update' button.",
-    "9. Observe the result of tapping the Update button."
+    "9. Verify that the app store page for Poly Lens opens."
   ],
-  "expected": "1. The About section displays: \"App Updates Needed\" text, an \"Update\" button, current and available firmware versions, and a link to Release Notes.\n2. Tapping the Release Notes link opens the release notes page.\n3. Tapping the \"X\" button closes the Release Notes and returns to the General section with About expanded.\n4. Tapping the \"Update\" button opens the app store page for Poly Lens.",
+  "expected": "The About section under General displays an 'App Updates Needed' message, an 'Update' button, current and available firmware versions, and a link to Release Notes. Tapping the Release Notes link opens the release notes page (https://info.lens.poly.com/lens-mobile-rn) showing info about the latest and older versions. Tapping the 'X' button closes the Release Notes and returns the user to the General section with About expanded. Tapping the 'Update' button opens the app store page for Poly Lens.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,14 +25,14 @@
     "About section",
     "Release Notes",
     "Update button",
-    "navigation",
-    "app settings",
-    "update details",
+    "firmware versions",
+    "app store",
+    "Poly Lens",
     "release notes page"
   ],
   "source_last_updated": "1759416409",
   "source_hash": "db8b60bb834092500c980e1eb7879bb17af81cc9cfd989804fe7437e9f846d8f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.752624Z",
+  "processed_at": "2026-04-24T11:23:05.357381Z",
   "status": "active"
 }
