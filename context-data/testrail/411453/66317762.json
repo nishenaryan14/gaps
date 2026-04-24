@@ -1,0 +1,35 @@
+{
+  "id": "66317762",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings - Settings UI: UI, animation",
+  "feature": "Device Settings - Settings UI",
+  "scenario": "Verify the Device Settings page UI for a headset (HS) displays collapsible tabs with sliding animation and matches Figma design.",
+  "steps": [
+    "Open the Device Settings page for the headset (HS).",
+    "Observe that tabs are displayed and collapsed by default.",
+    "Click on any tab to open it.",
+    "Confirm the tab expands with a proper sliding animation.",
+    "Click the same tab again to close it.",
+    "Confirm the tab collapses with a proper sliding animation.",
+    "Verify all settings UI elements (text, position, lines, etc.) match the Figma design."
+  ],
+  "expected": "Tabs are displayed and collapsed by default. Clicking a tab expands it with a smooth sliding animation. Clicking again collapses it. All UI elements match the Figma design.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Device Settings page",
+    "headset HS",
+    "collapsible tabs",
+    "sliding animation",
+    "Figma design",
+    "UI verification",
+    "tab expand collapse"
+  ],
+  "source_last_updated": "1762432129",
+  "source_hash": "1bfde7fcd0494bf82b74fbe8d35724b98700b38f737e31824da0f4cfd21e61f4",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.375617Z",
+  "status": "active"
+}
