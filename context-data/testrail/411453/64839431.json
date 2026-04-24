@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Device Home Screen - Device Onboarding Screens",
   "feature": "Device Home Screen - Device Onboarding",
-  "scenario": "Verify full onboarding flow is displayed for first-time pairing of supported devices (Osprey/Tern/Emu), including navigation, content verification, fit test, and re-display on second device pairing.",
+  "scenario": "Verify onboarding screens display correctly for first-time connection of supported devices (Osprey/Tern/Emu), including navigation, fit test states, completion, and reappearance for a second supported device.",
   "steps": [
-    "Pair a supported device (Osprey/Tern/Emu) for the first time.",
-    "Verify that onboarding screens are displayed.",
+    "Connect a supported device (Osprey/Tern/Emu) for the first time.",
+    "Verify the welcome popup is displayed.",
     "Navigate through onboarding screens by swiping or tapping Next/Skip.",
     "Verify content and animations match Figma designs.",
-    "Run the fit test and verify both pass and fail states.",
-    "Complete onboarding via Done or User Guide.",
-    "Pair a second supported device.",
-    "Verify that onboarding screens appear again for the second device."
+    "Start a fit test from the onboarding flow.",
+    "Test all fit test states: pass both, pass one, fail both.",
+    "Complete the final screen using Done or User Guide buttons.",
+    "Pair a second supported device and verify onboarding appears again."
   ],
-  "expected": "Onboarding screens are displayed when connecting a supported device for the first time. The full flow works correctly: navigation, content/animations match Figma, fit test handles pass/fail states, onboarding completes successfully, and onboarding reappears when pairing a second supported device.",
+  "expected": "Onboarding screens are displayed correctly for first-time device connections, content and animations match Figma designs, all fit test states work, and onboarding reappears when pairing a second supported device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding flow",
-    "first-time pairing",
+    "onboarding screens",
+    "first-time connection",
     "supported devices",
-    "fit test",
+    "fit test states",
+    "navigation",
     "Osprey/Tern/Emu",
-    "navigation screens",
     "second device pairing",
-    "Figma designs"
+    "reappearance"
   ],
   "source_last_updated": "1759158377",
   "source_hash": "589fd75bad621f84e5d612cf208afb087e12b3776b8318975285d417a9f8a1e3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.094094Z",
+  "processed_at": "2026-04-24T10:51:32.748540Z",
   "status": "active"
 }
