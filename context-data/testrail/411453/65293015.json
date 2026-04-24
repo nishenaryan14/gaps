@@ -1,0 +1,36 @@
+{
+  "id": "65293015",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Organized - Allow \"Poly Lens\" to use your location window [Android]",
+  "feature": "Onboarding - Organized",
+  "scenario": "Verify tapping \"Enable now\" on the Organized screen triggers a location permission dialog for Poly Lens with specific options and text, while the user remains on the Organized screen.",
+  "steps": [
+    "1. Navigate to the 'Organized' screen during the onboarding flow.",
+    "2. Tap the 'Enable now' button.",
+    "3. Observe the location permission dialog that appears for 'Poly Lens'.",
+    "4. Verify the dialog text reads: 'Allow Poly Lens to use your location - Poly Lens uses your location to find your device. See the Poly Privacy Policy in General Settings for more information.'",
+    "5. Verify the dialog offers the following options: 'Allow Once' (or 'Only This Time' on Android), 'Allow while using app', and 'Don't allow'.",
+    "6. Confirm that the 'Organized' screen remains visible in the background behind the dialog."
+  ],
+  "expected": "Tapping 'Enable now' on the Organized screen triggers a location permission dialog for Poly Lens with the specified text and options (Allow Once/Only This Time, Allow while using app, Don't allow), while the Organized screen remains visible in the background.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Enable now",
+    "Organized screen",
+    "location permission dialog",
+    "Poly Lens",
+    "onboarding flow",
+    "location permission options",
+    "Allow Once",
+    "Allow while using app",
+    "Don't allow"
+  ],
+  "source_last_updated": "1760528532",
+  "source_hash": "14299e2029342100613c0488a66b7879daa5a3fd94efd501582921027aa2e081",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.059262Z",
+  "status": "active"
+}
