@@ -1,0 +1,34 @@
+{
+  "id": "65459823",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications  - Device updating OFF",
+  "feature": "Notifications",
+  "scenario": "No DFU notification appears when device firmware is outdated and \"Device Software Update\" notification is disabled in app settings while app is in background.",
+  "steps": [
+    "1. Ensure the device has a firmware version lower than the current server version.",
+    "2. Go to App Settings > General > Notifications & Device Alerts.",
+    "3. Turn OFF the 'Device Software Update' notification.",
+    "4. Send the app to the background.",
+    "5. Initiate a DFU (Device Firmware Update) process on the device.",
+    "6. Observe whether any notification appears."
+  ],
+  "expected": "No notification should pop up when the DFU process begins while the app is in the background.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU notification",
+    "Device Software Update notification disabled",
+    "firmware outdated",
+    "app background",
+    "no notification",
+    "firmware update alert",
+    "notification settings"
+  ],
+  "source_last_updated": "1761223796",
+  "source_hash": "26c289bcf1b1d09691f7e732c002b55d692130795753b152167dd498afb9a8d1",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.419263Z",
+  "status": "active"
+}
