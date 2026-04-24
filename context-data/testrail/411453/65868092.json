@@ -8,26 +8,26 @@
   "scenario": "Turning off multiple devices one by one shows each as disconnected while others remain connected",
   "steps": [
     "Turn off one device.",
-    "Observe the display status of the turned-off device.",
-    "Check the status of the remaining devices.",
+    "Observe that the turned-off device displays as disconnected.",
+    "Check that the remaining devices stay connected.",
     "Turn off the remaining devices one by one.",
-    "After each device is turned off, observe its display status."
+    "Observe that each turned-off device displays as disconnected properly."
   ],
-  "expected": "When a device is turned off, it should display as disconnected while the remaining devices stay connected. Turning off remaining devices one by one should show each as disconnected properly.",
+  "expected": "When one device is turned off, it displays as disconnected while remaining devices stay connected. Turning off remaining devices one by one shows each as disconnected properly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "device disconnection",
-    "display status",
+    "device status",
+    "connected devices",
     "sequential shutdown",
-    "remaining devices connected",
-    "device status monitoring",
-    "multi-device management",
-    "disconnect detection"
+    "disconnect detection",
+    "device monitoring",
+    "connection status"
   ],
   "source_last_updated": "1762178330",
   "source_hash": "41139ad4095a627cc19807ca6eab170c4b8e23dd6b29fcbf32efe3b4597eb74d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.078999Z",
+  "processed_at": "2026-04-24T10:51:32.738395Z",
   "status": "active"
 }
