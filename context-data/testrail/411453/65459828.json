@@ -1,0 +1,36 @@
+{
+  "id": "65459828",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications - Low Battery",
+  "feature": "Notifications",
+  "scenario": "Verify low battery notification appears when a paired device with battery below 5% is turned off and on again while the app is in the background, and tapping the notification redirects to the Home screen.",
+  "steps": [
+    "Ensure a device is paired with the Poly Lens app.",
+    "Let the paired device's battery drop below 5%.",
+    "Turn off the paired device.",
+    "Put the Poly Lens app in the background.",
+    "Turn on the paired device again.",
+    "Observe the notification that appears.",
+    "Tap the notification."
+  ],
+  "expected": "A \"Device has a low battery\" notification appears. Tapping the notification redirects the user to the Poly Lens application Home screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "low battery notification",
+    "paired device",
+    "battery below 5%",
+    "background app",
+    "notification redirect",
+    "Home screen",
+    "Poly Lens app",
+    "device power cycle"
+  ],
+  "source_last_updated": "1761224568",
+  "source_hash": "f1198e159b3d80a127b9d7f941e77af9db1ea1b8ac4a7561b6813e87c5ec0934",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "status": "active"
+}
