@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Find My Device - Don't Allow - Cancel [Deprecated for IOS]",
   "feature": "Find My Device",
-  "scenario": "Verify that tapping \"Don't Allow\" and \"Cancel\" on the Find My Device location permission prompts navigates back to the Poly Lens Menu and that the same permission prompts reappear on subsequent attempts.",
+  "scenario": "Test the \"Don't Allow\" and \"Cancel\" flow in Find My Device when location permission is denied and then cancelled, verifying the permission prompt reappears consistently across multiple attempts and after app restart.",
   "steps": [
-    "Start app with HS connected",
-    "Go to main menu",
-    "Tap Find My Device",
-    "Tap 'Don't Allow'",
-    "Tap 'Cancel'",
-    "Tap Find My Device again",
-    "Tap 'Cancel'",
-    "Restart app and open FMD"
+    "Start app with HS connected.",
+    "Go to main menu.",
+    "Tap \"Find My Device\".",
+    "Tap \"Don't Allow\" on location permission prompt.",
+    "Tap \"Cancel\".",
+    "Tap \"Find My Device\" again.",
+    "Tap \"Cancel\" again.",
+    "Restart app and open FMD."
   ],
-  "expected": "Location permission prompt appears with options \"Allow Once\", \"Allow while using app\", \"Don't allow\". After tapping \"Don't Allow\", another permission prompt appears with \"Cancel\" and \"Enable Now\" while FMD screen is visible in background. Tapping \"Cancel\" navigates back to Poly Lens Menu. Repeating the flow shows the same permission prompts.",
+  "expected": "1. After step 3, location permission prompt appears with options \"Allow Once\", \"Allow while using app\", \"Don't Allow\".\\n2. After step 4, permission prompt shows \"Cancel\" and \"Enable Now\" with FMD screen visible in background.\\n3. After step 5, app navigates back to Poly Lens Menu.\\n4. Steps 6-7 repeat the same behavior as steps 4-5.\\n5. After step 8, same behavior as step 4.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Find My Device",
+    "location permission",
     "Don't Allow",
     "Cancel",
-    "location permission",
-    "Poly Lens Menu",
     "permission prompt",
-    "navigation",
-    "reappear"
+    "app restart",
+    "permission denied",
+    "permission flow"
   ],
   "source_last_updated": "1760352207",
   "source_hash": "b23fd6cd33c2f7963d15da86bc45580659a4ab5bcab2e2067a6cd88b9b00dd0f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.359907Z",
+  "processed_at": "2026-04-24T11:50:53.184962Z",
   "status": "active"
 }
