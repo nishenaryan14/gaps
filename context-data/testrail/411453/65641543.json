@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "ANC - Change Transparency Mode value (Environment/Speech)",
   "feature": "ANC (Active Noise Cancellation)",
-  "scenario": "Verify that the Transparency Mode selection (Environment/Speech) persists after closing and reopening the ANC tab.",
+  "scenario": "Verify that the selected Transparency Mode value (Environment/Speech) persists after closing and reopening the ANC tab.",
   "steps": [
-    "Start the app with an ANC-supported device.",
-    "Go to Device Settings > ANC.",
-    "Change the Transparency Mode value (Environment/Speech).",
-    "Close the ANC tab.",
-    "Reopen the ANC tab.",
-    "Check that the Transparency Mode value remains as previously selected."
+    "Open the ANC settings tab.",
+    "Locate the Transparency Mode dropdown/selector.",
+    "Change the Transparency Mode value to a different option (e.g., from Environment to Speech or vice versa).",
+    "Close the ANC settings tab.",
+    "Reopen the ANC settings tab.",
+    "Observe the Transparency Mode value displayed."
   ],
-  "expected": "The Transparency Mode value (Environment/Speech) persists after closing and reopening the ANC tab.",
+  "expected": "The selected Transparency Mode value (Environment/Speech) should remain unchanged after closing and reopening the ANC tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Transparency Mode",
-    "ANC tab",
+    "ANC settings",
     "Environment mode",
     "Speech mode",
     "persistence",
-    "ANC settings",
-    "Device Settings"
+    "value retention",
+    "dropdown selector"
   ],
   "source_last_updated": "1761055511",
   "source_hash": "7f491405d721713a3dcca0965365fcc13dc007735690d525df1cc01ec858785d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.395741Z",
+  "processed_at": "2026-04-24T11:50:53.231451Z",
   "status": "active"
 }
