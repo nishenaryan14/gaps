@@ -5,28 +5,27 @@
   "project": "411453",
   "title": "First screen, Close button",
   "feature": "Onboarding",
-  "scenario": "Clicking the Close button on the first onboarding screen returns the user to the original start screen.",
+  "scenario": "User clicks Close button on first onboarding screen and is returned to the original start screen",
   "steps": [
-    "Open the app and navigate to the first onboarding screen.",
-    "Locate the Close button (X icon) in the upper right corner of the screen.",
-    "Click/tap the Close button."
+    "1. Launch the app and navigate to the first onboarding screen.",
+    "2. Locate the Close button (X icon) in the upper right corner of the screen.",
+    "3. Tap/click the Close button."
   ],
   "expected": "The user is returned to the original start screen (Supported Devices or Home screen).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Close button",
     "onboarding screen",
+    "Close button",
     "X icon",
     "dismiss",
     "return to start screen",
     "first onboarding",
-    "navigation",
-    "app onboarding"
+    "exit onboarding"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "033fed9a4d6f7deff4563014f47ab3a70d18ccc4677762c1dd2102869b5759e9",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.405970Z",
+  "processed_at": "2026-04-24T11:50:53.271805Z",
   "status": "active"
 }
