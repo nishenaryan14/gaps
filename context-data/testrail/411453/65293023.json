@@ -1,0 +1,42 @@
+{
+  "id": "65293023",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Permission for location tracking - Don't Allow - Enable Now - Allow While Using App [Deprecated for IOS]",
+  "feature": "Onboarding / Location Tracking Permissions",
+  "scenario": "Verify location tracking permission flow during onboarding, including permission popup options and navigation after granting \"While Using the App\" permission.",
+  "steps": [
+    "Start app for the first time",
+    "Accept license/privacy",
+    "Tap Continue",
+    "Reach Organized screen",
+    "Tap Enable Now",
+    "Tap Don't Allow",
+    "Tap Continue",
+    "Log in or continue as guest",
+    "Open Poly Lens menu",
+    "Tap Find My Device",
+    "Tap Enable Now",
+    "Grant location permission with \"While Using the App\"",
+    "Return to app"
+  ],
+  "expected": "After step 5, a location permission popup appears with options \"Allow Once\", \"Allow While Using App\", \"Don't Allow\" (Android shows \"Only This Time\" instead of \"Allow Once\") and text explaining Poly Lens uses location to find devices. After step 10, a permission window with \"Cancel\" and \"Enable Now\" appears with FMD screen visible in background. After step 11, app navigates to settings. After step 13, FMD screen is open and permission window is dismissed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "location tracking permission",
+    "onboarding flow",
+    "While Using the App",
+    "permission popup",
+    "Enable Now",
+    "Don't Allow",
+    "Find My Device",
+    "Poly Lens menu"
+  ],
+  "source_last_updated": "1760528587",
+  "source_hash": "54a3cb24a24913a7f740ab0c44f5b4dbda841a52319687bc5837656b73e3e08f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.063310Z",
+  "status": "active"
+}
