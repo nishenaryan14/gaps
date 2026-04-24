@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Eula page - Continue",
   "feature": "Onboarding - Eula Page",
-  "scenario": "Verify EULA onboarding flow: user must check agreement box before Continue button becomes active and navigates to Up-to-Date page.",
+  "scenario": "Verify EULA page during onboarding: agreement checkbox must be checked before Continue button works, leading to the Up-to-Date page.",
   "steps": [
-    "Launch the app for the first time.",
-    "Verify the EULA screen displays the agreement text, license/privacy policy links, a blurred Continue button, and animation.",
-    "Tap Continue without checking the agreement box (should do nothing).",
+    "Start the app for the first time.",
+    "After initial setup screens, verify \"Well hello, first things first...\" is visible, along with the agreement text, License Agreement and Privacy Policy links, a blurred Continue button, and working animation.",
+    "Tap Continue without checking the agreement box \u2013 nothing should happen.",
     "Check the agreement box.",
-    "Tap Continue again to navigate to the \"Up-to-Date\" page."
+    "Tap Continue \u2013 verify the \"Up-to-Date\" page appears with the correct text, a Skip button, and working animation."
   ],
-  "expected": "The \"Up-to-Date\" page is displayed with update messaging, a Skip button, and animation.",
+  "expected": "The \"Up-to-Date\" page appears with the correct text, a Skip button, and working animation.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "EULA",
+    "EULA page",
     "onboarding",
     "agreement checkbox",
     "Continue button",
     "Up-to-Date page",
-    "license policy",
-    "privacy policy",
-    "button state"
+    "License Agreement",
+    "Privacy Policy",
+    "first-time setup"
   ],
   "source_last_updated": "1760528496",
   "source_hash": "f232f918d9128c42fdc8c76309d7fdc0b745d9990d40d03a05a9f8662fdc4b07",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.058178Z",
+  "processed_at": "2026-04-24T10:51:32.708140Z",
   "status": "active"
 }
