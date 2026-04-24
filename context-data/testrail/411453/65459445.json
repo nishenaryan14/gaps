@@ -1,0 +1,39 @@
+{
+  "id": "65459445",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Headset low battery: dialog stays when HS is turned off",
+  "feature": "Software Update - DFU",
+  "scenario": "DFU should be blocked when headset battery is below 5%, and the low battery dialog persists incorrectly when the headset is turned off.",
+  "steps": [
+    "1. Ensure the headset battery is low (less than 5%).",
+    "2. Attempt to perform a DFU (Device Firmware Update) on the headset.",
+    "3. Observe that the DFU is not allowed and a low battery dialog appears.",
+    "4. While the low battery dialog is open, turn off the headset.",
+    "5. Observe that the dialog remains visible on the screen.",
+    "6. Click the OK button on the dialog to dismiss it.",
+    "7. Navigate to the Settings page.",
+    "8. With the low battery dialog present, turn off the headset.",
+    "9. Observe that the dialog closes automatically.",
+    "10. Verify that the user remains on the Settings page for the disconnected device."
+  ],
+  "expected": "1. DFU is not allowed when headset battery is low (less than 5%). A low battery dialog is shown. 2. When the low battery dialog is open and the headset is turned off, the dialog remains visible until the user clicks OK. 3. On the Settings page, if the dialog is present and the user turns off the headset, the dialog closes and the user stays on the Settings page for the disconnected device.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU blocked",
+    "low battery dialog",
+    "headset battery below 5%",
+    "dialog persists",
+    "headset turned off",
+    "Settings page",
+    "device disconnected",
+    "firmware update blocked"
+  ],
+  "source_last_updated": "1763370999",
+  "source_hash": "a4e17404c34c9c912a5ec3874b932dbaf8530b588e5bcf5d08af3b175298eae2",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "status": "active"
+}
