@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "Find My Device - Don't Allow - Enable now - Allow Once [Only This Time - Android] [Deprecated for IOS]",
   "feature": "Find My Device",
-  "scenario": "User with HS connected navigates to Find My Device, denies permission, then enables it with \"Ask Next Time or When I Share\" option, verifying permission popups and settings navigation.",
+  "scenario": "User denies location permission initially, then enables it with \"Ask Next Time\" option while keeping Find My Device screen visible in the background.",
   "steps": [
-    "Start the app with the HS (Headset) connected",
-    "Navigate to Find My Device",
-    "Tap 'Don't Allow' on the permission popup",
-    "Tap 'Enable Now'",
-    "Grant location permission with 'Ask Next Time or When I Share' option"
+    "Launch the app with the headset (HS) connected.",
+    "Navigate to the Find My Device screen.",
+    "Tap 'Don't Allow' when the permission dialog appears.",
+    "Verify that the permission dialog disappears and the Find My Device screen is still visible in the background.",
+    "Tap 'Enable Now' on the Find My Device screen.",
+    "When the location permission dialog appears, select 'Ask Next Time or When I Share'.",
+    "Verify that the permission dialog closes and the Find My Device screen remains visible in the background."
   ],
-  "expected": "Permission popups should display options: \"Allow Once\", \"Allow while using app\", \"Don't Allow\". When tapping \"Enable Now\", the user should be navigated to settings.",
+  "expected": "All permission dialogs appear correctly at each step, and the Find My Device screen remains visible in the background throughout the flow.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Find My Device",
-    "permission popup",
     "location permission",
-    "Ask Next Time or When I Share",
-    "HS connected",
+    "Ask Next Time",
+    "Find My Device",
+    "permission dialog",
     "Don't Allow",
     "Enable Now",
-    "settings navigation"
+    "headset connected",
+    "permission denied"
   ],
   "source_last_updated": "1760352215",
   "source_hash": "172df16d660f02df5b18f33120a6a0fa999e392affa8542effd1cb1776665a3c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:33.363461Z",
+  "processed_at": "2026-04-24T11:23:05.358391Z",
   "status": "active"
 }
