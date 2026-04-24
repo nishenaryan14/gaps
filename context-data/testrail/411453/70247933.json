@@ -7,28 +7,30 @@
   "feature": "Onboarding",
   "scenario": "Verify that after updating from an older app version (pre-5.0.0.X) to the latest, the \"Welcome to Poly Studio\" screen appears on launch and tapping \"Get Started\" dismisses it to the Home Screen.",
   "steps": [
-    "Launch the app after updating from an older version (before 5.0.0.X) to the latest version.",
-    "Observe the screen that appears upon launch.",
-    "Tap the \"Get Started\" button.",
-    "Verify the screen is dismissed.",
-    "Check that the user is taken to the Home Screen."
+    "1. Install an older app version (before 5.0.0.X) on the device.",
+    "2. Launch the app and complete any initial setup if needed.",
+    "3. Update the app to the latest version.",
+    "4. Launch the updated app.",
+    "5. Observe the screen that appears right after launch.",
+    "6. Tap the \"Get Started\" button on the \"Welcome to Poly Studio\" screen.",
+    "7. Observe the screen that appears after tapping \"Get Started\"."
   ],
-  "expected": "The \"Welcome to Poly Studio\" screen appears upon launch. After tapping \"Get Started\", the screen is dismissed and the user is brought to the Home Screen.",
+  "expected": "The \"Welcome to Poly Studio\" screen appears right after launching the updated app. After tapping \"Get Started\", the screen is dismissed and the user is brought to the Home Screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "Welcome to Poly Studio",
     "app update",
-    "Welcome to Poly Studio screen",
-    "Get Started button",
-    "screen dismissal",
-    "Home Screen navigation",
-    "version upgrade",
-    "post-update launch",
-    "onboarding flow"
+    "Get Started",
+    "older version",
+    "pre-5.0.0.X",
+    "Home Screen",
+    "launch",
+    "dismiss"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "61c8fedd2d2ff1ab7eb910f096f580b3d9a52b7fd64cc29f029dbb51f964af1f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.301512Z",
+  "processed_at": "2026-04-24T11:50:53.092151Z",
   "status": "active"
 }
