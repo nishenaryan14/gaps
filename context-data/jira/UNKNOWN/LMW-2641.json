@@ -4,12 +4,12 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS | Free20 | Repeat Notifications [DRAFT]",
-  "feature": "iOS | Free20 | Repeat Notifications",
-  "scenario": "Repeat charging notifications appear when wearing one earbud and placing the other in an open, unplugged case",
-  "description_clean": "When wearing one earbud and placing the other in the case (case unplugged and left open), repeat charging notifications appear. Expected behavior is only one charging notification since only one earbud is charging.",
+  "feature": "iOS | Free20 | Notifications",
+  "scenario": "Repeated charging notifications appear when wearing one earbud and placing the other in an unplugged, open case",
+  "description_clean": "When wearing one earbud and placing the other in the case (case unplugged, lid open), repeat charging notifications appear. Expected behavior is only one charging notification since only one earbud is charging.",
   "steps": [
     "Wear one earbud.",
-    "Place the other earbud in the case (case unplugged and left open).",
+    "Place the other earbud in the case (case unplugged, lid open).",
     "Observe the charging notifications."
   ],
   "expected": "Only one charging notification appears, since only one earbud is charging.",
@@ -20,17 +20,18 @@
     "NeedsQAReview"
   ],
   "keywords": [
-    "repeat charging notifications",
+    "repeated charging notifications",
     "one earbud",
-    "open case",
     "unplugged case",
-    "charging notification",
+    "open case",
+    "charging indicator",
     "earbud case",
-    "false charging detection"
+    "false charging detection",
+    "single earbud usage"
   ],
   "source_last_updated": "2026-04-24T09:04:35.000+0000",
   "source_hash": "bdd48f3ec61bbd613ac3d0b880880ac6aede6b8185784be2a15bf1f7e405bb2c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:22.515974Z",
+  "processed_at": "2026-04-24T10:51:32.360072Z",
   "status": "active"
 }
