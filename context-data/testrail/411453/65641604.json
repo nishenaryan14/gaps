@@ -1,0 +1,33 @@
+{
+  "id": "65641604",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "CCL - Turn off/on the device",
+  "feature": "CCL (Custom Color Lens)",
+  "scenario": "Verify that the CCL setting persists after a device power cycle (off/on).",
+  "steps": [
+    "Start the app on a CCL-supported device",
+    "Navigate to Device Settings > Advanced",
+    "Set a CCL value",
+    "Restart the device",
+    "Return to Device Settings > Advanced"
+  ],
+  "expected": "The previously selected CCL setting is displayed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "CCL",
+    "persist",
+    "power cycle",
+    "device restart",
+    "Device Settings",
+    "Advanced",
+    "setting retention"
+  ],
+  "source_last_updated": "1772468639",
+  "source_hash": "bdc6f6017a27c6f96920932db5be9ebeb43a4baaa1f3a930ab44cf2ba0bd81cd",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "status": "active"
+}
