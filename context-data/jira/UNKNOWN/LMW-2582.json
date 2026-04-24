@@ -4,32 +4,32 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 DFU issues with Morpheus devices(VOY5200,VOY8200)",
-  "feature": "DFU (Device Firmware Update) / Android App",
-  "scenario": "DFU issues on Morpheus devices: language update stuck at 99% for ~8 minutes, device shows available update after successful FW update, and DFU stuck at 26% during an active call without expected pop-up.",
-  "description_clean": "Three DFU issues with Morpheus devices (VOY5200, VOY8200):\n\n1. Language update stuck at 99% for ~8 minutes before completing (split to LMW-2609). Expected: complete within 2 minutes.\n\n2. After successful FW update, the device still shows an available update. Expected: device should be up to date after successful DFU.\n\n3. DFU process stuck at 26% when a phone call is active. Expected: a pop-up should appear with text \"Cannot update this device during a call\".",
+  "feature": "DFU (Device Firmware Update) / Android",
+  "scenario": "DFU issues on Morpheus devices: language update stuck at 99% for ~8 minutes, successful FW update still shows available update, and DFU stuck at 26% during an active call without expected pop-up.",
+  "description_clean": "Three DFU issues with Morpheus devices (VOY5200, VOY8200):\n\n1. Language update stuck at 99% for ~8 minutes before completing (split to LMW-2609). Expected completion within 2 minutes.\n\n2. After successful FW update, the device still shows an available update. Expected: device should be up to date after successful DFU.\n\n3. During an active phone call, DFU process gets stuck at 26%. Expected: a pop-up should appear with text \"Cannot update this device during a call\".",
   "steps": [
     "1. Language update stuck at 99% for ~8 minutes before completing (split to LMW-2609).",
     "2. After successful FW update, the device still shows an available update.",
-    "3. DFU process stuck at 26% when a phone call is active."
+    "3. During an active phone call, DFU process gets stuck at 26%."
   ],
-  "expected": "1. Language update should complete within 2 minutes. 2. Device should be up to date after successful DFU. 3. A pop-up should appear with text \"Cannot update this device during a call\".",
-  "actual": "1. Language update stuck at 99% for ~8 minutes before completing. 2. After successful FW update, the device still shows an available update. 3. DFU process stuck at 26% when a phone call is active.",
+  "expected": "1. Language update completes within 2 minutes. 2. Device should be up to date after successful DFU. 3. A pop-up should appear with text \"Cannot update this device during a call\".",
+  "actual": "1. Language update stuck at 99% for ~8 minutes before completing. 2. After successful FW update, the device still shows an available update. 3. During an active phone call, DFU process gets stuck at 26%.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "DFU",
     "Morpheus",
-    "language update stuck",
-    "firmware update",
-    "available update",
+    "firmware update stuck",
+    "language update 99%",
+    "update available after success",
     "DFU stuck 26%",
-    "active call",
+    "active call DFU",
     "LMW-2609"
   ],
   "source_last_updated": "2026-04-22T13:08:42.000+0000",
   "source_hash": "de442524ce7db5ad63de3f22174830688c5c4dda06bf6ace7f24d66bd298458a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:04.986012Z",
+  "processed_at": "2026-04-24T11:50:53.073685Z",
   "status": "active"
 }
