@@ -7,26 +7,28 @@
   "feature": "App Settings - General - Privacy Policy",
   "scenario": "Navigate to General > Privacy Policy via Main Menu and verify the page displays a close button in the upper right corner instead of a back button in the upper left corner.",
   "steps": [
-    "Navigate to the Main Menu.",
-    "Select General > Privacy Policy.",
-    "Observe the resulting page."
+    "1. Open the application.",
+    "2. Navigate to the Main Menu.",
+    "3. Select 'General' from the menu.",
+    "4. Click on 'Privacy Policy' under General.",
+    "5. Observe the Privacy Policy page that loads."
   ],
-  "expected": "The user is directed to the Poly Privacy Policy page, which displays a close button in the upper right corner.",
+  "expected": "The page should display a close button in the upper right corner.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "General",
     "Privacy Policy",
     "Main Menu",
+    "General",
     "close button",
     "upper right corner",
     "back button",
     "upper left corner",
-    "page display"
+    "page navigation"
   ],
   "source_last_updated": "1759416441",
   "source_hash": "8098722329e6077a4d3343e3e94a441a64948d495dd444b4d3e287e40eb811ba",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.751623Z",
+  "processed_at": "2026-04-24T11:23:05.353822Z",
   "status": "active"
 }
