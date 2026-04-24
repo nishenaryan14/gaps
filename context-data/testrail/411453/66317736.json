@@ -1,0 +1,34 @@
+{
+  "id": "66317736",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - new name on the FMD disconnected card",
+  "feature": "FMD (Find My Device)",
+  "scenario": "Verify that the Find My Device disconnected card displays the updated device name after renaming and disconnecting the device.",
+  "steps": [
+    "Start app with a device that has rename capability.",
+    "Navigate to Settings/Rename.",
+    "Change the device name and disconnect the device.",
+    "Navigate to FMD.",
+    "Click on the device name.",
+    "Verify the disconnected card shows the new device name."
+  ],
+  "expected": "The FMD disconnected card should display the new device name instead of the old one.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "disconnected card",
+    "device rename",
+    "device name update",
+    "FMD",
+    "rename capability",
+    "disconnect device"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "cda0f47859dd4f1cafdb2109e728d8762ad822472cf35a619a021f660ac287c5",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.378141Z",
+  "status": "active"
+}
