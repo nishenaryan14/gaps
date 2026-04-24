@@ -1,0 +1,33 @@
+{
+  "id": "65868090",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Unsupported device",
+  "feature": "Device Home Screen",
+  "scenario": "Unsupported devices should not appear in the home screen device list after being paired and connected.",
+  "steps": [
+    "Pair an unsupported device (e.g., BB Fit, Sync60) with the mobile app.",
+    "Ensure the device is connected.",
+    "Open the home screen of the mobile app.",
+    "Check the device list displayed on the home screen."
+  ],
+  "expected": "The unsupported device should not appear in the device list on the home screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "unsupported devices",
+    "home screen",
+    "device list",
+    "paired",
+    "connected",
+    "mobile app",
+    "BB Fit",
+    "Sync60"
+  ],
+  "source_last_updated": "1761837100",
+  "source_hash": "a72aa3be5070c15755d5c5bcda9d936e6d0390612062963581fda73f3be52fc3",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.067834Z",
+  "status": "active"
+}
