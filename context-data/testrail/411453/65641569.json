@@ -1,0 +1,34 @@
+{
+  "id": "65641569",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - X button, close the screen",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Verify that clicking the X button on the EQ screen closes it and returns to the Settings screen.",
+  "steps": [
+    "Start the app on a device that supports EQ.",
+    "Open Device Settings.",
+    "Click on the EQ tab.",
+    "Verify the X button is present in the upper right corner.",
+    "Click the X button."
+  ],
+  "expected": "The EQ screen closes and returns to the Settings screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ screen",
+    "X button",
+    "close",
+    "Settings screen",
+    "Device Settings",
+    "EQ tab",
+    "return",
+    "upper right corner"
+  ],
+  "source_last_updated": "1761143574",
+  "source_hash": "31829be8fc901a6378ddc994bbb9bff09ea3122a1500f6771a9945cf0ab91efe",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.398291Z",
+  "status": "active"
+}
