@@ -1,0 +1,32 @@
+{
+  "id": "65641577",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Select a value, close the EQ tab, restore defaults - it is returned to Bass",
+  "feature": "EQ (Equalizer)",
+  "scenario": "After selecting an EQ value, closing the EQ tab, and performing Restore Defaults, the EQ value is incorrectly reset to Bass instead of the actual default.",
+  "steps": [
+    "Select an EQ value (Bass, Flat, Bright, or Custom EQ)",
+    "Close the EQ tab",
+    "Navigate to Device Settings > Reset Device",
+    "Perform Restore Defaults"
+  ],
+  "expected": "The EQ value should be restored to the actual default value.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ value reset",
+    "Restore Defaults bug",
+    "EQ tab close",
+    "Bass default incorrect",
+    "Device Settings Reset",
+    "EQ preset persistence",
+    "Audio settings restore"
+  ],
+  "source_last_updated": "1761144395",
+  "source_hash": "b5677664a7515a55f4e1fc3fdee852c7e63a62ac97ea9bcf8684788193555255",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.400307Z",
+  "status": "active"
+}
