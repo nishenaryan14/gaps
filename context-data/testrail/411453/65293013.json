@@ -1,0 +1,41 @@
+{
+  "id": "65293013",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Permission for location tracking is not accepted [Android]",
+  "feature": "Onboarding / Find My Device",
+  "scenario": "Android onboarding location permission flow: denying location access during Find My Device setup should return to Organized screen, while allowing should display geo map and FMD features.",
+  "steps": [
+    "Start app for the first time",
+    "Accept license agreement",
+    "Tap Continue",
+    "Go to 'Organized' screen",
+    "Either skip or tap 'Enable now' then 'Deny' in pop-up",
+    "Log in or continue as guest",
+    "Connect a device",
+    "Go to Poly Lens Menu > Find My Device (or from Device Home for disconnected device)",
+    "Tap OK in the prompt",
+    "Tap Deny",
+    "Go back to FindMyDevice and tap Allow on system prompt"
+  ],
+  "expected": "Deny should return to \"Organized\" screen; user should be prompted that location data is collected for Find My Device; system prompt to Allow location access should appear; after denying, FMD window stays open with \"Cancel\" and \"Enable Now\" options; after allowing, user should see devices on geo map and access Find My Device features.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Android onboarding",
+    "location permission",
+    "Find My Device",
+    "deny location",
+    "allow location",
+    "Organized screen",
+    "geo map",
+    "FMD features",
+    "system prompt"
+  ],
+  "source_last_updated": "1760528516",
+  "source_hash": "7b0f7649c0991056344df6269d173b865b56602c261fe44d749b85e45fd7d1e2",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.060270Z",
+  "status": "active"
+}
