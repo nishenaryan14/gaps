@@ -1,0 +1,33 @@
+{
+  "id": "66363593",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Settings Custom Swipe Sensor",
+  "feature": "Settings",
+  "scenario": "Verify that the Custom Swipe Sensor settings in device settings match the documented specifications when connected to Osprey.",
+  "steps": [
+    "Start the app with Osprey connected.",
+    "Navigate to device settings.",
+    "Check for the Custom Swipe Sensor tab.",
+    "Click to open the section.",
+    "Verify the settings and values match the specifications in the Custom Swipe Sensor documentation."
+  ],
+  "expected": "The Custom Swipe Sensor settings and values match the specifications in the Custom Swipe Sensor documentation.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Custom Swipe Sensor",
+    "Osprey",
+    "device settings",
+    "swipe sensor specifications",
+    "sensor configuration",
+    "Osprey connection",
+    "swipe sensor documentation"
+  ],
+  "source_last_updated": "1762331664",
+  "source_hash": "9db5d8e5759b91aeccf1e24133a79412c3cabc44269cd5ae8a0d0df47dc669cf",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "status": "active"
+}
