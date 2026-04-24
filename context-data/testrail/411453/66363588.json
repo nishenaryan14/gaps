@@ -7,27 +7,28 @@
   "feature": "Find My Device (FMD)",
   "scenario": "Verify that disconnecting and reconnecting earbuds correctly splits and reunites the device display on the Find My Device list and map, with appropriate \"Connected\"/\"Disconnected\" tags per product type.",
   "steps": [
-    "Connect both earbuds and verify the device is shown as one unit on the Find My Device list and map.",
-    "Disconnect the right earbud and verify the device splits into parts with appropriate 'Connected'/'Disconnected' tags per product type:\n- Osprey: 3 parts (Left earbud, Right earbud, Charge Case)\n- Tern/Emu: 2 parts (Left earbud, Right earbud)\n- Flamingo: 2 parts (Earbud, Charge Case)",
-    "Disconnect the left earbud and verify both earbuds show as disconnected.",
-    "Reconnect the right earbud.",
-    "Reconnect the left earbud and verify the device returns to a single unit on the Find My Device list and map."
+    "1. Connect both earbuds to the device and verify the device is shown as a single unit on the Find My Device list and map.",
+    "2. Disconnect the right earbud and observe the device splitting into parts on the list and map.",
+    "3. Verify the appropriate 'Connected'/'Disconnected' tags are displayed per product type:\n   - Osprey: 3 parts (Left earbud, Right earbud, Charge Case)\n   - Tern/Emu: 2 parts (Left earbud, Right earbud)\n   - Flamingo: 2 parts (Earbud, Charge Case)",
+    "4. Disconnect the left earbud and verify both earbuds show as disconnected.",
+    "5. Reconnect the right earbud and observe the status update.",
+    "6. Reconnect the left earbud and verify the device returns to being shown as a single unit on the list and map."
   ],
-  "expected": "The device status on the Find My Device list and map correctly reflects each connection/disconnection state: initially shown as one unit, splits into appropriate parts with correct tags when one earbud is disconnected, shows both disconnected when both are disconnected, and returns to a single unit when both earbuds are reconnected.",
+  "expected": "The device status on the Find My Device list and map correctly reflects connection changes: initially shown as a single unit when both earbuds are connected, splits into the appropriate number of parts with correct \"Connected\"/\"Disconnected\" tags when one earbud is disconnected, shows both disconnected when the left earbud is also disconnected, and returns to a single unit when both earbuds are reconnected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Find My Device",
     "earbuds disconnect reconnect",
-    "device split merge",
+    "Find My Device list map",
     "Connected Disconnected tags",
+    "device splitting merging",
     "Osprey Tern Emu Flamingo",
-    "product type parts",
-    "device display list map"
+    "left right earbud charge case",
+    "product type parts"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "b392dcec0b8194936639e3ca42f8e346af30244175aa378a9dc0460fc3f77bcb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:11.918867Z",
+  "processed_at": "2026-04-24T11:50:54.622579Z",
   "status": "active"
 }
