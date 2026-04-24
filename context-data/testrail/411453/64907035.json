@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "App Settings - General - Account - Log in",
   "feature": "App Settings - General - Account",
-  "scenario": "Verify that after logging in via App Settings > General > Account, the \"Your account\" section displays the user's name and email fields populated correctly, while share data remains hidden.",
+  "scenario": "Verify that after logging in from App Settings > General > Account, the \"Your account\" section displays the user's name and email without showing share data.",
   "steps": [
-    "Open the app and tap the hamburger icon to open the menu.",
-    "Navigate to App Settings.",
-    "Go to General > Account.",
-    "Tap 'Log in'.",
-    "Tap 'Continue'.",
-    "Log in with valid credentials."
+    "Open App Settings",
+    "Go to General",
+    "Go to Account",
+    "Tap on the Log in button",
+    "Tap Continue",
+    "Log in with valid credentials"
   ],
-  "expected": "\"Your account\" text is visible with Name and Email fields populated with the user's name and email address. Share data should not be visible.",
+  "expected": "\"Your account\" text is visible. Name and Email fields are populated with the user's name and email address. Share data is not visible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "login verification",
-    "account settings",
-    "user name display",
-    "email field",
-    "share data hidden",
-    "app settings general",
-    "account section",
-    "credentials validation"
+    "App Settings",
+    "General",
+    "Account",
+    "Login",
+    "Your account",
+    "User name",
+    "Email",
+    "Share data"
   ],
   "source_last_updated": "1759324619",
   "source_hash": "0a71962d5991a869cef9f72462ef1b45c0c5af122c46fc7716de45cfa09a2305",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.097671Z",
+  "processed_at": "2026-04-24T10:51:32.748540Z",
   "status": "active"
 }
