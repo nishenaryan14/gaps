@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Onboarding - Permission for location tracking is accepted and then revoked [Android]",
   "feature": "Onboarding / Permissions",
-  "scenario": "User revokes location permission after onboarding and the app should gracefully handle Find My Device access with appropriate prompts to re-enable permission.",
+  "scenario": "User revokes location permission after onboarding and app should gracefully handle Find My Device access with re-enable prompts",
   "steps": [
-    "1. Launch the app and complete the onboarding process, accepting the location tracking permission when prompted.",
-    "2. Navigate to Settings > Apps > Poly Lens > Permissions on the Android device.",
-    "3. Revoke the location permission for the Poly Lens app.",
-    "4. Return to the app and access the 'Find My Device' feature.",
-    "5. Observe the app's behavior when attempting to use location services without permission."
+    "Launch the app and complete the onboarding process, accepting the location tracking permission when prompted.",
+    "Navigate to the device's Settings > Apps > Poly Lens > Permissions.",
+    "Revoke the location permission for the app.",
+    "Return to the app and access the 'Find My Device' feature."
   ],
-  "expected": "The app should gracefully handle the revoked location permission by showing an appropriate prompt explaining that location access is needed, and provide a way for the user to re-enable the location permission (e.g., by redirecting to the app's permission settings).",
+  "expected": "The app should handle the revoked permission gracefully by showing appropriate prompts (e.g., explaining why location permission is needed) and providing a way for the user to re-enable the location permission.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "location permission revoked",
     "Find My Device",
-    "permission re-enable prompt",
-    "Poly Lens app",
-    "graceful handling",
-    "Android location settings",
-    "onboarding location tracking"
+    "re-enable prompt",
+    "permission handling",
+    "graceful degradation",
+    "onboarding",
+    "Poly Lens",
+    "location access"
   ],
   "source_last_updated": "1760528524",
   "source_hash": "a198a395f8d20a34bca9f1ee410054e156086656ea04610a45fe64c70887fd0f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.253606Z",
+  "processed_at": "2026-04-24T11:50:53.087343Z",
   "status": "active"
 }
