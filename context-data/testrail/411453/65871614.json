@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - No device connected - Select Device link",
   "feature": "Device Home Screen",
-  "scenario": "When no device is connected, tapping \"Select Device\" shows a list of supported devices with images and an \"Other devices\" button that opens the Poly support web page.",
+  "scenario": "When no device is connected, tapping \"Select Device\" shows supported devices with images and an \"Other devices\" button linking to Poly support.",
   "steps": [
     "Ensure no device is connected.",
-    "Tap the 'Select Device' link.",
-    "Observe the list of supported devices with images.",
-    "Scroll to the bottom of the list.",
-    "Tap the 'Other devices' button.",
-    "Observe the web page that opens."
+    "Tap 'Select Device'.",
+    "Observe the list of supported devices displayed with their images.",
+    "Check the bottom of the list for an 'Other devices' button.",
+    "Tap the 'Other devices' button."
   ],
-  "expected": "A list of supported devices with images is displayed. Tapping the \"Other devices\" button opens the Poly support web page.",
+  "expected": "A list of supported devices with images is displayed. Tapping the 'Other devices' button opens the Poly support web page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Select Device",
-    "supported devices list",
+    "supported devices",
     "device images",
     "Other devices button",
-    "Poly support web page",
+    "Poly support",
     "no device connected",
-    "device selection UI"
+    "device list",
+    "device discovery"
   ],
   "source_last_updated": "1774958838",
   "source_hash": "9f4e7748d9cd731530d28706109ee05f8f4558126860e641ea893979a8283061",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.065318Z",
+  "processed_at": "2026-04-24T10:51:32.722887Z",
   "status": "active"
 }
