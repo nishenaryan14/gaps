@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "Onboarding - Continue as guest",
   "feature": "Onboarding",
-  "scenario": "Continue as guest during onboarding and navigate through permission prompts to reach the home screen on both Android and iOS",
+  "scenario": "Verify the 'Continue as guest' onboarding flow on Android and iOS, including platform-specific popups and permissions before reaching the home screen.",
   "steps": [
-    "1. Launch the app and reach the onboarding screen",
-    "2. Tap \"Continue as guest\"",
-    "3. Handle the notification permission popup: tap \"Allow\" or \"Don't Allow\"",
-    "4. (iOS only) Handle the location permission popup: respond accordingly",
-    "5. (iOS only) Enter iPhone passcode when prompted",
-    "6. Observe the Poly Product Improvement Program popup appearing",
-    "7. User is directed to the home screen"
+    "Complete initial setup and license agreement",
+    "Tap 'Continue as guest'",
+    "[Android] Dismiss the Poly Product Improvement Program popup if shown",
+    "[iOS] Grant location permission when prompted",
+    "[iOS] Set or skip passcode when prompted",
+    "Observe the final screen"
   ],
-  "expected": "User completes the guest onboarding flow and is directed to the home screen.",
+  "expected": "User is directed to the home screen on both platforms.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "guest onboarding",
-    "continue as guest",
-    "notification permission",
-    "location permission",
-    "iPhone passcode",
-    "home screen",
+    "Continue as guest",
+    "onboarding flow",
     "Android",
-    "iOS"
+    "iOS",
+    "location permission",
+    "passcode",
+    "Poly Product Improvement Program",
+    "home screen"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "38eb4a276c4a6eff4181ee3b84ba470c4aff89443a0a94f6fa07fabedf945a39",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "processed_at": "2026-04-24T10:51:32.707575Z",
   "status": "active"
 }
