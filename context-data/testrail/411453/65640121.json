@@ -1,0 +1,38 @@
+{
+  "id": "65640121",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Policy: Policy Applied - Settings Locked",
+  "feature": "Policy",
+  "scenario": "Verify that policy-applied settings are locked (greyed out) in the mobile app, show a lock dialog on tap, and update correctly when the policy changes.",
+  "steps": [
+    "Apply a policy on the Lens Cloud tenant.",
+    "Open the mobile app and navigate to the settings affected by the policy.",
+    "Verify that the affected settings are properly applied and locked (greyed out).",
+    "Tap on a locked setting and confirm that a dialog appears informing the user it is locked.",
+    "Update the policy with new values for the affected settings.",
+    "In the mobile app, verify that the setting values have been updated to match the new policy.",
+    "Confirm that the settings remain locked (greyed out) after the update.",
+    "Apply a policy that affects all available settings.",
+    "Verify that all settings in the mobile app are locked and greyed out."
+  ],
+  "expected": "All settings affected by the policy are applied and locked (greyed out) in the mobile app. Tapping a locked setting shows a dialog informing the user it is locked. Updating the policy updates the values while keeping settings locked. A policy affecting all available settings locks all of them.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "policy-applied settings",
+    "locked settings",
+    "greyed out",
+    "mobile app",
+    "lock dialog",
+    "policy change",
+    "Lens Cloud tenant",
+    "settings update"
+  ],
+  "source_last_updated": "1760949373",
+  "source_hash": "66844c404557be3840407f76818457b9b3eca58e432beca74f86f5863efe5d08",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "status": "active"
+}
