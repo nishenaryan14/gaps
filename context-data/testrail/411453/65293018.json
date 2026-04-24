@@ -1,0 +1,36 @@
+{
+  "id": "65293018",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Navigating through onboarding screens",
+  "feature": "Onboarding",
+  "scenario": "User can navigate through the three onboarding screens by swiping left/right or tapping the Continue button.",
+  "steps": [
+    "1. Launch the app after fresh install (onboarding not yet completed).",
+    "2. Observe the first onboarding screen (\"Organized\") is displayed.",
+    "3. Swipe left on the screen.",
+    "4. Verify the second onboarding screen (\"Up-to-Date\") is displayed.",
+    "5. Tap the \"Continue\" button.",
+    "6. Verify the third onboarding screen (\"Personal\") is displayed.",
+    "7. Swipe right on the screen.",
+    "8. Verify the second onboarding screen (\"Up-to-Date\") is displayed again."
+  ],
+  "expected": "User can navigate through all three onboarding screens (\"Organized\", \"Up-to-Date\", \"Personal\") by swiping left/right or tapping the \"Continue\" button.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "onboarding screens",
+    "swipe navigation",
+    "Continue button",
+    "fresh install",
+    "screen transition",
+    "onboarding flow",
+    "swipe left/right"
+  ],
+  "source_last_updated": "1768389408",
+  "source_hash": "626cfa41c05df9196da4056eb758b97b136e61afff8d1172e1d14b1e7dfde3ee",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "status": "active"
+}
