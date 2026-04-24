@@ -1,0 +1,33 @@
+{
+  "id": "66363547",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Screens UI",
+  "feature": "Screens UI",
+  "scenario": "Verify that every screen in the Onboarding flow matches the UI design specified in Figma.",
+  "steps": [
+    "Open the onboarding flow on the target device or emulator.",
+    "Navigate through each screen of the onboarding flow one by one.",
+    "For each screen, compare the UI elements (layout, colors, fonts, images, buttons, text) against the corresponding Figma design.",
+    "Document any discrepancies found for each screen."
+  ],
+  "expected": "Every screen in the onboarding flow matches the UI design specified in Figma exactly.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Onboarding flow",
+    "UI design verification",
+    "Figma comparison",
+    "Screen matching",
+    "Visual regression",
+    "UI elements validation",
+    "Design consistency",
+    "Layout comparison"
+  ],
+  "source_last_updated": "1763378362",
+  "source_hash": "1bc0fe03499b9a42a167e75e056b42bc8df3c86c9c0c0c85d4321804055d93f7",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.405970Z",
+  "status": "active"
+}
