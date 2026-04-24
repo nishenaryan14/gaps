@@ -8,12 +8,12 @@
   "scenario": "Device Settings page dynamically updates to show full options when a paired but turned-off headset is turned on",
   "steps": [
     "1. Open the Device Settings screen on the device.",
-    "2. Ensure a headset is paired but turned off (disconnected state).",
-    "3. Observe the available options displayed on the screen for the disconnected headset.",
-    "4. Turn on the headset so it connects to the device.",
-    "5. Observe the updated options displayed on the Device Settings screen."
+    "2. Ensure a headset is paired but turned off.",
+    "3. Observe the available options displayed on the screen.",
+    "4. Turn the headset on.",
+    "5. Observe the available options displayed on the screen after the headset is connected."
   ],
-  "expected": "When the headset is turned on and connected, the Device Settings screen dynamically updates to show all available options for the connected device (except Remove Device). Initially, when the headset is paired but turned off, only options for a disconnected device are shown.",
+  "expected": "When the headset is turned off (paired but disconnected), only options for a disconnected device are shown. After turning the headset on, the settings page dynamically updates to display all available options for the connected device (except Remove Device).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,14 +21,14 @@
     "headset",
     "paired",
     "turned off",
-    "disconnected",
     "turned on",
-    "connected",
-    "dynamic options update"
+    "dynamic update",
+    "options display",
+    "connection"
   ],
   "source_last_updated": "1762434098",
   "source_hash": "d08a24481a70fe489274350712c022bb71594b8d75e46f6e96a835343a3f5020",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.375617Z",
+  "processed_at": "2026-04-24T11:50:53.212159Z",
   "status": "active"
 }
