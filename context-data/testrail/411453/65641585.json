@@ -5,30 +5,28 @@
   "project": "411453",
   "title": "EQ - Custom EQ, save a custom EQ, change some values, Reset EQ",
   "feature": "EQ (Equalizer)",
-  "scenario": "Reset EQ reverts slider positions to default and removes saved custom EQ values after modifying and saving a custom EQ preset.",
+  "scenario": "Reset EQ button should restore sliders to default positions and remove saved custom EQ profile",
   "steps": [
-    "Start app on a device that supports EQ.",
-    "Go to Device Settings > EQ.",
-    "Select Custom EQ.",
-    "Change some values and save.",
-    "Change some more values.",
-    "Click Reset EQ."
+    "Open the Custom EQ settings.",
+    "Save a custom EQ profile with some values.",
+    "Change some of the EQ values from the saved profile.",
+    "Click the Reset EQ button."
   ],
-  "expected": "Slider positions return to default (middle positions) and the saved custom positions are removed.",
+  "expected": "The EQ slider positions should return to the default positions (middle of the slider), and the saved custom positions should be removed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Reset EQ",
-    "Custom EQ preset",
-    "slider positions",
-    "default values",
-    "saved EQ values",
-    "Device Settings",
-    "EQ reset"
+    "restore defaults",
+    "sliders",
+    "custom EQ profile",
+    "remove profile",
+    "equalizer settings",
+    "audio configuration"
   ],
   "source_last_updated": "1761210804",
   "source_hash": "1da04c541c42994569d324dcb9d8887f18d5ad3b8422bd665da02dad455e7a36",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.401301Z",
+  "processed_at": "2026-04-24T11:50:53.254329Z",
   "status": "active"
 }
