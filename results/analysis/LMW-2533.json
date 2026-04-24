@@ -1,0 +1,107 @@
+{
+  "bug_id": "LMW-2533",
+  "matched_testcases": [
+    "65458387",
+    "65293009",
+    "65293034",
+    "65293028",
+    "65293010",
+    "65293019",
+    "65293025",
+    "65293011",
+    "65293016",
+    "65293012",
+    "65293013",
+    "65293014",
+    "65293015",
+    "65293021",
+    "65293022"
+  ],
+  "coverage_status": "none",
+  "gaps": [
+    "No existing test case covers the Software tab display behavior for the Charge Stand when unplugged.",
+    "No test case verifies the Charge Stand's name and placeholder image rendering when the device is disconnected.",
+    "No test case validates the page refresh behavior when the Charge Stand is reconnected.",
+    "All existing test cases focus on onboarding, EULA, location permissions, and splash screen \u2014 none touch the Software tab or Charge Stand device display."
+  ],
+  "generated_testcases": [
+    {
+      "title": "Verify Charge Stand shows placeholder image and incorrect name in Software tab when unplugged",
+      "steps": [
+        "1. Launch the application and navigate to the main dashboard.",
+        "2. Ensure the Charge Stand is connected and recognized by the system.",
+        "3. Navigate to the Software tab.",
+        "4. Observe and record the Charge Stand's displayed name and image.",
+        "5. Unplug the Charge Stand from the system.",
+        "6. Navigate away from the Software tab (e.g., go to Dashboard or Settings).",
+        "7. Return to the Software tab.",
+        "8. Observe the Charge Stand entry in the Software tab.",
+        "9. Capture the displayed name text and image source/placeholder for the Charge Stand."
+      ],
+      "expected": "When the Charge Stand is unplugged, the Software tab displays a placeholder image (not the actual device image) and an incorrect or generic name (e.g., 'Unknown Device' or blank) for the Charge Stand entry, rather than the correct device name and image."
+    },
+    {
+      "title": "Verify Charge Stand name and image update correctly upon reconnection in Software tab",
+      "steps": [
+        "1. Launch the application and navigate to the Software tab.",
+        "2. Ensure the Charge Stand is initially connected \u2014 verify correct name and image are displayed.",
+        "3. Unplug the Charge Stand.",
+        "4. Navigate away from and back to the Software tab to confirm placeholder/incorrect display appears.",
+        "5. Reconnect the Charge Stand to the system.",
+        "6. Wait for the system to recognize the device (up to 10 seconds).",
+        "7. Observe the Software tab without navigating away.",
+        "8. If the display does not update automatically, navigate away from the Software tab and return.",
+        "9. Check the Charge Stand entry's displayed name and image."
+      ],
+      "expected": "After reconnecting the Charge Stand, the Software tab should update to show the correct Charge Stand name and actual device image. If the tab does not refresh automatically, navigating away and back should trigger the correct display. The placeholder image and incorrect name should no longer appear."
+    },
+    {
+      "title": "Validate page refresh behavior for Charge Stand display in Software tab after reconnection",
+      "steps": [
+        "1. Open the application and go to the Software tab with the Charge Stand connected.",
+        "2. Confirm the Charge Stand is displayed correctly (correct name and image).",
+        "3. Unplug the Charge Stand.",
+        "4. Refresh the current page (e.g., using browser refresh or app pull-to-refresh if applicable).",
+        "5. Observe the Charge Stand entry \u2014 verify placeholder image and incorrect name appear.",
+        "6. Reconnect the Charge Stand.",
+        "7. Perform a page refresh (browser refresh or app-level refresh action).",
+        "8. Observe the Charge Stand entry in the Software tab after the refresh.",
+        "9. Verify the displayed name and image."
+      ],
+      "expected": "After reconnecting the Charge Stand and performing a page refresh, the Software tab should display the correct Charge Stand name and actual device image. The refresh should clear any stale placeholder data and load the correct device information."
+    },
+    {
+      "title": "Verify Software tab does not show Charge Stand entry when device is permanently disconnected",
+      "steps": [
+        "1. Launch the application and navigate to the Software tab.",
+        "2. Ensure the Charge Stand is connected and visible in the tab.",
+        "3. Unplug the Charge Stand and do not reconnect it.",
+        "4. Navigate away from the Software tab (e.g., to Dashboard).",
+        "5. Return to the Software tab.",
+        "6. Observe the list of devices/entries displayed.",
+        "7. Check if the Charge Stand entry is still present, and if so, what name and image are shown."
+      ],
+      "expected": "When the Charge Stand is permanently disconnected (not reconnected), the Software tab should either remove the Charge Stand entry entirely or clearly indicate it as 'Disconnected' or 'Offline' with a generic placeholder. The entry should not show the correct Charge Stand name and image as if it were still connected."
+    },
+    {
+      "title": "Verify Charge Stand display consistency across Software tab navigation after plug/unplug cycle",
+      "steps": [
+        "1. Launch the application and navigate to the Software tab.",
+        "2. Verify the Charge Stand is displayed with correct name and image.",
+        "3. Unplug the Charge Stand.",
+        "4. Navigate to the Dashboard tab.",
+        "5. Navigate back to the Software tab \u2014 observe placeholder/incorrect display.",
+        "6. Navigate to the Settings tab.",
+        "7. Navigate back to the Software tab \u2014 confirm placeholder/incorrect display persists.",
+        "8. Reconnect the Charge Stand.",
+        "9. Navigate to the Dashboard tab.",
+        "10. Navigate back to the Software tab.",
+        "11. Verify the Charge Stand now shows correct name and image.",
+        "12. Navigate to the Settings tab and back to Software tab \u2014 confirm correct display remains."
+      ],
+      "expected": "The Charge Stand display in the Software tab should consistently show placeholder image and incorrect name when unplugged, across all tab navigations. After reconnection, the correct name and image should be consistently displayed across all tab navigations. The display state should be tied to the connection status, not the navigation history."
+    }
+  ],
+  "analysis_version": "v1",
+  "processed_at": "2026-04-24T12:05:41.597403Z"
+}
