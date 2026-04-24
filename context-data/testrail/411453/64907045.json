@@ -1,0 +1,37 @@
+{
+  "id": "64907045",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings- General - Account - Invite to second tenant, UI",
+  "feature": "App Settings - General - Account",
+  "scenario": "Verify that accepting one of two Lens account invites and declining the other correctly updates the invite list and maintains the accepted tenant info in the mobile app.",
+  "steps": [
+    "Cloud Admin sends two different Lens account invites to the mobile user's email.",
+    "Launch the app, go to Poly Lens Menu > General > Account, and log in \u2014 two new invites should appear.",
+    "Log out \u2014 invites disappear.",
+    "Log back in \u2014 invites reappear.",
+    "Accept one invite \u2014 accepted invite disappears, the other remains.",
+    "Go to Poly Lens Menu > Support > App \u2014 verify tenant info matches the accepted invite.",
+    "Go back to Account and Decline the remaining invite \u2014 it disappears.",
+    "Go to Support > App \u2014 verify tenant info is unchanged and still matches the accepted invite."
+  ],
+  "expected": "User can accept one invite and the tenant info reflects the accepted invite. Declining the remaining invite does not change the tenant info.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Lens account invites",
+    "accept invite",
+    "decline invite",
+    "tenant info",
+    "invite list update",
+    "mobile app",
+    "Poly Lens Menu",
+    "Account settings"
+  ],
+  "source_last_updated": "1759416321",
+  "source_hash": "85065c44d59055647dd0f3d53cd26a103443ecdd2f9f1b1c203dd95ba0bf2d09",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.107360Z",
+  "status": "active"
+}
