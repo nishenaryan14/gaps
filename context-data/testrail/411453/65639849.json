@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "New DFU screen - Translations",
   "feature": "DFU Screen",
-  "scenario": "Verify that translations on the new DFU screen display correctly without broken words or truncation when the phone is set to a supported language and an update is available for EB/CC on Osprey.",
+  "scenario": "Verify that all translations on the new DFU screen are correct, with no broken words and fully visible, when the phone language is set to a supported language and an update for EB/CC for Osprey is available.",
   "steps": [
-    "Set phone to a supported language.",
+    "Set phone language to a supported language.",
     "Open the app with an update for EB/CC for Osprey.",
-    "Open the new DFU screen.",
-    "Check the text on the screen."
+    "Navigate to the new DFU screen.",
+    "Check that all text is correct, with no broken words and fully visible."
   ],
-  "expected": "Text is correct, no broken words, and all visible.",
+  "expected": "All text on the new DFU screen is correct, with no broken words and fully visible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "DFU screen",
     "translations",
     "broken words",
-    "truncation",
+    "text visibility",
+    "EB/CC Osprey update",
     "supported language",
-    "EB/CC update",
-    "Osprey",
-    "text display"
+    "localization verification"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "15e112699f208f9ce0ab0c32dcd2b8490fea15e7a400a242089f29a92a0d73a5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "processed_at": "2026-04-24T11:50:53.300892Z",
   "status": "active"
 }
