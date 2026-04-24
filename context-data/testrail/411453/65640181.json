@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Analytics - Find My Device Opened",
   "feature": "Analytics",
-  "scenario": "Logs \"findMyDevice_opened\" event when user opens the \"Find My Device\" screen, with event counts updated after a few hours.",
+  "scenario": "Log \"findMyDevice_opened\" event when user opens the \"Find My Device\" screen and verify Firebase page displays all default elements with updated event counts after a few hours.",
   "steps": [
     "Open the 'Find My Device' screen.",
-    "Check logs for the event 'findMyDevice_opened'.",
+    "Check Firebase Analytics logs for the event 'findMyDevice_opened'.",
     "Wait a few hours for event counts to update.",
-    "Verify the dashboard includes the following elements: graph for the event, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment."
+    "Navigate to the Firebase Analytics dashboard.",
+    "Verify the following default elements are displayed: graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
   ],
-  "expected": "The event 'findMyDevice_opened' is logged when the user opens the 'Find My Device' screen. Event counts are updated after a few hours. The default dashboard displays all specified elements: graph for the event, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+  "expected": "The event 'findMyDevice_opened' is logged when the user opens the 'Find My Device' screen. After a few hours, the Firebase page displays all default elements: graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Find My Device",
-    "findMyDevice_opened",
+    "Firebase Analytics",
     "event tracking",
+    "findMyDevice_opened",
     "dashboard verification",
-    "event counts",
-    "analytics logs",
-    "app version",
-    "event metrics"
+    "event count",
+    "analytics logs"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "feff8cfd6b10ff5a87df450547cb66e55759853bb0b0b9ba73c041f79568dfee",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "processed_at": "2026-04-24T11:50:53.334131Z",
   "status": "active"
 }
