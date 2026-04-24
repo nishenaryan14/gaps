@@ -5,33 +5,31 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \u26d4 CLOUD \u2601\ufe0f Policy locked on phone but with wrong value",
   "feature": "Cloud Policy / Mobile App",
-  "scenario": "Cloud policy locks a setting on VFree20 device but applies the phone's previous value instead of the cloud-set value for Sensors & Presence category settings.",
-  "description_clean": "When a policy is set via Lens Cloud to lock a setting on a connected VFree20 device, the setting becomes locked on the mobile app but retains the phone's previously selected value instead of applying the value set in the cloud policy. Expected: Sensors & Presence category settings should be lockable to a specific value and that cloud-set value should be enforced on the device.",
+  "scenario": "When a cloud policy locks a Sensors & Presence setting on a VFree20 device, the setting is locked on the mobile app but retains the phone's previous value instead of applying the policy-defined value.",
+  "description_clean": "When a policy is set via Lens Cloud to lock a setting on a connected VFree20 device, the setting becomes locked on the mobile app but retains the phone's previously selected value instead of applying the value set in the cloud policy. Expected behavior: Sensors & Presence category settings should be lockable to a specific value defined in the cloud policy.",
   "steps": [
-    "Open Lens Cloud and navigate to the policy settings for the connected VFree20 device.",
-    "Set a policy to lock a specific setting within the Sensors & Presence category to a desired value.",
-    "Ensure the policy is applied and synced to the VFree20 device.",
-    "Open the mobile app on the VFree20 device and navigate to the locked setting.",
-    "Observe whether the setting is locked (non-editable) and check the value displayed."
+    "1. Set a policy via Lens Cloud to lock a setting on a connected VFree20 device.",
+    "2. Observe the setting on the mobile app.",
+    "3. Check the actual value applied on the device."
   ],
-  "expected": "Sensors & Presence category settings should be lockable to a specific value and that cloud-set value should be enforced on the device.",
+  "expected": "Sensors & Presence category settings should be lockable to a specific value defined in the cloud policy.",
   "actual": "The setting becomes locked on the mobile app but retains the phone's previously selected value instead of applying the value set in the cloud policy.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "Cloud policy",
-    "VFree20",
+    "cloud policy",
     "Sensors & Presence",
-    "setting lock",
-    "policy sync",
-    "value mismatch",
-    "device policy",
-    "cloud configuration"
+    "VFree20",
+    "setting locked",
+    "mobile app",
+    "policy-defined value",
+    "Lens Cloud",
+    "device value mismatch"
   ],
   "source_last_updated": "2026-04-23T12:35:29.000+0000",
   "source_hash": "83390856bc44157b6ef9baa97f84292939ab59a5b42d0717c4e25506cf3d5655",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:04.985013Z",
+  "processed_at": "2026-04-24T11:50:53.073685Z",
   "status": "active"
 }
