@@ -1,0 +1,31 @@
+{
+  "id": "64839424",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "[IOS] Location sharing dialogue - Allow Once option is selected",
+  "feature": "Location Sharing",
+  "scenario": "After selecting \"Allow Once\" on the location permission dialogue, the app should re-prompt for location consent upon restart.",
+  "steps": [
+    "Start app for first time, finish onboarding -> Home Screen with location dialogue showing 'Allow Once', 'Allow While Using App', 'Don't Allow'.",
+    "Tap 'Allow Once', then navigate to App Settings > Find My Device -> FMD screen visible, no location dialogue.",
+    "Restart app -> User should be prompted for location consent again on Home Screen."
+  ],
+  "expected": "After restarting the app, the user should be prompted for location consent again on the Home Screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Allow Once",
+    "location permission",
+    "re-prompt",
+    "app restart",
+    "location consent",
+    "Home Screen",
+    "Find My Device"
+  ],
+  "source_last_updated": "1759149575",
+  "source_hash": "75cf0171aea815d2a3a261bdfa08a972f4e02283926cdfa73f2e644499004f87",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.065318Z",
+  "status": "active"
+}
