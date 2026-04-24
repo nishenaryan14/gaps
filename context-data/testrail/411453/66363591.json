@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "FMD - Using Play Button when only one earbud is connected",
   "feature": "Find My Device (FMD)",
-  "scenario": "Verify that Find My Device tone plays correctly on a single connected earbud (left or right) and can be stopped, with proper UI feedback.",
+  "scenario": "Verify Find My Device tone plays correctly on individual earbuds when only one earbud is connected",
   "steps": [
-    "Launch app and pair both earbuds, go to Poly Lens Menu > Find My Device.",
-    "Disconnect Right Earbud, select Left Earbud, tap Play Button, tap \"Ok Got it\", tap Play Button again.",
+    "Launch app and pair both earbuds.",
+    "Go to Poly Lens Menu > Find My Device. Verify device is recognized on map and list.",
+    "Disconnect right earbud, select left earbud, tap Play Button, tap 'Ok Got it', tap Play Button again.",
     "Tap Stop Button.",
-    "Reconnect Right Earbud, disconnect Left Earbud, trigger tone for Right earbud.",
+    "Close popup, reconnect right earbud, disconnect left earbud, trigger tone for right earbud.",
     "Tap Stop Button."
   ],
-  "expected": "1) Tone plays on left earbud, \"Sending tone...\" message with animated stop button and illustration. 2) Tone stops, Play button displayed. 3) Tone plays on right earbud with same animations. 4) Tone stops, Play button displayed.",
+  "expected": "Step 3: Tone plays on left earbud, \"Sending tone...\" message with animated stop button and illustration. Step 4: Tone stops, Play button displayed. Step 5: Tone plays on right earbud with same animations. Step 6: Tone stops, Play button displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Find My Device",
-    "earbud tone",
-    "single earbud",
-    "play/stop",
+    "earbuds",
+    "tone playback",
     "Poly Lens",
-    "UI feedback",
-    "left/right channel"
+    "single earbud connection",
+    "Play Button",
+    "Stop Button",
+    "device pairing"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "77380434640efed645e04939aec1aff0e5d56019b0343a12cfe88be4b3b51b43",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:07.270818Z",
+  "processed_at": "2026-04-24T11:50:54.176337Z",
   "status": "active"
 }
