@@ -1,0 +1,39 @@
+{
+  "id": "64907053",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - Notifications & Device Alerts  - Settings toggles On/Off",
+  "feature": "App Settings - General - Notifications & Device Alerts",
+  "scenario": "Verify notification and device alert toggles in General > Notifications can be switched On/Off and persist after reopening the tab and restarting the app",
+  "steps": [
+    "1. Open the app and navigate to General > Notifications tab.",
+    "2. Locate the notification and device alert settings toggles.",
+    "3. Test scenario 1 - Changing individual toggles: Switch one toggle ON, then switch it OFF. Repeat for each toggle individually.",
+    "4. Test scenario 2 - Setting all toggles to ON: Switch all notification and device alert toggles to the ON position.",
+    "5. Test scenario 3 - Setting all toggles to OFF: Switch all notification and device alert toggles to the OFF position.",
+    "6. After each scenario, close the General > Notifications tab and reopen it.",
+    "7. Verify that the toggle states remain the same as set in the previous step.",
+    "8. Restart the app completely.",
+    "9. Navigate back to General > Notifications tab.",
+    "10. Confirm that all toggle states persist (remain as set) after the app restart."
+  ],
+  "expected": "All notification and device alert settings toggles can be switched On/Off successfully. The selected state of each toggle persists when reopening the General > Notifications tab and after restarting the app, for all test scenarios (individual toggles, all ON, all OFF).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "notification toggles",
+    "device alert toggles",
+    "toggle persistence",
+    "settings persistence",
+    "Notifications tab",
+    "app restart",
+    "toggle state verification",
+    "General settings"
+  ],
+  "source_last_updated": "1759416436",
+  "source_hash": "d4676142597820236f3fc525c7cdbb95384897fab3aa1c21e719b37dfb407dc9",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.112404Z",
+  "status": "active"
+}
