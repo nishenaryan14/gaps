@@ -1,0 +1,34 @@
+{
+  "id": "66317766",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings - All toggles ON - Persist after closing tab, settings page or app",
+  "feature": "Device Settings",
+  "scenario": "Toggle buttons in Device Settings should persist their ON state after closing the tab, settings page, or restarting the app.",
+  "steps": [
+    "Start Lens app with headset connected, go to Device Settings.",
+    "Open each tab and set all toggle buttons to ON.",
+    "Close and reopen each section \u2014 verify toggles remain ON.",
+    "Return to Device Home Screen, reopen Device Settings, check all sections \u2014 verify toggles remain ON.",
+    "Restart the app, reopen Device Settings, check each tab \u2014 verify toggles remain ON."
+  ],
+  "expected": "All toggle buttons in Device Settings persist their ON state after closing the tab, settings page, or app.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "toggle buttons",
+    "persist state",
+    "Device Settings",
+    "ON state",
+    "Lens app",
+    "restart app",
+    "settings persistence",
+    "headset"
+  ],
+  "source_last_updated": "1762432129",
+  "source_hash": "e9e9262118808bad02bc6c8cee1029bf91ac936ce17387d0e3871bc4b5a42f10",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.375617Z",
+  "status": "active"
+}
