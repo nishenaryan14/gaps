@@ -4,14 +4,17 @@
   "type": "testcase",
   "project": "411453",
   "title": "Onboarding - Eula page - Privacy Policy link",
-  "feature": "Onboarding - EULA Page",
-  "scenario": "Verify that tapping the Privacy Policy link on the EULA page navigates to the HP Privacy Policy page with a close button in the upper right corner instead of a back button.",
+  "feature": "Onboarding - Eula Page",
+  "scenario": "Verify tapping the Privacy Policy link on the EULA page navigates to the HP Privacy Policy page with a close button in the upper right corner instead of a back button.",
   "steps": [
     "1. Navigate to the EULA page.",
-    "2. Tap the 'Privacy Policy' link.",
-    "3. Observe the resulting page."
+    "2. Tap the Privacy Policy link.",
+    "3. Observe the resulting page that loads.",
+    "4. Check the URL of the loaded page.",
+    "5. Check the upper right corner for a close button.",
+    "6. Check the upper left corner to confirm there is no back button."
   ],
-  "expected": "The user is directed to the HP Privacy Policy page (https://www.hp.com/us-en/privacy/privacy.html?jumpid=in_R11928_/us/en/corp/privacy-central/privacy-statements). The page displays a close button in the upper right corner, not a back button in the upper left corner.",
+  "expected": "The user is directed to the HP Privacy Policy page (https://www.hp.com/us-en/privacy/privacy.html?jumpid=in_R11928_/us/en/corp/privacy-central/privacy-statements). The page displays a close button in the upper right corner and does NOT display a back button in the upper left corner.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -19,13 +22,14 @@
     "EULA page",
     "HP Privacy Policy page",
     "close button",
-    "navigation",
     "upper right corner",
-    "back button"
+    "back button",
+    "navigation",
+    "URL verification"
   ],
   "source_last_updated": "1760528305",
   "source_hash": "3a3cf17312c6821c86948777b7be38b4d45b982896ccb6920fa9b0a6ba6d81d0",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.057531Z",
+  "processed_at": "2026-04-24T10:51:32.707064Z",
   "status": "active"
 }
