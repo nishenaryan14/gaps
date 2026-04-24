@@ -7,14 +7,13 @@
   "feature": "Notifications",
   "scenario": "Verify that a \"Update Available\" notification appears when a device has outdated firmware and the Poly App is in the background, and tapping it redirects to Device Settings > Software Update.",
   "steps": [
-    "Ensure the device has a firmware version lower than the current version on the Cloud server.",
+    "Ensure the device has a firmware version lower than the current version available on the Cloud server.",
     "Ensure the Poly App is running in the background on the mobile device.",
-    "Observe the mobile device for a 'Update Available' notification.",
+    "Wait for the 'Update Available' notification to appear.",
     "Tap the 'Update Available' notification.",
-    "Verify that the Poly App opens.",
-    "Verify that the app redirects to Device Settings > Software Update tab."
+    "Observe the app behavior after tapping the notification."
   ],
-  "expected": "A \"Update Available\" notification appears. Tapping it opens the app and redirects to Device Settings > Software Update tab.",
+  "expected": "The app opens and redirects the user to Device Settings > Software Update tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,11 +23,11 @@
     "Device Settings",
     "Software Update",
     "firmware version",
-    "redirect notification"
+    "notification redirect"
   ],
   "source_last_updated": "1761219965",
   "source_hash": "bfbd3897c2e23cc2f97b9ac8aab802bb9bdaa29dfe2541ec61fe6d9603915fa9",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.418756Z",
+  "processed_at": "2026-04-24T11:50:53.302998Z",
   "status": "active"
 }
