@@ -1,0 +1,32 @@
+{
+  "id": "65868082",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen  - Connecting HS without internet access",
+  "feature": "Device Home Screen",
+  "scenario": "Connect headset to app when phone has no internet access",
+  "steps": [
+    "Turn off WiFi and cellular on the phone.",
+    "Pair and connect Headset.",
+    "Start the app."
+  ],
+  "expected": "Headset is shown as connected in device list.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "headset",
+    "app",
+    "phone",
+    "no internet",
+    "offline",
+    "pair",
+    "connect",
+    "Bluetooth"
+  ],
+  "source_last_updated": "1761749943",
+  "source_hash": "c60317bfbad46efdee75f0c9b776e0617dacf7bf7521c1056adbb48b882b4f25",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.075485Z",
+  "status": "active"
+}
