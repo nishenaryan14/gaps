@@ -5,14 +5,18 @@
   "project": "411453",
   "title": "App Settings - General - Account - Account delete",
   "feature": "App Settings - General - Account",
-  "scenario": "Verify account deletion flow in App Settings: confirmation dialog appears, cancel keeps user logged in, confirm logs user out and removes from Cloud tenant.",
+  "scenario": "Verify account deletion flow in App Settings: confirmation dialog appears, cancel keeps user logged in and on Cloud, confirm logs user out and removes from Cloud tenant.",
   "steps": [
-    "Open the delete icon in App Settings under General > Account tab.",
-    "Verify a confirmation dialog appears.",
-    "Test cancel: click cancel, verify dialog closes, user stays logged in, and user remains on Cloud.",
-    "Test confirm: click confirm, verify dialog closes, a spinner appears, an 'Account Deleted' popup appears briefly, user is logged out, and user is removed from Cloud tenant."
+    "1. Open App Settings.",
+    "2. Navigate to General > Account tab.",
+    "3. Click the delete icon.",
+    "4. Verify a confirmation dialog appears.",
+    "5. Test cancel: Click cancel on the dialog.",
+    "6. Verify that the dialog closes, the user stays logged in, and the user remains on the Cloud tenant.",
+    "7. Test confirm: Click confirm on the dialog.",
+    "8. Verify that the dialog closes, a spinner appears, an 'Account Deleted' popup appears briefly, the user is logged out, and the user is removed from the Cloud tenant."
   ],
-  "expected": "Cancel: Dialog closes, user stays logged in, user remains on Cloud. Confirm: Dialog closes, spinner appears, \"Account Deleted\" popup appears briefly, user is logged out and removed from Cloud tenant.",
+  "expected": "- Cancel: Dialog closes, user stays logged in, user remains on Cloud tenant.\n- Confirm: Dialog closes, spinner appears, \"Account Deleted\" popup appears briefly, user is logged out and removed from Cloud tenant.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,13 +25,13 @@
     "cancel flow",
     "confirm flow",
     "logout",
-    "cloud tenant removal",
-    "app settings",
-    "account tab"
+    "Cloud tenant removal",
+    "App Settings",
+    "Account tab"
   ],
   "source_last_updated": "1759416351",
   "source_hash": "ef1bca0dd99bd73e13692a05ba0080a50a35e5685057bc585f0ed6c6b483ae7e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.751623Z",
+  "processed_at": "2026-04-24T11:23:05.355332Z",
   "status": "active"
 }
