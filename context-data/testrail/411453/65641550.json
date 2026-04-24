@@ -1,0 +1,31 @@
+{
+  "id": "65641550",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - Changes persist after restarting the device",
+  "feature": "ANC (Active Noise Cancellation)",
+  "scenario": "Verify ANC Mode and Transparency Mode settings persist after device restart",
+  "steps": [
+    "Open Device Settings, expand ANC tab, and set ANC Mode or Transparency Mode to any value.",
+    "Restart the device.",
+    "Go back to Device Settings and expand ANC tab."
+  ],
+  "expected": "The previously set values for ANC/Transparency should still be present after the restart.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "ANC Mode",
+    "Transparency Mode",
+    "persist",
+    "device restart",
+    "settings persistence",
+    "audio settings",
+    "noise control"
+  ],
+  "source_last_updated": "1760956286",
+  "source_hash": "d454d962a787747cdb4d202ee4b5f78a6e283f2448dd84b24ca4fdb63e649cc9",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
