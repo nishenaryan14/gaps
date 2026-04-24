@@ -7,27 +7,27 @@
   "feature": "Analytics",
   "scenario": "Support Device Opened event is logged when the Support > Device screen is opened, with event counts updating after a few hours and Firebase dashboard displaying default analytics elements.",
   "steps": [
-    "Open the Support > Device screen.",
-    "Verify that the 'Support Device Opened' event is logged.",
-    "Wait a few hours for event counts to update.",
-    "Check the Firebase dashboard.",
-    "Verify that the dashboard displays default elements: a graph, events in the last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
+    "Open the app",
+    "Navigate to Support > Device screen",
+    "Check Firebase dashboard for the 'Support Device Opened' event",
+    "Verify that default elements are displayed: graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment"
   ],
-  "expected": "The 'Support Device Opened' event is logged when the Support > Device screen is opened. After a few hours, the Firebase dashboard shows updated event counts and displays all default elements: a graph, events in the last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment.",
+  "expected": "'Support Device Opened' event is logged in Firebase when the Support > Device screen is opened. The Firebase dashboard displays default elements including a graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Support Device Opened",
     "Firebase dashboard",
-    "event logging",
+    "event tracking",
     "analytics",
-    "event counts",
-    "default analytics elements",
-    "Support > Device screen"
+    "event count",
+    "default elements",
+    "app version",
+    "app environment"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "a1d07777524c30f0b895829918a079de109eff8068fb6fc95db4cad58536ba0a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.427014Z",
+  "processed_at": "2026-04-24T11:50:53.337160Z",
   "status": "active"
 }
