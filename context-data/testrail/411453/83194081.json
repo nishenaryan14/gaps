@@ -1,0 +1,31 @@
+{
+  "id": "83194081",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding screens - Login button without wifi [New]",
+  "feature": "Onboarding",
+  "scenario": "User on 'Poly Studio' onboarding screen gets 'Something is wrong' error after turning off WiFi and tapping Login button",
+  "steps": [
+    "1. Navigate to the 'Poly Studio' screen during onboarding.",
+    "2. Turn off WiFi.",
+    "3. Tap the Login button."
+  ],
+  "expected": "The user should proceed with the login process.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Poly Studio",
+    "onboarding",
+    "WiFi off",
+    "Login error",
+    "Something is wrong",
+    "network error",
+    "authentication failure"
+  ],
+  "source_last_updated": "1772551484",
+  "source_hash": "ce8babf5dea7089d865b536f80c3feb911a90a977db03ab1369ed05eb4a7c14d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "status": "active"
+}
