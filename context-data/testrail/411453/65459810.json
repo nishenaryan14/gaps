@@ -1,0 +1,31 @@
+{
+  "id": "65459810",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "PPIP - Dialog after Onboarding - UI",
+  "feature": "Onboarding / PPIP Dialog",
+  "scenario": "After onboarding, tapping \"Continue as Guest\" triggers a PPIP dialog with \"Help us improve your experience.\" text and \"Don't Share\" / \"Share Data\" options.",
+  "steps": [
+    "Complete the onboarding screens",
+    "Tap 'Continue as Guest'"
+  ],
+  "expected": "A PPIP (Product Performance Improvement Program) dialog should appear with the text: \"Help us improve your experience.\" followed by \"HP may collect basic device and app information, such as model, serial number, software version and feature usage, to help improve performance and support.\" and \"This data doesn't include any personal information and will not be shared with third parties. You can change your preferences at anytime in Settings.\" The dialog should provide two options: \"Don't Share\" and \"Share Data\".",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "onboarding",
+    "Continue as Guest",
+    "PPIP dialog",
+    "Help us improve your experience",
+    "Don't Share",
+    "Share Data",
+    "privacy consent",
+    "data sharing"
+  ],
+  "source_last_updated": "1760536922",
+  "source_hash": "5124052491945a95b02769748f4dbf40e8773d251cb84960e2ef6daae5f1e39e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.063310Z",
+  "status": "active"
+}
