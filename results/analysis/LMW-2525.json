@@ -1,0 +1,104 @@
+{
+  "bug_id": "LMW-2525",
+  "matched_testcases": [
+    "65458387",
+    "65293009",
+    "65293034",
+    "65293028",
+    "65293010",
+    "65293019",
+    "65293025",
+    "65293011",
+    "65293016",
+    "65293012",
+    "65293013",
+    "65293014",
+    "65293015",
+    "65293021",
+    "65293022"
+  ],
+  "coverage_status": "none",
+  "gaps": [
+    "No existing test case covers the scenario of language change triggering a firmware update on the Charge Case during the DFU process.",
+    "All existing test cases focus on onboarding, EULA, splash screen, and location permissions \u2014 none relate to DFU, firmware updates, language changes, or Charge Case behavior.",
+    "Missing test scenario: Verify that changing the device language during or before a DFU process correctly triggers a firmware update on the Charge Case.",
+    "Missing test scenario: Verify that after a language change and DFU completion, the Charge Case firmware version is updated appropriately."
+  ],
+  "generated_testcases": [
+    {
+      "title": "TC_DFU_LANG_001: Verify language change triggers firmware update on Charge Case during DFU",
+      "steps": [
+        "1. Connect the Charge Case to the device under test (DUT).",
+        "2. Initiate the DFU (Device Firmware Update) process on the DUT.",
+        "3. During the DFU process, navigate to device Settings > Language & Input.",
+        "4. Change the system language to a different language (e.g., from English to German).",
+        "5. Observe the Charge Case behavior and the DFU progress indicator on the DUT.",
+        "6. Check the system logs or DFU status for any triggered firmware update on the Charge Case."
+      ],
+      "expected": "Changing the system language during an active DFU process triggers a firmware update on the Charge Case. The DFU progress indicator should reflect the Charge Case firmware update, and system logs should show a language-change-initiated firmware update event for the Charge Case."
+    },
+    {
+      "title": "TC_DFU_LANG_002: Verify Charge Case firmware update is triggered immediately upon language change before DFU starts",
+      "steps": [
+        "1. Connect the Charge Case to the DUT.",
+        "2. Navigate to device Settings > Language & Input.",
+        "3. Change the system language to a different language (e.g., from English to French).",
+        "4. Without performing any other action, immediately initiate the DFU process.",
+        "5. Observe whether the Charge Case receives a firmware update as part of the DFU sequence.",
+        "6. Verify the Charge Case firmware version before and after the language change + DFU."
+      ],
+      "expected": "Changing the language before starting the DFU process triggers a pending firmware update flag for the Charge Case. When DFU is initiated, the Charge Case firmware update is executed as part of the DFU sequence. The Charge Case firmware version after the process should reflect the updated version."
+    },
+    {
+      "title": "TC_DFU_LANG_003: Verify Charge Case firmware version is updated after language change and DFU completion",
+      "steps": [
+        "1. Record the current firmware version of the Charge Case (e.g., via Settings > About or companion app).",
+        "2. Connect the Charge Case to the DUT.",
+        "3. Change the system language to a different language (e.g., from English to Spanish).",
+        "4. Initiate and complete the full DFU process.",
+        "5. After DFU completion, navigate to the Charge Case firmware version display.",
+        "6. Compare the new firmware version with the previously recorded version."
+      ],
+      "expected": "After a language change followed by a completed DFU process, the Charge Case firmware version is updated to the latest available version. The version number should be higher or different from the version recorded before the test."
+    },
+    {
+      "title": "TC_DFU_LANG_004: Verify multiple language changes during DFU do not cause Charge Case firmware corruption",
+      "steps": [
+        "1. Connect the Charge Case to the DUT.",
+        "2. Initiate the DFU process.",
+        "3. During the DFU process, change the system language multiple times (e.g., English -> German -> French -> Spanish).",
+        "4. Allow the DFU process to complete.",
+        "5. After completion, verify the Charge Case is responsive and functional.",
+        "6. Check the Charge Case firmware version and compare it to the expected latest version.",
+        "7. Check system logs for any errors or corruption events during the language changes."
+      ],
+      "expected": "Multiple language changes during the DFU process do not corrupt the Charge Case firmware. The Charge Case remains responsive and functional after DFU completion. The firmware version should be the latest expected version, and system logs should show no corruption or error events related to the language changes."
+    },
+    {
+      "title": "TC_DFU_LANG_005: Verify language change triggers Charge Case firmware update when DFU is in paused state",
+      "steps": [
+        "1. Connect the Charge Case to the DUT.",
+        "2. Initiate the DFU process and pause it at a mid-point (e.g., 50% progress).",
+        "3. While DFU is paused, change the system language to a different language.",
+        "4. Resume the DFU process.",
+        "5. Observe whether the Charge Case receives a firmware update after resuming.",
+        "6. Verify the final Charge Case firmware version after DFU completion."
+      ],
+      "expected": "Changing the language while the DFU process is paused triggers a Charge Case firmware update upon resuming the DFU. The Charge Case firmware version after completion should be the latest version, and the DFU should complete without errors."
+    },
+    {
+      "title": "TC_DFU_LANG_006: Verify language change back to original language does not skip Charge Case firmware update",
+      "steps": [
+        "1. Connect the Charge Case to the DUT.",
+        "2. Change the system language from English to German.",
+        "3. Before starting DFU, change the language back to English.",
+        "4. Initiate and complete the DFU process.",
+        "5. Verify whether the Charge Case firmware update was still triggered and applied.",
+        "6. Check the Charge Case firmware version after DFU completion."
+      ],
+      "expected": "Changing the language to a different language and then back to the original language still triggers the Charge Case firmware update during the subsequent DFU process. The Charge Case firmware version should be updated to the latest version after DFU completion."
+    }
+  ],
+  "analysis_version": "v1",
+  "processed_at": "2026-04-24T12:05:41.609036Z"
+}
