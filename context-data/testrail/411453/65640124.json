@@ -1,0 +1,34 @@
+{
+  "id": "65640124",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Policy: Restore Defaults with Policy applied",
+  "feature": "Policy",
+  "scenario": "Verify that policy-locked settings remain unchanged when a user performs a \"Restore Defaults\" action on a device via the mobile app.",
+  "steps": [
+    "Apply a policy to a device that locks certain settings (e.g., Wi-Fi, Bluetooth, or other configurable options).",
+    "Open the mobile app and navigate to Settings > Reset Device > Restore Defaults.",
+    "Perform the 'Restore Defaults' action.",
+    "Check the settings that were affected by the policy to see if they remain locked.",
+    "Verify that the values of those policy-affected settings have not changed."
+  ],
+  "expected": "Settings affected by the policy remain locked and their values are unchanged after the Restore Defaults action.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "policy-locked settings",
+    "Restore Defaults",
+    "mobile app",
+    "device reset",
+    "policy enforcement",
+    "settings verification",
+    "Wi-Fi Bluetooth lock",
+    "configuration persistence"
+  ],
+  "source_last_updated": "1760949373",
+  "source_hash": "76951c27bc0808de79ffadd081caea6e584def39cb74fa15a2c668c10535bd06",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.421344Z",
+  "status": "active"
+}
