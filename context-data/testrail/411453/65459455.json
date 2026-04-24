@@ -1,0 +1,34 @@
+{
+  "id": "65459455",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Turn off the device before starting DFU",
+  "feature": "Software Update - DFU",
+  "scenario": "Verify that turning off the device before starting a DFU update prevents the update from proceeding and shows an appropriate error message.",
+  "steps": [
+    "Pair and connect a device with an available update.",
+    "Go to Device Settings > Software Update tab.",
+    "Tap Update.",
+    "Turn off the device.",
+    "Tap Continue, then tap Start Update.",
+    "Tap OK."
+  ],
+  "expected": "Nothing happens; the app remains on the \"Software Update\" screen. Then a popup appears stating \"Update currently not available, please try back later\". Then the popup closes and the user is returned to the \"Three Easy Steps\" screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU update",
+    "device turned off",
+    "update blocked",
+    "error message",
+    "software update",
+    "device settings",
+    "update prevention"
+  ],
+  "source_last_updated": "1763372941",
+  "source_hash": "9737c4bc283afbe75891be29c5d122a11264e68afb4a91cd8c0f8278e4363fab",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "status": "active"
+}
