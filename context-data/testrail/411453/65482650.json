@@ -9,10 +9,10 @@
   "steps": [
     "Launch the app using a guest account.",
     "Ensure the app is on a previous version (not the latest).",
-    "Trigger an update to the latest app version (e.g., via app store or in-app update prompt).",
+    "Trigger an update to the latest version (e.g., via app store or in-app update prompt).",
     "Complete the update process and relaunch the app."
   ],
-  "expected": "The app updates successfully and the guest account session/data is preserved after the update.",
+  "expected": "The app updates successfully and the guest account session remains intact or is handled gracefully (e.g., user is prompted appropriately).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,13 +21,13 @@
     "previous version",
     "latest version",
     "update process",
-    "relaunch app",
+    "relaunch",
     "in-app update",
     "app store update"
   ],
   "source_last_updated": "1762420656",
   "source_hash": "f329e9c6d47124891c943f07e6485c1b7ba9d606fa0a1344b6e4e971a3968b46",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.407498Z",
+  "processed_at": "2026-04-24T11:50:53.275156Z",
   "status": "active"
 }
