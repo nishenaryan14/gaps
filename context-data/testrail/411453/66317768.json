@@ -5,13 +5,13 @@
   "project": "411453",
   "title": "Language Change - Houston Screen - Cancel",
   "feature": "Language Change",
-  "scenario": "User changes language on Poly headset, turns off device during early update stage, and taps Cancel on error screen expecting return to home screen.",
+  "scenario": "User changes language on Poly headset via Device Settings, initiates update, turns off headset during first 20% of update, and taps Cancel on the resulting Houston error screen to return to the home screen.",
   "steps": [
     "Open Device Settings on the Poly headset.",
-    "Navigate to Language settings.",
+    "Navigate to the Language section.",
     "Select a new language from the available options.",
-    "Tap 'Update Now' to begin the software update.",
-    "During the update (safe only during the first 20%), turn off the headset.",
+    "Tap 'Update Now' to initiate the software update process.",
+    "Turn off the headset during the update (safe only during the first 20%).",
     "Observe the Houston error screen that appears with a message about the update not completing.",
     "Tap 'Cancel' on the error screen."
   ],
@@ -20,17 +20,17 @@
   "edge_cases": [],
   "keywords": [
     "Poly headset",
+    "Device Settings",
     "language change",
-    "software update interrupted",
-    "device turned off",
-    "Houston error screen",
+    "software update",
+    "update interrupted",
+    "Houston error",
     "Cancel button",
-    "update failure",
-    "return to home screen"
+    "headset power off"
   ],
   "source_last_updated": "1762252585",
   "source_hash": "2e11852b5393d4924ec8ddd8a3a2479d8e9994491408ab054299e0bca7beec98",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.379308Z",
+  "processed_at": "2026-04-24T11:50:53.226428Z",
   "status": "active"
 }
