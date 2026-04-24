@@ -1,0 +1,71 @@
+[
+  {
+    "title": "VFree20: Cloud policy lock applies policy-defined value for Sensors & Presence setting (not phone's previous value)",
+    "steps": [
+      "1. Precondition: Ensure a VFree20 device is paired and connected to the mobile app.",
+      "2. Precondition: Set a known 'previous value' for a Sensors & Presence setting (e.g., Motion Sensor sensitivity = Low) on the phone via the app.",
+      "3. Precondition: Configure a cloud policy that locks the same Sensors & Presence setting with a different policy-defined value (e.g., Motion Sensor sensitivity = High).",
+      "4. Apply the cloud policy to the VFree20 device.",
+      "5. Open the mobile app and navigate to the Sensors & Presence settings page for the VFree20 device.",
+      "6. Observe the displayed value for the locked setting.",
+      "7. Attempt to change the locked setting via the app."
+    ],
+    "expected": "The Sensors & Presence setting displays the policy-defined value (e.g., High), NOT the phone's previous value (e.g., Low). The setting is locked (greyed out or non-editable) and the user cannot modify it. This confirms the policy-defined value is enforced on the device, not just the lock state."
+  },
+  {
+    "title": "VFree20: Cloud policy lock on Sensors & Presence setting persists after app restart",
+    "steps": [
+      "1. Precondition: Pair and connect a VFree20 device to the mobile app.",
+      "2. Precondition: Set a previous value for a Sensors & Presence setting (e.g., Camera Night Vision = Off).",
+      "3. Precondition: Configure a cloud policy that locks the same setting with a different value (e.g., Camera Night Vision = On).",
+      "4. Apply the cloud policy to the VFree20 device.",
+      "5. Verify the setting shows the policy-defined value (On) and is locked.",
+      "6. Force-close the mobile app and reopen it.",
+      "7. Navigate to the Sensors & Presence settings page for the VFree20 device.",
+      "8. Observe the displayed value for the locked setting."
+    ],
+    "expected": "After app restart, the Sensors & Presence setting still displays the policy-defined value (On), not the phone's previous value (Off). The setting remains locked and non-editable. This confirms the policy-defined value is persistently applied to the device."
+  },
+  {
+    "title": "VFree20: Cloud policy lock on Sensors & Presence setting survives device reboot",
+    "steps": [
+      "1. Precondition: Pair and connect a VFree20 device to the mobile app.",
+      "2. Precondition: Set a previous value for a Sensors & Presence setting (e.g., Geofence Radius = 100m).",
+      "3. Precondition: Configure a cloud policy that locks the same setting with a different value (e.g., Geofence Radius = 500m).",
+      "4. Apply the cloud policy to the VFree20 device.",
+      "5. Verify the setting shows the policy-defined value (500m) and is locked.",
+      "6. Reboot the VFree20 device.",
+      "7. Wait for the device to reconnect to the mobile app.",
+      "8. Navigate to the Sensors & Presence settings page for the VFree20 device.",
+      "9. Observe the displayed value for the locked setting."
+    ],
+    "expected": "After device reboot, the Sensors & Presence setting still displays the policy-defined value (500m), not the phone's previous value (100m). The setting remains locked. This confirms the policy-defined value is enforced at the device level, not just cached in the app."
+  },
+  {
+    "title": "VFree20: Cloud policy lock on multiple Sensors & Presence settings applies all policy-defined values",
+    "steps": [
+      "1. Precondition: Pair and connect a VFree20 device to the mobile app.",
+      "2. Precondition: Set previous values for multiple Sensors & Presence settings (e.g., Motion Sensor = Low, Camera Night Vision = Off, Geofence Radius = 100m).",
+      "3. Precondition: Configure a cloud policy that locks all three settings with different policy-defined values (Motion Sensor = High, Camera Night Vision = On, Geofence Radius = 500m).",
+      "4. Apply the cloud policy to the VFree20 device.",
+      "5. Open the mobile app and navigate to the Sensors & Presence settings page.",
+      "6. Observe the displayed values for all three locked settings."
+    ],
+    "expected": "All three Sensors & Presence settings display their respective policy-defined values (High, On, 500m), not the phone's previous values (Low, Off, 100m). All settings are locked and non-editable. This confirms the policy correctly applies multiple values simultaneously."
+  },
+  {
+    "title": "VFree20: Removing cloud policy restores previous value for Sensors & Presence setting",
+    "steps": [
+      "1. Precondition: Pair and connect a VFree20 device to the mobile app.",
+      "2. Precondition: Set a known previous value for a Sensors & Presence setting (e.g., Motion Sensor sensitivity = Low).",
+      "3. Precondition: Configure a cloud policy that locks the same setting with a different value (e.g., Motion Sensor sensitivity = High).",
+      "4. Apply the cloud policy to the VFree20 device.",
+      "5. Verify the setting shows the policy-defined value (High) and is locked.",
+      "6. Remove or disable the cloud policy from the device.",
+      "7. Refresh the mobile app and navigate to the Sensors & Presence settings page.",
+      "8. Observe the displayed value for the previously locked setting.",
+      "9. Attempt to change the setting."
+    ],
+    "expected": "After policy removal, the Sensors & Presence setting reverts to the phone's previous value (Low) OR becomes editable. The setting is no longer locked. This confirms the policy lock was correctly removed and the device is no longer enforcing the policy-defined value."
+  }
+]
