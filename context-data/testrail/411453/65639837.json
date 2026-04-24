@@ -1,0 +1,31 @@
+{
+  "id": "65639837",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "1 step DFU - User can trigger firmware update for just earbuds",
+  "feature": "DFU (Device Firmware Update)",
+  "scenario": "1-step DFU: User can trigger firmware update for just the earbuds (not the charging case) when both have updates available",
+  "steps": [
+    "Start app with Osprey earbuds and charging case both on at least version 5039 with updates available.",
+    "Navigate to Settings/Update and click update button.",
+    "Click Update for earbuds/Voyager Free 60+ UC."
+  ],
+  "expected": "Only earbuds DFU completes successfully; charging case stays on the lower version.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU",
+    "firmware update",
+    "earbuds only",
+    "Osprey",
+    "Voyager Free 60+ UC",
+    "Settings/Update",
+    "1-step update"
+  ],
+  "source_last_updated": "1760949167",
+  "source_hash": "dbcf5b575fc9a297204bf4e59a6159a904609759efd91d0041ac1419a3b4e093",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "status": "active"
+}
