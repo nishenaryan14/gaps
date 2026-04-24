@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "Analytics - Device Connected",
   "feature": "Analytics",
-  "scenario": "Verify that device connection events are logged and increment after toggling device power while the app is active, with Firebase displaying default elements plus Device PID and Serial.",
+  "scenario": "Verify that the device connection success event is logged with default elements (graph, events in last 30 min, event count by country/gender, events per session, app version/build/environment) and additional tracked fields (Device PID, Device Serial), and that event counts update after a few hours.",
   "steps": [
-    "Open the app and ensure a device is successfully connected.",
-    "Check Firebase for the logged event.",
-    "Verify that the event count updates after a few hours.",
-    "Navigate to the Firebase page and confirm the following default elements are displayed: graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment.",
-    "Additionally, confirm that Device PID and Device Serial are displayed.",
-    "Turn the device off and then on while the app is active.",
-    "Wait for some time and verify that the event count has incremented."
+    "Open the app and connect a device successfully.",
+    "Wait a few hours for event counts to update.",
+    "Navigate to the event logs section.",
+    "Locate the event logged for the device connection.",
+    "Verify the event includes default elements: graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+    "Check that the event includes additional tracked fields: Device PID and Device Serial."
   ],
-  "expected": "Event is logged when a device is successfully connected. Firebase page displays default elements plus Device PID and Device Serial. Event count increments after turning the device off and on while the app is active.",
+  "expected": "The event is logged with all default elements (graph, events in last 30 min, event count by country, event count by gender, events per session, app version, app build, app environment) and additional fields (Device PID, Device Serial). Event counts are updated after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device connection events",
-    "Firebase logging",
-    "event count increment",
-    "device power toggle",
+    "device connection success event",
+    "event logs",
+    "default elements",
+    "additional tracked fields",
     "Device PID",
     "Device Serial",
-    "app active state",
-    "Firebase dashboard elements"
+    "event count update",
+    "app version build environment"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "be9ff0c0564115b16197ac7f12661bab56da3fb15a7bbb8a8fc30f5a3f567bf4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "processed_at": "2026-04-24T11:50:53.334131Z",
   "status": "active"
 }
