@@ -7,13 +7,13 @@
   "feature": "App Settings - General - About",
   "scenario": "Verify that the \"Release Notes\" link in the About section opens the correct Lens version web page as specified in the Figma design.",
   "steps": [
-    "Open the app and navigate to App Settings.",
-    "Go to the General section.",
-    "Tap on the 'About' option.",
-    "Locate and tap the 'Release Notes' link.",
-    "Observe the web page that opens."
+    "Open App Settings",
+    "Navigate to General section",
+    "Tap on About",
+    "Tap on the 'Release Notes' link",
+    "Observe the web page that opens"
   ],
-  "expected": "The 'Release Notes' link opens the URL https://info.lens.poly.com/lens-mobile-rn, matching the Figma design specification.",
+  "expected": "The 'Release Notes' link opens the URL https://info.lens.poly.com/lens-mobile-rn, which displays the correct Lens version web page as specified in the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,12 +23,12 @@
     "App Settings",
     "General section",
     "Figma design",
-    "web page verification",
-    "link navigation"
+    "web page navigation",
+    "version verification"
   ],
   "source_last_updated": "1759416405",
   "source_hash": "8dcfca9aba77d5da0a7c940d7c0010f380929a1fe8c887dcedb12f4347a1c70e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.353822Z",
+  "processed_at": "2026-04-24T11:50:53.136294Z",
   "status": "active"
 }
