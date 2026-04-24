@@ -1,0 +1,35 @@
+{
+  "id": "66317743",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - new name in the Notifications",
+  "feature": "Device Settings - Rename",
+  "scenario": "Device renamed via Device Settings > General does not reflect the new name in notification messages",
+  "steps": [
+    "Open Device Settings on the device.",
+    "Navigate to the General section.",
+    "Change the device name to a new name.",
+    "Save or confirm the new name.",
+    "Trigger a notification event (e.g., disconnect, low battery, or update).",
+    "Observe the notification message content."
+  ],
+  "expected": "The notification message should display the new device name.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "device rename",
+    "device settings",
+    "general settings",
+    "notification message",
+    "device name not updating",
+    "notification content",
+    "device name mismatch",
+    "rename not reflecting"
+  ],
+  "source_last_updated": "1776241193",
+  "source_hash": "22182f7364d925c6499f0736ed5c1d0035c4988ee93f928a56bff587b355efa2",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.378141Z",
+  "status": "active"
+}
