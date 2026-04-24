@@ -1,0 +1,33 @@
+{
+  "id": "65248795",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Sending Tone - back button",
+  "feature": "Find My Device",
+  "scenario": "When using Find My Device with a headset paired and connected, playing a tone and then tapping the back arrow should stop the sound and return to App Settings.",
+  "steps": [
+    "Pair and connect a headset to the device.",
+    "Open the Find My Device app.",
+    "Play a tone on the headset.",
+    "Tap the back arrow in the top left corner."
+  ],
+  "expected": "The sound stops and the user is returned to the App Settings page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "headset",
+    "paired",
+    "connected",
+    "play tone",
+    "back arrow",
+    "stop sound",
+    "App Settings"
+  ],
+  "source_last_updated": "1759930862",
+  "source_hash": "0563118ac914e15957756b8f5ebd64aab10211f96dc150c00559baae6d5d548c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.113506Z",
+  "status": "active"
+}
