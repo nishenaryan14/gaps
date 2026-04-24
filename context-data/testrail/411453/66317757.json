@@ -1,0 +1,33 @@
+{
+  "id": "66317757",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings - Headset disconnected on Settings screen",
+  "feature": "Device Settings",
+  "scenario": "Headset disconnected while on Device Settings screen should update to show only available options",
+  "steps": [
+    "1. Connect a headset to the device.",
+    "2. Navigate to the Device Settings screen.",
+    "3. Disconnect the headset while on the Device Settings screen.",
+    "4. Observe the settings page."
+  ],
+  "expected": "The settings page should update to show only options available while the device is disconnected.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "headset disconnected",
+    "Device Settings screen",
+    "available options",
+    "settings update",
+    "audio device",
+    "connectivity change",
+    "UI refresh",
+    "settings page"
+  ],
+  "source_last_updated": "1762433859",
+  "source_hash": "49f3c0f6536e7e4f9f2b37532f604668dbd86f8a4aa528872b3800e571b211a6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.364460Z",
+  "status": "active"
+}
