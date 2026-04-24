@@ -1,0 +1,34 @@
+{
+  "id": "65640126",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Policy: Remove some settings from Policy - Settings Unlocked",
+  "feature": "Policy",
+  "scenario": "Verify that removing settings from a Cloud Policy and applying changes does not unlock them in the app, and that tapping a previously policy-affected setting allows the user to change its value.",
+  "steps": [
+    "1. Remove settings from a Policy on the Cloud.",
+    "2. Apply the changes to the Policy.",
+    "3. In the app, verify that the removed settings are not unlocked.",
+    "4. Tap on a previously policy-affected setting.",
+    "5. Confirm that the user is allowed to change its value."
+  ],
+  "expected": "Settings removed from the Policy on the Cloud remain locked in the app after changes are applied. Tapping on a previously policy-affected setting allows the user to change its value.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Cloud Policy",
+    "settings removal",
+    "policy unlock",
+    "apply changes",
+    "policy-affected setting",
+    "value change",
+    "policy enforcement",
+    "app settings"
+  ],
+  "source_last_updated": "1760949373",
+  "source_hash": "731bf71fbade4da8fbb49b8a533846500f64722dc37205db01278478f3b33310",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.420783Z",
+  "status": "active"
+}
