@@ -5,29 +5,35 @@
   "project": "411453",
   "title": "ANC - 4.-ANC is ON and its value is either\u202fAdaptive\u202for\u202fStandard\u202fand User doesn\u2019t change value during call when Transparency is OFF without selected values",
   "feature": "ANC (Active Noise Cancellation) / Transparency Mode",
-  "scenario": "Verify ANC remains locked to its previous value and Transparency mode is disabled during an active call, with normal toggle behavior restored after the call ends.",
+  "scenario": "ANC remains ON and Transparency OFF during a call, with Transparency greyed out and inaccessible, and normal toggle resumes after the call ends.",
   "steps": [
-    "Start/join a call - ANC remains ON with previous selection, Transparency is greyed out.",
-    "Tap Transparency toggle - popup informs it's unavailable during call.",
-    "Leave call - ANC stays ON with previous value, Transparency stays OFF with no value.",
-    "After call, user can toggle between ANC and Transparency modes normally."
+    "Set ANC to Adaptive or Standard (ON).",
+    "Ensure Transparency Mode is OFF with no value selected.",
+    "Start or join a call.",
+    "Attempt to change the ANC value during the call.",
+    "Tap on Transparency Mode during the call.",
+    "End the call.",
+    "Check the state of ANC and Transparency after the call ends.",
+    "Attempt to toggle between ANC and Transparency modes."
   ],
-  "expected": "When ANC is ON (set to Adaptive or Standard) and Transparency Mode is OFF with no value selected, the user should not be able to change the ANC value during a call.",
+  "expected": "During the call, the user should not be able to change the ANC value. Transparency Mode should be greyed out and inaccessible; tapping it shows a popup stating the option is unavailable. After the call ends, ANC remains ON with the previously selected value, Transparency stays OFF with no value selected, and the user can toggle between ANC and Transparency modes normally.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "ANC locked",
-    "Transparency disabled",
-    "active call",
-    "toggle behavior",
-    "call ends",
     "ANC remains ON",
+    "Transparency OFF",
     "Transparency greyed out",
-    "popup unavailable"
+    "during call",
+    "ANC toggle",
+    "Transparency inaccessible",
+    "call ends",
+    "ANC Adaptive",
+    "ANC Standard",
+    "Transparency mode disabled"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "7b84460240a536edf0ad6ce048bdcba4d379eacf245c59621e7024bc3d4867c7",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "processed_at": "2026-04-24T11:50:53.245607Z",
   "status": "active"
 }
