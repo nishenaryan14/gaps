@@ -1,0 +1,33 @@
+{
+  "id": "64907498",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - App, user not logged ever, dialog",
+  "feature": "Support - App",
+  "scenario": "Guest user installing mobile app, completing onboarding, and tapping Support > App button sees a login prompt dialog with \"Later\" and \"Login\" options.",
+  "steps": [
+    "Install the mobile app",
+    "Go through onboarding as a Guest",
+    "Navigate to Support via the hamburger menu",
+    "Click the App button"
+  ],
+  "expected": "A dialog should appear prompting the user to log in with their Poly Lens account. The dialog displays the message: \"Log in with your Poly Lens account to access useful information that can improve your support experience.\" with \"Later\" and \"Login\" buttons.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Guest user",
+    "Mobile app",
+    "Onboarding",
+    "Support",
+    "App button",
+    "Login prompt",
+    "Hamburger menu",
+    "Authentication"
+  ],
+  "source_last_updated": "1759751857",
+  "source_hash": "0c33eee5ec36788b26cd43b446544ed6593a760b189a79b9feea02817770068c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.360909Z",
+  "status": "active"
+}
