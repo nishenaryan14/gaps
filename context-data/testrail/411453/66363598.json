@@ -1,0 +1,41 @@
+{
+  "id": "66363598",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Emu/Tern Charge Case battery status",
+  "feature": "Emu/Tern Charge Case Battery Status",
+  "scenario": "Verify Charge Case battery level UI behavior on Home screen across various earbud presence and lid states",
+  "steps": [
+    "Open the Charge Case (CC) with both earbuds inside.",
+    "Observe the CC battery level UI on the Home screen.",
+    "Remove one earbud from the CC while keeping the CC open.",
+    "Observe the CC battery level UI on the Home screen.",
+    "Remove the second earbud from the CC while keeping the CC open.",
+    "Observe the CC battery level UI on the Home screen.",
+    "Close the CC with no earbuds inside.",
+    "Observe the CC battery level UI on the Home screen.",
+    "Place one earbud in the CC and close the CC.",
+    "Observe the CC battery level UI on the Home screen.",
+    "Place both earbuds in the CC and close the CC.",
+    "Observe the CC battery level UI on the Home screen."
+  ],
+  "expected": "1. When both earbuds are in the CC and the CC is opened: CC battery level is present, green, shows correct percentage, displayed below earbuds' battery levels, centered in the status box.\\n2. When one earbud is removed from the CC (CC still open): Battery icon greys out and shows the last known battery level (%).\\n3. When both earbuds are removed from the CC (CC still open): Battery icon greys out and shows the last known battery level (%).\\n4. When the CC is closed with no earbuds inside: Battery icon greys out and shows the last known battery level (%).\\n5. When one earbud is placed in the CC and the CC is closed: Battery icon greys out and shows the last known battery level (%).\\n6. When both earbuds are in the CC and the CC is closed: Battery icon greys out and shows the last known battery level (%).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Charge Case",
+    "battery level UI",
+    "Home screen",
+    "earbud presence",
+    "lid states",
+    "open/close lid",
+    "earbud removal",
+    "earbud placement"
+  ],
+  "source_last_updated": "1762331664",
+  "source_hash": "74d4fe7cecf22d08d31bec2f1d971e267b8df791eaf399c590ffacedd5a79594",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:11.929499Z",
+  "status": "active"
+}
