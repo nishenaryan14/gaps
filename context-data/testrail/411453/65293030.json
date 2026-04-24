@@ -1,0 +1,36 @@
+{
+  "id": "65293030",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Continue as guest",
+  "feature": "Onboarding",
+  "scenario": "Continue as guest during onboarding and navigate through permission prompts to reach the home screen on both Android and iOS",
+  "steps": [
+    "1. Launch the app and reach the onboarding screen",
+    "2. Tap \"Continue as guest\"",
+    "3. Handle the notification permission popup: tap \"Allow\" or \"Don't Allow\"",
+    "4. (iOS only) Handle the location permission popup: respond accordingly",
+    "5. (iOS only) Enter iPhone passcode when prompted",
+    "6. Observe the Poly Product Improvement Program popup appearing",
+    "7. User is directed to the home screen"
+  ],
+  "expected": "User completes the guest onboarding flow and is directed to the home screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "guest onboarding",
+    "continue as guest",
+    "notification permission",
+    "location permission",
+    "iPhone passcode",
+    "home screen",
+    "Android",
+    "iOS"
+  ],
+  "source_last_updated": "1768388700",
+  "source_hash": "38eb4a276c4a6eff4181ee3b84ba470c4aff89443a0a94f6fa07fabedf945a39",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "status": "active"
+}
