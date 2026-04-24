@@ -1,0 +1,35 @@
+{
+  "id": "65387064",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Feedback - send a Compliment feedback without names/email",
+  "feature": "Feedback",
+  "scenario": "Send a compliment feedback without providing names or email",
+  "steps": [
+    "Start the app",
+    "Navigate to App Settings",
+    "Tap on Feedback tab",
+    "Select the \"Compliment\" option",
+    "Enter feedback text",
+    "Click Send"
+  ],
+  "expected": "Option is selected and feedback is sent successfully.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "compliment feedback",
+    "anonymous feedback",
+    "send feedback",
+    "app settings",
+    "feedback tab",
+    "no name",
+    "no email",
+    "compliment option"
+  ],
+  "source_last_updated": "1776241074",
+  "source_hash": "c502f4c6251fd6230294fc1b7a88d61337993bd267f58d48fae7bd9d5833970d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.362417Z",
+  "status": "active"
+}
