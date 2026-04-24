@@ -1,0 +1,33 @@
+{
+  "id": "65641546",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - Both modes disabled, turn on ANC, default value selected",
+  "feature": "ANC (Active Noise Cancellation)",
+  "scenario": "Verify that enabling ANC while both ANC and Transparency modes are disabled defaults to \"On - Adaptive\" without enabling Transparency.",
+  "steps": [
+    "Ensure both ANC Mode and Transparency Mode are disabled.",
+    "Turn on ANC Mode.",
+    "Check the ANC Mode setting.",
+    "Verify that Transparency Mode remains disabled."
+  ],
+  "expected": "ANC Mode is set to \"On - Adaptive\" and Transparency Mode remains disabled.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "ANC",
+    "Transparency Mode",
+    "Adaptive",
+    "On - Adaptive",
+    "ANC Mode",
+    "disabled",
+    "enabled",
+    "audio mode"
+  ],
+  "source_last_updated": "1761047398",
+  "source_hash": "32664b94129fe8b7bdd05900997ed8ca37a5abc2385ec39558ac707888dd6d01",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.395741Z",
+  "status": "active"
+}
