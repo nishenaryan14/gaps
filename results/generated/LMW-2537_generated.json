@@ -1,0 +1,75 @@
+[
+  {
+    "title": "Data collection dialog reappears after dismissing by tapping outside and clicking device card on first launch with location denied",
+    "steps": [
+      "1. Install the app and launch it for the first time.",
+      "2. When the location permission prompt appears, deny it.",
+      "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
+      "4. Observe that the data collection dialog is displayed on the FMD screen.",
+      "5. Tap outside the data collection dialog (e.g., tap on the background/scrim area) to dismiss it.",
+      "6. Verify the data collection dialog is dismissed and no longer visible.",
+      "7. Tap on any device card displayed on the FMD screen.",
+      "8. Observe the UI response."
+    ],
+    "expected": "After tapping outside to dismiss the data collection dialog, tapping on a device card causes the data collection dialog to reappear. The dialog is shown again instead of performing the normal device card action (e.g., navigating to device details)."
+  },
+  {
+    "title": "Data collection dialog does not reappear after accepting it and clicking device card on first launch with location denied",
+    "steps": [
+      "1. Install the app and launch it for the first time.",
+      "2. When the location permission prompt appears, deny it.",
+      "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
+      "4. Observe that the data collection dialog is displayed on the FMD screen.",
+      "5. Tap the accept/agree button on the data collection dialog to accept it.",
+      "6. Verify the data collection dialog is dismissed and no longer visible.",
+      "7. Tap on any device card displayed on the FMD screen.",
+      "8. Observe the UI response."
+    ],
+    "expected": "After accepting the data collection dialog, tapping on a device card performs the normal expected action (e.g., navigating to device details) and the data collection dialog does NOT reappear."
+  },
+  {
+    "title": "Data collection dialog does not reappear after declining it and clicking device card on first launch with location denied",
+    "steps": [
+      "1. Install the app and launch it for the first time.",
+      "2. When the location permission prompt appears, deny it.",
+      "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
+      "4. Observe that the data collection dialog is displayed on the FMD screen.",
+      "5. Tap the decline/do-not-accept button on the data collection dialog to decline it.",
+      "6. Verify the data collection dialog is dismissed and no longer visible.",
+      "7. Tap on any device card displayed on the FMD screen.",
+      "8. Observe the UI response."
+    ],
+    "expected": "After declining the data collection dialog, tapping on a device card performs the normal expected action (e.g., navigating to device details) and the data collection dialog does NOT reappear."
+  },
+  {
+    "title": "Data collection dialog reappears after dismissing by tapping outside repeatedly and clicking device card on first launch with location denied",
+    "steps": [
+      "1. Install the app and launch it for the first time.",
+      "2. When the location permission prompt appears, deny it.",
+      "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
+      "4. Observe that the data collection dialog is displayed on the FMD screen.",
+      "5. Tap outside the data collection dialog to dismiss it.",
+      "6. Verify the dialog is dismissed.",
+      "7. Tap on a device card and verify the data collection dialog reappears.",
+      "8. Tap outside the data collection dialog again to dismiss it.",
+      "9. Verify the dialog is dismissed again.",
+      "10. Tap on a different device card (or the same device card) on the FMD screen.",
+      "11. Observe the UI response."
+    ],
+    "expected": "The data collection dialog reappears each time after dismissing it by tapping outside and then clicking a device card. This behavior repeats consistently \u2014 the dialog should not be permanently dismissable via tapping outside when a device card is subsequently clicked."
+  },
+  {
+    "title": "Data collection dialog does not reappear after dismissing by tapping outside and clicking non-interactive area on FMD screen with location denied",
+    "steps": [
+      "1. Install the app and launch it for the first time.",
+      "2. When the location permission prompt appears, deny it.",
+      "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
+      "4. Observe that the data collection dialog is displayed on the FMD screen.",
+      "5. Tap outside the data collection dialog to dismiss it.",
+      "6. Verify the data collection dialog is dismissed and no longer visible.",
+      "7. Tap on a non-interactive area of the FMD screen (e.g., empty space, background, or a label that is not a button or card).",
+      "8. Observe the UI response."
+    ],
+    "expected": "After dismissing the data collection dialog by tapping outside, tapping on a non-interactive area of the FMD screen does NOT cause the data collection dialog to reappear. The dialog remains dismissed."
+  }
+]
