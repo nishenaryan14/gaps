@@ -1,0 +1,33 @@
+{
+  "id": "64907039",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - Licenses - Source",
+  "feature": "App Settings - General - Licenses",
+  "scenario": "Verify that tapping each Source link in the Licenses section opens the corresponding license page on github.com.",
+  "steps": [
+    "1. Open the app and navigate to General > App Settings.",
+    "2. Locate the Licenses section.",
+    "3. For each individual license listed, tap on its Source link.",
+    "4. Observe the page that opens after tapping the link."
+  ],
+  "expected": "Tapping on each Source link opens github.com with the corresponding license page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Source link",
+    "Licenses section",
+    "license page",
+    "github.com",
+    "App Settings",
+    "General settings",
+    "link navigation",
+    "open external link"
+  ],
+  "source_last_updated": "1759327858",
+  "source_hash": "4424b1f080c516be6aec039019f1b2ae46b401798a72c8b9f60d4f412a7e3d12",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.104008Z",
+  "status": "active"
+}
