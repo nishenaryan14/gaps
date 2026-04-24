@@ -1,0 +1,34 @@
+{
+  "id": "65810685",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Charge case inside screen/forth screen, right zoom in/out",
+  "feature": "QSG (Quick Start Guide) - Charge Case Screen",
+  "scenario": "Clicking the right circle button on the fourth QSG screen toggles between a zoomed-in view with new text and a zoomed-out view showing the charge case.",
+  "steps": [
+    "Navigate to the fourth screen of the QSG.",
+    "Click the right circle button.",
+    "Observe the zoom and new text displayed.",
+    "Click the circle button again.",
+    "Observe the zoom out to the original screen showing the charge case inside."
+  ],
+  "expected": "On the fourth screen of the QSG, clicking the right circle button zooms in and displays new text. Clicking the circle button again zooms out to the original screen showing the charge case inside.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "QSG",
+    "fourth screen",
+    "right circle button",
+    "zoom toggle",
+    "charge case",
+    "zoom in",
+    "zoom out",
+    "text display"
+  ],
+  "source_last_updated": "1761315357",
+  "source_hash": "2148b22681bff987d2cc37779edfc087f87554f676b0b7933317001c28d700e8",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.407498Z",
+  "status": "active"
+}
