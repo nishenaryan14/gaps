@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "EQ - Change propagation, use two mobile phones",
   "feature": "EQ (Equalizer)",
-  "scenario": "Verify that EQ changes made on one phone are propagated to a second phone when both are paired with the same device.",
+  "scenario": "Verify EQ changes made on one phone are propagated to a second phone when both are paired with the same device.",
   "steps": [
     "Pair an EQ-supporting device with two different phones.",
     "Open the app on both phones.",
-    "Go to Device Settings and tap EQ on both phones.",
+    "Navigate to Device Settings and tap EQ on both phones.",
     "On the first phone, select Bass, Flat, Bright, or Custom.",
     "Check that the EQ change is reflected on the second phone."
   ],
-  "expected": "The EQ change made on the first phone is reflected on the second phone.",
+  "expected": "EQ changes made on the first phone are propagated and reflected on the second phone.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "EQ propagation",
+    "EQ changes",
+    "propagation",
+    "paired phones",
+    "device settings",
     "equalizer sync",
     "multi-phone pairing",
-    "device settings",
-    "audio profile sharing",
-    "Bluetooth paired devices",
-    "EQ change reflection"
+    "audio settings"
   ],
   "source_last_updated": "1761211347",
   "source_hash": "0b9c11b4814bc42541f04df174790d41318392f6588598085526727901d2050e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "processed_at": "2026-04-24T11:50:53.263445Z",
   "status": "active"
 }
