@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Home Screen - Device is up to date - Both earbuds are connected",
   "feature": "Home Screen",
-  "scenario": "Verify that the Lens App Status Box displays battery levels, connected status, and device image for up-to-date Osprey earbuds, with case field shown (unlike Tern), and tapping reveals software version.",
+  "scenario": "Verify that the Lens App Status Box displays battery levels, connected status, and device image for up-to-date Osprey earbuds, with case field shown (unlike Tern).",
   "steps": [
     "Ensure Osprey earbuds are updated to the newest firmware.",
     "Take both earbuds out of the case.",
@@ -13,23 +13,22 @@
     "Observe the Status Box in the app.",
     "Tap the Status Box to reveal additional details."
   ],
-  "expected": "The Lens App Status Box shows \"Left\", \"Right\", and \"Case\" fields with battery level and green indicator; \"Status\" field with \"connected\" status and green indicator; and an image of the device showing left and right earbuds. After tapping the Status Box, the \"Software\" field is revealed with software version and green indicator.",
+  "expected": "The Lens App Status Box shows \"Left\", \"Right\", and \"Case\" fields with battery level and green indicator; \"Status\" field with \"connected\" status and green indicator; and an image of the device showing left and right earbuds. After tapping the Status Box, the \"Software\" field is displayed with software version and green indicator.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Lens App",
     "Status Box",
-    "Osprey earbuds",
     "battery levels",
     "connected status",
     "device image",
+    "Osprey earbuds",
     "case field",
-    "software version",
     "firmware"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "aaa1ef69448b04fffbfc4afae8f34ec5ba0d7a340ace32d9fe731176c55b7a69",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.472079Z",
+  "processed_at": "2026-04-24T11:50:53.350967Z",
   "status": "active"
 }
