@@ -1,0 +1,35 @@
+{
+  "id": "66317728",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - Rename, emojis not allowed",
+  "feature": "Rename Device",
+  "scenario": "Verify that emojis are not allowed in the device name field, with the \"Done\" button disabled and the name unchanged on the Home screen.",
+  "steps": [
+    "Open the device settings page.",
+    "Tap on the device name field to edit it.",
+    "Enter an emoji (e.g., \ud83d\ude0a) into the device name field.",
+    "Observe the state of the 'Done' button.",
+    "Attempt to save or confirm the change.",
+    "Return to the Home screen and check the displayed device name."
+  ],
+  "expected": "The \"Done\" button should be disabled when an emoji is entered. The device name should not be changed. On the Home screen, the device name should remain unchanged.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "emoji validation",
+    "device name field",
+    "Done button disabled",
+    "input restriction",
+    "special characters",
+    "name unchanged",
+    "Home screen display",
+    "save prevention"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "a945b24f8c9947534b02f66873a1991bcc2269dbf9d5046c5e5d068cc278741d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "status": "active"
+}
