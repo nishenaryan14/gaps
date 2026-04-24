@@ -4,29 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Allow Once option is selected",
-  "feature": "Location Sharing",
-  "scenario": "After selecting \"Allow Once\" on location sharing dialogue, the app should re-prompt for location consent upon restart.",
+  "feature": "Location Sharing / Permissions",
+  "scenario": "After selecting \"Allow Once\" on iOS location permission dialogue, the app should re-prompt for location consent upon restart.",
   "steps": [
-    "Start app for first time, finish onboarding -> Home Screen with location dialogue showing \"Allow Once\", \"Allow While Using App\", \"Don't Allow\".",
-    "Tap \"Allow Once\", then navigate to App Settings > Find My Device -> FMD screen visible with no location dialogue.",
-    "Restart app -> User is prompted for location consent again on Home Screen."
+    "Start app for first time and finish onboarding \u2192 Home Screen shows location dialogue with options 'Allow Once', 'Allow While Using App', 'Don't Allow'.",
+    "Tap 'Allow Once', then navigate to App Settings \u2192 Find My Device \u2192 FMD screen is visible without location dialogue.",
+    "Restart the app \u2192 User should be prompted again for location consent on the Home Screen."
   ],
-  "expected": "After restarting the app, the user should be prompted for location consent again on the Home Screen.",
+  "expected": "After restarting the app, the user should be prompted again for location consent on the Home Screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "iOS location permission",
     "Allow Once",
-    "location consent",
-    "re-prompt",
+    "re-prompt location consent",
     "app restart",
-    "location permission",
-    "onboarding",
+    "location dialogue",
     "Home Screen",
+    "App Settings",
     "Find My Device"
   ],
   "source_last_updated": "1759149575",
   "source_hash": "75cf0171aea815d2a3a261bdfa08a972f4e02283926cdfa73f2e644499004f87",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.724408Z",
+  "processed_at": "2026-04-24T11:23:05.332869Z",
   "status": "active"
 }
