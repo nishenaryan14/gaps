@@ -1,0 +1,36 @@
+{
+  "id": "65868305",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings - Pair Headset with Charge Stand",
+  "feature": "Device Settings - Pair Headset with Charge Stand",
+  "scenario": "Verify that Charge Stand information appears in Device Settings > Software Update after placing a turned-on headset on the stand, and persists after removing the headset, restarting the device, and restarting the app, when the headset was not previously paired with the stand.",
+  "steps": [
+    "1. Ensure the headset is paired with the app but NOT paired with the charge stand (no Charge Stand info visible in Device Settings > Software Update).",
+    "2. Place a turned-on headset on the charge stand.",
+    "3. Navigate to Device Settings > Software Update and verify that information about the Charge Stand is displayed.",
+    "4. Remove the headset from the charge stand.",
+    "5. Restart the device.",
+    "6. Restart the app.",
+    "7. Navigate to Device Settings > Software Update again and verify that the Charge Stand information is still displayed."
+  ],
+  "expected": "After placing a turned-on headset on the charge stand, the Device Settings > Software Update tab displays information about the Charge Stand. This info persists after removing the headset from the stand, restarting the device, and restarting the app.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Charge Stand",
+    "Device Settings",
+    "Software Update",
+    "headset pairing",
+    "stand information persistence",
+    "device restart",
+    "app restart",
+    "unpaired stand"
+  ],
+  "source_last_updated": "1769430281",
+  "source_hash": "1f0561f4af0430c92f33c8849b56804f6dd307d486ef93349814ff4950d3fa6c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "status": "active"
+}
