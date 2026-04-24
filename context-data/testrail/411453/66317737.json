@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Rename device - new name on the Support device list",
   "feature": "Device Rename",
-  "scenario": "Verify that the renamed device appears with its new name in the Support device list",
+  "scenario": "Verify that the Support device list displays the updated name after renaming a device",
   "steps": [
     "Start the app with a device that has rename setting",
     "Change the device name",
@@ -16,17 +16,17 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "rename device",
-    "device name change",
     "Support device list",
+    "rename device",
+    "device name update",
     "Menu/Support",
-    "device list verification",
-    "app navigation",
-    "device settings"
+    "device renaming verification",
+    "support list display",
+    "name change reflection"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "65dc7a7e5eab1a82a47b6766378b2733495a6ab84851990ef0e5f84508a85c3d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "processed_at": "2026-04-24T11:50:53.213672Z",
   "status": "active"
 }
