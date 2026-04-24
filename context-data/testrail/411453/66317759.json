@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Device Settings - Settings screen for connected device",
   "feature": "Device Settings",
-  "scenario": "Navigate to Device Settings via the \"...\" button with a connected headset and verify all available settings tabs are displayed correctly.",
+  "scenario": "Navigate to Device Settings via the \"...\" button with a connected headset and verify all available settings tabs are displayed",
   "steps": [
     "1. Connect a device (e.g., Headset) to the app.",
     "2. Launch the app.",
@@ -13,7 +13,7 @@
     "4. Observe the settings section presented.",
     "5. Verify the available tabs (e.g., Onboarding, User Guides, Quick Start Guide, Fit Test, General, Language, Ringtones & Volume, Sensor, Wireless, Advanced, Reset device, Software Update, Voice Prompts & Tones)."
   ],
-  "expected": "A settings section is displayed with tabs appropriate for the connected device. Tabs may include: Onboarding, User Guides, Quick Start Guide, Fit Test, General, Language, Ringtones & Volume, Sensor, Wireless, Advanced, Reset device, Software Update, Voice Prompts & Tones.",
+  "expected": "A settings section is displayed with tabs appropriate for the connected device (e.g., Onboarding, User Guides, Quick Start Guide, Fit Test, General, Language, Ringtones & Volume, Sensor, Wireless, Advanced, Reset device, Software Update, Voice Prompts & Tones).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,11 +24,12 @@
     "User Guides",
     "Quick Start Guide",
     "Fit Test",
-    "Software Update"
+    "Software Update",
+    "Voice Prompts & Tones"
   ],
   "source_last_updated": "1762261740",
   "source_hash": "61b0e3c8e4965205f72d0d3c67fdc6afa7b83155807a7be35c62f10ec4ac1d14",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.375617Z",
+  "processed_at": "2026-04-24T11:50:53.210653Z",
   "status": "active"
 }
