@@ -6,15 +6,14 @@
   "summary": "iOS | Free20 | Repeat Notifications [DRAFT]",
   "feature": "iOS | Free20 | Notifications",
   "scenario": "Duplicate charging notifications appear when one earbud is worn and the other is placed in an open, unplugged charging case.",
-  "description_clean": "Repeat charging notifications appear when one earbud is worn and the other is placed in the open, unplugged charging case. Expected behavior: only one charging notification should appear since only one earbud is charging.",
+  "description_clean": "Repeat charging notifications appear when one earbud is worn and the other is placed in the open, unplugged charging case. Expected behavior is only one charging notification since only one earbud is charging.",
   "steps": [
-    "Put on one earbud (e.g., left earbud in ear).",
-    "Place the other earbud (e.g., right earbud) into the charging case.",
-    "Leave the charging case open and unplugged.",
-    "Observe the charging notifications that appear on the connected device."
+    "Take one earbud and wear it in your ear.",
+    "Take the other earbud and place it in the open, unplugged charging case.",
+    "Observe the charging notifications that appear on the device."
   ],
-  "expected": "Only one charging notification should appear since only one earbud is charging.",
-  "actual": "Repeat charging notifications appear when one earbud is worn and the other is placed in the open, unplugged charging case.",
+  "expected": "Only one charging notification should appear, since only one earbud is charging.",
+  "actual": "Repeat charging notifications appear.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -22,17 +21,16 @@
   ],
   "keywords": [
     "duplicate charging notifications",
-    "earbud",
-    "charging case",
-    "open case",
-    "unplugged",
-    "one earbud worn",
+    "earbud worn",
+    "earbud in open case",
+    "unplugged charging case",
     "false charging detection",
-    "bluetooth earbuds"
+    "single earbud charging",
+    "charging case open lid"
   ],
   "source_last_updated": "2026-04-24T09:04:35.000+0000",
   "source_hash": "bdd48f3ec61bbd613ac3d0b880880ac6aede6b8185784be2a15bf1f7e405bb2c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:32:10.356117Z",
+  "processed_at": "2026-04-24T10:33:27.891890Z",
   "status": "active"
 }
