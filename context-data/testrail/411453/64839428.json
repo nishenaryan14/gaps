@@ -5,34 +5,30 @@
   "project": "411453",
   "title": "[IOS] Location Sharing Dialogue - Don't Allow - Enable Now - Allow Once",
   "feature": "Location Sharing Dialogue",
-  "scenario": "Verify location sharing dialogue flow on iOS after onboarding with \"Don't Allow\", granting \"Ask Next Time\" permission, and handling subsequent permission popup options.",
+  "scenario": "Test location sharing dialogue on iOS after onboarding with \"Don't Allow\" selected, navigating to App settings > Find My Device and interacting with \"Enable Now\" and \"Allow Once\" permission prompts.",
   "steps": [
-    "Onboard with \"Don't Allow\" selected",
-    "Open Lens app",
-    "Navigate to App settings > Find My Device",
-    "Observe permission popup with \"Cancel\" and \"Enable Now\"",
-    "Tap \"Enable Now\"",
-    "Navigate to phone settings",
-    "Grant location permission with \"Ask Next Time or When I Share\"",
-    "Return to app",
-    "Observe \"Allow Poly Lens to use your location\" popup with options \"Allow Once\", \"Allow while using app\", and \"Don't Allow\""
+    "1. Onboard the user with 'Don't Allow' selected for location permissions.",
+    "2. Open the Lens app.",
+    "3. Navigate to App settings > Find My Device.",
+    "4. Interact with the location permission prompt by selecting 'Enable Now'.",
+    "5. Interact with the location permission prompt by selecting 'Allow Once'."
   ],
-  "expected": "After granting location permission with \"Ask Next Time or When I Share\" and returning to the app, the \"Allow Poly Lens to use your location\" popup appears with options \"Allow Once\", \"Allow while using app\", and \"Don't Allow\".",
+  "expected": "The Location Sharing dialogue should function correctly, allowing the user to grant location permissions via 'Enable Now' or 'Allow Once' after initially selecting 'Don't Allow' during onboarding.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "iOS location permissions",
-    "Ask Next Time",
-    "location sharing dialogue",
-    "Poly Lens app",
+    "iOS",
+    "location sharing",
+    "permissions",
     "Find My Device",
-    "permission popup",
+    "Enable Now",
     "Allow Once",
-    "Allow while using app"
+    "Don't Allow",
+    "onboarding"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "8d1b9ca7cab61d0e7e52367505a412a2a26f0005ddb9898161380f7fd0a528db",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.334469Z",
+  "processed_at": "2026-04-24T11:50:53.105751Z",
   "status": "active"
 }
