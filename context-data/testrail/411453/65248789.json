@@ -1,0 +1,33 @@
+{
+  "id": "65248789",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Disconnected / Out of range device details - Cancel button",
+  "feature": "Find My Device",
+  "scenario": "User taps Cancel (X) button on disconnected device details window and expects to return to the Find My Device map with connected devices list",
+  "steps": [
+    "1. Open the Find My Device app and ensure there is a disconnected/out-of-range device listed.",
+    "2. Tap on the disconnected/out-of-range device to view its details on the map.",
+    "3. Tap the Cancel (X) button on the details window.",
+    "4. Observe the result."
+  ],
+  "expected": "The details window should dismiss and the user should be returned to the Find My Device map showing the list of connected devices.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Cancel button",
+    "X button",
+    "disconnected device",
+    "details window",
+    "Find My Device",
+    "map view",
+    "connected devices list",
+    "return navigation"
+  ],
+  "source_last_updated": "1759928213",
+  "source_hash": "ab4e7ae7b7767f9e39040ca2b4a903865b9da00df89e81968ecf16974aa1f2e7",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.109523Z",
+  "status": "active"
+}
