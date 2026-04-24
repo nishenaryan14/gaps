@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "EQ - Saved Custom EQ, reset defaults - returns to Bass, but leaves custom not saved",
   "feature": "EQ (Equalizer)",
-  "scenario": "Reset Defaults in Device Settings reverts custom EQ to default preset and loses custom slider configuration",
+  "scenario": "After creating and saving a custom EQ, performing a \"Reset Defaults\" from Device Settings reverts the EQ to the Bass preset and resets slider values to default instead of retaining custom settings.",
   "steps": [
-    "Create and save a custom EQ preset",
-    "Go to Device Settings",
-    "Select Reset Device",
-    "Choose 'Reset Defaults'",
-    "Observe the EQ preset after reset"
+    "Create and save a custom EQ preset with specific slider values.",
+    "Go to Device Settings.",
+    "Select 'Reset Defaults'.",
+    "Observe the EQ preset and slider positions."
   ],
-  "expected": "The custom EQ preset should persist after performing a \"Reset Defaults\". The slider values should remain at the custom configuration.",
+  "expected": "The custom EQ preset should remain saved and selected, with slider values retaining the custom settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "custom EQ preset",
     "Reset Defaults",
     "Device Settings",
-    "custom EQ preset",
-    "slider configuration",
-    "EQ reset",
-    "preset loss",
-    "audio settings",
-    "factory reset"
+    "EQ slider values",
+    "Bass preset",
+    "default reset",
+    "EQ settings retention",
+    "preset override"
   ],
   "source_last_updated": "1761211957",
   "source_hash": "9dc50958a2a43adc1721551a9e78e7b9af4e3d5d2eca324b95848db456bb7f9c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "processed_at": "2026-04-24T11:50:53.262937Z",
   "status": "active"
 }
