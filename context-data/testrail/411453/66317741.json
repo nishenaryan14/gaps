@@ -4,8 +4,8 @@
   "type": "testcase",
   "project": "411453",
   "title": "Rename device - restart the app",
-  "feature": "Device Settings - Rename",
-  "scenario": "Device name change is lost after app restart",
+  "feature": "Device Settings - Rename Device",
+  "scenario": "Device name change is not persisted after app restart",
   "steps": [
     "Start the app with a device attached.",
     "Navigate to Device Settings > General.",
@@ -13,24 +13,23 @@
     "Enter a new name.",
     "Tap Done.",
     "Kill and restart the app.",
-    "Open Settings > General tab."
+    "Open Settings > General."
   ],
   "expected": "The new name should still be displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "device name change",
+    "name not persisted",
     "app restart",
-    "name persistence",
     "device settings",
-    "general tab",
     "rename device",
-    "settings lost",
-    "app kill restart"
+    "settings general",
+    "name reset after restart"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "bc4af1d6d2d6d75eea6cf62cc1c090ea89cb9773a5b10d667ef147fea98efef5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.379308Z",
+  "processed_at": "2026-04-24T11:50:53.216183Z",
   "status": "active"
 }
