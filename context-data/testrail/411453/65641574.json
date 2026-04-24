@@ -11,10 +11,10 @@
     "2. Select an EQ value (e.g., Bass, Flat, Bright, or Custom EQ).",
     "3. Close the EQ tab.",
     "4. Reopen the EQ tab.",
-    "5. Verify that the previously selected EQ value is still displayed and selected.",
-    "6. Repeat steps 1-5 for each of the following EQ values: Bass, Flat, Bright, Custom EQ."
+    "5. Observe the selected EQ value.",
+    "6. Repeat steps 1-5 for each possible EQ value (Bass, Flat, Bright, Custom EQ)."
   ],
-  "expected": "The previously selected EQ value persists and is displayed as selected after reopening the EQ tab, for all EQ values (Bass, Flat, Bright, Custom EQ).",
+  "expected": "The previously selected EQ value persists and is displayed after reopening the EQ tab for all possible EQ values.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +24,12 @@
     "Flat",
     "Bright",
     "Custom EQ",
-    "selected value persists",
-    "EQ settings"
+    "EQ value selection",
+    "EQ state preservation"
   ],
   "source_last_updated": "1761144510",
   "source_hash": "04c15b433f195aeded068205289b3ebbb70517b7687ddf33c565529ce789fc2b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.398291Z",
+  "processed_at": "2026-04-24T11:50:53.250815Z",
   "status": "active"
 }
