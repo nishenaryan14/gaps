@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "PPIP - Setting persistence when Share Data toggle is ON",
   "feature": "PPIP (Privacy & Permissions)",
-  "scenario": "Verify that the Share Data toggle persists its ON state after app restart when enabled.",
+  "scenario": "Verify that the Share Data toggle persists its ON state after app restart when enabled during onboarding.",
   "steps": [
     "Start the app fresh",
     "Go through onboarding",
@@ -17,22 +17,22 @@
     "Go to the same settings page (App Settings > General > Account)",
     "Verify the Share Data toggle remains ON"
   ],
-  "expected": "The Share Data toggle remains ON after app restart when the toggle was previously enabled.",
+  "expected": "The Share Data toggle remains ON after app restart when the toggle was enabled.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Share Data toggle",
     "persist ON state",
     "app restart",
-    "guest mode",
+    "onboarding",
+    "Continue as Guest",
     "location permission",
     "App Settings",
-    "Account settings",
-    "iOS"
+    "Account settings"
   ],
   "source_last_updated": "1760537917",
   "source_hash": "b088e6cfc142a8a9f75f0ea49ded4fccd173aea05d7f24b0ae336b4f585eeb90",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.311866Z",
+  "processed_at": "2026-04-24T11:50:53.094152Z",
   "status": "active"
 }
