@@ -1,0 +1,33 @@
+{
+  "id": "65641541",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - Change ANC Mode value (Adaptive/Standard)",
+  "feature": "ANC (Active Noise Cancellation)",
+  "scenario": "Verify that the ANC mode persists correctly when toggling between Adaptive and Standard after closing and reopening the ANC settings tab.",
+  "steps": [
+    "Start the app on an ANC-supported device.",
+    "Navigate to Device Settings > ANC.",
+    "Change the ANC value (Adaptive/Standard).",
+    "Close and reopen the ANC tab.",
+    "Check that the ANC mode remains at the selected value."
+  ],
+  "expected": "The ANC mode persists and remains at the selected value (Adaptive or Standard) after reopening the ANC tab.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "ANC mode",
+    "Adaptive",
+    "Standard",
+    "ANC settings",
+    "persistence",
+    "toggle",
+    "Device Settings"
+  ],
+  "source_last_updated": "1761055504",
+  "source_hash": "6afde0f16d3d97e1685b2a65d477d6156c0ec9393efe728ccce409827db1c570",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.392549Z",
+  "status": "active"
+}
