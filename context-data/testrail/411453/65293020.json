@@ -8,14 +8,14 @@
   "scenario": "Verify Onboarding screens maintain state and animation after app is backgrounded for 1-2 minutes and reopened",
   "steps": [
     "1. Open the app and navigate to the Onboarding screens (Organized, Up-to-Date, Personal).",
-    "2. Observe the current onboarding page and verify the animation is playing.",
+    "2. Observe the current screen and verify the animation is playing.",
     "3. Send the app to the background (e.g., press the Home button or switch to another app).",
     "4. Wait for 1-2 minutes while the app is in the background.",
     "5. Reopen the app by bringing it back to the foreground.",
-    "6. Check that the app remains on the same onboarding page as before being backgrounded.",
-    "7. Verify that the animation on that page is still working correctly."
+    "6. Check that the app remains on the same Onboarding screen (Organized, Up-to-Date, or Personal) as before being backgrounded.",
+    "7. Verify that the animation on that screen is still working correctly."
   ],
-  "expected": "The app stays on the same onboarding page with the animation still working after being backgrounded for 1-2 minutes.",
+  "expected": "The app stays on the same Onboarding screen with the animation still working after being backgrounded for 1-2 minutes.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +24,13 @@
     "animation continuity",
     "backgrounding",
     "foreground resume",
-    "app lifecycle",
-    "UI state persistence"
+    "Organized",
+    "Up-to-Date",
+    "Personal"
   ],
   "source_last_updated": "1768390358",
   "source_hash": "63a3ed4b21b42bb66c0cdd49b38fc2969205a214a122cb467f57119654734830",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.060270Z",
+  "processed_at": "2026-04-24T10:51:32.717778Z",
   "status": "active"
 }
