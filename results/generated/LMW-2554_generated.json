@@ -1,0 +1,147 @@
+[
+  {
+    "title": "TC-DFU-001: Successful DFU completion and firmware version persistence after restart",
+    "steps": [
+      "1. Connect the device to the test harness and ensure it is powered on.",
+      "2. Navigate to Settings > Device Firmware Update (DFU).",
+      "3. Initiate a firmware update to a known target version (e.g., v2.5.0).",
+      "4. Allow the update to progress to 100% completion.",
+      "5. Observe the device UI showing 'Update Complete' or 'Up to Date'.",
+      "6. Record the firmware version displayed on the device.",
+      "7. Restart the device via power cycle (hard restart).",
+      "8. After reboot, navigate to Settings > About Device and record the firmware version.",
+      "9. Compare the firmware version after restart with the target version from step 3."
+    ],
+    "expected": "The firmware version displayed after restart matches the target update version (v2.5.0). The device does not revert to the previous firmware version."
+  },
+  {
+    "title": "TC-DFU-002: DFU failure at >90% progress \u2014 device state and recovery",
+    "steps": [
+      "1. Connect the device and navigate to Settings > DFU.",
+      "2. Initiate a firmware update to a known target version.",
+      "3. Monitor the update progress bar.",
+      "4. When the progress reaches >90% (e.g., 93%), simulate an interruption (e.g., disconnect power or network).",
+      "5. Observe the device UI and any error messages.",
+      "6. Record the firmware version currently displayed on the device.",
+      "7. Restart the device.",
+      "8. After reboot, navigate to Settings > About Device and record the firmware version.",
+      "9. Attempt to re-initiate the DFU process and observe behavior."
+    ],
+    "expected": "The device shows an appropriate error message or remains on the previous firmware version. After restart, the device does not falsely report being 'Up to Date' with the target version. The user can re-attempt the DFU process."
+  },
+  {
+    "title": "TC-DFU-003: DFU progress stuck at >90% then completes \u2014 version integrity after restart",
+    "steps": [
+      "1. Connect the device and navigate to Settings > DFU.",
+      "2. Initiate a firmware update to a known target version.",
+      "3. Allow the update to reach >90% (e.g., 95%) and pause/stall the process for 30 seconds.",
+      "4. Resume the update and allow it to reach 100% completion.",
+      "5. Observe the device showing 'Update Complete' or 'Up to Date'.",
+      "6. Record the firmware version displayed.",
+      "7. Restart the device.",
+      "8. After reboot, navigate to Settings > About Device and record the firmware version.",
+      "9. Verify the firmware version matches the target version."
+    ],
+    "expected": "The firmware version after restart matches the target update version. The device does not revert to the previous firmware despite the stall at >90%."
+  },
+  {
+    "title": "TC-DFU-004: DFU update shows 'Up to Date' but reverts after restart (intermittent bug reproduction)",
+    "steps": [
+      "1. Connect the device and navigate to Settings > DFU.",
+      "2. Initiate a firmware update to a known target version.",
+      "3. Allow the update to reach >90% (e.g., 97%) and then simulate a brief network interruption (disconnect for 2 seconds, then reconnect).",
+      "4. Observe the device UI \u2014 it may show 'Update Complete' or 'Up to Date'.",
+      "5. Record the firmware version displayed on the device.",
+      "6. Restart the device.",
+      "7. After reboot, navigate to Settings > About Device and record the firmware version.",
+      "8. Compare the version after restart with the target version and the version displayed before restart.",
+      "9. Repeat steps 1-8 for 10 iterations to assess intermittency."
+    ],
+    "expected": "The firmware version after restart consistently matches the target update version across all iterations. No instance of the device reverting to the previous firmware version is observed."
+  },
+  {
+    "title": "TC-LANG-001: Language change completes successfully and persists after restart",
+    "steps": [
+      "1. Connect the device and navigate to Settings > Language.",
+      "2. Select a new language from the available list (e.g., switch from English to French).",
+      "3. Confirm the language change and observe the UI updating to the new language.",
+      "4. Verify that all UI elements, menus, and system dialogs are displayed in the new language.",
+      "5. Restart the device.",
+      "6. After reboot, navigate through the UI and verify the language setting.",
+      "7. Check system menus, settings, and notification dialogs for language consistency."
+    ],
+    "expected": "The device language remains set to the selected language (French) after restart. All UI elements are consistently displayed in the new language."
+  },
+  {
+    "title": "TC-LANG-002: Language change at >90% progress bar (simulated) \u2014 persistence after restart",
+    "steps": [
+      "1. Connect the device and navigate to Settings > Language.",
+      "2. Initiate a language change (e.g., English to German).",
+      "3. If a progress indicator is shown, wait until it reaches >90% completion.",
+      "4. If no progress bar exists, simulate a delay by interrupting the process at the final confirmation step (e.g., force close the settings app at the 'Applying' stage).",
+      "5. Observe the device UI and any partial language changes.",
+      "6. Record the current language displayed.",
+      "7. Restart the device.",
+      "8. After reboot, navigate to Settings > Language and verify the active language.",
+      "9. Check system-wide UI elements for language consistency."
+    ],
+    "expected": "The device either fully applies the new language or reverts cleanly to the previous language. No mixed-language UI state persists after restart. The device does not display a language that was not explicitly selected."
+  },
+  {
+    "title": "TC-LANG-003: Rapid language change followed by restart \u2014 state consistency",
+    "steps": [
+      "1. Connect the device and navigate to Settings > Language.",
+      "2. Change language from English to Spanish and confirm.",
+      "3. Immediately (within 2 seconds) restart the device without waiting for full UI refresh.",
+      "4. After reboot, navigate to Settings > Language and record the active language.",
+      "5. Verify system UI elements, menus, and dialogs for language consistency.",
+      "6. Repeat steps 1-5 for 5 iterations with different language pairs (e.g., EN->DE, EN->FR, EN->IT, EN->PT, EN->NL)."
+    ],
+    "expected": "The device language is consistently set to the selected language after each restart. No partial or mixed-language states are observed. The language setting is persisted correctly even when restart occurs immediately after selection."
+  },
+  {
+    "title": "TC-LANG-004: Language change reverts after restart (intermittent bug reproduction)",
+    "steps": [
+      "1. Connect the device and navigate to Settings > Language.",
+      "2. Change language from English to Japanese and confirm.",
+      "3. Observe the UI updating to Japanese.",
+      "4. Record the current language as displayed.",
+      "5. Restart the device.",
+      "6. After reboot, navigate to Settings > Language and record the active language.",
+      "7. Compare the language after restart with the selected language from step 2.",
+      "8. Repeat steps 1-7 for 10 iterations to assess intermittency.",
+      "9. If reversion is observed, document the iteration number and any patterns (e.g., specific language pair, timing)."
+    ],
+    "expected": "The device language remains set to Japanese after restart across all 10 iterations. No reversion to English or any other language is observed."
+  },
+  {
+    "title": "TC-DFU-LANG-001: Combined DFU and language change \u2014 both persist after restart",
+    "steps": [
+      "1. Connect the device and ensure it is on a known firmware version (e.g., v2.4.0) and language (English).",
+      "2. Navigate to Settings > Language and change language to French. Confirm.",
+      "3. While the language change is active, navigate to Settings > DFU.",
+      "4. Initiate a firmware update to target version v2.5.0.",
+      "5. Allow the DFU to reach 100% completion.",
+      "6. Observe the device showing 'Update Complete' in French.",
+      "7. Record the firmware version and language displayed.",
+      "8. Restart the device.",
+      "9. After reboot, verify the firmware version (should be v2.5.0) and language (should be French)."
+    ],
+    "expected": "Both the firmware version (v2.5.0) and language (French) persist correctly after restart. No reversion of either setting occurs."
+  },
+  {
+    "title": "TC-DFU-LANG-002: Language change during DFU at >90% \u2014 both settings integrity after restart",
+    "steps": [
+      "1. Connect the device on firmware v2.4.0 with language set to English.",
+      "2. Navigate to Settings > DFU and initiate update to v2.5.0.",
+      "3. When DFU progress reaches >90% (e.g., 92%), navigate to Settings > Language.",
+      "4. Change language from English to German and confirm.",
+      "5. Allow the DFU to complete to 100%.",
+      "6. Observe the device UI and record displayed firmware version and language.",
+      "7. Restart the device.",
+      "8. After reboot, verify firmware version (should be v2.5.0) and language (should be German).",
+      "9. Check for any UI inconsistencies or mixed-language elements."
+    ],
+    "expected": "The firmware version is v2.5.0 and the language is German after restart. No UI inconsistencies, mixed-language states, or setting reversions are observed."
+  }
+]
