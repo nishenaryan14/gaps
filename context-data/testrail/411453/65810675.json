@@ -1,0 +1,34 @@
+{
+  "id": "65810675",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Quick Start Guide - Osprey/Tern - First screen, single earbud/pairing - zoom in/out",
+  "feature": "Quick Start Guide",
+  "scenario": "Verify zoom in/out behavior of single earbud pairing screen in Quick Start Guide",
+  "steps": [
+    "Go to Device Settings > Quick Start Guide.",
+    "Click the blue circle button.",
+    "Verify the earbud zooms in with text matching the Figma Pairing screen.",
+    "Click the blue circle button again.",
+    "Verify the screen zooms out to the original view."
+  ],
+  "expected": "On first click, the earbud zooms in with text matching the Figma Pairing screen. On second click, the screen zooms out to the original view.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Quick Start Guide",
+    "earbud pairing",
+    "zoom in/out",
+    "blue circle button",
+    "Figma Pairing screen",
+    "single earbud",
+    "Device Settings",
+    "zoom behavior"
+  ],
+  "source_last_updated": "1763036615",
+  "source_hash": "c93c3e1864fe34b0f03550698d010c63943c592f6b1bf88c01afa4b155c79ab7",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "status": "active"
+}
