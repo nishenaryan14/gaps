@@ -1,0 +1,32 @@
+{
+  "id": "66363584",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Language Change - Checking pop up if at least one component is at low battery",
+  "feature": "Language Change",
+  "scenario": "Verify that changing the language shows an \"Update currently not available\" pop-up when at least one component has low battery.",
+  "steps": [
+    "1. Ensure at least one component (headset, earbud, or smart case) is at low battery level.",
+    "2. Attempt to change the language on the device.",
+    "3. Observe the pop-up message that appears."
+  ],
+  "expected": "A pop-up message \"Update currently not available, please try back later\" should appear.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "language change",
+    "low battery",
+    "update not available",
+    "pop-up message",
+    "headset",
+    "earbud",
+    "smart case",
+    "battery level"
+  ],
+  "source_last_updated": "1763383741",
+  "source_hash": "c0d89590446522d37af0026886eccdd4e85134cd065141155b2eee7acbf40370",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.383888Z",
+  "status": "active"
+}
