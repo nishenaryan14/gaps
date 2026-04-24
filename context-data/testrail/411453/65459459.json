@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Software Update - DFU - Software Update screen",
   "feature": "Software Update - DFU",
-  "scenario": "Verify that pairing a headset on outdated firmware and navigating to Device Settings > Software Update displays the update message and an active Continue button.",
+  "scenario": "Verify Software Update screen displays correctly with update message and active Continue button when a headset on outdated firmware is paired and connected.",
   "steps": [
-    "1. Pair and connect a headset with outdated firmware.",
-    "2. Navigate to Device Settings > Software Update.",
-    "3. Tap the Update button.",
-    "4. Observe the Software Update screen."
+    "Pair and connect a headset that is on outdated firmware.",
+    "Start the app.",
+    "Go to Device Settings Menu.",
+    "Tap on Software Update tab.",
+    "Tap on Update button."
   ],
-  "expected": "The Software Update screen displays the message \"An update is available for your device. The update takes a few minutes to complete. Let's get started\" and an active Continue button.",
+  "expected": "Software Update screen is shown with the message \"An update is available for your device. The update takes a few minutes to complete. Let's get started\" and the Continue button is available and active.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "headset",
+    "Software Update screen",
     "outdated firmware",
-    "Device Settings",
-    "Software Update",
+    "headset paired connected",
     "update message",
-    "Continue button",
-    "pairing",
+    "Continue button active",
+    "Device Settings Menu",
     "Update button"
   ],
   "source_last_updated": "1763122636",
   "source_hash": "16e6c3db2e3e17e2ed89acaf26d854e9fbe1ba032a3b8a0c3e5992e8e1184fdb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.413186Z",
+  "processed_at": "2026-04-24T11:50:53.289376Z",
   "status": "active"
 }
