@@ -1,0 +1,37 @@
+{
+  "id": "65640173",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Firmware Update Completed",
+  "feature": "Analytics",
+  "scenario": "Verify that after a successful DFU (firmware update) on any device, the Firebase page opens correctly with all default and DFU-specific elements, and event counts increase after a few hours.",
+  "steps": [
+    "1. Perform a DFU (firmware update) on any device.",
+    "2. Wait for the DFU process to complete successfully.",
+    "3. Open the Firebase page.",
+    "4. Verify that the page loads properly.",
+    "5. Check that the following default elements are present: Graph, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, App Environment.",
+    "6. Check that the following additional elements are present: Device PID, Charge Unit PID, Update Type, Target Language ID.",
+    "7. Wait a few hours after the DFU completes.",
+    "8. Check that event counts for related elements have increased."
+  ],
+  "expected": "The Firebase page opens properly and displays all default elements (Graph, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, App Environment) plus Device PID, Charge Unit PID, Update Type, and Target Language ID. After a few hours, event counts for related elements increase.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU",
+    "firmware update",
+    "Firebase",
+    "event counts",
+    "Device PID",
+    "Charge Unit PID",
+    "Update Type",
+    "Target Language ID"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "c82cec22de20324500f2e8f4cd30e54cacd651d401b991982ff3e376dd49fa64",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.428522Z",
+  "status": "active"
+}
