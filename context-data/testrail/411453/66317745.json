@@ -1,0 +1,35 @@
+{
+  "id": "66317745",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - turn off/on the device",
+  "feature": "Device Settings - Rename",
+  "scenario": "Verify that a renamed device persists after power cycling the device.",
+  "steps": [
+    "Start app with device attached",
+    "Navigate to Device Settings > General",
+    "Click the device's official name",
+    "Enter a new name",
+    "Tap Done",
+    "Turn device off",
+    "Turn device on",
+    "Check the name"
+  ],
+  "expected": "The new name is still displayed in Home and Settings.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "rename device",
+    "power cycle",
+    "device name persistence",
+    "device settings",
+    "reboot verification",
+    "device configuration"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "bad31d081bb09fcfa58be70020394f99d17f0edeec631c79d5bdbcc1c5266452",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "status": "active"
+}
