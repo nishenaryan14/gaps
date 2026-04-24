@@ -8,7 +8,7 @@
   "scenario": "Verify that a personal user (logged in or Guest) using the mobile app can see and successfully perform a software update notification for a headset on outdated firmware.",
   "steps": [
     "Download/install/log in to the mobile app.",
-    "Connect a device on outdated firmware.",
+    "Connect a device with outdated firmware.",
     "Navigate to the Home Screen.",
     "Check the SW update status \u2014 the update should be present.",
     "Tap the update button and complete the DFU process \u2014 the update should be performed successfully."
@@ -23,12 +23,12 @@
     "DFU process",
     "software update notification",
     "outdated firmware",
-    "device firmware upgrade",
-    "over-the-air update"
+    "device connection",
+    "home screen"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "43eef6fc1d6d9b4591c4b3b6b89f1f951957a73903e4179945c5d827678c847d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "processed_at": "2026-04-24T11:50:53.319401Z",
   "status": "active"
 }
