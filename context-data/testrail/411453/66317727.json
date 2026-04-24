@@ -1,0 +1,31 @@
+{
+  "id": "66317727",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - only one earbud is connected, rename is not possible",
+  "feature": "Device Settings - Rename",
+  "scenario": "Rename device option is unavailable when only one earbud is connected",
+  "steps": [
+    "Start the app with one earbud connected.",
+    "Navigate to Device Settings - General.",
+    "Try to rename device."
+  ],
+  "expected": "Rename is not possible.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "rename device",
+    "earbud",
+    "single earbud",
+    "device settings",
+    "rename unavailable",
+    "one earbud connected",
+    "app settings"
+  ],
+  "source_last_updated": "1769431307",
+  "source_hash": "ac2db836b12a7467309ddf136381716d9b5c52d7270e92800e2a0dcf1eb4f6e0",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.375617Z",
+  "status": "active"
+}
