@@ -7,25 +7,25 @@
   "feature": "Support / Account Linking",
   "scenario": "Verify data correctness when switching from an account linked to a tenant to an account with a pending invite",
   "steps": [
-    "Log in with Account linked to Tenant A, go to Support > App, verify Tenant A info is present.",
-    "Logout, log in with a different Account not linked to any Tenant but with a pending invite, go to Support > App, verify Tenant name and ID are not present on the card."
+    "Log in with Account linked to Tenant A, go to Support > App, and confirm Tenant A info is present.",
+    "Log out, log in with a different Account that is not linked to any Tenant but has a pending invite, go to Support > App, and confirm Tenant name and ID are not present on the card."
   ],
-  "expected": "After moving from an Account linked to a Tenant to an Account with a pending invite, the data should be correct: Tenant A info is present for the linked account, and Tenant name and ID are not present on the card for the account with a pending invite.",
+  "expected": "Data is correct after moving from an Account linked to a Tenant to an Account with a pending invite. Tenant A info is present for the first account, and Tenant name and ID are not present on the card for the second account.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "tenant switching",
     "account invite",
     "data correctness",
-    "support app",
-    "tenant info visibility",
     "pending invite",
-    "logout login",
-    "tenant ID"
+    "tenant info visibility",
+    "support app",
+    "multi-tenant",
+    "access validation"
   ],
   "source_last_updated": "1759752651",
   "source_hash": "30b956325211cdc09072cf4d2d9c1c07a50af9c3eba9a0c0255b268b0a266923",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.362417Z",
+  "processed_at": "2026-04-24T11:50:53.197011Z",
   "status": "active"
 }
