@@ -5,32 +5,32 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 DFU stuck at 99% on Morpheus devices (VOY5200,VOY8200)",
   "feature": "Android DFU (Device Firmware Update) - Morpheus devices",
-  "scenario": "Language update on Morpheus devices (VOY5200, VOY8200) gets stuck at 99% for ~8 minutes, causing total update time to exceed 10 minutes instead of the expected 1-2 minutes.",
-  "description_clean": "Language update (LANG UPDATE) gets stuck at 99% for almost 8 minutes on Morpheus devices (VOY5200, VOY8200) before completing. Previously, language changes took 1-2 minutes, but now they take 10 minutes or more. Expected behavior: language update should complete within 2 minutes for Morpheus devices.",
+  "scenario": "Language update on Morpheus devices gets stuck at 99% for ~8 minutes, increasing total update time from 1-2 minutes to 10+ minutes.",
+  "description_clean": "Language update (LANG UPDATE) gets stuck at 99% for almost 8 minutes on Morpheus devices (VOY5200, VOY8200) before completing. Previously, language changes took 1-2 minutes, but now they take 10 minutes or more. Expected behavior is completion within 2 minutes.",
   "steps": [
-    "1. Start a language update (LANG UPDATE) on a Morpheus device (VOY5200 or VOY8200).",
+    "1. Initiate a language update (LANG UPDATE) on a Morpheus device (e.g., VOY5200 or VOY8200).",
     "2. Observe the progress of the language update.",
     "3. Note that the update gets stuck at 99% for almost 8 minutes.",
     "4. Wait for the update to eventually complete."
   ],
-  "expected": "Language update should complete within 2 minutes for Morpheus devices.",
-  "actual": "Language update gets stuck at 99% for almost 8 minutes, taking 10 minutes or more to complete (previously took 1-2 minutes).",
+  "expected": "The language update should complete within 2 minutes.",
+  "actual": "The language update gets stuck at 99% for almost 8 minutes, taking 10 minutes or more to complete.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "Morpheus",
-    "VOY5200",
-    "VOY8200",
     "language update",
     "stuck at 99%",
-    "update time exceeds 10 minutes",
+    "update time",
+    "VOY5200",
+    "VOY8200",
     "LANG UPDATE",
-    "update delay"
+    "update stuck"
   ],
   "source_last_updated": "2026-04-22T13:09:16.000+0000",
   "source_hash": "3d6d5396ad8c6402f24177d813d69d763bc1596b60d37fff1745e6905bc16d86",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:04.985013Z",
+  "processed_at": "2026-04-24T11:50:52.779587Z",
   "status": "active"
 }
