@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Find My Device - Allow While Using App [Deprecated for IOS]",
   "feature": "Find My Device",
-  "scenario": "Verify that granting \"Allow While Using App\" location permission in Find My Device displays the permission prompt, shows Location and Geo icons, and does not re-prompt after app restart.",
+  "scenario": "Verify that granting \"Allow While Using App\" location permission in Find My Device displays the expected permission prompt, shows Location and Geo icons, and does not re-prompt after app restart.",
   "steps": [
     "Connect HS",
     "Go to main menu",
@@ -21,14 +21,14 @@
     "Allow While Using App",
     "location permission",
     "permission prompt",
-    "Location icon",
     "Geo icon",
+    "Location icon",
     "app restart",
     "no re-prompt"
   ],
   "source_last_updated": "1760352196",
   "source_hash": "7bc154d874068a1127fe583a5df6eb2595524b144a44743171f364373edd88ea",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.358391Z",
+  "processed_at": "2026-04-24T11:50:53.173840Z",
   "status": "active"
 }
