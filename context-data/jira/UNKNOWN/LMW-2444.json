@@ -4,30 +4,32 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 FALCON \ud83c\udfa7 \"Falcon\" code name on onboarding screens",
-  "feature": "iOS FALCON - Onboarding",
-  "scenario": "Onboarding screens display device code name \"Falcon\" instead of the proper product name when a Falcon device is paired.",
-  "description_clean": "On the onboarding screens, the device code name \"Falcon\" is displayed instead of the proper product name. Steps: Pair a Falcon device with the app, then go to Device Settings > Onboarding. Expected: The proper name should be used on onboarding screens.",
+  "feature": "iOS - FALCON / Onboarding",
+  "scenario": "Onboarding screens display the device code name \"Falcon\" instead of the proper product name on the iOS FALCON app.",
+  "description_clean": "On the iOS FALCON app, the device code name \"Falcon\" is displayed on onboarding screens instead of the proper product name. Expected: the proper name should be used on onboarding screens.",
   "steps": [
-    "Pair a Falcon device with the app",
-    "Go to Device Settings > Onboarding"
+    "Open the iOS FALCON app",
+    "Navigate to the onboarding screens",
+    "Observe the device code name displayed"
   ],
-  "expected": "The proper name should be used on onboarding screens.",
-  "actual": "The device code name \"Falcon\" is displayed instead of the proper product name.",
+  "expected": "The proper product name should be used on onboarding screens.",
+  "actual": "The device code name \"Falcon\" is displayed on onboarding screens instead of the proper product name.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "Falcon",
-    "device code name",
-    "product name",
+    "iOS FALCON app",
     "onboarding screens",
-    "paired device",
-    "Device Settings",
-    "Onboarding"
+    "device code name",
+    "Falcon",
+    "product name",
+    "display issue",
+    "iOS",
+    "FALCON"
   ],
   "source_last_updated": "2026-04-14T11:32:09.000+0000",
   "source_hash": "53e4081ec8f5a6e584d4bdac8092f69dcd84285052b42e5dceee63a49d43367e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.056019Z",
+  "processed_at": "2026-04-24T10:51:32.696811Z",
   "status": "active"
 }
