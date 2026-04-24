@@ -1,0 +1,32 @@
+{
+  "id": "65641612",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit test - 2nd screen \"X\" button",
+  "feature": "Fit Test",
+  "scenario": "Verify that the \"X\" button on the second screen of the Fit Test closes the Fit Test and returns the user to Device Settings.",
+  "steps": [
+    "Open the Fit Test on the device.",
+    "Navigate to the second screen of the Fit Test.",
+    "Tap the 'X' button on the second screen."
+  ],
+  "expected": "The Fit Test screen closes and the user is returned to Device Settings.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Fit Test",
+    "X button",
+    "close",
+    "second screen",
+    "Device Settings",
+    "return",
+    "navigation",
+    "exit"
+  ],
+  "source_last_updated": "1760963417",
+  "source_hash": "94ec9ef2865711ebb54b5602c934bbb7fb9811f1c62401a14d7aff32342c55ba",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.380320Z",
+  "status": "active"
+}
