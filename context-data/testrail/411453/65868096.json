@@ -8,27 +8,28 @@
   "scenario": "Verify that the app loads missing internet-dependent content (e.g., images) after re-establishing network connectivity.",
   "steps": [
     "Launch the app while the device has no internet connection.",
-    "Observe the device list to confirm the device appears.",
-    "Check the home page for features that require internet (e.g., images).",
+    "Observe the device list on the home screen.",
+    "Check if the device appears on the list.",
+    "Verify that features requiring internet (e.g., images on the home page) are missing or not displayed.",
     "Turn on the internet connection on the device.",
-    "Observe the home page and verify that all data and images load and display properly."
+    "Wait for the app to refresh or manually refresh the home page.",
+    "Check that all data and images load and display properly."
   ],
   "expected": "After turning on the internet, all data and images should load and display properly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "offline mode",
-    "network connectivity",
-    "content loading",
-    "image loading",
-    "reconnection",
-    "internet recovery",
-    "data synchronization",
-    "app behavior"
+    "offline loading",
+    "network reconnection",
+    "content refresh",
+    "missing images",
+    "internet connectivity",
+    "app reload",
+    "data synchronization"
   ],
   "source_last_updated": "1761837735",
   "source_hash": "804d39e90d36b8909a435313b070366d438613f18094783d4b0a6db6e19b443f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.728438Z",
+  "processed_at": "2026-04-24T11:23:05.335995Z",
   "status": "active"
 }
