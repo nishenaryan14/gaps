@@ -1,0 +1,32 @@
+{
+  "id": "65640115",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Mobile user uninstalls the mobile app",
+  "feature": "Mobile App / User Management",
+  "scenario": "Registered mobile user's status changes to inactive on Lens tenant after uninstalling the mobile app",
+  "steps": [
+    "1. Ensure a registered mobile user exists on the Lens tenant (Manage/Device Users page).",
+    "2. Have the user uninstall the mobile app from their device.",
+    "3. Navigate to the Manage/Device Users page on the Lens tenant.",
+    "4. Check the status of the user."
+  ],
+  "expected": "The user's status should change to \"inactive\" after uninstalling the mobile app.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Lens tenant",
+    "mobile user inactive",
+    "uninstall mobile app",
+    "device user status",
+    "Manage Device Users",
+    "registered user",
+    "user status change"
+  ],
+  "source_last_updated": "1760949362",
+  "source_hash": "e5736a65aa66932c5957ae56eabe8aadc954c269397852d75ae1151453b2431e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "status": "active"
+}
