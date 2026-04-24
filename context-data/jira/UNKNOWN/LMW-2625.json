@@ -5,8 +5,8 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 DFU flow can proceed on Software Update page even though device was disconnected",
   "feature": "DFU Flow / Software Update",
-  "scenario": "User is incorrectly navigated to Three Easy Steps page instead of seeing an error message when headset disconnects during DFU flow on Software Update page",
-  "description_clean": "After entering the DFU flow and navigating to the Software Update page, if the headset is disconnected and the user tries to continue, they are incorrectly navigated to the Three Easy Steps page instead of being shown an error message: \"Update currently not available, please try back later.\" The severity is Minor because the user is ultimately prevented from completing the DFU flow when the device is disconnected mid-flow.",
+  "scenario": "User is incorrectly navigated to the Three Easy Steps page instead of seeing an error message when the headset disconnects during the DFU flow on the Software Update page.",
+  "description_clean": "After entering the DFU flow and navigating to the Software Update page, if the headset is disconnected and the user tries to continue, they are incorrectly navigated to the Three Easy Steps page instead of being shown an error message: \"Update currently not available, please try back later.\" The severity is Minor because the user is ultimately prevented from completing the DFU flow if the device is disconnected mid-flow.",
   "steps": [
     "Enter the DFU flow",
     "Navigate to the Software Update page",
@@ -24,12 +24,12 @@
     "headset disconnect",
     "Three Easy Steps page",
     "error message",
-    "navigation error",
+    "navigation issue",
     "firmware update"
   ],
   "source_last_updated": "2026-04-23T09:49:42.000+0000",
   "source_hash": "b7eb5debf54f242eceff5449ea011c4566cc6a7197a38c7ae4c3391af68613be",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.360072Z",
+  "processed_at": "2026-04-24T11:23:04.916055Z",
   "status": "active"
 }
