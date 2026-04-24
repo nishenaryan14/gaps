@@ -1,0 +1,33 @@
+{
+  "id": "66765230",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Quick Start Guide - Emu - First Screen, Charge Case/ Pairing 1 - zoom in/out",
+  "feature": "Quick Start Guide - Emu",
+  "scenario": "Verify zoom in/out functionality on the first screen of Emu Quick Start Guide by clicking the blue circle button on Charge Case",
+  "steps": [
+    "Go to Device Settings > Quick Start Guide.",
+    "Click the blue circle button on Charge Case.",
+    "Verify the earbud zooms in with text matching Figma Pairing (Option 1) screen.",
+    "Click the blue circle button again.",
+    "Verify the screen zooms out to the original view."
+  ],
+  "expected": "On first click, the earbud zooms in with text matching Figma Pairing (Option 1) screen. On second click, the screen zooms out to the original view.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "zoom in/out",
+    "Emu Quick Start Guide",
+    "blue circle button",
+    "Charge Case",
+    "Figma Pairing screen",
+    "earbud zoom",
+    "Device Settings"
+  ],
+  "source_last_updated": "1763037043",
+  "source_hash": "ee9a34f8bff038d7b1c5fd7dc67ae81a8d9fd28fd4dc3ae50015cf0301675cf9",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.407498Z",
+  "status": "active"
+}
