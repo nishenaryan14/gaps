@@ -1,0 +1,32 @@
+{
+  "id": "66363516",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "[Cloud] Flamingo - Pair headset with charge case",
+  "feature": "Cloud - Device Pairing",
+  "scenario": "Verify that a Flamingo headset paired with a charge case is correctly displayed on the Cloud website with separate earpiece and charge case details.",
+  "steps": [
+    "Turn off headset, place it in the charge case, close the case, wait, then open the case and turn on the headset.",
+    "Open the Cloud web page and locate the device.",
+    "Click the device to open the details page."
+  ],
+  "expected": "Headset turns on, app shows battery levels for headset and charge case. On the Cloud website, the device is displayed as \"Voyager Legend 50 UC\". The details page shows earpiece and charge case info, the image shows both, and the component section has separate entries for earpiece and charge case.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Flamingo headset",
+    "charge case",
+    "Cloud website",
+    "device details page",
+    "earpiece",
+    "pairing verification",
+    "device display",
+    "headset status"
+  ],
+  "source_last_updated": "1762331223",
+  "source_hash": "d232ced6fe22a87b07530dd4a1b8aedf0902b4633d41a5c1a93c019db2c5e237",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.431094Z",
+  "status": "active"
+}
