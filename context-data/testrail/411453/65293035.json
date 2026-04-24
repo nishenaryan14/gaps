@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Onboarding - Check onboarding screens UI",
   "feature": "Onboarding",
-  "scenario": "Verify the UI of all onboarding screens (Organized, Up-to-Date, Personal) matches the Figma design reference.",
+  "scenario": "Verify the UI of onboarding screens (Organized, Up-to-Date, Personal pages) matches Figma design reference",
   "steps": [
-    "Start the app for the first time",
-    "Progress through onboarding until reaching the \"Organized\" screen",
-    "Verify the Organized page UI matches the Figma design",
-    "Swipe to the next page",
-    "Verify the Up-to-Date page UI matches the Figma design",
-    "Swipe to the next page",
-    "Verify the Personal page UI matches the Figma design"
+    "Open the app and navigate to the onboarding flow.",
+    "Verify the UI of the Organized page matches the Figma reference: https://www.figma.com/design/kVruq94TvQDlPCELGmJcs5/Studio-Mobile-Spec?node-id=9176-39256&t=TUmBPGsfUnsn5Xme-0",
+    "Verify the UI of the Up-to-Date page matches the Figma reference.",
+    "Verify the UI of the Personal page matches the Figma reference."
   ],
-  "expected": "All onboarding screens (Organized, Up-to-Date, Personal) display UI elements matching the Figma design reference.",
+  "expected": "All three onboarding screens (Organized, Up-to-Date, Personal) match the Figma design reference.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "onboarding screens",
     "UI verification",
-    "Figma design",
-    "Organized screen",
-    "Up-to-Date screen",
-    "Personal screen",
-    "visual matching",
-    "first launch"
+    "Figma design reference",
+    "Organized page",
+    "Up-to-Date page",
+    "Personal page",
+    "mobile UI matching",
+    "onboarding flow"
   ],
   "source_last_updated": "1768389325",
   "source_hash": "7dd60c5e113dfcf6747fe7928d70b0c469b87bc1c8245cb29c9157dd5eef8b38",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.311356Z",
+  "processed_at": "2026-04-24T11:50:53.095658Z",
   "status": "active"
 }
