@@ -1,0 +1,33 @@
+{
+  "id": "65459829",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications - Device charging OFF",
+  "feature": "Notifications",
+  "scenario": "Verify that the \"Charging\" notification does not appear when \"Device Charging\" notification is disabled and a headset is connected to the charger while the app is in the background.",
+  "steps": [
+    "Open Poly Lens Menu",
+    "Navigate to General > Notifications & Device Alerts",
+    "Turn off 'Device Charging' notification",
+    "Put the app in the background",
+    "Connect a headset (not fully charged) to the charger"
+  ],
+  "expected": "The \"Charging\" notification should not appear.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Charging notification",
+    "Device Charging disabled",
+    "headset connected to charger",
+    "background app",
+    "Poly Lens",
+    "Notifications & Device Alerts",
+    "charging alert suppressed"
+  ],
+  "source_last_updated": "1761226637",
+  "source_hash": "d71bf242e5604cdb424f5d8c33f4aff28ea88590ec3cfb5c31943fab5bfb14db",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.418756Z",
+  "status": "active"
+}
