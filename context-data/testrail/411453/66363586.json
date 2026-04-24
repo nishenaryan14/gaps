@@ -1,0 +1,35 @@
+{
+  "id": "66363586",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "DFU - Three Easy Steps page - Disconnecting/Connecting earbuds to check DFU pop up",
+  "feature": "DFU (Device Firmware Update)",
+  "scenario": "Verify that disconnecting and reconnecting earbuds during DFU update on the Three Easy Steps page shows appropriate error popup and returns user to the same page.",
+  "steps": [
+    "Connect both earbuds, navigate to Software Update, tap Update then Continue to open the Three Easy Steps page.",
+    "Disconnect the Right Earbud (place in charge case, close case if needed) and tap Start Update.",
+    "Reconnect Right Earbud.",
+    "Tap OK on popup.",
+    "Disconnect Right Earbud again and tap Start Update.",
+    "Reconnect Left Earbud.",
+    "Tap OK on popup."
+  ],
+  "expected": "Step 2: \"Update currently not available, please try back later\" popup appears. Step 3: Popup remains. Step 4: Popup closes and user returns to Three Easy Steps page. Step 5: Same popup appears. Step 6: Popup remains. Step 7: Popup closes and user returns to Three Easy Steps page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU update",
+    "earbuds disconnect reconnect",
+    "Three Easy Steps page",
+    "error popup",
+    "Software Update",
+    "Start Update",
+    "charge case"
+  ],
+  "source_last_updated": "1762331664",
+  "source_hash": "aa2e575fb39bd8169c4b5535149bf22971a50cdeb5e73abc789257753cb3a48a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:11.672727Z",
+  "status": "active"
+}
