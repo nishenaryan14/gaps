@@ -1,0 +1,33 @@
+{
+  "id": "66363526",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "[Cloud] Flamingo - Connect headset already paired with charge case",
+  "feature": "Cloud - Flamingo",
+  "scenario": "Connect a headset that is already paired with the charge case to the app and verify it appears correctly on the Cloud web page with separate earpiece and charge case components.",
+  "steps": [
+    "Connect a headset that is already paired with the charge case.",
+    "Pair headset with the app.",
+    "Open Cloud web page and find your device.",
+    "Click on the device on cloud web page to open details page."
+  ],
+  "expected": "1) Headset appears in the app. 2) Device is displayed as \"Voyager Legend 50 UC\". 3) Details for the device are displayed. Information for earpiece and charge case is visible. Image shows earpiece and charge case. Component section is present with separate entries for earpiece and charge case.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "headset",
+    "charge case",
+    "app pairing",
+    "Cloud web page",
+    "earpiece",
+    "device details",
+    "Bluetooth",
+    "device verification"
+  ],
+  "source_last_updated": "1762331223",
+  "source_hash": "69458d429675ffeae82eb97b83164f03b28bfbcae07e6defa287a6fcf13e6030",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "status": "active"
+}
