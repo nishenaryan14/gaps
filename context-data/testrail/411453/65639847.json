@@ -5,27 +5,26 @@
   "project": "411453",
   "title": "1 step DFU - Content of Software Update tab with available update for Earbuds and Charge Case on FW 5038",
   "feature": "Software Update / DFU",
-  "scenario": "Verify that only the Earbuds update is shown in Software Update when an update is available for Earbuds and the Charge Case is on FW 5038 (which does not support 1-step DFU).",
+  "scenario": "Verify that only the Earbuds update is shown in the Software Update tab when an update is available for Earbuds and the Charge Case is on FW 5038 (which does not support 1-step DFU).",
   "steps": [
     "Start the app with Osprey EB on a lower version (has update) and CC on version 5038.",
     "Go to Device Settings > Software Update."
   ],
-  "expected": "Only the Earbuds update is shown, since Charge Case on 5038 does not support 1-step DFU. Note: When device is on version 5038, a case toast is present with the same pattern as Tern (appears after app restart, for a specific number of times, and after earbuds DFU).",
+  "expected": "Only Earbuds update is shown, since Charge Case on 5038 does not support 1-step DFU. Note: When device is on version 5038, a case toast appears with the same pattern as Tern (after app restart, for a specific number of times, and after earbuds DFU).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Earbuds update",
-    "Software Update",
+    "Software Update tab",
     "Charge Case FW 5038",
     "1-step DFU not supported",
-    "Osprey EB",
+    "Osprey EB lower version",
     "Device Settings",
-    "firmware version",
     "update availability"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "13b8fef265a9f9959e3650bdf48244f8d6fd4b4fd3aa7df192b1b04f8bb4cf5c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "processed_at": "2026-04-24T11:50:53.300892Z",
   "status": "active"
 }
