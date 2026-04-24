@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Device(headset) inventory details",
   "feature": "Device Inventory",
-  "scenario": "Verify connected headset inventory details (model, serial number, last detected, software version) are displayed correctly after logging in and selecting the device from the inventory list.",
+  "scenario": "Verify that connected headset inventory details (model, serial number, last detected, software version) are displayed correctly after logging into the Lens app and selecting a device from the inventory.",
   "steps": [
-    "Start the Lens app with headset connected",
-    "Navigate to Poly Lens Menu > General > Account",
-    "Log in with credentials",
-    "Go to Lens server inventory",
-    "Click on a device from the inventory"
+    "Start the Lens app with the headset connected.",
+    "Navigate to Poly Lens Menu > General > Account.",
+    "Log in with valid credentials.",
+    "Go to Lens server inventory.",
+    "Click on a device from the inventory."
   ],
   "expected": "Connected device details such as device model, serial number, last detected, and software version are visible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "headset inventory",
+    "Lens app",
     "device details",
-    "Poly Lens",
-    "inventory list",
+    "model",
     "serial number",
     "software version",
-    "device model",
-    "login credentials"
+    "Poly Lens",
+    "inventory verification"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "1c142f0ab98cab07692d0d63277556aba8099d13fd6d98cb89a5b35ed0b163f4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "processed_at": "2026-04-24T11:50:53.322651Z",
   "status": "active"
 }
