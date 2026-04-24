@@ -1,0 +1,33 @@
+{
+  "id": "77542134",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Can be completed for standalone headsets",
+  "feature": "Software Update - DFU",
+  "scenario": "Verify DFU completes successfully for standalone headsets on outdated firmware via Device Settings > Software update",
+  "steps": [
+    "Pair headset with the app.",
+    "Go to Device Settings > Software.",
+    "Tap on update button.",
+    "Wait for the process to complete."
+  ],
+  "expected": "DFU for standalone headsets completes successfully.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU",
+    "Device Firmware Update",
+    "standalone headset",
+    "outdated firmware",
+    "Device Settings",
+    "Software update",
+    "firmware upgrade",
+    "headset pairing"
+  ],
+  "source_last_updated": "1770389945",
+  "source_hash": "5e8c37248a199e0a213482a9202bf21fe603bd9c93598f6e38f34d4972a05f3d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "status": "active"
+}
