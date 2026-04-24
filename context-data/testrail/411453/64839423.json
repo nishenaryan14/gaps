@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue is visible on the Home Screen",
   "feature": "iOS - Location Sharing",
-  "scenario": "Location sharing dialog appears on Home Screen after first-time app launch and license acceptance",
+  "scenario": "Location sharing dialogue appears on Home Screen after accepting license agreement, tapping Continue, Skip, and Continue as Guest or Login.",
   "steps": [
-    "Launch the app for the first time.",
-    "Accept the license agreement.",
+    "Start the app for the first time.",
+    "Accept the license agreement and privacy policy.",
     "Tap Continue.",
     "Tap Skip.",
-    "Tap Continue as Guest / Login.",
-    "Observe the Home Screen."
+    "Tap Continue as Guest or Login."
   ],
-  "expected": "A location sharing dialogue is displayed on the Home Screen with the headline \"Allow 'Poly Lens' to use your location?\" and options 'Allow Once', 'Allow While Using App', and 'Don't Allow'. It also includes the text: \"Poly Lens uses your location to find your device. See the Poly Privacy Policy in General Settings for more information.\"",
+  "expected": "The location sharing dialogue is visible on the Home Screen, displaying the headline \"Allow 'Poly Lens' to use your location?\" with options 'Allow Once', 'Allow While Using App', and 'Don't Allow', along with text explaining that Poly Lens uses location to find the user's device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "location sharing dialog",
-    "first-time app launch",
-    "license acceptance",
-    "Home Screen",
-    "Continue as Guest",
-    "Login",
-    "Skip",
-    "permission prompt"
+    "location sharing",
+    "home screen",
+    "license agreement",
+    "privacy policy",
+    "continue",
+    "skip",
+    "continue as guest",
+    "login",
+    "first launch",
+    "onboarding"
   ],
   "source_last_updated": "1759149897",
   "source_hash": "e1e5aed335f52b0d6a720088bef740cd9a1f5df5471fdd19e4479f6f39ac4fe7",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.722887Z",
+  "processed_at": "2026-04-24T11:23:05.323906Z",
   "status": "active"
 }
