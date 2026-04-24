@@ -1,0 +1,33 @@
+{
+  "id": "65641608",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Fit test - 1st screen UI",
+  "feature": "Fit Test",
+  "scenario": "Verify Fit Test screen UI and text match Figma design for Osprey/Tern and Emu variants when starting the app with a supported device connected and navigating to Device Settings > Fit Test.",
+  "steps": [
+    "1. Connect a supported device to the app.",
+    "2. Launch the app.",
+    "3. Navigate to Device Settings > Fit Test.",
+    "4. Observe the UI and text displayed on the first screen of the Fit Test."
+  ],
+  "expected": "The UI and text on the first screen of the Fit Test match the Figma design for the Osprey/Tern and Emu variants.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Fit Test screen",
+    "UI verification",
+    "Figma design",
+    "Osprey variant",
+    "Tern variant",
+    "Emu variant",
+    "Device Settings",
+    "supported device connected"
+  ],
+  "source_last_updated": "1760958980",
+  "source_hash": "999ec6a3308ff76db3e5f1bfd1e4a92c1ce4a458d71a7ab474a3d408754322e0",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.391539Z",
+  "status": "active"
+}
