@@ -5,26 +5,28 @@
   "project": "411453",
   "title": "ANC - Both modes disabled, turn on Transparency, default value selected",
   "feature": "ANC (Active Noise Cancellation)",
-  "scenario": "When both ANC Mode and Transparency Mode are disabled, enabling Transparency Mode sets it to \"Environment\" by default and keeps ANC disabled.",
+  "scenario": "When both ANC and Transparency are disabled, enabling Transparency sets it to \"On - Environment\" while keeping ANC disabled.",
   "steps": [
     "Ensure both ANC Mode and Transparency Mode are disabled.",
-    "Turn on Transparency."
+    "Turn on Transparency.",
+    "Observe the Transparency value and ANC status."
   ],
-  "expected": "Transparency is set to \"Environment\" by default, and ANC remains disabled.",
+  "expected": "Transparency is set to \"On - Environment\" and ANC remains disabled.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "ANC Mode disabled",
-    "Transparency Mode disabled",
-    "Enable Transparency Mode",
-    "Environment default",
+    "ANC disabled",
+    "Transparency disabled",
+    "Transparency enabled",
+    "On - Environment",
     "ANC remains off",
-    "Audio mode switching",
-    "Noise control settings"
+    "audio mode switching",
+    "Transparency mode",
+    "ANC mode"
   ],
   "source_last_updated": "1761047460",
   "source_hash": "713608431113117f7b51d7b7bc04c1b2837e94557a953db97f06ff290239379a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.395741Z",
+  "processed_at": "2026-04-24T11:50:53.233970Z",
   "status": "active"
 }
