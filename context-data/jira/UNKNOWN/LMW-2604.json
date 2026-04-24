@@ -5,15 +5,15 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udc40 Free60+/20 | Image missing on Home Screen",
   "feature": "iOS Studio App - Home Screen",
-  "scenario": "Headset image is missing from the Home Screen on Free60+ and Free20 devices, with no placeholder on builds 32 & 46 and duplicate placeholders on production.",
-  "description_clean": "Headset image is missing from the Home Screen on Free60+ and Free20 devices. No placeholder image is displayed on build 32 & 46, while on the production app two placeholder images appear side by side instead of the headset image.",
+  "scenario": "Headset image is missing from the Home Screen when pairing Free60+ or Free 20 with the mobile device",
+  "description_clean": "Headset image is missing from the Home Screen when pairing Free60+ or Free 20 with the mobile device. No placeholder image is displayed on build 32 & 46, while two placeholder images appear side by side on the production app. Expected behavior: the headset image should show up on the Home Screen.",
   "steps": [
-    "Open the app on a Free60+ or Free20 device.",
+    "Pair Free60+ or Free 20 headset with the mobile device.",
     "Navigate to the Home Screen.",
-    "Observe the area where the headset image should be displayed."
+    "Observe the headset image area."
   ],
-  "expected": "A headset image (or at least a placeholder) should be displayed on the Home Screen.",
-  "actual": "On build 32 & 46, no placeholder image is shown. On the production app, two placeholder images appear side by side instead of the headset image.",
+  "expected": "The headset image should show up on the Home Screen.",
+  "actual": "On build 32 & 46, no placeholder image is displayed. On the production app, two placeholder images appear side by side.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -21,15 +21,15 @@
     "headset image missing",
     "Home Screen",
     "Free60+",
-    "Free20",
-    "no placeholder",
-    "duplicate placeholders",
-    "builds 32 & 46",
-    "production"
+    "Free 20",
+    "pairing",
+    "mobile device",
+    "headset image area",
+    "Bluetooth pairing"
   ],
   "source_last_updated": "2026-04-23T13:42:08.000+0000",
   "source_hash": "6bb2e07279ee96ba8c6b35fdd0b75ac0634b9ec78e66fdd1bb2dd2a7095c2673",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:04.953173Z",
+  "processed_at": "2026-04-24T11:50:52.620407Z",
   "status": "active"
 }
