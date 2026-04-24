@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "Find My Device - Sending Tone - X button",
   "feature": "Find My Device",
-  "scenario": "After playing a tone via Find My Device and pressing Play again, tapping the \"X\" button should stop the sound and return to the map screen.",
+  "scenario": "After playing a tone via Find My Device and dismissing the prompt, tapping the X button stops the sound and returns to the map screen.",
   "steps": [
     "1. Open the Find My Device feature.",
     "2. Tap the Play button to play a tone.",
     "3. Dismiss the 'ok got it' prompt if it appears.",
-    "4. Press the Play button again.",
-    "5. Tap the 'X' button."
+    "4. Tap the 'X' button."
   ],
   "expected": "The sound stops and the user is returned to the Find My Device map screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Find My Device",
-    "Play tone",
+    "play tone",
     "X button",
-    "Stop sound",
-    "Return to map",
-    "Dismiss prompt",
-    "Audio playback",
-    "Device locator"
+    "stop sound",
+    "dismiss prompt",
+    "map screen",
+    "device tracking",
+    "audio alert"
   ],
   "source_last_updated": "1769428234",
   "source_hash": "60d4318b9d9f9c415e79935736c6a0f6a6139b285a68f12472df355744fe620c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.113506Z",
+  "processed_at": "2026-04-24T10:51:32.756158Z",
   "status": "active"
 }
