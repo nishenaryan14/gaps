@@ -1,0 +1,34 @@
+{
+  "id": "65459835",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications - Onboarding - Don't Allow, dialog - Cancel then Go to Settings",
+  "feature": "Notifications - Onboarding",
+  "scenario": "User denies notifications during onboarding, then attempts to enable them from in-app settings, triggering a dialog with Cancel and Go to Settings options.",
+  "steps": [
+    "1. During onboarding, do not allow notifications.",
+    "2. Navigate to App Settings > General > Notifications.",
+    "3. Attempt to toggle Notifications ON.",
+    "4. Observe the dialog that appears with 'Cancel' and 'Go to Settings' buttons.",
+    "5. Tap 'Cancel' and verify the user returns to the Notifications tab.",
+    "6. Tap 'Go to Settings' and verify the iOS OS Notification settings open."
+  ],
+  "expected": "Tapping Cancel returns the user to the Notifications tab. Tapping Go to Settings opens the iOS OS Notification settings.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "onboarding notifications denied",
+    "in-app notification settings",
+    "toggle notifications ON",
+    "Cancel Go to Settings dialog",
+    "iOS OS Notification settings",
+    "notification permission flow",
+    "notification re-enable attempt"
+  ],
+  "source_last_updated": "1761229662",
+  "source_hash": "7d878efb8ebbf1acd03910850c77b6823845a0dcc6caa0a5e196296738b4618e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.421344Z",
+  "status": "active"
+}
