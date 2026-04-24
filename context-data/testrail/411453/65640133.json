@@ -4,31 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device(headset) is successfully registered to Cloud",
-  "feature": "Device Registration / Cloud",
-  "scenario": "Verify a headset device is successfully registered to the Cloud after pairing with the Lens app.",
+  "feature": "Device Registration / Cloud Inventory",
+  "scenario": "Verify successful registration of a paired headset to the Lens Cloud inventory list.",
   "steps": [
     "Start the Lens app with no headsets connected.",
-    "Go to Poly Lens Menu > General > Account.",
-    "Log in with credentials.",
-    "Go to Lens server inventory.",
+    "Go to Poly Lens Menu > General > Account and log in with credentials.",
+    "Go to lens server inventory and confirm the device list shows only the Mobile app.",
     "Pair a new headset with the app.",
     "Refresh the Lens Cloud inventory page."
   ],
-  "expected": "Device list shows only Mobile app initially. After pairing and refreshing, the new headset appears on the inventory list.",
+  "expected": "The new headset appears on the inventory list.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "headset registration",
-    "Poly Lens app",
     "Lens Cloud inventory",
+    "Poly Lens app",
     "device pairing",
-    "headset verification",
-    "Lens server inventory",
-    "Cloud registration"
+    "inventory list verification",
+    "headset connection",
+    "Lens server inventory"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "2592309e373fb9e6eaad1a0e0e8177d9de1de4e8eb0497ab7f86e24229eb4c58",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "processed_at": "2026-04-24T11:50:53.322651Z",
   "status": "active"
 }
