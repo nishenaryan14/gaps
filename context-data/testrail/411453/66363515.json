@@ -1,0 +1,32 @@
+{
+  "id": "66363515",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "[Cloud] Flamingo/Spoonbill - Connect headset as standalone",
+  "feature": "Cloud",
+  "scenario": "Connect Flamingo/Spoonbill headset as standalone (not paired with Charge Case) and verify cloud web page displays device as \"Voyager Legend 50\" or \"Voyager Legend 30\" with only earpiece info and image.",
+  "steps": [
+    "Pair headset with the app -> device appears in app.",
+    "Go to cloud web page and find device -> device displayed as 'Voyager Legend 50' or 'Voyager Legend 30'.",
+    "Click on device on cloud to open details page -> details show only earpiece info, image shows only earpiece."
+  ],
+  "expected": "Details show only earpiece info, image shows only earpiece.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Flamingo headset",
+    "Spoonbill headset",
+    "standalone mode",
+    "Voyager Legend 50",
+    "Voyager Legend 30",
+    "cloud web page",
+    "earpiece info",
+    "device pairing"
+  ],
+  "source_last_updated": "1762331223",
+  "source_hash": "66792f4e427e1ba3889f0d8dfd4c6b4459e168580a605bb03049f13a07fae3e0",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.429534Z",
+  "status": "active"
+}
