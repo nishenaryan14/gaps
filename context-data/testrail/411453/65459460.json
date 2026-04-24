@@ -5,27 +5,31 @@
   "project": "411453",
   "title": "Software Update - DFU - Three easy steps screen",
   "feature": "Software Update - DFU",
-  "scenario": "DFU software update shows \"Three easy steps\" screen with active \"Start Update\" button after tapping Continue on the Update button",
+  "scenario": "Verify that after pairing the headset and starting the app, navigating to Device Settings > Software Update, tapping Update and Continue, the \"Three easy steps\" screen with picture, instructions, and an active Start Update button is displayed.",
   "steps": [
-    "Tap Continue on the Update button.",
+    "Pair the headset with the device.",
+    "Start the app.",
+    "Navigate to Device Settings > Software Update.",
+    "Tap the Update button.",
+    "Tap Continue.",
     "Observe the screen that appears."
   ],
-  "expected": "The \"Three easy steps\" title screen is displayed with a picture and textual instructions. The \"Start Update\" button is available and active.",
+  "expected": "The \"Three easy steps\" title screen is displayed with a picture and textual instructions, and the Start Update button is available and active.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU software update",
-    "Three easy steps screen",
-    "Start Update button",
-    "Continue button",
+    "headset pairing",
+    "app launch",
+    "Device Settings",
+    "Software Update",
     "Update button",
-    "firmware update screen",
-    "update initiation",
-    "software update flow"
+    "Continue button",
+    "Three easy steps screen",
+    "Start Update button"
   ],
   "source_last_updated": "1763369567",
   "source_hash": "3b28feceb9dacb22102ad5be3d852e44392986b9140dc98e660ccf6dfad40b18",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.412172Z",
+  "processed_at": "2026-04-24T11:50:53.275156Z",
   "status": "active"
 }
