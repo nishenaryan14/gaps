@@ -1,0 +1,36 @@
+{
+  "id": "65640179",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Device Connected",
+  "feature": "Analytics",
+  "scenario": "Verify that device connection events are logged and increment after toggling device power while the app is active, with Firebase displaying default elements plus Device PID and Serial.",
+  "steps": [
+    "Open the app and ensure a device is successfully connected.",
+    "Check Firebase for the logged event.",
+    "Verify that the event count updates after a few hours.",
+    "Navigate to the Firebase page and confirm the following default elements are displayed: graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment.",
+    "Additionally, confirm that Device PID and Device Serial are displayed.",
+    "Turn the device off and then on while the app is active.",
+    "Wait for some time and verify that the event count has incremented."
+  ],
+  "expected": "Event is logged when a device is successfully connected. Firebase page displays default elements plus Device PID and Device Serial. Event count increments after turning the device off and on while the app is active.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "device connection events",
+    "Firebase logging",
+    "event count increment",
+    "device power toggle",
+    "Device PID",
+    "Device Serial",
+    "app active state",
+    "Firebase dashboard elements"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "be9ff0c0564115b16197ac7f12661bab56da3fb15a7bbb8a8fc30f5a3f567bf4",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "status": "active"
+}
