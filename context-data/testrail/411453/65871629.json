@@ -1,0 +1,30 @@
+{
+  "id": "65871629",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - No Device Connected - Phone Settings Button(Android)",
+  "feature": "Device Home Screen",
+  "scenario": "When no device is connected, tapping the Phone Settings button on the Device Home Screen navigates to Bluetooth settings.",
+  "steps": [
+    "Ensure no device is connected.",
+    "Tap the Phone Settings button on the Device Home Screen."
+  ],
+  "expected": "The user is navigated to Bluetooth settings.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "no device connected",
+    "Phone Settings button",
+    "Device Home Screen",
+    "navigate",
+    "Bluetooth settings",
+    "tap",
+    "settings navigation"
+  ],
+  "source_last_updated": "1761657139",
+  "source_hash": "2e0749d4bdd53e34d2b438a23f6246283d99f559099005d3e919f700539f631a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.059262Z",
+  "status": "active"
+}
