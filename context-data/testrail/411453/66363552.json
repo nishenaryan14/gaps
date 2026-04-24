@@ -1,0 +1,39 @@
+{
+  "id": "66363552",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EB and CC have updates - Update button, Release notes and Poly Lens links are available",
+  "feature": "Device Software Update",
+  "scenario": "Verify that when both Earbuds and Charge Case have updates available, the device home screen shows an Update button that navigates to Device Settings with Software Update tab expanded, displaying update options and links for both devices.",
+  "steps": [
+    "Ensure both Earbuds (EB) and Charge Case (CC) have updates available.",
+    "Observe the device home screen shows an Update button.",
+    "Tap the Update button.",
+    "Verify navigation to Device Settings with the Software Update tab expanded.",
+    "Observe the Earbuds section shows an Update button with a '1' tag on the settings tab.",
+    "Observe the Charge Case section displays info about needing Poly Lens Desktop and 'Update Available'.",
+    "Check that a Release Notes link is present for Earbuds.",
+    "Check that a Poly Lens App link is present for Charge Case.",
+    "Tap the Release Notes link for Earbuds.",
+    "Tap the Poly Lens App link for Charge Case."
+  ],
+  "expected": "The device home screen shows an Update button. Tapping it navigates to Device Settings with the Software Update tab expanded. Earbuds show an Update button with a \"1\" tag. Charge Case shows info about needing Poly Lens Desktop and \"Update Available\". Release Notes link opens the firmware release notes page. Poly Lens App link opens the Poly Lens App page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Earbuds update",
+    "Charge Case update",
+    "Device Settings",
+    "Software Update tab",
+    "Update button",
+    "Release Notes",
+    "Poly Lens Desktop",
+    "Poly Lens App"
+  ],
+  "source_last_updated": "1762331320",
+  "source_hash": "feee47cee2d0cf2f9146c8c4a8b30b4ac369a2873d3ad10b9dbb755c6016a71d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:08.007666Z",
+  "status": "active"
+}
