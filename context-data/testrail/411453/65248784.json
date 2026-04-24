@@ -1,0 +1,32 @@
+{
+  "id": "65248784",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Main screen",
+  "feature": "Find My Device",
+  "scenario": "After starting the app with a headset connected, navigating to App Menu, tapping Find My Device, and allowing location access, the main screen displays a map and list of connected/disconnected headsets.",
+  "steps": [
+    "Start the app with a headset (HS) connected.",
+    "Navigate to the App Menu.",
+    "Tap on 'Find My Device'.",
+    "If prompted, allow location access."
+  ],
+  "expected": "The main screen displays a map and a list of connected/disconnected headsets.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "headset tracking",
+    "app menu",
+    "location access",
+    "connected headsets",
+    "map view",
+    "device list"
+  ],
+  "source_last_updated": "1759926560",
+  "source_hash": "8ca2c6457559f489e663664e5a75fa877914707f07e7662c427be5a339de06f6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.103490Z",
+  "status": "active"
+}
