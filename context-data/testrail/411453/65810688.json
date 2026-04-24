@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "Zoom in - new text shows, old text disappears, X disappears",
   "feature": "Zoom",
-  "scenario": "Zooming in on a big blue dot causes old text and X button to disappear while new description text appears",
+  "scenario": "Zooming in on big blue dots causes old text and the X button to disappear while new description text appears",
   "steps": [
-    "Open the app and locate a big blue dot on the screen.",
-    "Tap or interact with the big blue dot to zoom in.",
-    "Observe the old text (headline, swipe) on the screen.",
-    "Observe the X button on the screen.",
-    "Observe the new text (description) appearing on the screen."
+    "1. Open the app or page containing big blue dots.",
+    "2. Locate a big blue dot on the screen.",
+    "3. Zoom in on the big blue dot.",
+    "4. Observe the behavior of the old text (headline, swipe) and the X button.",
+    "5. Observe whether new description text appears."
   ],
-  "expected": "When zooming in on a big blue dot, the old text (headline, swipe) disappears, the X button disappears, and new text (description) appears.",
+  "expected": "When zooming in on a big blue dot, the old text (headline, swipe) and the X button disappear, and new description text appears.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "zoom in",
-    "big blue dot",
-    "text disappears",
-    "X button disappears",
-    "description text appears",
-    "interactive element",
-    "UI transition",
-    "tap interaction"
+    "zoom interaction",
+    "big blue dots",
+    "text disappearance",
+    "X button",
+    "description text",
+    "UI behavior",
+    "gesture response"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "92c1b2959cb9d59f6503776c145287c293890e5b7ee06c634390cdac22f00588",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.405970Z",
+  "processed_at": "2026-04-24T11:50:53.271251Z",
   "status": "active"
 }
