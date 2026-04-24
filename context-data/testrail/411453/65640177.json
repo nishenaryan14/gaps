@@ -1,0 +1,41 @@
+{
+  "id": "65640177",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Device Added",
+  "feature": "Analytics",
+  "scenario": "Log an event with device name, PID, and serial number upon successful device pairing, and verify default dashboard elements display correctly.",
+  "steps": [
+    "Pair a device successfully.",
+    "Verify that an event is logged for the successful pairing.",
+    "Check that the logged event includes the device name, device PID, and device serial number.",
+    "Open the default dashboard.",
+    "Confirm the dashboard displays a graph.",
+    "Confirm the dashboard shows events in the last 30 minutes.",
+    "Confirm the dashboard shows event count by country.",
+    "Confirm the dashboard shows event count by gender.",
+    "Confirm the dashboard shows events per session.",
+    "Confirm the dashboard shows app version.",
+    "Confirm the dashboard shows app build.",
+    "Confirm the dashboard shows app environment.",
+    "Note that event counts may take a few hours to update."
+  ],
+  "expected": "An event is logged with device name, device PID, and device serial number. The default dashboard displays a graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "device pairing",
+    "event logging",
+    "device name",
+    "PID",
+    "serial number",
+    "dashboard verification",
+    "event count"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "601da469350b79b4f1f6bf012691c2a6e68bffeb231111e46309882340973afc",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.423865Z",
+  "status": "active"
+}
