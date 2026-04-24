@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Onboarding - What's new screen - Updating from previous app version",
   "feature": "Onboarding",
-  "scenario": "When updating from a pre-5.0.0.X version to the latest, the \"Welcome to Poly Studio\" screen appears on launch and tapping \"Get Started\" dismisses it to the Home Screen.",
+  "scenario": "Verify that after updating from an older app version (pre-5.0.0.X) to the latest, the \"Welcome to Poly Studio\" screen appears on launch and tapping \"Get Started\" dismisses it to the Home Screen.",
   "steps": [
-    "1. Launch the app after updating from a previous version (before 5.0.0.X) to the latest version.",
-    "2. Observe the screen that appears right after launch.",
-    "3. Tap the 'Get Started' button.",
-    "4. Observe the screen that appears after tapping."
+    "Launch the app after updating from an older version (before 5.0.0.X) to the latest version.",
+    "Observe the screen that appears upon launch.",
+    "Tap the \"Get Started\" button.",
+    "Verify the screen is dismissed.",
+    "Check that the user is taken to the Home Screen."
   ],
-  "expected": "The \"Welcome to Poly Studio\" screen should appear right after launch. Tapping \"Get Started\" dismisses the screen and brings the user to the Home Screen.",
+  "expected": "The \"Welcome to Poly Studio\" screen appears upon launch. After tapping \"Get Started\", the screen is dismissed and the user is brought to the Home Screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "update",
-    "pre-5.0.0.X",
-    "Welcome to Poly Studio",
-    "Get Started",
-    "launch",
-    "Home Screen",
-    "dismiss",
-    "upgrade"
+    "app update",
+    "Welcome to Poly Studio screen",
+    "Get Started button",
+    "screen dismissal",
+    "Home Screen navigation",
+    "version upgrade",
+    "post-update launch",
+    "onboarding flow"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "61c8fedd2d2ff1ab7eb910f096f580b3d9a52b7fd64cc29f029dbb51f964af1f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.710673Z",
+  "processed_at": "2026-04-24T11:23:05.301512Z",
   "status": "active"
 }
