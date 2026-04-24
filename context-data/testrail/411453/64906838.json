@@ -5,10 +5,10 @@
   "project": "411453",
   "title": "Device Home Screen - Quick Settings modal",
   "feature": "Device Home Screen - Quick Settings",
-  "scenario": "Verify that tapping any Quick Setting on the Device Home Screen opens a modal with all related options for changing settings.",
+  "scenario": "Verify that tapping any Quick Setting on the Device Home Screen opens a modal with all related options for changing settings, as configured via Device Settings > Quick Settings Selection.",
   "steps": [
     "1. Go to Device Settings > Quick Settings Selection and configure at least one Quick Setting.",
-    "2. Navigate to the Device Home Screen.",
+    "2. Return to the Device Home Screen.",
     "3. Tap on the configured Quick Setting.",
     "4. Observe the result."
   ],
@@ -19,15 +19,15 @@
     "Quick Setting",
     "Device Home Screen",
     "modal",
-    "settings options",
     "Quick Settings Selection",
+    "Device Settings",
     "tap",
-    "configure",
-    "Device Settings"
+    "settings options",
+    "configure"
   ],
   "source_last_updated": "1769425796",
   "source_hash": "8789a14c184357fe1c45def2277d192b633417ee92c6998999c22052329285a4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.086978Z",
+  "processed_at": "2026-04-24T10:51:32.739973Z",
   "status": "active"
 }
