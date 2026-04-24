@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "App Settings - General - Licenses",
   "feature": "App Settings - General - Licenses",
-  "scenario": "Verify that \"Third-party Software\" headline and license list with Source and License links are visible under App Settings > General > Licenses, and the same licenses appear in Phone Settings > Poly Lens > Acknowledgements.",
+  "scenario": "Verify that \"Third-party Software\" headline and its licenses with Source and License links are visible under App Settings > General > Licenses and also appear in Phone Settings > Poly Lens > Acknowledgements.",
   "steps": [
     "1. Navigate to App Settings > General > Licenses.",
     "2. Verify that the \"Third-party Software\" headline is visible.",
     "3. Confirm that a list of licenses is displayed below the headline.",
-    "4. For each license in the list, verify that a Source link is present.",
-    "5. For each license in the list, verify that a License link is present.",
+    "4. For each license in the list, verify that a \"Source\" link is present.",
+    "5. For each license in the list, verify that a \"License\" link is present.",
     "6. Navigate to Phone Settings > Poly Lens > Acknowledgements.",
-    "7. Verify that the same licenses (with Source and License links) appear in this section as well."
+    "7. Verify that the same licenses appear in the Acknowledgements section."
   ],
-  "expected": "Under App Settings > General > Licenses, the \"Third-party Software\" headline is visible with a list of licenses, each containing both a Source link and a License link. The same licenses also appear in Phone Settings > Poly Lens > Acknowledgements.",
+  "expected": "The \"Third-party Software\" headline is visible under App Settings > General > Licenses, with a list of licenses each containing both a Source link and a License link. The same licenses also appear in Phone Settings > Poly Lens > Acknowledgements.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Third-party Software",
     "Licenses",
-    "App Settings",
-    "General",
     "Source link",
     "License link",
+    "App Settings",
+    "General",
     "Phone Settings",
-    "Poly Lens",
-    "Acknowledgements"
+    "Poly Lens Acknowledgements"
   ],
   "source_last_updated": "1759327858",
   "source_hash": "f211271dd5e3822129310c678804cf82a127d9828d1d5c5ae8ab7285afb635bc",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.355862Z",
+  "processed_at": "2026-04-24T11:50:53.147495Z",
   "status": "active"
 }
