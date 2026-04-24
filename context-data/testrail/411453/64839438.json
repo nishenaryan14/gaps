@@ -1,0 +1,31 @@
+{
+  "id": "64839438",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Disconnected device",
+  "feature": "Device Home Screen",
+  "scenario": "When a paired and connected device is turned off, the Device Home Screen shows the device as \"Not Connected\" with greyed out elements.",
+  "steps": [
+    "1. Pair and connect a device.",
+    "2. Turn off the device.",
+    "3. Observe the Device Home Screen."
+  ],
+  "expected": "The Device Home Screen displays: Device Name (with \"i\" icon if applicable), a crossed red dot with \"Not Connected\" label, a greyed out device image, a \"...\" button, greyed out Battery icons, and \"Version X.Y.Z\".",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "paired device",
+    "connected device",
+    "device turned off",
+    "Not Connected status",
+    "Device Home Screen",
+    "greyed out elements",
+    "disconnected state"
+  ],
+  "source_last_updated": "1775206608",
+  "source_hash": "9b34d1f2b52081163ce4a2e0f815a9a3effca07e7a2113dcb379a4202c3b6846",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.084060Z",
+  "status": "active"
+}
