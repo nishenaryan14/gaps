@@ -1,0 +1,36 @@
+{
+  "id": "87071895",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Verify user login to logout journey with EULA page",
+  "feature": "User Authentication / Login-Logout",
+  "scenario": "Verify the complete user login to logout journey, including EULA acceptance flow, and confirm the \"Log In\" button is displayed after logout.",
+  "steps": [
+    "Start the app for the first time.",
+    "View the EULA and Privacy Policy text displayed after initial setup.",
+    "Accept the EULA agreement.",
+    "Proceed through the 'Up-to-Date' page.",
+    "Log in with valid credentials.",
+    "Navigate through the following menus: Color Theme, About, General Settings, Account.",
+    "Log out from the account.",
+    "Verify that the 'Log In' button is displayed after logout."
+  ],
+  "expected": "After logout, the 'Log In' button is displayed on the screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "login",
+    "logout",
+    "EULA acceptance",
+    "authentication flow",
+    "user journey",
+    "app onboarding",
+    "login button visibility"
+  ],
+  "source_last_updated": "1777013015",
+  "source_hash": "257f6b84c3bb2f1bde12ebb27200e5aed96afee5d63d6924b54617453c7e176b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:11.661982Z",
+  "status": "active"
+}
