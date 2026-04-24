@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "[IOS]Onboarding - Organized page has a continue button",
   "feature": "Onboarding",
-  "scenario": "On iOS, after skipping initial screens, tapping Continue on the Organized page navigates to the POLY LENS Login screen with Login and Continue as Guest options.",
+  "scenario": "Navigate to POLY LENS Login screen by tapping Continue on the Organized page after skipping initial screens",
   "steps": [
-    "Open the app on iOS.",
-    "Tap Skip on the initial screens.",
-    "Observe the Organized page.",
-    "Tap the 'Continue' button.",
-    "Observe the POLY LENS Login screen."
+    "Open the app and tap Skip on the initial screens.",
+    "Observe the Organized page that appears.",
+    "Tap the Continue button on the Organized page.",
+    "Observe the next screen that appears."
   ],
-  "expected": "The Organized page displays a \"Continue\" button with text about Poly Lens location tracking. Tapping Continue leads to the POLY LENS Login screen with Login and Continue as Guest options.",
+  "expected": "The Organized page displays a \"Continue\" button and text about Poly Lens location tracking. Tapping Continue navigates to the POLY LENS Login screen with Login and Continue as Guest options.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "iOS",
+    "POLY LENS",
+    "Login screen",
     "Organized page",
-    "POLY LENS Login",
     "Continue button",
-    "Skip initial screens",
-    "Login",
-    "Continue as Guest",
-    "navigation"
+    "Skip",
+    "initial screens",
+    "app navigation",
+    "onboarding"
   ],
   "source_last_updated": "1764319860",
   "source_hash": "815e7efb7f3f8ba69170856220818683e683d5c03b6622e5572c9ecfa3c83bed",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.716770Z",
+  "processed_at": "2026-04-24T11:23:05.310357Z",
   "status": "active"
 }
