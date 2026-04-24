@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Mobile app inventory details",
   "feature": "Mobile App Inventory",
-  "scenario": "Verify mobile app details are displayed when accessing the inventory section via the Lens app after logging in",
+  "scenario": "Verify mobile app details are displayed when accessing the inventory section via Lens app account settings",
   "steps": [
     "Start the Lens app",
     "Navigate to Poly Lens Menu > General > Account",
@@ -18,17 +18,16 @@
   "edge_cases": [],
   "keywords": [
     "Lens app",
-    "mobile app details",
     "inventory section",
-    "login",
+    "account settings",
+    "mobile app details",
     "Poly Lens Menu",
-    "Account",
     "Lens server inventory",
-    "view details"
+    "login credentials"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "e61c51e63ca96c42cbac9ded76159d1e683132681d18ab1dd1b97e898c0ae4e2",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "processed_at": "2026-04-24T11:50:53.319926Z",
   "status": "active"
 }
