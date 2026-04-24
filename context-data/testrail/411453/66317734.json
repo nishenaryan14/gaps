@@ -1,0 +1,35 @@
+{
+  "id": "66317734",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - new name in FMD",
+  "feature": "Device Rename",
+  "scenario": "Verify that renaming a device in Settings/Rename updates the device name in the Find My Device list.",
+  "steps": [
+    "1. Open Settings on the device.",
+    "2. Navigate to the 'Rename' option (likely under General > About or similar).",
+    "3. Change the device name to a new name.",
+    "4. Open the Find My Device (FMD) app or website.",
+    "5. Check the list of devices associated with the account.",
+    "6. Verify that the new name appears in the FMD list."
+  ],
+  "expected": "The new device name appears in the Find My Device list instead of the previous name.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Rename device",
+    "Settings",
+    "Find My Device",
+    "Device name sync",
+    "Device list",
+    "Account devices",
+    "Name update",
+    "FMD"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "1c6f1244a0e33e3d7af336348627ae91b604c22c4874a20ae484ab7b420de56b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.378141Z",
+  "status": "active"
+}
