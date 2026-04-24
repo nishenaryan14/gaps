@@ -1,0 +1,32 @@
+{
+  "id": "65810682",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Charge case outside screen/third screen, left zoom in/out",
+  "feature": "QSG (Quick Start Guide) - Third Screen",
+  "scenario": "Test left zoom in/out functionality on the third screen (charge case outside) by clicking the left circle button to zoom in and out.",
+  "steps": [
+    "Open QSG",
+    "Swipe to third screen",
+    "Click left circle button to zoom in (new text appears)",
+    "Click left circle button again to zoom out to original screen showing charge case outside"
+  ],
+  "expected": "Zoom in shows new text; zoom out returns to original screen showing charge case outside.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "left zoom",
+    "zoom in/out",
+    "third screen",
+    "charge case outside",
+    "left circle button",
+    "QSG",
+    "zoom functionality"
+  ],
+  "source_last_updated": "1761315357",
+  "source_hash": "67bf9214da83b3f8598a19052bbd78741d53994963797cc70394debb25d257e9",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.405437Z",
+  "status": "active"
+}
