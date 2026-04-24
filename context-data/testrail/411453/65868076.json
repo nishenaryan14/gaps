@@ -1,0 +1,32 @@
+{
+  "id": "65868076",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Connecting Headset when device list is empty",
+  "feature": "Device Home Screen",
+  "scenario": "When the device list is empty, connecting a headset via the Bluetooth menu should show the headset in the list upon returning to the app.",
+  "steps": [
+    "Ensure the device list in the app is empty.",
+    "Connect a headset via the Bluetooth menu.",
+    "Return to the app."
+  ],
+  "expected": "The newly connected headset appears in the device list upon returning to the app.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Bluetooth",
+    "headset",
+    "device list",
+    "empty",
+    "connection",
+    "app",
+    "pairing",
+    "discovery"
+  ],
+  "source_last_updated": "1761740908",
+  "source_hash": "8b1f2ad02c5d3d3e13bb26e9d2594fa39eaa1248b63e2e2ed798fff51756d731",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.064322Z",
+  "status": "active"
+}
