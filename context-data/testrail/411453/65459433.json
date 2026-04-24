@@ -1,0 +1,34 @@
+{
+  "id": "65459433",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU is not available if phone's battery is below 30%",
+  "feature": "Software Update / DFU",
+  "scenario": "DFU is blocked with a pop-up when the phone's battery is below 30%, and tapping OK returns the user to Settings without starting the update.",
+  "steps": [
+    "Ensure the phone's battery level is below 30%.",
+    "Navigate to the Settings page.",
+    "Attempt to start the Device Firmware Update (DFU) process.",
+    "Observe the pop-up message that appears.",
+    "Tap the OK button on the pop-up."
+  ],
+  "expected": "A pop-up message informs the user that the battery does not have enough power and asks them to fully charge or plug into a power source. Tapping OK dismisses the pop-up and returns the user to the Settings page without starting the DFU process.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU blocked",
+    "battery below 30%",
+    "pop-up message",
+    "OK button",
+    "Settings return",
+    "firmware update blocked",
+    "low battery DFU",
+    "update prevented"
+  ],
+  "source_last_updated": "1763043814",
+  "source_hash": "70ff4f5c75187970cccae340c91f1da936fd2adccf89799a583c575b0bab66a9",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.413695Z",
+  "status": "active"
+}
