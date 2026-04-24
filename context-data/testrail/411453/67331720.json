@@ -7,12 +7,13 @@
   "feature": "Device Home Screen",
   "scenario": "Verify device images display correctly on the home screen: properly loaded when paired and connected, and greyed out when the device is turned off.",
   "steps": [
-    "Pair a device and connect it to the internet.",
-    "Observe the device image on the home screen.",
+    "Pair and connect a device to the internet.",
+    "Navigate to the home screen.",
+    "Observe the device image.",
     "Turn off the device.",
-    "Observe the device image on the home screen again."
+    "Observe the device image again."
   ],
-  "expected": "When the device is paired and connected to the internet, the device image loads properly. When the device is turned off, the image is still displayed but greyed out.",
+  "expected": "When the device is paired and connected to the internet, the device image should load properly. When the device is turned off, the image should still be displayed but greyed out.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,12 +23,12 @@
     "connected",
     "greyed out",
     "device turned off",
-    "image display",
+    "image loading",
     "device status"
   ],
   "source_last_updated": "1769425030",
   "source_hash": "6c9c6938d5ca431c41b8ba06d9659697e8dc7af57a914b8886fcbc1e397556cd",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.073953Z",
+  "processed_at": "2026-04-24T10:51:32.728438Z",
   "status": "active"
 }
