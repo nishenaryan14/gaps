@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Verify Settings > Language menu is accessible",
+    "steps": [
+      "Launch the application",
+      "Navigate to the Settings screen",
+      "Locate the Language option in the Settings menu"
+    ],
+    "expected": "The Language option is visible and tappable in the Settings screen."
+  },
+  {
+    "title": "Verify selecting Spanish language displays Spanish text on welcome screen",
+    "steps": [
+      "Launch the application",
+      "Navigate to Settings > Language",
+      "Select 'Espa\u00f1ol' (Spanish) from the language list",
+      "Confirm the language change if prompted",
+      "Return to the welcome/home screen"
+    ],
+    "expected": "The welcome screen displays text in Spanish (e.g., 'Bienvenido' or equivalent Spanish greeting), not Portuguese."
+  },
+  {
+    "title": "Verify selecting Portuguese language displays Portuguese text on welcome screen",
+    "steps": [
+      "Launch the application",
+      "Navigate to Settings > Language",
+      "Select 'Portugu\u00eas' (Portuguese) from the language list",
+      "Confirm the language change if prompted",
+      "Return to the welcome/home screen"
+    ],
+    "expected": "The welcome screen displays text in Portuguese (e.g., 'Bem-vindo' or equivalent Portuguese greeting)."
+  },
+  {
+    "title": "Verify switching from Spanish to English reverts welcome screen to English",
+    "steps": [
+      "Launch the application",
+      "Navigate to Settings > Language",
+      "Select 'Espa\u00f1ol' (Spanish) and confirm",
+      "Return to welcome screen and verify Spanish text is shown",
+      "Navigate back to Settings > Language",
+      "Select 'English' from the language list",
+      "Confirm the language change if prompted",
+      "Return to the welcome/home screen"
+    ],
+    "expected": "The welcome screen displays text in English after switching back from Spanish."
+  },
+  {
+    "title": "Verify Spanish and Portuguese welcome texts are distinct and not mixed",
+    "steps": [
+      "Launch the application",
+      "Navigate to Settings > Language",
+      "Select 'Espa\u00f1ol' (Spanish) and confirm",
+      "Return to welcome screen and capture the welcome text",
+      "Navigate back to Settings > Language",
+      "Select 'Portugu\u00eas' (Portuguese) and confirm",
+      "Return to welcome screen and capture the welcome text",
+      "Compare the two captured texts"
+    ],
+    "expected": "The Spanish welcome text (e.g., 'Bienvenido') is different from the Portuguese welcome text (e.g., 'Bem-vindo'). No mixing or overlap of languages occurs."
+  },
+  {
+    "title": "Verify all UI strings on welcome screen are in Spanish when Spanish is selected",
+    "steps": [
+      "Launch the application",
+      "Navigate to Settings > Language",
+      "Select 'Espa\u00f1ol' (Spanish) and confirm",
+      "Return to the welcome/home screen",
+      "Inspect all visible text labels, buttons, and headings on the screen"
+    ],
+    "expected": "All UI elements on the welcome screen display text in Spanish. No English or Portuguese strings are visible."
+  },
+  {
+    "title": "Verify language selection persists after app restart",
+    "steps": [
+      "Launch the application",
+      "Navigate to Settings > Language",
+      "Select 'Espa\u00f1ol' (Spanish) and confirm",
+      "Return to welcome screen and verify Spanish text is shown",
+      "Close/terminate the application completely",
+      "Re-launch the application"
+    ],
+    "expected": "The welcome screen still displays text in Spanish after the app is restarted, confirming the language preference is persisted."
+  },
+  {
+    "title": "Verify default language is English on first launch",
+    "steps": [
+      "Clear app data or install the application fresh",
+      "Launch the application for the first time",
+      "Observe the welcome/home screen"
+    ],
+    "expected": "The welcome screen displays text in English by default before any language selection is made."
+  }
+]
