@@ -1,0 +1,33 @@
+{
+  "id": "66317724",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Rename device - Rename",
+  "feature": "Device Settings - Rename Device",
+  "scenario": "Verify that renaming a device in Device Settings updates the name on the Home screen.",
+  "steps": [
+    "Start the app with device attached.",
+    "Navigate to Device Settings > General.",
+    "Click on the device's official name.",
+    "Enter new text for the name.",
+    "Click Done."
+  ],
+  "expected": "The device's name is changed and also reflected on the Home screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "rename device",
+    "device settings",
+    "home screen update",
+    "device name",
+    "general settings",
+    "name change",
+    "device configuration"
+  ],
+  "source_last_updated": "1762182893",
+  "source_hash": "5f33e0901b673a2517789792fadfeafa33aa7ad681e080f89b70530cc0559fc6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "status": "active"
+}
