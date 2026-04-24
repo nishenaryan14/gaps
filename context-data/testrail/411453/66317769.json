@@ -1,0 +1,38 @@
+{
+  "id": "66317769",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Language Change - Houston Screen - Retry",
+  "feature": "Language Change",
+  "scenario": "Verify that changing the language on a Poly headset via Device Settings shows a \"Houston screen\" error and allows retry when the update fails due to the headset being turned off during the first 20% of the update.",
+  "steps": [
+    "Pair and connect the Poly headset to the device.",
+    "Navigate to the Device Settings menu.",
+    "Go to the Language section.",
+    "Select a new language from the available options.",
+    "Trigger a software update prompt (if not automatically shown).",
+    "Begin the software update process.",
+    "During the first 20% of the update, turn off the headset to simulate an update failure.",
+    "Observe the screen for an error message (Houston screen).",
+    "Tap the 'Retry' button on the error screen."
+  ],
+  "expected": "A \"Houston screen\" error message appears, and tapping \"Retry\" returns the user to the update screen to attempt the update again.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Poly headset",
+    "language change",
+    "Device Settings",
+    "Houston screen error",
+    "update failure",
+    "retry",
+    "headset turned off",
+    "software update"
+  ],
+  "source_last_updated": "1762252574",
+  "source_hash": "5d0468a5ea53c3fba035e083d5981d4e68952abe9999a728e448568cb1e23f6b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.391539Z",
+  "status": "active"
+}
