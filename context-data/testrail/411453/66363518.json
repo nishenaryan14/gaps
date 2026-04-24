@@ -1,0 +1,30 @@
+{
+  "id": "66363518",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Flamingo/Spoonbill - Software update for standalone headset",
+  "feature": "Flamingo/Spoonbill - Software Update",
+  "scenario": "Standalone headset (not paired with charge case) successfully completes DFU software update via the app when tapping the update button on the device home screen.",
+  "steps": [
+    "1. Tap the update button on device home screen.",
+    "2. Tap the Update Button and complete the DFU process."
+  ],
+  "expected": "Device settings opens with Software Update tab expanded, only one update button is shown. DFU process for standalone headset can be properly completed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "standalone headset",
+    "DFU software update",
+    "app update",
+    "device home screen",
+    "update button",
+    "firmware update",
+    "over-the-air update"
+  ],
+  "source_last_updated": "1762331223",
+  "source_hash": "783431837a2b217fa64a8f1d883d71aa30460ac2cd11202b0dc5ee8d7f67ff8f",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.429534Z",
+  "status": "active"
+}
