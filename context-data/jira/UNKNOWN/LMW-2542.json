@@ -5,8 +5,8 @@
   "project": "UNKNOWN",
   "summary": "ANDROID| Falcon | Custom EQ - Save button do not work for Falcon Custom",
   "feature": "Falcon Custom EQ",
-  "scenario": "Custom EQ slider settings for a Falcon device are not saved after clicking Save EQ and confirming the dialog, reverting to defaults upon reopening.",
-  "description_clean": "When a user sets Custom EQ sliders for a Falcon device and clicks the Save EQ button (confirming the dialog), the slider settings are not saved and revert to defaults upon reopening the Custom EQ settings. Additionally, there is a minor issue with the dialog description text that needs fixing.",
+  "scenario": "Custom EQ slider settings for Falcon device are not saved after clicking Save EQ and confirming the dialog, reverting to defaults on reopening.",
+  "description_clean": "When a user sets custom EQ sliders for a Falcon device and clicks the Save EQ button (confirming the dialog), the slider settings are not saved and revert to default upon reopening the Custom EQ settings. Additionally, there is a minor issue with the dialog description text that needs fixing.",
   "steps": [
     "Open the Falcon device settings.",
     "Navigate to the Custom EQ section.",
@@ -16,24 +16,23 @@
     "Close the Custom EQ settings.",
     "Reopen the Custom EQ settings."
   ],
-  "expected": "The custom EQ slider settings should be saved and persist when reopening the Custom EQ settings.",
-  "actual": "The slider settings are not saved and revert to defaults upon reopening the Custom EQ settings.",
+  "expected": "The custom EQ slider settings are saved and persist when reopening the Custom EQ settings.",
+  "actual": "The slider settings are not saved and revert to default upon reopening the Custom EQ settings. Additionally, there is a minor issue with the dialog description text that needs fixing.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "Falcon device",
     "Custom EQ",
-    "EQ slider settings",
+    "EQ slider",
     "Save EQ",
     "settings not saved",
     "reverting to defaults",
-    "save dialog",
     "EQ configuration"
   ],
   "source_last_updated": "2026-04-18T13:05:23.000+0000",
   "source_hash": "ec2845c27667ad3ad7c512f3c1b4076a361c997a6ccee5e3dab3a86929fe0de3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.689732Z",
+  "processed_at": "2026-04-24T11:23:04.987049Z",
   "status": "active"
 }
