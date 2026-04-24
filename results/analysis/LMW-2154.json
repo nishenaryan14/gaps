@@ -1,0 +1,130 @@
+{
+  "bug_id": "LMW-2154",
+  "matched_testcases": [
+    "65458387",
+    "65293009",
+    "65293034",
+    "65293028",
+    "65293010",
+    "65293019",
+    "65293025",
+    "65293011",
+    "65293016",
+    "65293012",
+    "65293013",
+    "65293014",
+    "65293015",
+    "65293021",
+    "65293022"
+  ],
+  "coverage_status": "none",
+  "gaps": [
+    "No existing test case covers firmware update behavior for the Charge Case when paired with a Legend 50 headset.",
+    "No test case verifies the presence/absence of an update button for the Charge Case in Device Settings > Software.",
+    "No test case validates the messaging that directs users to use the desktop app instead of the mobile app for Charge Case firmware updates.",
+    "No test case covers the scenario where the Charge Case is on outdated firmware and the mobile app's response to that state.",
+    "No test case covers the pairing of a Legend 50 headset and subsequent Charge Case firmware update flow."
+  ],
+  "generated_testcases": [
+    {
+      "title": "TC_FW_CC_001: Verify no update button for Charge Case on outdated firmware when paired with Legend 50 headset",
+      "steps": [
+        "1. Launch the mobile app and ensure no device is currently paired.",
+        "2. Put the Legend 50 headset into pairing mode.",
+        "3. Pair the Legend 50 headset with the mobile app via Bluetooth.",
+        "4. Confirm the Legend 50 headset appears as connected in the app.",
+        "5. Navigate to Device Settings > Software.",
+        "6. Observe the UI elements related to the Charge Case firmware status.",
+        "7. Check if any 'Update' or 'Update Firmware' button is displayed for the Charge Case."
+      ],
+      "expected": "No 'Update' or 'Update Firmware' button is displayed for the Charge Case in Device Settings > Software when the Charge Case is on outdated firmware and paired with a Legend 50 headset."
+    },
+    {
+      "title": "TC_FW_CC_002: Verify messaging directs user to desktop app for Charge Case firmware update",
+      "steps": [
+        "1. Launch the mobile app and pair a Legend 50 headset (Charge Case on outdated firmware).",
+        "2. Confirm the Legend 50 headset is connected.",
+        "3. Navigate to Device Settings > Software.",
+        "4. Locate the Charge Case firmware section.",
+        "5. Observe the message or text displayed in place of an update button.",
+        "6. Verify the content of the displayed message."
+      ],
+      "expected": "A message is displayed directing the user to use the desktop app to update the Charge Case firmware (e.g., 'Please use the desktop app to update your Charge Case firmware.')."
+    },
+    {
+      "title": "TC_FW_CC_003: Verify Charge Case firmware version is displayed but no update action available on mobile",
+      "steps": [
+        "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
+        "2. Navigate to Device Settings > Software.",
+        "3. Locate the Charge Case firmware version information.",
+        "4. Verify the current firmware version is displayed.",
+        "5. Verify there is no interactive update button or link for the Charge Case.",
+        "6. Verify the presence of the desktop app redirect message."
+      ],
+      "expected": "The Charge Case firmware version is displayed correctly. No update button is available. A message directs the user to use the desktop app for the firmware update."
+    },
+    {
+      "title": "TC_FW_CC_004: Verify Charge Case on latest firmware shows no update button and no redirect message",
+      "steps": [
+        "1. Ensure the Charge Case is on the latest firmware version.",
+        "2. Launch the mobile app and pair the Legend 50 headset with the Charge Case.",
+        "3. Navigate to Device Settings > Software.",
+        "4. Observe the Charge Case firmware section.",
+        "5. Check for the presence of an update button.",
+        "6. Check for the presence of the desktop app redirect message."
+      ],
+      "expected": "No update button is displayed for the Charge Case. No desktop app redirect message is displayed. The Charge Case firmware is shown as up-to-date."
+    },
+    {
+      "title": "TC_FW_CC_005: Verify Legend 50 headset firmware update button remains available when Charge Case shows redirect message",
+      "steps": [
+        "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
+        "2. Navigate to Device Settings > Software.",
+        "3. Observe the Legend 50 headset firmware section.",
+        "4. Verify an update button is present for the Legend 50 headset (if an update is available).",
+        "5. Observe the Charge Case firmware section.",
+        "6. Verify the desktop app redirect message is displayed for the Charge Case.",
+        "7. Verify no update button is present for the Charge Case."
+      ],
+      "expected": "The Legend 50 headset firmware update button is displayed and functional (if applicable). The Charge Case section shows the desktop app redirect message and no update button, confirming the mobile app only blocks Charge Case updates while allowing headset updates."
+    },
+    {
+      "title": "TC_FW_CC_006: Verify behavior after unpairing and re-pairing Legend 50 headset with outdated Charge Case",
+      "steps": [
+        "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
+        "2. Navigate to Device Settings > Software and confirm the desktop app redirect message is shown for the Charge Case.",
+        "3. Unpair the Legend 50 headset from the mobile app.",
+        "4. Re-pair the same Legend 50 headset with the Charge Case.",
+        "5. Navigate again to Device Settings > Software.",
+        "6. Verify the Charge Case firmware section still shows the desktop app redirect message and no update button."
+      ],
+      "expected": "After unpairing and re-pairing, the Charge Case firmware section consistently shows the desktop app redirect message and no update button, confirming the behavior is persistent across reconnections."
+    },
+    {
+      "title": "TC_FW_CC_007: Verify Charge Case firmware update button does not appear after app restart",
+      "steps": [
+        "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
+        "2. Navigate to Device Settings > Software and confirm the desktop app redirect message is shown.",
+        "3. Force close the mobile app completely.",
+        "4. Re-launch the mobile app.",
+        "5. Confirm the Legend 50 headset reconnects automatically (or manually reconnect).",
+        "6. Navigate to Device Settings > Software.",
+        "7. Verify the Charge Case firmware section still shows the desktop app redirect message and no update button."
+      ],
+      "expected": "After restarting the mobile app, the Charge Case firmware section continues to show the desktop app redirect message and no update button, confirming the behavior is persistent across app restarts."
+    },
+    {
+      "title": "TC_FW_CC_008: Verify desktop app redirect message contains correct instructions",
+      "steps": [
+        "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
+        "2. Navigate to Device Settings > Software.",
+        "3. Locate the desktop app redirect message for the Charge Case.",
+        "4. Read the full text of the message.",
+        "5. Verify the message includes clear instructions on how to update (e.g., 'download the desktop app', 'visit our website', etc.)."
+      ],
+      "expected": "The desktop app redirect message contains clear, actionable instructions guiding the user to obtain and use the desktop application to perform the Charge Case firmware update."
+    }
+  ],
+  "analysis_version": "v1",
+  "processed_at": "2026-04-24T12:05:46.041383Z"
+}
