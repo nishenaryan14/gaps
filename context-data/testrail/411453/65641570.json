@@ -1,0 +1,36 @@
+{
+  "id": "65641570",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Button to change preset is present",
+  "feature": "EQ (Equalizer)",
+  "scenario": "EQ settings screen displays a preset change button below the headline with default preset set to Bass",
+  "steps": [
+    "Open the EQ settings screen.",
+    "Check the headline on the screen.",
+    "Look for a button below the headline to change the preset.",
+    "Verify the default preset displayed is 'Bass'.",
+    "Tap the button to view available presets.",
+    "Confirm the list includes: Bass, Flat, Bright, and Custom EQ."
+  ],
+  "expected": "The EQ settings screen displays a button below the headline to change the preset. The default preset is Bass. Available presets are: Bass, Flat, Bright, and Custom EQ.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "EQ settings",
+    "preset change button",
+    "headline",
+    "default preset",
+    "Bass",
+    "available presets",
+    "Flat",
+    "Bright",
+    "Custom EQ"
+  ],
+  "source_last_updated": "1761143862",
+  "source_hash": "fefc43d6317b673dfc30661d599b352c9ebb95b71e5a0e90b396ecc2a3c2149b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
