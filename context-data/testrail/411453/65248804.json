@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Find My Device - Screen with No Devices Connected",
   "feature": "Find My Device",
-  "scenario": "Verify the \"No Devices Connected\" screen displays correctly when no devices are connected",
+  "scenario": "Verify the \"No Devices Connected\" screen displays correctly when opening Find My Device from App Settings, showing a map, warning sign, error message, and \"Not seeing your device?\" button.",
   "steps": [
-    "Open Lens App with 'No Devices Connected' screen (not first time)",
-    "Go to App Settings",
-    "Tap on Find My Device",
-    "Allow location permission if prompted"
+    "Open App Settings.",
+    "Navigate to Find My Device.",
+    "Observe the screen that appears."
   ],
-  "expected": "Find My Device screen shows a map, warning sign, text \"No devices were found. Connect your Poly device using Bluetooth and try again.\", and a \"Not seeing your device?\" button.",
+  "expected": "The screen displays a map, a warning sign, the message \"No devices were found. Connect your Poly device using Bluetooth and try again.\", and a \"Not seeing your device?\" button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "No Devices Connected",
-    "Lens App",
-    "App Settings",
     "Find My Device",
-    "location permission",
-    "empty state",
-    "device connection"
+    "App Settings",
+    "map",
+    "warning sign",
+    "error message",
+    "Not seeing your device",
+    "empty state"
   ],
   "source_last_updated": "1762437205",
   "source_hash": "84243257d6679e5a76506d27552ab66fc719bd4467b40b1a2282ea748abc43ce",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.358898Z",
+  "processed_at": "2026-04-24T11:50:53.167752Z",
   "status": "active"
 }
