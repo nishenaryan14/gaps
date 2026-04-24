@@ -4,9 +4,9 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83e\udd16 Falcon Charge Stand displays on User Guides screen but it shouldn't",
-  "feature": "Android App - User Guides",
+  "feature": "Android App - User Guides Screen",
   "scenario": "Falcon Charge Stand incorrectly appears as a sub-device on the User Guides screen where no sub-devices should be displayed.",
-  "description_clean": "On the User Guides screen, the Falcon Charge Stand is displayed as a sub-device, but it should not appear. The user should see no sub-devices on that screen.",
+  "description_clean": "On the User Guides screen, the Falcon Charge Stand is displayed as a sub-device, but it should not appear. The user should see no sub-devices on this screen.",
   "steps": [
     "Navigate to the User Guides screen.",
     "Observe the list of devices displayed on the screen."
@@ -23,11 +23,12 @@
     "device display",
     "incorrect appearance",
     "device list",
-    "UI bug"
+    "UI bug",
+    "accessory visibility"
   ],
   "source_last_updated": "2026-04-23T13:05:07.000+0000",
   "source_hash": "3378544f9691cab9bd0547d0522de663be5e17be00fb7f8a7e5512b0d401c827",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:31.800146Z",
+  "processed_at": "2026-04-24T11:23:04.577489Z",
   "status": "active"
 }
