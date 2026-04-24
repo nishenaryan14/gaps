@@ -1,0 +1,32 @@
+{
+  "id": "65248793",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Moving in and out of range",
+  "feature": "Find My Device",
+  "scenario": "Test moving a Headset in and out of Bluetooth range while using the Find My Device feature, verifying disconnect/reconnect behavior and map pin color changes.",
+  "steps": [
+    "Start the app with HS paired and connected, go to App Settings, tap Find My Device (allow GPS if prompted), and tap the connected HS from the bottom menu.",
+    "Move out of range \u2014 HS disconnects, \"Out of range\" view shown, map pin turns grey.",
+    "Move into range \u2014 HS reconnects, \"Nearby\" view shown, map pin turns blue."
+  ],
+  "expected": "When moving out of range, the HS disconnects, an \"Out of range\" view is shown, and the map pin turns grey. When moving back into range, the HS reconnects, a \"Nearby\" view is shown, and the map pin turns blue.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Headset",
+    "Bluetooth range",
+    "Find My Device",
+    "disconnect",
+    "reconnect",
+    "map pin color",
+    "out of range",
+    "nearby"
+  ],
+  "source_last_updated": "1759933800",
+  "source_hash": "e89a49a43b7c8bfce9f9d039ada60f076bd42e83eec1faa8550d9d00490d453a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.511091Z",
+  "status": "active"
+}
