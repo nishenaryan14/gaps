@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Language update notifications",
   "feature": "Language Update / Device Settings",
-  "scenario": "Verify language update notifications appear when the app is in the background during a device software update.",
+  "scenario": "Verify language update notifications appear when the app is in the background during a headset language update.",
   "steps": [
     "Pair and connect headset.",
     "Start the app.",
     "Go to Device Settings Menu.",
     "Tap on Language.",
     "Select one of the supported languages (a popup window should appear).",
-    "Click 'Update now' \u2014 the 'Software update: Three easy steps' screen should show with animation.",
-    "When the update starts, put the application in the background."
+    "Click \"Update now\" \u2014 the \"Software update: Three easy steps\" screen should show with animation. The headset language should change after a successful update.",
+    "Put the app in the background."
   ],
-  "expected": "A notification showing \"device update in progress\" should appear. Upon successful update, a notification that the device is updated should be seen.",
+  "expected": "When the app is put in the background, a notification \"Device update in progress\" should appear. Upon successful update, a notification \"Device is updated\" should be seen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "language update",
+    "language update notifications",
     "background app",
-    "device software update",
-    "notification",
-    "headset pairing",
-    "language selection",
-    "update notification"
+    "headset language update",
+    "Device Settings Menu",
+    "Software update",
+    "supported languages",
+    "popup window",
+    "update now"
   ],
   "source_last_updated": "1763382922",
   "source_hash": "07a6efddc3ae38d96be7ba081661b6b5f1218306872876d0cf4a0830448505ec",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.384900Z",
+  "processed_at": "2026-04-24T11:50:53.228934Z",
   "status": "active"
 }
