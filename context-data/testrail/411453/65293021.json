@@ -1,0 +1,39 @@
+{
+  "id": "65293021",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Permission for location tracking - Don't Allow - Cancel [Deprecated for IOS]",
+  "feature": "Onboarding / Location Permissions",
+  "scenario": "User denies location tracking during onboarding and cancels the permission prompt on the Find My Device screen, then navigates back to the Poly Lens Menu on iOS.",
+  "steps": [
+    "Start the app",
+    "Accept the license agreement",
+    "Navigate to the Organized screen",
+    "Tap 'Enable Now'",
+    "Tap 'Don't Allow' on the location permission popup",
+    "Continue through onboarding",
+    "Log in or continue as guest",
+    "Open the menu",
+    "Tap 'Find My Device'",
+    "Tap 'Cancel' on the permission prompt"
+  ],
+  "expected": "After step 5, a location permission popup appears with options \"Allow Once\", \"Allow while using app\", \"Don't Allow\". After step 10, a permission popup appears with \"Cancel\" and \"Enable Now\". After step 11, the app navigates back to the Poly Lens Menu.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "location tracking denied",
+    "Find My Device",
+    "permission prompt cancelled",
+    "Poly Lens Menu",
+    "iOS onboarding",
+    "location permission",
+    "Don't Allow",
+    "Cancel button"
+  ],
+  "source_last_updated": "1760528550",
+  "source_hash": "62bf66158149f437004441ed58354ae7e63af9140236fff468bfa844b5c679ce",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.058681Z",
+  "status": "active"
+}
