@@ -5,27 +5,29 @@
   "project": "411453",
   "title": "EQ - Two devices on one phone, change EQ on one device has no effect on the second device",
   "feature": "EQ (Equalizer)",
-  "scenario": "Changing EQ preset on one device does not sync to the second device connected to the same phone.",
+  "scenario": "Changing EQ preset on one paired device does not affect EQ settings on the second paired device.",
   "steps": [
-    "Connect two devices to the same phone.",
-    "Change the EQ preset on the first device.",
-    "Observe the EQ settings on the second device."
+    "Pair two devices (e.g., headphones and earbuds) to the same phone.",
+    "Open the companion app or settings for the first device.",
+    "Change the EQ preset on the first device to a different setting.",
+    "Check the EQ settings on the second device."
   ],
-  "expected": "The EQ changes should be reflected across both devices.",
+  "expected": "Changing the EQ preset on one device should also update the EQ settings on the second device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "EQ preset",
-    "sync",
-    "multi-device",
-    "audio settings",
-    "bluetooth",
-    "device pairing",
-    "equalizer"
+    "paired devices",
+    "independent EQ settings",
+    "companion app",
+    "headphones",
+    "earbuds",
+    "device-specific EQ",
+    "EQ synchronization"
   ],
   "source_last_updated": "1761211493",
   "source_hash": "fcf052e53c6bbe70d7e59f94b01d6d32824b0130ec56eeb0884cb1ea60557b65",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "processed_at": "2026-04-24T11:50:53.258900Z",
   "status": "active"
 }
