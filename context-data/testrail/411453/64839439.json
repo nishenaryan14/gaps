@@ -1,0 +1,32 @@
+{
+  "id": "64839439",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Device Connected and Update available",
+  "feature": "Device Home Screen",
+  "scenario": "Device Home Screen displays \"Software Update\" and \"Release Notes\" buttons in the status box under Battery icons when a device is connected and a firmware update is available.",
+  "steps": [
+    "Connect a device to the system.",
+    "Ensure a firmware update is available for the connected device.",
+    "Navigate to the Device Home Screen.",
+    "Observe the status box located under the Battery icons."
+  ],
+  "expected": "The status box under the Battery icons displays both \"Software Update\" and \"Release Notes\" buttons.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Device Home Screen",
+    "Software Update",
+    "Release Notes",
+    "Firmware Update",
+    "Status Box",
+    "Battery Icons",
+    "Device Connected"
+  ],
+  "source_last_updated": "1759234031",
+  "source_hash": "3288738199578aa00647e90ff73eb16dae3432ecf148dfff99346c5f33091ca8",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.078999Z",
+  "status": "active"
+}
