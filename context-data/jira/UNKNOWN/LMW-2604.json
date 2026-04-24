@@ -8,14 +8,12 @@
   "scenario": "Headset image is missing from the Home Screen on Free60+ and Free20 devices, with no placeholder on builds 32 & 46 and duplicate placeholders on production.",
   "description_clean": "Headset image is missing from the Home Screen on Free60+ and Free20 devices. No placeholder image is displayed on build 32 & 46, while two placeholder images appear side by side on the production app. Expected: Headset image should appear on the Home Screen.",
   "steps": [
-    "1. Launch the app on a Free60+ or Free20 device.",
-    "2. Navigate to the Home Screen.",
-    "3. Observe the area where the headset image should be displayed.",
-    "4. Check if a placeholder image is shown instead of the headset image.",
-    "5. Note the build version (32, 46, or production) to compare behavior."
+    "Launch the app on a Free60+ or Free20 device.",
+    "Navigate to the Home Screen.",
+    "Observe the area where the headset image should be displayed."
   ],
   "expected": "Headset image should appear on the Home Screen.",
-  "actual": "Headset image is missing from the Home Screen on Free60+ and Free20 devices. No placeholder image is displayed on build 32 & 46, while two placeholder images appear side by side on the production app.",
+  "actual": "Headset image is missing from the Home Screen. No placeholder image is displayed on build 32 & 46, while two placeholder images appear side by side on the production app.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -24,14 +22,14 @@
     "Home Screen",
     "Free60+",
     "Free20",
-    "placeholder",
-    "build 32",
-    "build 46",
-    "production duplicate placeholder"
+    "no placeholder",
+    "duplicate placeholder",
+    "builds 32 & 46",
+    "production"
   ],
   "source_last_updated": "2026-04-23T13:42:08.000+0000",
   "source_hash": "6bb2e07279ee96ba8c6b35fdd0b75ac0634b9ec78e66fdd1bb2dd2a7095c2673",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:22.733513Z",
+  "processed_at": "2026-04-24T10:51:32.598569Z",
   "status": "active"
 }
