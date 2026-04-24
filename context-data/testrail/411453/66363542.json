@@ -1,0 +1,32 @@
+{
+  "id": "66363542",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Next button",
+  "feature": "Onboarding",
+  "scenario": "Verify that clicking the Next button on onboarding screens correctly navigates from Step 1 through all subsequent screens (screen 3 to screen 6).",
+  "steps": [
+    "Open the onboarding flow",
+    "Navigate to Step 1",
+    "Click the Next button repeatedly",
+    "Verify that each subsequent screen (Screen 3 through Screen 6) opens correctly"
+  ],
+  "expected": "Each subsequent screen (Screen 3 through Screen 6) opens correctly after clicking Next.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "onboarding flow",
+    "Next button",
+    "screen navigation",
+    "step progression",
+    "onboarding screens",
+    "click navigation",
+    "screen verification"
+  ],
+  "source_last_updated": "1763378362",
+  "source_hash": "69ad13ce91b1e48c4a023791c556ec1bd878cfbb373b26af5864cbc43064dbc7",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.408510Z",
+  "status": "active"
+}
