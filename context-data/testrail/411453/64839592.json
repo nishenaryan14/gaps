@@ -1,0 +1,35 @@
+{
+  "id": "64839592",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Battery Charging Icon",
+  "feature": "Device Home Screen",
+  "scenario": "Verify battery charging icon behavior on the Device Home Screen when a paired headset/earbuds is connected to a charger and then disconnected.",
+  "steps": [
+    "1. Pair and connect a headset/earbuds to the device.",
+    "2. Observe the Device Home Screen to confirm the battery icon is displayed.",
+    "3. Connect the device to a charger.",
+    "4. Observe the battery icon change to show a bolt icon instead of the percentage value.",
+    "5. Disconnect the charger from the device.",
+    "6. Observe the bolt icon disappear and the percentage value reappear."
+  ],
+  "expected": "When a headset/earbuds is paired and connected, the battery icon is displayed. When the device is connected to a charger, the battery icon changes to show a bolt icon instead of the percentage value. When the charger is disconnected, the bolt icon disappears and the percentage value is displayed again.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "battery charging icon",
+    "Device Home Screen",
+    "paired headset",
+    "earbuds",
+    "charger connected",
+    "charger disconnected",
+    "bolt icon",
+    "battery percentage"
+  ],
+  "source_last_updated": "1759151666",
+  "source_hash": "9d716e3a625947a65ea9af5fb4c2bb5bb3758e19385e20d3bc741154ca129723",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.092578Z",
+  "status": "active"
+}
