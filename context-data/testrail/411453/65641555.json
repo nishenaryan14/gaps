@@ -5,34 +5,30 @@
   "project": "411453",
   "title": "ANC - 1. Main in-call scenario > Automatic toggle to ANC feature",
   "feature": "ANC (Active Noise Cancellation)",
-  "scenario": "Verify that during an active call, ANC automatically turns ON with the previously selected mode, Transparency is greyed out with a popup, and after the call ends, ANC turns OFF and Transparency becomes accessible again.",
+  "scenario": "Verify that during an active call, ANC automatically turns ON with the previously selected mode, Transparency is greyed out and inaccessible, and after the call ends, ANC turns OFF and Transparency becomes accessible again with the previous mode.",
   "steps": [
-    "Join an active call (Zoom/Teams/mobile).",
-    "Observe the ANC status \u2014 it should automatically turn ON with the previously selected mode (Adaptive or Standard).",
-    "Check the Transparency mode toggle \u2014 it should be greyed out and inaccessible.",
-    "Tap the Transparency toggle during the call.",
-    "Observe the popup informing the user that Transparency mode is unavailable during a call.",
-    "End or leave the call.",
-    "Observe that ANC turns OFF automatically.",
-    "Check that Transparency mode becomes accessible again with the previously selected option.",
-    "Toggle between ANC and Transparency modes to confirm normal operation."
+    "1. Join an active call (Zoom/Teams/mobile).",
+    "2. Observe the ANC and Transparency mode settings during the call.",
+    "3. Tap the Transparency toggle during the call.",
+    "4. End or leave the call.",
+    "5. Observe the ANC and Transparency mode settings after the call."
   ],
-  "expected": "During an active call, ANC turns ON automatically with the previously selected mode, Transparency is greyed out and inaccessible, and tapping it shows a popup that it's unavailable. After the call ends, ANC turns OFF, Transparency becomes accessible with the previous selection, and the user can toggle normally between ANC and Transparency.",
+  "expected": "1. During an active call, ANC automatically turns ON with the previously selected mode. Transparency mode becomes greyed out and inaccessible. 2. Tapping the Transparency toggle during a call shows a popup informing the user it's unavailable. 3. After leaving the call, ANC turns OFF, Transparency becomes accessible again with the previously selected mode, and the user can toggle between ANC and Transparency modes normally.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "ANC",
+    "Active Noise Cancellation",
     "Transparency mode",
     "active call",
-    "greyed out",
-    "popup",
-    "call end",
-    "toggle",
-    "audio mode"
+    "call behavior",
+    "mode switching",
+    "audio settings",
+    "post-call state"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "f58bda9ff11be087ea2dbc8821774ee520dbc74f4db8028aca6661b13000dc73",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.398291Z",
+  "processed_at": "2026-04-24T11:50:53.240564Z",
   "status": "active"
 }
