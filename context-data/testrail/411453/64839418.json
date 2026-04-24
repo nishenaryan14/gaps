@@ -5,30 +5,28 @@
   "project": "411453",
   "title": "Device Home Screen - Battery life",
   "feature": "Device Home Screen",
-  "scenario": "Verify battery life display on Device Home Screen shows correct icons and colors for different device types and charge levels, and greys out when headset is turned off.",
+  "scenario": "Battery life display on Device Home Screen shows correct icons and colors for headsets, headsets with charge case, and earbuds, and greys out with last known percentage when headset is turned off.",
   "steps": [
-    "1. Pair and connect the headset.",
-    "2. Start the app and navigate to the Device Home Screen.",
-    "3. Observe the battery percentage displayed.",
-    "4. Turn off the headset.",
-    "5. Observe the battery icons on the Device Home Screen."
+    "Pair and connect the headset, start the app, and navigate to the Device Home Screen.",
+    "Verify the battery percentage is shown.",
+    "Turn off the headset.",
+    "Verify the battery icons are greyed out with the last known percentage displayed."
   ],
-  "expected": "For Headsets: A single battery icon is shown. For Headsets with a Charge case: Two icons marked \"H\" and \"C\" are displayed. For Earbuds: Three icons marked \"L\", \"R\", and \"C\" are shown. Battery icon color corresponds to charge level: 100%-40% = black (white in dark mode), 39%-20% = yellow, 19%-1% = red, 0% = empty. When the headset is turned off, the battery icons are greyed out with the last known percentage displayed.",
+  "expected": "Battery percentage is shown on the Device Home Screen when the headset is connected. When the headset is turned off, the battery icons are greyed out but still display the last known percentage.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "battery life display",
     "Device Home Screen",
-    "battery icons",
-    "charge levels",
-    "device types",
+    "headset battery icons",
+    "greyed out battery",
+    "last known percentage",
     "headset turned off",
-    "greyed out",
-    "battery percentage"
+    "battery percentage verification"
   ],
   "source_last_updated": "1776242372",
   "source_hash": "abecc50b7e2e1bebd4ad89e32eb493dc652a020128cdfca5a2e27432253ceaf3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.342104Z",
+  "processed_at": "2026-04-24T11:50:53.128693Z",
   "status": "active"
 }
