@@ -1,0 +1,33 @@
+{
+  "id": "65387068",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Feedback - the thank you card after sending the feedback",
+  "feature": "Feedback",
+  "scenario": "After sending feedback, a thank you note should appear and either auto-dismiss after 5 seconds or be dismissible via a back button.",
+  "steps": [
+    "Send feedback via the feedback form or mechanism.",
+    "Observe the screen after submission.",
+    "Wait for 5 seconds without interacting.",
+    "Alternatively, click the back button (if available) before 5 seconds elapse."
+  ],
+  "expected": "A thank you card/note appears after sending feedback. It should either disappear automatically after 5 seconds, or the user can click a back button to dismiss it immediately.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "feedback form",
+    "thank you note",
+    "auto-dismiss",
+    "5 seconds",
+    "back button",
+    "submission",
+    "dismissible",
+    "confirmation message"
+  ],
+  "source_last_updated": "1776241074",
+  "source_hash": "ebddf3609192ccd2159281ae9e42721ed4d29e996f80c8db840d0f153f6bf8ea",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.364460Z",
+  "status": "active"
+}
