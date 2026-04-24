@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Analytics - Firmware Update Started",
   "feature": "Analytics",
-  "scenario": "Verify that starting a DFU (firmware update) on a device logs the event and correctly updates Firebase dashboard elements (graph, event counts, device/update details) after a few hours.",
+  "scenario": "Verify that after starting a DFU process, the \"firmware_update_started\" event is logged and the Firebase dashboard displays default elements plus Device PID, Charge Unit PID, Update Type, and Target Language ID, with event counts increasing after a few hours.",
   "steps": [
     "Open the Firebase dashboard page.",
-    "Verify that the page loads properly.",
-    "Check that default elements are displayed: graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment.",
-    "Check that additional elements are displayed: Device PID, Charge Unit PID, Update Type, Target Language ID.",
-    "Start a DFU (firmware update) process on any device.",
+    "Verify that default elements are displayed: graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment.",
+    "Verify that additional elements are displayed: Device PID, Charge Unit PID, Update Type, Target Language ID.",
+    "Start a DFU (firmware update) process on a device.",
     "Wait a few hours.",
-    "Check the event count for related elements on the dashboard.",
-    "Verify that the event count has increased."
+    "Check the event count for the related elements and confirm it has increased."
   ],
-  "expected": "The Firebase dashboard page opens properly and displays all default elements (graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment) plus Device PID, Charge Unit PID, Update Type, and Target Language ID. After a DFU process is started, the event count for related elements increases after a few hours.",
+  "expected": "The Firebase dashboard displays all default elements plus the additional elements (Device PID, Charge Unit PID, Update Type, Target Language ID). After starting a DFU process, the event count for related elements increases after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "DFU",
-    "firmware update",
+    "firmware_update_started",
     "Firebase dashboard",
-    "event count",
-    "graph",
-    "device update",
-    "logging",
-    "event verification"
+    "Device PID",
+    "Charge Unit PID",
+    "Update Type",
+    "Target Language ID",
+    "event count"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "d4be1b1d21d59465d1dae4e405798b3b593b72c0548641ca0b4a409301bb4cad",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.426001Z",
+  "processed_at": "2026-04-24T11:50:53.333589Z",
   "status": "active"
 }
