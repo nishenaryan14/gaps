@@ -5,28 +5,29 @@
   "project": "411453",
   "title": "1 step DFU - User can trigger firmware update for just Charge Case",
   "feature": "DFU (Device Firmware Update)",
-  "scenario": "User can trigger a firmware update for just the Charge Case in a 1-step DFU scenario, leaving the Earbuds on the lower version.",
+  "scenario": "1-step DFU where only Charge Case update is triggered, verifying Earbud stays on lower version while Charge Case updates successfully",
   "steps": [
-    "Start the app with Osprey EB and CC (both on at least version 5039) where an update is available for both.",
-    "Navigate to Settings/Update.",
-    "Click the update button for the Charge Case / Voyager Free 60 Charger Case."
+    "Ensure both Earbud (EB) and Charge Case (CC) have available firmware updates.",
+    "Click the update button for the Charge Case (Voyager Free 60 Charger Case).",
+    "Wait for the DFU process to complete.",
+    "Check the firmware version of the Charge Case.",
+    "Check the firmware version of the Earbud."
   ],
-  "expected": "Only the CC DFU completes successfully; the EB stays on the lower version.",
+  "expected": "Only the Charge Case DFU completes successfully. The Charge Case is updated to the new firmware version. The Earbud remains on the lower (original) version.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "firmware update",
-    "charge case",
     "DFU",
+    "Charge Case update",
+    "firmware version",
+    "Earbud lower version",
+    "Voyager Free 60 Charger Case",
     "1-step DFU",
-    "Osprey EB",
-    "Voyager Free 60",
-    "partial update",
-    "version mismatch"
+    "firmware update"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "bf70a150655c1584ebeb6892bdac0cf8da448615413c1d35f491a7078ab5dda3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "processed_at": "2026-04-24T11:50:53.295914Z",
   "status": "active"
 }
