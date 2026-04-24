@@ -12,7 +12,7 @@
     "Observe the firmware version displayed on the Home screen.",
     "Observe the firmware version displayed on the device settings page.",
     "Restart the app.",
-    "Observe the firmware version displayed on the Home screen and device settings page again."
+    "Observe the firmware version displayed on the Home screen and device settings page after restart."
   ],
   "expected": "After a successful DFU, the new firmware version should be displayed immediately on the Home screen and device settings page without needing to restart the app.",
   "actual": "After a successful DFU, the previous firmware version is still displayed on the Home screen and device settings page. The correct firmware version only appears after restarting the app.",
@@ -32,6 +32,6 @@
   "source_last_updated": "2026-04-16T10:43:11.000+0000",
   "source_hash": "3fcdcdcc9036366915d6d32869e8398db8ec671d177d47503b7a66559ce85d95",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.141134Z",
+  "processed_at": "2026-04-24T11:50:53.072179Z",
   "status": "active"
 }
