@@ -1,0 +1,38 @@
+{
+  "id": "65459440",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Headset at low battery - Software update tab in device settings",
+  "feature": "Software Update / DFU",
+  "scenario": "DFU update is blocked with a pop-up when headset battery is below 5%, and only proceeds when the headset is plugged into power.",
+  "steps": [
+    "Ensure headset battery is below 5% and not plugged into power.",
+    "Navigate to the software update tab.",
+    "Attempt to start a DFU update.",
+    "Observe the pop-up message displayed.",
+    "Plug the headset into power.",
+    "Attempt to start the DFU update again.",
+    "Observe that the update proceeds.",
+    "While the update is in progress, unplug the headset from power (while battery remains below 5%).",
+    "Observe the pop-up message reappears and blocks the update."
+  ],
+  "expected": "When battery is below 5% and headset is not plugged in, attempting a DFU update shows a pop-up: \"Update currently not available, please try back later\". The update proceeds only when the headset is plugged into power. If unplugged during the update (while still below 5%), the pop-up reappears and blocks the update.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU update",
+    "headset battery",
+    "low battery",
+    "power plugged",
+    "pop-up message",
+    "update blocked",
+    "firmware update",
+    "battery threshold"
+  ],
+  "source_last_updated": "1763369621",
+  "source_hash": "1d08ad7c13b2792caf5f2439c80b5b3a75db792b75594a3cf13ea9c75fecf996",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "status": "active"
+}
