@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Verify Custom EQ slider adjustments are saved and persisted after reopening EQ settings",
+    "steps": [
+      "1. Launch the application and navigate to the main screen.",
+      "2. Open Settings / Audio Settings / EQ Settings.",
+      "3. Select 'Custom EQ' mode (if not already selected).",
+      "4. Adjust at least one EQ slider (e.g., 60 Hz band) to a non-default value (e.g., +3 dB).",
+      "5. Tap the 'Save EQ' button.",
+      "6. Close the EQ settings (e.g., tap Back or close the settings panel).",
+      "7. Reopen Settings / Audio Settings / EQ Settings.",
+      "8. Observe the position of the previously adjusted EQ slider(s)."
+    ],
+    "expected": "The Custom EQ slider(s) should retain the previously saved values (e.g., 60 Hz band still at +3 dB) after reopening the EQ settings."
+  },
+  {
+    "title": "Verify multiple Custom EQ slider adjustments persist after app restart",
+    "steps": [
+      "1. Launch the application and navigate to Settings > Audio Settings > EQ Settings.",
+      "2. Select 'Custom EQ' mode.",
+      "3. Adjust multiple EQ sliders to distinct non-default values (e.g., 60 Hz: +5 dB, 230 Hz: -2 dB, 910 Hz: +1 dB, 4 kHz: -3 dB, 14 kHz: +4 dB).",
+      "4. Tap 'Save EQ' to persist the custom profile.",
+      "5. Close the EQ settings and fully close/terminate the application.",
+      "6. Relaunch the application.",
+      "7. Navigate to Settings > Audio Settings > EQ Settings.",
+      "8. Check the values of all previously adjusted EQ sliders."
+    ],
+    "expected": "All Custom EQ slider values should match the saved profile (60 Hz: +5 dB, 230 Hz: -2 dB, 910 Hz: +1 dB, 4 kHz: -3 dB, 14 kHz: +4 dB) after app restart."
+  },
+  {
+    "title": "Verify 'Save EQ' button is functional and persists Custom EQ profile",
+    "steps": [
+      "1. Launch the application and go to Settings > Audio Settings > EQ Settings.",
+      "2. Select 'Custom EQ' mode.",
+      "3. Adjust one or more EQ sliders to non-default values.",
+      "4. Without tapping 'Save EQ', close the EQ settings.",
+      "5. Reopen EQ settings and verify slider positions are reset to defaults.",
+      "6. Adjust the same sliders again to the same non-default values.",
+      "7. Tap the 'Save EQ' button.",
+      "8. Close and reopen the EQ settings.",
+      "9. Observe the slider positions."
+    ],
+    "expected": "Step 5: Without saving, slider positions should revert to defaults. Step 9: After tapping 'Save EQ', the slider positions should persist and match the saved values."
+  },
+  {
+    "title": "Verify switching away from Custom EQ and back retains saved profile",
+    "steps": [
+      "1. Launch the application and navigate to Settings > Audio Settings > EQ Settings.",
+      "2. Select 'Custom EQ' mode and adjust sliders to non-default values.",
+      "3. Tap 'Save EQ' to save the custom profile.",
+      "4. Switch to a different EQ preset (e.g., 'Rock', 'Pop', or 'Classical').",
+      "5. Verify the EQ sliders change to match the selected preset.",
+      "6. Switch back to 'Custom EQ' mode.",
+      "7. Observe the EQ slider positions."
+    ],
+    "expected": "After switching back to 'Custom EQ' mode, the sliders should return to the previously saved custom values, not the default flat values."
+  },
+  {
+    "title": "Verify EQ slider values persist after device orientation change",
+    "steps": [
+      "1. Launch the application and navigate to Settings > Audio Settings > EQ Settings.",
+      "2. Select 'Custom EQ' mode.",
+      "3. Adjust EQ sliders to non-default values (e.g., 60 Hz: +2 dB, 14 kHz: +3 dB).",
+      "4. Tap 'Save EQ'.",
+      "5. Rotate the device from portrait to landscape (or vice versa).",
+      "6. Observe the EQ slider positions after rotation."
+    ],
+    "expected": "The Custom EQ slider values should remain unchanged after device orientation change."
+  },
+  {
+    "title": "Verify EQ slider values persist after navigating away and back to settings",
+    "steps": [
+      "1. Launch the application and navigate to Settings > Audio Settings > EQ Settings.",
+      "2. Select 'Custom EQ' mode.",
+      "3. Adjust EQ sliders to non-default values.",
+      "4. Tap 'Save EQ'.",
+      "5. Navigate back to the main screen or another section of the app.",
+      "6. Navigate back to Settings > Audio Settings > EQ Settings.",
+      "7. Observe the EQ slider positions."
+    ],
+    "expected": "The Custom EQ slider values should persist after navigating away from and back to the EQ settings screen."
+  }
+]
