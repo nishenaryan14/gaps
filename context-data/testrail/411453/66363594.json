@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "DFU - Case Update Needed popup present if Charge Case is on outdated FW",
   "feature": "DFU (Device Firmware Update)",
-  "scenario": "After updating earbuds via DFU from outdated firmware, the \"Case Update Needed\" popup appears on the Home Screen, can be dismissed by tapping, and should not reappear after app restart.",
+  "scenario": "After updating earbuds via DFU on outdated firmware, the \"Case Update Needed\" popup should be dismissable and not reappear after app restart, directing users to Poly Lens Desktop for case updates.",
   "steps": [
-    "Ensure both earbuds and charge case are on outdated firmware.",
+    "Ensure earbuds and charge case are on outdated firmware.",
     "Update the earbuds via DFU.",
     "Observe the Home Screen for a 'Case Update Needed' popup.",
-    "Tap the popup to dismiss it.",
-    "Restart the app."
+    "Dismiss the popup.",
+    "Restart the app.",
+    "Check if the popup reappears.",
+    "Verify that the card displays a message directing the user to use Poly Lens Desktop app for case updates."
   ],
-  "expected": "After restarting the app, the \"Case Update Needed\" popup should not reappear.",
+  "expected": "The popup can be dismissed and should not reappear after restarting the app. The card displays a message directing the user to use Poly Lens Desktop app for case updates.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU update",
+    "earbuds DFU update",
     "Case Update Needed popup",
-    "earbuds firmware",
-    "charge case firmware",
-    "Home Screen popup",
-    "app restart",
-    "popup dismissal",
-    "outdated firmware"
+    "firmware update dismiss",
+    "Poly Lens Desktop",
+    "case firmware update",
+    "app restart popup persistence",
+    "outdated firmware charge case"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "416482f602d5f74f8aeb547717740aa3b8e3330234274dae66bee945c2bcad30",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.433691Z",
+  "processed_at": "2026-04-24T11:50:53.426414Z",
   "status": "active"
 }
