@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "App Settings - General - Account - Account delete UI",
   "feature": "App Settings - General - Account",
-  "scenario": "Verify the Account delete UI displays the delete icon below the Log out button matching the Figma design.",
+  "scenario": "Verify the delete icon is displayed below the Log out button in the Account tab under General settings, consistent with the Figma design.",
   "steps": [
-    "Start the app and log in to the Lens tenant account on the Cloud.",
-    "Navigate to General.",
-    "Open the Account tab.",
-    "Check the delete icon below the Log out button."
+    "1. Navigate to General settings.",
+    "2. Go to the Account tab.",
+    "3. Scroll down below the Log out button.",
+    "4. Verify that the delete icon is present.",
+    "5. Compare the delete icon with the Figma design to ensure it matches."
   ],
-  "expected": "The delete icon is present and matches the Figma design.",
+  "expected": "The delete icon is present below the Log out button in the Account tab under General settings and matches the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Account delete UI",
     "delete icon",
     "Log out button",
-    "Figma design",
-    "Lens tenant",
-    "General settings",
     "Account tab",
-    "UI verification"
+    "General settings",
+    "Figma design",
+    "icon verification",
+    "UI consistency"
   ],
   "source_last_updated": "1759416328",
   "source_hash": "a4c1a518b125136c4439bd2194abbadfbd6cf60a27ca4edbe2dabdbe588a060b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.748540Z",
+  "processed_at": "2026-04-24T11:23:05.348298Z",
   "status": "active"
 }
