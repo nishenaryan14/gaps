@@ -5,14 +5,14 @@
   "project": "411453",
   "title": "1 step DFU - Content of Software Update tab with Earbuds on latest FW and Charge Case on FW 5038",
   "feature": "Software Update / DFU",
-  "scenario": "Verify Software Update tab shows \"Up to date\" when Earbuds are on latest firmware and Charge Case is on FW 5038 (which does not support 1-step DFU)",
+  "scenario": "Verify Software Update tab shows \"Up to date\" when Earbuds are on latest firmware and Charge Case is on FW 5038 (which does not support 1-step DFU).",
   "steps": [
     "Ensure Earbuds are on the latest firmware.",
     "Ensure Charge Case is on FW 5038.",
-    "Open the Software Update tab.",
-    "Observe the status displayed."
+    "Navigate to the Software Update tab.",
+    "Observe the update status displayed."
   ],
-  "expected": "The Software Update tab shows \"Up to date\".",
+  "expected": "No update is shown (status \"Up to date\") because Charge Case FW 5038 does not support 1-step DFU.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,12 +21,12 @@
     "Earbuds latest firmware",
     "Charge Case FW 5038",
     "1-step DFU unsupported",
-    "firmware status",
-    "DFU compatibility"
+    "firmware version",
+    "update status"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "ac6025826f16abae5cc21ae4c8c5e57523ffd4dce6b5b15f6d1fd6c95c4a7657",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "processed_at": "2026-04-24T11:50:53.298439Z",
   "status": "active"
 }
