@@ -5,31 +5,30 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 DSDK DFU for sub devices doesnt work",
   "feature": "Android DSDK DFU",
-  "scenario": "App crashes when starting CC or CS Device Firmware Update, and DFU for sub-devices fails to work.",
-  "description_clean": "App crashes whenever CC or CS DFU (Device Firmware Update) is started. DFU for sub-devices does not work.",
+  "scenario": "App crashes when starting CC or CS Device Firmware Update, and DFU for sub devices fails to work",
+  "description_clean": "App crashes whenever CC or CS DFU (Device Firmware Update) is started. DFU for sub devices does not work.",
   "steps": [
-    "1. Start CC (Central Controller) DFU (Device Firmware Update)",
-    "2. Start CS (Central Station) DFU (Device Firmware Update)",
-    "3. Attempt DFU for sub-devices"
+    "Open the app",
+    "Start CC (Central Coordinator) DFU",
+    "Start CS (Central Switch) DFU"
   ],
-  "expected": "DFU process completes successfully without crashing. Sub-device DFU works as expected.",
-  "actual": "App crashes whenever CC or CS DFU is started. DFU for sub-devices does not work.",
+  "expected": "DFU process starts successfully without crashing",
+  "actual": "App crashes whenever CC or CS DFU is started. DFU for sub devices does not work.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "App crash",
-    "CC DFU",
-    "CS DFU",
+    "app crash",
+    "DFU",
     "Device Firmware Update",
-    "Sub-device DFU",
-    "Firmware update failure",
-    "Central Controller",
-    "Central Station"
+    "Central Coordinator",
+    "Central Switch",
+    "firmware update failure",
+    "sub device"
   ],
   "source_last_updated": "2026-04-16T07:56:34.000+0000",
   "source_hash": "ea5710a9052cd1573bccb43f5f21f4eff59160a8bfa3950c3d197308aa268016",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:04.984004Z",
+  "processed_at": "2026-04-24T11:50:53.066439Z",
   "status": "active"
 }
