@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "PPIP - Share data button presented after log out",
   "feature": "PPIP (Privacy & Permissions)",
-  "scenario": "Share Data toggle incorrectly reappears in Account settings after logging out of a Poly account",
+  "scenario": "Share Data toggle remains visible after logging in with Poly credentials, when it should only appear in guest mode.",
   "steps": [
-    "Start app as guest, go through onboarding.",
-    "Choose to share or not share data.",
-    "Go to App Settings > General > Account \u2014 Share data toggle is shown with correct ON/OFF state.",
-    "Log in with Poly credentials \u2014 Share data toggle disappears (correct behavior).",
-    "Log out \u2014 Share data toggle reappears (incorrect; it should not be shown after logout)."
+    "Start app fresh and go through onboarding.",
+    "Tap 'Continue as Guest' and choose Share/Don't Share.",
+    "Go to App Settings > General > Account \u2014 the Share Data toggle is shown correctly.",
+    "Tap 'Log in' and log in with Poly credentials \u2014 the Share Data toggle should disappear (since it's a guest-only setting), but it remains visible.",
+    "After logging out, the toggle reappears but its ON/OFF state depends on the guest choice from step 1."
   ],
-  "expected": "After logging out, the \"Share Data\" toggle should not be shown.",
+  "expected": "The Share Data toggle should not be shown after the user logs in, and should only appear in guest mode.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Share Data toggle",
-    "Account settings",
-    "logout",
-    "Poly account",
     "guest mode",
-    "data sharing",
-    "toggle visibility",
-    "authentication state"
+    "Poly credentials",
+    "login",
+    "Account settings",
+    "visibility bug",
+    "guest-only setting",
+    "toggle persistence"
   ],
   "source_last_updated": "1762435364",
   "source_hash": "fe13128cdb13d0e1427234c468f1d370d92bb9e94e7243c2a2cdb52520eb702c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.724408Z",
+  "processed_at": "2026-04-24T11:23:05.327173Z",
   "status": "active"
 }
