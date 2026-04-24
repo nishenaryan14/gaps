@@ -1,0 +1,35 @@
+{
+  "id": "65640114",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Second headset connected with the mobile app",
+  "feature": "Headset Management / Mobile App",
+  "scenario": "Verify that a newly connected second headset appears correctly with accurate data across all relevant pages in the mobile app.",
+  "steps": [
+    "Ensure one headset is already registered on the Lens tenant.",
+    "Connect a second headset to the mobile app.",
+    "Navigate to the Inventory page and verify the new headset appears with correct name, version, private IP address, status, serial number, and date.",
+    "Navigate to the Device User / Mobile User page and verify the new headset's data is accurate.",
+    "Navigate to the Mobile profile page and verify the new headset's data is accurate.",
+    "Navigate to the Device profile page and verify the new headset's data is accurate."
+  ],
+  "expected": "The second headset appears correctly on the Inventory page, Device User/Mobile User page, Mobile profile page, and Device profile page with accurate data including name, version, private IP address, status, serial number, and date.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "second headset",
+    "mobile app",
+    "inventory page",
+    "device data accuracy",
+    "Lens tenant",
+    "device profile",
+    "mobile profile",
+    "device user"
+  ],
+  "source_last_updated": "1760949362",
+  "source_hash": "4ed881cf276feb00770859cb61f7af9f1c48079637a2ee462e0b1dc59f0640e6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "status": "active"
+}
