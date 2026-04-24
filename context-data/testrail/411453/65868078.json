@@ -11,9 +11,10 @@
     "Navigate to the device home page.",
     "Observe the displayed devices on the home page.",
     "Check the dots at the bottom of the screen to see the number of connected devices and which device is currently displayed.",
-    "Swipe left or right to view each connected device."
+    "Swipe left to navigate to the next connected device.",
+    "Swipe right to navigate to the previous connected device."
   ],
-  "expected": "All connected devices are properly displayed on the device home page. Dots at the bottom indicate the number of connected devices and which device is currently displayed. Users can swipe left or right to view each connected device.",
+  "expected": "All connected devices are properly displayed on the device home page. Dots at the bottom indicate the number of connected devices and which device is currently displayed. The user can swipe left or right to navigate between connected devices.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -28,6 +29,6 @@
   "source_last_updated": "1761749623",
   "source_hash": "5464078184de509e68e3afb507374ea512ba3582da474bb167200e349b07dfaa",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.078999Z",
+  "processed_at": "2026-04-24T10:51:32.738923Z",
   "status": "active"
 }
