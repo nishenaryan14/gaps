@@ -1,0 +1,39 @@
+{
+  "id": "64907038",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "App Settings - General - Licenses",
+  "feature": "App Settings - General - Licenses",
+  "scenario": "Verify that \"Third-party Software\" headline and its licenses with Source and License links are visible under App Settings > General > Licenses, and also appear in Phone Settings > Poly Lens > Acknowledgements.",
+  "steps": [
+    "Open App Settings.",
+    "Navigate to General > Licenses.",
+    "Verify that the 'Third-party Software' headline is visible.",
+    "Check that a list of licenses is displayed below the headline.",
+    "For each license, confirm that a Source link is present.",
+    "For each license, confirm that a License link is present.",
+    "Open Phone Settings.",
+    "Navigate to Poly Lens > Acknowledgements.",
+    "Verify that the same licenses appear in this section."
+  ],
+  "expected": "Under App Settings > General > Licenses, the \"Third-party Software\" headline is visible with a list of licenses. Each license displays both a Source link and a License link. The same licenses also appear in Phone Settings > Poly Lens > Acknowledgements.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Third-party Software",
+    "Licenses",
+    "App Settings",
+    "General",
+    "Source link",
+    "License link",
+    "Phone Settings",
+    "Poly Lens",
+    "Acknowledgements"
+  ],
+  "source_last_updated": "1759327858",
+  "source_hash": "f211271dd5e3822129310c678804cf82a127d9828d1d5c5ae8ab7285afb635bc",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.107901Z",
+  "status": "active"
+}
