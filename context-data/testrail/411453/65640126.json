@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Policy: Remove some settings from Policy - Settings Unlocked",
   "feature": "Policy",
-  "scenario": "Verify that removing settings from a Cloud Policy and applying changes does not unlock them in the app, and that tapping a previously policy-affected setting allows the user to change its value.",
+  "scenario": "Verify that removing settings from a Cloud Policy and applying changes unlocks those settings in the app, allowing their values to be modified.",
   "steps": [
-    "1. Remove settings from a Policy on the Cloud.",
-    "2. Apply the changes to the Policy.",
-    "3. In the app, verify that the removed settings are not unlocked.",
-    "4. Tap on a previously policy-affected setting.",
-    "5. Confirm that the user is allowed to change its value."
+    "1. Open the Policy on the Cloud and remove specific settings from it.",
+    "2. Apply the changes to the Policy on the Cloud.",
+    "3. Open the app and navigate to the settings that were previously locked by the policy.",
+    "4. Verify that those settings are now unlocked (i.e., no longer locked by policy).",
+    "5. Attempt to change the values of those settings.",
+    "6. Confirm that the values can be changed successfully."
   ],
-  "expected": "Settings removed from the Policy on the Cloud remain locked in the app after changes are applied. Tapping on a previously policy-affected setting allows the user to change its value.",
+  "expected": "Settings removed from the Policy on the Cloud are unlocked in the app, and their values can be changed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Cloud Policy",
-    "settings removal",
-    "policy unlock",
+    "remove settings",
     "apply changes",
-    "policy-affected setting",
-    "value change",
+    "unlock settings",
+    "modify values",
     "policy enforcement",
-    "app settings"
+    "settings unlock verification",
+    "policy configuration"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "731bf71fbade4da8fbb49b8a533846500f64722dc37205db01278478f3b33310",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.420783Z",
+  "processed_at": "2026-04-24T11:50:53.318318Z",
   "status": "active"
 }
