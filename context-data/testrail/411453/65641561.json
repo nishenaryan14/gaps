@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "ANC - 7.-ANC is OFF and Transparency is OFF, both without selected values, and during call User sets ANC to ON",
   "feature": "ANC (Active Noise Cancellation) / Transparency Mode",
-  "scenario": "When ANC and Transparency are both OFF, joining a call and turning ANC ON leaves it ON with Adaptive after the call ends, allowing mode switching afterward.",
+  "scenario": "When ANC and Transparency are both OFF, turning ANC ON during a call activates it with Adaptive mode, which persists after the call ends.",
   "steps": [
     "Start/join a call - ANC stays OFF, Transparency is greyed out.",
     "Set ANC ON - ANC activates with Adaptive value selected.",
-    "Leave the call - ANC remains ON with Adaptive, Transparency stays OFF.",
+    "Leave the call - ANC stays ON with Adaptive, Transparency remains OFF.",
     "Toggle ANC/Transparency modes - User can switch between them."
   ],
-  "expected": "ANC activates with Adaptive value selected when set to ON during a call. After leaving the call, ANC remains ON with Adaptive, Transparency stays OFF, and the user can toggle between ANC/Transparency modes.",
+  "expected": "ANC activates with Adaptive value selected when set ON during a call. After leaving the call, ANC stays ON with Adaptive, Transparency remains OFF, and the user can switch between ANC/Transparency modes.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "ANC",
     "Transparency",
-    "Adaptive",
-    "call",
-    "mode switching",
-    "audio mode",
-    "noise control"
+    "Adaptive mode",
+    "Call",
+    "Audio mode persistence",
+    "Noise control",
+    "Toggle"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "cb04c8544fdcc6b07432d4a080c007f1da35b8aab60531cff1e3f0f6da65b3aa",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "processed_at": "2026-04-24T11:50:53.247786Z",
   "status": "active"
 }
