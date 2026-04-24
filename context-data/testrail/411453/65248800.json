@@ -5,32 +5,30 @@
   "project": "411453",
   "title": "Find My Device - Don't Allow - Enable now - Allow Once [Only This Time - Android] [Deprecated for IOS]",
   "feature": "Find My Device",
-  "scenario": "User denies location permission initially, then enables it with \"Ask Next Time\" option while keeping Find My Device screen visible in the background.",
+  "scenario": "User navigates Find My Device flow with HS connected, denies permission, taps \"Enable Now\", and grants location with \"Ask Next Time\" option.",
   "steps": [
-    "Launch the app with the headset (HS) connected.",
-    "Navigate to the Find My Device screen.",
-    "Tap 'Don't Allow' when the permission dialog appears.",
-    "Verify that the permission dialog disappears and the Find My Device screen is still visible in the background.",
-    "Tap 'Enable Now' on the Find My Device screen.",
-    "When the location permission dialog appears, select 'Ask Next Time or When I Share'.",
-    "Verify that the permission dialog closes and the Find My Device screen remains visible in the background."
+    "1. Start the app with the headset (HS) connected.",
+    "2. Navigate to the 'Find My Device' feature.",
+    "3. Tap 'Don't Allow' when the permission popup appears.",
+    "4. Tap 'Enable Now' on the subsequent prompt.",
+    "5. Grant location permission by selecting 'Ask Next Time or When I Share' option."
   ],
-  "expected": "All permission dialogs appear correctly at each step, and the Find My Device screen remains visible in the background throughout the flow.",
+  "expected": "Permission popups with options \"Allow Once\", \"Allow while using app\", \"Don't Allow\" appear at appropriate steps. Tapping \"Enable Now\" navigates to settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "Find My Device",
+    "headset connected",
+    "permission denied",
+    "Enable Now",
     "location permission",
     "Ask Next Time",
-    "Find My Device",
-    "permission dialog",
-    "Don't Allow",
-    "Enable Now",
-    "headset connected",
-    "permission denied"
+    "grant location",
+    "permission popup"
   ],
   "source_last_updated": "1760352215",
   "source_hash": "172df16d660f02df5b18f33120a6a0fa999e392affa8542effd1cb1776665a3c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.358391Z",
+  "processed_at": "2026-04-24T11:50:53.176380Z",
   "status": "active"
 }
