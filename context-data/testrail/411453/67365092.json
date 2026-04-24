@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Device Settings - All settings can be changed",
   "feature": "Device Settings",
-  "scenario": "Verify that all non-toggle device settings options can be changed via picker and updated values are correctly displayed.",
+  "scenario": "Verify that all non-toggle device settings options can be changed via picker and updates are reflected correctly on the Device Settings screen.",
   "steps": [
     "Pair the headset and launch the app, go to Device Settings, tap on any non-toggle option.",
     "Select any value.",
@@ -15,18 +15,18 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device settings",
+    "Device Settings",
     "non-toggle options",
-    "picker selection",
-    "value update",
-    "settings verification",
+    "picker",
+    "value selection",
+    "settings update",
     "headset pairing",
-    "option change",
-    "display validation"
+    "settings verification",
+    "option change"
   ],
   "source_last_updated": "1763549465",
   "source_hash": "ee74d23177e7a7ccb717e31fe60c88ac8327cbd8b3e898bba062b3f3da394cfb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.375617Z",
+  "processed_at": "2026-04-24T11:50:53.213672Z",
   "status": "active"
 }
