@@ -7,26 +7,26 @@
   "feature": "Device Home Screen",
   "scenario": "When a paired and connected device is turned off, the Device Home Screen shows the device as \"Not Connected\" with a crossed red dot, greyed out image and battery icons, and version info.",
   "steps": [
-    "Pair and connect a device to the system.",
-    "Turn off the paired device.",
-    "Observe the Device Home Screen."
+    "1. Pair and connect a device.",
+    "2. Turn off the device.",
+    "3. Observe the Device Home Screen."
   ],
-  "expected": "The Device Home Screen should display: Device Name (with \"i\" icon if applicable), a crossed red dot with \"Not Connected\" label, a greyed out device image, a \"...\" button, greyed out Battery icons, and \"Version X.Y.Z\".",
+  "expected": "The Device Home Screen displays: Device Name (with \"i\" icon if applicable), a crossed red dot with \"Not Connected\" label, a greyed out device image, a \"...\" button, greyed out Battery icons, and \"Version X.Y.Z\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "paired device",
-    "not connected",
-    "device home screen",
+    "connected device",
+    "device turned off",
+    "Not Connected status",
+    "Device Home Screen",
     "disconnected state",
-    "red dot indicator",
-    "greyed out icons",
-    "device offline",
-    "connection status"
+    "battery icon greyed out",
+    "connection status indicator"
   ],
   "source_last_updated": "1775206608",
   "source_hash": "9b34d1f2b52081163ce4a2e0f815a9a3effca07e7a2113dcb379a4202c3b6846",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.738923Z",
+  "processed_at": "2026-04-24T11:23:05.334469Z",
   "status": "active"
 }
