@@ -7,29 +7,32 @@
   "feature": "Falcon - Custom Button",
   "scenario": "When Teams is not detected, the Custom Button settings UI shows Microsoft Teams selected by default with a \"not connected\" message, and switching to Other Providers reveals additional options while switching back shows a modal confirming Teams is not connected.",
   "steps": [
-    "Open the Custom Button settings UI when Falcon/Mobile does not detect Teams.",
-    "Observe the layout showing two options: Microsoft Teams (selected by default) and Other Providers.",
-    "Check that a message indicates Microsoft Teams is not connected.",
-    "Select 'Other Providers' and verify that additional options appear: Play/Pause, Voice Assistant, Hold/Resume Call, ANC/Transparency Mode, Do Nothing.",
-    "Select 'Microsoft Teams' again and verify that the other providers list is hidden.",
-    "Check that a modal appears saying Teams is not connected.",
-    "Tap 'OK' on the modal and verify it dismisses while Microsoft Teams remains selected."
+    "1. Open the Custom Button settings UI when Falcon/Mobile does not detect Teams.",
+    "2. Observe the new layout with two options: 'Microsoft Teams' (selected by default) and 'Other Providers'.",
+    "3. Verify that a message is displayed indicating that Microsoft Teams is not connected.",
+    "4. Select 'Other Providers'.",
+    "5. Verify that additional options appear: Play/Pause, Voice Assistant, Hold/Resume Call, ANC/Transparency Mode, Do Nothing.",
+    "6. Select 'Microsoft Teams' again.",
+    "7. Verify that the additional options are hidden and a modal appears stating that Teams is not connected.",
+    "8. Tap 'OK' on the modal.",
+    "9. Verify that the modal is dismissed and 'Microsoft Teams' remains selected."
   ],
-  "expected": "The Custom Button settings UI shows Microsoft Teams selected by default with a message that it is not connected. Selecting Other Providers reveals the additional options list. Selecting Microsoft Teams hides the list and shows a modal saying Teams is not connected. Tapping OK dismisses the modal while keeping Microsoft Teams selected.",
+  "expected": "The Custom Button settings UI shows a new layout with Microsoft Teams selected by default and a message that Teams is not connected. Selecting Other Providers reveals additional options. Switching back to Microsoft Teams hides those options and shows a modal. Tapping OK dismisses the modal while keeping Microsoft Teams selected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Microsoft Teams",
-    "Custom Button settings",
     "not connected",
+    "Custom Button settings",
     "Other Providers",
     "modal",
     "Falcon/Mobile",
-    "button configuration"
+    "button options",
+    "Teams detection"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "557c6466c28057eea2d3f266f894d26ea4f7dd90608338428ff55df27781faf9",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "processed_at": "2026-04-24T11:50:53.356002Z",
   "status": "active"
 }
