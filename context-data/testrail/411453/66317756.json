@@ -1,0 +1,39 @@
+{
+  "id": "66317756",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Language Change -  Device is out-of-date",
+  "feature": "Language Change / Device Settings",
+  "scenario": "Verify that changing device language on a paired headset with outdated firmware triggers a DFU prompt, and after the update completes, the language change is applied and the user is redirected to the Home Screen.",
+  "steps": [
+    "1. Ensure a paired headset is connected that is NOT on the latest firmware.",
+    "2. Change the device language in the app.",
+    "3. Observe the message prompting the user to update the software to apply the selected language.",
+    "4. Tap \"Update now\".",
+    "5. Observe that the standard DFU (Device Firmware Update) process runs.",
+    "6. Wait for the DFU process to complete.",
+    "7. Observe that the language change is applied both on the app and the device.",
+    "8. Observe that the user is directed to the Home Screen.",
+    "9. Check that the headset's firmware is updated to the latest version.",
+    "10. Check that the selected language is correctly reflected in the Language section of Device Settings."
+  ],
+  "expected": "The app displays a message prompting the user to update the software to apply the selected language. After tapping \"Update now\", the standard DFU process runs. Upon completion, the language change is applied both on the app and the device, the user is directed to the Home Screen, the headset's firmware is updated to the latest version, and the selected language is correctly reflected in the Language section of Device Settings.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU prompt",
+    "device language change",
+    "outdated firmware",
+    "paired headset",
+    "firmware update",
+    "language applied",
+    "Home Screen redirect",
+    "Device Settings language"
+  ],
+  "source_last_updated": "1762252315",
+  "source_hash": "14bb659b3f33c979e46e3bc97c55df62a6af1a6bd465494da92d38df3bc5f30b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.392549Z",
+  "status": "active"
+}
