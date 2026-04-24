@@ -5,26 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Eula page - check page UI",
   "feature": "Onboarding - Eula Page",
-  "scenario": "Verify the EULA page UI elements (header, description, instructions) are displayed correctly during first-time onboarding.",
+  "scenario": "Verify the EULA page UI elements (header, description, and instructions text) are displayed correctly when the app is launched for the first time.",
   "steps": [
-    "Start the app for the first time."
+    "Launch the app for the first time.",
+    "Observe the EULA (End User License Agreement) page that appears.",
+    "Check the header text on the EULA page.",
+    "Check the description text on the EULA page.",
+    "Check the instructions text on the EULA page."
   ],
-  "expected": "Verify header, description, and instructions text are displayed correctly.",
+  "expected": "The EULA page displays correctly with a proper header, description, and instructions text.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "EULA page",
     "UI elements",
-    "header",
-    "description",
-    "instructions",
-    "first-time onboarding",
-    "displayed correctly",
-    "app launch"
+    "header text",
+    "description text",
+    "instructions text",
+    "first launch",
+    "End User License Agreement",
+    "display verification"
   ],
   "source_last_updated": "1760528295",
   "source_hash": "3881ed5e765d0bbce31a25dd3604bee9809378c982bf458bd0e5c6bbe17fdee3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.696302Z",
+  "processed_at": "2026-04-24T11:23:05.248278Z",
   "status": "active"
 }
