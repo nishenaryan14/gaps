@@ -1,0 +1,33 @@
+{
+  "id": "65459822",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications -  Update Available OFF",
+  "feature": "Notifications",
+  "scenario": "No notification appears when pairing a device with outdated firmware if the \"Device Software Update\" notification is disabled and the app is in the background.",
+  "steps": [
+    "Ensure the device has a firmware version lower than the current version on the server (Cloud).",
+    "Turn OFF the 'Device Software Update' notification in App Settings > General > Notifications & Device Alerts.",
+    "Ensure the Poly App is running in the background on a mobile device.",
+    "Pair the device successfully."
+  ],
+  "expected": "No notification should appear upon successful pairing.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "firmware update notification",
+    "device pairing",
+    "outdated firmware",
+    "background app",
+    "notification disabled",
+    "device software update",
+    "Poly App",
+    "firmware version mismatch"
+  ],
+  "source_last_updated": "1761223725",
+  "source_hash": "3e969ead7e72816a08f6f5c250048ff14107521fb7c2891a5ec6a3fe9248b899",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "status": "active"
+}
