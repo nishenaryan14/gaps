@@ -5,7 +5,7 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udc40 | 5200 | 4320 | DFU is NOT blocked during the call",
   "feature": "iOS App - DFU / Software Update",
-  "scenario": "DFU is not blocked during an active softphone call; user can trigger DFU from Software Update screen without a warning popup.",
+  "scenario": "DFU is not blocked during an active call; user can trigger DFU from Software Update screen while on a softphone call instead of seeing a popup message that it is unavailable.",
   "description_clean": "DFU is not blocked during an active call. When a user is on a softphone call (e.g., Zoom) and navigates to Device Settings > Software to tap Update, they are taken to the Software Update screen and can trigger DFU. Expected behavior: a popup message should inform the user that DFU is not available during a call.",
   "steps": [
     "1. Start or join a softphone call (e.g., Zoom).",
@@ -15,25 +15,25 @@
     "5. Attempt to trigger DFU (Device Firmware Update)."
   ],
   "expected": "A popup message should inform the user that DFU is not available during a call.",
-  "actual": "The user is taken to the Software Update screen and can trigger DFU without any popup or restriction.",
+  "actual": "The user is taken to the Software Update screen and can trigger DFU without any popup or block.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "ReadyForPlanning"
   ],
   "keywords": [
-    "DFU",
-    "Device Firmware Update",
-    "softphone call",
-    "Software Update",
-    "warning popup",
+    "DFU blocked",
     "active call",
-    "firmware update during call",
-    "update blocking"
+    "softphone call",
+    "Software Update screen",
+    "Device Firmware Update",
+    "popup message",
+    "DFU unavailable",
+    "call in progress"
   ],
   "source_last_updated": "2026-04-16T08:14:02.000+0000",
   "source_hash": "614f60f952732d5fc152a61bfe2ab0d4bdc59bd2ef3b8130c66382cfecbf1738",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.050477Z",
+  "processed_at": "2026-04-24T10:51:32.691789Z",
   "status": "active"
 }
