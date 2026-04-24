@@ -1,0 +1,32 @@
+{
+  "id": "65641599",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "CCL - Selecting AI Noise Block",
+  "feature": "CCL (Camera Control Lens)",
+  "scenario": "Verify that the \"AI Noise Block\" option can be selected from Device Settings > Advanced on a device that supports CCL.",
+  "steps": [
+    "1. Open Device Settings on a device that supports CCL.",
+    "2. Navigate to the Advanced section.",
+    "3. Locate the 'AI Noise Block' option.",
+    "4. Select the 'AI Noise Block' option."
+  ],
+  "expected": "The \"AI Noise Block\" option can be selected successfully from Device Settings > Advanced.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "AI Noise Block",
+    "Device Settings",
+    "Advanced settings",
+    "CCL support",
+    "Noise cancellation",
+    "Audio settings",
+    "Device configuration"
+  ],
+  "source_last_updated": "1772468639",
+  "source_hash": "b5de2eb106ec59a4897844c39e10d0aaeba523823b84ca7f4b20f5452b4a130c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "status": "active"
+}
