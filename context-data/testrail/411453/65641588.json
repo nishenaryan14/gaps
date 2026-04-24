@@ -1,0 +1,34 @@
+{
+  "id": "65641588",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Custom EQ, change some values, Save EQ, dialog present",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Verify that saving a custom EQ after changing values shows a confirmation dialog with \"Your custom EQ has been saved.\" and an OK button matching Figma spec.",
+  "steps": [
+    "Open the audio settings or equalizer panel.",
+    "Select or switch to the 'Custom EQ' mode/preset.",
+    "Adjust some EQ band values (e.g., increase or decrease gain on a few bands).",
+    "Click the 'Save EQ' button.",
+    "Observe the dialog that appears."
+  ],
+  "expected": "A dialog appears with the message \"Your custom EQ has been saved.\" and an OK button. The dialog's UI matches the Figma specification.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "custom EQ",
+    "save EQ",
+    "confirmation dialog",
+    "EQ preset",
+    "audio settings",
+    "equalizer panel",
+    "EQ band values",
+    "gain adjustment"
+  ],
+  "source_last_updated": "1761210934",
+  "source_hash": "99fbc8374010c62d504f615e132aebfd905bbc7e1b1e9fbf6f96fbab792273b7",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "status": "active"
+}
