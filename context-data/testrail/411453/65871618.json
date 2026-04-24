@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Device Home Screen - No device connected - Closing Supported devices list",
   "feature": "Device Home Screen",
-  "scenario": "Verify that when no device is connected, the \"Supported Devices\" link on the home screen displays a list of supported devices with images and an \"Other devices\" button linking to Poly support, and that the back arrow returns the user to the home screen.",
+  "scenario": "When no device is connected, clicking the \"Supported Devices\" link on the home screen displays a list of supported devices with images and a back arrow that returns the user to the home screen.",
   "steps": [
     "Ensure no device is connected.",
     "Observe the home screen for the 'Supported Devices' link.",
@@ -19,17 +19,18 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Supported Devices link",
+    "Supported Devices",
     "home screen",
-    "device list with images",
+    "back arrow",
+    "device list",
+    "images",
+    "Poly support",
     "Other devices button",
-    "Poly support link",
-    "back arrow navigation",
-    "no device connected"
+    "navigation"
   ],
   "source_last_updated": "1762436335",
   "source_hash": "b9c8be2ecc217c37cd7afb9958b79123249fbbb82a0b9e5befd1ffe2b4567564",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.334469Z",
+  "processed_at": "2026-04-24T11:50:53.109312Z",
   "status": "active"
 }
