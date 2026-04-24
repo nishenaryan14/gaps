@@ -1,0 +1,31 @@
+{
+  "id": "65640165",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Analytics - Events are not gathered if user is logged out and has not opted into data-sharing",
+  "feature": "Analytics",
+  "scenario": "Events are not gathered when user is logged out and has not opted into data-sharing",
+  "steps": [
+    "Ensure user is not logged in and has not opted into data-sharing (App Settings > General > Account > Share Data toggle is off).",
+    "Trigger any event present on Firebase (e.g., device_added which gathers Device's Serial Number)."
+  ],
+  "expected": "Event count for the Device's Serial Number should not increase.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "events not gathered",
+    "logged out",
+    "data-sharing opt-out",
+    "Firebase events",
+    "device_added",
+    "Share Data toggle off",
+    "App Settings",
+    "event tracking disabled"
+  ],
+  "source_last_updated": "1760949700",
+  "source_hash": "30ba6b8f2fee002cd1d8777870bcb6c661b10588a435e42418a3913239cad78d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "status": "active"
+}
