@@ -5,27 +5,28 @@
   "project": "411453",
   "title": "Software Update - DFU -  Going to sleep mode during update",
   "feature": "Software Update - DFU",
-  "scenario": "DFU interrupted by mobile phone sleep mode should still be running or completed upon return",
+  "scenario": "Device goes to sleep mode during DFU and the update should still be running or successfully finished upon waking",
   "steps": [
     "Start DFU on the device.",
-    "Let the mobile phone go to sleep mode.",
-    "Exit sleep mode and return to the app."
+    "Let mobile phone go to sleep mode.",
+    "Exit sleep mode and go back to app."
   ],
-  "expected": "The update should still be running or have successfully completed.",
+  "expected": "The update is still running or has successfully finished.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "DFU",
-    "Device Firmware Update",
     "sleep mode",
-    "background operation",
-    "interruption handling",
-    "app resume",
-    "mobile phone"
+    "device firmware update",
+    "wake",
+    "background update",
+    "mobile app",
+    "BLE",
+    "firmware upgrade"
   ],
   "source_last_updated": "1763371049",
   "source_hash": "eba6006187c6b52e04f506e847c8387649de759572a0205759081590d73c97eb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "processed_at": "2026-04-24T11:50:53.290466Z",
   "status": "active"
 }
