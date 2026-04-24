@@ -4,17 +4,18 @@
   "type": "testcase",
   "project": "411453",
   "title": "EB on the latest, CC has update - no update buttons",
-  "feature": "CC (Companion App) Update Dialog",
-  "scenario": "CC update buttons missing on Home/Settings screens when EB is latest version and CC update is available",
+  "feature": "CC (Companion App) Update",
+  "scenario": "CC update buttons missing on Home and Settings screens when EB is latest version and CC update is available",
   "steps": [
     "Ensure the Embedded Browser (EB) is on the latest version.",
     "Ensure the Companion App (CC) has an update available.",
-    "Pair the Companion App with the Embedded Browser for the first time.",
-    "Observe the Home screen for any update buttons.",
-    "Observe the Settings screen for any update buttons.",
-    "Restart the Companion App multiple times (specifically the 3rd, 5th, 10th, 13th, 15th, etc. restarts) and check for the CC update dialog/toaster."
+    "Open the Home screen and observe if any update buttons are displayed.",
+    "Open the Settings screen and observe if any update buttons are displayed.",
+    "Pair the Companion App for the first time and observe the CC update dialog/toaster.",
+    "Restart the Companion App multiple times (specifically on the 3rd, 5th, 10th, 13th, 15th restart, etc.) and observe the CC update dialog/toaster appearing.",
+    "Attempt to proceed with the update when the dialog/toaster appears."
   ],
-  "expected": "The CC update dialog/toaster should appear on first pairing and on specific app restarts (3rd, 5th, 10th, 13th, 15th, etc.). Update buttons should be displayed on the Home and Settings screens.",
+  "expected": "Update buttons should be displayed on the Home or Settings screen when a CC update is available, allowing the user to proceed with the update from the dialog/toaster.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,13 +24,13 @@
     "Settings screen",
     "Embedded Browser latest version",
     "Companion App update available",
-    "first time pairing",
-    "CC update dialog/toaster",
-    "Companion App restarts"
+    "CC update dialog",
+    "CC update toaster",
+    "Companion App restart"
   ],
   "source_last_updated": "1762331320",
   "source_hash": "99f2a0446718e770c4dc5937f55b31225dc0407e41c74e40d013401b395155b3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.431632Z",
+  "processed_at": "2026-04-24T11:50:53.356002Z",
   "status": "active"
 }
