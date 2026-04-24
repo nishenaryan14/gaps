@@ -1,0 +1,30 @@
+{
+  "id": "65387060",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Feedback - send a Bug feedback without names/email",
+  "feature": "Feedback",
+  "scenario": "Verify that Bug feedback sent from the Feedback tab in App Settings excludes user's personal data (names, email).",
+  "steps": [
+    "Start the app, navigate to App Settings, tap on Feedback tab, tap on \"Bug\" option.",
+    "Enter some text for the feedback and click Send."
+  ],
+  "expected": "The feedback is sent without user's data (names, email).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Bug feedback",
+    "Feedback tab",
+    "App Settings",
+    "Personal data exclusion",
+    "Privacy verification",
+    "Send feedback",
+    "User data redaction"
+  ],
+  "source_last_updated": "1776241074",
+  "source_hash": "862878cb3433d0056cc86aac68fbd6b22f32158dfd75ceaee2bf9dcfc996b6f4",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.362923Z",
+  "status": "active"
+}
