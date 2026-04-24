@@ -1,0 +1,33 @@
+{
+  "id": "64907509",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support  - App",
+  "feature": "Support - App",
+  "scenario": "Verify that navigating to Menu > Support > App displays support details including App Version, User ID, App ID, Last Connected, and a \"Go\" button, with Tenant Name and ID shown if logged in with a tenant account.",
+  "steps": [
+    "Pair and connect a headset to the device.",
+    "Launch the application.",
+    "Navigate to Menu > Support > App.",
+    "Observe the new screen that appears with support details."
+  ],
+  "expected": "A new screen appears displaying the following support details: App Version, Tenant Name (if logged in with tenant account), Tenant ID (if logged in with tenant account), User ID, App ID, Last Connected, and a \"Go\" button. The user should be able to take a screenshot or write down these details for a faster support process.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Menu Support App",
+    "App Version",
+    "User ID",
+    "App ID",
+    "Last Connected",
+    "Go button",
+    "Tenant Name",
+    "Tenant ID"
+  ],
+  "source_last_updated": "1759762027",
+  "source_hash": "759df3b41a5f108cae5c102a8df4476fc7fbdfbc9577c45bbbfeb8dc5bb9a0f7",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.361909Z",
+  "status": "active"
+}
