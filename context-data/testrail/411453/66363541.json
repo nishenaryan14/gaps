@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "All screens, Close button",
   "feature": "Onboarding",
-  "scenario": "Verify that clicking the Close (X) button on any onboarding screen closes the flow and returns the user to the original screen.",
+  "scenario": "Verify that the Close (X) button on every screen of the Onboarding flow closes the Onboarding and returns the user to the original screen (Supported Devices or Home screen).",
   "steps": [
-    "Open the app and navigate to the onboarding flow.",
-    "On each onboarding screen, locate and click the Close (X) button.",
-    "Observe the screen that appears after clicking Close."
+    "Open the app and navigate to the Onboarding flow.",
+    "On each screen of the Onboarding flow, locate and tap the Close (X) button.",
+    "Observe the screen that appears after tapping Close."
   ],
-  "expected": "Clicking the Close (X) button on every onboarding screen closes the onboarding flow and returns the user to the original screen (Supported Devices or Home screen).",
+  "expected": "The Onboarding flow closes and the user is returned to the original screen (Supported Devices or Home screen).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding flow",
     "Close button",
+    "Onboarding flow",
     "X button",
-    "dismiss onboarding",
-    "return to original screen",
-    "onboarding screen",
-    "close flow",
-    "exit onboarding"
+    "Exit onboarding",
+    "Return to home screen",
+    "Supported Devices screen",
+    "Navigation verification",
+    "UI close action"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "85659ab78f6a0aa333f32aba5078e5f4dd3a0a87656f5dcd8f7d2a448be80eef",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.405970Z",
+  "processed_at": "2026-04-24T11:50:53.274087Z",
   "status": "active"
 }
