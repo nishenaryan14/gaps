@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Limited Support Before Launch Date",
   "feature": "Device Home Screen",
-  "scenario": "Limited device support shown on home screen when current date is before device launch date, with pop-up message about coming soon support.",
+  "scenario": "Show limited support pop-up on home screen when current date is before device launch date",
   "steps": [
-    "1. Connect a not-yet-released device with the required LM version installed.",
-    "2. Ensure the current date is before the device's launch date.",
-    "3. Observe the device home screen.",
-    "4. Check for a pop-up message."
+    "1. Set the device's current date to a date before the device's launch date.",
+    "2. Navigate to the device home screen.",
+    "3. Observe the support status displayed on the home screen.",
+    "4. Tap the info icon on the home screen.",
+    "5. Observe the pop-up message that appears.",
+    "6. Tap outside the pop-up to dismiss it."
   ],
-  "expected": "The device home screen shows limited support. A pop-up displays the message: \"Device support coming soon. In-app functionality may be limited.\"",
+  "expected": "The device home screen shows limited support. Tapping the info icon displays a pop-up with the message: \"Device support coming soon. In-app functionality may be limited.\" The pop-up can be dismissed by tapping outside it.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "limited device support",
+    "limited support pop-up",
     "home screen",
     "current date",
-    "launch date",
+    "device launch date",
+    "info icon",
     "pop-up message",
-    "coming soon",
-    "not-yet-released device",
-    "pre-launch"
+    "support status",
+    "dismiss pop-up"
   ],
   "source_last_updated": "1764663020",
   "source_hash": "7516386f09b73bfb1dbc8550354edd253239a76aa4b7120e292ebf09251520d4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.745514Z",
+  "processed_at": "2026-04-24T11:23:05.341596Z",
   "status": "active"
 }
