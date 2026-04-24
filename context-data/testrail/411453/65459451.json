@@ -5,28 +5,27 @@
   "project": "411453",
   "title": "Software update - background DFU for Language update",
   "feature": "Software Update / DFU",
-  "scenario": "Background DFU for language update completes successfully when app is put in background during the update process",
+  "scenario": "Verify successful language update via background DFU when app is sent to background",
   "steps": [
     "Start the app with an attached headset that has an update available.",
-    "Start the language update from the Dev Settings screen and put the app in the background.",
+    "Initiate the language update from the Dev Settings screen and put the app in background.",
     "Wait for the DFU to finish."
   ],
-  "expected": "DFU completes successfully and the language is changed correctly.",
+  "expected": "DFU finishes successfully and the language is changed correctly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "background DFU",
     "language update",
+    "background DFU",
     "app background",
-    "device firmware update",
-    "headset update",
     "Dev Settings",
+    "headset firmware",
     "DFU completion",
-    "background update process"
+    "update verification"
   ],
   "source_last_updated": "1763381953",
   "source_hash": "05b9a73cbd3bd119f7dad41e3e51f634d2bd3a982e8851ebe89bcd20b3139558",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "processed_at": "2026-04-24T11:50:53.292091Z",
   "status": "active"
 }
