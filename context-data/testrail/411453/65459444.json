@@ -1,0 +1,33 @@
+{
+  "id": "65459444",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - HS low battery: multiple clicks on buttons",
+  "feature": "Software Update / DFU",
+  "scenario": "DFU should be blocked when headset battery is below 5%, and rapid button clicks should not crash the app or dialog.",
+  "steps": [
+    "Ensure the headset battery is below 5% and not plugged into power.",
+    "Attempt to enter DFU mode on the headset.",
+    "Rapidly click on buttons such as Update, Continue, Start, and OK in quick succession.",
+    "Observe the behavior of the app and any dialogs."
+  ],
+  "expected": "DFU mode should not be possible. The app and dialogs should not crash or break despite rapid clicking.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU block",
+    "headset battery low",
+    "battery below 5%",
+    "rapid button clicks",
+    "app crash",
+    "dialog crash",
+    "DFU mode",
+    "button spam"
+  ],
+  "source_last_updated": "1763371834",
+  "source_hash": "55a454a73f03bc851618f25adf612376e06f7364f988f153c7d7ac666430ea76",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "status": "active"
+}
