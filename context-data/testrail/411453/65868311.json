@@ -1,0 +1,33 @@
+{
+  "id": "65868311",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings  - Custom Button - Teams Detected",
+  "feature": "Device Settings - Custom Button",
+  "scenario": "Teams Custom button shows \"Other Providers\" greyed out and inaccessible when Microsoft Teams is connected on Falcon headsets.",
+  "steps": [
+    "Pair a Falcon headset with the app and a PC that has Teams installed.",
+    "Navigate to Device Settings > Custom Button page.",
+    "Observe the UI layout showing two options: Microsoft Teams (selected by default) and Other Providers (greyed out).",
+    "Read the message displayed: 'Microsoft Teams is connected. Other Providers is not available when Microsoft Teams is connected.'",
+    "Tap on 'Other Providers' option."
+  ],
+  "expected": "The Custom Button page shows Microsoft Teams selected by default, Other Providers greyed out, and the message \"Microsoft Teams is connected. Other Providers is not available when Microsoft Teams is connected.\" Tapping Other Providers should not enable it; it remains greyed out and inaccessible.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Falcon headset",
+    "Microsoft Teams",
+    "Custom button",
+    "Other Providers greyed out",
+    "Device Settings",
+    "Teams connected",
+    "button configuration"
+  ],
+  "source_last_updated": "1769430868",
+  "source_hash": "5a9b1a7d8353bacbfc00e4b501803d3edf0d8534aa8bfb94e56eb3fe68a07b95",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.376629Z",
+  "status": "active"
+}
