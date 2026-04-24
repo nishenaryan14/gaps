@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "EQ - Custom EQ - White circle when changing value on sliders",
   "feature": "EQ - Custom EQ",
-  "scenario": "Custom EQ slider dot shows a white circle that follows movement while dragging and disappears on release for all 7 sliders",
+  "scenario": "White circle appears around slider dot in Custom EQ mode and should follow user interaction, appearing on touch and disappearing on release for all 7 sliders.",
   "steps": [
-    "Open the Custom EQ interface.",
-    "Locate any of the 7 sliders.",
-    "Press and hold the dot on the slider.",
-    "While holding, slide the dot left or right.",
-    "Release the dot."
+    "Open the audio settings and enable Custom EQ mode.",
+    "Locate any of the 7 sliders in the EQ interface.",
+    "Press and hold (or click and drag) the slider dot to change its value.",
+    "Observe whether a white circle appears around the dot during interaction.",
+    "While holding, move the slider to different positions.",
+    "Release the slider (stop interacting).",
+    "Repeat steps 2\u20136 for all 7 sliders."
   ],
-  "expected": "A white circle appears around the dot while holding it, follows the dot's movement when sliding left/right, and disappears upon release. This behavior applies to all 7 sliders.",
+  "expected": "A white circle appears around the slider dot when interacting, follows the dot as it moves, and disappears when the slider is released. This behavior is consistent across all 7 sliders.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Custom EQ",
-    "slider dot",
     "white circle",
-    "dragging",
-    "slider movement",
-    "EQ interface",
-    "7 sliders",
-    "dot release"
+    "slider dot",
+    "Custom EQ mode",
+    "touch interaction",
+    "slider release",
+    "EQ sliders",
+    "audio settings"
   ],
   "source_last_updated": "1760956310",
   "source_hash": "6180b2dd6d57b87c4674d05b1067eadafe2966cebec098af1182b100e2a0d618",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.400307Z",
+  "processed_at": "2026-04-24T11:50:53.258394Z",
   "status": "active"
 }
