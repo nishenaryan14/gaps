@@ -7,9 +7,10 @@
   "feature": "PPIP - Login during Onboarding",
   "scenario": "Share Data toggle is not displayed in App Settings > General > Account for logged-in users, as expected since they are automatically allowed to send data.",
   "steps": [
-    "Log in during onboarding",
-    "Navigate to App Settings > General > Account",
-    "Look for the Share Data toggle"
+    "1. Launch the app and go through the onboarding flow.",
+    "2. Log in to an existing account during the onboarding process.",
+    "3. Navigate to App Settings > General > Account.",
+    "4. Observe whether the 'Share Data' toggle or any related info is displayed."
   ],
   "expected": "Since logged-in users are automatically allowed to send data, the Share Data toggle/info should not be displayed.",
   "coverage": [],
@@ -19,13 +20,13 @@
     "App Settings",
     "General Account",
     "logged-in users",
-    "onboarding",
-    "data sharing",
-    "toggle visibility"
+    "onboarding flow",
+    "data sharing permission",
+    "account settings"
   ],
   "source_last_updated": "1760538032",
   "source_hash": "03ff497493e93e0893a649797c4b9913b69db2b9d283cbd74bae0ca484d45d75",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.060270Z",
+  "processed_at": "2026-04-24T10:51:32.720830Z",
   "status": "active"
 }
