@@ -1,0 +1,34 @@
+{
+  "id": "65459464",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU -  Houston...  Retry button",
+  "feature": "Software Update - DFU",
+  "scenario": "Verify that tapping Retry after a DFU failure (triggered by turning off headset at ~10% progress) directs the user back to the previous screen to reattempt the update.",
+  "steps": [
+    "Pair headset and launch the app.",
+    "Go to Device Settings > Software Update.",
+    "Tap Update > Continue > Start Update.",
+    "Trigger DFU failure by turning off the headset at ~10% progress.",
+    "Tap the Retry button."
+  ],
+  "expected": "User is directed to the previous screen where the update process will attempt again.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU failure",
+    "Retry button",
+    "Software Update",
+    "headset firmware",
+    "update reattempt",
+    "Device Settings",
+    "progress failure",
+    "firmware update flow"
+  ],
+  "source_last_updated": "1763131137",
+  "source_hash": "e1ee67bf97df315d4e52fe802d35d2d0b838e4f52b7b29495a022b1ead131f78",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "status": "active"
+}
