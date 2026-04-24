@@ -1,0 +1,34 @@
+{
+  "id": "65640138",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Personal User - update for headset is present",
+  "feature": "Personal User - Headset Update",
+  "scenario": "Verify that a personal user (logged in or Guest) using the mobile app can see and successfully perform a software update notification for a headset on outdated firmware.",
+  "steps": [
+    "Download/install/log in to the mobile app.",
+    "Connect a device on outdated firmware.",
+    "Navigate to the Home Screen.",
+    "Check the SW update status \u2014 the update should be present.",
+    "Tap the update button and complete the DFU process \u2014 the update should be performed successfully."
+  ],
+  "expected": "A personal user (logged in or as Guest) using the mobile app can see a software update notification for a headset on outdated firmware, and the DFU update is performed successfully.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "mobile app",
+    "firmware update",
+    "headset",
+    "DFU process",
+    "software update notification",
+    "outdated firmware",
+    "device firmware upgrade",
+    "over-the-air update"
+  ],
+  "source_last_updated": "1760949388",
+  "source_hash": "43eef6fc1d6d9b4591c4b3b6b89f1f951957a73903e4179945c5d827678c847d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "status": "active"
+}
