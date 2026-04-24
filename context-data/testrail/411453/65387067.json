@@ -1,0 +1,33 @@
+{
+  "id": "65387067",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Feedback - send a Other feedback with names/email",
+  "feature": "Feedback",
+  "scenario": "User sends \"Other\" feedback from App Settings after entering name and email, and the feedback should include the user's name and email.",
+  "steps": [
+    "Open App Settings",
+    "Select 'Other' feedback option",
+    "Enter user's name",
+    "Enter user's email",
+    "Click Send"
+  ],
+  "expected": "The feedback includes the user's name and email.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "App Settings",
+    "Other feedback",
+    "User name",
+    "User email",
+    "Send feedback",
+    "Feedback form",
+    "Contact support"
+  ],
+  "source_last_updated": "1776241074",
+  "source_hash": "cdea2c8bb57a3c3d280e248cb06fbc2bebd662b335eee34e22ab0fe7d7e40c40",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.362923Z",
+  "status": "active"
+}
