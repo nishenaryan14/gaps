@@ -5,19 +5,19 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 ANC | Settings for Transparency mode are not properly applied/saved",
   "feature": "iOS ANC Settings",
-  "scenario": "Transparency mode sub-settings (Environment/Speech) are not saved and revert to defaults when switching between them.",
-  "description_clean": "Transparency mode settings (Environment/Speech) are not properly applied or saved. When switching between Environment and Speech sub-settings for Transparency mode, the device reverts to a default (Surround 85 reverts to Speech, Free 60 and Free 20 revert to Environment) instead of saving the user's selection.",
+  "scenario": "Transparency mode sub-settings (Environment/Speech) revert to defaults instead of saving user selection when switching between them.",
+  "description_clean": "Transparency mode settings (Environment/Speech) are not properly applied or saved. When switching between Environment and Speech sub-settings for Transparency mode, the device reverts to a default (Surround 85 reverts to Speech; Free 60 and Free 20 revert to Environment) instead of saving the user's selection.",
   "steps": [
     "Open Transparency mode settings.",
     "Select Environment sub-setting (e.g., Surround 85).",
     "Switch to Speech sub-setting.",
     "Observe the current selection.",
-    "Switch back to Environment sub-setting.",
-    "Observe the current selection.",
-    "Repeat with Free 60 and Free 20 sub-settings."
+    "Select Free 60 or Free 20 sub-setting.",
+    "Switch to Environment sub-setting.",
+    "Observe the current selection."
   ],
-  "expected": "The device should save and retain the user's selected sub-setting (Environment or Speech) for Transparency mode.",
-  "actual": "When switching between Environment and Speech sub-settings, the device reverts to a default: Surround 85 reverts to Speech, Free 60 and Free 20 revert to Environment.",
+  "expected": "The device should save and retain the user's selected sub-setting for Transparency mode (e.g., if user selects Speech, it should stay on Speech; if user selects Environment, it should stay on Environment).",
+  "actual": "The device reverts to a default sub-setting: Surround 85 reverts to Speech; Free 60 and Free 20 revert to Environment.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -26,14 +26,14 @@
     "sub-settings",
     "Environment",
     "Speech",
-    "settings not saved",
     "revert to defaults",
+    "saving user selection",
     "switching",
-    "audio settings"
+    "bug"
   ],
   "source_last_updated": "2026-04-13T09:59:05.000+0000",
   "source_hash": "526d84780e2d8536aad684076cab27747abf369a183a806fc17a3333f1f589ba",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.249816Z",
+  "processed_at": "2026-04-24T11:50:53.081750Z",
   "status": "active"
 }
