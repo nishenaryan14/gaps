@@ -5,21 +5,21 @@
   "project": "411453",
   "title": "Soak Test - Headset disconnected, app in the foreground, phone idle",
   "feature": "Headset Connectivity / Soak Test",
-  "scenario": "Soak test to verify app remains stable and responsive after prolonged idle time with headset disconnected",
+  "scenario": "Soak test: app remains stable and responsive after prolonged idle time with headset disconnected",
   "steps": [
-    "Install and launch app, pair headset, then turn off headset and go to app Home Screen.",
-    "Leave phone idle with app in foreground.",
-    "After a few hours, check the app."
+    "Install and launch app, pair headset, then turn off headset and go to app Home Screen",
+    "Leave phone idle with app in foreground",
+    "After several hours, check app"
   ],
-  "expected": "Home screen shows headset as disconnected. App remains stable and responsive after prolonged idle time.",
+  "expected": "Home screen shows headset as disconnected; app remains stable; app still running and responsive after several hours",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "soak test",
     "idle stability",
     "headset disconnected",
-    "prolonged idle",
     "app responsiveness",
+    "prolonged idle",
     "bluetooth disconnect",
     "foreground idle",
     "stability test"
@@ -27,6 +27,6 @@
   "source_last_updated": "1760949727",
   "source_hash": "b21c49867cbaf439368b4916c68a52843aca3a12e79f4b2c4010e4368c59c91b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.428522Z",
+  "processed_at": "2026-04-24T11:50:53.337160Z",
   "status": "active"
 }
