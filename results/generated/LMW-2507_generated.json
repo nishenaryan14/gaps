@@ -1,0 +1,143 @@
+[
+  {
+    "title": "CC (Central Coordinator) Device Firmware Update - Initiation",
+    "steps": [
+      "Launch the app and ensure the user is logged in",
+      "Navigate to the device management screen",
+      "Select a Central Coordinator (CC) device from the device list",
+      "Tap on the 'Firmware Update' or 'DFU' option for the CC device",
+      "Verify that the DFU initiation screen appears without crashing",
+      "Check that the current firmware version is displayed",
+      "Tap 'Start Update' or equivalent button"
+    ],
+    "expected": "The CC DFU process initiates successfully without any app crash. The user sees a progress indicator or confirmation that the update has started."
+  },
+  {
+    "title": "CC (Central Coordinator) Device Firmware Update - Progress Monitoring",
+    "steps": [
+      "Initiate a CC DFU as per the previous test case",
+      "Observe the DFU progress screen",
+      "Monitor the progress bar or percentage indicator for at least 10 seconds",
+      "Verify that the progress updates in real-time",
+      "Check that the app does not freeze or crash during the update process"
+    ],
+    "expected": "The DFU progress updates smoothly without any app crash or freeze. The progress indicator shows accurate and incremental progress."
+  },
+  {
+    "title": "CC (Central Coordinator) Device Firmware Update - Completion",
+    "steps": [
+      "Wait for the CC DFU process to complete",
+      "Observe the completion/final screen",
+      "Verify that a success message is displayed",
+      "Check that the new firmware version is shown",
+      "Navigate back to the device details screen",
+      "Verify the firmware version is updated in the device info"
+    ],
+    "expected": "The DFU completes successfully. The app displays a success message with the new firmware version. The device info screen reflects the updated firmware version."
+  },
+  {
+    "title": "CS (Central Switch) Device Firmware Update - Initiation",
+    "steps": [
+      "Launch the app and ensure the user is logged in",
+      "Navigate to the device management screen",
+      "Select a Central Switch (CS) device from the device list",
+      "Tap on the 'Firmware Update' or 'DFU' option for the CS device",
+      "Verify that the DFU initiation screen appears without crashing",
+      "Check that the current firmware version is displayed",
+      "Tap 'Start Update' or equivalent button"
+    ],
+    "expected": "The CS DFU process initiates successfully without any app crash. The user sees a progress indicator or confirmation that the update has started."
+  },
+  {
+    "title": "CS (Central Switch) Device Firmware Update - Progress and Completion",
+    "steps": [
+      "Initiate a CS DFU as per the previous test case",
+      "Observe the DFU progress screen for the entire duration of the update",
+      "Verify that the progress updates in real-time without app freeze",
+      "Wait for the DFU process to complete",
+      "Verify that a success message is displayed",
+      "Check that the new firmware version is shown on the completion screen",
+      "Navigate back to device details and confirm the firmware version is updated"
+    ],
+    "expected": "The CS DFU progresses smoothly, completes successfully, and the firmware version is updated in the device info. No crashes or freezes occur."
+  },
+  {
+    "title": "Sub-Device Firmware Update - Initiation",
+    "steps": [
+      "Launch the app and ensure the user is logged in",
+      "Navigate to the device management screen",
+      "Select a parent device (CC or CS) that has sub-devices associated",
+      "Navigate to the sub-devices list",
+      "Select a sub-device from the list",
+      "Tap on the 'Firmware Update' or 'DFU' option for the sub-device",
+      "Verify that the DFU initiation screen appears without crashing",
+      "Check that the current firmware version of the sub-device is displayed",
+      "Tap 'Start Update' or equivalent button"
+    ],
+    "expected": "The sub-device DFU process initiates successfully without any app crash. The user sees a progress indicator or confirmation that the update has started."
+  },
+  {
+    "title": "Sub-Device Firmware Update - Progress and Completion",
+    "steps": [
+      "Initiate a sub-device DFU as per the previous test case",
+      "Observe the DFU progress screen for the entire duration of the update",
+      "Verify that the progress updates in real-time without app freeze or crash",
+      "Wait for the DFU process to complete",
+      "Verify that a success message is displayed",
+      "Check that the new firmware version is shown on the completion screen",
+      "Navigate back to the sub-device details and confirm the firmware version is updated"
+    ],
+    "expected": "The sub-device DFU progresses smoothly, completes successfully, and the firmware version is updated in the sub-device info. No crashes or freezes occur."
+  },
+  {
+    "title": "Sub-Device Firmware Update - Multiple Sub-Devices Sequential Update",
+    "steps": [
+      "Launch the app and ensure the user is logged in",
+      "Navigate to a parent device with multiple sub-devices",
+      "Select the first sub-device and initiate DFU",
+      "Wait for the first sub-device DFU to complete successfully",
+      "Navigate back to the sub-devices list",
+      "Select a second sub-device and initiate DFU",
+      "Verify that the second DFU starts without crash",
+      "Wait for the second sub-device DFU to complete"
+    ],
+    "expected": "Multiple sub-devices can be updated sequentially without any app crash. Each DFU completes successfully."
+  },
+  {
+    "title": "DFU Error Handling - Network Interruption During Update",
+    "steps": [
+      "Initiate a DFU for any device (CC, CS, or sub-device)",
+      "During the DFU process, simulate a network disconnection (e.g., enable airplane mode)",
+      "Observe the app behavior",
+      "Verify that an appropriate error message is displayed (e.g., 'Update failed due to network error')",
+      "Reconnect the network",
+      "Verify that the user can retry the DFU or the app recovers gracefully"
+    ],
+    "expected": "The app handles network interruption gracefully without crashing. An appropriate error message is shown, and the user can retry the update after reconnection."
+  },
+  {
+    "title": "DFU Error Handling - Device Disconnection During Update",
+    "steps": [
+      "Initiate a DFU for a device (CC, CS, or sub-device)",
+      "During the DFU process, simulate device disconnection (e.g., turn off the device or move out of range)",
+      "Observe the app behavior",
+      "Verify that an appropriate error message is displayed (e.g., 'Device disconnected. Update failed.')",
+      "Verify that the app does not crash",
+      "Reconnect the device and verify the user can attempt DFU again"
+    ],
+    "expected": "The app handles device disconnection gracefully without crashing. An appropriate error message is shown, and the user can retry the update after reconnection."
+  },
+  {
+    "title": "DFU Cancellation Mid-Update",
+    "steps": [
+      "Initiate a DFU for any device (CC, CS, or sub-device)",
+      "While the DFU is in progress, tap the 'Cancel' or 'Stop' button",
+      "Verify that the update process stops",
+      "Verify that a confirmation dialog appears (if applicable)",
+      "Confirm cancellation",
+      "Verify that the app returns to the previous screen without crashing",
+      "Check that the device firmware version remains unchanged"
+    ],
+    "expected": "The DFU can be cancelled mid-update without crashing the app. The device firmware version remains at the previous version."
+  }
+]
