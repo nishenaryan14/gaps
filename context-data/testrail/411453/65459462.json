@@ -1,0 +1,31 @@
+{
+  "id": "65459462",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Houston... screen",
+  "feature": "Software Update / DFU",
+  "scenario": "Test DFU failure scenarios when device is turned off during update or internet is disconnected before starting update, expecting a 'Houston...' error screen with Cancel and Retry buttons.",
+  "steps": [
+    "Turn off the device during DFU (safe only in first 20% of DFU, or 10% if updating headset and charge case/stand).",
+    "Turn off internet connection before tapping 'Start Update'."
+  ],
+  "expected": "A 'Houston...' screen appears with instructions for unsuccessful software update, including 'Cancel' and 'Retry' buttons. The screen displays: 'We have a problem. The software update for \"DEVICE NAME\" didn't successfully complete. Keep your Poly device and your mobile device nearby, connected to each other and the internet.'",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU failure",
+    "device turned off during update",
+    "internet disconnected",
+    "Houston error screen",
+    "Cancel button",
+    "Retry button",
+    "DFU safe zone",
+    "Start Update"
+  ],
+  "source_last_updated": "1763129740",
+  "source_hash": "5602ae120cdb2a66275c342829f11148cb58af5ccfb2a4ae0efaddf70c8a3326",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "status": "active"
+}
