@@ -1,0 +1,33 @@
+{
+  "id": "66363560",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "New DFU screen - translations",
+  "feature": "DFU Screen",
+  "scenario": "Verify that the new DFU screen displays correct translations for supported languages without broken words or truncation.",
+  "steps": [
+    "Set phone language to a supported language.",
+    "Open the app with an update for EB/CC on Tern/Emu.",
+    "Open the new DFU screen.",
+    "Check the text on the DFU screen."
+  ],
+  "expected": "Text is correct, no broken words, and all visible.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU screen",
+    "translations",
+    "supported languages",
+    "broken words",
+    "truncation",
+    "firmware update",
+    "EB/CC",
+    "Tern/Emu"
+  ],
+  "source_last_updated": "1762331320",
+  "source_hash": "48234d326f02030e09057c1cb8aa9a81056dcbba8068abe2118cc7a667aa2c46",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.431094Z",
+  "status": "active"
+}
