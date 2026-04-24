@@ -1,0 +1,34 @@
+{
+  "id": "65387066",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Feedback - send a Other feedback without names/email",
+  "feature": "Feedback",
+  "scenario": "Send \"Other\" feedback without providing name or email",
+  "steps": [
+    "Start the app",
+    "Go to App Settings",
+    "Tap Feedback",
+    "Select the \"Other\" option",
+    "Enter feedback text",
+    "Click Send"
+  ],
+  "expected": "Option is selected and feedback is sent successfully.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Other feedback",
+    "anonymous feedback",
+    "send feedback",
+    "app settings",
+    "no name",
+    "no email",
+    "feedback submission"
+  ],
+  "source_last_updated": "1776241074",
+  "source_hash": "434ddb6ec25584532e74cb93be37ab05a1492de4830e932a63c00304a56fd565",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.362923Z",
+  "status": "active"
+}
