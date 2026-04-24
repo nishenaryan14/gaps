@@ -1,0 +1,31 @@
+{
+  "id": "65640130",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Policy: Policy applied - Restart Headset - Settings stay locked",
+  "feature": "Policy",
+  "scenario": "Policy-applied settings remain locked on headset after device restart",
+  "steps": [
+    "Apply a policy to a device.",
+    "Restart the headset."
+  ],
+  "expected": "The settings affected by the policy remain locked.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "policy-applied settings",
+    "locked settings",
+    "headset restart",
+    "device restart",
+    "policy persistence",
+    "settings retention",
+    "reboot",
+    "device policy"
+  ],
+  "source_last_updated": "1760949373",
+  "source_hash": "87b89c33be0d2faa33bf1481741b1b42af608c874ed14fb33d2dce1a03238f8a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.419263Z",
+  "status": "active"
+}
