@@ -1,0 +1,36 @@
+{
+  "id": "LMW-2247",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS \ud83d\udfe5 TERN | INTERMITTENT | Primary earbud is not disconnected after placing it in charge case",
+  "feature": "iOS TERN",
+  "scenario": "Primary earbud remains connected after being placed in the charge case and lid is closed",
+  "description_clean": "Primary earbud is not disconnected after placing it in the charge case and closing the lid. Steps: pair with Free 60 earbuds, place both in case and close, open case and take left earbud first, once connected take right earbud out, then place left earbud back in case and close. Observed: sometimes the primary earbud still shows as connected with charging icon, and no sound plays through it. Expected: putting earbud in the charge case and closing the lid should disconnect it.",
+  "steps": [
+    "Pair with Free 60 earbuds",
+    "Place both earbuds in the charge case and close the lid",
+    "Open the case and take out the left earbud first",
+    "Once connected, take out the right earbud",
+    "Place the left earbud back in the charge case and close the lid"
+  ],
+  "expected": "Putting an earbud in the charge case and closing the lid should disconnect it.",
+  "actual": "Sometimes the primary earbud still shows as connected with a charging icon, and no sound plays through it.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "primary earbud stays connected",
+    "charge case lid closed",
+    "Free 60 earbuds",
+    "earbud not disconnecting",
+    "case detection issue",
+    "left earbud connection",
+    "pairing sequence"
+  ],
+  "source_last_updated": "2026-04-20T13:29:22.000+0000",
+  "source_hash": "d0133df3ce03242944741bded6460e5e46c171cd76589b69de93d3a61d2c0b34",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.047934Z",
+  "status": "active"
+}
