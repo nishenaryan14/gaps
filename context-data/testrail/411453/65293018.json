@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "Onboarding - Navigating through onboarding screens",
   "feature": "Onboarding",
-  "scenario": "User can navigate through onboarding screens by swiping left/right or tapping \"Continue\" to progress through the three screens in order.",
+  "scenario": "User can navigate through the three onboarding screens by swiping left/right or tapping the Continue button.",
   "steps": [
-    "1. Launch the app for the first time (onboarding not yet completed).",
+    "1. Launch the app for the first time after installation.",
     "2. Observe the first onboarding screen titled 'Organized'.",
     "3. Swipe left on the screen.",
-    "4. Verify the second onboarding screen titled 'Up-to-Date' is displayed.",
+    "4. Observe the second onboarding screen titled 'Up-to-Date'.",
     "5. Tap the 'Continue' button.",
-    "6. Verify the third onboarding screen titled 'Personal' is displayed.",
-    "7. Swipe right on the screen.",
-    "8. Verify the second onboarding screen titled 'Up-to-Date' is displayed again."
+    "6. Observe the third onboarding screen titled 'Personal'.",
+    "7. Swipe right to navigate back to the second screen.",
+    "8. Swipe right again to navigate back to the first screen."
   ],
-  "expected": "User can navigate forward through the three onboarding screens (\"Organized\" \u2192 \"Up-to-Date\" \u2192 \"Personal\") by swiping left or tapping \"Continue\", and navigate backward by swiping right.",
+  "expected": "User can scroll left and right through all three onboarding screens (\"Organized\", \"Up-to-Date\", \"Personal\") by swiping or tapping the \"Continue\" button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding",
-    "swipe navigation",
-    "continue button",
-    "screen progression",
     "onboarding screens",
-    "swipe left",
-    "swipe right",
-    "onboarding flow"
+    "swipe navigation",
+    "Continue button",
+    "first launch",
+    "screen titles",
+    "navigation flow",
+    "app installation"
   ],
   "source_last_updated": "1768389408",
   "source_hash": "626cfa41c05df9196da4056eb758b97b136e61afff8d1172e1d14b1e7dfde3ee",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.710673Z",
+  "processed_at": "2026-04-24T11:23:05.309341Z",
   "status": "active"
 }
