@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "1 step DFU - Update All button triggers DFU for earbuds and charge case",
   "feature": "DFU (Device Firmware Update)",
-  "scenario": "Verify that the \"Update All\" button triggers a single-step DFU process with a unified progress bar (0% to 99%) for simultaneously updating both earbuds and charge case.",
+  "scenario": "\"Update All\" button triggers a single-step DFU process for both earbuds and charge case simultaneously, showing one unified progress bar from 0% to 99% on a single screen.",
   "steps": [
     "Locate the 'Update All' button on the device management screen.",
     "Tap the 'Update All' button to initiate the DFU process.",
     "Observe the progress bar displayed on the screen.",
-    "Wait for the progress bar to advance from 0% to 99%.",
-    "Confirm that the update completes without errors."
+    "Monitor the progress bar as it advances from 0% to 99%.",
+    "Wait for the DFU process to complete for both earbuds and charge case."
   ],
-  "expected": "Both earbuds and charge case update in one unified progress bar (0% to 99%) on a single screen, completing successfully.",
+  "expected": "Both earbuds and charge case update simultaneously with a single unified progress bar (0% to 99%) displayed on one screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Update All button",
+    "Update All",
     "DFU process",
-    "unified progress bar",
-    "earbuds update",
-    "charge case update",
-    "simultaneous update",
-    "device management screen",
-    "firmware update"
+    "progress bar",
+    "earbuds",
+    "charge case",
+    "firmware update",
+    "device management"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "200d7ad2e8aa19775884230d5505ae5834aec600bb872b1cb18bc3c7b75c4b88",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "processed_at": "2026-04-24T11:50:53.295914Z",
   "status": "active"
 }
