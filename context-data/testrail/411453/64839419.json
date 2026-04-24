@@ -1,0 +1,34 @@
+{
+  "id": "64839419",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home screen - Software version",
+  "feature": "Device Home Screen",
+  "scenario": "Verify that the software version is displayed correctly on the Device Home screen according to device-specific format requirements.",
+  "steps": [
+    "Navigate to the Device Home screen.",
+    "Locate the software version display area.",
+    "Check the device type (Morpheus, Neo, or Chronos).",
+    "If the device is Morpheus: Verify the SW version is in format X.Y where X is the firmware version and Y is the language version.",
+    "If the device is Neo or Chronos: Verify the SW version is displayed in setid format (e.g., 0.0.285.1601)."
+  ],
+  "expected": "The software version is displayed correctly on the Device Home screen according to the device type: Morpheus devices show SW version in X.Y format (X = firmware version, Y = language version); Neo and Chronos devices show SW version in setid format (e.g., 0.0.285.1601).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Device Home screen",
+    "software version display",
+    "Morpheus",
+    "Neo",
+    "Chronos",
+    "firmware version",
+    "language version",
+    "setid format"
+  ],
+  "source_last_updated": "1776242260",
+  "source_hash": "55045719ca7d3fc52f68c06f022e69de6fcff1c6bd65bed7a85d796b4e335a5c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.091544Z",
+  "status": "active"
+}
