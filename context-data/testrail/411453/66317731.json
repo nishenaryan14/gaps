@@ -5,13 +5,13 @@
   "project": "411453",
   "title": "Rename device - Rename, non English language",
   "feature": "Device Rename",
-  "scenario": "Verify that renaming a device with non-English characters across multiple supported languages correctly updates and displays the new name on all relevant screens.",
+  "scenario": "Verify that renaming a device with non-English characters across multiple supported languages correctly updates the name on all relevant screens.",
   "steps": [
     "1. Start the app with a non-English language selected.",
     "2. Navigate to Device Settings > General.",
     "3. Click the device's official name to trigger the 'Rename your Device' popup.",
-    "4. Enter non-English characters (e.g., Chinese, Arabic, Cyrillic, etc.) as the new device name.",
-    "5. Tap 'Done' to confirm the rename.",
+    "4. Enter non-English characters (e.g., from multiple supported languages).",
+    "5. Tap 'Done' to save the new name.",
     "6. Verify the new name displays correctly on the Device Settings page.",
     "7. Verify the new name displays correctly on the Home Screen.",
     "8. Verify the new name displays correctly on the Find My Device screen.",
@@ -23,16 +23,16 @@
   "keywords": [
     "rename device",
     "non-English characters",
-    "multilingual support",
-    "device name display",
-    "internationalization",
-    "Unicode",
-    "device settings",
-    "name verification"
+    "multi-language support",
+    "device name update",
+    "Device Settings",
+    "Home Screen",
+    "Find My Device",
+    "name display verification"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "6b6a2ce7c2a654e65908798274a080d5bfa16f9f0413a68d4c949f9360b6563e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.379308Z",
+  "processed_at": "2026-04-24T11:50:53.221292Z",
   "status": "active"
 }
