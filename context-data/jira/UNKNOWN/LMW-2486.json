@@ -5,14 +5,13 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 FALCON | Incorrect device name on DFU success screen while updating just the Charge Stand",
   "feature": "iOS FALCON - DFU Update",
-  "scenario": "When updating only the Charge Stand firmware via DFU, the success screen incorrectly displays the headset name instead of the Charge Stand name.",
-  "description_clean": "When updating only the Charge Stand firmware via DFU, the success screen incorrectly displays the headset name instead of the Charge Stand name.",
+  "scenario": "After updating only the Charge Stand via DFU, the success screen shows the headset name instead of the Charge Stand name.",
+  "description_clean": "When updating only the Charge Stand via DFU, the success screen incorrectly displays the headset name instead of the Charge Stand name.",
   "steps": [
-    "Open the DFU (Device Firmware Update) tool.",
-    "Select the Charge Stand as the device to update.",
-    "Initiate the firmware update process for the Charge Stand only.",
-    "Wait for the update to complete.",
-    "Observe the success screen displayed after the update."
+    "1. Connect the Charge Stand to the system.",
+    "2. Initiate a DFU (Device Firmware Update) on the Charge Stand only.",
+    "3. Wait for the update process to complete.",
+    "4. Observe the success screen displayed after the update."
   ],
   "expected": "The success screen should display the Charge Stand name.",
   "actual": "The success screen incorrectly displays the headset name instead of the Charge Stand name.",
@@ -22,16 +21,16 @@
   "keywords": [
     "Charge Stand",
     "DFU",
-    "firmware update",
+    "Device Firmware Update",
     "success screen",
     "headset name",
     "display bug",
-    "device name mismatch",
-    "firmware update tool"
+    "firmware update",
+    "naming issue"
   ],
   "source_last_updated": "2026-04-14T19:23:14.000+0000",
   "source_hash": "d049fb6491ae86860e3e70f25076cc77ffb45710af6d5b8cc5413bf7b7a6295d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.696302Z",
+  "processed_at": "2026-04-24T11:23:05.238715Z",
   "status": "active"
 }
