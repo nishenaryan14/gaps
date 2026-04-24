@@ -1,0 +1,34 @@
+{
+  "id": "65641597",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "CCL - UI",
+  "feature": "CCL - UI",
+  "scenario": "CCL settings UI in Device Settings > Advanced displays three radio button options (No Noise Block, AI Noise Block, UC Noise Block) with descriptions for microphone noise control.",
+  "steps": [
+    "Open Device Settings.",
+    "Navigate to Advanced settings.",
+    "Locate the CCL settings UI.",
+    "Read the description: 'Limit the amount of nearby conversation transmitted through your microphone. (Note: changes will take effect on the next call.)'",
+    "Observe the three radio button options: No Noise Block ('Optimized for voice isolation'), AI Noise Block ('Enhanced for hybrid work environments'), and UC Noise Block ('Best for open office environments')."
+  ],
+  "expected": "The CCL settings UI displays the description and three radio button options as described.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "CCL settings",
+    "Noise Block",
+    "microphone noise control",
+    "Device Settings Advanced",
+    "AI Noise Block",
+    "UC Noise Block",
+    "voice isolation",
+    "radio button options"
+  ],
+  "source_last_updated": "1772468639",
+  "source_hash": "02b284d4d6339ccfc60bce07af7755849b8072a78385ed3b3bc0cdd9f7337aef",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "status": "active"
+}
