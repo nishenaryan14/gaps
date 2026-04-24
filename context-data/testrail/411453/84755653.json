@@ -1,0 +1,34 @@
+{
+  "id": "84755653",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - Help Guide no wifi [New]",
+  "feature": "Support / Help Guide",
+  "scenario": "User sees \"Something went wrong\" screen when navigating to Help Guide with Wi-Fi off, and tapping Cancel returns to Support main screen.",
+  "steps": [
+    "Turn off Wi-Fi on the device.",
+    "Open the app and navigate to Support.",
+    "Tap on Help Guide.",
+    "Observe the screen that appears.",
+    "Tap the Cancel (X) button."
+  ],
+  "expected": "A \"Something went wrong\" screen is displayed. After tapping Cancel (X), the user is returned to the Support main screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Something went wrong",
+    "Help Guide",
+    "Wi-Fi off",
+    "Cancel button",
+    "Support screen",
+    "error screen",
+    "offline navigation",
+    "app crash"
+  ],
+  "source_last_updated": "1773311605",
+  "source_hash": "363fecb2cdf18f8dd2fb386faa2dc35974d14d105b56154e5405d0db0937f2ef",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.363453Z",
+  "status": "active"
+}
