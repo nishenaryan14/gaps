@@ -5,26 +5,26 @@
   "project": "411453",
   "title": "Rename devis - Restore Defaults returns to official device name",
   "feature": "Device Settings - Rename Device",
-  "scenario": "After renaming a device, performing \"Restore Defaults\" should fully restore the official device name instead of shortening it.",
+  "scenario": "After renaming a device, performing \"Restore Defaults\" should revert the device name to its official name (e.g., \"Voyager\" shortened to \"V\").",
   "steps": [
-    "1. Rename the device to a custom name (e.g., 'My Device').",
-    "2. Perform 'Restore Defaults' on the device."
+    "Rename the device to a custom name (e.g., 'Voyager')",
+    "Perform 'Restore Defaults' on the device"
   ],
-  "expected": "The device name should revert to the full official device name (e.g., \"Voyager\").",
+  "expected": "The device name should return to the official device name (e.g., 'V' instead of 'Voyager')",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Restore Defaults",
     "device rename",
-    "official device name",
+    "revert device name",
     "factory reset",
-    "device name restoration",
-    "default name",
-    "device configuration reset"
+    "default device name",
+    "Voyager",
+    "custom name reset"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "e52b6cfda8394a118d9a7fa71af0a3ebaacbd5aa5ee00752ad8035619780ca88",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.379308Z",
+  "processed_at": "2026-04-24T11:50:53.222303Z",
   "status": "active"
 }
