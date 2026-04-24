@@ -1,0 +1,36 @@
+{
+  "id": "64907502",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - App, user not logged ever, login, Continue, login",
+  "feature": "Support - App",
+  "scenario": "Guest user sees white screen with spinner instead of support data after logging in from Support > App > Login flow",
+  "steps": [
+    "Install the mobile app",
+    "Go through onboarding as Guest",
+    "Navigate to Support via the hamburger menu",
+    "Click the App button",
+    "Click Login",
+    "Click Continue",
+    "Complete the login process"
+  ],
+  "expected": "The screen displays the correct data: App version, tenant name, tenant ID, user ID, app ID, last connection.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "guest user",
+    "white screen",
+    "spinner",
+    "support data",
+    "login flow",
+    "mobile app",
+    "onboarding",
+    "hamburger menu"
+  ],
+  "source_last_updated": "1759751931",
+  "source_hash": "efbd95c884c51834fedc0bf152c5437c820c3b1ee63e3590e157e2f13bcbccda",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.360909Z",
+  "status": "active"
+}
