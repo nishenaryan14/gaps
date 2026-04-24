@@ -1,0 +1,33 @@
+{
+  "id": "66432709",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Application - Update from previous app version while using cloud account (TBD)",
+  "feature": "Application",
+  "scenario": "Update from previous app version while using a cloud account",
+  "steps": [
+    "Launch the app with a previous version installed",
+    "Log in using a cloud account",
+    "Update the app to the latest version",
+    "Open the app after the update"
+  ],
+  "expected": "The app updates successfully and the cloud account remains logged in with all data intact.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "app update",
+    "cloud account",
+    "version upgrade",
+    "login",
+    "previous version",
+    "latest version",
+    "app migration",
+    "update persistence"
+  ],
+  "source_last_updated": "1762420689",
+  "source_hash": "b026e7712943a6f194adb875237299e74859013e401cebba4975296344c0eb17",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.405970Z",
+  "status": "active"
+}
