@@ -1,0 +1,32 @@
+{
+  "id": "66363548",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Tern - no charge case screens (Onboarding, Supported devices list)",
+  "feature": "Tern - Onboarding / Supported Devices",
+  "scenario": "Onboarding the Voyager Free 60 Charge Case without a device connected does not display smart charge case screens.",
+  "steps": [
+    "Start the app without a device connected",
+    "Open the supported devices list",
+    "Select the Voyager Free 60 Charge Case (not Free 60+)",
+    "Start onboarding"
+  ],
+  "expected": "No smart charge case screens are displayed",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Voyager Free 60 Charge Case",
+    "onboarding",
+    "smart charge case screens",
+    "no device connected",
+    "supported devices list",
+    "Voyager Free 60",
+    "app setup"
+  ],
+  "source_last_updated": "1763378362",
+  "source_hash": "f3c528d9b5339a5fb7d30b97f043e1ef0611766a61841aa361e9c3c009eefcd6",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.407498Z",
+  "status": "active"
+}
