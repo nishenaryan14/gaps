@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Verify 'Apps' settings section appears for paired Focus 2 device",
+    "steps": [
+      "1. Launch the application and complete the onboarding flow.",
+      "2. Grant all required permissions (location, Bluetooth, etc.).",
+      "3. Pair a Focus 2 headset with the app.",
+      "4. Once paired, navigate to the Device settings page for the Focus 2 device.",
+      "5. Observe the list of settings sections displayed on the Device settings page."
+    ],
+    "expected": "The 'Apps' settings section is visible and listed among other settings sections on the Device settings page for the paired Focus 2 device."
+  },
+  {
+    "title": "Verify Device settings page structure for Focus 2 includes all expected sections",
+    "steps": [
+      "1. Launch the application and complete the onboarding flow.",
+      "2. Grant all required permissions.",
+      "3. Pair a Focus 2 headset with the app.",
+      "4. Navigate to the Device settings page for the paired Focus 2 device.",
+      "5. Scroll through the entire settings page and document all visible settings sections."
+    ],
+    "expected": "The Device settings page for Focus 2 displays the following sections: 'Apps', 'General', 'Audio', 'Voice', 'Display', 'Controls', 'Gestures', 'Developer Options' (or equivalent expected sections per product spec). The 'Apps' section is present and accessible."
+  },
+  {
+    "title": "Verify 'Apps' section is accessible and opens correctly from Focus 2 Device settings",
+    "steps": [
+      "1. Launch the application and complete the onboarding flow.",
+      "2. Grant all required permissions.",
+      "3. Pair a Focus 2 headset with the app.",
+      "4. Navigate to the Device settings page for the paired Focus 2 device.",
+      "5. Tap on the 'Apps' settings section."
+    ],
+    "expected": "Tapping 'Apps' opens the Apps settings page, which displays a list of installed or available apps for the Focus 2 device. The page loads without errors and shows relevant app management options."
+  },
+  {
+    "title": "Verify 'Apps' section persists after re-entering Device settings for Focus 2",
+    "steps": [
+      "1. Launch the application and complete the onboarding flow.",
+      "2. Grant all required permissions.",
+      "3. Pair a Focus 2 headset with the app.",
+      "4. Navigate to the Device settings page and confirm the 'Apps' section is visible.",
+      "5. Navigate away from the Device settings page (e.g., go back to the main screen).",
+      "6. Re-enter the Device settings page for the Focus 2 device."
+    ],
+    "expected": "The 'Apps' settings section is still visible on the Device settings page after navigating away and returning. The section is consistently displayed."
+  },
+  {
+    "title": "Verify 'Apps' section is absent for non-Focus 2 devices (specificity check)",
+    "steps": [
+      "1. Launch the application and complete the onboarding flow.",
+      "2. Grant all required permissions.",
+      "3. Pair a non-Focus 2 device (e.g., Focus 1 or another supported headset model).",
+      "4. Navigate to the Device settings page for the paired non-Focus 2 device.",
+      "5. Observe the list of settings sections displayed."
+    ],
+    "expected": "The 'Apps' settings section is NOT present on the Device settings page for non-Focus 2 devices, confirming the section is specific to Focus 2."
+  },
+  {
+    "title": "Verify 'Apps' section appears after re-pairing Focus 2 device",
+    "steps": [
+      "1. Launch the application and complete the onboarding flow.",
+      "2. Grant all required permissions.",
+      "3. Pair a Focus 2 headset with the app.",
+      "4. Navigate to the Device settings page and confirm the 'Apps' section is visible.",
+      "5. Unpair/forget the Focus 2 device.",
+      "6. Pair the same Focus 2 headset again.",
+      "7. Navigate to the Device settings page for the re-paired Focus 2 device."
+    ],
+    "expected": "The 'Apps' settings section is visible on the Device settings page after re-pairing the Focus 2 device, confirming the section appears consistently across pairing sessions."
+  }
+]
