@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "App Settings - General - Account - Account delete - Starting with no WiFi connection",
   "feature": "App Settings - General - Account - Account Delete",
-  "scenario": "Delete account with no WiFi connection, then retry after reconnecting to verify account removal on device and cloud.",
+  "scenario": "Delete account with no WiFi connection, then retry after reconnecting",
   "steps": [
     "Log in to the application.",
     "Disconnect WiFi.",
@@ -16,28 +16,28 @@
     "Tap 'Later' and verify the popup closes and returns to Device Settings.",
     "Tap Delete icon again, then Confirm.",
     "Tap 'Retry' and verify the same error popup appears.",
-    "Turn on WiFi.",
-    "Tap 'Retry' and observe a spinner followed by a confirmation dialog.",
+    "Turn WiFi on.",
+    "Tap 'Retry' and observe a spinner appears followed by a confirmation dialog.",
     "Verify the user is logged out and returned to the account screen.",
-    "Verify the user is not logged in via Poly Lens Menu > Support > Account.",
-    "On the cloud side, verify the account was properly removed."
+    "Go to Poly Lens Menu > Support > Account and verify the user is not logged in.",
+    "Verify on the cloud side that the account was properly removed."
   ],
-  "expected": "\"Unable to perform task...\" popup appears when WiFi is off. Tapping \"Later\" closes the popup and returns to Device Settings. Tapping Delete + Confirm again, then \"Retry\" shows the same error. After turning on WiFi and tapping \"Retry\", a spinner appears followed by a confirmation dialog, user is logged out and returned to the account screen. User is not logged in via Poly Lens Menu > Support > Account. On cloud side, the account is properly removed.",
+  "expected": "When WiFi is off, tapping Delete + Confirm shows 'Unable to perform task...' popup. Tapping 'Later' closes popup and returns to Device Settings. Repeating Delete + Confirm then 'Retry' shows the same error. After turning WiFi on and tapping 'Retry', a spinner appears, then a confirmation dialog, user is logged out and returned to the account screen. User is not logged in via Poly Lens Menu > Support > Account, and the account is properly removed on the cloud side.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "delete account",
     "no WiFi",
-    "offline retry",
-    "account removal",
-    "cloud verification",
-    "reconnect WiFi",
-    "account deletion confirmation",
-    "logout verification"
+    "offline",
+    "retry",
+    "reconnect",
+    "account deletion",
+    "error popup",
+    "confirmation dialog"
   ],
   "source_last_updated": "1759416362",
   "source_hash": "78cdb7d9e0881a1b79bba3f0490af813e36060203006e8679f83520ec96374e0",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.111219Z",
+  "processed_at": "2026-04-24T10:51:32.764645Z",
   "status": "active"
 }
