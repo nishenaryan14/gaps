@@ -1,0 +1,42 @@
+{
+  "id": "66363578",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Home Screen - Disconnecting/Connecting one earbud at a time",
+  "feature": "Home Screen",
+  "scenario": "Verify individual earbud disconnect/reconnect behavior on Home Screen, including grey-out states and status updates, with a note that Osprey charge case battery indicator does not grey out when one earbud reconnects.",
+  "steps": [
+    "Disconnect the right earbud.",
+    "Verify the right earbud greys out while the left earbud stays connected and the overall status shows 'Connected'.",
+    "Reconnect the right earbud.",
+    "Verify the right earbud reconnects properly.",
+    "Disconnect the left earbud.",
+    "Verify the left earbud greys out while the right earbud stays connected.",
+    "Reconnect the left earbud.",
+    "Disconnect both earbuds.",
+    "Verify both earbuds grey out and the status shows 'Disconnected'.",
+    "Reconnect only the right earbud.",
+    "Disconnect the right earbud.",
+    "Reconnect only the left earbud.",
+    "Disconnect the left earbud."
+  ],
+  "expected": "Each earbud greys out when disconnected while the other remains connected. Overall status updates correctly ('Connected' when at least one earbud is connected, 'Disconnected' when both are disconnected). Reconnection works properly. For Osprey devices, the charge case battery indicator does not grey out when one earbud is reconnected.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "earbud disconnect",
+    "earbud reconnect",
+    "grey-out state",
+    "Home Screen status",
+    "Osprey charge case",
+    "battery indicator",
+    "individual earbud",
+    "connection status"
+  ],
+  "source_last_updated": "1762331664",
+  "source_hash": "d4aaddaec865473b63ee1b9ae9c77bcc6456b438e00b8ddd2a3bf6ecf354ce0a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:11.805940Z",
+  "status": "active"
+}
