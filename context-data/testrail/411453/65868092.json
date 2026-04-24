@@ -1,0 +1,33 @@
+{
+  "id": "65868092",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - Multiple devices - Turning off devices",
+  "feature": "Device Home Screen",
+  "scenario": "Turning off multiple devices one by one shows each as disconnected while others remain connected",
+  "steps": [
+    "Turn off one device.",
+    "Observe the display status of the turned-off device.",
+    "Check the status of the remaining devices.",
+    "Turn off the remaining devices one by one.",
+    "After each device is turned off, observe its display status."
+  ],
+  "expected": "When a device is turned off, it should display as disconnected while the remaining devices stay connected. Turning off remaining devices one by one should show each as disconnected properly.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "device disconnection",
+    "display status",
+    "sequential shutdown",
+    "remaining devices connected",
+    "device status monitoring",
+    "multi-device management",
+    "disconnect detection"
+  ],
+  "source_last_updated": "1762178330",
+  "source_hash": "41139ad4095a627cc19807ca6eab170c4b8e23dd6b29fcbf32efe3b4597eb74d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.078999Z",
+  "status": "active"
+}
