@@ -1,0 +1,33 @@
+{
+  "id": "65482650",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Application - Update from previous app version while using guest account (TBD)",
+  "feature": "Application",
+  "scenario": "Update app from previous version while signed in as a guest account",
+  "steps": [
+    "Launch the app using a guest account.",
+    "Ensure the app is on a previous version (not the latest).",
+    "Trigger an update to the latest app version (e.g., via app store or in-app update prompt).",
+    "Complete the update process and relaunch the app."
+  ],
+  "expected": "The app updates successfully and the guest account session/data is preserved after the update.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "guest account",
+    "app update",
+    "previous version",
+    "latest version",
+    "update process",
+    "relaunch app",
+    "in-app update",
+    "app store update"
+  ],
+  "source_last_updated": "1762420656",
+  "source_hash": "f329e9c6d47124891c943f07e6485c1b7ba9d606fa0a1344b6e4e971a3968b46",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.407498Z",
+  "status": "active"
+}
