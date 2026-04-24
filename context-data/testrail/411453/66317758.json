@@ -1,0 +1,35 @@
+{
+  "id": "66317758",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Language Change - \"Later\" button",
+  "feature": "Language Settings",
+  "scenario": "Tapping \"Later\" on the language change update prompt should dismiss the list and keep the current language unchanged.",
+  "steps": [
+    "Pair and connect the headset (HS)",
+    "Start the app",
+    "Go to Device Settings (tap the '...' button)",
+    "Tap on the Language section",
+    "Tap on the currently displayed language",
+    "Scroll and select a different language to change to",
+    "Tap the 'Later' button on the update prompt"
+  ],
+  "expected": "Language list disappears and the current language remains unchanged.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Later button",
+    "language change",
+    "update prompt",
+    "dismiss",
+    "keep current language",
+    "Device Settings",
+    "Language section"
+  ],
+  "source_last_updated": "1762252394",
+  "source_hash": "dda47d64465751ad0ad3a04c66e01c33348695f4b250dc4b26e805c536a2a8b0",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.391539Z",
+  "status": "active"
+}
