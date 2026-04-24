@@ -1,0 +1,35 @@
+{
+  "id": "64907516",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Support - Verify that data is correct after moving between Accounts linked to different Tenants",
+  "feature": "Support / Account Switching",
+  "scenario": "Verify data correctness when switching between accounts linked to different tenants",
+  "steps": [
+    "Log in with Account linked to Tenant A",
+    "Navigate to Support > App",
+    "Confirm Tenant A info is present",
+    "Logout",
+    "Log in with a different Account linked to Tenant B",
+    "Navigate to Support > App",
+    "Confirm Tenant B info is present"
+  ],
+  "expected": "Tenant A info is displayed when logged in with Account linked to Tenant A, and Tenant B info is displayed when logged in with Account linked to Tenant B.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "tenant switching",
+    "data correctness",
+    "multi-tenant",
+    "account verification",
+    "cross-tenant validation",
+    "logout login",
+    "tenant isolation"
+  ],
+  "source_last_updated": "1759752644",
+  "source_hash": "e2e1d9b5ca51d1c18e1aeb4b2a9ddd369e6179a31144b5e9fd3ac6cfb1589374",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.361909Z",
+  "status": "active"
+}
