@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Find My Device - Don't Allow - Enable now - Allow Once [Only This Time - Android] [Deprecated for IOS]",
   "feature": "Find My Device",
-  "scenario": "User navigates Find My Device permission flow with HS connected, denies then enables location with \"Ask Next Time\" option, verifying permission popup options and settings navigation.",
+  "scenario": "User with HS connected navigates to Find My Device, denies permission, then enables it with \"Ask Next Time or When I Share\" option, verifying permission popups and settings navigation.",
   "steps": [
-    "Start the app with the headset (HS) connected.",
-    "Navigate to the main menu.",
-    "Tap on 'Find My Device'.",
-    "Tap 'Don't Allow' on the permission popup.",
-    "Tap 'Enable Now'.",
-    "Grant location permission by selecting 'Ask Next Time or When I Share'."
+    "Start the app with the HS (Headset) connected",
+    "Navigate to Find My Device",
+    "Tap 'Don't Allow' on the permission popup",
+    "Tap 'Enable Now'",
+    "Grant location permission with 'Ask Next Time or When I Share' option"
   ],
-  "expected": "Permission popups with options \"Allow Once\", \"Allow while using app\", \"Don't Allow\" appear at appropriate steps. Navigation to settings occurs when enabling.",
+  "expected": "Permission popups should display options: \"Allow Once\", \"Allow while using app\", \"Don't Allow\". When tapping \"Enable Now\", the user should be navigated to settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Find My Device",
-    "permission flow",
+    "permission popup",
     "location permission",
-    "Ask Next Time",
+    "Ask Next Time or When I Share",
+    "HS connected",
     "Don't Allow",
     "Enable Now",
-    "headset connected",
-    "permission popup"
+    "settings navigation"
   ],
   "source_last_updated": "1760352215",
   "source_hash": "172df16d660f02df5b18f33120a6a0fa999e392affa8542effd1cb1776665a3c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.960743Z",
+  "processed_at": "2026-04-24T10:51:33.363461Z",
   "status": "active"
 }
