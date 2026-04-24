@@ -1,0 +1,36 @@
+{
+  "id": "65785139",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Changed custom EQ, not saved, reset device, changes are not preset [TO BE VERIFIED]",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Unsaved custom EQ changes are preserved after device reset instead of reverting to the last saved preset",
+  "steps": [
+    "Open the audio settings menu.",
+    "Navigate to the Equalizer (EQ) section.",
+    "Select a custom EQ preset or create a new one.",
+    "Make changes to the EQ settings (e.g., adjust sliders).",
+    "Do NOT save the changes.",
+    "Reset the device (e.g., power off/on or perform a factory reset).",
+    "Reopen the audio settings and check the EQ settings."
+  ],
+  "expected": "The EQ settings should revert to the previously saved preset (i.e., the unsaved changes should be discarded).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "equalizer",
+    "EQ",
+    "unsaved changes",
+    "device reset",
+    "preset persistence",
+    "audio settings",
+    "factory reset",
+    "custom preset"
+  ],
+  "source_last_updated": "1761213229",
+  "source_hash": "dd7562a612e0be67d287216ddba78b03f960c0aee464b02fa5c4823f67ebbab8",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "status": "active"
+}
