@@ -1,0 +1,136 @@
+[
+  {
+    "title": "TC-LANG-001: Verify language update completes within expected time on Morpheus devices",
+    "steps": [
+      "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update.",
+      "4. Start a timer at the moment the update begins.",
+      "5. Monitor the update progress bar at regular intervals (every 10 seconds).",
+      "6. Record the time when the update reaches 99% progress.",
+      "7. Record the time when the update completes (reaches 100% or 'Update Complete' status).",
+      "8. Calculate the total update duration from start to completion.",
+      "9. Calculate the duration spent at 99% progress."
+    ],
+    "expected": "The total language update completes within 2 minutes (120 seconds). The update does not stall at 99% for more than 10 seconds. The progress bar moves smoothly without extended pauses."
+  },
+  {
+    "title": "TC-LANG-002: Verify language update progress bar does not stall at 99% for extended period",
+    "steps": [
+      "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update.",
+      "4. Observe the progress bar throughout the update process.",
+      "5. When the progress bar reaches 99%, start a timer.",
+      "6. Continue monitoring the progress bar until it reaches 100% or the update completes.",
+      "7. Record the time spent at 99%."
+    ],
+    "expected": "The progress bar does not remain at 99% for more than 30 seconds. The update progresses from 99% to completion within a reasonable timeframe."
+  },
+  {
+    "title": "TC-LANG-003: Verify language update does not exceed 10 minutes total duration on Morpheus devices",
+    "steps": [
+      "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update.",
+      "4. Start a timer at the moment the update begins.",
+      "5. Monitor the update progress continuously.",
+      "6. If the update reaches 10 minutes without completing, mark the test as failed.",
+      "7. Record the total time taken for the update to complete."
+    ],
+    "expected": "The language update completes in less than 10 minutes (600 seconds). The update does not get stuck indefinitely at any progress percentage."
+  },
+  {
+    "title": "TC-LANG-004: Verify language update progress tracking accuracy on Morpheus devices",
+    "steps": [
+      "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update.",
+      "4. Observe and record the progress percentage at regular intervals (every 5 seconds).",
+      "5. Verify that the progress percentage increases monotonically (never decreases).",
+      "6. Verify that the progress percentage reaches 100% upon completion.",
+      "7. Verify that the progress bar visually matches the reported percentage."
+    ],
+    "expected": "The progress percentage increases monotonically from 0% to 100%. The progress bar accurately reflects the reported percentage. No regression or stalling at intermediate values occurs."
+  },
+  {
+    "title": "TC-LANG-005: Verify language update behavior on multiple Morpheus device models",
+    "steps": [
+      "1. Connect to a Morpheus device VOY5200.",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update and record total completion time.",
+      "4. Disconnect from VOY5200.",
+      "5. Connect to a Morpheus device VOY8200.",
+      "6. Navigate to the language update (LANG UPDATE) section.",
+      "7. Initiate a language update and record total completion time.",
+      "8. Compare the completion times between the two models."
+    ],
+    "expected": "Both VOY5200 and VOY8200 complete the language update within 2 minutes. Neither device exhibits stalling at 99% for more than 10 seconds. Performance is consistent across Morpheus device models."
+  },
+  {
+    "title": "TC-LANG-006: Verify language update cancellation during 99% stall",
+    "steps": [
+      "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update.",
+      "4. Monitor the progress bar until it reaches 99%.",
+      "5. Once at 99%, attempt to cancel the update using the available cancel/abort mechanism.",
+      "6. Verify the system response to the cancellation request.",
+      "7. Verify the device state after cancellation."
+    ],
+    "expected": "The system allows cancellation of the language update even when stalled at 99%. The device returns to a stable state after cancellation. No partial or corrupted language data remains on the device."
+  },
+  {
+    "title": "TC-LANG-007: Verify language update retry after 99% stall timeout",
+    "steps": [
+      "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update.",
+      "4. Monitor the progress bar until it reaches 99%.",
+      "5. Allow the update to remain at 99% for 10 minutes.",
+      "6. After 10 minutes, if the update has not progressed, restart the language update.",
+      "7. Monitor the second update attempt for completion time and progress behavior."
+    ],
+    "expected": "The second language update attempt completes successfully within 2 minutes. The retry does not exhibit the same 99% stalling behavior. The device handles the retry gracefully without requiring a reboot."
+  },
+  {
+    "title": "TC-LANG-008: Verify language update progress persists across device reboot at 99%",
+    "steps": [
+      "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update.",
+      "4. Monitor the progress bar until it reaches 99%.",
+      "5. While at 99%, perform a device reboot.",
+      "6. After reboot, navigate back to the language update (LANG UPDATE) section.",
+      "7. Check the current status of the language update.",
+      "8. Attempt to resume or restart the language update."
+    ],
+    "expected": "After reboot, the device reports the language update status accurately. The update can be restarted if not completed. No data corruption occurs due to the reboot during the stalled update."
+  },
+  {
+    "title": "TC-LANG-009: Verify language update does not affect other device functions during 99% stall",
+    "steps": [
+      "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update.",
+      "4. Monitor the progress bar until it reaches 99%.",
+      "5. While the update is stalled at 99%, attempt to perform other device operations (e.g., navigation, settings, media playback).",
+      "6. Verify that other device functions remain responsive and operational."
+    ],
+    "expected": "Other device functions remain fully operational during the language update stall at 99%. The device does not become unresponsive or crash. The stalled update does not block access to other features."
+  },
+  {
+    "title": "TC-LANG-010: Verify language update completion after 99% stall resolves",
+    "steps": [
+      "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
+      "2. Navigate to the language update (LANG UPDATE) section.",
+      "3. Initiate a language update.",
+      "4. Monitor the progress bar until it reaches 99%.",
+      "5. Record the time when 99% is reached.",
+      "6. Continue monitoring until the update progresses beyond 99% and completes.",
+      "7. Record the total time spent at 99%.",
+      "8. Verify the device language settings are correctly updated after completion."
+    ],
+    "expected": "The update eventually progresses beyond 99% and completes successfully. The language settings are correctly applied after completion. The total time spent at 99% is documented for performance analysis."
+  }
+]
