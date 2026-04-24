@@ -1,0 +1,33 @@
+{
+  "id": "65641584",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Custom EQ, change the value on sliders, Save EQ",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Save custom EQ after modifying slider values on an EQ-supporting device",
+  "steps": [
+    "Start the app with an EQ-supporting device.",
+    "Navigate to Device Settings > EQ.",
+    "Open Custom EQ.",
+    "Modify the slider values.",
+    "Click the Save EQ button."
+  ],
+  "expected": "Custom EQ is saved successfully.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "custom EQ",
+    "EQ slider",
+    "save EQ",
+    "equalizer settings",
+    "device settings",
+    "EQ modification",
+    "EQ preset"
+  ],
+  "source_last_updated": "1761145090",
+  "source_hash": "b924199adb58cb142d2a073b788ab32d74f6fd378f464aea92b7f3de3bf7dc5a",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.402304Z",
+  "status": "active"
+}
