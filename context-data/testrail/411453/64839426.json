@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Don't Allow is selected",
   "feature": "Location Sharing / Permissions",
-  "scenario": "User taps \"Don't Allow\" on location sharing during first launch, then accesses Find My Device via hamburger menu and sees \"Cancel\" and \"Enable Now\" options, persisting after app restart.",
+  "scenario": "Verify that after denying location permission on first launch, the Find My Device menu option shows a permission prompt with \"Cancel\" and \"Enable Now\" options, and this behavior persists after app restart.",
   "steps": [
     "Launch the app for the first time.",
-    "When the location sharing dialogue appears, tap \"Don't Allow\".",
+    "When the location sharing dialogue appears, select \"Don't Allow\".",
     "Open the hamburger menu.",
     "Tap on \"Find My Device\" (FMD).",
-    "Observe the permission window that appears.",
+    "Observe the permission prompt that appears.",
     "Restart the app.",
-    "Repeat steps 3-5."
+    "Repeat steps 3-5 after restart."
   ],
-  "expected": "A permission window with \"Cancel\" and \"Enable Now\" options should appear when accessing FMD via the hamburger menu. This behavior should persist after restarting the app.",
+  "expected": "The permission prompt should display \"Cancel\" and \"Enable Now\" options both before and after restarting the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Don't Allow",
-    "location sharing",
     "Find My Device",
-    "hamburger menu",
-    "permission window",
+    "location permission denied",
+    "permission prompt",
     "Cancel",
     "Enable Now",
-    "persisting after restart"
+    "app restart",
+    "first launch",
+    "hamburger menu"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "a6367c385c3ee2007ce25ae1cb88fe4a8ce85d33043cf86c50cd803658dda995",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.066317Z",
+  "processed_at": "2026-04-24T10:51:32.724408Z",
   "status": "active"
 }
