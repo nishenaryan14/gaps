@@ -1,0 +1,34 @@
+{
+  "id": "65641589",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Custom EQ, change the some values, Save EQ, dialog present, click OK",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Save EQ dialog does not dismiss after clicking OK when using Custom EQ with changed values",
+  "steps": [
+    "Open the audio settings and select Custom EQ.",
+    "Change some EQ values (e.g., adjust sliders or frequency bands).",
+    "Click the 'Save EQ' button.",
+    "Observe the dialog that appears.",
+    "Click the 'OK' button on the dialog."
+  ],
+  "expected": "The EQ settings are saved successfully and the dialog is dismissed.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Save EQ dialog",
+    "Custom EQ",
+    "EQ values changed",
+    "dialog not dismissing",
+    "OK button",
+    "audio settings",
+    "EQ sliders",
+    "frequency bands"
+  ],
+  "source_last_updated": "1761210934",
+  "source_hash": "0bc96f428d0ca12c170c0b6c97589ac1a64b12f48bf0bdf16d1501feffbe3917",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.400307Z",
+  "status": "active"
+}
