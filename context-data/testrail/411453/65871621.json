@@ -1,0 +1,33 @@
+{
+  "id": "65871621",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Home Screen - No Device connected - Supported List - User Guides",
+  "feature": "Device Home Screen",
+  "scenario": "Display all supported devices and show corresponding user guides when no device is connected",
+  "steps": [
+    "Ensure no device is connected.",
+    "Open the Supported Devices list.",
+    "Observe the list of devices displayed.",
+    "Tap on any device listed under User Guides.",
+    "Observe the user guide that appears."
+  ],
+  "expected": "The Supported Devices list displays all supported devices. Tapping on any device under User Guides shows the corresponding user guide for that device.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "supported devices",
+    "user guides",
+    "no device connected",
+    "device list",
+    "device documentation",
+    "help center",
+    "device support"
+  ],
+  "source_last_updated": "1763378740",
+  "source_hash": "fa78faa921ce2519139911a1c95d6e846d3cbd2b2f419e4b2d805be82d94f6ea",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.067834Z",
+  "status": "active"
+}
