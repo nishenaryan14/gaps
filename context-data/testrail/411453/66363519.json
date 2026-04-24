@@ -1,0 +1,30 @@
+{
+  "id": "66363519",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Flamingo - Software update for headset and charge case",
+  "feature": "Flamingo - Software Update",
+  "scenario": "Verify that updating both headset and charge case firmware via \"Update All\" completes successfully when both are connected and paired.",
+  "steps": [
+    "Tap update button on device home screen",
+    "Tap Update All and complete DFU process"
+  ],
+  "expected": "1-step DFU for headset and charge case completes successfully, both devices are on latest firmware.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "headset firmware update",
+    "charge case firmware update",
+    "Update All",
+    "DFU process",
+    "device firmware upgrade",
+    "connected and paired",
+    "firmware update verification"
+  ],
+  "source_last_updated": "1762331223",
+  "source_hash": "9416c393113a2ed295f15180583516af3606f9585ba6479fb9408cea4e4fe16c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.429534Z",
+  "status": "active"
+}
