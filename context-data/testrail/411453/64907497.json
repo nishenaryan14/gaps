@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Support - Device - No Devices Connected screen",
   "feature": "Support - Device",
-  "scenario": "Verify the \"No Devices Connected\" screen displays correct Poly Support content when navigating through the menu.",
+  "scenario": "Verify that tapping Menu > Support > Device from the \"No Devices Connected\" screen displays the Poly Support screen with the correct text and image.",
   "steps": [
     "Open Lens App with \"No Devices Connected\" screen.",
     "Tap Menu (hamburger icon) in upper left corner.",
@@ -17,16 +17,17 @@
   "edge_cases": [],
   "keywords": [
     "No Devices Connected",
-    "Poly Support",
-    "Lens App",
     "Menu",
-    "Hamburger icon",
     "Support",
-    "Device"
+    "Device",
+    "Poly Support screen",
+    "hamburger icon",
+    "Lens App",
+    "display verification"
   ],
   "source_last_updated": "1759761658",
   "source_hash": "4e4d3786b5542f0628b93234c875144cd580fe7b7c780de129e8988fb40f85fd",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.359907Z",
+  "processed_at": "2026-04-24T11:50:53.181414Z",
   "status": "active"
 }
