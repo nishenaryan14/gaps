@@ -1,0 +1,33 @@
+{
+  "id": "65641558",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "ANC - 4.-ANC is ON and its value is either\u202fAdaptive\u202for\u202fStandard\u202fand User doesn\u2019t change value during call when Transparency is OFF without selected values",
+  "feature": "ANC (Active Noise Cancellation) / Transparency Mode",
+  "scenario": "Verify ANC remains locked to its previous value and Transparency mode is disabled during an active call, with normal toggle behavior restored after the call ends.",
+  "steps": [
+    "Start/join a call - ANC remains ON with previous selection, Transparency is greyed out.",
+    "Tap Transparency toggle - popup informs it's unavailable during call.",
+    "Leave call - ANC stays ON with previous value, Transparency stays OFF with no value.",
+    "After call, user can toggle between ANC and Transparency modes normally."
+  ],
+  "expected": "When ANC is ON (set to Adaptive or Standard) and Transparency Mode is OFF with no value selected, the user should not be able to change the ANC value during a call.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "ANC locked",
+    "Transparency disabled",
+    "active call",
+    "toggle behavior",
+    "call ends",
+    "ANC remains ON",
+    "Transparency greyed out",
+    "popup unavailable"
+  ],
+  "source_last_updated": "1760956286",
+  "source_hash": "7b84460240a536edf0ad6ce048bdcba4d379eacf245c59621e7024bc3d4867c7",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "status": "active"
+}
