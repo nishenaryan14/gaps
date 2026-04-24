@@ -1,0 +1,31 @@
+{
+  "id": "65640127",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Policy: Remove all settings from Policy - Settings Unlocked",
+  "feature": "Policy",
+  "scenario": "Verify that removing all settings from a Lens Cloud policy unlocks previously locked settings on the connected device.",
+  "steps": [
+    "On Lens Cloud policy page, click \"Remove all\" to delete the policy and apply changes.",
+    "Navigate to device settings in the app and tap on any setting previously affected by the policy."
+  ],
+  "expected": "Previously locked settings become unlocked and user can change them.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Lens Cloud policy",
+    "Remove all",
+    "unlock settings",
+    "device settings",
+    "policy removal",
+    "locked settings",
+    "apply changes",
+    "policy deletion"
+  ],
+  "source_last_updated": "1760949373",
+  "source_hash": "53c115aee1f7f6973b3058d4e36c0576011bfdb968fb1612b542ee5f6a873d2e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.421344Z",
+  "status": "active"
+}
