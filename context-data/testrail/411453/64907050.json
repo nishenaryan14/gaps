@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "App Settings - General - Account - Invite sent, user logs during the installation, not registered on Cloud",
   "feature": "App Settings - General - Account",
-  "scenario": "IT admin sends invite to mobile user; user installs app, logs in via mobile without accepting invite externally, and sees no tenant info on Poly Support/App card despite invite appearing in General/Account.",
+  "scenario": "IT admin sends invite to mobile user; user installs app and logs in via mobile without accepting invite externally, resulting in no tenant assigned despite invite appearing in General/Account.",
   "steps": [
     "IT admin sends an invite to a mobile user.",
     "User does not accept the invite via an external source (e.g., laptop).",
@@ -21,17 +21,18 @@
   "edge_cases": [],
   "keywords": [
     "IT admin invite",
-    "mobile user onboarding",
-    "Poly Support app card",
-    "tenant ID missing",
-    "mobile login without external accept",
-    "General Account invite",
-    "tenant registration status",
-    "mobile app tenant info"
+    "mobile user",
+    "tenant assignment",
+    "app installation",
+    "mobile login",
+    "onboarding",
+    "tenant ID",
+    "General/Account",
+    "Poly Support"
   ],
   "source_last_updated": "1759416375",
   "source_hash": "22db7ea724dad989b29d4b2ce4e05000538c076eefd6b853ebde20c8ec71c2bf",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.355862Z",
+  "processed_at": "2026-04-24T11:50:53.146486Z",
   "status": "active"
 }
