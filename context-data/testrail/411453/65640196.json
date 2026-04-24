@@ -1,0 +1,31 @@
+{
+  "id": "65640196",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Soak Test  - Headset connected, app in the background, phone idle",
+  "feature": "Soak Test - Headset Connectivity",
+  "scenario": "Soak test: app remains responsive and leak-free after several hours idle in background with headset connected.",
+  "steps": [
+    "Install and launch the app, pair the headset, then go to the Home Screen.",
+    "Put the app in the background and leave the phone idle for multiple hours (ideally overnight).",
+    "After several hours, check that the app is still running and responsive."
+  ],
+  "expected": "App remains running and responsive with no memory leaks or crashes after prolonged idle time with headset connected.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "soak test",
+    "background idle",
+    "memory leak",
+    "headset connected",
+    "app responsiveness",
+    "long duration stability",
+    "background app testing"
+  ],
+  "source_last_updated": "1760949727",
+  "source_hash": "26e9e61f5e7afa714f2045b045c2bf99e6945bb8293e9c9554a0fe783f554428",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.428522Z",
+  "status": "active"
+}
