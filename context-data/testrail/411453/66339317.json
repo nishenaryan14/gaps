@@ -1,0 +1,32 @@
+{
+  "id": "66339317",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Device Settings - Settings screen for disconnected device",
+  "feature": "Device Settings",
+  "scenario": "Settings screen for a disconnected device displays appropriate tabs (Onboarding, User Guides, Quick Start Guide, Delete Device) when accessed via the \"...\" button.",
+  "steps": [
+    "Start the app with a disconnected headset.",
+    "Navigate to Device Settings by tapping the '...' button.",
+    "Observe the tabs displayed in the settings section."
+  ],
+  "expected": "The settings section should display tabs such as Onboarding, User Guides, Quick Start Guide, and Delete Device. (Tabs may slightly differ between devices.)",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "disconnected device",
+    "device settings",
+    "onboarding",
+    "user guides",
+    "quick start guide",
+    "delete device",
+    "settings tabs",
+    "headset"
+  ],
+  "source_last_updated": "1763028795",
+  "source_hash": "cddd7b24e74aa35be36c281b3e98f4fb23d9dfe30d7b2e13f340a62547444f45",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.364460Z",
+  "status": "active"
+}
