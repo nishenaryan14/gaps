@@ -5,20 +5,17 @@
   "project": "UNKNOWN",
   "summary": "ANDROID | FALCON | DFU - After succesful DFU previous FW version is displayed on Home page and settings page",
   "feature": "DFU (Device Firmware Update)",
-  "scenario": "After a successful DFU, the firmware version displayed on the Home page and device settings page does not update until the app is restarted.",
-  "description_clean": "After a successful DFU (Device Firmware Update), the previous firmware version is still displayed on the Home page and device settings page. The correct firmware version only appears after restarting the app.",
+  "scenario": "After a successful DFU, the firmware version displayed on the Home screen and settings page does not update until the app is restarted.",
+  "description_clean": "After a successful DFU (Device Firmware Update), the previous firmware version is still displayed on the Home screen and device settings page. The correct firmware version only appears after restarting the app.",
   "steps": [
     "Perform a successful Device Firmware Update (DFU).",
-    "Navigate to the Home page.",
-    "Observe the displayed firmware version.",
-    "Navigate to the device settings page.",
-    "Observe the displayed firmware version.",
+    "Observe the firmware version displayed on the Home screen.",
+    "Observe the firmware version displayed on the device settings page.",
     "Restart the app.",
-    "Navigate to the Home page or device settings page again.",
-    "Observe the displayed firmware version."
+    "Observe the firmware version displayed on the Home screen and device settings page again."
   ],
-  "expected": "After a successful DFU, the new firmware version should be displayed immediately on the Home page and device settings page without needing to restart the app.",
-  "actual": "After a successful DFU, the previous firmware version is still displayed on the Home page and device settings page. The correct firmware version only appears after restarting the app.",
+  "expected": "After a successful DFU, the new firmware version should be displayed immediately on the Home screen and device settings page without needing to restart the app.",
+  "actual": "After a successful DFU, the previous firmware version is still displayed on the Home screen and device settings page. The correct firmware version only appears after restarting the app.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -27,14 +24,14 @@
     "firmware version",
     "not updating",
     "app restart",
-    "Home page",
-    "device settings page",
-    "stale data",
-    "UI refresh"
+    "Home screen",
+    "settings page",
+    "display bug",
+    "version mismatch"
   ],
   "source_last_updated": "2026-04-16T10:43:11.000+0000",
   "source_hash": "3fcdcdcc9036366915d6d32869e8398db8ec671d177d47503b7a66559ce85d95",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.683382Z",
+  "processed_at": "2026-04-24T11:23:05.141134Z",
   "status": "active"
 }
