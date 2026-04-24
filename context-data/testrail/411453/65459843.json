@@ -1,0 +1,31 @@
+{
+  "id": "65459843",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications - Master Toggle OFF - Update successful",
+  "feature": "Notifications",
+  "scenario": "Notifications master toggle OFF: successful DFU on paired device should not trigger notification pop-up",
+  "steps": [
+    "Ensure the Notifications master toggle is set to OFF.",
+    "Perform a successful DFU (firmware update) on a paired device.",
+    "Observe whether any notification pop-up appears on the screen."
+  ],
+  "expected": "No notification pop-up should be triggered after the successful DFU.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Notifications master toggle",
+    "DFU",
+    "firmware update",
+    "paired device",
+    "notification pop-up",
+    "toggle OFF",
+    "successful DFU"
+  ],
+  "source_last_updated": "1761230695",
+  "source_hash": "424d953999f775f94e927346ed46293d5c096ca20d800007f71281af1dccac8b",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "status": "active"
+}
