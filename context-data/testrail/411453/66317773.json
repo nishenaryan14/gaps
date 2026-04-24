@@ -7,7 +7,7 @@
   "feature": "Device Settings - Do Not Disturb",
   "scenario": "Verify the Do Not Disturb feature in Device Settings can be toggled ON/OFF, with corresponding LED behavior on the headset.",
   "steps": [
-    "Launch app and pair device.",
+    "Launch the app and pair the device.",
     "Navigate to Device Settings > Do Not Disturb tab.",
     "Verify the tab is present and expanded with a toggle and description: \"Enable the indicator on your headset to inform others that you are not to be interrupted.\"",
     "Set the toggle to ON.",
@@ -15,7 +15,7 @@
     "Set the toggle to OFF.",
     "Verify the toggle changes and LEDs turn off."
   ],
-  "expected": "1. Do Not Disturb tab is present and expanded with a toggle and description: \"Enable the indicator on your headset to inform others that you are not to be interrupted.\" 2. When toggle is set to ON, the toggle changes and LEDs on the headset blink red (with Wear Sensor turned off). 3. When toggle is set to OFF, the toggle changes and LEDs turn off.",
+  "expected": "The Do Not Disturb tab is present and expanded with a toggle and description. When toggled ON, the toggle changes and LEDs on the headset blink red. When toggled OFF, the toggle changes and LEDs turn off.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,13 +24,13 @@
     "LED behavior",
     "headset",
     "toggle ON/OFF",
-    "blink red",
     "Wear Sensor",
+    "red blinking LED",
     "indicator"
   ],
   "source_last_updated": "1769430980",
   "source_hash": "f67b3827ed3f7014d02e1cd1657075eb6145acc474e546e7e594c793296f2531",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.378141Z",
+  "processed_at": "2026-04-24T11:50:53.219239Z",
   "status": "active"
 }
