@@ -5,34 +5,33 @@
   "project": "UNKNOWN",
   "summary": "iOS | FALCON | Custom Button setting is not properly refreshed after disconnecting headset from PC",
   "feature": "iOS | FALCON",
-  "scenario": "Custom button setting fails to refresh available options after disconnecting headset from PC, requiring app restart to update.",
-  "description_clean": "Custom Button setting is not properly refreshed after disconnecting headset from PC. After unplugging Falcon from the PC, the custom button setting still shows MS Teams as connected and does not update to reflect the change in available options. Only restarting the app refreshes the setting and allows the user to change other providers.",
+  "scenario": "Custom Button setting fails to refresh available options after disconnecting headset from PC, requiring an app restart to update.",
+  "description_clean": "Custom Button setting is not properly refreshed after disconnecting headset from PC. After unplugging Falcon from the PC, the custom button setting still shows MS Teams as connected and does not update to reflect the change in available options. Only restarting the app refreshes the setting, allowing the user to change other providers. Expected: After disconnecting the headset from PC, the user should be able to change Custom Button settings immediately.",
   "steps": [
-    "Connect the headset (Falcon) to the PC.",
-    "Open the app and configure a custom button setting (e.g., set it to MS Teams).",
-    "Disconnect the headset from the PC.",
-    "Observe the custom button setting in the app without restarting it."
+    "1. Connect the Falcon headset to the PC.",
+    "2. Open the app and configure a Custom Button setting (e.g., set it to MS Teams).",
+    "3. Disconnect the headset from the PC.",
+    "4. Observe the Custom Button setting in the app without restarting it."
   ],
-  "expected": "After disconnecting the headset, the custom button setting should update to reflect the change (e.g., MS Teams should no longer appear as connected, and available options should update accordingly).",
-  "actual": "After disconnecting the headset, the custom button setting still shows MS Teams as connected and does not update to reflect the change in available options. Only restarting the app refreshes the setting and allows the user to change other providers.",
+  "expected": "After disconnecting the headset from PC, the user should be able to change Custom Button settings immediately. The setting should refresh to reflect the change in available options.",
+  "actual": "After unplugging Falcon from the PC, the custom button setting still shows MS Teams as connected and does not update to reflect the change in available options. Only restarting the app refreshes the setting, allowing the user to change other providers.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "NeedsEngineeringReview"
   ],
   "keywords": [
-    "custom button setting",
-    "refresh options",
-    "headset disconnect",
+    "Custom Button",
+    "refresh",
+    "disconnect headset",
+    "app restart",
     "Falcon headset",
-    "app restart required",
-    "MS Teams configuration",
-    "PC disconnection",
-    "button setting update"
+    "options update",
+    "PC connection"
   ],
   "source_last_updated": "2026-04-15T08:56:37.000+0000",
   "source_hash": "cc652422d252219379f2f64e310de01aed7ec949a4973067a7310f73ade4db5e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.699467Z",
+  "processed_at": "2026-04-24T11:23:05.141134Z",
   "status": "active"
 }
