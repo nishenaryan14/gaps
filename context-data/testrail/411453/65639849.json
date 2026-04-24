@@ -1,0 +1,33 @@
+{
+  "id": "65639849",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "New DFU screen - Translations",
+  "feature": "DFU Screen",
+  "scenario": "Verify that translations on the new DFU screen display correctly without broken words or truncation when the phone is set to a supported language and an update is available for EB/CC on Osprey.",
+  "steps": [
+    "Set phone to a supported language.",
+    "Open the app with an update for EB/CC for Osprey.",
+    "Open the new DFU screen.",
+    "Check the text on the screen."
+  ],
+  "expected": "Text is correct, no broken words, and all visible.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU screen",
+    "translations",
+    "broken words",
+    "truncation",
+    "supported language",
+    "EB/CC update",
+    "Osprey",
+    "text display"
+  ],
+  "source_last_updated": "1760949167",
+  "source_hash": "15e112699f208f9ce0ab0c32dcd2b8490fea15e7a400a242089f29a92a0d73a5",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "status": "active"
+}
