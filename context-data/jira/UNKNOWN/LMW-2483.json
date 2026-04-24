@@ -5,30 +5,33 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udc40 FALCON | DFU - App incorrectly shows device upto date after failure",
   "feature": "iOS FALCON DFU",
-  "scenario": "After a DFU failure for the headset, the app incorrectly displays the device as up-to-date instead of showing the update failed.",
-  "description_clean": "After a DFU (Device Firmware Update) failure for the headset, the app incorrectly displays the device as up-to-date. The headset was not actually updated, but the main SW update section shows it as successfully updated to the latest build. This misleads the user into thinking the update succeeded when it actually failed.",
+  "scenario": "After a DFU failure, the app incorrectly shows the headset as up-to-date and prevents further updates",
+  "description_clean": "After a DFU (Device Firmware Update) failure for the headset, the app incorrectly displays the device as up-to-date. The headset was not actually updated, but the main SW update section shows both Falcon headset and Charge Stand as successfully updated to the latest build. Subsequent attempts to update show \"update unavailable.\"",
   "steps": [
-    "1. Initiate a DFU (Device Firmware Update) for the headset.",
-    "2. Cause the DFU process to fail (e.g., disconnect, interrupt, or simulate an error).",
-    "3. Observe the main SW update section in the app after the failure."
+    "Initiate a DFU (Device Firmware Update) for the headset.",
+    "Allow the DFU process to fail (e.g., due to connection loss, power interruption, or timeout).",
+    "Observe the main SW update section in the app.",
+    "Check the displayed status for both Falcon headset and Charge Stand.",
+    "Attempt to perform another update for the headset."
   ],
-  "expected": "The app should indicate that the DFU failed and show the device as not updated or on its previous firmware version.",
-  "actual": "The app incorrectly displays the device as up-to-date and shows it as successfully updated to the latest build, misleading the user.",
+  "expected": "The app should indicate that the DFU failed and that the headset is not up-to-date. The main SW update section should show the headset and Charge Stand with their actual firmware versions, not as successfully updated. Subsequent update attempts should be available.",
+  "actual": "The app incorrectly displays the device as up-to-date. The main SW update section shows both Falcon headset and Charge Stand as successfully updated to the latest build. Subsequent attempts to update show \"update unavailable.\"",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "DFU failure",
-    "firmware update failed",
-    "device up-to-date incorrectly",
-    "headset firmware bug",
-    "SW update section display",
-    "update status mismatch",
-    "DFU error handling"
+    "headset firmware update",
+    "incorrect up-to-date status",
+    "update blocked",
+    "Charge Stand",
+    "Falcon headset",
+    "SW update section",
+    "update retry prevention"
   ],
   "source_last_updated": "2026-04-14T19:23:14.000+0000",
   "source_hash": "846baf4347e1d9528453ee031c7f449eecffd691258dfaf40904da93ee53bbb3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.696811Z",
+  "processed_at": "2026-04-24T11:23:05.248798Z",
   "status": "active"
 }
