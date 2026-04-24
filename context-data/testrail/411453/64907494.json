@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Support - Device page Go button",
   "feature": "Support - Device page",
-  "scenario": "Tapping the \"Go\" button on the Device page under Support should open the Poly Contact Support page.",
+  "scenario": "Verify that tapping the \"Go\" button on a paired device's detail modal opens the Poly Contact Support page in a browser.",
   "steps": [
-    "Pair and connect a headset.",
-    "Start the app.",
-    "Tap Menu > Support > Device.",
-    "A screen appears asking \"Which device do you have issues with?\" and lists paired devices.",
-    "Tap a device to see a modal with device details and a \"Go\" button.",
-    "Tap \"Go\"."
+    "1. Navigate to the Support section and open the Device page.",
+    "2. Verify that a list of paired devices is displayed.",
+    "3. Tap on a device from the list.",
+    "4. Observe that a modal appears showing device details (name, product ID, serial number, software version, headset revision, last connected) and a 'Go' button.",
+    "5. Tap the 'Go' button.",
+    "6. Observe that the Poly Contact Support page opens in a browser."
   ],
-  "expected": "The Poly Contact Support page (https://support.hp.com/contact/product/poly-lens-mobile-app/2101801768/model/2101801771?source=polydropdown) should open.",
+  "expected": "A modal with device details and a \"Go\" button appears. Tapping \"Go\" opens the Poly Contact Support page in a browser.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Go button",
-    "Device page",
-    "Support",
-    "Poly Contact Support",
-    "paired devices",
-    "device details modal",
-    "headset support",
-    "contact support page"
+    "device detail modal",
+    "paired device",
+    "Poly Contact Support page",
+    "browser navigation",
+    "device details",
+    "Support section",
+    "Device page"
   ],
   "source_last_updated": "1759752387",
   "source_hash": "3d741f06cb9532ec40f76144c5d0347f15699d8c59f83def18c52af73b5e357c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:24.301513Z",
+  "processed_at": "2026-04-24T10:51:34.046802Z",
   "status": "active"
 }
