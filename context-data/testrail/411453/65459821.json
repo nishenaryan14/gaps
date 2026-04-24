@@ -1,0 +1,32 @@
+{
+  "id": "65459821",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Notifications  - Update failed",
+  "feature": "Notifications",
+  "scenario": "User taps notification after DFU fails in first 20% while app is backgrounded and is redirected to Software Update failure screen",
+  "steps": [
+    "Start a DFU (Device Firmware Update) on a device.",
+    "Turn off the device while the app is in the background during the first 20% of the update process.",
+    "Observe the notification that appears.",
+    "Tap the notification."
+  ],
+  "expected": "A notification \"Device didn't update\" appears. Tapping the notification redirects the user to the Poly Lens application's Software Update failure screen.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU failure",
+    "notification tap",
+    "background app",
+    "Software Update failure screen",
+    "device firmware update interrupted",
+    "update failed first 20%",
+    "redirect to failure screen"
+  ],
+  "source_last_updated": "1761223129",
+  "source_hash": "5474bac5a6b5c9f31687cd374edab459b4b006998feb2df1a5421c873cf40d6e",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.417746Z",
+  "status": "active"
+}
