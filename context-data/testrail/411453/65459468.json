@@ -1,0 +1,33 @@
+{
+  "id": "65459468",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Application - Uninstall mobile application",
+  "feature": "Application - Uninstall",
+  "scenario": "Verify successful uninstallation of the mobile application from the home screen",
+  "steps": [
+    "Ensure the app is installed and present on the home screen.",
+    "Long-press the app icon.",
+    "Select the Remove option from the dialog.",
+    "Confirm the action.",
+    "Check the mobile phone."
+  ],
+  "expected": "The Lens mobile app is uninstalled successfully.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "uninstall",
+    "mobile application",
+    "home screen",
+    "app icon",
+    "remove",
+    "confirm",
+    "verification"
+  ],
+  "source_last_updated": "1760534160",
+  "source_hash": "0f4afd19c5155accbe131fedba2778ad47cd837814d66136b0b5732165b8a971",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.409016Z",
+  "status": "active"
+}
