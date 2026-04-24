@@ -5,30 +5,27 @@
   "project": "411453",
   "title": "Software Update - DFU - Incoming mobile phone call during update",
   "feature": "Software Update - DFU",
-  "scenario": "Verify DFU continues or completes successfully when an incoming phone call is received and answered during the update process.",
+  "scenario": "Incoming mobile phone call during DFU update does not interrupt the update process",
   "steps": [
-    "Start a DFU (Device Firmware Update) process on the target device.",
-    "While the DFU is in progress, initiate an incoming mobile phone call to the device.",
-    "Answer the incoming phone call during the DFU process.",
-    "Monitor the DFU process to see if it continues running or completes.",
-    "After the call ends, check the final status of the DFU."
+    "Start DFU on the device.",
+    "Make incoming mobile phone call and answer it.",
+    "Finish the call."
   ],
-  "expected": "The DFU process continues running or completes successfully despite the incoming call being received and answered.",
+  "expected": "Update is still running (or has successfully finished).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU",
-    "Device Firmware Update",
-    "incoming phone call",
-    "interruption",
-    "call during update",
-    "update completion",
-    "call handling",
-    "firmware update stability"
+    "DFU update",
+    "incoming call",
+    "mobile phone",
+    "firmware update",
+    "call interruption",
+    "device update",
+    "DFU process"
   ],
   "source_last_updated": "1763371034",
   "source_hash": "f70bd718b20d5e383d79a783f358e51d1506f9a197cad7e25cbdca808c66f36e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.413695Z",
+  "processed_at": "2026-04-24T11:50:53.289376Z",
   "status": "active"
 }
