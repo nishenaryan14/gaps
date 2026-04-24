@@ -10,13 +10,13 @@
   "steps": [
     "Open Falcon Grey on Android device",
     "Navigate to EQ settings page",
-    "Adjust EQ settings to custom values",
+    "Adjust any EQ settings (e.g., change frequency levels)",
     "Click Save button",
-    "Close EQ settings page",
-    "Reopen EQ settings page"
+    "Close the EQ settings page",
+    "Reopen the EQ settings page"
   ],
-  "expected": "Custom EQ settings should be saved and displayed after reopening the EQ settings page",
-  "actual": "Custom EQ settings are not saved after reopening the EQ settings page",
+  "expected": "Custom EQ settings should be saved and displayed as previously configured after reopening the EQ settings page.",
+  "actual": "Custom EQ settings are not saved; they revert to default or previous state after reopening the EQ settings page.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -25,15 +25,15 @@
   "keywords": [
     "Falcon Grey",
     "EQ settings",
-    "custom EQ",
-    "settings not saved",
+    "not persisted",
     "Android",
-    "EQ persistence",
-    "audio settings bug"
+    "Save button",
+    "frequency levels",
+    "settings page reopen"
   ],
   "source_last_updated": "2026-04-23T07:54:54.000+0000",
   "source_hash": "3bb3a0a0fb141045a6fb07af45a2038d0c1ad94d044a642c004cb21f39ad88f1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:31.800146Z",
+  "processed_at": "2026-04-24T11:23:04.656926Z",
   "status": "active"
 }
