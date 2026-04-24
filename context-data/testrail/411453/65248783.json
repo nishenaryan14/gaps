@@ -1,0 +1,32 @@
+{
+  "id": "65248783",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Allow location [Android]",
+  "feature": "Find My Device",
+  "scenario": "When starting the app with HS connected, navigating to the App Menu and tapping on 'Find My Device', a location permission dialog appears with options: 'Always allow', 'Allow while using app', and 'Don't allow'.",
+  "steps": [
+    "Start the app with HS connected.",
+    "Navigate to the App Menu.",
+    "Tap on 'Find My Device'."
+  ],
+  "expected": "A location permission dialog appears with options: 'Always allow', 'Allow while using app', and 'Don't allow'.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "location permission",
+    "Always allow",
+    "Allow while using app",
+    "Don't allow",
+    "App Menu",
+    "HS connected",
+    "location permission dialog"
+  ],
+  "source_last_updated": "1759926568",
+  "source_hash": "117fb02ea1bc96bb887c66818623e795179af2eecb51bed1b2796e17cabc3118",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.108419Z",
+  "status": "active"
+}
