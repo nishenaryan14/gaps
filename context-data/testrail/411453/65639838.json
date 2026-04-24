@@ -1,0 +1,32 @@
+{
+  "id": "65639838",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "1 step DFU - User can trigger firmware update for just Charge Case",
+  "feature": "DFU (Device Firmware Update)",
+  "scenario": "User can trigger a firmware update for just the Charge Case in a 1-step DFU scenario, leaving the Earbuds on the lower version.",
+  "steps": [
+    "Start the app with Osprey EB and CC (both on at least version 5039) where an update is available for both.",
+    "Navigate to Settings/Update.",
+    "Click the update button for the Charge Case / Voyager Free 60 Charger Case."
+  ],
+  "expected": "Only the CC DFU completes successfully; the EB stays on the lower version.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "firmware update",
+    "charge case",
+    "DFU",
+    "1-step DFU",
+    "Osprey EB",
+    "Voyager Free 60",
+    "partial update",
+    "version mismatch"
+  ],
+  "source_last_updated": "1760949167",
+  "source_hash": "bf70a150655c1584ebeb6892bdac0cf8da448615413c1d35f491a7078ab5dda3",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.416214Z",
+  "status": "active"
+}
