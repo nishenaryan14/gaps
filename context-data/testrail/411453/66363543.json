@@ -1,0 +1,36 @@
+{
+  "id": "66363543",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Onboarding - Animations",
+  "feature": "Onboarding",
+  "scenario": "Verify animations play correctly during the device onboarding flow, including interactions like tapping, swiping, and replaying.",
+  "steps": [
+    "Launch the app with a connected device (Osprey/Term/Emu)",
+    "Navigate to Poly Lens Menu > User Guides",
+    "Tap onboarding for the device",
+    "Tap Continue",
+    "While animations play, test the following interactions:\n   - Tap on the animation\n   - Swipe right/left\n   - Tap 'Next'\n   - Tap 'X'\n   - Tap 'Done' or 'User Guide'",
+    "Confirm animations play correctly on every screen",
+    "Replay the onboarding and confirm animations play correctly on subsequent replays"
+  ],
+  "expected": "Animations play correctly on every screen during the onboarding flow, including on subsequent replays. All interactions (tapping on animation, swiping, tapping Next/X/Done/User Guide) work as expected without breaking the animation playback.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "animations",
+    "onboarding flow",
+    "device onboarding",
+    "Poly Lens",
+    "User Guides",
+    "tap",
+    "swipe",
+    "replay"
+  ],
+  "source_last_updated": "1763378362",
+  "source_hash": "8738226695eb78392346cc483e73743658d271a24a49e72643a0de909d74ee1d",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.410659Z",
+  "status": "active"
+}
