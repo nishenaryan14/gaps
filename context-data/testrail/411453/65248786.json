@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Find My Device -  Pin for headset location",
   "feature": "Find My Device",
-  "scenario": "Verify pin display behavior for headset locations: blue geo icon when connected, gray when disconnected, and merged pins with count for multiple devices at same location.",
+  "scenario": "Verify that the Find My Device pin display shows blue geo icons for connected headsets, gray for disconnected ones, and merges multiple devices at the same location into a numbered pin.",
   "steps": [
-    "1. Connect a headset to the device.",
-    "2. Open the Find My Device feature.",
-    "3. Observe the geo icon for the headset location.",
-    "4. Disconnect the headset from the device.",
-    "5. Observe the geo icon for the headset location again.",
-    "6. Place multiple devices at the same location.",
-    "7. Observe the pin display on the map."
+    "Start the app with headset connected/disconnected.",
+    "Go to App Menu.",
+    "Tap on Find My Device (allow GPS location if prompted).",
+    "Connect a second headset (or component) in the same location."
   ],
-  "expected": "When the headset is connected, the geo icon should be blue. When disconnected, it should be gray. If multiple devices are located in the same place, the pins should merge into a single pin showing a count number.",
+  "expected": "Geo icon for connected headsets is blue, for disconnected ones is gray. If multiple devices are located in the same place, pins merge into one with a number.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "Find My Device",
     "pin display",
-    "geo icon",
-    "headset location",
-    "connected",
-    "disconnected",
-    "merged pins",
-    "multiple devices",
-    "Find My Device"
+    "blue geo icon",
+    "gray geo icon",
+    "connected headset",
+    "disconnected headset",
+    "numbered pin",
+    "device merging"
   ],
   "source_last_updated": "1759927301",
   "source_hash": "cc484ef7bdac10718acd9b8a127bdb30d120704b0b9bc599bae1d70c99d83bfa",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:40:23.107360Z",
+  "processed_at": "2026-04-24T10:51:32.900316Z",
   "status": "active"
 }
