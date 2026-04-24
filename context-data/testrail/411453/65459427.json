@@ -1,0 +1,30 @@
+{
+  "id": "65459427",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - Tapping on \"Software Update\"  button on Home Screen opens Software Update tab in Device Settings",
+  "feature": "Software Update",
+  "scenario": "Tapping \"Software Update\" on Home Screen opens the Software Update tab in Device Settings showing all device components.",
+  "steps": [
+    "1. Tap the 'Software Update' button on the Home Screen.",
+    "2. Observe the screen that opens."
+  ],
+  "expected": "The Software Update tab in Device Settings opens, displaying all device components (Headset/Earbuds and Charge Case/Charge Stand if applicable).",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Software Update",
+    "Home Screen",
+    "Device Settings",
+    "tap",
+    "button",
+    "open",
+    "navigate"
+  ],
+  "source_last_updated": "1763377500",
+  "source_hash": "4ebe1d17e39f1204af8583d1a189d67ea9834144adbd142aab3abcff15c3d2a9",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.408510Z",
+  "status": "active"
+}
