@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Tutorial screen to Onboarding screen",
   "feature": "Onboarding / Tutorial",
-  "scenario": "Verify that navigating from Tutorial to Onboarding tab displays the correct start page with image and text matching Figma design.",
+  "scenario": "Verify that navigating from Tutorial to Onboarding screen displays the correct start page with proper image and text matching Figma design.",
   "steps": [
     "Open the app and navigate to the Tutorial screen.",
-    "From the Tutorial screen, tap/click on the Onboarding tab.",
-    "Observe the page that opens (should be the start Onboarding page).",
-    "Check that the displayed image matches the Figma design.",
-    "Check that the displayed text matches the Figma design."
+    "From the Tutorial screen, navigate to the Onboarding screen.",
+    "Observe the displayed Onboarding page.",
+    "Check that the start Onboarding page is displayed.",
+    "Verify that the image on the page matches the Figma design.",
+    "Verify that the text on the page matches the Figma design."
   ],
-  "expected": "The start Onboarding page opens with the correct image and text, matching the Figma design.",
+  "expected": "The correct start Onboarding page is displayed with proper image and text, matching the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Tutorial",
-    "Onboarding tab",
+    "Onboarding",
     "start page",
     "Figma design",
-    "image match",
-    "text match",
+    "image verification",
+    "text verification",
     "navigation",
-    "UI verification"
+    "screen matching"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "d23063d85310c1b0813895f8f68e532d9d041bdcfa23c67cd1cbb293c4487749",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.403906Z",
+  "processed_at": "2026-04-24T11:50:53.271805Z",
   "status": "active"
 }
