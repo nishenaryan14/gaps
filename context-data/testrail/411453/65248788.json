@@ -1,0 +1,32 @@
+{
+  "id": "65248788",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Find My Device - Disconnected / Out of range device details",
+  "feature": "Find My Device",
+  "scenario": "Tapping the gray geo icon for a disconnected/out-of-range device in Find My Device displays a window with the last known address, device name, status, last connection date, and battery percentage.",
+  "steps": [
+    "Ensure a device is disconnected or out of range in Find My Device.",
+    "Tap the gray geo icon for that device.",
+    "Observe the window that appears."
+  ],
+  "expected": "A new window is displayed showing: the address of the last known location (street & city), device name and status, date of last connection, and last known battery percentage.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Find My Device",
+    "gray geo icon",
+    "disconnected device",
+    "out-of-range device",
+    "last known address",
+    "device status",
+    "last connection date",
+    "battery percentage"
+  ],
+  "source_last_updated": "1759927716",
+  "source_hash": "155aba18f56f37deea67dd4769664baabf2d0d36362256fc06bd4a0d2996b005",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:23.110058Z",
+  "status": "active"
+}
