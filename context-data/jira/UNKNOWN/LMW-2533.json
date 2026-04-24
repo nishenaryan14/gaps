@@ -1,0 +1,38 @@
+{
+  "id": "LMW-2533",
+  "source": "jira",
+  "type": "bug",
+  "project": "UNKNOWN",
+  "summary": "iOS \ud83d\udfe5 FALCON | Charge Stand is not properly displayed in \"Software\" tab if it is currently unplugged ",
+  "feature": "iOS FALCON - Charge Stand",
+  "scenario": "Charge Stand shows incorrect name and placeholder image in Software tab after being unplugged and app restarted",
+  "description_clean": "Charge Stand is not properly displayed in the \"Software\" tab when it is unplugged. After unplugging the Charge Stand and restarting the app, the Charge Stand's name changes to match the headset's name and its image is replaced with a placeholder. Plugging the Charge Stand back in refreshes the page and shows the correct information. Expected behavior: Charge Stand should be properly displayed in Device Settings > Software even when it is not plugged in.",
+  "steps": [
+    "Unplug the Charge Stand from the device",
+    "Restart the application",
+    "Navigate to Device Settings > Software tab",
+    "Observe the Charge Stand entry",
+    "Plug the Charge Stand back in",
+    "Observe the Charge Stand entry again"
+  ],
+  "expected": "Charge Stand should be properly displayed in Device Settings > Software even when it is not plugged in, showing its correct name and image.",
+  "actual": "When the Charge Stand is unplugged and the app is restarted, the Charge Stand's name changes to match the headset's name and its image is replaced with a placeholder. Plugging the Charge Stand back in refreshes the page and shows the correct information.",
+  "priority": "P1: High",
+  "severity": "",
+  "labels": [],
+  "keywords": [
+    "Charge Stand",
+    "placeholder image",
+    "incorrect name",
+    "Software tab",
+    "unplugged",
+    "app restart",
+    "Device Settings",
+    "UI bug"
+  ],
+  "source_last_updated": "2026-04-22T17:57:57.000+0000",
+  "source_hash": "16fedff2e685afea2a7bf3b469b5f68efe2dc96b4fc1dbe609733f955a83fb95",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T10:40:22.667959Z",
+  "status": "active"
+}
