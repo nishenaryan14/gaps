@@ -8,10 +8,10 @@
   "scenario": "Low battery notification incorrectly appears on cold start despite high battery level",
   "description_clean": "Low battery notification incorrectly appears on app cold start (first launch, no memory) even when the device battery level is high. Expected behavior: no low battery notification should be shown if battery level is sufficient.",
   "steps": [
-    "Ensure the device battery level is high (e.g., above 50%).",
-    "Close the app completely (no memory, cold start).",
-    "Launch the app for the first time.",
-    "Observe whether a low battery notification appears."
+    "1. Ensure the app is not running in memory (cold start condition).",
+    "2. Set the device battery level to a high value (e.g., above 50%).",
+    "3. Launch the app for the first time (cold start).",
+    "4. Observe the notification displayed on the screen."
   ],
   "expected": "No low battery notification should be shown if battery level is sufficient.",
   "actual": "Low battery notification incorrectly appears on app cold start even when the device battery level is high.",
@@ -24,12 +24,13 @@
     "false notification",
     "battery level incorrect",
     "app launch",
-    "battery indicator bug",
-    "startup notification issue"
+    "battery state detection",
+    "notification bug",
+    "startup behavior"
   ],
   "source_last_updated": "2026-04-22T12:01:07.000+0000",
   "source_hash": "42c6fcb4d71dfc5c9bbe168472448eb5c3e1b7301b12b3f91fa8804489a1ba06",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.598569Z",
+  "processed_at": "2026-04-24T11:23:04.657475Z",
   "status": "active"
 }
