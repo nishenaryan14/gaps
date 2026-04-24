@@ -13,21 +13,21 @@
     "Attempt to select Transparency.",
     "Tap Ok."
   ],
-  "expected": "Transparency Mode is greyed out. Pop-up appears with message \"This setting cannot be adjusted while on a call\" and an \"Ok\" button. Dialog closes after tapping Ok.",
+  "expected": "Transparency Mode is greyed out. Pop-up appears with message \\\"This setting cannot be adjusted while on a call\\\" and an \\\"Ok\\\" button. Dialog closes after tapping Ok.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Transparency mode disabled",
-    "ANC-supporting device",
+    "Transparency mode",
+    "ANC",
     "active call",
-    "Device Settings ANC tab",
-    "Transparency selection blocked",
-    "call scenario ANC",
-    "noise control mode restriction"
+    "device settings",
+    "noise control",
+    "call restrictions",
+    "audio mode"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "f49d3079b3e31938fdc247ad36d398d61b3e520fd19203bae7abb06418a253ab",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.396752Z",
+  "processed_at": "2026-04-24T11:50:53.240564Z",
   "status": "active"
 }
