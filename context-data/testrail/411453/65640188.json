@@ -5,24 +5,21 @@
   "project": "411453",
   "title": "Analytics - Help Guide Opened",
   "feature": "Analytics",
-  "scenario": "Logs event when user opens Help Guide page, with delayed event count updates and default analytics elements.",
+  "scenario": "Logs event when user opens Help Guide page, with event counts updating after a few hours and default analytics elements displayed.",
   "steps": [
     "Open the Help Guide page.",
     "Wait for a few hours for event counts to update.",
-    "Check the event logs for the 'Help Guide Opened' event.",
-    "Verify the event includes the following default elements: graph for this event, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
+    "Check the default elements on the page: graph for the event, events in the last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
   ],
-  "expected": "The 'Help Guide Opened' event is logged with all default elements present: graph for this event, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment.",
+  "expected": "The Help Guide page displays all default elements: graph for the event, events in the last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment. Event counts are updated after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "Help Guide page",
-    "event logs",
-    "Help Guide Opened event",
-    "event count",
-    "analytics",
+    "event counts",
+    "analytics elements",
     "graph",
-    "events in last 30 minutes",
+    "events last 30 minutes",
     "event count by Country",
     "event count by Gender",
     "events per session",
@@ -33,6 +30,6 @@
   "source_last_updated": "1760949700",
   "source_hash": "05736acc74e34394b265a53a80948d942c407992d2864bb41dcb3d8e5068c45d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.428522Z",
+  "processed_at": "2026-04-24T11:50:53.336654Z",
   "status": "active"
 }
