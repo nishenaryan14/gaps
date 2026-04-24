@@ -1,0 +1,32 @@
+{
+  "id": "65641582",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "EQ - Custom EQ, change values on the sliders",
+  "feature": "EQ (Equalizer)",
+  "scenario": "Verify that all sliders in Custom EQ can be adjusted.",
+  "steps": [
+    "Start the app on an EQ-supported device.",
+    "Navigate to Device Settings > EQ.",
+    "Open Custom EQ.",
+    "Change values on all sliders."
+  ],
+  "expected": "All sliders should be adjustable.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Custom EQ",
+    "sliders",
+    "adjust",
+    "equalizer",
+    "EQ settings",
+    "audio settings",
+    "Device Settings"
+  ],
+  "source_last_updated": "1761144928",
+  "source_hash": "3095c0165aa58e50309e0d35e046b0cad8b7e906c0c24f78e5878a236c3d123c",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.400307Z",
+  "status": "active"
+}
