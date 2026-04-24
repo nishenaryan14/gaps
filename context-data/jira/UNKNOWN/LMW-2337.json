@@ -5,34 +5,34 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 Incorrect name and inaccessible settings after deleting device ",
   "feature": "iOS App - Device Management",
-  "scenario": "After deleting a paired device from the app, the remaining device displays the deleted device's name and connection status, and its settings become inaccessible until the app is restarted.",
-  "description_clean": "After deleting a paired device from the app, the remaining device shows incorrect name and connection status (from the deleted device), and its settings become inaccessible. Restarting the app resolves the issue.",
+  "scenario": "After deleting a paired device, the remaining device's name and connection status incorrectly reflect the deleted device, and its settings become inaccessible until the app is restarted.",
+  "description_clean": "After deleting a paired device from the app, the user is returned to the home screen of the remaining device, but the name and connection status incorrectly reflect the deleted device. Additionally, the user cannot open settings for the remaining device. Restarting the app resolves the issue.",
   "steps": [
     "Open the app and ensure at least two devices are paired.",
     "Delete one of the paired devices from the app.",
-    "Observe the remaining device's name and connection status.",
-    "Attempt to access the settings of the remaining device.",
-    "Restart the app.",
-    "Observe the remaining device's name, connection status, and settings accessibility after restart."
+    "Observe the home screen showing the remaining device.",
+    "Check the name and connection status displayed for the remaining device.",
+    "Attempt to open settings for the remaining device.",
+    "Restart the app and observe the behavior again."
   ],
-  "expected": "After deleting a paired device, the remaining device should retain its correct name and connection status, and its settings should remain accessible.",
-  "actual": "After deleting a paired device, the remaining device shows the incorrect name and connection status (from the deleted device), and its settings become inaccessible. Restarting the app resolves the issue.",
+  "expected": "After deleting a paired device, the home screen should correctly show the remaining device's name and connection status, and the user should be able to open settings for the remaining device.",
+  "actual": "After deleting a paired device, the home screen shows the remaining device but with the name and connection status of the deleted device. The user cannot open settings for the remaining device. Restarting the app resolves the issue.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "paired device deletion",
-    "device name display bug",
-    "connection status error",
+    "device name mismatch",
+    "connection status incorrect",
     "settings inaccessible",
     "app restart required",
-    "device synchronization issue",
-    "UI state inconsistency",
-    "Bluetooth device management"
+    "UI state not refreshed",
+    "device list synchronization",
+    "bluetooth pairing bug"
   ],
   "source_last_updated": "2026-04-20T13:29:52.000+0000",
   "source_hash": "c5642b495a72eac6c54e9c0c7b5686e55dc36594ee9f2ccc1abb02fcb07e3c94",
   "context_version": "v1",
-  "processed_at": "2026-04-24T10:51:32.681401Z",
+  "processed_at": "2026-04-24T11:23:04.986520Z",
   "status": "active"
 }
