@@ -1,0 +1,32 @@
+{
+  "id": "65459438",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - Release Notes link",
+  "feature": "Software Update",
+  "scenario": "Verify that clicking the Release Notes link in Device Settings > Software Update displays a popup with release notes when a firmware update is available.",
+  "steps": [
+    "Ensure the headset is not on the latest firmware.",
+    "Navigate to Device Settings > Software Update.",
+    "Click on the Release Notes link (the blue firmware version next to 'Update Available')."
+  ],
+  "expected": "A popup with release notes appears, working similarly to the release notes link on the device home page.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "Release Notes",
+    "Device Settings",
+    "Software Update",
+    "firmware update",
+    "popup",
+    "firmware version",
+    "Update Available",
+    "headset"
+  ],
+  "source_last_updated": "1763039673",
+  "source_hash": "cd49981281d85a1b519a7c8fa8fbe4cdb309339023e2130e4738b9e175a1a656",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.412172Z",
+  "status": "active"
+}
