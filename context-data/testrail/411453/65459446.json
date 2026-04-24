@@ -1,0 +1,32 @@
+{
+  "id": "65459446",
+  "source": "testrail",
+  "type": "testcase",
+  "project": "411453",
+  "title": "Software Update - DFU - Updating screen above 90%",
+  "feature": "Software Update - DFU",
+  "scenario": "DFU update shows \"Verifying\" message and \"Almost there, don't leave yet\" text from 90% to 99% on the Software Update screen",
+  "steps": [
+    "Open the Software Update screen on the device.",
+    "Initiate a Device Firmware Update (DFU).",
+    "Monitor the update progress until it reaches 90%.",
+    "Observe the screen when the update reaches 90%."
+  ],
+  "expected": "When the update reaches 90%, the progress bar should change to show a \"Verifying\" message, and the screen should display the text \"Almost there, don't leave yet\" from 90% to 99%.",
+  "coverage": [],
+  "edge_cases": [],
+  "keywords": [
+    "DFU update",
+    "Verifying message",
+    "Software Update screen",
+    "Almost there don't leave yet",
+    "90% to 99%",
+    "Device Firmware Update",
+    "update progress"
+  ],
+  "source_last_updated": "1763133872",
+  "source_hash": "b14545fa16862476894f7a1d8c8dc606eb4a65c4bacba1a148afc8841f228388",
+  "context_version": "v1",
+  "processed_at": "2026-04-24T11:23:05.414704Z",
+  "status": "active"
+}
