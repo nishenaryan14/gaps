@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Personal User - download/install, Login with Gmail, not present on any Lens tenant",
   "feature": "Personal User - Login with Gmail",
-  "scenario": "Verify that a personal user with a paired headset, who logs in with Gmail during onboarding, sees correct headset data in the app and is not registered on any Lens tenant.",
+  "scenario": "Personal user with paired headset logs in via Gmail during onboarding without prior Lens tenant invite; headset data appears correctly and user is not registered on any Lens tenant.",
   "steps": [
-    "1. Pair a headset with a personal user's mobile device.",
-    "2. User downloads/installs the app and logs in with their Gmail account during onboarding.",
-    "3. Ensure the user is not present on any Lens tenant.",
-    "4. Verify that the headset appears in the app with correct data (image, settings).",
-    "5. Verify that the personal user is not registered on any Lens tenant."
+    "1. Ensure a personal user has a headset paired to their mobile device.",
+    "2. The user logs into the app using a Gmail account during onboarding.",
+    "3. Confirm that the user has NOT received any email invite from any Lens tenant for that Gmail account.",
+    "4. After login, verify that the headset appears in the app with correct data (image, settings).",
+    "5. Verify that the personal user is NOT registered on any Lens tenant."
   ],
   "expected": "The headset appears in the app with correct data (image, settings), and the personal user is not registered on any Lens tenant.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "personal user",
-    "paired headset",
+    "headset paired",
     "Gmail login",
     "onboarding",
-    "headset data",
     "Lens tenant",
-    "app verification",
-    "headset registration"
+    "no invite",
+    "headset data",
+    "unregistered user"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "d868da9ad3d789a07fc81aa45d718874559428697f3f8a0daef0aef535d29c2d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:23:05.422354Z",
+  "processed_at": "2026-04-24T11:50:53.319926Z",
   "status": "active"
 }
