@@ -7,17 +7,18 @@
   "feature": "Equalizer",
   "scenario": "EQ setting persists after navigating away from and back to Device Settings on Poly Studio Mobile app",
   "steps": [
-    "1. Open Poly Studio Mobile app on the Android device.",
-    "2. Navigate to Home screen and tap on the connected [Device Name].",
-    "3. Go to Device Settings \u2192 Audio Settings \u2192 Equalizer.",
-    "4. Select an EQ value (e.g., Bass, Flat, Bright, or Custom EQ).",
-    "5. Tap the back button or navigate away from the Equalizer screen to return to Device Settings.",
-    "6. Close the Settings screen entirely (e.g., press back or home to exit the app).",
-    "7. Re-open Poly Studio Mobile app and navigate back to Device Settings \u2192 Audio Settings \u2192 Equalizer.",
-    "8. Observe the currently selected EQ value.",
-    "9. Repeat steps 4\u20138 for each of the remaining EQ values (Bass, Flat, Bright, Custom EQ)."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Tap on Audio Settings",
+    "Tap on Equalizer",
+    "Select an EQ value (e.g., Bass)",
+    "Close the Settings screen (tap back or swipe away)",
+    "Navigate back to Device Settings \u2192 Audio Settings \u2192 Equalizer",
+    "Observe the selected EQ value",
+    "Repeat steps 4\u20139 for each remaining EQ value: Flat, Bright, Custom EQ"
   ],
-  "expected": "The previously selected EQ value (Bass, Flat, Bright, or Custom EQ) persists and is shown as selected when returning to the Equalizer settings.",
+  "expected": "The previously selected EQ value persists and is shown as selected when returning to the Equalizer settings screen, for all EQ values (Bass, Flat, Bright, Custom EQ).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -27,11 +28,12 @@
     "device-settings",
     "audio-settings",
     "eq-value-retention",
-    "android-app"
+    "bass",
+    "flat"
   ],
   "source_last_updated": "1761144515",
   "source_hash": "fc29ae97a9d934eae0d210d2d5eb2f4fd5e8ec723a170c2e507e1e11a2f96319",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.002000Z",
+  "processed_at": "2026-04-25T09:32:26.252894Z",
   "status": "active"
 }
