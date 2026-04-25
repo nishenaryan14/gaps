@@ -6,31 +6,22 @@
   "title": "New DFU screen - Translations",
   "feature": "Firmware Updates",
   "scenario": "DFU screen displays correctly with proper translations and no broken text across supported languages",
-  "steps": [
-    "1. Set the phone system language to a supported language (e.g., English, French, German, Japanese, etc.).",
-    "2. Launch the Poly Studio Mobile app.",
-    "3. Ensure a Bluetooth audio device (e.g., Poly Voyager Focus 2) is connected and a firmware update is available for that device.",
-    "4. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
-    "5. Locate and tap the \"Firmware Update\" or \"DFU\" option to open the new DFU screen.",
-    "6. Observe all text elements on the DFU screen, including title, description, update progress indicators, buttons (e.g., \"Update\", \"Cancel\"), and any status messages.",
-    "7. Verify that all text is fully visible (not truncated or cut off), properly translated, and contains no broken words, overlapping elements, or missing characters."
-  ],
-  "expected": "All text on the DFU screen is fully visible, correctly translated into the selected language, with no broken words, truncation, overlapping, or missing characters.",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-screen",
     "firmware-update",
-    "poly-studio-mobile",
     "localization",
+    "translation-verification",
     "text-rendering",
-    "poly-voyager-focus-2",
-    "ui-translation",
-    "device-settings"
+    "language-support",
+    "ui-display"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "15e112699f208f9ce0ab0c32dcd2b8490fea15e7a400a242089f29a92a0d73a5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.033759Z",
+  "processed_at": "2026-04-25T09:32:26.292827Z",
   "status": "active"
 }
