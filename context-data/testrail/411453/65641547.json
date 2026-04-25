@@ -14,23 +14,23 @@
     "Ensure ANC Mode is set to Off",
     "Ensure Transparency Mode is set to Off",
     "Turn on Transparency Mode",
-    "Observe the Transparency Mode sub-setting"
+    "Observe the Transparency Mode sub-setting that is selected"
   ],
-  "expected": "Transparency Mode defaults to the \"Environment\" sub-setting, and ANC Mode remains disabled (Off).",
+  "expected": "Transparency Mode turns on and defaults to the \"Environment\" sub-setting. ANC Mode remains disabled (Off).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "transparency-mode",
     "environment-sub-setting",
-    "anc-disabled",
+    "anc-off",
     "poly-studio-mobile",
     "audio-settings",
     "device-settings",
-    "anc-off"
+    "transparency-default"
   ],
   "source_last_updated": "1761047460",
   "source_hash": "713608431113117f7b51d7b7bc04c1b2837e94557a953db97f06ff290239379a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.817216Z",
+  "processed_at": "2026-04-25T07:55:31.905253Z",
   "status": "active"
 }
