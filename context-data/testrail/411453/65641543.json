@@ -7,31 +7,29 @@
   "feature": "ANC",
   "scenario": "Transparency Mode sub-setting (Environment/Speech) selection does not persist after closing and reopening the ANC tab in Device Settings",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Tap on ANC",
-    "Select Transparency Mode",
-    "Choose either Environment or Speech mode",
-    "Close the ANC tab by tapping the back arrow or swiping back",
-    "Reopen the ANC tab by tapping ANC again in Device Settings"
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
+    "3. Tap on ANC to open the ANC settings screen.",
+    "4. Under Transparency Mode, select either 'Environment' or 'Speech'.",
+    "5. Close the ANC tab by navigating back to Device Settings or Home.",
+    "6. Reopen the ANC tab by tapping on ANC in Device Settings.",
+    "7. Observe the Transparency Mode value displayed."
   ],
-  "expected": "The Transparency Mode value (Environment/Speech) selected earlier should persist and be displayed as the current mode after reopening the ANC tab.",
+  "expected": "The Transparency Mode value (Environment or Speech) selected in step 4 should remain unchanged and still be displayed after reopening the ANC tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "transparency-mode",
     "environment-sub-setting",
     "speech-sub-setting",
-    "anc-tab",
+    "anc-settings",
     "device-settings",
     "poly-studio-mobile",
-    "persistence",
-    "anc"
+    "setting-persistence"
   ],
   "source_last_updated": "1761055511",
   "source_hash": "7f491405d721713a3dcca0965365fcc13dc007735690d525df1cc01ec858785d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.983549Z",
+  "processed_at": "2026-04-25T09:32:26.238255Z",
   "status": "active"
 }
