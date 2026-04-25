@@ -9,27 +9,27 @@
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
     "2. Ensure no Poly Bluetooth audio device is currently connected to the phone.",
-    "3. Observe the Home screen of the app.",
-    "4. Locate and tap on the 'Supported Devices' list option.",
-    "5. Verify that the list displays all supported Poly devices.",
-    "6. Tap on any device listed under the 'User Guides' section.",
-    "7. Observe the user guide that opens for that device."
+    "3. On the Home screen, locate and tap the 'Supported Devices' option.",
+    "4. Observe the list of supported Poly devices displayed.",
+    "5. Tap on any device name listed under the 'User Guides' section.",
+    "6. Verify that the correct user guide (PDF or web page) for that specific device is displayed.",
+    "7. Repeat steps 5-6 for each device listed in the Supported Devices list."
   ],
-  "expected": "The Supported Devices list shows all supported Poly devices. Tapping on a device under User Guides opens the correct user guide for that specific device.",
+  "expected": "The Supported Devices list shows all supported Poly devices. Tapping on each device under User Guides displays the correct user guide for that specific device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "supported-devices",
+    "poly-studio-mobile",
     "user-guides",
-    "home-screen",
-    "android",
     "device-list",
-    "no-device-connected"
+    "android-app",
+    "bluetooth-disconnected",
+    "product-documentation"
   ],
   "source_last_updated": "1763378740",
   "source_hash": "fa78faa921ce2519139911a1c95d6e846d3cbd2b2f419e4b2d805be82d94f6ea",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.912375Z",
+  "processed_at": "2026-04-25T09:32:26.135198Z",
   "status": "active"
 }
