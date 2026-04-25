@@ -4,31 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, dialog",
-  "feature": "Notifications - Onboarding",
-  "scenario": "When a user denies notification permission during onboarding and later attempts to enable the Notifications toggle in App Settings, a dialog instructing them to go to OS settings should appear.",
+  "feature": "Notifications",
+  "scenario": "Notifications toggle in App Settings shows OS redirect dialog when re-enabled after being denied during onboarding",
   "steps": [
-    "1. Start onboarding process.",
-    "2. When prompted for notification permission, do NOT allow notifications.",
+    "1. Launch the Poly Studio Mobile app.",
+    "2. During onboarding, when prompted for Notifications permission, select \"Don't Allow\".",
     "3. Complete the onboarding process.",
-    "4. Navigate to App Settings > General > Notifications.",
-    "5. Tap the 'Notifications' toggle to switch it ON."
+    "4. Navigate to the Home screen.",
+    "5. Tap the menu icon (hamburger) or profile icon to access App Settings.",
+    "6. Go to App Settings > General > Notifications.",
+    "7. Tap the toggle to turn Notifications ON."
   ],
-  "expected": "A dialog appears saying: \"You must go to your OS settings to turn back on Notifications\" with Cancel and Go to Settings buttons.",
+  "expected": "The Notifications toggle should turn ON, or the app should gracefully handle the permission state without showing a confusing dialog.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "notification permission denied",
+    "poly-studio-mobile",
+    "notifications-permission",
+    "app-settings",
     "onboarding",
-    "app settings",
-    "notifications toggle",
-    "OS settings dialog",
-    "permission re-enable",
-    "iOS settings redirect",
-    "notification permission flow"
+    "os-redirect-dialog",
+    "permission-denied",
+    "toggle-behavior",
+    "general-settings"
   ],
   "source_last_updated": "1761229604",
   "source_hash": "cbfecf81e93ce8c88b9d4202366a2076e02ce2597272f3d40c90f7109a0e698a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.317806Z",
+  "processed_at": "2026-04-25T05:37:16.945328Z",
   "status": "active"
 }
