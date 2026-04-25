@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "1 step DFU - User can trigger firmware update for just Charge Case",
   "feature": "Firmware Updates",
-  "scenario": "User can trigger a firmware update for just the Voyager Free 60+ Charge Case without updating the Earbuds via Settings/Update",
+  "scenario": "Firmware update can be triggered for Voyager Free 60+ Charge Case only without updating Earbuds",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Ensure the Voyager Free 60 Earbuds and Charge Case are both powered on and connected to the app.",
-    "3. Verify both devices are running at least firmware version 5039.",
-    "4. Confirm that a firmware update is available for both the Earbuds and the Charge Case.",
-    "5. From the Home screen, navigate to Settings \u2192 Update.",
-    "6. Tap the Update button to view available firmware updates.",
-    "7. Locate the Charge Case update entry and tap its Update button (do not select the Earbuds update).",
-    "8. Wait for the Charge Case firmware update process to complete."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure the Voyager Free 60 Earbuds and Charger Case are connected and both are on firmware version 5039 or higher.",
+    "3. Verify that a firmware update is available for both the Earbuds and the Charger Case.",
+    "4. Navigate to the Home screen, then tap on the connected device name (Voyager Free 60).",
+    "5. Go to Settings \u2192 Update.",
+    "6. Tap the Update button for the Charge Case only (do not select the Earbuds update).",
+    "7. Wait for the Charge Case firmware update to complete."
   ],
-  "expected": "Only the Charge Case DFU completes successfully. The Earbuds remain on the lower firmware version (5039 or earlier) and are not updated.",
+  "expected": "Only the Charge Case (Voyager Free 60 Charger Case) firmware update completes successfully. The Earbuds remain on the lower firmware version (5039 or higher, unchanged).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "voyager-free-60-plus",
-    "charge-case",
     "firmware-update",
-    "settings-update",
+    "voyager-free-60",
+    "charge-case",
     "poly-studio-mobile",
     "selective-update",
-    "case-only-update",
-    "firmware-5039"
+    "earbuds",
+    "settings-update"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "bf70a150655c1584ebeb6892bdac0cf8da448615413c1d35f491a7078ab5dda3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.960746Z",
+  "processed_at": "2026-04-25T08:21:31.037385Z",
   "status": "active"
 }
