@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Software Update - DFU is not available if phone's battery is below 30%",
   "feature": "Firmware Updates",
-  "scenario": "DFU process blocked with low battery pop-up when phone battery is below 30% in Poly Studio Mobile app",
+  "scenario": "DFU is blocked with low battery warning pop-up when phone battery is below 30%",
   "steps": [
     "1. Open the Poly Studio Mobile app on the phone.",
-    "2. Ensure the phone's battery level is below 30%.",
-    "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "4. Locate and tap the DFU (Device Firmware Update) option.",
-    "5. Observe the pop-up message that appears."
+    "2. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
+    "3. Ensure the phone's battery level is below 30%.",
+    "4. In Device Settings, locate and tap on the option for Device Firmware Update (DFU).",
+    "5. Observe the pop-up that appears on the screen.",
+    "6. Tap the OK button on the pop-up to dismiss it."
   ],
-  "expected": "A pop-up appears stating the device battery doesn't have enough power to update the software, advising the user to fully charge the device or plug it into a power source. Tapping OK returns the user to the Settings page without starting the DFU process.",
+  "expected": "The DFU process should not start. A pop-up appears stating the device battery doesn't have enough power to update, advising the user to fully charge or plug into a power source. Tapping OK dismisses the pop-up and returns the user to Settings without starting the update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu-blocked",
-    "low-battery-pop-up",
-    "poly-studio-mobile",
+    "dfu",
     "device-firmware-update",
-    "battery-below-30-percent",
-    "device-settings",
-    "firmware-update-blocked"
+    "low-battery-warning",
+    "poly-studio-mobile",
+    "battery-persistence",
+    "firmware-update-blocked",
+    "pop-up"
   ],
   "source_last_updated": "1763043814",
   "source_hash": "70ff4f5c75187970cccae340c91f1da936fd2adccf89799a583c575b0bab66a9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.024595Z",
+  "processed_at": "2026-04-25T09:32:26.280769Z",
   "status": "active"
 }
