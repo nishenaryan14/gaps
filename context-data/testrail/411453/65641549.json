@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "ANC - changes are present after closing/opening the Settings screen",
   "feature": "ANC",
-  "scenario": "ANC level persists after closing and reopening the Settings screen in Poly Studio Mobile app",
+  "scenario": "ANC level persists after closing and reopening the Settings screen",
   "steps": [
-    "1. Open the Poly Studio Mobile app with the Bluetooth audio device connected.",
+    "1. Open the Poly Studio Mobile app with a connected Poly Bluetooth audio device.",
     "2. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 ANC.",
     "3. Set ANC to a specific value (e.g., High, Low, or a custom level).",
-    "4. Close the Settings screen by pressing the back button or navigating away.",
-    "5. Reopen the Settings screen via Home \u2192 [Device Name] \u2192 Audio Settings \u2192 ANC.",
+    "4. Exit the Settings screen by pressing the back button or navigating to the Home screen.",
+    "5. Reopen the Settings screen by navigating to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 ANC.",
     "6. Observe the ANC setting value."
   ],
-  "expected": "The ANC setting should remain at the value previously set in step 3.",
+  "expected": "The ANC setting should remain unchanged from the value set in step 3.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "anc",
     "anc-level-persistence",
-    "poly-studio-mobile",
     "audio-settings",
+    "poly-studio-mobile",
     "settings-persistence",
-    "anc-setting-retention"
+    "noise-cancellation",
+    "anc-level-retention"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "6180721fb1c2bb8000319ebca0d008becfd31613a476c4230f9cd1facfbffded",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.821238Z",
+  "processed_at": "2026-04-25T07:55:31.908286Z",
   "status": "active"
 }
