@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Fit test - 2nd screen \"X\" button",
   "feature": "Device Management",
-  "scenario": "Fit Test close button on second screen does not return user to Device Settings",
+  "scenario": "Fit Test results screen closes and returns to Device Settings when tapping the X button",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Tap on Fit Test to start the fit test flow",
-    "On the second screen of the Fit Test flow, tap the 'X' (close) button"
+    "Tap on the connected [Device Name] to open Device Settings",
+    "Locate and tap on Fit Test option",
+    "Complete the Fit Test process to reach the Fit Test results screen",
+    "Tap the 'X' button on the Fit Test results screen"
   ],
-  "expected": "The Fit Test screen closes and the user is returned to Device Settings.",
+  "expected": "The Fit Test results screen closes and the user is returned to Device Settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "close-button",
+    "fit-test-results",
     "device-settings",
     "poly-studio-mobile",
-    "navigation",
-    "ui-flow",
-    "fit-test-flow"
+    "x-button",
+    "ui-navigation",
+    "fit-test-dismissal"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "94ec9ef2865711ebb54b5602c934bbb7fb9811f1c62401a14d7aff32342c55ba",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.981019Z",
+  "processed_at": "2026-04-25T09:32:26.230953Z",
   "status": "active"
 }
