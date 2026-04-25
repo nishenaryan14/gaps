@@ -4,30 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "Language Change - Earbuds/Headsets are up to date and smart Charge Chase/Stand is out of date",
-  "feature": "Language Change / DFU",
-  "scenario": "After completing a language change DFU on a multi-component device, the Smart Charge Case/Stand shows as out of date while the Earbuds/Headset show as up to date.",
-  "steps": [
-    "1. Have a device with multiple components (Earbuds/Headset and Smart Charge Case/Stand) that is not on the latest firmware.",
-    "2. Initiate a language change DFU (Device Firmware Update) on the device.",
-    "3. Allow the DFU process to complete successfully.",
-    "4. After completion, check the firmware status of the Earbuds/Headsets.",
-    "5. Check the firmware status of the Smart Charge Case/Stand."
-  ],
-  "expected": "All components (Earbuds/Headsets and Smart Charge Case/Stand) should be updated to the latest firmware version after the language change DFU completes successfully.",
+  "feature": "Firmware Updates",
+  "scenario": "Language change DFU fails to update smart charge case/stand firmware on multi-component devices with outdated firmware",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "language change DFU",
-    "multi-component device",
-    "firmware status mismatch",
-    "Smart Charge Case/Stand out of date",
-    "Earbuds/Headset up to date",
-    "Device Firmware Update",
-    "firmware version discrepancy"
+    "language-change-dfu",
+    "smart-charge-case",
+    "stand-firmware",
+    "multi-component-devices",
+    "outdated-firmware",
+    "firmware-update-failure",
+    "poly-firmware-update"
   ],
   "source_last_updated": "1769437410",
   "source_hash": "500bf9dd7d8b6ee065c9f76835b0142fb3a768359a4459243db9dcee88006fba",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.226428Z",
+  "processed_at": "2026-04-25T05:37:16.807948Z",
   "status": "active"
 }
