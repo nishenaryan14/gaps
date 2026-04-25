@@ -5,34 +5,35 @@
   "project": "411453",
   "title": "Rename device - Rename with no characters [New]",
   "feature": "Device Management",
-  "scenario": "Done button remains enabled when all characters are cleared while renaming a device in Device Settings > General",
+  "scenario": "Clearing all characters in the rename field on Device Settings > General does not disable the Done button, and Cancel does not revert to the old name",
   "steps": [
     "Open Poly Studio Mobile app",
     "Go to Home screen",
     "Tap on the connected device name to open Device Settings",
-    "Navigate to General",
-    "Tap on the device name field to edit it",
-    "Clear all characters from the name field",
+    "Tap on General",
+    "Tap on the device name field to enter rename mode",
+    "Clear all characters from the device name field",
     "Observe the Done button state",
-    "Tap Cancel",
-    "Observe the displayed device name"
+    "Press Cancel to exit rename mode",
+    "Tap on the device name field again to re-enter rename mode",
+    "Observe the device name displayed"
   ],
-  "expected": "When all characters are cleared, the Done button should be disabled (grayed out). After pressing Cancel, the device name should revert to the old name and be displayed correctly.",
+  "expected": "The Done button should be disabled when all characters are cleared. Pressing Cancel should revert the name to the old name without saving. Re-opening the rename field should still show the old name.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-settings",
-    "general",
-    "device-rename",
+    "rename-mode",
     "done-button",
-    "button-state",
-    "text-field-clearing",
-    "ui-behavior"
+    "cancel-button",
+    "device-name-field",
+    "ui-behavior",
+    "text-input-validation"
   ],
   "source_last_updated": "1772624712",
   "source_hash": "8e97f5d68d8828460dac1cb09ab3523f9a1c33b0349eaa0abd3f2a35843fcb4e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.797332Z",
+  "processed_at": "2026-04-25T07:55:31.881790Z",
   "status": "active"
 }
