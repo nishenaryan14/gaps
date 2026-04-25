@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Fit test - All screens are properly translated to different languages",
   "feature": "App Settings",
-  "scenario": "Fit Test screens within Tutorial section display untranslated or improperly localized text when phone language is changed",
+  "scenario": "Fit Test screens in Tutorial section do not display properly translated text when phone language is changed",
   "steps": [],
   "expected": "",
   "coverage": [],
@@ -15,12 +15,12 @@
     "tutorial-section",
     "localization",
     "language-change",
-    "ui-text",
-    "poly-bluetooth"
+    "ui-text-display",
+    "poly-bluetooth-devices"
   ],
   "source_last_updated": "1760956350",
   "source_hash": "b7462e2a94ebccee9fa41b7881a305966375236f07af9e29bb68ee5f825d1cb8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.988638Z",
+  "processed_at": "2026-04-25T09:32:26.240265Z",
   "status": "active"
 }
