@@ -5,21 +5,19 @@
   "project": "UNKNOWN",
   "summary": "ANDROID | Falcon Grey | EQ settings not saved for Custom",
   "feature": "Equalizer",
-  "scenario": "Custom EQ settings are not persisted after saving and reopening the EQ settings screen in Poly Studio Mobile app",
-  "description_clean": "Custom EQ settings are not saved after clicking Save. When reopening the EQ settings, the previously saved custom adjustments are lost.",
+  "scenario": "Custom EQ settings are not persisted after saving and reopening the EQ settings page on Poly Studio Mobile app",
+  "description_clean": "Custom EQ settings are not saved after clicking Save and reopening the EQ settings page. Steps: connect device, go to EQ settings, make changes, click Save, reopen EQ settings \u2014 settings are lost. Expected: settings persist after saving.",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Select Audio Settings",
-    "Tap on Equalizer",
-    "Adjust any frequency band sliders (e.g., Bass, Mid, Treble)",
-    "Tap the Save button to save the custom EQ preset",
-    "Navigate back to Home screen",
-    "Re-open the Equalizer settings via Device Settings \u2192 Audio Settings \u2192 Equalizer"
+    "1. Launch Poly Studio Mobile app on Android.",
+    "2. Connect a supported Poly Bluetooth audio device.",
+    "3. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "4. Make custom changes to the EQ bands (e.g., adjust sliders for bass, mid, treble).",
+    "5. Tap the Save button to save the custom EQ settings.",
+    "6. Exit the Equalizer settings page (e.g., tap Back or navigate away).",
+    "7. Reopen the Equalizer settings page via Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer."
   ],
-  "expected": "The previously saved custom EQ adjustments should be displayed and applied.",
-  "actual": "The previously saved custom EQ adjustments are lost and the Equalizer shows default/flat settings.",
+  "expected": "The custom EQ settings (slider positions) should persist and appear exactly as saved in step 5.",
+  "actual": "The custom EQ settings are lost \u2014 sliders return to default positions or the previously saved custom profile is not shown.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -28,15 +26,15 @@
   "keywords": [
     "poly-studio-mobile",
     "equalizer",
-    "custom-eq-preset",
+    "custom-eq",
     "eq-persistence",
     "audio-settings",
-    "device-settings",
-    "eq-save"
+    "eq-save",
+    "eq-bands"
   ],
   "source_last_updated": "2026-04-23T07:54:54.000+0000",
   "source_hash": "3bb3a0a0fb141045a6fb07af45a2038d0c1ad94d044a642c004cb21f39ad88f1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.254038Z",
+  "processed_at": "2026-04-25T09:32:25.083490Z",
   "status": "active"
 }
