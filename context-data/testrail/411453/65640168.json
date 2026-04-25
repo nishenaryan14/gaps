@@ -5,23 +5,23 @@
   "project": "411453",
   "title": "Analytics - Login",
   "feature": "App Settings",
-  "scenario": "Firebase Login event page fails to display default elements or update event counts after login/logout attempts in Poly Studio Mobile app",
+  "scenario": "Firebase Login and Logout events are tracked with default elements and event counts update after a delay in Poly Studio Mobile app",
   "steps": [],
   "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "firebase-login",
-    "event-counts",
-    "login-logout",
-    "ui-display-failure",
-    "authentication",
-    "analytics-events"
+    "firebase-analytics",
+    "login-event",
+    "logout-event",
+    "event-tracking",
+    "event-count-delay",
+    "analytics-persistence"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "2dc95871af4d576d93346d19b7f37bf56b7aa1c415d0f7695da3b6b005206028",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.068790Z",
+  "processed_at": "2026-04-25T09:32:26.326117Z",
   "status": "active"
 }
