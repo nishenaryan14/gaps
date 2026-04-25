@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - Unsupported device",
   "feature": "Device Management",
-  "scenario": "Unsupported device (e.g., BB Fit, Sync 60) appears in the Poly Studio Mobile app home screen device list after pairing",
+  "scenario": "Unsupported paired devices (e.g., BB Fit, Sync60) are incorrectly displayed in the Poly Studio Mobile app home screen device list",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Pair and connect an unsupported device (e.g., BB Fit, Sync 60) via Bluetooth.",
-    "3. Observe the Home screen of the Poly Studio Mobile app.",
-    "4. Check the device list displayed on the Home screen."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Pair an unsupported Bluetooth audio device (e.g., BB Fit, Sync60) with the Android device via system Bluetooth settings.",
+    "3. Ensure the unsupported device is connected to the Android device.",
+    "4. Return to the Poly Studio Mobile app Home screen.",
+    "5. Observe the device list displayed on the Home screen."
   ],
-  "expected": "The unsupported device (e.g., BB Fit, Sync 60) should NOT appear in the device list on the app's Home screen, as the app does not support managing that device.",
+  "expected": "The unsupported device (e.g., BB Fit, Sync60) should NOT appear in the device list on the Home screen, as it is not supported by the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "unsupported-device",
-    "device-list",
-    "home-screen",
+    "poly-studio-mobile-app",
+    "home-screen-device-list",
+    "unsupported-paired-devices",
     "bluetooth-pairing",
+    "device-list-filtering",
     "bb-fit",
-    "sync-60",
-    "device-filtering"
+    "sync60",
+    "android"
   ],
   "source_last_updated": "1761837100",
   "source_hash": "a72aa3be5070c15755d5c5bcda9d936e6d0390612062963581fda73f3be52fc3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.915908Z",
+  "processed_at": "2026-04-25T09:32:26.143814Z",
   "status": "active"
 }
