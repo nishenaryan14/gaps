@@ -5,20 +5,19 @@
   "project": "411453",
   "title": "Headset version is changed",
   "feature": "Firmware Update",
-  "scenario": "Firmware update version not reflected on Lens tenant inventory, Device profile, and Device user pages after DFU via mobile app",
+  "scenario": "Firmware version not updated on Lens tenant inventory, Device profile, and Device user pages after DFU via mobile app",
   "steps": [
     "1. Open the Poly Studio Mobile app on the mobile device.",
     "2. Navigate to the Home screen and ensure the headset is connected and registered to a Lens tenant.",
     "3. Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
     "4. Initiate a firmware update (DFU) on the headset via the app.",
     "5. Wait for the firmware update to complete successfully.",
-    "6. Note the new firmware version displayed on the headset's Device Settings page in the app.",
-    "7. Log in to the Lens tenant's web portal.",
-    "8. Navigate to the Inventory page and verify the headset's firmware version matches the version noted in step 6.",
-    "9. Navigate to the Device profile page for the headset and verify the firmware version is correctly reflected.",
-    "10. Navigate to the Device user / Mobile user page for the associated user and verify the firmware version is correctly reflected."
+    "6. Log in to the Lens tenant admin portal.",
+    "7. Navigate to the Inventory page and verify the headset's firmware version.",
+    "8. Navigate to the Device profile page for the same headset and verify the firmware version.",
+    "9. Navigate to the Device user / Mobile user page and verify the firmware version."
   ],
-  "expected": "The new headset firmware version is correctly displayed on the Lens tenant's Inventory page, Device profile page, and Device user/Mobile user page, matching the version shown in the Poly Studio Mobile app after the DFU.",
+  "expected": "The new headset firmware version is correctly reflected on the Lens tenant Inventory page, Device profile page, and Device user/Mobile user page after the DFU completes.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -26,7 +25,7 @@
     "dfu",
     "poly-studio-mobile",
     "lens-tenant",
-    "device-inventory",
+    "inventory-page",
     "device-profile",
     "device-user",
     "firmware-version"
@@ -34,6 +33,6 @@
   "source_last_updated": "1760949362",
   "source_hash": "cc25b1d3048d11432b546d12ee8dac9aa0b0980cfbabbb8319a4d4d654e8a84a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.060609Z",
+  "processed_at": "2026-04-25T09:32:26.321436Z",
   "status": "active"
 }
