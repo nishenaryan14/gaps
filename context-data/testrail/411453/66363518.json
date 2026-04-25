@@ -4,27 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Flamingo/Spoonbill - Software update for standalone headset",
-  "feature": "Flamingo/Spoonbill - Software Update",
-  "scenario": "Standalone headset (not paired with charge case) successfully completes DFU software update via the app when tapping the update button on the device home screen.",
+  "feature": "Firmware Update",
+  "scenario": "DFU (software update) completes successfully on a standalone headset (not paired with charge case) via Poly Studio Mobile app",
   "steps": [
-    "1. Tap the update button on device home screen.",
-    "2. Tap the Update Button and complete the DFU process."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. On the Home screen, locate your standalone headset (not paired with a charge case) and tap the update button.",
+    "3. Verify that the Device Settings screen opens with the Software Update tab expanded and only one \"Update\" button visible.",
+    "4. Tap the \"Update\" button to initiate the DFU process.",
+    "5. Wait for the DFU process to complete on the standalone headset."
   ],
-  "expected": "Device settings opens with Software Update tab expanded, only one update button is shown. DFU process for standalone headset can be properly completed.",
+  "expected": "The DFU process for the standalone headset completes successfully.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "standalone headset",
-    "DFU software update",
-    "app update",
-    "device home screen",
-    "update button",
-    "firmware update",
-    "over-the-air update"
+    "dfu",
+    "software-update",
+    "standalone-headset",
+    "poly-studio-mobile",
+    "firmware-update",
+    "device-settings",
+    "android"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "783431837a2b217fa64a8f1d883d71aa30460ac2cd11202b0dc5ee8d7f67ff8f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.337160Z",
+  "processed_at": "2026-04-25T05:37:16.976724Z",
   "status": "active"
 }
