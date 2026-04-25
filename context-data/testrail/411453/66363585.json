@@ -5,23 +5,32 @@
   "project": "411453",
   "title": "DFU - Software Update Page - Disconnecting/Connecting earbuds to check DFU pop up",
   "feature": "Firmware Updates",
-  "scenario": "DFU interrupted by earbud disconnect/reconnect shows \"Update currently not available, please try back later\" pop-up on Software Update page",
-  "steps": [],
-  "expected": "",
+  "scenario": "DFU check fails with non-dismissable pop-up when one earbud is disconnected during firmware update on Software Update page",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen and tap on your connected earbud device name.",
+    "3. Go to Device Settings and select Software Update.",
+    "4. Initiate a Device Firmware Update (DFU) check by tapping 'Check for Update' or similar.",
+    "5. While the DFU check is in progress, place one earbud into the charging case to disconnect it.",
+    "6. Observe the pop-up that appears on screen.",
+    "7. Reconnect the earbud by removing it from the charging case.",
+    "8. Observe whether the pop-up dismisses automatically or remains on screen."
+  ],
+  "expected": "A pop-up appears stating 'Update currently not available, please try back later'. Reconnecting the earbud does NOT dismiss the pop-up; the user must tap 'OK' to return to the Software Update page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu-interrupted",
-    "earbud-disconnect-reconnect",
-    "update-currently-not-available",
-    "software-update-page",
+    "dfu-check-failure",
+    "non-dismissable-pop-up",
+    "earbud-disconnected",
     "firmware-update",
-    "bluetooth-disconnect",
-    "poly-bluetooth-earbuds"
+    "software-update-page",
+    "poly-studio-mobile",
+    "charging-case"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "7c378dfdf43addfd216ac367341a7f6b57b373fcc21b552fe84015af0e4502c3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.987295Z",
+  "processed_at": "2026-04-25T07:55:32.193722Z",
   "status": "active"
 }
