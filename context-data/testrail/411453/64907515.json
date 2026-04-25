@@ -9,25 +9,25 @@
   "steps": [
     "1. Open the Poly Studio Mobile app and log in with Account A (linked to Tenant A).",
     "2. Navigate to Support > App and verify that Tenant A info is displayed.",
-    "3. Log out of Account A.",
-    "4. Log in with a different account that is also linked to Tenant A.",
-    "5. Navigate to Support > App and observe the tenant information displayed."
+    "3. Log out of Account A from the Account screen.",
+    "4. Log in with a different Account (Account B) that is also linked to Tenant A.",
+    "5. Navigate to Support > App again and observe the tenant information displayed."
   ],
-  "expected": "Tenant A info is correctly retained and displayed in Support > App after switching to a different account linked to the same Tenant.",
+  "expected": "Tenant A info is correctly retained and displayed in Support > App after switching from Account A to Account B (both linked to the same Tenant A).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "tenant-info",
     "account-switching",
-    "support-data-retention",
-    "app-support-screen",
-    "multi-account-same-tenant",
-    "login-persistence"
+    "support-data",
+    "account-persistence",
+    "multi-account",
+    "app-support-screen"
   ],
   "source_last_updated": "1759752637",
   "source_hash": "41c8e1e7314eb6309cc28d4aa9ec3af20fb9e0663d0505f840c37750068d5a97",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.783660Z",
+  "processed_at": "2026-04-25T07:55:31.857710Z",
   "status": "active"
 }
