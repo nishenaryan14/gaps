@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Charge case outside screen/third screen, left zoom in/out",
   "feature": "App Settings",
-  "scenario": "Charge case outside screen: tapping the left circle button zooms in to show new text, and tapping again zooms out to the original view",
+  "scenario": "Quick Setup Guide third screen zoom toggles when tapping left circle button on charge case outside view",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Home screen.",
-    "3. Locate the charge case outside screen (third screen) on the device UI.",
-    "4. Tap the left circle button on the charge case outside screen.",
-    "5. Observe the screen for zoom-in behavior and any new text that appears.",
-    "6. Tap the left circle button again.",
-    "7. Observe the screen for zoom-out behavior returning to the original charge case outside screen."
+    "Open the Poly Studio Mobile app.",
+    "Navigate to the Quick Setup Guide (QSG) from the Home screen.",
+    "Swipe or navigate to the third screen of the QSG (showing the charge case outside view).",
+    "Click the left circle button on the third screen.",
+    "Observe the screen behavior.",
+    "Click the left circle button again."
   ],
-  "expected": "Tapping the left circle button zooms in, showing new text. Tapping the left circle button again zooms out, returning to the original charge case outside screen.",
+  "expected": "Clicking the left circle button zooms in and displays new text. Clicking the circle button again zooms out to the original screen showing the charge case outside view.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "charge-case-outside-screen",
-    "left-circle-button",
-    "zoom-in",
-    "zoom-out",
     "poly-studio-mobile",
-    "ui-navigation",
-    "screen-interaction"
+    "quick-setup-guide",
+    "charge-case-outside-view",
+    "left-circle-button",
+    "zoom-toggle",
+    "third-screen",
+    "app-navigation"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "67bf9214da83b3f8598a19052bbd78741d53994963797cc70394debb25d257e9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.010610Z",
+  "processed_at": "2026-04-25T09:32:26.267493Z",
   "status": "active"
 }
