@@ -5,31 +5,23 @@
   "project": "411453",
   "title": "Notifications -  Low Battery OFF",
   "feature": "Notifications",
-  "scenario": "Verify that disabling the \"Low Battery\" notification in Poly Lens settings prevents the \"Device has a low battery\" alert from appearing when pairing a low-battery device and cycling power.",
-  "steps": [
-    "1. Open Poly Lens Menu.",
-    "2. Navigate to General > Notifications & Device Alerts.",
-    "3. Turn off the 'Low Battery' notification.",
-    "4. Pair a device with low battery (below 5%).",
-    "5. Turn off the device.",
-    "6. Put the app in the background.",
-    "7. Turn the device back on."
-  ],
-  "expected": "The \"Device has a low battery\" notification should not appear.",
+  "scenario": "Low Battery notification does not appear when disabled in Poly Lens Menu > General > Notifications & Device Alerts after pairing a device with battery below 5% and power cycling",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Poly Lens",
-    "Low Battery notification",
-    "disable notification",
-    "device alerts",
-    "low battery pairing",
-    "power cycle",
-    "notification settings"
+    "low-battery-notification",
+    "poly-lens",
+    "notifications-and-device-alerts",
+    "battery-persistence",
+    "power-cycling",
+    "bluetooth-pairing",
+    "general-settings"
   ],
   "source_last_updated": "1761226813",
   "source_hash": "2a25554afd6231a94fc7930de92bab91faf0238d1ccd0219b5405508a1e0f254",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.310104Z",
+  "processed_at": "2026-04-25T05:37:16.945328Z",
   "status": "active"
 }
