@@ -7,13 +7,14 @@
   "feature": "App Settings",
   "scenario": "Find My Device X button does not stop tone and return to map screen after replaying tone in Poly Studio Mobile app",
   "steps": [
-    "1. Open Poly Studio Mobile app",
-    "2. Navigate to Home \u2192 Device Settings \u2192 [Device Name]",
-    "3. Tap on 'Find My Device'",
-    "4. Tap the Play button to play a tone",
-    "5. Tap 'OK, Got It' to dismiss the prompt",
-    "6. Tap the Play button again to replay the tone",
-    "7. While the tone is playing, tap the 'X' button"
+    "Open Poly Studio Mobile app",
+    "Go to Home screen",
+    "Tap Device Settings for the connected Poly device",
+    "Tap Find My Device",
+    "Tap Play button to play a tone",
+    "Tap 'OK, Got It' to dismiss the prompt",
+    "Tap Play button again to replay the tone",
+    "While tone is playing, tap the X (Close) button"
   ],
   "expected": "The tone stops playing and the user is returned to the Find My Device map screen.",
   "coverage": [],
@@ -25,11 +26,12 @@
     "x-button",
     "map-screen",
     "device-settings",
-    "tone-playback"
+    "tone-playback",
+    "ui-navigation"
   ],
   "source_last_updated": "1769428234",
   "source_hash": "60d4318b9d9f9c415e79935736c6a0f6a6139b285a68f12472df355744fe620c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.944936Z",
+  "processed_at": "2026-04-25T09:32:26.175392Z",
   "status": "active"
 }
