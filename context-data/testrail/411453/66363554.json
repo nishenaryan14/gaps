@@ -5,20 +5,20 @@
   "project": "411453",
   "title": "EB has update, CC on the latest -  Update button, Release notes and Poly Lens links are available",
   "feature": "Firmware Updates",
-  "scenario": "Firmware update button on device home screen navigates to Device Settings with Software Update tab expanded, showing earbuds update with badge and charge case update info requiring Poly Lens Desktop",
+  "scenario": "Firmware update button on device home screen navigates to Device Settings with Software Update tab expanded, showing earbuds update, badge, and charge case info with links to Release Notes and Poly Lens App",
   "steps": [
-    "1. Open Poly Studio Mobile app and navigate to the Home screen.",
-    "2. Ensure the earbuds have a firmware update available and the charge case is on the latest version.",
-    "3. Observe the Home screen \u2014 verify that an Update button is displayed for the earbuds.",
-    "4. Tap the Update button.",
-    "5. Verify that the app navigates to Device Settings \u2192 [Device Name] \u2192 Software Update tab, and that the tab is expanded.",
-    "6. Check that a \"1\" badge is shown on the Software Update settings tab.",
-    "7. Verify that the Update button is shown only for the earbuds (not for the charge case).",
-    "8. Verify that a release notes link is displayed for the earbuds firmware update.",
-    "9. Verify that a Poly Lens App link is displayed for the charge case.",
-    "10. Verify that informational text is shown indicating that the charge case update requires Poly Lens Desktop."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. On the Home screen, ensure the earbuds have a firmware update available and the charge case is on the latest firmware version.",
+    "3. Observe the Home screen for the presence of an 'Update' button.",
+    "4. Tap the 'Update' button.",
+    "5. Observe that the app navigates to Device Settings with the Software Update tab expanded.",
+    "6. Verify that the 'Update' button is only available for the earbuds (not for the charge case).",
+    "7. Check that a '1' badge is shown on the Software Update settings tab.",
+    "8. Verify that information about needing Poly Lens Desktop for the charge case is displayed.",
+    "9. Check that a link to Release Notes (for the earbuds) is present.",
+    "10. Check that a link to the Poly Lens App (for the charge case) is present."
   ],
-  "expected": "The Update button appears on the Home screen for the earbuds only. Tapping it navigates to Device Settings with the Software Update tab expanded and a \"1\" badge on the tab. Release notes link for earbuds and Poly Lens App link for the charge case are shown, along with info that the charge case update requires Poly Lens Desktop.",
+  "expected": "The 'Update' button is displayed on the Home screen when the earbuds have a firmware update available and the charge case is on the latest version. Tapping it navigates to Device Settings with the Software Update tab expanded. The 'Update' button is only available for the earbuds, a '1' badge is shown on the settings tab, info about needing Poly Lens Desktop for the charge case is displayed, and links to Release Notes (for earbuds) and Poly Lens App (for charge case) are present.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -26,14 +26,14 @@
     "software-update-tab",
     "poly-studio-mobile",
     "device-settings",
-    "earbuds-update-badge",
-    "charge-case-update",
-    "poly-lens-desktop",
-    "release-notes"
+    "earbuds-update",
+    "charge-case-info",
+    "release-notes",
+    "poly-lens-app"
   ],
   "source_last_updated": "1762331320",
   "source_hash": "021962d17b1dc51b5676b08f71c5102d68bd44f8f17ad220aad7e34115ea26b0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.091233Z",
+  "processed_at": "2026-04-25T09:32:26.353052Z",
   "status": "active"
 }
