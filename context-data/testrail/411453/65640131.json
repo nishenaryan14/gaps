@@ -4,27 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Policy: Policy applied - Logout - Settings stay locked",
-  "feature": "Policy",
-  "scenario": "Policy-applied settings remain locked after user logs out from the tenant",
+  "feature": "App Settings",
+  "scenario": "Policy-locked settings remain inaccessible after user logs out of tenant in Poly Studio Mobile app",
   "steps": [
-    "Apply a policy to a device.",
-    "Log out the user from the tenant."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Log in to a tenant account that has a policy applied to a connected Poly Bluetooth audio device.",
+    "3. Navigate to the Home screen and select the connected device to open Device Settings.",
+    "4. Verify that certain settings (e.g., ANC, Transparency Mode, Equalizer) are locked/grayed out as per the applied policy.",
+    "5. Log out of the tenant account from the Account screen.",
+    "6. After logging out, return to the Home screen and select the same device to open Device Settings.",
+    "7. Observe the previously locked settings (e.g., ANC, Transparency Mode, Equalizer)."
   ],
-  "expected": "The settings affected by the policy should remain locked.",
+  "expected": "After logging out of the tenant, settings that were locked by the policy should become unlocked and accessible in the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "policy-applied settings",
-    "locked settings",
-    "user logout",
-    "tenant logout",
-    "device policy",
-    "persistent policy",
-    "policy enforcement"
+    "poly-studio-mobile",
+    "policy-locked-settings",
+    "tenant-logout",
+    "device-settings",
+    "anc",
+    "transparency-mode",
+    "equalizer",
+    "bluetooth-audio"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "d2d70e016842a1485406e1fda39825a7ba85d60ab721b6263717eba42c5ad6ad",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.314655Z",
+  "processed_at": "2026-04-25T05:37:16.948871Z",
   "status": "active"
 }
