@@ -5,27 +5,29 @@
   "project": "411453",
   "title": "[IOS]Analytics - Feedback Opened",
   "feature": "App Settings",
-  "scenario": "Feedback form (Mopinion) opened event logged as \"feedback_opened\" in Firebase within the Poly Studio Mobile app",
+  "scenario": "Analytics events logged when opening Feedback form (Mopinion) in Poly Studio Mobile app",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
     "2. Navigate to the Home screen.",
-    "3. Open the Feedback form (Mopinion) from within the app."
+    "3. Open the app menu (e.g., hamburger menu or overflow menu).",
+    "4. Select 'Feedback' or 'Send Feedback' to open the Mopinion feedback form.",
+    "5. Observe the analytics/logging data that is captured upon opening the form."
   ],
-  "expected": "The Firebase event \"feedback_opened\" is logged when the Feedback form is opened. Event counts update in Firebase after a few hours.",
+  "expected": "The following default analytics elements are logged when the Feedback form is opened: graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment. Event counts update after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
+    "analytics-events",
+    "mopinion-feedback",
     "feedback-form",
-    "mopinion",
-    "feedback-opened",
-    "firebase-event",
-    "android-app",
-    "in-app-feedback"
+    "app-menu",
+    "android",
+    "telemetry-logging"
   ],
   "source_last_updated": "1764327314",
   "source_hash": "d0904e84aa879f38b838ffaf80d24ec700b28a41010713f0d6e8449eb9365a80",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.999244Z",
+  "processed_at": "2026-04-25T08:21:31.073963Z",
   "status": "active"
 }
