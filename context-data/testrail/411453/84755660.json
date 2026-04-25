@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Support - Product Support no wifi [New]",
   "feature": "App Settings",
-  "scenario": "\"Something is wrong\" screen appears when navigating to Product Support in Lens app with Wi-Fi turned off",
+  "scenario": "\"Something is wrong\" screen appears when navigating to Product Support in Lens app with Wi-Fi off",
   "steps": [
-    "1. Turn off Wi-Fi on the device.",
-    "2. Open the Poly Lens app.",
-    "3. Navigate to App Settings \u2192 Support \u2192 Product Support.",
-    "4. Observe the \"Something is wrong\" screen displayed.",
-    "5. Tap the Cancel (X) button."
+    "1. Ensure Wi-Fi is turned off on the mobile device.",
+    "2. Open the Poly Studio Mobile app.",
+    "3. Navigate to Account \u2192 App Settings.",
+    "4. Tap Support.",
+    "5. Tap Product Support."
   ],
-  "expected": "The \"Something is wrong\" screen is dismissed and the user is returned to the Support first screen.",
+  "expected": "The Product Support page loads successfully, or a meaningful offline message is displayed with an option to retry or go back.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-lens-app",
+    "poly-studio-mobile",
+    "lens-app",
     "product-support",
-    "something-is-wrong",
     "wifi-offline",
     "app-settings",
     "error-screen",
-    "cancel-button"
+    "support-navigation"
   ],
   "source_last_updated": "1773311911",
   "source_hash": "c7e173840fe96bb63edccf1668a4a6e9b4b317d7b18a46580bf7190a0dc6103a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.959891Z",
+  "processed_at": "2026-04-25T09:32:26.189521Z",
   "status": "active"
 }
