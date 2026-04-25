@@ -4,28 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Swipe left, previous screen",
-  "feature": "Quick Setup Guide (QSG) - Screen Navigation",
-  "scenario": "Swiping left from the left side of the screen navigates back through the Quick Setup Guide screens in reverse order",
+  "feature": "App Settings",
+  "scenario": "Quick Setup Guide swipe left from fourth screen navigates back through setup screens in reverse order",
   "steps": [
-    "Start from the fourth screen of the Quick Setup Guide (QSG).",
-    "Swipe left from the left side of the screen."
+    "Open Poly Studio Mobile app",
+    "Navigate to Quick Setup Guide (QSG) by going to Home \u2192 Quick Setup Guide",
+    "Swipe through the setup screens until reaching the fourth screen (final screen)",
+    "From the fourth screen, swipe left to navigate backward",
+    "Observe the screen that appears after swiping left",
+    "Continue swiping left and observe each subsequent screen"
   ],
-  "expected": "The user navigates to the previous screen in the QSG. Specifically: fourth \u2192 third (charge case outside) \u2192 second (two earbuds) \u2192 first (one earbud).",
+  "expected": "Swiping left from the fourth screen navigates back to the third screen (charging case), then to the second screen (two earbuds), then to the first screen (one earbud), in reverse order.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "swipe left",
-    "left side",
-    "navigate back",
-    "Quick Setup Guide",
-    "QSG",
-    "reverse order",
-    "screen navigation",
-    "back gesture"
+    "poly-studio-mobile",
+    "quick-setup-guide",
+    "qsg",
+    "swipe-navigation",
+    "setup-screens",
+    "reverse-order",
+    "screen-flow"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "3023f8cf959a34aec81b41df3db7a0ffc429be5e50eaf122cd4e1bbd7d492f5c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.270722Z",
+  "processed_at": "2026-04-25T05:37:16.843845Z",
   "status": "active"
 }
