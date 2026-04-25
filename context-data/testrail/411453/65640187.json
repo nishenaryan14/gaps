@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Analytics - Support App Opened",
   "feature": "App Settings",
-  "scenario": "Analytics event logged when Support > App screen is opened, tracking event metrics with delayed count updates",
+  "scenario": "Analytics event logged when user opens Support > App screen in Poly Studio Mobile app",
   "steps": [
-    "Open the Poly Studio Mobile app on the Android device.",
-    "Navigate to the Home screen.",
-    "Tap on the Support option (or navigate to Support via the menu).",
-    "Tap on the App screen within the Support section.",
-    "Observe the analytics event being logged.",
-    "Check the event metrics: event count, events in the last 30 minutes, event count by country/gender, events per session, app version, app build, and app environment.",
-    "Wait a few hours and check if the event counts update."
+    "1. Open the Poly Studio Mobile app on the connected Android device.",
+    "2. From the Home screen, tap the menu icon or navigate to the Support section.",
+    "3. Tap on the 'App' option within the Support menu to open the Support > App screen.",
+    "4. Observe that the app logs an analytics event upon opening the Support > App screen.",
+    "5. Wait a few hours, then check Firebase Analytics to view the logged event data (event count, app version, app build, app environment, country, gender, events per session)."
   ],
-  "expected": "Analytics event is logged immediately when the Support > App screen is opened, and all metrics (event count, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment) are displayed and updated in real-time or near real-time.",
+  "expected": "The app logs an analytics event when the user opens the Support > App screen, and the event data (event count, app version, app build, app environment, country, gender, events per session) is viewable in Firebase Analytics after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "analytics-event",
     "support-screen",
+    "analytics-event",
+    "firebase-analytics",
     "app-screen",
-    "event-metrics",
-    "event-count",
-    "app-version",
-    "app-environment"
+    "event-logging",
+    "android"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "704427ab4b8e8e0c3d0dbcf834b6d6e67854aeaf9694b2b1db190342ec6e7c79",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.970831Z",
+  "processed_at": "2026-04-25T07:55:31.991497Z",
   "status": "active"
 }
