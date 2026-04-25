@@ -6,23 +6,31 @@
   "title": "Notifications - Low battery after unplugging the power cable",
   "feature": "Notifications",
   "scenario": "Low battery notification transitions to charging notification when device is plugged in, and reverts to low battery notification when unplugged",
-  "steps": [],
-  "expected": "",
+  "steps": [
+    "Open Poly Studio Mobile app on the Android device.",
+    "Ensure a Poly Bluetooth audio device is connected and its battery level is below 5%.",
+    "Plug the power cable into the Poly Bluetooth audio device to start charging.",
+    "Observe the notification area on the Android device.",
+    "Verify that the Poly Studio Mobile app displays a charging notification.",
+    "Unplug the power cable from the Poly Bluetooth audio device.",
+    "Observe the notification area on the Android device again.",
+    "Verify that the charging notification changes to a low battery notification."
+  ],
+  "expected": "When the device is plugged in and charging, the app shows a charging notification. After unplugging, the notification changes to a low battery notification.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "low-battery-notification",
     "charging-notification",
     "battery-persistence",
-    "power-state-transition",
-    "plug-in-detection",
-    "unplug-detection",
-    "battery-status",
-    "notification-state-machine"
+    "poly-studio-mobile",
+    "notification-transition",
+    "battery-level",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1761228671",
   "source_hash": "0b6d98eaabcb1913458084755d7740a5b09b9fc63e26b3aa2859bfb62dcc10da",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.042979Z",
+  "processed_at": "2026-04-25T09:32:26.295871Z",
   "status": "active"
 }
