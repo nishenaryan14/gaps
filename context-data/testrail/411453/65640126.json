@@ -7,28 +7,27 @@
   "feature": "App Settings",
   "scenario": "Policy-removed settings become unlocked and editable in the app after Cloud policy changes are applied",
   "steps": [
-    "1. On the Cloud, remove one or more settings from the Policy and apply the changes.",
-    "2. Open Poly Studio Mobile app on the device.",
+    "1. On the Cloud, remove one or more settings from a Policy and apply the changes.",
+    "2. Open the Poly Studio Mobile app on the device.",
     "3. Navigate to the settings that were previously locked by the Policy (e.g., Home \u2192 [Device Name] \u2192 Audio Settings \u2192 [Feature]).",
     "4. Verify that the previously locked settings are now unlocked and editable.",
-    "5. Tap on any previously policy-affected setting.",
-    "6. Attempt to change its value."
+    "5. Tap on any previously policy-affected setting and attempt to change its value."
   ],
-  "expected": "The previously policy-locked settings in the Poly Studio Mobile app become unlocked and editable. Tapping on any such setting allows the user to change its value.",
+  "expected": "The settings previously locked by the Policy become unlocked and editable. Tapping on any previously policy-affected setting allows the user to change its value.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "cloud-policy",
-    "policy-removed-settings",
+    "policy-locked-settings",
     "settings-unlocked",
     "poly-studio-mobile",
-    "settings-editable",
     "policy-changes-applied",
+    "settings-editable",
     "device-settings"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "731bf71fbade4da8fbb49b8a533846500f64722dc37205db01278478f3b33310",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.051787Z",
+  "processed_at": "2026-04-25T09:32:26.315823Z",
   "status": "active"
 }
