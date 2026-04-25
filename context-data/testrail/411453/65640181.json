@@ -7,27 +7,26 @@
   "feature": "App Settings",
   "scenario": "Firebase analytics logs default elements when user opens Find My Device screen in Poly Studio Mobile app",
   "steps": [
-    "Open the Poly Studio Mobile app on the connected mobile device.",
-    "Navigate to the Home screen.",
-    "Tap on the device name to access Device Settings.",
-    "Locate and tap on the 'Find My Device' option from the Device Settings menu.",
-    "Observe the screen that loads."
+    "1. Launch the Poly Studio Mobile app on the connected Android device.",
+    "2. From the Home screen, navigate to the Device Settings screen for the connected Poly Bluetooth audio device.",
+    "3. Locate and tap on the 'Find My Device' option within the Device Settings menu.",
+    "4. Observe the 'Find My Device' screen that loads."
   ],
-  "expected": "The 'Find My Device' screen displays correctly with all expected elements: a graph showing signal strength or location data, events from the last 30 minutes, event count by country/gender, events per session, and app metadata (app version, app build, app environment). A Firebase analytics event is logged upon opening the screen.",
+  "expected": "The 'Find My Device' screen displays correctly with all expected default elements: a graph showing device location history, events from the last 30 minutes, event count breakdown by country and gender, events per session data, and the app version, app build, and app environment information.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "find-my-device",
+    "poly-studio-mobile",
     "device-settings",
     "firebase-analytics",
-    "home-screen",
-    "mobile-app",
-    "default-events"
+    "android",
+    "bluetooth-audio-device",
+    "default-elements-logging"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "feff8cfd6b10ff5a87df450547cb66e55759853bb0b0b9ba73c041f79568dfee",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.993014Z",
+  "processed_at": "2026-04-25T08:21:31.067791Z",
   "status": "active"
 }
