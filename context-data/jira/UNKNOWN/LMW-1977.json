@@ -6,15 +6,15 @@
   "summary": "iOS \u26d4 HSFWCH-10248 | INTERMITTENT | OSPREY \ud83e\udd85 Putting one earbud in CC sometimes causes both earbuds to disconnect",
   "feature": "Bluetooth Pairing",
   "scenario": "Placing one earbud in charging case causes both earbuds to disconnect instead of only the inserted earbud",
-  "description_clean": "Putting one earbud in the charging case sometimes causes both earbuds to disconnect. Expected: placing only one earbud in the case should disconnect only that earbud, not the other.",
+  "description_clean": "Putting one earbud in the charging case sometimes causes both earbuds to disconnect. Expected: placing only one earbud in the case should disconnect only that earbud, not affect the other.",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
     "2. Ensure both earbuds are connected and in use (e.g., playing audio).",
     "3. Take one earbud and place it into the charging case.",
     "4. Observe the connection status of both earbuds in the app or via audio output."
   ],
-  "expected": "Only the earbud placed in the charging case should disconnect. The other earbud should remain connected and continue functioning.",
-  "actual": "Both earbuds disconnect when only one is placed in the charging case.",
+  "expected": "Only the earbud placed in the charging case should disconnect. The other earbud should remain connected and continue functioning normally.",
+  "actual": "Placing one earbud in the charging case sometimes causes both earbuds to disconnect.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -25,13 +25,13 @@
     "earbud-disconnection",
     "charging-case",
     "connection-status",
-    "android-app",
-    "dual-earbud-connection",
-    "bluetooth-disconnect-behavior"
+    "dual-earbud",
+    "single-earbud-insertion",
+    "bluetooth-disconnect"
   ],
   "source_last_updated": "2026-04-15T08:48:09.000+0000",
   "source_hash": "c403860808412266c56c33ce58aa595bc4c620be1accad9250ba4c4ae5aee290",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.696530Z",
+  "processed_at": "2026-04-25T07:55:31.766294Z",
   "status": "active"
 }
