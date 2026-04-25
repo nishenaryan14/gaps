@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Support - Help Guide no wifi [New]",
   "feature": "App Settings",
-  "scenario": "Help Guide shows \"Something went wrong\" error when Wi-Fi is off, and Cancel button returns to Support screen",
+  "scenario": "Help Guide in Lens app shows \"Something went wrong\" error when Wi-Fi is off, and Cancel button returns to Support screen",
   "steps": [
-    "1. Turn off Wi-Fi on the Android device.",
-    "2. Open the Poly Studio Mobile app.",
-    "3. Navigate to Account \u2192 App Settings.",
-    "4. Tap Support.",
-    "5. Tap Help Guide.",
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Ensure Wi-Fi is turned off on the Android device.",
+    "3. Navigate to the Home screen.",
+    "4. Tap on the Support option (or navigate to Support from the menu).",
+    "5. On the Support screen, tap on Help Guide.",
     "6. Observe the screen that appears."
   ],
-  "expected": "The Help Guide should load properly or display an appropriate offline message with a way to retry or go back.",
+  "expected": "The Help Guide content should load successfully, or a clear offline/network error message should be displayed with guidance on how to proceed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "help-guide",
-    "wifi-offline",
     "support-screen",
-    "error-handling",
+    "wifi-offline",
+    "error-message",
+    "cancel-button",
     "android-app",
-    "app-settings",
-    "cancel-button"
+    "lens-app"
   ],
   "source_last_updated": "1773311605",
   "source_hash": "363fecb2cdf18f8dd2fb386faa2dc35974d14d105b56154e5405d0db0937f2ef",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.953179Z",
+  "processed_at": "2026-04-25T09:32:26.191524Z",
   "status": "active"
 }
