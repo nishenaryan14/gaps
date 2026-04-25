@@ -1,165 +1,171 @@
 [
   {
-    "title": "TC-SENSORS-POLICY-001: Verify Locked Policy Value for Wear Detection Sensor on Voyager Free 20",
+    "title": "TC-POL-SP-001: Verify Poly Lens Cloud locked policy displays correct value on Voyager Free 20 Sensors & Presence screen",
     "steps": [
-      "Precondition: Voyager Free 20 is enrolled in Poly Lens Cloud with a locked policy that sets 'Wear Detection Sensor' = ON.",
-      "Precondition: Device is connected to the Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app on the paired smartphone.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Locate the 'Wear Detection Sensor' toggle.",
-      "Observe the toggle state and check if it is grayed out / non-interactive (locked by policy).",
-      "Note the displayed value (ON or OFF)."
+      "Precondition: Voyager Free 20 is connected to Poly Studio Mobile app. Poly Lens Cloud has a policy that locks 'Wear Detection' to 'Enabled' (ON).",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the Voyager Free 20 device name to open Device screen.",
+      "3. Tap 'Sensors & Presence' from the settings list.",
+      "4. Observe the 'Wear Detection' toggle/switch on the Sensors & Presence screen.",
+      "5. Note the displayed value (ON or OFF).",
+      "6. Verify the displayed value matches the policy-enforced value from Poly Lens Cloud (Expected: ON)."
     ],
-    "expected": "The 'Wear Detection Sensor' toggle displays ON (matching the Poly Lens Cloud locked policy value). The toggle is grayed out and cannot be changed by the user. A lock icon or policy indicator is visible next to the setting."
+    "expected": "The 'Wear Detection' setting displays 'ON' (Enabled), matching the locked policy value from Poly Lens Cloud. The toggle should appear in the ON position."
   },
   {
-    "title": "TC-SENSORS-POLICY-002: Verify Locked Policy Value for In-Ear Detection on Voyager Free 20",
+    "title": "TC-POL-SP-002: Verify locked policy setting is disabled/read-only and cannot be changed by user",
     "steps": [
-      "Precondition: Voyager Free 20 is enrolled in Poly Lens Cloud with a locked policy that sets 'In-Ear Detection' = OFF.",
-      "Precondition: Device is connected to the Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Locate the 'In-Ear Detection' toggle.",
-      "Attempt to toggle the switch ON.",
-      "Observe the toggle behavior and displayed value."
+      "Precondition: Voyager Free 20 is connected. Poly Lens Cloud has a policy locking 'Wear Detection' to 'Enabled' (ON).",
+      "1. Open Poly Studio Mobile app \u2192 tap Voyager Free 20 \u2192 Sensors & Presence.",
+      "2. Observe the 'Wear Detection' toggle.",
+      "3. Attempt to tap the toggle to change it from ON to OFF.",
+      "4. Observe the toggle behavior \u2014 does it respond to the tap?",
+      "5. Attempt to tap and hold/drag the toggle if it is a slider-style switch.",
+      "6. Navigate away from Sensors & Presence screen (tap Back), then return to Sensors & Presence.",
+      "7. Observe the 'Wear Detection' value again."
     ],
-    "expected": "The 'In-Ear Detection' toggle displays OFF (matching the Poly Lens Cloud locked policy value). The toggle is grayed out and non-interactive. Attempting to toggle it has no effect. A lock icon or policy indicator is visible."
+    "expected": "The 'Wear Detection' toggle is visually disabled/grayed out and does NOT respond to user taps. The value remains ON (policy-enforced). After navigating away and back, the value is still ON and still disabled."
   },
   {
-    "title": "TC-SENSORS-POLICY-003: Verify Locked Policy Value for Auto Pause/Play on Voyager Free 20",
+    "title": "TC-POL-SP-003: Verify multiple Sensors & Presence settings are locked simultaneously by cloud policy",
     "steps": [
-      "Precondition: Voyager Free 20 is enrolled in Poly Lens Cloud with a locked policy that sets 'Auto Pause/Play' = ON.",
-      "Precondition: Device is connected to the Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Locate the 'Auto Pause/Play' toggle.",
-      "Observe the toggle state.",
-      "Close the app completely (force kill).",
-      "Reopen Poly Studio Mobile app and navigate back to: Device Settings \u2192 Sensors & Presence.",
-      "Observe the 'Auto Pause/Play' toggle state again."
+      "Precondition: Voyager Free 20 connected. Poly Lens Cloud policy locks: 'Wear Detection' = ON, 'Auto Pause' = OFF, 'Headset Detection' = ON.",
+      "1. Open Poly Studio Mobile app \u2192 tap Voyager Free 20 \u2192 Sensors & Presence.",
+      "2. Observe all three settings: 'Wear Detection', 'Auto Pause', 'Headset Detection'.",
+      "3. For each setting, verify the displayed value matches the policy-enforced value.",
+      "4. For each setting, attempt to change the value by tapping the toggle.",
+      "5. For each setting, verify the toggle is disabled/grayed out and does not change."
     ],
-    "expected": "The 'Auto Pause/Play' toggle displays ON both before and after app restart. The toggle is grayed out and non-interactive. The locked policy value persists across app lifecycle events."
+    "expected": "All three Sensors & Presence settings display the correct policy-enforced values (Wear Detection=ON, Auto Pause=OFF, Headset Detection=ON). All toggles are disabled/read-only and cannot be changed by user interaction."
   },
   {
-    "title": "TC-SENSORS-POLICY-004: Verify Locked Policy Value for Headset Sensors Master Toggle on Voyager Free 20",
+    "title": "TC-POL-SP-004: Verify cloud policy applied while app is already connected \u2014 real-time sync/refresh",
     "steps": [
-      "Precondition: Voyager Free 20 is enrolled in Poly Lens Cloud with a locked policy that sets 'Headset Sensors' master toggle = OFF.",
-      "Precondition: Device is connected to the Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Locate the 'Headset Sensors' master toggle (if applicable) or the first sensor toggle in the list.",
-      "Observe the displayed state.",
-      "Disconnect Bluetooth from the device (turn off Bluetooth on phone or put device out of range).",
-      "Reconnect Bluetooth and wait for the app to re-establish connection.",
-      "Navigate back to: Device Settings \u2192 Sensors & Presence.",
-      "Observe the toggle state again."
+      "Precondition: Voyager Free 20 connected to Poly Studio Mobile app. No policy initially applied (settings are user-controllable).",
+      "1. Open Poly Studio Mobile app \u2192 tap Voyager Free 20 \u2192 Sensors & Presence.",
+      "2. Verify 'Wear Detection' toggle is enabled (user can change it). Set it to OFF.",
+      "3. While staying on the Sensors & Presence screen, have an administrator apply a Poly Lens Cloud policy locking 'Wear Detection' to ON.",
+      "4. Wait up to 30 seconds for policy sync.",
+      "5. Observe the 'Wear Detection' toggle on screen \u2014 does it automatically update to ON?",
+      "6. Attempt to tap the toggle to change it.",
+      "7. Navigate away (Back) and return to Sensors & Presence to verify persistence of locked state."
     ],
-    "expected": "The 'Headset Sensors' master toggle displays OFF (matching the Poly Lens Cloud locked policy value) both before and after Bluetooth disconnect/reconnect. The toggle is grayed out and non-interactive. All sub-settings under Sensors & Presence are also locked and reflect their respective policy values."
+    "expected": "Within a reasonable sync time (\u226430 seconds), the 'Wear Detection' toggle automatically updates to ON and becomes disabled/grayed out. The user cannot change it. After navigating away and back, the locked state persists."
   },
   {
-    "title": "TC-SENSORS-POLICY-005: Verify Locked Policy Value Persists After Device Power Cycle for Voyager Free 20",
+    "title": "TC-POL-SP-005: Verify locked policy state persists after app backgrounding and foregrounding",
     "steps": [
-      "Precondition: Voyager Free 20 is enrolled in Poly Lens Cloud with a locked policy that sets 'Wear Detection Sensor' = ON and 'Auto Pause/Play' = OFF.",
-      "Precondition: Device is connected to the Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Verify 'Wear Detection Sensor' shows ON and 'Auto Pause/Play' shows OFF.",
-      "Place the earbuds in the charge case and close the lid.",
-      "Wait 10 seconds.",
-      "Remove earbuds from the charge case and allow them to reconnect to the phone.",
-      "Open Poly Studio Mobile app.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Observe the values for 'Wear Detection Sensor' and 'Auto Pause/Play'."
+      "Precondition: Voyager Free 20 connected. Poly Lens Cloud policy locks 'Wear Detection' to ON.",
+      "1. Open Poly Studio Mobile app \u2192 tap Voyager Free 20 \u2192 Sensors & Presence.",
+      "2. Verify 'Wear Detection' shows ON and is disabled.",
+      "3. Press the Home button to background the app (do not kill it).",
+      "4. Wait 10 seconds.",
+      "5. Reopen Poly Studio Mobile app from the recent apps list.",
+      "6. Navigate to Voyager Free 20 \u2192 Sensors & Presence.",
+      "7. Observe the 'Wear Detection' value and enabled/disabled state."
     ],
-    "expected": "After device power cycle (case close/open), 'Wear Detection Sensor' still displays ON and 'Auto Pause/Play' still displays OFF, matching the Poly Lens Cloud locked policy values. Both toggles remain grayed out and non-interactive."
+    "expected": "After backgrounding and foregrounding the app, the 'Wear Detection' setting still displays ON and remains disabled/grayed out. The locked policy state is preserved across app lifecycle transitions."
   },
   {
-    "title": "TC-SENSORS-POLICY-006: Verify Locked Policy Value Override \u2014 User Cannot Change Sensor Setting in App",
+    "title": "TC-POL-SP-006: Verify locked policy state persists after app force-kill and relaunch",
     "steps": [
-      "Precondition: Voyager Free 20 is enrolled in Poly Lens Cloud with a locked policy that sets 'Wear Detection Sensor' = OFF.",
-      "Precondition: Device is connected to the Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Confirm 'Wear Detection Sensor' shows OFF and is grayed out.",
-      "Attempt to tap the 'Wear Detection Sensor' toggle 5 times rapidly.",
-      "Attempt to long-press the 'Wear Detection Sensor' toggle for 3 seconds.",
-      "Attempt to swipe the toggle.",
-      "Observe the toggle state after each attempt."
+      "Precondition: Voyager Free 20 connected. Poly Lens Cloud policy locks 'Wear Detection' to ON.",
+      "1. Open Poly Studio Mobile app \u2192 tap Voyager Free 20 \u2192 Sensors & Presence.",
+      "2. Verify 'Wear Detection' shows ON and is disabled.",
+      "3. Fully close/kill the Poly Studio Mobile app (swipe away from recent apps or force stop).",
+      "4. Wait 5 seconds.",
+      "5. Reopen Poly Studio Mobile app.",
+      "6. Wait for the app to connect to Voyager Free 20.",
+      "7. Navigate to Voyager Free 20 \u2192 Sensors & Presence.",
+      "8. Observe the 'Wear Detection' value and enabled/disabled state."
     ],
-    "expected": "The 'Wear Detection Sensor' toggle remains OFF and grayed out after all user interaction attempts (tap, rapid tap, long-press, swipe). The locked policy value cannot be overridden through any UI interaction. No toast or error message indicating a change is displayed."
+    "expected": "After force-kill and relaunch, the app re-syncs with the cloud policy. The 'Wear Detection' setting displays ON and is disabled/grayed out. The locked policy is re-applied on reconnection."
   },
   {
-    "title": "TC-SENSORS-POLICY-007: Verify Locked Policy Value for All Sensors & Presence Settings Simultaneously on Voyager Free 20",
+    "title": "TC-POL-SP-007: Verify locked policy state persists after Bluetooth disconnect and reconnect",
     "steps": [
-      "Precondition: Voyager Free 20 is enrolled in Poly Lens Cloud with locked policies: 'Headset Sensors' = ON, 'Wear Detection Sensor' = ON, 'In-Ear Detection' = OFF, 'Auto Pause/Play' = ON.",
-      "Precondition: Device is connected to the Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Observe all available sensor toggles and their states.",
-      "Take a screenshot of the Sensors & Presence screen.",
-      "Compare each toggle's displayed value against the expected locked policy values from Poly Lens Cloud."
+      "Precondition: Voyager Free 20 connected. Poly Lens Cloud policy locks 'Wear Detection' to ON.",
+      "1. Open Poly Studio Mobile app \u2192 tap Voyager Free 20 \u2192 Sensors & Presence.",
+      "2. Verify 'Wear Detection' shows ON and is disabled.",
+      "3. Disconnect Bluetooth (turn off Bluetooth on phone, or put earbuds in case and close lid).",
+      "4. Wait for app to show 'Disconnected' state.",
+      "5. Reconnect Bluetooth (turn Bluetooth back on, or open case lid and wait for reconnection).",
+      "6. Wait for Poly Studio Mobile app to reconnect to Voyager Free 20.",
+      "7. Navigate to Voyager Free 20 \u2192 Sensors & Presence.",
+      "8. Observe the 'Wear Detection' value and enabled/disabled state."
     ],
-    "expected": "All Sensors & Presence settings match their respective Poly Lens Cloud locked policy values: 'Headset Sensors' = ON, 'Wear Detection Sensor' = ON, 'In-Ear Detection' = OFF, 'Auto Pause/Play' = ON. All toggles are grayed out and non-interactive. Lock/policy indicators are visible on each locked setting."
+    "expected": "After Bluetooth disconnect and reconnect, the app re-syncs with the cloud policy. The 'Wear Detection' setting displays ON and is disabled/grayed out. The locked policy is re-applied on reconnection."
   },
   {
-    "title": "TC-SENSORS-POLICY-008: Verify Locked Policy Value After App Update for Voyager Free 20",
+    "title": "TC-POL-SP-008: Verify locked policy state persists after device power off and on",
     "steps": [
-      "Precondition: Voyager Free 20 is enrolled in Poly Lens Cloud with a locked policy that sets 'Wear Detection Sensor' = ON.",
-      "Precondition: Device is connected to the Poly Studio Mobile app (current version).",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Verify 'Wear Detection Sensor' shows ON and is grayed out.",
-      "Close the app.",
-      "Update the Poly Studio Mobile app to the latest version from the app store.",
-      "Open the updated Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Observe the 'Wear Detection Sensor' toggle state."
+      "Precondition: Voyager Free 20 connected. Poly Lens Cloud policy locks 'Wear Detection' to ON.",
+      "1. Open Poly Studio Mobile app \u2192 tap Voyager Free 20 \u2192 Sensors & Presence.",
+      "2. Verify 'Wear Detection' shows ON and is disabled.",
+      "3. Power off the Voyager Free 20 earbuds (place in case and close lid, or let battery die).",
+      "4. Wait for app to show 'Disconnected' state.",
+      "5. Power on the earbuds (open case lid, remove from case).",
+      "6. Wait for automatic reconnection to Poly Studio Mobile app.",
+      "7. Navigate to Voyager Free 20 \u2192 Sensors & Presence.",
+      "8. Observe the 'Wear Detection' value and enabled/disabled state."
     ],
-    "expected": "After app update, the 'Wear Detection Sensor' toggle still displays ON (matching the Poly Lens Cloud locked policy value) and remains grayed out. The policy enforcement survives an app update."
+    "expected": "After device power off and on, the app reconnects and re-syncs with the cloud policy. The 'Wear Detection' setting displays ON and is disabled/grayed out."
   },
   {
-    "title": "TC-SENSORS-POLICY-009: Verify Locked Policy Value When No Policy Is Configured (Baseline Negative Test)",
+    "title": "TC-POL-SP-009: Verify locked policy value overrides any locally saved user preference",
     "steps": [
-      "Precondition: Voyager Free 20 is NOT enrolled in any Poly Lens Cloud policy (no locked values).",
-      "Precondition: Device is connected to the Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Observe all sensor toggles (Wear Detection Sensor, In-Ear Detection, Auto Pause/Play, etc.).",
-      "Verify that toggles are interactive (not grayed out).",
-      "Toggle 'Wear Detection Sensor' from ON to OFF.",
-      "Navigate away to Device Settings main page.",
-      "Navigate back to: Device Settings \u2192 Sensors & Presence.",
-      "Observe the 'Wear Detection Sensor' state."
+      "Precondition: Voyager Free 20 connected. No policy initially applied.",
+      "1. Open Poly Studio Mobile app \u2192 tap Voyager Free 20 \u2192 Sensors & Presence.",
+      "2. Set 'Wear Detection' to OFF (user preference).",
+      "3. Navigate away and back to confirm OFF is saved locally.",
+      "4. Have an administrator apply a Poly Lens Cloud policy locking 'Wear Detection' to ON.",
+      "5. Wait for policy sync (up to 30 seconds).",
+      "6. Observe the 'Wear Detection' value on the Sensors & Presence screen.",
+      "7. Verify it now shows ON (overriding the user's previous OFF setting).",
+      "8. Verify the toggle is disabled/grayed out."
     ],
-    "expected": "When no Poly Lens Cloud policy is configured, all Sensors & Presence toggles are interactive (not grayed out). The user can freely change settings. The 'Wear Detection Sensor' toggle reflects the user's change (OFF) and persists after navigation. No lock icons or policy indicators are visible."
+    "expected": "The cloud policy value (ON) overrides the user's locally saved preference (OFF). The UI displays ON and the toggle is disabled. The user cannot revert to their previous setting."
   },
   {
-    "title": "TC-SENSORS-POLICY-010: Verify Locked Policy Value Sync After Policy Change in Poly Lens Cloud",
+    "title": "TC-POL-SP-010: Verify policy lock indicator/icon is displayed on locked settings",
     "steps": [
-      "Precondition: Voyager Free 20 is enrolled in Poly Lens Cloud with a locked policy that sets 'Auto Pause/Play' = ON.",
-      "Precondition: Device is connected to the Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager Free 20 device name from the Home screen.",
-      "Navigate to: Device Settings \u2192 Sensors & Presence.",
-      "Verify 'Auto Pause/Play' shows ON and is grayed out.",
-      "Leave the app open and visible on the Sensors & Presence screen.",
-      "On a separate device, log into Poly Lens Cloud admin console.",
-      "Change the locked policy for Voyager Free 20: set 'Auto Pause/Play' = OFF.",
-      "Save and push the policy update.",
-      "Wait up to 2 minutes for the policy to sync to the device.",
-      "Observe the 'Auto Pause/Play' toggle in the Poly Studio Mobile app.",
-      "If no automatic update occurs, close and reopen the app, then navigate back to: Device Settings \u2192 Sensors & Presence."
+      "Precondition: Voyager Free 20 connected. Poly Lens Cloud policy locks 'Wear Detection' to ON.",
+      "1. Open Poly Studio Mobile app \u2192 tap Voyager Free 20 \u2192 Sensors & Presence.",
+      "2. Observe the 'Wear Detection' row/toggle.",
+      "3. Check for any visual indicator that the setting is managed by an organization/policy (e.g., lock icon, 'Managed by your organization' text, grayed-out state with info icon).",
+      "4. Compare with an unlocked setting (e.g., if 'Auto Pause' is not locked by policy, it should NOT show the lock indicator).",
+      "5. Tap on any lock indicator or info icon if present to see if additional information is displayed."
     ],
-    "expected": "The 'Auto Pause/Play' toggle updates to OFF (matching the updated Poly Lens Cloud locked policy) either automatically or after app restart. The toggle remains grayed out and non-interactive. The app reflects the latest cloud policy within a reasonable sync timeframe."
+    "expected": "The 'Wear Detection' setting displays a clear visual indicator (lock icon, 'Managed' badge, or similar) showing it is enforced by a policy. Unlocked settings do not show this indicator. Tapping the indicator may show a tooltip or dialog explaining the setting is managed by IT."
+  },
+  {
+    "title": "TC-POL-SP-011: Verify policy lock is removed when cloud policy is deleted \u2014 setting returns to user-controllable state",
+    "steps": [
+      "Precondition: Voyager Free 20 connected. Poly Lens Cloud policy locks 'Wear Detection' to ON. User has verified the setting is locked and disabled.",
+      "1. Have an administrator remove/delete the policy locking 'Wear Detection' from Poly Lens Cloud.",
+      "2. Wait for policy sync (up to 30 seconds).",
+      "3. On the Poly Studio Mobile app, navigate to Voyager Free 20 \u2192 Sensors & Presence (or refresh if already on screen).",
+      "4. Observe the 'Wear Detection' toggle.",
+      "5. Verify the toggle is now enabled (not grayed out) and user can interact with it.",
+      "6. Tap the toggle to change the value to OFF.",
+      "7. Navigate away and back to confirm the change persisted."
+    ],
+    "expected": "After the policy is removed, the 'Wear Detection' toggle becomes enabled and user-controllable. The user can change the value and the change persists across navigation. The lock indicator is no longer displayed."
+  },
+  {
+    "title": "TC-POL-SP-012: Verify Sensors & Presence screen loads correctly on Voyager Free 20 with all UI elements present",
+    "steps": [
+      "Precondition: Voyager Free 20 connected to Poly Studio Mobile app. No policy applied.",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the Voyager Free 20 device name.",
+      "3. Tap 'Sensors & Presence' from the settings list.",
+      "4. Observe all UI elements on the screen.",
+      "5. Verify the screen title displays 'Sensors & Presence'.",
+      "6. Verify all expected settings are present: 'Wear Detection', 'Auto Pause', 'Headset Detection' (or whatever settings are applicable for Voyager Free 20).",
+      "7. Verify each setting has a label and a toggle/switch.",
+      "8. Verify toggles are interactive (can be toggled ON and OFF).",
+      "9. Verify changes persist by navigating away and back."
+    ],
+    "expected": "The Sensors & Presence screen loads with the correct title. All expected settings for Voyager Free 20 are displayed with labels and functional toggles. Changes persist across navigation."
   }
 ]
