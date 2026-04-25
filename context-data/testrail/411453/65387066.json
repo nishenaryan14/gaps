@@ -8,21 +8,21 @@
   "scenario": "\"Other\" type feedback can be sent from App Settings > Feedback without providing a name or email",
   "steps": [
     "Open the Poly Studio Mobile app on the Android device.",
-    "Tap the menu icon (hamburger) or profile icon to access the side menu.",
-    "Select App Settings from the side menu.",
-    "Scroll down and tap on Feedback.",
-    "In the Feedback screen, tap on the \"Other\" option (if a category selector is shown).",
+    "Tap the menu icon (hamburger) or navigate to the Home screen.",
+    "Tap on 'App Settings' (gear icon or settings option).",
+    "Scroll down and tap on 'Feedback'.",
+    "In the Feedback screen, tap on the 'Other' option (category selector).",
     "Enter feedback text in the text input field (leave Name and Email fields blank).",
-    "Tap the Send button."
+    "Tap the 'Send' button."
   ],
-  "expected": "Feedback is sent successfully without requiring a name or email address.",
+  "expected": "Feedback is sent successfully. The app should accept the submission even when Name and Email fields are left empty for the \"Other\" category.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "app-settings",
     "feedback",
-    "other-feedback",
+    "other-category",
     "anonymous-feedback",
     "android",
     "send-feedback"
@@ -30,6 +30,6 @@
   "source_last_updated": "1776241074",
   "source_hash": "434ddb6ec25584532e74cb93be37ab05a1492de4830e932a63c00304a56fd565",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.963997Z",
+  "processed_at": "2026-04-25T09:32:26.195378Z",
   "status": "active"
 }
