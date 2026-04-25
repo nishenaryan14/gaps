@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - Limited Support Before Launch Date",
   "feature": "Device Management",
-  "scenario": "Pre-release Poly device shows \"Device support coming soon\" pop-up when tapped on black \"i\" icon before launch date in Poly Studio Mobile app",
+  "scenario": "Pre-launch device shows \"Device support coming soon\" pop-up when tapping info icon on Device Home Screen",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on an Android device.",
-    "2. Pair a not-yet-released Poly Bluetooth audio device with the app (ensure the current date is before the device's official launch date).",
-    "3. Navigate to the Home screen of the app.",
-    "4. Observe the connection status ring and the icon next to the paired device.",
-    "5. Tap the black \"i\" icon displayed next to the device.",
-    "6. Observe the pop-up message that appears.",
-    "7. Tap outside the pop-up to dismiss it."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Ensure the headset has not yet reached its launch date and the required LM version is installed.",
+    "3. Pair and connect the headset to the app. Verify the green connection ring and the \"i\" icon are visible on the Device Home Screen.",
+    "4. Tap the \"i\" icon on the Device Home Screen.",
+    "5. Observe the pop-up message displayed.",
+    "6. Tap outside the pop-up to dismiss it."
   ],
-  "expected": "The device Home screen shows a green connection status ring and a black \\\"i\\\" icon. Tapping the \\\"i\\\" icon displays a pop-up message: \\\"Device support coming soon. In-app functionality may be limited.\\\" Tapping outside the pop-up dismisses it.",
+  "expected": "A pop-up message is displayed: \\\"Device support coming soon. In-app functionality may be limited.\\\" Tapping outside the pop-up dismisses it.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile-app",
+    "poly-studio-mobile",
+    "device-home-screen",
+    "info-icon",
     "device-support-coming-soon",
-    "pre-release-device",
-    "black-i-icon",
-    "connection-status-ring",
-    "launch-date-gating",
-    "android"
+    "pre-launch-device",
+    "bluetooth-pairing",
+    "pop-up-dismissal"
   ],
   "source_last_updated": "1764663020",
   "source_hash": "7516386f09b73bfb1dbc8550354edd253239a76aa4b7120e292ebf09251520d4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.923659Z",
+  "processed_at": "2026-04-25T09:32:26.151627Z",
   "status": "active"
 }
