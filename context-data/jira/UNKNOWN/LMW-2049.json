@@ -5,34 +5,34 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \u26d4 CLOUD \u2601\ufe0f Policy locked on phone but with wrong value",
   "feature": "App Settings / Device Management",
-  "scenario": "Locked policy from Poly Lens Cloud shows incorrect displayed value on Poly Studio Mobile app for Voyager Free 20 Sensors & Presence settings",
-  "description_clean": "When a policy is locked via Poly Lens Cloud for a connected Poly Voyager Free 20 device, the settings on the Poly Studio Mobile Android app show as locked (cannot be changed), but the displayed value is incorrect \u2014 it shows the value previously selected on the phone instead of the value set on the cloud. Expected behavior: The Sensors & Presence category should be available with settings that can be locked to a specific value, and the policy should be applied correctly.",
+  "scenario": "Poly Lens Cloud policy locked settings show incorrect displayed value on Poly Studio Mobile app for Voyager Free 20, showing phone-set value instead of cloud-configured value",
+  "description_clean": "When a policy is locked via Poly Lens Cloud for a connected Poly Voyager Free 20 device, the settings on the Poly Studio Mobile Android app show as locked (cannot be changed), but the displayed value is incorrect \u2014 it shows the value that was previously set on the phone instead of the value configured in the cloud policy. Expected behavior: The Sensors & Presence category should be available with settings that can be locked to a specific value, and the policy should be applied correctly.",
   "steps": [
     "1. Open Poly Studio Mobile app on Android.",
     "2. Connect a Poly Voyager Free 20 device.",
-    "3. From the Home screen, tap on the connected [Device Name] \u2192 Audio Settings.",
-    "4. Navigate to Sensors & Presence settings.",
-    "5. Using Poly Lens Cloud, create or apply a policy that locks the Sensors & Presence settings to a specific value.",
-    "6. Return to the Poly Studio Mobile app and observe the Sensors & Presence settings on the Audio Settings screen.",
-    "7. Attempt to change the locked setting value."
+    "3. Navigate to Poly Studio Mobile \u2192 [Voyager Free 20] \u2192 Audio Settings.",
+    "4. Using Poly Lens Cloud, create and lock a policy for the connected device that sets a specific value for a setting under the Sensors & Presence category (e.g., Wear Detection).",
+    "5. Return to the Poly Studio Mobile app and observe the Sensors & Presence settings.",
+    "6. Check the displayed value for the locked setting."
   ],
-  "expected": "The Sensors & Presence settings should display the value set by the cloud policy, and the setting should be locked (grayed out / non-interactive).",
-  "actual": "The Sensors & Presence settings display the value previously selected on the phone (not the cloud policy value), though the setting is shown as locked and cannot be changed.",
+  "expected": "The Sensors & Presence category should be available with settings that can be locked to a specific value. The displayed value in the app should match the value configured in the cloud policy.",
+  "actual": "The displayed value shows the value that was previously set on the phone instead of the value configured in the cloud policy. The setting appears locked (cannot be changed) but shows incorrect data.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
+    "poly-lens-cloud",
+    "policy-locked-settings",
     "poly-studio-mobile-app",
     "voyager-free-20",
     "sensors-and-presence",
-    "poly-lens-cloud",
-    "locked-policy",
-    "audio-settings",
-    "policy-value-display"
+    "wear-detection",
+    "settings-display-issue",
+    "cloud-vs-phone-value"
   ],
   "source_last_updated": "2026-04-23T12:35:29.000+0000",
   "source_hash": "83390856bc44157b6ef9baa97f84292939ab59a5b42d0717c4e25506cf3d5655",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.737789Z",
+  "processed_at": "2026-04-25T09:32:25.739471Z",
   "status": "active"
 }
