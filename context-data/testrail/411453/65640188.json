@@ -4,32 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Help Guide Opened",
-  "feature": "Analytics",
-  "scenario": "Logs event when user opens Help Guide page, with event counts updating after a few hours and default analytics elements displayed.",
+  "feature": "App Settings",
+  "scenario": "Analytics event logged when user opens Help Guide page in Poly Studio Mobile app",
   "steps": [
-    "Open the Help Guide page.",
-    "Wait for a few hours for event counts to update.",
-    "Check the default elements on the page: graph for the event, events in the last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. On the Home screen, tap the Menu icon (hamburger menu) in the top-left corner.",
+    "3. From the navigation menu, tap 'Help' or 'Help Guide' to open the Help Guide page.",
+    "4. Observe that the Help Guide page loads successfully."
   ],
-  "expected": "The Help Guide page displays all default elements: graph for the event, events in the last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment. Event counts are updated after a few hours.",
+  "expected": "An analytics event is logged when the Help Guide page is opened. The event tracks metrics including event count by country, gender, app version, app build, app environment, and events per session. Data updates are reflected after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Help Guide page",
-    "event counts",
-    "analytics elements",
-    "graph",
-    "events last 30 minutes",
-    "event count by Country",
-    "event count by Gender",
-    "events per session",
-    "App Version",
-    "App build",
-    "App Environment"
+    "poly-studio-mobile",
+    "help-guide",
+    "analytics-event",
+    "android",
+    "navigation-menu",
+    "in-app-help",
+    "user-interface"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "05736acc74e34394b265a53a80948d942c407992d2864bb41dcb3d8e5068c45d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.336654Z",
+  "processed_at": "2026-04-25T05:37:16.968985Z",
   "status": "active"
 }
