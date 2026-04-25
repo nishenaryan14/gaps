@@ -4,31 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - No device connected - Select Device link",
-  "feature": "Device Home Screen",
-  "scenario": "Tapping \"Select Device\" with no device connected shows supported devices list with images and an \"Other devices\" button linking to Poly support page.",
+  "feature": "Device Management",
+  "scenario": "\"Other devices\" button on home screen opens Poly support web page when no device is connected",
   "steps": [
-    "Ensure no device is connected.",
+    "Open Poly Studio Mobile app on the Home screen with no device connected.",
+    "Observe the 'Select Device' link displayed on the Home screen.",
     "Tap the 'Select Device' link.",
-    "Observe the list of supported devices displayed with their images.",
-    "Check the bottom of the list for an 'Other devices' button.",
+    "Observe the list of supported Poly devices with images.",
+    "Scroll to the bottom of the device list.",
     "Tap the 'Other devices' button.",
-    "Verify that the Poly support web page opens."
+    "Observe the resulting action."
   ],
-  "expected": "A list of supported devices with images is displayed, and an \"Other devices\" button at the bottom opens the Poly support web page when tapped.",
+  "expected": "Tapping 'Other devices' opens the Poly support web page in a browser.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Select Device",
-    "no device connected",
-    "supported devices list",
-    "device images",
-    "Other devices button",
-    "Poly support page",
-    "device selection UI"
+    "poly-studio-mobile",
+    "other-devices",
+    "select-device",
+    "home-screen",
+    "device-list",
+    "poly-support-web-page",
+    "no-device-connected"
   ],
   "source_last_updated": "1774958838",
   "source_hash": "9f4e7748d9cd731530d28706109ee05f8f4558126860e641ea893979a8283061",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.105751Z",
+  "processed_at": "2026-04-25T05:37:16.727389Z",
   "status": "active"
 }
