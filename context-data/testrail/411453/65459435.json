@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU -  Locking mobile device during update",
-  "feature": "Software Update - DFU",
-  "scenario": "Verify that locking the mobile device during a DFU update does not interrupt the update process",
+  "feature": "Firmware Update",
+  "scenario": "Firmware update (DFU) continues running or completes successfully when mobile device is locked during the update process",
   "steps": [
-    "Start DFU on the device.",
-    "Lock the mobile device.",
-    "Unlock the device and return to the app."
+    "1. Open the Poly Studio Mobile app on the mobile device.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "3. Initiate a firmware update (DFU) for the connected Poly Bluetooth audio device.",
+    "4. While the DFU is in progress, press the Power button on the mobile device to lock the screen.",
+    "5. Wait for a reasonable duration (e.g., 30\u201360 seconds).",
+    "6. Unlock the mobile device and return to the Poly Studio Mobile app.",
+    "7. Observe the DFU status on the Device Settings or Home screen."
   ],
-  "expected": "The update is still running or has successfully completed.",
+  "expected": "The firmware update (DFU) is still running or has successfully completed. No error, interruption, or failure message is shown.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU update",
-    "device lock",
-    "update interruption",
-    "mobile device",
-    "DFU process",
-    "lock screen",
-    "firmware update",
-    "update continuity"
+    "firmware-update",
+    "dfu",
+    "poly-studio-mobile",
+    "device-settings",
+    "screen-lock",
+    "battery-persistence",
+    "update-continuity"
   ],
   "source_last_updated": "1763371055",
   "source_hash": "1ed716413f658640a27f2da172303380435a834ef12ccd9512a32ecf21f0f605",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.289914Z",
+  "processed_at": "2026-04-25T05:37:16.881571Z",
   "status": "active"
 }
