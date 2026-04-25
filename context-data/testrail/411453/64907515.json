@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "Support - Verify that data is correct after moving between Accounts linked to the same Tenant",
   "feature": "App Settings",
-  "scenario": "Support data (Tenant info) is correctly retained when switching between different accounts linked to the same Tenant in Poly Studio Mobile app",
+  "scenario": "Support/App data (Tenant info) persists correctly when switching between different accounts linked to the same Tenant in Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Log in with Account A (linked to Tenant A).",
-    "3. Navigate to Support \u2192 App and verify that Tenant A info is displayed.",
-    "4. Log out of Account A from the Account screen.",
-    "5. Log in with a different Account (also linked to Tenant A).",
-    "6. Navigate to Support \u2192 App and verify that Tenant A info is still displayed."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Log in with Account A (linked to Tenant X).",
+    "Navigate to Account screen and verify Tenant info is displayed correctly.",
+    "Log out of Account A.",
+    "Log in with Account B (also linked to Tenant X).",
+    "Navigate to Account screen and verify Tenant info is displayed correctly.",
+    "Switch back to Account A and verify Tenant info remains correct.",
+    "Repeat steps 3\u20137 for any additional accounts linked to the same Tenant X."
   ],
-  "expected": "Tenant A info is correctly retained and displayed in Support \u2192 App after switching to a different account linked to the same Tenant.",
+  "expected": "Support/App data (Tenant info) remains correct and consistent across all account switches for accounts linked to the same Tenant.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "tenant-info",
     "account-switching",
-    "support-data",
+    "multi-account",
     "data-persistence",
-    "android",
-    "account-management"
+    "account-screen",
+    "login-logout"
   ],
   "source_last_updated": "1759752637",
   "source_hash": "41c8e1e7314eb6309cc28d4aa9ec3af20fb9e0663d0505f840c37750068d5a97",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.955174Z",
+  "processed_at": "2026-04-25T09:32:26.185971Z",
   "status": "active"
 }
