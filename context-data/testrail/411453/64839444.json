@@ -7,27 +7,26 @@
   "feature": "Device Management",
   "scenario": "Device home screen shows full support (green connection dot) when installed LM version meets or exceeds required version after device launch date",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Pair the headset with the app and ensure the headset is ON and properly connected.",
-    "3. Verify the connection status icon on the Home screen shows a green dot.",
-    "4. Confirm that the device Home screen displays full support (all features and settings available) given: the device is released with a supporting build, the current date is after the device's launch date, the LM version info is configured for the connected device in the product catalogue, and the installed LM version is equal to or greater than the required version."
+    "Launch the Poly Studio Mobile app",
+    "Pair with the headset (ensure the headset is ON and properly connected)",
+    "Observe the Home screen for the connected device"
   ],
-  "expected": "The Home screen shows full support for the connected device, and the connection status icon displays a green dot.",
+  "expected": "The device Home screen shows full support. The connection status icon displays a green dot.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "home-screen",
-    "connection-status",
-    "green-dot",
+    "connection-dot",
+    "green-connection",
     "lm-version",
-    "device-launch-date",
-    "product-catalogue",
-    "full-support"
+    "firmware-version-check",
+    "device-pairing",
+    "bluetooth-connection"
   ],
   "source_last_updated": "1764663042",
   "source_hash": "86bade47ff68390bec222842ebb9d28fadda0c7ecea40ecef18f81a043aede9c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.747104Z",
+  "processed_at": "2026-04-25T07:55:31.805856Z",
   "status": "active"
 }
