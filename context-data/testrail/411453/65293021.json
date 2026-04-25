@@ -7,11 +7,13 @@
   "feature": "App Settings",
   "scenario": "Location permission \"Don't Allow\" followed by Find My Device \"Cancel\" navigates back to Poly Lens Menu (deprecated for iOS)",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. During the onboarding flow, when the location permission prompt appears, tap \"Don't Allow\".",
-    "3. Complete the onboarding flow and navigate to the Home screen.",
-    "4. Navigate to Find My Device.",
-    "5. Tap \"Cancel\"."
+    "1. Launch Poly Studio Mobile app on iOS device.",
+    "2. During onboarding, when the location permission prompt appears, tap \"Don't Allow\".",
+    "3. Complete the onboarding flow.",
+    "4. Navigate to Home screen.",
+    "5. Tap on the device name to open Device Settings.",
+    "6. Navigate to Find My Device.",
+    "7. Tap \"Cancel\"."
   ],
   "expected": "The app navigates back to the previous screen (Poly Lens Menu).",
   "coverage": [],
@@ -19,16 +21,15 @@
   "keywords": [
     "poly-studio-mobile",
     "location-permission",
-    "dont-allow",
     "find-my-device",
-    "cancel",
     "poly-lens-menu",
-    "onboarding-flow",
-    "ios"
+    "ios",
+    "onboarding",
+    "device-settings"
   ],
   "source_last_updated": "1760528550",
   "source_hash": "62bf66158149f437004441ed58354ae7e63af9140236fff468bfa844b5c679ce",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.703096Z",
+  "processed_at": "2026-04-25T07:55:31.774991Z",
   "status": "active"
 }
