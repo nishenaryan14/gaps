@@ -19,172 +19,102 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case validates that the correct commercial product name (e.g., 'Poly Sync 20', 'Voyager Focus 2') is displayed on onboarding screens instead of internal code names (e.g., 'Falcon').",
-    "No test case covers the onboarding flow at all for device name accuracy \u2014 existing onboarding tests (66363536) only check that device cards display 'correct information' but do not explicitly validate product naming vs. code names.",
-    "Missing lifecycle dimension: No test validates that the correct product name persists across onboarding screen transitions (e.g., swiping through multiple onboarding pages).",
-    "Missing device asymmetry coverage: No test validates this across different device types (Sync 20, Voyager Focus 2, Free 60, Surround 85) which may have different internal code names that could leak.",
-    "Missing state trigger: No test validates when the device name is populated \u2014 is it read from Bluetooth GATT service, from a local mapping table, or from firmware? A bug could occur only on first pairing vs. reconnection.",
-    "No test validates the onboarding screen after app reinstall or first-launch-after-pairing scenario where cached data might be stale."
+    "No existing test case validates the product name displayed on onboarding screens \u2014 all onboarding-related tests (66363536) only verify that tapping a device shows 'correct onboarding information' but never explicitly check that the displayed name matches the correct Poly product name vs. an internal code name.",
+    "No test case validates onboarding screen content after a factory reset \u2014 the bug triggers on first launch OR after factory reset, but no existing test covers the factory-reset-triggered onboarding flow.",
+    "No test case validates the onboarding screens for the Voyager Free 60+ UC (or any specific Poly device model) to ensure the correct commercial product name is displayed instead of internal code names like 'Falcon'.",
+    "No test case checks for internal code name leakage in any UI surface \u2014 there is no negative testing pattern that validates that internal/codename strings are not shown to end users.",
+    "No test case covers the onboarding flow at all for content accuracy \u2014 test 66363536 only checks that tapping a device 'displays correct onboarding information' but does not define what 'correct' means in terms of product naming, and has no assertion against the commercial product name."
   ],
   "generated_testcases": [
     {
-      "title": "TC-ONBOARD-001: Validate commercial product name on onboarding screen for Poly Sync 20 (first pairing)",
+      "title": "[Onboarding] Voyager Free 60+ UC \u2014 Verify commercial product name displayed (not internal codename 'Falcon')",
       "steps": [
-        "Factory reset the Poly Sync 20 speakerphone (hold Power + Bluetooth buttons for 10 seconds until LCD flashes red).",
-        "Open Poly Studio Mobile app on a phone that has never paired with this device.",
-        "Ensure Bluetooth is enabled on the phone.",
-        "Tap 'Add Device' or 'Pair New Device' from the main screen.",
-        "Put the Sync 20 into pairing mode (press Bluetooth button for 2 seconds until LCD flashes blue and hear 'pairing').",
-        "Select 'Poly Sync 20' from the available devices list to initiate pairing.",
-        "Observe the onboarding screen(s) that appear after successful pairing.",
-        "Swipe through all onboarding pages (typically 3-4 pages showing features/tips).",
-        "Note the device name displayed on each onboarding page."
+        "Factory reset the Voyager Free 60+ UC earbuds (hold touchscreen case button 10s or use case menu: Settings \u2192 Factory Reset).",
+        "Launch Poly Studio Mobile app.",
+        "Tap the Voyager Free 60+ UC device when it appears in the device list.",
+        "Observe the onboarding screen(s) displayed.",
+        "Screenshot the onboarding screen(s)."
       ],
-      "expected": "All onboarding screens display the commercial product name 'Poly Sync 20' (or 'Poly Sync 20+' depending on model). The internal code name 'Falcon' must NOT appear anywhere on any onboarding screen."
+      "expected": "The onboarding screen(s) display the commercial product name 'Poly Voyager Free 60+ UC' prominently. The internal code name 'Falcon' does NOT appear anywhere on any onboarding screen. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): If the bug is present, the onboarding header or body text shows 'Falcon' instead of 'Poly Voyager Free 60+ UC'."
     },
     {
-      "title": "TC-ONBOARD-002: Validate commercial product name on onboarding screen for Voyager Focus 2 (first pairing)",
+      "title": "[Onboarding] First launch after factory reset \u2014 Verify product name on all onboarding pages",
       "steps": [
-        "Factory reset the Voyager Focus 2 headset (hold the Call button + Mute button for 5 seconds until LEDs flash red).",
-        "Open Poly Studio Mobile app on a phone that has never paired with this device.",
-        "Ensure Bluetooth is enabled on the phone.",
-        "Tap 'Add Device' or 'Pair New Device' from the main screen.",
-        "Put the Voyager Focus 2 into pairing mode (slide the Power switch to the Bluetooth position and hold for 3 seconds until LED flashes blue).",
-        "Select 'Voyager Focus 2' from the available devices list to initiate pairing.",
-        "Observe the onboarding screen(s) that appear after successful pairing.",
-        "Swipe through all onboarding pages.",
-        "Note the device name displayed on each onboarding page."
+        "Factory reset the Voyager Free 60+ UC earbuds.",
+        "Clear Poly Studio Mobile app data (Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Storage \u2192 Clear data).",
+        "Launch Poly Studio Mobile app.",
+        "Complete Bluetooth pairing flow if prompted.",
+        "Tap the Voyager Free 60+ UC device.",
+        "Swipe through ALL onboarding pages/screens until the final 'Done' or 'Get Started' button.",
+        "For each onboarding page, capture the product name text displayed."
       ],
-      "expected": "All onboarding screens display the commercial product name 'Voyager Focus 2'. The internal code name must NOT appear anywhere on any onboarding screen."
+      "expected": "Every onboarding page displays the commercial product name 'Poly Voyager Free 60+ UC'. No page displays 'Falcon' or any other internal code name. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): If the bug is present, the first onboarding page (or the header) shows 'Falcon' as the device name, especially on the factory-reset-triggered onboarding flow."
     },
     {
-      "title": "TC-ONBOARD-003: Validate commercial product name on onboarding screen for Poly Free 60 (first pairing)",
+      "title": "[Onboarding] App reinstall \u2014 Verify no internal codename leakage on onboarding",
       "steps": [
-        "Factory reset the Poly Free 60 earbuds (place in charging case, hold both touch sensors for 10 seconds until LEDs flash red).",
-        "Open Poly Studio Mobile app on a phone that has never paired with this device.",
-        "Ensure Bluetooth is enabled on the phone.",
-        "Tap 'Add Device' or 'Pair New Device' from the main screen.",
-        "Put the Free 60 into pairing mode (remove from case, press and hold both earbud touch sensors for 3 seconds until LEDs flash blue).",
-        "Select 'Poly Free 60' from the available devices list to initiate pairing.",
-        "Observe the onboarding screen(s) that appear after successful pairing.",
-        "Swipe through all onboarding pages.",
-        "Note the device name displayed on each onboarding page."
+        "Uninstall Poly Studio Mobile app.",
+        "Reboot phone.",
+        "Install Poly Studio Mobile app fresh from poly.com-software or Play Store.",
+        "Launch app and grant all permissions.",
+        "Pair Voyager Free 60+ UC earbuds (factory reset state).",
+        "Tap the device to trigger onboarding.",
+        "Inspect all text elements on all onboarding screens."
       ],
-      "expected": "All onboarding screens display the commercial product name 'Poly Free 60'. The internal code name must NOT appear anywhere on any onboarding screen."
+      "expected": "All onboarding screens use the commercial product name 'Poly Voyager Free 60+ UC'. No occurrence of 'Falcon', 'VF60', or any internal engineering codename is visible. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): If the bug is present, the onboarding title or subtitle contains 'Falcon' as a placeholder string that was not replaced with the commercial name."
     },
     {
-      "title": "TC-ONBOARD-004: Validate commercial product name on onboarding screen for Poly Surround 85 (first pairing)",
+      "title": "[Onboarding] Negative test \u2014 Assert no internal codename strings in any onboarding UI element",
       "steps": [
-        "Factory reset the Poly Surround 85 earbuds (place in charging case, hold both touch sensors for 10 seconds until LEDs flash red).",
-        "Open Poly Studio Mobile app on a phone that has never paired with this device.",
-        "Ensure Bluetooth is enabled on the phone.",
-        "Tap 'Add Device' or 'Pair New Device' from the main screen.",
-        "Put the Surround 85 into pairing mode (remove from case, press and hold both earbud touch sensors for 3 seconds until LEDs flash blue).",
-        "Select 'Poly Surround 85' from the available devices list to initiate pairing.",
-        "Observe the onboarding screen(s) that appear after successful pairing.",
-        "Swipe through all onboarding pages.",
-        "Note the device name displayed on each onboarding page."
+        "Factory reset Voyager Free 60+ UC earbuds.",
+        "Launch Poly Studio Mobile app and pair the device.",
+        "Tap the device to enter onboarding flow.",
+        "Using UI Automator Viewer or Appium, extract all visible text elements (TextView, Button, ImageView content descriptions) from all onboarding screens.",
+        "Search extracted strings for: 'Falcon', 'falcon', 'FALCON', 'VF60', 'vf60', 'voyager_free_60', 'free60'.",
+        "Repeat for any tooltip, subtitle, or accessibility label."
       ],
-      "expected": "All onboarding screens display the commercial product name 'Poly Surround 85'. The internal code name must NOT appear anywhere on any onboarding screen."
+      "expected": "None of the internal codename strings ('Falcon', 'VF60', 'voyager_free_60', 'free60') appear in any visible UI element, accessibility label, or content description on any onboarding screen. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): If the bug is present, at least one UI element contains 'Falcon' (case-insensitive) as its displayed text or content description."
     },
     {
-      "title": "TC-ONBOARD-005: Validate product name persists across onboarding screen swipes (Poly Sync 20)",
+      "title": "[Onboarding] Voyager Free 60+ UC \u2014 Verify product name persists across onboarding \u2192 dismiss \u2192 re-onboarding",
       "steps": [
-        "Factory reset the Poly Sync 20 speakerphone.",
-        "Open Poly Studio Mobile app on a phone that has never paired with this device.",
-        "Pair the Sync 20 as described in TC-ONBOARD-001 steps 3-6.",
-        "When the first onboarding screen appears, note the device name displayed.",
-        "Swipe left to navigate to the second onboarding page.",
-        "Verify the device name displayed on the second page.",
-        "Swipe left to navigate to the third onboarding page.",
-        "Verify the device name displayed on the third page.",
-        "Swipe left to navigate to the fourth onboarding page (if present).",
-        "Verify the device name displayed on the fourth page.",
-        "Swipe right to navigate back to the first onboarding page.",
-        "Verify the device name is still correct on the first page."
+        "Factory reset Voyager Free 60+ UC earbuds.",
+        "Launch Poly Studio Mobile app and pair the device.",
+        "Tap device \u2192 observe onboarding screen 1 \u2192 verify product name is 'Poly Voyager Free 60+ UC'.",
+        "Tap 'Skip' or back out of onboarding (do NOT complete it).",
+        "Kill the app (swipe from recents).",
+        "Reopen app \u2192 tap the device again \u2192 observe onboarding screen 1.",
+        "Verify product name again."
       ],
-      "expected": "The commercial product name 'Poly Sync 20' is consistently displayed across all onboarding pages. The name does not change, flicker, or revert to an internal code name when swiping forward or backward through the onboarding carousel."
+      "expected": "Onboarding screen 1 displays 'Poly Voyager Free 60+ UC' both before and after app kill. No internal codename appears. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): If the bug is present, the product name shows 'Falcon' on the first onboarding screen after re-launching the app."
     },
     {
-      "title": "TC-ONBOARD-006: Validate product name on onboarding after app force-kill and relaunch during onboarding flow",
+      "title": "[Onboarding] Device re-pair after factory reset \u2014 Verify onboarding content accuracy for Voyager Free 60+ UC",
       "steps": [
-        "Factory reset the Poly Sync 20 speakerphone.",
-        "Open Poly Studio Mobile app on a phone that has never paired with this device.",
-        "Pair the Sync 20 as described in TC-ONBOARD-001 steps 3-6.",
-        "When the first onboarding screen appears, note the device name displayed.",
-        "Press the Home button to background the app.",
-        "Open the Recent Apps menu and swipe the Poly Studio Mobile app away to force-kill it.",
-        "Reopen Poly Studio Mobile app.",
-        "Observe the screen that appears (expecting onboarding to resume or main device screen).",
-        "If onboarding resumes, verify the device name on all onboarding pages.",
-        "If the main device screen appears, navigate to the device settings and verify the device name shown on the device card."
+        "Factory reset Voyager Free 60+ UC earbuds.",
+        "Open Poly Studio Mobile app \u2192 pair device \u2192 complete onboarding fully (tap 'Done').",
+        "Navigate to Device \u2192 Audio Settings \u2192 verify settings page loads correctly.",
+        "Go back to device list \u2192 forget the device (Settings \u2192 Forget Device).",
+        "Factory reset earbuds again.",
+        "Re-pair the earbuds with the app.",
+        "Tap device \u2192 observe onboarding screens again.",
+        "Verify product name on all screens."
       ],
-      "expected": "After force-kill and relaunch, the commercial product name 'Poly Sync 20' is correctly displayed \u2014 either on the resumed onboarding screens or on the main device card. No internal code name appears."
+      "expected": "Onboarding screens display 'Poly Voyager Free 60+ UC' on every re-pair cycle. No internal codename 'Falcon' appears. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): If the bug is present, the second onboarding flow after re-pair shows 'Falcon' instead of the commercial name, indicating the codename is cached or not properly replaced on repeated factory-reset flows."
     },
     {
-      "title": "TC-ONBOARD-007: Validate product name on onboarding after Bluetooth disconnect/reconnect during onboarding",
+      "title": "[Onboarding] IMMEDIATE STATE TRIGGER \u2014 Verify product name on onboarding when app is killed mid-flow",
       "steps": [
-        "Factory reset the Poly Sync 20 speakerphone.",
-        "Open Poly Studio Mobile app on a phone that has never paired with this device.",
-        "Pair the Sync 20 as described in TC-ONBOARD-001 steps 3-6.",
-        "When the first onboarding screen appears, note the device name displayed.",
-        "While on the first onboarding page, turn off Bluetooth on the phone from Quick Settings.",
-        "Wait 5 seconds, then turn Bluetooth back on.",
-        "Wait for the app to reconnect to the Sync 20.",
-        "Observe the onboarding screen \u2014 does it remain visible or does it dismiss?",
-        "If onboarding remains, verify the device name on all pages.",
-        "If onboarding dismisses, navigate to the main device screen and verify the device name on the device card."
+        "Factory reset Voyager Free 60+ UC earbuds.",
+        "Launch Poly Studio Mobile app \u2192 pair device \u2192 tap device to start onboarding.",
+        "On onboarding screen 1, IMMEDIATELY kill the app (force-stop via Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Force Stop) WITHOUT navigating to any other screen.",
+        "Reopen the app.",
+        "Tap the device again.",
+        "Observe the onboarding screen(s)."
       ],
-      "expected": "After Bluetooth disconnect and reconnect during onboarding, the commercial product name 'Poly Sync 20' is correctly displayed. No internal code name appears."
-    },
-    {
-      "title": "TC-ONBOARD-008: Validate product name on onboarding after app reinstall (first-launch-after-pairing scenario)",
-      "steps": [
-        "Factory reset the Poly Sync 20 speakerphone.",
-        "Open Poly Studio Mobile app on a phone that has never paired with this device.",
-        "Pair the Sync 20 as described in TC-ONBOARD-001 steps 3-6.",
-        "Complete the full onboarding flow (swipe through all pages and tap 'Get Started' or 'Done').",
-        "Verify the device is shown on the main screen with the correct name 'Poly Sync 20'.",
-        "Uninstall the Poly Studio Mobile app from the phone.",
-        "Reinstall the Poly Studio Mobile app from the Play Store or poly.com-software.",
-        "Open the freshly installed app.",
-        "Do NOT factory reset the Sync 20 \u2014 it should still be paired in the phone's Bluetooth settings.",
-        "Tap 'Add Device' or wait for the app to detect the already-paired Sync 20.",
-        "Observe the onboarding screen(s) that appear.",
-        "Note the device name displayed on each onboarding page."
-      ],
-      "expected": "After app reinstall, the onboarding screens display the commercial product name 'Poly Sync 20'. The app should correctly read the device name from the Bluetooth GATT service or local mapping, not from stale cached data. No internal code name appears."
-    },
-    {
-      "title": "TC-ONBOARD-009: Validate product name on onboarding when device is already paired in system Bluetooth but first time in app",
-      "steps": [
-        "Factory reset the Poly Sync 20 speakerphone.",
-        "Using the phone's system Settings \u2192 Bluetooth, manually pair the Sync 20 (do NOT open Poly Studio Mobile app).",
-        "Verify the Sync 20 shows as 'Poly Sync 20' in the system Bluetooth device list.",
-        "Open Poly Studio Mobile app for the first time.",
-        "Observe the onboarding screen(s) that appear when the app detects the already-paired Sync 20.",
-        "Note the device name displayed on each onboarding page.",
-        "Swipe through all onboarding pages and verify the name on each."
-      ],
-      "expected": "The onboarding screens display the commercial product name 'Poly Sync 20' even when the device was paired via system Bluetooth settings first. The app must not fall back to an internal code name when the device is already known to the OS Bluetooth stack."
-    },
-    {
-      "title": "TC-ONBOARD-010: Validate product name on onboarding for Voyager Focus 2 after reconnection (not first pairing)",
-      "steps": [
-        "Factory reset the Voyager Focus 2 headset.",
-        "Open Poly Studio Mobile app on a phone that has never paired with this device.",
-        "Pair the Voyager Focus 2 and complete the full onboarding flow.",
-        "Verify the device is shown on the main screen with the correct name 'Voyager Focus 2'.",
-        "Turn off the Voyager Focus 2 headset (slide Power switch to Off).",
-        "Wait 10 seconds, then turn the headset back on.",
-        "Wait for automatic reconnection.",
-        "Observe whether the onboarding screen reappears (it should not for an already-paired device).",
-        "If onboarding does reappear (e.g., due to app logic), verify the device name on all onboarding pages.",
-        "If onboarding does not reappear, verify the device name on the main device card."
-      ],
-      "expected": "On reconnection of an already-paired Voyager Focus 2, the commercial product name 'Voyager Focus 2' is correctly displayed. If onboarding reappears, no internal code name appears on any onboarding screen."
+      "expected": "The onboarding screen(s) display 'Poly Voyager Free 60+ UC'. No internal codename 'Falcon' appears. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): If the bug is present, killing the app mid-onboarding causes the product name to fall back to the internal codename 'Falcon' on re-launch, because the commercial name was not yet persisted to the onboarding state."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:09.771040Z"
+  "processed_at": "2026-04-25T09:45:49.454052Z"
 }
