@@ -5,16 +5,18 @@
   "project": "411453",
   "title": "Software Update - DFU - HS low battery: multiple clicks on buttons",
   "feature": "Firmware Update",
-  "scenario": "DFU blocked when headset battery is below 5%; rapid button clicks on update dialogs should not break app flow",
+  "scenario": "DFU should be blocked when headset battery is below 5% and not on charger; rapid button clicks must not break app or dialog flow",
   "steps": [
-    "1. Open Poly Studio Mobile app on the Home screen.",
-    "2. Ensure the connected headset battery level is below 5%.",
-    "3. Navigate to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
-    "4. Tap the 'Update' or 'Start' button.",
-    "5. If a confirmation dialog appears, tap 'OK' or 'Continue'.",
-    "6. Rapidly tap the 'Update' / 'Continue' / 'Start' buttons and dialog 'OK' buttons multiple times in quick succession."
+    "1. Launch Poly Studio Mobile app on Android.",
+    "2. Connect a Bluetooth headset with battery level below 5% (and not plugged into power).",
+    "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "4. Locate the DFU (Device Firmware Update) option and tap it.",
+    "5. Observe that the DFU option is disabled or a warning is shown indicating low battery.",
+    "6. If the DFU flow is accessible despite low battery, rapidly tap the 'Update', 'Continue', or 'Start' buttons multiple times in quick succession.",
+    "7. Rapidly tap any dialog 'OK' buttons that appear during the DFU flow.",
+    "8. Observe the app and dialog behavior during and after the rapid clicks."
   ],
-  "expected": "The app should block the DFU process due to low battery (below 5%). Rapid tapping should not bypass the low-battery check, and the app should remain stable without crashes, freezes, or unexpected dialog behavior.",
+  "expected": "DFU should not be possible when the headset battery is below 5% and not plugged into power. The app should either disable the DFU option or show a clear warning preventing the update. Rapid clicking on buttons should not crash the app, cause UI freezes, or break the dialog flow.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,13 +25,13 @@
     "firmware-update",
     "poly-studio-mobile",
     "rapid-button-clicks",
-    "update-dialog",
-    "app-flow-stability",
-    "battery-threshold"
+    "dialog-flow",
+    "battery-persistence",
+    "device-settings"
   ],
   "source_last_updated": "1763371834",
   "source_hash": "55a454a73f03bc851618f25adf612376e06f7364f988f153c7d7ac666430ea76",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.959739Z",
+  "processed_at": "2026-04-25T08:21:31.032728Z",
   "status": "active"
 }
