@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Device Settings - All settings can be changed",
   "feature": "Device Settings",
-  "scenario": "All non-toggle settings in Device Settings can be changed and display correctly after value selection",
+  "scenario": "All non-toggle settings in Device Settings can be changed and updated correctly via picker selection",
   "steps": [
-    "1. Pair the headset with the phone and launch the Poly Studio Mobile app.",
+    "1. Pair the Poly Bluetooth headset with the mobile device and launch the Poly Studio Mobile app.",
     "2. From the Home screen, tap the connected [Device Name] to open Device Settings.",
-    "3. Tap any non-toggle option (e.g., Language, Sidetone, or similar picker-based setting).",
-    "4. Verify that a picker dialog displays listing all available values for that option.",
-    "5. Select any value from the picker.",
-    "6. Confirm that the picker closes and the selected option updates to show the new value on the Device Settings screen.",
-    "7. Repeat steps 3\u20136 for every non-toggle option available for that device.",
-    "8. After changing all options, verify that all updated values display correctly on the Device Settings screen."
+    "3. Tap any non-toggle option (e.g., Language, Sidetone, Voice Prompts, etc.) \u2014 a picker should display listing all available values.",
+    "4. Select any value from the picker \u2014 the picker closes and the option updates to reflect the newly selected value.",
+    "5. Repeat steps 3\u20134 for every available non-toggle option on that device.",
+    "6. Verify that all changes are properly displayed and persisted on the Device Settings screen."
   ],
-  "expected": "All non-toggle settings can be changed via a picker. The picker displays all available values, closes upon selection, and the Device Settings screen correctly reflects each new value.",
+  "expected": "All non-toggle settings in Device Settings can be changed. Tapping a non-toggle option opens a picker with all available values. Selecting a value closes the picker and updates the option. All changes are properly displayed and persisted on the Device Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "device-settings",
+    "picker-selection",
     "poly-studio-mobile",
-    "picker-dialog",
-    "value-selection",
     "sidetone",
-    "language-setting",
+    "voice-prompts",
     "settings-persistence",
-    "ui-update"
+    "non-toggle-options",
+    "language-setting"
   ],
   "source_last_updated": "1763549465",
   "source_hash": "ee74d23177e7a7ccb717e31fe60c88ac8327cbd8b3e898bba062b3f3da394cfb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.800387Z",
+  "processed_at": "2026-04-25T07:55:31.881790Z",
   "status": "active"
 }
