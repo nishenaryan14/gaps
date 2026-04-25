@@ -1,137 +1,119 @@
 [
   {
-    "title": "TC-FW-LANG-001: Language selection UI stale after firmware update \u2014 verify app restart required to reflect new language",
+    "title": "TC-LANG-001: Verify displayed language in Device Settings immediately after DFU completes (Poly Sync 20+)",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to a supported Bluetooth speakerphone (e.g., Poly Sync 20).",
-      "2. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "3. Note the currently selected language (e.g., 'English').",
-      "4. Go to Device \u2192 Software & Updates and check for a firmware update.",
-      "5. If an update is available, tap the update banner and confirm the update.",
-      "6. Wait for the firmware update to complete (device restarts automatically).",
-      "7. After device reconnects, immediately navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection WITHOUT closing the app.",
-      "8. Observe the language dropdown value displayed.",
-      "9. Change the language selection to a different language (e.g., 'Deutsch').",
-      "10. Tap 'Apply' or 'Save' if prompted.",
-      "11. Observe the result of the language change attempt."
+      "Open Poly Studio Mobile app on the paired mobile device.",
+      "Tap the [Sync 20+] device name from the home screen to enter Device Settings.",
+      "Navigate to Device Settings \u2192 Language selection and note the currently displayed language (e.g., 'English').",
+      "Go back to Device Settings main screen.",
+      "Initiate a firmware update via Device Settings \u2192 Firmware Update \u2192 Check for Updates.",
+      "Allow the firmware update to complete 100% and observe the 'Update successful' confirmation pop-up.",
+      "Do NOT close or restart the app. Immediately tap OK/dismiss the pop-up.",
+      "Navigate back to Device Settings \u2192 Language selection.",
+      "Observe the language value displayed in the Language selection row."
     ],
-    "expected": "Step 8: The language dropdown still shows the pre-update language (e.g., 'English'), not reflecting any language changes from the firmware update. Step 11: The app displays the 'Update currently not available' dialog or the language change is silently rejected. The UI state is stale and does not match the actual device state after the firmware update."
+    "expected": "The Language selection row displays the newly updated language (the language selected during the firmware update process), NOT the previous language. If no language was changed during the update, the displayed language should remain the same as before the update."
   },
   {
-    "title": "TC-FW-LANG-002: Language selection works correctly only after app restart post-firmware-update",
+    "title": "TC-LANG-002: Verify 'Update currently not available' dialog does NOT appear when tapping Language selection post-update (Poly Sync 20+)",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to a supported Bluetooth speakerphone.",
-      "2. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection and note the current language.",
-      "3. Go to Device \u2192 Software & Updates and perform a firmware update.",
-      "4. Wait for the update to complete and the device to restart and reconnect.",
-      "5. Without changing any settings, fully close the Poly Studio Mobile app (swipe from recents or force-stop).",
-      "6. Relaunch Poly Studio Mobile app and wait for the device to reconnect.",
-      "7. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "8. Observe the language dropdown value.",
-      "9. Change the language to a different option (e.g., from 'English' to 'Fran\u00e7ais').",
-      "10. Tap 'Apply' or 'Save'.",
-      "11. Navigate away from Audio Settings (e.g., tap back to Device screen), then return to Audio Settings \u2192 Language Selection.",
-      "12. Verify the language selection persists."
+      "Open Poly Studio Mobile app and connect to [Sync 20+].",
+      "Navigate to Device Settings \u2192 Language selection and note the current language.",
+      "Perform a firmware update that includes a language change (e.g., change from English to French during the update flow).",
+      "Wait for the update to complete successfully and dismiss the success pop-up.",
+      "Immediately navigate to Device Settings \u2192 Language selection and tap on it.",
+      "Observe the screen/dialog that appears."
     ],
-    "expected": "Step 8: The language dropdown now reflects the correct post-update language state (may differ from pre-update if the firmware changed language options). Step 10: The language change is accepted without any error dialog. Step 12: The selected language persists after navigating away and back."
+    "expected": "The Language selection screen opens normally showing the list of available languages with the newly updated language selected. The 'Update currently not available' blocking dialog does NOT appear."
   },
   {
-    "title": "TC-FW-LANG-003: 'Update currently not available' dialog appears when changing language post-firmware-update without app restart",
+    "title": "TC-LANG-003: Verify Language selection UI reflects updated language after app kill and relaunch (Poly Sync 20+)",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to a supported Bluetooth speakerphone.",
-      "2. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection and set language to 'English'.",
-      "3. Go to Device \u2192 Software & Updates and trigger a firmware update.",
-      "4. Wait for the firmware update to complete and the device to reconnect.",
-      "5. Do NOT restart the app. Immediately navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "6. Tap the language dropdown and select a different language (e.g., 'Espa\u00f1ol').",
-      "7. Tap 'Apply' or 'Save'.",
-      "8. Observe the dialog or message that appears.",
-      "9. Dismiss the dialog, then fully close and restart the Poly Studio Mobile app.",
-      "10. Navigate again to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "11. Attempt to change the language again to 'Espa\u00f1ol' and tap 'Apply'."
+      "Open Poly Studio Mobile app and connect to [Sync 20+].",
+      "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
+      "Perform a firmware update that changes the device language (e.g., English \u2192 German).",
+      "Wait for the update to complete successfully and dismiss the success pop-up.",
+      "Fully close (kill) the Poly Studio Mobile app from the phone's recent apps menu.",
+      "Reopen the Poly Studio Mobile app.",
+      "Wait for the app to reconnect to [Sync 20+].",
+      "Navigate to Device Settings \u2192 Language selection.",
+      "Observe the language value displayed."
     ],
-    "expected": "Step 8: The app displays the 'Update currently not available' dialog, preventing the language change. Step 11: After app restart, the language change succeeds without any error dialog, confirming the issue was a stale UI state."
+    "expected": "The Language selection row displays the updated language (German) that was set during the firmware update. The app correctly reads and displays the current device language after a full app restart, not a stale/cached value."
   },
   {
-    "title": "TC-FW-LANG-004: Firmware version display stale after firmware update \u2014 requires app restart to refresh",
+    "title": "TC-LANG-004: Verify firmware version displayed post-update matches updated language state (Poly Sync 20+)",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to a supported Bluetooth speakerphone.",
-      "2. Navigate to Device \u2192 [Device Name] \u2192 Software & Updates.",
-      "3. Note the current firmware version displayed (e.g., '1.2.3').",
-      "4. Perform a firmware update to a newer version (e.g., '1.2.4').",
-      "5. Wait for the update to complete and the device to restart and reconnect.",
-      "6. Immediately navigate to Device \u2192 [Device Name] \u2192 Software & Updates WITHOUT restarting the app.",
-      "7. Observe the firmware version displayed.",
-      "8. Fully close and restart the Poly Studio Mobile app.",
-      "9. Navigate again to Device \u2192 [Device Name] \u2192 Software & Updates.",
-      "10. Observe the firmware version displayed."
+      "Open Poly Studio Mobile app and connect to [Sync 20+].",
+      "Navigate to Device Settings \u2192 About/Device Info and note the current firmware version (e.g., v1.2.3).",
+      "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
+      "Perform a firmware update that updates both the firmware version (e.g., to v1.2.4) and changes the language (e.g., English \u2192 Spanish).",
+      "Wait for the update to complete successfully and dismiss the success pop-up.",
+      "Navigate to Device Settings \u2192 About/Device Info and note the new firmware version.",
+      "Navigate to Device Settings \u2192 Language selection and observe the displayed language.",
+      "Fully kill and relaunch the Poly Studio Mobile app.",
+      "Reconnect to [Sync 20+] and navigate to Device Settings \u2192 About/Device Info and Language selection.",
+      "Compare the firmware version and language values before and after the restart."
     ],
-    "expected": "Step 7: The firmware version still shows the old version (e.g., '1.2.3') despite the update completing successfully. Step 10: After app restart, the firmware version correctly shows the new version (e.g., '1.2.4'). This confirms the firmware version display is not refreshed after DFU without an app restart."
+    "expected": "Both the firmware version (v1.2.4) and the language (Spanish) are correctly displayed immediately after the update AND persist correctly after app kill/relaunch. There is no mismatch where the firmware version updates but the language remains stale, or vice versa."
   },
   {
-    "title": "TC-FW-LANG-005: Language selection edge case \u2014 rapid language switching after firmware update without app restart",
+    "title": "TC-LANG-005: Verify Language selection behavior on device without charge case (Poly Sync 20) \u2014 post-update display",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to a supported Bluetooth speakerphone.",
-      "2. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "3. Set language to 'English'.",
-      "4. Go to Device \u2192 Software & Updates and perform a firmware update.",
-      "5. Wait for the update to complete and the device to reconnect.",
-      "6. Without restarting the app, navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "7. Rapidly switch the language dropdown between 3 different languages (e.g., 'Deutsch' \u2192 'Fran\u00e7ais' \u2192 'Espa\u00f1ol'), tapping 'Apply' after each change.",
-      "8. Observe the behavior after each attempt.",
-      "9. Close and restart the Poly Studio Mobile app.",
-      "10. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "11. Check which language is currently selected.",
-      "12. Attempt to change to a different language and verify it works."
+      "Connect to a [Poly Sync 20] (non-Plus variant, no smart charge case) via the Poly Studio Mobile app.",
+      "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
+      "Initiate a firmware update via Device Settings \u2192 Firmware Update \u2192 Check for Updates, selecting a different language (e.g., change to French).",
+      "Allow the firmware update to complete 100% and dismiss the success pop-up.",
+      "Navigate to Device Settings \u2192 Language selection and observe the displayed language.",
+      "Kill and relaunch the Poly Studio Mobile app.",
+      "Reconnect to [Sync 20] and navigate back to Device Settings \u2192 Language selection.",
+      "Observe the displayed language again."
     ],
-    "expected": "Step 8: Each language change attempt shows the 'Update currently not available' dialog or is silently rejected. The dropdown may reset to the pre-update language after each failed attempt. Step 11: After app restart, the language shown is the pre-update language (since no changes were persisted). Step 12: Language change succeeds after restart, confirming the stale UI state was the root cause."
+    "expected": "On Poly Sync 20 (no charge case), the Language selection correctly displays the updated language (French) both immediately after the update and after app kill/relaunch. The behavior is consistent with earbud devices \u2014 the absence of a charge case does not cause the language to revert or display incorrectly."
   },
   {
-    "title": "TC-FW-LANG-006: Language selection UI state after firmware update that adds new language options",
+    "title": "TC-LANG-006: Verify tapping Language selection a second time post-update does not show stale dialog (Poly Sync 20+)",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to a supported Bluetooth speakerphone running firmware version A (which supports languages: English, Deutsch, Fran\u00e7ais).",
-      "2. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection and verify the available languages match the expected list.",
-      "3. Go to Device \u2192 Software & Updates and update firmware to version B (which adds support for 'Italiano' and 'Espa\u00f1ol').",
-      "4. Wait for the update to complete and the device to reconnect.",
-      "5. Without restarting the app, navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "6. Tap the language dropdown and observe the list of available languages.",
-      "7. Check if 'Italiano' and 'Espa\u00f1ol' appear in the list.",
-      "8. Fully close and restart the Poly Studio Mobile app.",
-      "9. Navigate again to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "10. Tap the language dropdown and observe the list of available languages."
+      "Open Poly Studio Mobile app and connect to [Sync 20+].",
+      "Navigate to Device Settings \u2192 Language selection and note the current language.",
+      "Perform a firmware update that changes the language (e.g., English \u2192 Italian).",
+      "Wait for the update to complete successfully and dismiss the success pop-up.",
+      "Navigate to Device Settings \u2192 Language selection and tap to open it. Verify the language list opens normally.",
+      "Close the language selection screen (go back to Device Settings).",
+      "Immediately tap Language selection again to open it a second time.",
+      "Observe the screen that appears."
     ],
-    "expected": "Step 6-7: The language dropdown still shows only the old language list (English, Deutsch, Fran\u00e7ais). The new languages ('Italiano', 'Espa\u00f1ol') are NOT visible. Step 10: After app restart, the dropdown correctly shows the updated language list including 'Italiano' and 'Espa\u00f1ol'. This confirms that language capability changes from firmware updates are not reflected in the UI until the app is restarted."
+    "expected": "The Language selection screen opens normally on the second tap as well. No 'Update currently not available' dialog or any other blocking dialog appears. The newly updated language (Italian) is shown as selected in the list."
   },
   {
-    "title": "TC-FW-LANG-007: App lifecycle edge case \u2014 app backgrounded during firmware update, language state on return",
+    "title": "TC-LANG-007: Verify language display after Bluetooth disconnect/reconnect post-update (Poly Sync 20+)",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to a supported Bluetooth speakerphone.",
-      "2. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection and set to 'English'.",
-      "3. Go to Device \u2192 Software & Updates and start a firmware update.",
-      "4. While the update is in progress (e.g., at 40-60%), press the Home button to background the app.",
-      "5. Wait 2 minutes, then reopen the Poly Studio Mobile app from the app switcher.",
-      "6. Wait for the firmware update to complete (device restarts and reconnects).",
-      "7. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "8. Attempt to change the language to 'Deutsch' and tap 'Apply'.",
-      "9. Observe the result.",
-      "10. Fully close and restart the app, then repeat step 7-8."
+      "Open Poly Studio Mobile app and connect to [Sync 20+].",
+      "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
+      "Perform a firmware update that changes the language (e.g., English \u2192 Japanese).",
+      "Wait for the update to complete successfully and dismiss the success pop-up.",
+      "Navigate to Device Settings \u2192 Language selection and verify the updated language is displayed.",
+      "Disconnect Bluetooth from the phone's Bluetooth settings or turn off the Sync 20+.",
+      "Wait 10 seconds, then reconnect Bluetooth (turn Sync 20+ back on or re-pair).",
+      "Open Poly Studio Mobile app and wait for reconnection.",
+      "Navigate to Device Settings \u2192 Language selection.",
+      "Observe the displayed language."
     ],
-    "expected": "Step 8: The 'Update currently not available' dialog appears or the change is rejected. Step 10: After app restart, the language change succeeds. The app's UI state was not refreshed even after being backgrounded and brought back to the foreground during the update lifecycle."
+    "expected": "The Language selection row displays the updated language (Japanese) after Bluetooth disconnect and reconnect. The language value is correctly re-read from the device and not cached from a previous session."
   },
   {
-    "title": "TC-FW-LANG-008: Bluetooth disconnect/reconnect post-firmware-update \u2014 language UI refresh check",
+    "title": "TC-LANG-008: Verify language selection UI when NO language change is made during firmware update (Poly Sync 20+)",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to a supported Bluetooth speakerphone.",
-      "2. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection and set to 'English'.",
-      "3. Go to Device \u2192 Software & Updates and perform a firmware update.",
-      "4. Wait for the update to complete and the device to restart and reconnect.",
-      "5. Without restarting the app, manually disconnect the Bluetooth connection from the phone's Bluetooth settings.",
-      "6. Wait 10 seconds, then reconnect to the device from the phone's Bluetooth settings.",
-      "7. Wait for the Poly Studio Mobile app to detect and reconnect to the device.",
-      "8. Navigate to Device \u2192 [Device Name] \u2192 Audio Settings \u2192 Language Selection.",
-      "9. Observe the language dropdown value.",
-      "10. Attempt to change the language and tap 'Apply'.",
-      "11. Observe the result."
+      "Open Poly Studio Mobile app and connect to [Sync 20+].",
+      "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
+      "Initiate a firmware update via Device Settings \u2192 Firmware Update \u2192 Check for Updates.",
+      "During the update flow, do NOT change the language \u2014 keep the default/current language selected.",
+      "Allow the firmware update to complete 100% and dismiss the success pop-up.",
+      "Navigate to Device Settings \u2192 Language selection and observe the displayed language.",
+      "Kill and relaunch the Poly Studio Mobile app.",
+      "Reconnect to [Sync 20+] and navigate back to Device Settings \u2192 Language selection.",
+      "Observe the displayed language again."
     ],
-    "expected": "Step 9: The language dropdown still shows the pre-update language ('English') \u2014 a Bluetooth disconnect/reconnect does NOT refresh the stale UI state. Step 10-11: The language change attempt shows the 'Update currently not available' dialog or is rejected. The UI state remains stale despite the Bluetooth reconnection."
+    "expected": "The Language selection row displays the same language (English) that was set before the update, both immediately after the update and after app kill/relaunch. No language regression or unexpected change occurs when the language is not explicitly changed during the update."
   }
 ]
