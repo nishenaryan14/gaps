@@ -5,18 +5,19 @@
   "project": "411453",
   "title": "EQ - Select a value, close the Settings screen, reopen it - the selected value persists",
   "feature": "Equalizer",
-  "scenario": "EQ setting persists correctly after navigating away from and back to Device Settings on Poly Studio Mobile app",
+  "scenario": "EQ setting persists after navigating away from and back to Device Settings on Poly Studio Mobile app",
   "steps": [
     "1. Open Poly Studio Mobile app on the Android device.",
-    "2. Navigate to Home screen and tap on the connected Poly Bluetooth audio device.",
+    "2. Navigate to Home screen and tap on the connected [Device Name].",
     "3. Go to Device Settings \u2192 Audio Settings \u2192 Equalizer.",
-    "4. Select an EQ value (e.g., Bass) from the available options (Bass, Flat, Bright, Custom EQ).",
-    "5. Tap the back button or gesture to close the Settings screen and return to the Home screen.",
-    "6. Navigate back to Device Settings \u2192 Audio Settings \u2192 Equalizer.",
-    "7. Observe the currently selected EQ value.",
-    "8. Repeat steps 3\u20137 for each remaining EQ value: Flat, Bright, and Custom EQ."
+    "4. Select an EQ value (e.g., Bass, Flat, Bright, or Custom EQ).",
+    "5. Tap the back button or navigate away from the Equalizer screen to return to Device Settings.",
+    "6. Close the Settings screen entirely (e.g., press back or home to exit the app).",
+    "7. Re-open Poly Studio Mobile app and navigate back to Device Settings \u2192 Audio Settings \u2192 Equalizer.",
+    "8. Observe the currently selected EQ value.",
+    "9. Repeat steps 4\u20138 for each of the remaining EQ values (Bass, Flat, Bright, Custom EQ)."
   ],
-  "expected": "The previously selected EQ value (Bass, Flat, Bright, or Custom EQ) persists and is shown as selected after navigating away from and back to the Equalizer settings.",
+  "expected": "The previously selected EQ value (Bass, Flat, Bright, or Custom EQ) persists and is shown as selected when returning to the Equalizer settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,14 +26,12 @@
     "eq-persistence",
     "device-settings",
     "audio-settings",
-    "bass",
-    "flat",
-    "bright",
-    "custom-eq"
+    "eq-value-retention",
+    "android-app"
   ],
   "source_last_updated": "1761144515",
   "source_hash": "fc29ae97a9d934eae0d210d2d5eb2f4fd5e8ec723a170c2e507e1e11a2f96319",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.924543Z",
+  "processed_at": "2026-04-25T08:21:31.002000Z",
   "status": "active"
 }
