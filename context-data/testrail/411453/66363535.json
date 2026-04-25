@@ -8,26 +8,26 @@
   "scenario": "Tutorial screen navigation to Onboarding screen displays correct start page with proper image and text per Figma design",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. If this is a fresh install or first launch, observe the Tutorial screen.",
-    "3. Navigate through the Tutorial screen (e.g., swipe or tap 'Next' as applicable) until the option to proceed to Onboarding appears.",
-    "4. Tap the button or link to proceed from the Tutorial screen to the Onboarding screen.",
-    "5. Observe the Onboarding start page that is displayed."
+    "2. If the app is opened for the first time, the Tutorial screen will appear. Swipe through the Tutorial screens until the final screen.",
+    "3. On the final Tutorial screen, tap the \"Get Started\" or \"Next\" button to navigate to the Onboarding screen.",
+    "4. Observe the Onboarding screen that appears.",
+    "5. Compare the displayed image and text on the Onboarding screen against the Figma design specifications."
   ],
-  "expected": "The correct start Onboarding page is displayed with the proper image and text as specified in the Figma design.",
+  "expected": "The Onboarding screen displays the correct start Onboarding page with the proper image and text as specified in the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "tutorial-screen",
     "onboarding-screen",
-    "first-launch",
-    "ui-navigation",
+    "get-started-button",
     "figma-design",
-    "start-page"
+    "ui-navigation",
+    "screen-transition"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "d23063d85310c1b0813895f8f68e532d9d041bdcfa23c67cd1cbb293c4487749",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.944007Z",
+  "processed_at": "2026-04-25T08:21:31.014257Z",
   "status": "active"
 }
