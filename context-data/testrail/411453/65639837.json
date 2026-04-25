@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "1 step DFU - User can trigger firmware update for just earbuds",
   "feature": "Firmware Updates",
-  "scenario": "Selective firmware update for earbuds only without updating charging case on Voyager Free 60+ UC",
+  "scenario": "Selective firmware update for earbuds only completes successfully while charging case remains on lower version on Voyager Free 60+ UC",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
+    "1. Open the Poly Studio Mobile app on the Home screen.",
     "2. Ensure both earbuds (Voyager Free 60+ UC) and the charging case are connected and both are on firmware version 5039 or higher.",
-    "3. From the Home screen, navigate to Settings \u2192 Update.",
-    "4. Tap the Update button to check for available firmware updates.",
-    "5. In the update screen, locate the earbuds section and tap the Update button specifically for the earbuds.",
-    "6. Wait for the firmware update process to complete."
+    "3. Navigate to Settings \u2192 Update.",
+    "4. Tap the Update button for the earbuds only (do not select the charging case update).",
+    "5. Wait for the earbuds firmware update to complete."
   ],
-  "expected": "Only the earbuds DFU (Device Firmware Update) completes successfully. The charging case remains on the lower firmware version (5039 or higher, unchanged).",
+  "expected": "Only the earbuds DFU completes successfully; the charging case remains on the lower firmware version.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "selective-firmware-update",
-    "voyager-free-60-uc",
+    "voyager-free-60-plus-uc",
     "poly-studio-mobile",
-    "earbuds-only-update",
-    "charging-case",
-    "firmware-5039",
+    "earbuds-firmware",
+    "charging-case-firmware",
+    "firmware-version-mismatch",
     "settings-update"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "dbcf5b575fc9a297204bf4e59a6159a904609759efd91d0041ac1419a3b4e093",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.961872Z",
+  "processed_at": "2026-04-25T08:21:31.033759Z",
   "status": "active"
 }
