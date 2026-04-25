@@ -5,28 +5,33 @@
   "project": "411453",
   "title": "Notifications - Device charging",
   "feature": "Notifications",
-  "scenario": "Charging notification for headset appears only when app is in background, showing headset name and \"Charging\" text, and redirects to Poly Lens home screen on tap.",
+  "scenario": "Charging notification does not appear when headset is plugged into charger while Poly Lens app is in background",
   "steps": [
-    "Launch the app and connect any Headset (ensure Headset is not fully charged).",
-    "Put the app in the background.",
-    "Plug the Headset to charger."
+    "1. Launch the Poly Studio Mobile app and connect a Bluetooth headset (not fully charged).",
+    "2. Press the Home button or switch to another app to send the Poly Studio Mobile app to the background.",
+    "3. Plug the connected headset into a charger.",
+    "4. Observe the notification that appears from the Poly Studio Mobile app.",
+    "5. Verify the notification displays the headset name and the text \"Charging\".",
+    "6. Verify the Poly Studio Mobile app icon is visible on the notification.",
+    "7. Tap the notification.",
+    "8. Observe the app that opens."
   ],
-  "expected": "Notification about charging headset appears containing the name of the headset and \"Charging\" text. Clicking on the notification redirects the user to the Poly Lens application - Home screen of the device.",
+  "expected": "A notification appears showing the headset name and \"Charging\" text, with the Poly Studio Mobile app icon visible. Tapping the notification redirects the user to the Poly Studio Mobile app's Home screen for the device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "charging notification",
-    "headset",
-    "Poly Lens app",
-    "background mode",
-    "notification redirect",
-    "headset charging",
-    "Poly Lens home screen",
-    "notification tap"
+    "charging-notification",
+    "poly-studio-mobile",
+    "background-app",
+    "bluetooth-headset",
+    "notification-display",
+    "headset-name",
+    "charging-status",
+    "app-launch"
   ],
   "source_last_updated": "1761224568",
   "source_hash": "e36f313df11dc952517a1ff1ed647627680f8436be479c07041e7d4f84e319aa",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.308032Z",
+  "processed_at": "2026-04-25T05:37:16.904071Z",
   "status": "active"
 }
