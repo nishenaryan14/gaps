@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Phone is successfully registered to Cloud",
   "feature": "App Settings",
-  "scenario": "Poly Lens app Account section shows mobile device correctly linked and appearing in lens server inventory list after login",
+  "scenario": "Poly Lens app mobile device appears in lens server inventory list and is linked to the correct device type after logging in and navigating to Account settings",
   "steps": [
-    "1. Launch the Poly Lens app on the mobile device.",
-    "2. Log in using valid credentials (email and password).",
-    "3. Tap the Menu icon (hamburger menu) in the top-left corner.",
-    "4. Tap General \u2192 Account.",
-    "5. On the Lens server (web portal), navigate to the Inventory list.",
-    "6. Verify that the mobile device appears in the inventory list.",
-    "7. Verify that the mobile device is correctly linked to the proper Poly Bluetooth audio device (e.g., headset or speakerphone)."
+    "1. Launch the Poly Lens mobile app.",
+    "2. Log in with valid credentials.",
+    "3. Navigate to Lens Menu > General > Account.",
+    "4. Verify the account details are displayed.",
+    "5. Open the Lens server inventory list (e.g., via the web portal or server interface).",
+    "6. Confirm the mobile app appears in the inventory list.",
+    "7. Verify the mobile app is linked to the proper device (Android or iPhone)."
   ],
-  "expected": "The mobile app appears in the Lens server inventory list and is correctly linked to the proper Poly audio device (Android or iPhone).",
+  "expected": "The mobile app appears on the Lens server inventory list and is linked to the proper device (Android or iPhone).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-lens-app",
-    "account-section",
-    "lens-server",
-    "inventory-list",
+    "lens-server-inventory",
+    "account-settings",
     "device-linking",
-    "mobile-device-registration",
-    "bluetooth-audio-device",
-    "login-authentication"
+    "mobile-app-registration",
+    "device-type-mapping",
+    "poly-lens-mobile",
+    "inventory-list"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "4d95180654c90e9e14f199976f16c358cf7f985cf25fe64f806d1a3e5264be1d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.957018Z",
+  "processed_at": "2026-04-25T07:55:31.986989Z",
   "status": "active"
 }
