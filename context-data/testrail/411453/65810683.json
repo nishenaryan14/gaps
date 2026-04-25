@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Charge case outside screen/third screen, right zoom in/out",
-  "feature": "Charge Case / Third Screen",
-  "scenario": "Verify zoom in/out functionality on the third screen (charge case outside) by clicking the circle button to zoom in and out, confirming new text appears and the screen returns to its original state.",
+  "feature": "App Settings",
+  "scenario": "Quick Setup Guide charge case outside screen zoom toggle via circle button does not persist or behaves unexpectedly",
   "steps": [
-    "Open QSG",
-    "Swipe to third screen",
-    "Click right circle button to zoom in (new text appears)",
-    "Click circle button again to zoom out (returns to original screen with charge case outside)"
+    "Open the Quick Setup Guide (QSG) in the Poly Studio Mobile app.",
+    "Navigate to the third screen showing the charge case outside view.",
+    "Tap the right circle button on the screen.",
+    "Observe the screen behavior.",
+    "Tap the same right circle button again.",
+    "Observe the screen behavior again."
   ],
-  "expected": "Zoom in shows new text, zoom out returns to original screen with charge case outside.",
+  "expected": "Tapping the right circle button zooms in and displays new text. Tapping the circle button again zooms out to the original charge case outside screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "zoom in/out",
-    "charge case outside",
-    "circle button",
-    "third screen",
-    "QSG",
-    "new text appears",
-    "original state",
-    "screen navigation"
+    "quick-setup-guide",
+    "poly-studio-mobile",
+    "charge-case-outside",
+    "circle-button",
+    "screen-zoom-toggle",
+    "persistence",
+    "ui-behavior"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "68af485a5115a3eabd5d692da654099984bdf20ccd46149a36e2007fd86a9ba2",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.271251Z",
+  "processed_at": "2026-04-25T05:37:16.854018Z",
   "status": "active"
 }
