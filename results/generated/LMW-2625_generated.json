@@ -1,133 +1,118 @@
 [
   {
-    "title": "DFU Flow: Device Disconnected on Software Update Page \u2014 Should Block Navigation to Three Easy Steps",
+    "title": "TC-DFU-BLOCK-001: Device disconnects mid-DFU on Software Update page \u2014 Bluetooth OFF",
     "steps": [
-      "Open Poly Studio Mobile app on Android.",
-      "Ensure a Poly device (e.g., Voyager Surround 85) is connected via Bluetooth.",
-      "Tap the device name (e.g., 'Voyager Surround 85') to open Device Details screen.",
-      "Navigate to 'Software & Updates' under the Device section.",
-      "If a firmware update is available, the Software Update page displays with a 'Continue' or 'Update' button. If no update is available, note this and use a device with a pending update.",
-      "While on the Software Update page (before tapping Continue), disable Bluetooth on the phone OR power off the device to simulate disconnection.",
-      "Wait 5 seconds for the app to detect the disconnection (observe the device status change to 'Disconnected' or 'Not Connected').",
-      "Tap the 'Continue' button on the Software Update page."
+      "Precondition: Headset connected, app on Software Update page with DFU available.",
+      "1. Tap 'Update' to begin DFU download/transfer.",
+      "2. While DFU is in progress (e.g., during download or transfer phase), turn off Bluetooth on the phone.",
+      "3. Observe the Software Update page UI.",
+      "4. Wait 5 seconds.",
+      "5. Turn Bluetooth back ON and wait for reconnection.",
+      "6. Observe the Software Update page UI again."
     ],
-    "expected": "The app MUST NOT navigate to the 'Three Easy Steps' page. Instead, the app should display an error message such as 'Device disconnected. Please reconnect to continue with the update.' or block the flow with a dialog stating 'Device is no longer connected. Please reconnect your device.' The user should remain on the Software Update page or be redirected to the device list."
+    "expected": "Step 3-4: App detects disconnection and immediately shows 'Update currently not available' or equivalent blocking message. DFU progress bar stops and does not advance. Actual (If Bug): DFU continues progressing or shows success/failure despite device being disconnected.\nStep 6: After reconnection, the app re-evaluates DFU availability. If update is still valid, the 'Update' button is re-enabled; if the DFU state is corrupted, the app shows appropriate error and offers to restart the process."
   },
   {
-    "title": "DFU Flow: Reconnect Device After Disconnect on Software Update Page \u2014 Validate Flow Recovery",
+    "title": "TC-DFU-BLOCK-002: Device disconnects mid-DFU on Software Update page \u2014 Headset power OFF",
     "steps": [
-      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Free 60).",
-      "Navigate to Device Details \u2192 Software & Updates.",
-      "Ensure a firmware update is available and you are on the Software Update page.",
-      "Disconnect the device by turning off Bluetooth on the phone.",
-      "Wait for the app to show 'Disconnected' status.",
-      "Re-enable Bluetooth and reconnect the device (put device in pairing mode if needed, or simply re-enable BT if auto-reconnect occurs).",
-      "Once the device shows as 'Connected' again, tap 'Continue' on the Software Update page."
+      "Precondition: Headset connected, app on Software Update page with DFU available.",
+      "1. Tap 'Update' to begin DFU.",
+      "2. While DFU is in progress, power OFF the headset (slide power switch to OFF).",
+      "3. Observe the Software Update page UI for 10 seconds.",
+      "4. Power ON the headset and wait for auto-reconnection.",
+      "5. Observe the Software Update page UI."
     ],
-    "expected": "After reconnection, tapping 'Continue' should successfully proceed to the 'Three Easy Steps' page (or the next step in the DFU flow). The app should correctly re-evaluate the device connection state and allow the flow to proceed only when the device is confirmed connected."
+    "expected": "Step 3: App detects headset power-off disconnection and immediately shows 'Update currently not available' blocking message. DFU progress halts. No toast or progress bar continues.\nStep 5: After reconnection, app re-evaluates DFU state. If the headset firmware is in an intermediate state, app shows 'Update incomplete \u2014 please restart update' or equivalent."
   },
   {
-    "title": "DFU Flow: App Backgrounding While on Software Update Page with Disconnected Device \u2014 State Persistence",
+    "title": "TC-DFU-BLOCK-003: Device disconnects BEFORE tapping Update \u2014 already on Software Update page",
     "steps": [
-      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Surround 85).",
-      "Navigate to Device Details \u2192 Software & Updates \u2192 Software Update page.",
-      "Disconnect the device by turning off Bluetooth.",
-      "Press the Home button to background the app.",
-      "Wait 30 seconds.",
-      "Reopen the app from the recent apps list.",
-      "Observe the current screen and device connection status.",
-      "Tap 'Continue' on the Software Update page."
+      "Precondition: Headset connected, app on Software Update page showing available update.",
+      "1. Without tapping 'Update', turn off Bluetooth on the phone.",
+      "2. Observe the Software Update page UI immediately and after 5 seconds.",
+      "3. Tap 'Update' while still disconnected.",
+      "4. Turn Bluetooth back ON and reconnect.",
+      "5. Observe the Software Update page UI."
     ],
-    "expected": "After reopening the app, the device should still show as 'Disconnected'. Tapping 'Continue' must NOT navigate to the 'Three Easy Steps' page. The app should display an appropriate error or block the flow due to the disconnected device state. The disconnected state must persist across app backgrounding."
+    "expected": "Step 2: App detects disconnection and shows 'Update currently not available' or greys out the Update button.\nStep 3: Tapping 'Update' while disconnected does nothing \u2014 no DFU starts, no progress bar appears. Actual (If Bug): DFU initiates despite no connection.\nStep 5: After reconnection, the Update button becomes active again if update is still valid."
   },
   {
-    "title": "DFU Flow: App Force-Kill While on Software Update Page with Disconnected Device \u2014 State Persistence",
+    "title": "TC-DFU-BLOCK-004: Immediate state trigger \u2014 kill app mid-DFU while disconnected",
     "steps": [
-      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Free 60).",
-      "Navigate to Device Details \u2192 Software & Updates \u2192 Software Update page.",
-      "Disconnect the device by turning off Bluetooth.",
-      "Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
-      "Reopen the Poly Studio Mobile app.",
-      "Observe the initial screen (should be device list or home screen).",
-      "Reconnect the device if not auto-connected.",
-      "Navigate back to Device Details \u2192 Software & Updates.",
-      "Tap 'Continue' on the Software Update page."
+      "Precondition: Headset connected, app on Software Update page.",
+      "1. Tap 'Update' to begin DFU.",
+      "2. While DFU is in progress, turn off Bluetooth.",
+      "3. IMMEDIATELY (within 1 second, without navigating away) force-kill the app.",
+      "4. Reopen the app.",
+      "5. Wait for headset to reconnect (turn Bluetooth back ON if needed).",
+      "6. Navigate to: Device \u2192 Software Update.",
+      "7. Observe the DFU state."
     ],
-    "expected": "The app should start fresh after force-kill. When navigating back to Software & Updates and tapping 'Continue', the app should correctly check the current device connection state. If the device is now connected, the flow should proceed normally. If still disconnected, the app must block navigation to 'Three Easy Steps'."
+    "expected": "Step 3-4: App force-kill does not corrupt the DFU state.\nStep 6-7: App shows appropriate state \u2014 either 'Update incomplete \u2014 please restart' or 'Update currently not available' depending on whether the headset reports a pending DFU. The app must not show a stuck progress bar or a false 'Update complete' state. Actual (If Bug): App resumes from a stale cached DFU state and attempts to continue the update without re-validating connection."
   },
   {
-    "title": "DFU Flow: Phone Rotation While on Software Update Page with Disconnected Device \u2014 Configuration Change Handling",
+    "title": "TC-DFU-BLOCK-005: Device-agnostic \u2014 repeat on Voyager 4210/4220 (office headset system)",
     "steps": [
-      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Surround 85).",
-      "Navigate to Device Details \u2192 Software & Updates \u2192 Software Update page.",
-      "Disconnect the device by turning off Bluetooth.",
-      "Rotate the phone from portrait to landscape (or vice versa).",
-      "Observe the screen after rotation \u2014 note if the Software Update page is preserved.",
-      "Tap 'Continue' on the Software Update page."
+      "Precondition: Voyager 4210/4220 headset connected to base and paired to phone. App on Software Update page with DFU available.",
+      "1. Tap 'Update' to begin DFU.",
+      "2. While DFU is in progress, remove the headset from the base (or power off the base).",
+      "3. Observe the Software Update page UI for 10 seconds.",
+      "4. Re-dock the headset or power on the base and wait for reconnection.",
+      "5. Observe the Software Update page UI."
     ],
-    "expected": "After rotation, the app should preserve the Software Update page state and the disconnected device status. Tapping 'Continue' must NOT navigate to the 'Three Easy Steps' page. The app should block the flow and show an appropriate error message indicating the device is disconnected."
+    "expected": "Step 3: App detects disconnection (headset disconnected from base) and shows 'Update currently not available'. DFU halts. Actual (If Bug): DFU continues on the app side despite headset being disconnected from the base.\nStep 5: After reconnection, app re-evaluates and shows available update or 'Update incomplete' as appropriate."
   },
   {
-    "title": "DFU Flow: Device Disconnection During DFU on Voyager Surround 85 (Over-the-Ear Headset) \u2014 Validate Blocking Behavior",
+    "title": "TC-DFU-BLOCK-006: Device-agnostic \u2014 repeat on Poly Surround 85 (consumer headset)",
     "steps": [
-      "Open Poly Studio Mobile app and connect a Voyager Surround 85 headset.",
-      "Navigate to Device Details \u2192 Software & Updates.",
-      "Ensure a firmware update is available.",
-      "While on the Software Update page (before tapping Continue), disconnect the headset by powering it off.",
-      "Wait 5 seconds for the app to update the connection status.",
-      "Tap 'Continue' on the Software Update page."
+      "Precondition: Poly Surround 85 connected. App on Software Update page with DFU available.",
+      "1. Tap 'Update' to begin DFU.",
+      "2. While DFU is in progress, put the headset into the charging case and close the lid (simulating disconnect).",
+      "3. Observe the Software Update page UI for 10 seconds.",
+      "4. Remove headset from case and wait for reconnection.",
+      "5. Observe the Software Update page UI."
     ],
-    "expected": "The app must detect the Voyager Surround 85 is disconnected and block navigation to the 'Three Easy Steps' page. An error dialog or message should appear: 'Device disconnected. Please reconnect to proceed with the update.' The user must not be able to proceed further in the DFU flow without a connected device."
+    "expected": "Step 3: App detects disconnection and shows 'Update currently not available'. DFU progress stops. Actual (If Bug): DFU continues or shows success despite headset being in the case.\nStep 5: After reconnection, app re-evaluates DFU state and shows appropriate UI."
   },
   {
-    "title": "DFU Flow: Device Disconnection During DFU on Poly Free 60 (Earbuds) \u2014 Validate Blocking Behavior",
+    "title": "TC-DFU-BLOCK-007: Deep lifecycle \u2014 device disconnects mid-DFU, app backgrounded, then reconnected",
     "steps": [
-      "Open Poly Studio Mobile app and connect a pair of Poly Free 60 earbuds.",
-      "Navigate to Device Details \u2192 Software & Updates.",
-      "Ensure a firmware update is available.",
-      "While on the Software Update page (before tapping Continue), place both earbuds in the charging case and close the lid (or disable Bluetooth on the phone).",
-      "Wait 5 seconds for the app to detect disconnection.",
-      "Tap 'Continue' on the Software Update page."
+      "Precondition: Headset connected, app on Software Update page.",
+      "1. Tap 'Update' to begin DFU.",
+      "2. While DFU is in progress, press Home button to background the app.",
+      "3. While app is backgrounded, turn off Bluetooth.",
+      "4. Wait 15 seconds.",
+      "5. Bring app to foreground.",
+      "6. Observe the Software Update page UI.",
+      "7. Turn Bluetooth back ON and wait for reconnection.",
+      "8. Observe the Software Update page UI."
     ],
-    "expected": "The app must detect the Free 60 earbuds are disconnected and block navigation to the 'Three Easy Steps' page. An appropriate error message must be displayed. The DFU flow must not proceed without a connected device."
+    "expected": "Step 5-6: App detects disconnection upon foregrounding and shows 'Update currently not available'. No stale progress bar. Actual (If Bug): App shows the DFU progress from before backgrounding and continues as if still connected.\nStep 8: After reconnection, app re-evaluates and shows appropriate state."
   },
   {
-    "title": "DFU Flow: Device Disconnection During DFU on Voyager Free 60+ (with Case) \u2014 Validate Blocking Behavior",
+    "title": "TC-DFU-BLOCK-008: Rapid disconnect-reconnect cycle during DFU",
     "steps": [
-      "Open Poly Studio Mobile app and connect a Voyager Free 60+ (with case connected via Bluetooth).",
-      "Navigate to Device Details \u2192 Software & Updates.",
-      "Ensure a firmware update is available.",
-      "While on the Software Update page (before tapping Continue), disconnect the device by turning off the case or disabling Bluetooth.",
-      "Wait 5 seconds for the app to detect disconnection.",
-      "Tap 'Continue' on the Software Update page."
+      "Precondition: Headset connected, app on Software Update page.",
+      "1. Tap 'Update' to begin DFU.",
+      "2. While DFU is in progress, rapidly toggle Bluetooth OFF then ON (within 2 seconds).",
+      "3. Observe the Software Update page UI during and after the toggle.",
+      "4. Wait for stable reconnection.",
+      "5. Observe the Software Update page UI."
     ],
-    "expected": "The app must detect the Voyager Free 60+ is disconnected and block navigation to the 'Three Easy Steps' page. An appropriate error message must be displayed. The DFU flow must not proceed without a connected device, regardless of device type (headset, earbuds, or case)."
+    "expected": "Step 3: During the brief disconnect, app shows 'Update currently not available'. Upon rapid reconnection, app re-evaluates and either resumes DFU from a safe checkpoint or shows 'Update incomplete \u2014 restart required'. Actual (If Bug): App ignores the transient disconnect and continues DFU as if nothing happened, risking corrupted firmware transfer."
   },
   {
-    "title": "DFU Flow: Multiple Disconnect/Reconnect Cycles on Software Update Page \u2014 State Consistency",
+    "title": "TC-DFU-BLOCK-009: DFU blocking persists after reconnect if headset is in an invalid state",
     "steps": [
-      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Surround 85).",
-      "Navigate to Device Details \u2192 Software & Updates \u2192 Software Update page.",
-      "Disconnect the device (disable Bluetooth).",
-      "Wait 5 seconds. Verify the app shows 'Disconnected'.",
-      "Reconnect the device (re-enable Bluetooth, wait for auto-reconnect).",
-      "Verify the app shows 'Connected'.",
-      "Disconnect the device again.",
-      "Wait 5 seconds.",
-      "Reconnect the device again.",
-      "Verify the app shows 'Connected'.",
-      "Tap 'Continue' on the Software Update page."
+      "Precondition: Headset connected, app on Software Update page.",
+      "1. Tap 'Update' to begin DFU.",
+      "2. While DFU is in progress, power OFF the headset.",
+      "3. Wait 5 seconds \u2014 verify 'Update currently not available' is shown.",
+      "4. Power ON the headset but do NOT wait for full reconnection.",
+      "5. Immediately tap 'Update' again.",
+      "6. Wait for full reconnection.",
+      "7. Observe the Software Update page UI."
     ],
-    "expected": "After multiple disconnect/reconnect cycles, the app must correctly reflect the current connection state. When the device is connected and 'Continue' is tapped, the app should proceed to the 'Three Easy Steps' page. The app must not cache an old disconnected state and must always check the live connection status before proceeding."
-  },
-  {
-    "title": "DFU Flow: Verify 'Three Easy Steps' Page is Inaccessible Without Connected Device via Deep Link or Back Navigation",
-    "steps": [
-      "Open Poly Studio Mobile app with NO device connected.",
-      "Attempt to directly navigate to the 'Three Easy Steps' page by any means (e.g., if a deep link exists, try to open it; or attempt to navigate back from a previous session state).",
-      "Alternatively: Connect a device, navigate to Software Update page, disconnect the device, then attempt to use Android's back button or gesture to navigate back to a previous screen and then forward again to see if the 'Three Easy Steps' page becomes accessible.",
-      "Observe the app behavior."
-    ],
-    "expected": "The 'Three Easy Steps' page must be gated behind a connected device check. It must not be reachable via deep links, back navigation tricks, or any other means when no device is connected. The app should redirect to the device list or home screen if the user attempts to access this page without a connected device."
+    "expected": "Step 3: 'Update currently not available' shown.\nStep 5: Tapping 'Update' before full reconnection does nothing \u2014 no DFU starts.\nStep 7: After full reconnection, if headset reports a pending/interrupted DFU state, app shows 'Update incomplete \u2014 please restart'. If headset reports clean state, app shows available update normally. Actual (If Bug): App allows DFU to start again immediately without validating headset firmware state."
   }
 ]
