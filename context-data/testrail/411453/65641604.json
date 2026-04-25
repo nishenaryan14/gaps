@@ -9,13 +9,14 @@
   "steps": [
     "1. Open the Poly Studio Mobile app on your mobile device.",
     "2. Ensure a CCL-supported Poly Bluetooth audio device is connected.",
-    "3. Navigate to the Home screen and tap on the connected [Device Name].",
-    "4. Go to Device Settings \u2192 Advanced.",
+    "3. From the Home screen, tap on the connected [Device Name] to enter Device Settings.",
+    "4. Navigate to Device Settings \u2192 Advanced.",
     "5. Set a Customizable Controls Level (CCL) value (e.g., Low, Medium, or High).",
-    "6. Power cycle the device by pressing and holding the Power button to turn it off, then press the Power button again to turn it on.",
+    "6. Power cycle the device by pressing and holding the Power button to turn it off, then press the Power button again to turn it back on.",
     "7. Wait for the device to reconnect to the app.",
-    "8. Navigate again to Device Settings \u2192 Advanced.",
-    "9. Observe the CCL setting displayed."
+    "8. From the Home screen, tap on the connected [Device Name] again to enter Device Settings.",
+    "9. Navigate to Device Settings \u2192 Advanced.",
+    "10. Observe the CCL setting displayed."
   ],
   "expected": "The app shows the previously selected CCL setting (the value set in step 5).",
   "coverage": [],
@@ -32,6 +33,6 @@
   "source_last_updated": "1772468639",
   "source_hash": "bdc6f6017a27c6f96920932db5be9ebeb43a4baaa1f3a930ab44cf2ba0bd81cd",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.849491Z",
+  "processed_at": "2026-04-25T07:55:31.936953Z",
   "status": "active"
 }
