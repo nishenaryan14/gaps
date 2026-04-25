@@ -4,29 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - Limited Support After Launch Date When LM Version Is Empty",
-  "feature": "Device Home Screen",
-  "scenario": "When a newly released but unsupported device is connected after its launch date with empty LM version info, the home screen shows limited support with a green ring connection icon and an \"i\" icon that displays a \"Device support coming soon\" pop-up.",
+  "feature": "Device Management",
+  "scenario": "Device Home Screen shows limited support and \"Device support coming soon\" pop-up when LM version is empty and launch date has passed",
   "steps": [
-    "Launch app and pair with headset; headset should be ON and properly connected.",
-    "Tap the \"i\" icon.",
-    "Tap anywhere outside the pop-up."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Connect a newly released Poly Bluetooth audio device (whose LM version info is empty in the product catalogue) to the app.",
+    "3. Ensure the current date is past the device's official launch date.",
+    "4. Observe the Device Home Screen \u2014 verify that it shows limited support indicators.",
+    "5. Tap the \"i\" (info) icon on the Device Home Screen.",
+    "6. Observe the pop-up message displayed.",
+    "7. Tap outside the pop-up to dismiss it."
   ],
-  "expected": "1) Connection status icon is a green ring, and a black \"i\" icon appears on the top right corner. 2) A pop-up displays the message \"Device support coming soon. In-app functionality may be limited.\" 3) The pop-up closes.",
+  "expected": "The Device Home Screen shows limited support. Tapping the \"i\" icon displays a pop-up message: \"Device support coming soon. In-app functionality may be limited.\" Tapping outside the pop-up dismisses it.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "unsupported device",
-    "green ring connection icon",
-    "i icon",
-    "Device support coming soon",
-    "pop-up",
-    "newly released device",
-    "limited support",
-    "empty LM version"
+    "poly-studio-mobile",
+    "device-home-screen",
+    "limited-support",
+    "device-support-coming-soon",
+    "lm-version-empty",
+    "launch-date",
+    "product-catalogue",
+    "info-icon-popup"
   ],
   "source_last_updated": "1764663027",
   "source_hash": "ccc29fb0fe0ec34f8c1561739828cf65e836ad6d31cf746651921df4034b9b05",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.134784Z",
+  "processed_at": "2026-04-25T05:37:16.747104Z",
   "status": "active"
 }
