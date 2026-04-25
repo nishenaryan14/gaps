@@ -5,22 +5,32 @@
   "project": "411453",
   "title": "Device Home Screen - Unpair connected Headset",
   "feature": "Bluetooth Pairing",
-  "scenario": "App correctly shows headset as disconnected after unpairing from phone's Bluetooth settings",
-  "steps": [],
-  "expected": "",
+  "scenario": "Poly Studio Mobile app correctly reflects disconnected state when headset is unpaired from phone's Bluetooth settings",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app on the Android phone.",
+    "2. Ensure a Poly Bluetooth headset is paired and connected to the phone via Bluetooth.",
+    "3. On the app's Home screen, verify the headset is shown as connected.",
+    "4. Open the phone's system Settings \u2192 Bluetooth.",
+    "5. Find the connected Poly headset in the list of paired devices.",
+    "6. Tap the gear/settings icon next to the headset and select \"Unpair\" or \"Forget\" to remove the pairing.",
+    "7. Return to the Poly Studio Mobile app.",
+    "8. Observe the Home screen status for the headset."
+  ],
+  "expected": "The Poly Studio Mobile app Home screen correctly shows the headset as disconnected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "bluetooth-pairing",
-    "unpairing",
+    "poly-studio-mobile-app",
     "disconnected-state",
-    "connection-status",
-    "bluetooth-settings",
-    "headset-connection"
+    "bluetooth-unpair",
+    "bluetooth-forget",
+    "home-screen-status",
+    "bluetooth-pairing",
+    "android-bluetooth-settings"
   ],
   "source_last_updated": "1762179531",
   "source_hash": "6e0c1564e332817116ab70596c11dd2f2853eb90036c655919034e9276adcc53",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.916413Z",
+  "processed_at": "2026-04-25T09:32:26.142807Z",
   "status": "active"
 }
