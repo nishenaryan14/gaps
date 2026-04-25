@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "Find My Device - Allow Once - IOS [Only This Time - Android] [Deprecated for IOS]",
   "feature": "App Settings",
-  "scenario": "Find My Device feature in Poly Studio Mobile app shows location permission popup with Allow Once, Allow while using app, and Don't allow options",
+  "scenario": "Find My Device \"Allow Once\" location permission flow does not display expected permission prompt options on Android",
   "steps": [
     "1. Launch the Poly Studio Mobile app with a headset connected.",
-    "2. From the Home screen, tap the main menu (hamburger icon).",
-    "3. Tap on \"Find My Device\".",
-    "4. When the location permission popup appears, tap \"Allow Once\".",
+    "2. On the Home screen, tap the main menu (hamburger icon).",
+    "3. Tap \"Find My Device\" from the menu.",
+    "4. When the location permission prompt appears, tap \"Allow Once\".",
     "5. Tap the back button to return to the previous screen."
   ],
-  "expected": "After step 3, a location permission popup appears with options \"Allow Once\", \"Allow while using app\", and \"Don't allow\". After step 4, Location and Geo icons become visible on the Find My Device screen.",
+  "expected": "The Location permission prompt appears with three options: \"Allow Once\", \"Allow while using the app\", and \"Don't allow\". After tapping \"Allow Once\", the Location and Geo icons become visible on the Find My Device screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
-    "poly-studio-mobile",
-    "location-permission",
     "allow-once",
-    "allow-while-using-app",
-    "dont-allow",
-    "hamburger-menu",
-    "bluetooth-headset"
+    "location-permission",
+    "android",
+    "poly-studio-mobile",
+    "permission-prompt",
+    "hamburger-menu"
   ],
   "source_last_updated": "1760352183",
   "source_hash": "e9bb0199bc5d41bc7891b0674fa52845f2e2c0d4fed9f4a999d47bd8ead43721",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.770006Z",
+  "processed_at": "2026-04-25T07:55:31.831804Z",
   "status": "active"
 }
