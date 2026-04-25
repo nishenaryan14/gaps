@@ -5,33 +5,34 @@
   "project": "411453",
   "title": "Software Update - DFU - Incoming mobile phone call during update",
   "feature": "Firmware Update",
-  "scenario": "Firmware update (DFU) continues or completes successfully when an incoming mobile phone call is received and answered during the update process",
+  "scenario": "Firmware update (DFU) behavior when incoming mobile phone call is received and answered during the update process",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to Home screen and ensure a Poly Bluetooth audio device is connected.",
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to Home screen and ensure your Poly Bluetooth audio device is connected.",
     "3. Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
     "4. Initiate a firmware update (DFU) on the connected Poly device.",
-    "5. While the firmware update is in progress, have an incoming mobile phone call arrive on the Android device.",
-    "6. Answer the incoming call on the Android device.",
-    "7. Monitor the firmware update progress in the Poly Studio Mobile app during and after the call.",
-    "8. End the call and check the firmware update status in the app."
+    "5. While the firmware update is in progress, have a second phone call the Android device associated with the Poly app.",
+    "6. Answer the incoming call on the Android device during the active firmware update.",
+    "7. Monitor the firmware update progress on the Poly Studio Mobile app screen.",
+    "8. End the phone call after a few moments.",
+    "9. Observe the firmware update status on the app."
   ],
-  "expected": "The firmware update continues running or completes successfully without interruption, error, or failure. The Poly Studio Mobile app shows the update progressing or completed after the call ends.",
+  "expected": "The firmware update (DFU) continues running or completes successfully without interruption, error, or failure. The update progress bar continues to advance, and the device remains connected and responsive throughout the call.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "firmware-update",
     "dfu",
+    "incoming-call",
     "call-interruption",
     "poly-studio-mobile",
     "android",
-    "incoming-call",
-    "call-management",
-    "bluetooth-audio"
+    "bluetooth-audio-device",
+    "update-persistence"
   ],
   "source_last_updated": "1763371034",
   "source_hash": "f70bd718b20d5e383d79a783f358e51d1506f9a197cad7e25cbdca808c66f36e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.026594Z",
+  "processed_at": "2026-04-25T09:32:26.287367Z",
   "status": "active"
 }
