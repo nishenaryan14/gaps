@@ -8,15 +8,15 @@
   "scenario": "App remains responsive and does not crash after prolonged idle soak test with headset disconnected on Home Screen",
   "steps": [
     "1. Install and launch the Poly Studio Mobile app.",
-    "2. Pair a Poly Bluetooth headset with the phone.",
+    "2. Pair a Poly Bluetooth headset with the app.",
     "3. Turn off the headset.",
-    "4. Navigate to the app Home screen. The headset should be shown as disconnected.",
+    "4. Navigate to the Home screen (headset should be shown as disconnected).",
     "5. Put the app in the background (e.g., press the Home button or switch to another app).",
     "6. Leave the phone idle for several hours.",
     "7. After several hours, bring the app back to the foreground.",
-    "8. Check that the app is still running and responsive (e.g., UI responds to taps, no crash or freeze)."
+    "8. Verify that the app is still running and responsive."
   ],
-  "expected": "The app remains running and responsive after several hours in the background. No memory leaks, crashes, or freezes occur.",
+  "expected": "The app remains running and responsive after several hours of idle time in the background. No crashes, freezes, or memory-related issues occur.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -26,12 +26,12 @@
     "disconnected-state",
     "app-responsiveness",
     "background-foreground",
-    "crash-freeze",
-    "bluetooth-pairing"
+    "bluetooth-headset",
+    "crash-recovery"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "f6e4db42218142e4c0f485ff7b34367f8035ef26544468a6893770b305f89e15",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.077644Z",
+  "processed_at": "2026-04-25T09:32:26.336180Z",
   "status": "active"
 }
