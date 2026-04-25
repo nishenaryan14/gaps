@@ -8,15 +8,15 @@
   "scenario": "Battery level shows 0% for earbuds and charging case after connecting Poly Voyager Free 60+ UC despite 'Connected' status",
   "description_clean": "After connecting Poly Voyager Free 60+ UC, the battery level for both earbuds and the charging case shows 0% for an extended period, even though the connection status shows 'Connected'. Expected behavior is that the battery status should reflect the actual earbud battery level.",
   "steps": [
-    "Open Poly Studio Mobile app on Android device.",
-    "Navigate to Home screen.",
-    "Connect Poly Voyager Free 60+ UC to the Android device via Bluetooth.",
-    "Observe the battery level indicators for the left earbud, right earbud, and charging case on the Home screen.",
-    "Wait for an extended period (e.g., 1-2 minutes) while the connection status shows 'Connected'.",
-    "Check the battery percentage displayed for each earbud and the charging case."
+    "Open Poly Studio Mobile app on Android",
+    "Navigate to Home screen",
+    "Connect Poly Voyager Free 60+ UC earbuds to the app",
+    "Observe the battery level indicators for left earbud, right earbud, and charging case on the Home screen",
+    "Wait for an extended period while the connection status shows 'Connected'",
+    "Check the battery percentage displayed for each earbud and the charging case"
   ],
-  "expected": "The battery level for both earbuds and the charging case should display the actual battery percentage (e.g., >0%) reflecting the true charge state of the devices.",
-  "actual": "The battery level for both earbuds and the charging case shows 0% for an extended period, even though the connection status shows 'Connected'.",
+  "expected": "Battery level for both earbuds and the charging case should display the actual battery percentage (e.g., 80%, 50%, etc.) reflecting the real charge level of the devices.",
+  "actual": "Battery level for both earbuds and the charging case shows 0% for an extended period, even though the connection status shows 'Connected'.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -25,14 +25,14 @@
     "battery-level",
     "battery-persistence",
     "poly-studio-mobile",
-    "bluetooth-connection",
+    "battery-percentage",
     "charging-case",
-    "earbud-battery",
+    "connected-status",
     "home-screen"
   ],
   "source_last_updated": "2026-04-22T13:11:32.000+0000",
   "source_hash": "43aaeddaff220f70ceeba16baeb8da8518a8b86d13bbf28d92fe676c652a67b6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.588562Z",
+  "processed_at": "2026-04-25T09:32:25.290134Z",
   "status": "active"
 }
