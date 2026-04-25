@@ -5,18 +5,18 @@
   "project": "UNKNOWN",
   "summary": "ANDROID | Log In - When user is Logged out button does not work but user is Logged out",
   "feature": "App Settings",
-  "scenario": "Log Out button in Account tab does not visually update to Log In after logout on Poly Studio Mobile app",
-  "description_clean": "When a user taps the Log Out button in the app, the button does not appear to work (no action observed). However, if the user re-enters the Account tab, they are actually logged out. The issue appears to be a UI bug where the Log Out button remains displayed instead of switching to a Log In button after logout.",
+  "scenario": "Log Out button does not update to Log In button after logout in Account tab until re-entering the screen",
+  "description_clean": "When a user taps the Log Out button, no action is observed and the button remains displayed. However, if the user re-enters the Account tab, they are actually logged out. The issue appears to be a UI-only bug where the Log Out button does not update to show a Log In button after logout.",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Account tab/screen.",
+    "1. Open Poly Studio Mobile app.",
+    "2. Navigate to the Account tab.",
     "3. Tap the Log Out button.",
-    "4. Observe that no immediate visual feedback or action occurs (the button does not appear to respond).",
-    "5. Navigate away from the Account tab (e.g., go to Home or another tab).",
-    "6. Return to the Account tab."
+    "4. Observe the UI response after tapping Log Out.",
+    "5. Navigate away from the Account tab (e.g., go to Home tab).",
+    "6. Re-enter the Account tab."
   ],
-  "expected": "Tapping Log Out should immediately log the user out and the UI should update to show a Log In button on the Account screen.",
-  "actual": "Tapping Log Out shows no immediate action; the Log Out button remains displayed. However, after leaving and re-entering the Account tab, the user is actually logged out (the Log In button is shown).",
+  "expected": "After tapping Log Out, the Log Out button should immediately change to a Log In button, indicating the user has been logged out successfully.",
+  "actual": "After tapping Log Out, no action is observed and the Log Out button remains displayed. However, upon re-entering the Account tab, the user is actually logged out (but the button still shows Log Out instead of Log In).",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -25,14 +25,13 @@
     "account-tab",
     "log-out-button",
     "log-in-button",
-    "ui-update",
-    "visual-feedback",
-    "android-app",
-    "button-state-persistence"
+    "ui-refresh",
+    "button-state-persistence",
+    "screen-re-entry"
   ],
   "source_last_updated": "2026-04-20T13:41:07.000+0000",
   "source_hash": "1b550c8a93cc0093fec68c8dd24ef51c88899b42b248ad42fe638d5fa3681573",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.306267Z",
+  "processed_at": "2026-04-25T08:21:30.747450Z",
   "status": "active"
 }
