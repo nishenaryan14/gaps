@@ -4,15 +4,13 @@
   "type": "testcase",
   "project": "411453",
   "title": "1 step DFU - Content of the Software Update tab when there is update available for Earbuds and Charge Case",
-  "feature": "Firmware Updates",
-  "scenario": "Software Update tab displays current/available versions, release notes, individual Update buttons for earbuds and charge case, and an Update All button when firmware updates are available for both components",
+  "feature": "Firmware Update",
+  "scenario": "Software Update tab displays current/available versions, release notes, individual Update buttons, and Update All button when both Voyager Free 60+ earbuds and charge case have firmware updates available",
   "steps": [
-    "Open the Poly Studio Mobile app on your Android device.",
-    "Ensure your Poly Bluetooth earbuds and charge case are connected and paired.",
-    "Navigate to the Home screen.",
-    "Tap on the device name to open Device Settings.",
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Ensure Poly Voyager Free 60+ earbuds and charge case are connected to the app.",
+    "Navigate to Device Settings for the connected Poly Voyager Free 60+ device.",
     "Locate and tap on the Software Update tab/section.",
-    "Verify that firmware updates are available for both the earbuds and the charge case.",
     "Observe the Software Update tab content."
   ],
   "expected": "The Software Update tab displays: current and available firmware versions for both earbuds and charge case, release notes for each component, individual \"Update\" buttons for earbuds and charge case, and an additional \"Update All\" button.",
@@ -21,16 +19,16 @@
   "keywords": [
     "software-update-tab",
     "firmware-update",
+    "voyager-free-60-plus",
     "poly-studio-mobile",
     "update-all-button",
     "release-notes",
-    "earbuds-firmware",
     "charge-case-firmware",
     "device-settings"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "d1bdcc78460230895438066cab71a9ba9b2608df01062dc028ad866af5c1e3c8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.959739Z",
+  "processed_at": "2026-04-25T08:21:31.036270Z",
   "status": "active"
 }
