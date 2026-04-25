@@ -1,59 +1,107 @@
 [
   {
-    "title": "Verify Log Out updates Account tab UI immediately to show Log In button",
+    "title": "TC-ACCT-001: Verify Log Out button immediately changes to Log In button on Account tab after logout",
     "steps": [
-      "1. Launch the app and complete the onboarding flow.",
-      "2. Log in with valid credentials.",
-      "3. Navigate to the Account tab.",
-      "4. Tap the Log Out button.",
-      "5. Observe the Account tab UI immediately after tapping Log Out."
+      "1. Launch Poly Studio Mobile app and ensure a device (e.g., Poly Voyager Free 60+ UC) is connected via Bluetooth.",
+      "2. Navigate to the Account tab by tapping 'Account' at the bottom navigation bar.",
+      "3. Verify the Account screen displays a 'Log Out' button (or equivalent logged-in state UI).",
+      "4. Tap the 'Log Out' button.",
+      "5. Observe the UI on the Account screen immediately after the logout action completes.",
+      "6. Do NOT navigate away from the Account tab. Stay on the same screen."
     ],
-    "expected": "After tapping Log Out, the Account tab UI updates immediately to display the Log In button without requiring the user to navigate away and back."
+    "expected": "After tapping Log Out, the button immediately changes to 'Log In' (or equivalent logged-out state UI) on the Account screen without requiring any navigation away and back. The screen refreshes in place to reflect the logged-out state."
   },
   {
-    "title": "Verify Log Out does not require re-entering Account tab to reflect logged-out state",
+    "title": "TC-ACCT-002: Verify Log Out button does NOT update to Log In until re-entering Account tab (reproduce bug)",
     "steps": [
-      "1. Launch the app and complete the onboarding flow.",
-      "2. Log in with valid credentials.",
-      "3. Navigate to the Account tab.",
-      "4. Tap the Log Out button.",
-      "5. Stay on the Account tab and verify the UI state."
+      "1. Launch Poly Studio Mobile app with a connected Bluetooth device.",
+      "2. Navigate to Account tab \u2192 verify 'Log Out' button is visible.",
+      "3. Tap 'Log Out' button.",
+      "4. Observe the button text/state on the Account screen immediately after logout.",
+      "5. If the button still shows 'Log Out' or any logged-in state UI, navigate away from the Account tab (e.g., tap 'Device' or 'Home' tab at the bottom).",
+      "6. Navigate back to the Account tab by tapping 'Account' again.",
+      "7. Observe the button text/state now."
     ],
-    "expected": "The Account tab shows the logged-out state (Log In button visible, user-specific details removed) immediately after Log Out, without needing to leave and re-enter the tab."
+    "expected": "If the bug is present, the button will still show 'Log Out' (logged-in state) immediately after logout on step 4, and will only update to 'Log In' after navigating away and back to the Account tab in step 7. This confirms the UI refresh bug."
   },
   {
-    "title": "Verify Log Out persists logged-out state after navigating away and back to Account tab",
+    "title": "TC-ACCT-003: Verify Log Out \u2192 Log In button state persists after app backgrounding and foregrounding",
     "steps": [
-      "1. Launch the app and complete the onboarding flow.",
-      "2. Log in with valid credentials.",
-      "3. Navigate to the Account tab.",
-      "4. Tap the Log Out button.",
-      "5. Navigate to a different tab (e.g., Home or Settings).",
-      "6. Navigate back to the Account tab.",
-      "7. Verify the UI state."
+      "1. Launch Poly Studio Mobile app with a connected device.",
+      "2. Navigate to Account tab \u2192 tap 'Log Out'.",
+      "3. If the button does NOT update to 'Log In' immediately (bug present), navigate away and back to Account tab to force the UI refresh.",
+      "4. Verify the button now shows 'Log In' (logged-out state).",
+      "5. Press the Home button on the phone to background the app.",
+      "6. Wait 5 seconds, then reopen the app by tapping the app icon or switching back.",
+      "7. Observe the Account tab UI."
     ],
-    "expected": "The Account tab still shows the Log In button and logged-out state after navigating away and back, confirming the logout action persisted correctly."
+    "expected": "The Account tab should still display the 'Log In' button (logged-out state) after the app is backgrounded and foregrounded. The logged-out state persists across app lifecycle events."
   },
   {
-    "title": "Verify Log Out clears user-specific data from Account tab",
+    "title": "TC-ACCT-004: Verify Log Out \u2192 Log In button state persists after app force-kill and relaunch",
     "steps": [
-      "1. Launch the app and complete the onboarding flow.",
-      "2. Log in with valid credentials.",
-      "3. Navigate to the Account tab and note user-specific details (e.g., username, email, profile info).",
-      "4. Tap the Log Out button.",
-      "5. Verify the Account tab UI."
+      "1. Launch Poly Studio Mobile app with a connected device.",
+      "2. Navigate to Account tab \u2192 tap 'Log Out'.",
+      "3. If the button does NOT update to 'Log In' immediately, navigate away and back to Account tab to force the UI refresh.",
+      "4. Verify the button now shows 'Log In'.",
+      "5. Force-kill the app (swipe it away from the recent apps list).",
+      "6. Relaunch Poly Studio Mobile app.",
+      "7. Navigate to the Account tab."
     ],
-    "expected": "All user-specific data (username, email, profile picture, etc.) is removed from the Account tab immediately after Log Out, and the Log In button is displayed."
+    "expected": "The Account tab should display the 'Log In' button (logged-out state) after app relaunch. The logout state is persisted in the app's data layer and correctly reflected in the UI upon fresh launch."
   },
   {
-    "title": "Verify Log Out button is not visible after successful logout",
+    "title": "TC-ACCT-005: Verify Log Out \u2192 Log In button state persists after Bluetooth disconnect and reconnect",
     "steps": [
-      "1. Launch the app and complete the onboarding flow.",
-      "2. Log in with valid credentials.",
-      "3. Navigate to the Account tab.",
-      "4. Tap the Log Out button.",
-      "5. Verify the visibility of the Log Out button."
+      "1. Launch Poly Studio Mobile app with a connected device (e.g., Poly Voyager Free 60+ UC).",
+      "2. Navigate to Account tab \u2192 tap 'Log Out'.",
+      "3. If the button does NOT update to 'Log In' immediately, navigate away and back to Account tab to force the UI refresh.",
+      "4. Verify the button now shows 'Log In'.",
+      "5. Disconnect the Bluetooth device (turn off the device or disable Bluetooth on the phone).",
+      "6. Wait 10 seconds.",
+      "7. Reconnect the Bluetooth device (turn device back on or re-enable Bluetooth).",
+      "8. Open Poly Studio Mobile app and navigate to the Account tab."
     ],
-    "expected": "The Log Out button is no longer visible on the Account tab after logging out. Only the Log In button (and optionally Sign Up) is displayed."
+    "expected": "The Account tab should still display the 'Log In' button (logged-out state) after Bluetooth disconnect and reconnect. The logout state is independent of Bluetooth connection state."
+  },
+  {
+    "title": "TC-ACCT-006: Verify Log In button changes to Log Out after successful login on Account tab",
+    "steps": [
+      "1. Launch Poly Studio Mobile app with a connected device.",
+      "2. Navigate to Account tab.",
+      "3. If currently logged in, tap 'Log Out' first and ensure the button changes to 'Log In' (navigate away and back if bug is present).",
+      "4. Tap the 'Log In' button.",
+      "5. Complete the login flow with valid credentials.",
+      "6. Observe the Account screen immediately after successful login.",
+      "7. Do NOT navigate away from the Account tab."
+    ],
+    "expected": "After successful login, the 'Log In' button immediately changes to 'Log Out' (or equivalent logged-in state UI) on the Account screen without requiring navigation away and back. The screen refreshes in place to reflect the logged-in state."
+  },
+  {
+    "title": "TC-ACCT-007: Verify Log Out button state after rapid double-tap on Log Out",
+    "steps": [
+      "1. Launch Poly Studio Mobile app with a connected device.",
+      "2. Navigate to Account tab \u2192 verify 'Log Out' button is visible.",
+      "3. Rapidly double-tap the 'Log Out' button (two taps within 1 second).",
+      "4. Observe the UI state on the Account screen immediately after the taps.",
+      "5. If the button still shows 'Log Out', navigate away and back to Account tab.",
+      "6. Observe the final UI state."
+    ],
+    "expected": "The app should handle the rapid double-tap gracefully. The logout action should execute only once. The button should eventually show 'Log In' (logged-out state). No crash, ANR, or inconsistent UI state should occur."
+  },
+  {
+    "title": "TC-ACCT-008: Verify Account tab UI elements reflect logged-out state after logout (not just button text)",
+    "steps": [
+      "1. Launch Poly Studio Mobile app with a connected device.",
+      "2. Navigate to Account tab and note all UI elements visible when logged in (e.g., user profile info, email, 'Log Out' button, account settings).",
+      "3. Tap 'Log Out'.",
+      "4. If the button does NOT update immediately, navigate away and back to Account tab.",
+      "5. Verify the following logged-out state UI elements are present on the Account screen:",
+      "   a. 'Log In' button is visible (instead of 'Log Out').",
+      "   b. User profile information (name, email, avatar) is no longer displayed.",
+      "   c. Any account-specific settings or options are hidden or replaced with generic logged-out options.",
+      "   d. A prompt or message indicating the user is not logged in is displayed (e.g., 'Sign in to access your account')."
+    ],
+    "expected": "The Account tab should display the complete logged-out state UI, including the 'Log In' button, absence of user profile info, and presence of a sign-in prompt. All logged-in specific elements should be removed."
   }
 ]
