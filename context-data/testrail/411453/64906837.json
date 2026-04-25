@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Default Quick Settings",
   "feature": "App Settings",
-  "scenario": "Default quick settings tiles on Device Home Screen correspond to first three options from Device Settings screen",
+  "scenario": "Device Home Screen displays three default quick settings tiles matching the first three options from Device Settings",
   "steps": [
     "Open the Poly Studio Mobile app.",
     "Navigate to the Home screen.",
     "Observe the quick settings tiles displayed below the device image.",
-    "Note the three default quick settings tiles shown.",
-    "Tap the device name or gear icon to open Device Settings.",
-    "Observe the order of the first three options listed in the Device Settings screen.",
-    "Compare the three quick settings tiles on the Home screen with the first three options in Device Settings."
+    "Count the number of default quick settings tiles shown.",
+    "Open the Device Settings screen for the connected device.",
+    "Note the first three options listed in the Device Settings screen.",
+    "Return to the Home screen and compare the quick settings tiles to the first three Device Settings options."
   ],
-  "expected": "The three default quick settings tiles displayed on the Home screen match the first three options listed in the Device Settings screen.",
+  "expected": "Three default quick settings tiles are displayed below the device image on the Home screen, and they correspond to the first three options from the Device Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-home-screen",
+    "home-screen",
     "quick-settings-tiles",
     "device-settings",
     "default-tiles",
-    "settings-order",
-    "home-screen-layout"
+    "ui-consistency",
+    "settings-mapping"
   ],
   "source_last_updated": "1764600389",
   "source_hash": "2e3d4581ca6c966baa703ae0f47c08abf7bdb57a712458d53145167b8dff10b4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.743072Z",
+  "processed_at": "2026-04-25T07:55:31.801063Z",
   "status": "active"
 }
