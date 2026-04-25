@@ -5,23 +5,32 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Allow While Using App is selected",
   "feature": "App Settings",
-  "scenario": "Location permission dialogue does not reappear after restarting the app when 'Allow While Using App' was selected during onboarding for Find My Device access",
-  "steps": [],
-  "expected": "",
+  "scenario": "Location permission prompt reappears for Find My Device after user selected 'Allow While Using App' during initial onboarding",
+  "steps": [
+    "1. Install Poly Studio Mobile app and launch it for the first time.",
+    "2. Complete the onboarding flow.",
+    "3. When the location sharing dialogue appears, select 'Allow While Using App'.",
+    "4. Navigate to Poly Studio Mobile \u2192 App Settings \u2192 Find My Device (FMD).",
+    "5. Observe whether the location dialogue appears again.",
+    "6. Close and restart the Poly Studio Mobile app.",
+    "7. Navigate again to Poly Studio Mobile \u2192 App Settings \u2192 Find My Device (FMD).",
+    "8. Observe whether the location dialogue appears again."
+  ],
+  "expected": "After selecting 'Allow While Using App' during onboarding, the user should be able to access Find My Device (FMD) from App Settings without seeing the location dialogue again. After restarting the app and opening FMD, the user should not be prompted again for location consent.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "find-my-device",
     "location-permission",
     "allow-while-using-app",
-    "permission-dialogue",
     "onboarding",
-    "app-restart",
+    "app-settings",
     "permission-persistence"
   ],
   "source_last_updated": "1759149575",
   "source_hash": "b142b7dd9a41356808f99d2073e414d7c083945a4664a43200b9e2a0a8631ee8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.731938Z",
+  "processed_at": "2026-04-25T07:55:31.793843Z",
   "status": "active"
 }
