@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "1 step DFU - Settings/Update tab both on the lates",
   "feature": "Firmware Update",
-  "scenario": "Settings > SW Update shows \"Up to date\" when Osprey headset, EB charging case, and CC dongle are all on latest firmware",
+  "scenario": "Settings > SW Update shows \"Up to date\" when app, Osprey device, EB, and CC are on latest firmware",
   "steps": [
-    "1. Ensure the Poly Studio Mobile app is installed and opened on the mobile device.",
-    "2. Ensure the Osprey headset, EB charging case, and CC dongle are all connected and powered on.",
-    "3. Verify that all devices (headset, charging case, dongle) are on the latest firmware version.",
-    "4. In the Poly Studio Mobile app, navigate to the Home screen.",
-    "5. Tap on the Settings icon or menu.",
-    "6. Select 'SW Update' from the Settings menu.",
-    "7. Observe the status displayed on the SW Update screen."
+    "1. Ensure the Poly Studio Mobile app, Osprey device, Embedded Bluetooth (EB), and Connect Client (CC) are all on the latest firmware versions.",
+    "2. Launch the Poly Studio Mobile app on your mobile device.",
+    "3. Tap the Menu icon (hamburger) or navigate to the Home screen.",
+    "4. Tap on Settings (gear icon) from the navigation menu.",
+    "5. Tap on SW Update (Software Update) within the Settings menu.",
+    "6. Observe the status message displayed on the SW Update screen."
   ],
   "expected": "The SW Update screen displays \"Up to date\" with no update available.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "osprey-headset",
-    "eb-charging-case",
-    "cc-dongle",
-    "poly-studio-mobile",
     "sw-update",
-    "firmware-up-to-date",
-    "firmware-version",
-    "settings-menu"
+    "software-update",
+    "up-to-date",
+    "poly-studio-mobile",
+    "osprey",
+    "embedded-bluetooth",
+    "connect-client",
+    "firmware-version"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "a80ce2f77c745c6a0bfeb7b561df8a27ea2c4071781d09e3f4edcecfda77b583",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.963931Z",
+  "processed_at": "2026-04-25T08:21:31.033759Z",
   "status": "active"
 }
