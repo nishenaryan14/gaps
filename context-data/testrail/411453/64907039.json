@@ -8,11 +8,11 @@
   "scenario": "Tapping each Source link under App Settings > General > Licenses opens github.com with the correct license page",
   "steps": [
     "Open Poly Studio Mobile app",
-    "Go to App Settings (gear icon)",
-    "Tap General",
+    "Go to App Settings",
+    "Navigate to General",
     "Tap Licenses",
     "For each Source link listed, tap the link",
-    "Observe the browser that opens and the URL displayed"
+    "Observe the browser that opens"
   ],
   "expected": "Each Source link opens github.com with the correct page for the corresponding individual license.",
   "coverage": [],
@@ -25,11 +25,11 @@
     "github",
     "open-source-licenses",
     "general-settings",
-    "url-verification"
+    "in-app-browser"
   ],
   "source_last_updated": "1759327858",
   "source_hash": "4424b1f080c516be6aec039019f1b2ae46b401798a72c8b9f60d4f412a7e3d12",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.929699Z",
+  "processed_at": "2026-04-25T09:32:26.162067Z",
   "status": "active"
 }
