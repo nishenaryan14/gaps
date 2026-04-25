@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Quick Start Guide - Osprey/Tern - First screen, single earbud/pairing - zoom in/out",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide zoom in/out toggle on pairing screen does not animate or match Figma spec on Voyager Free 60+",
+  "scenario": "Quick Start Guide zoom in/out functionality fails on the pairing screen when tapping the blue circle button",
   "steps": [
     "Open the Poly Studio Mobile app.",
-    "Go to Home \u2192 Device Settings \u2192 Quick Start Guide.",
+    "Navigate to Home \u2192 Device Settings \u2192 Quick Start Guide.",
     "Tap the blue circle button on the Quick Start Guide screen.",
-    "Verify the earbud image zooms in and the on-screen text matches the Figma Pairing screen design.",
+    "Observe the earbud image on screen.",
     "Tap the blue circle button again.",
-    "Verify the screen zooms out to the original view."
+    "Observe the earbud image on screen."
   ],
-  "expected": "The earbud zooms in on first tap with text matching the Figma Pairing screen, and zooms back out to the original view on second tap.",
+  "expected": "1. After tapping the blue circle button the first time, the earbud image zooms in and the on-screen text matches the Figma Pairing screen design. 2. After tapping the blue circle button the second time, the screen zooms out to the original view.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "quick-start-guide",
-    "zoom-in-out-toggle",
+    "zoom-in-out",
     "pairing-screen",
-    "voyager-free-60",
+    "blue-circle-button",
     "poly-studio-mobile",
-    "figma-spec",
-    "earbud-image-animation",
+    "earbud-image",
     "device-settings"
   ],
   "source_last_updated": "1763036615",
   "source_hash": "c93c3e1864fe34b0f03550698d010c63943c592f6b1bf88c01afa4b155c79ab7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.010610Z",
+  "processed_at": "2026-04-25T09:32:26.264981Z",
   "status": "active"
 }
