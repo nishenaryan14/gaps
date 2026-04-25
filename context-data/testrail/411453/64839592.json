@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Battery Charging Icon",
   "feature": "Battery/Charging",
-  "scenario": "Device Home Screen battery icon shows percentage when not charging and switches to bolt icon when charger is connected, reverting to percentage on disconnect",
+  "scenario": "Device Home Screen battery icon shows percentage when not charging, switches to bolt icon when charger connected, and reverts to percentage when charger disconnected",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to the Home screen.",
-    "3. Observe the battery icon and percentage displayed for the connected device (headset/earbuds) when not connected to a charger.",
-    "4. Connect the headset/earbuds to a charger.",
-    "5. Observe the battery icon on the Home screen.",
-    "6. Disconnect the headset/earbuds from the charger.",
-    "7. Observe the battery icon on the Home screen."
+    "1. Open the Poly Studio Mobile app and navigate to the Home screen.",
+    "2. Ensure a Poly Bluetooth headset or earbuds are connected and NOT connected to a charger.",
+    "3. Observe the battery icon displayed on the Home screen for the connected device.",
+    "4. Connect the headset/earbuds to a charger (e.g., USB cable).",
+    "5. Observe the battery icon on the Home screen again.",
+    "6. Disconnect the charger from the headset/earbuds.",
+    "7. Observe the battery icon on the Home screen once more."
   ],
-  "expected": "When the device is not charging, the Home screen shows a battery icon with the percentage value. When the device is connected to a charger, the battery icon changes to show a bolt icon instead of the percentage value. When the charger is disconnected, the bolt icon disappears and the percentage value returns.",
+  "expected": "When not charging, the battery icon shows the battery percentage value. When the device is connected to a charger, the battery icon changes to display a bolt icon instead of the percentage value. When the charger is disconnected, the bolt icon disappears and the percentage value returns.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "battery-icon",
-    "battery-percentage",
-    "charging-indicator",
     "home-screen",
+    "charging-indicator",
     "poly-studio-mobile",
+    "battery-percentage",
     "bolt-icon",
-    "battery-persistence"
+    "charger-connect-disconnect"
   ],
   "source_last_updated": "1759151666",
   "source_hash": "9d716e3a625947a65ea9af5fb4c2bb5bb3758e19385e20d3bc741154ca129723",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.743072Z",
+  "processed_at": "2026-04-25T07:55:31.804348Z",
   "status": "active"
 }
