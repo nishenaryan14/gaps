@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Notifications - Device disconnected",
   "feature": "Notifications",
-  "scenario": "When a paired device disconnects while the app is in the background, tapping the \"Device is disconnected\" notification should redirect the user to the Home Screen showing the disconnected device.",
+  "scenario": "Tapping \"Device is disconnected\" notification redirects to Poly Lens app Home Screen showing the disconnected device",
   "steps": [
-    "Pair a device with the Poly Lens app.",
-    "Send the app to the background (e.g., press the Home button or switch to another app).",
-    "Disconnect the paired device (e.g., turn off Bluetooth or physically disconnect the device).",
-    "Observe the notification area for a \"Device is disconnected\" notification.",
-    "Tap on the \"Device is disconnected\" notification."
+    "1. Launch the Poly Studio Mobile app and ensure a Bluetooth audio device is paired and connected.",
+    "2. Press the Home button or switch to another app to send the Poly Studio Mobile app to the background.",
+    "3. Disconnect the paired device (e.g., turn off the device, move out of range, or press the Bluetooth button to disconnect).",
+    "4. Observe the notification area for a \"Device is disconnected\" notification.",
+    "5. Tap the \"Device is disconnected\" notification.",
+    "6. Observe the screen that opens."
   ],
-  "expected": "A \"Device is disconnected\" notification appears. Tapping the notification redirects the user to the Poly Lens app Home Screen showing the disconnected device.",
+  "expected": "A \"Device is disconnected\" notification appears. Tapping the notification redirects the user to the Poly Studio Mobile app Home Screen showing the disconnected device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "paired device disconnected",
-    "background app notification",
-    "Device is disconnected notification",
-    "notification redirect",
-    "Home Screen",
-    "Bluetooth disconnect",
-    "Poly Lens app"
+    "device-disconnected-notification",
+    "poly-studio-mobile",
+    "notification-redirect",
+    "home-screen",
+    "bluetooth-disconnection",
+    "app-redirect-behavior",
+    "disconnected-device-ui"
   ],
   "source_last_updated": "1761224568",
   "source_hash": "370d86ade79840de4f042c507f844dde69c66de0d680c245e1654a872ed49742",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.304002Z",
+  "processed_at": "2026-04-25T05:37:16.903064Z",
   "status": "active"
 }
