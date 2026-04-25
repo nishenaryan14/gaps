@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "App Settings - General - About - UI",
   "feature": "App Settings",
-  "scenario": "Verify the About tab is displayed under General in App Settings on the Poly Studio Mobile app",
+  "scenario": "About tab is not displayed under General settings in the Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Tap the hamburger menu (three horizontal lines) to open the side navigation.",
-    "3. Tap \"General\" in the side navigation menu.",
-    "4. Check that the \"About\" tab is listed under the General section."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Tap the hamburger menu (\u2630) icon to open the side navigation menu.",
+    "3. Tap \"General\" to open the General settings screen.",
+    "4. Verify that the \"About\" tab is present on the General settings screen."
   ],
-  "expected": "The \"About\" tab is displayed under General in App Settings, matching the Figma design.",
+  "expected": "The \"About\" tab is displayed on the General settings screen, matching the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "app-settings",
     "general-settings",
     "about-tab",
-    "side-navigation",
+    "android-app",
     "hamburger-menu",
-    "settings-ui"
+    "side-navigation",
+    "settings-screen"
   ],
   "source_last_updated": "1759416397",
   "source_hash": "89e782a1fa8e5b85294bc1603c23400c9e298f98f4d1d9dc56b94a538d1dcc8c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.818092Z",
+  "processed_at": "2026-04-25T08:21:30.929699Z",
   "status": "active"
 }
