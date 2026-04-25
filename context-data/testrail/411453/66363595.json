@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "DFU - Case Update Needed popup is not present if Charge Case is on latest FW",
   "feature": "Firmware Updates",
-  "scenario": "\"Case Update Needed\" popup incorrectly appears on Home Screen after earbud DFU when charge case is already on latest firmware",
+  "scenario": "\"Case Update Needed\" popup persists on Home Screen after earbud DFU when case firmware is already up to date",
   "steps": [
-    "1. Launch Poly Studio Mobile app and connect both earbuds.",
-    "2. Trigger a Device Firmware Update (DFU) for the earbuds via the app.",
-    "3. Wait for the DFU to complete successfully.",
-    "4. Return to the Home screen.",
-    "5. Observe whether the \"Case Update Needed\" popup/card is displayed.",
-    "6. Close and restart the Poly Studio Mobile app.",
-    "7. Return to the Home screen again and observe whether the \"Case Update Needed\" popup/card is displayed."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Ensure the earbuds and charge case are connected to the app.",
+    "4. Verify the charge case is already on the latest firmware version.",
+    "5. Perform a Device Firmware Update (DFU) for the earbuds via the app.",
+    "6. After the DFU completes, observe the Home screen for any popup or card.",
+    "7. Close and restart the Poly Studio Mobile app.",
+    "8. After the app restarts, observe the Home screen again for any popup or card."
   ],
-  "expected": "The \"Case Update Needed\" popup/card is not visible on the Home screen after the earbud DFU completes, and also not visible after restarting the app.",
+  "expected": "No \"Case Update Needed\" popup or card should appear on the Home screen after the earbud DFU completes or after restarting the app, since the charge case is already on the latest firmware.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "case-update-needed",
-    "dfu",
     "poly-studio-mobile",
+    "case-update-needed",
     "home-screen",
-    "firmware-update",
-    "earbud-dfu",
+    "device-firmware-update",
+    "dfu",
+    "earbud-firmware",
     "charge-case",
-    "popup"
+    "popup-persistence"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "a66fb4b06f6ce3d27d090e2b5c846cdf1a2505fb1a7529b8b07b2264bd03a4c5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.015047Z",
+  "processed_at": "2026-04-25T08:21:31.091233Z",
   "status": "active"
 }
