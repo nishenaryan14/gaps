@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Updating screen above 90%",
-  "feature": "Software Update - DFU",
-  "scenario": "DFU update via Software Update screen shows \"Verifying\" message from 90% to 99% with \"Almost there, don't leave yet\" text",
+  "feature": "Firmware Update",
+  "scenario": "Firmware update (DFU) shows \"Verifying\" message and \"Almost there, don't leave yet\" text from 90% to 99% progress",
   "steps": [
-    "Open the Software Update screen on the device.",
-    "Initiate a Device Firmware Update (DFU).",
-    "Monitor the update progress until it reaches 90%.",
-    "Observe the screen when the update reaches 90%."
+    "Open Poly Studio Mobile app on Android",
+    "Connect to a Poly Bluetooth audio device",
+    "Navigate to Home screen",
+    "Initiate a firmware update (DFU) for the connected device",
+    "Observe the progress bar during the update",
+    "Wait until the progress reaches 90%"
   ],
-  "expected": "When the update reaches 90%, the progress bar should change to show a \"Verifying\" message, and the screen should display the text \"Almost there, don't leave yet\" from 90% to 99%.",
+  "expected": "When the firmware update progress reaches 90%, the screen displays a \"Verifying\" message on the progress bar along with the text \"Almost there, don't leave yet\". This screen is shown from 90% to 99%.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU update",
-    "Software Update screen",
-    "Verifying",
-    "90% to 99%",
-    "Almost there don't leave yet",
-    "firmware update progress",
-    "update stuck at 90%"
+    "firmware-update",
+    "dfu",
+    "verifying",
+    "progress-bar",
+    "poly-studio-mobile",
+    "android",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1763133872",
   "source_hash": "b14545fa16862476894f7a1d8c8dc606eb4a65c4bacba1a148afc8841f228388",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.289914Z",
+  "processed_at": "2026-04-25T05:37:16.879993Z",
   "status": "active"
 }
