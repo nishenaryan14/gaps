@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "App Settings - General - Account - Invite sent, user logs during the installation, not registered on Cloud",
   "feature": "App Settings",
-  "scenario": "IT admin invite not accepted via laptop results in missing tenant info on General/Account screen for mobile-only user",
+  "scenario": "IT admin invite not accepted via external source results in mobile user logged in but missing tenant info on General/Account screen",
   "steps": [
-    "1. IT admin sends an invite to a mobile user via an outside source (e.g., laptop).",
+    "1. As an IT admin, send an invite to a mobile user via an outside source (e.g., laptop).",
     "2. On the mobile device, install the Poly Studio Mobile app.",
     "3. During onboarding, log in with the invited user's credentials.",
     "4. Navigate to the Account screen (Home \u2192 Account).",
     "5. Observe the account card details."
   ],
-  "expected": "The user should be fully registered on the cloud with a tenant. The account card should display Tenant ID and Tenant Name rows, indicating the user is associated with the tenant they were invited to.",
+  "expected": "The user should see Tenant ID and Tenant Name rows on the account card, and the user should be registered on the cloud with the tenant.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "it-admin-invite",
-    "tenant-info",
-    "general-account-screen",
-    "mobile-only-user",
     "poly-studio-mobile",
+    "account-screen",
+    "tenant-info",
+    "mobile-user-login",
     "onboarding",
-    "account-card"
+    "account-card",
+    "invite-acceptance"
   ],
   "source_last_updated": "1759416375",
   "source_hash": "22db7ea724dad989b29d4b2ce4e05000538c076eefd6b853ebde20c8ec71c2bf",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.758969Z",
+  "processed_at": "2026-04-25T07:55:31.825228Z",
   "status": "active"
 }
