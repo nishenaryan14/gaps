@@ -5,23 +5,32 @@
   "project": "411453",
   "title": "Software Update - DFU -  Houston... screen Cancel button",
   "feature": "Firmware Update",
-  "scenario": "DFU failure recovery: turning off headset during firmware update at 10% and tapping Cancel returns user to device home screen",
-  "steps": [],
-  "expected": "",
+  "scenario": "Tapping Cancel on the \"Houston...\" error screen after a failed DFU does not return the user to the connected device home screen",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure a Poly Bluetooth audio device is connected.",
+    "3. Navigate to the Device Settings screen for the connected device.",
+    "4. Initiate a Device Firmware Update (DFU).",
+    "5. During the first 20% of the update, turn off the headset (or turn off internet before tapping Start Update) to cause the DFU to fail.",
+    "6. Observe the 'Houston...' screen with a Cancel button.",
+    "7. Tap the Cancel button."
+  ],
+  "expected": "The user is returned to the Home screen for the currently connected device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu-failure-recovery",
-    "firmware-update",
+    "poly-studio-mobile",
+    "dfu-failure",
+    "houston-error-screen",
     "cancel-button",
-    "device-home-screen",
-    "update-interruption",
-    "power-off-during-update",
-    "brick-prevention"
+    "device-firmware-update",
+    "android",
+    "device-settings",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1763130666",
   "source_hash": "d387f3f3b2130fe5fe1e50215bdfde6ae5dbbb0f82f8be2159873365c3f95931",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.026594Z",
+  "processed_at": "2026-04-25T09:32:26.285132Z",
   "status": "active"
 }
