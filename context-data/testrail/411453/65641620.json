@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Fit test - 2nd screen Fail and Retry",
-  "feature": "Fit Test",
-  "scenario": "User can retry a fit test after cancelling or failing it, and the retry should complete successfully with results displayed.",
+  "feature": "Device Management",
+  "scenario": "Fit Test retry after cancel or failure on screen 2 does not restart the test and display results on Voyager Free 60+",
   "steps": [
-    "Perform a fit test on a connected device",
-    "Start the test",
-    "Either cancel on the second screen or fail the test",
-    "Tap Retry",
-    "Perform the test again"
+    "1. Launch the Poly Studio Mobile app with a Bluetooth audio device that supports Fit Test already connected.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Fit Test.",
+    "3. Tap \"Start Test\" to begin the fit test.",
+    "4. On the second screen of the fit test, either tap \"Cancel\" or intentionally fail the test.",
+    "5. Tap \"Retry\" to attempt the fit test again.",
+    "6. Observe the result after retrying."
   ],
-  "expected": "The test should be performed again and the result should be displayed.",
+  "expected": "The fit test is performed again and the result is displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "fit test",
+    "fit-test",
     "retry",
+    "voyager-free-60+",
+    "poly-studio-mobile",
+    "device-settings",
     "cancel",
-    "fail",
-    "test results",
-    "connected device",
-    "test completion"
+    "test-failure",
+    "fit-test-results"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "26a6f63ff58bd0342c2d353726784333d8b1b422e0c10cd1503d8355d47d21e1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.222303Z",
+  "processed_at": "2026-04-25T05:37:16.816209Z",
   "status": "active"
 }
