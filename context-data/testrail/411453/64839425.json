@@ -4,30 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Allow While Using App is selected",
-  "feature": "Location Sharing / Permissions",
-  "scenario": "User selects \"Allow While Using App\" for location permission and expects no further location consent prompts during the session or after app restart.",
-  "steps": [
-    "Open the app and navigate to the location sharing dialogue.",
-    "Select 'Allow While Using App' from the location sharing options.",
-    "Observe that the FMD screen loads without any additional location consent prompt.",
-    "Close and restart the app.",
-    "Observe that the app does not ask for location permission again."
-  ],
-  "expected": "After selecting \"Allow While Using App\", the FMD screen loads without re-prompting for location consent. After restarting the app, the user is not asked again for location permission.",
+  "feature": "App Settings",
+  "scenario": "Location permission dialogue does not reappear after restarting the app when 'Allow While Using App' was selected during onboarding for Find My Device access",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Allow While Using App",
-    "location permission",
-    "location consent prompt",
-    "app restart",
-    "FMD screen",
-    "location sharing dialogue",
-    "persistent permission"
+    "find-my-device",
+    "location-permission",
+    "allow-while-using-app",
+    "permission-dialogue",
+    "onboarding",
+    "app-restart",
+    "permission-persistence"
   ],
   "source_last_updated": "1759149575",
   "source_hash": "b142b7dd9a41356808f99d2073e414d7c083945a4664a43200b9e2a0a8631ee8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.100708Z",
+  "processed_at": "2026-04-25T05:37:16.731938Z",
   "status": "active"
 }
