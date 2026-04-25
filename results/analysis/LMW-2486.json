@@ -12,138 +12,96 @@
     "65459448",
     "65459456",
     "65459427",
-    "65459458",
     "65459457",
     "65459438",
-    "65459432"
+    "65459432",
+    "65459433"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test case validates the DFU success screen content (what name/title is displayed) after a firmware update completes \u2014 all existing tests focus on pre-update UI (buttons, release notes, badges, popups) or language-change DFU flows, not post-update success screen verification.",
-    "No test case covers the specific scenario of updating ONLY the Charge Stand (while headset firmware is already up to date) \u2014 existing tests either update all components or focus on language-change DFU flows.",
-    "No test case validates that the correct component name (e.g., 'Charge Stand' vs. 'Headset') is displayed on the DFU success screen, which is the core failure point of this bug.",
-    "\ud83e\udde0 LIFECYCLE DIMENSION MISSING: No test validates what happens to the success screen display when the app is backgrounded/foregrounded during or after the DFU completes \u2014 could the name change or reset on app lifecycle events.",
-    "\ud83e\udde0 DEVICE ASYMMETRY MISSING: No test differentiates between device types (e.g., Voyager Free 60+ with Charge Case vs. a headset with Charge Stand) in the success screen content \u2014 the bug may manifest differently across product lines.",
-    "\ud83e\udde0 STATE TRIGGER MISSING: No test validates exactly WHEN the success screen name is populated (e.g., is it read from the DFU response payload, from the device's advertised name, or from a cached value) \u2014 this is critical to understanding why the wrong name appears."
+    "No test case validates the DFU success screen content/displayed device name after a firmware update completes",
+    "No test case covers a scenario where only a subset of components (e.g., Charge Stand only) is updated, leaving other components (headset) untouched",
+    "No test case verifies that the correct component name (Charge Stand) is shown on the DFU success screen, rather than the headset name or another component name",
+    "No test case covers post-DFU UI validation for multi-component devices (headset + Charge Stand + Charge Case) to ensure the success screen accurately reflects which component was updated",
+    "No lifecycle or state-transition testing around the DFU success screen \u2014 e.g., what happens if the app is backgrounded during the success screen, or if the device disconnects immediately after the success screen appears"
   ],
   "generated_testcases": [
     {
-      "title": "TC-DFU-SUCCESS-001: Verify DFU success screen displays correct component name when updating only Charge Stand",
+      "title": "DFU Success Screen \u2014 Charge Stand Only Update Shows Correct Component Name",
       "steps": [
-        "Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-        "Navigate to Device Settings \u2192 Software.",
-        "Verify headset firmware is already up to date (no update available).",
-        "Verify Charge Stand firmware update is available.",
-        "Tap 'Update' on the Charge Stand firmware card (do NOT update headset).",
-        "Wait for the DFU process to complete (download \u2192 transfer \u2192 install).",
-        "Observe the DFU success/completion screen that appears after installation finishes.",
-        "Note the component name/title displayed on the success screen (e.g., 'Charge Stand updated successfully' or similar)."
+        "Precondition: Headset + Charge Stand connected. Headset firmware is already latest. Charge Stand has an available update.",
+        "Navigate to: Device \u2192 Settings \u2192 Firmware Update",
+        "Tap 'Update' for Charge Stand only (do NOT update headset)",
+        "Wait for DFU to complete (progress reaches 100%)",
+        "Observe the DFU success screen"
       ],
-      "expected": "The DFU success screen displays the correct component name: 'Charge Stand' (or 'Charge Case' depending on product naming). The name 'Headset' or the headset's Bluetooth name (e.g., 'Poly Voyager Free 60+') is NOT shown in place of the Charge Stand name."
+      "expected": "DFU success screen displays 'Charge Stand' (or the exact Charge Stand product name) as the updated component. The headset name is NOT shown as the updated component. Actual (If Bug): Success screen incorrectly shows the headset name instead of Charge Stand name."
     },
     {
-      "title": "TC-DFU-SUCCESS-002: Verify DFU success screen displays correct component name when updating only Headset",
+      "title": "DFU Success Screen \u2014 Charge Stand Only Update + App Background/Foreground During Success Screen",
       "steps": [
-        "Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-        "Navigate to Device Settings \u2192 Software.",
-        "Verify Charge Stand firmware is already up to date (no update available).",
-        "Verify headset firmware update is available.",
-        "Tap 'Update' on the Headset firmware card (do NOT update Charge Stand).",
-        "Wait for the DFU process to complete.",
-        "Observe the DFU success/completion screen.",
-        "Note the component name/title displayed on the success screen."
+        "Precondition: Headset + Charge Stand connected. Only Charge Stand has a pending update.",
+        "Navigate to: Device \u2192 Settings \u2192 Firmware Update",
+        "Initiate Charge Stand-only firmware update",
+        "Wait for DFU to reach 100% and success screen to appear",
+        "Press Home button to background the app",
+        "Wait 5 seconds",
+        "Reopen Poly Studio Mobile app from recent apps",
+        "Observe the DFU success screen"
       ],
-      "expected": "The DFU success screen displays the correct component name: 'Headset' (or 'Earbuds' depending on product naming). The name 'Charge Stand' is NOT shown in place of the headset name."
+      "expected": "After app is foregrounded, the DFU success screen still displays 'Charge Stand' as the updated component. The component name is not replaced by the headset name. Actual (If Bug): After backgrounding, the success screen shows headset name or a generic/blank component label."
     },
     {
-      "title": "TC-DFU-SUCCESS-003: Verify DFU success screen name persistence after app background/foreground post-update",
+      "title": "DFU Success Screen \u2014 Charge Stand Only Update + Immediate Bluetooth Disconnect After Success",
       "steps": [
-        "Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-        "Navigate to Device Settings \u2192 Software.",
-        "Verify Charge Stand firmware update is available and headset is up to date.",
-        "Tap 'Update' on the Charge Stand firmware card only.",
-        "Wait for DFU to complete and the success screen to appear.",
-        "Note the component name displayed on the success screen.",
-        "Press the Home button to background the app.",
-        "Wait 10 seconds.",
-        "Reopen Poly Studio Mobile app from the app switcher (not cold start).",
-        "Observe the DFU success screen content."
+        "Precondition: Headset + Charge Stand connected. Only Charge Stand has a pending update.",
+        "Navigate to: Device \u2192 Settings \u2192 Firmware Update",
+        "Initiate Charge Stand-only firmware update",
+        "Wait for DFU to reach 100% and success screen to appear",
+        "Immediately disconnect Bluetooth (turn off BT on phone or power off headset)",
+        "Observe the DFU success screen before and after disconnect"
       ],
-      "expected": "After backgrounding and foregrounding the app, the DFU success screen still displays the correct component name ('Charge Stand'). The name does not change, reset, or become blank due to the app lifecycle event."
+      "expected": "Before disconnect: Success screen shows 'Charge Stand' as updated component. After disconnect: Success screen remains visible showing 'Charge Stand' (or transitions gracefully to a disconnected state without swapping the component name to headset name). Actual (If Bug): After disconnect, the component name on the success screen incorrectly changes to the headset name."
     },
     {
-      "title": "TC-DFU-SUCCESS-004: Verify DFU success screen name persistence after app force-kill and relaunch post-update",
+      "title": "DFU Success Screen \u2014 Charge Stand Only Update + App Force-Kill During Success Screen",
       "steps": [
-        "Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-        "Navigate to Device Settings \u2192 Software.",
-        "Verify Charge Stand firmware update is available and headset is up to date.",
-        "Tap 'Update' on the Charge Stand firmware card only.",
-        "Wait for DFU to complete and the success screen to appear.",
-        "Note the component name displayed on the success screen.",
-        "Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
-        "Reopen Poly Studio Mobile app (cold start).",
-        "Observe the screen that appears after reconnection (success screen may or may not reappear).",
-        "If a success screen reappears, note the component name displayed."
+        "Precondition: Headset + Charge Stand connected. Only Charge Stand has a pending update.",
+        "Navigate to: Device \u2192 Settings \u2192 Firmware Update",
+        "Initiate Charge Stand-only firmware update",
+        "Wait for DFU to reach 100% and success screen to appear",
+        "Force-kill the app (swipe from recent apps)",
+        "Reopen Poly Studio Mobile app",
+        "Navigate to: Device \u2192 Settings \u2192 Firmware Update (or Device info screen)",
+        "Check the firmware version of Charge Stand"
       ],
-      "expected": "If the DFU success screen reappears after force-kill and relaunch, it displays the correct component name ('Charge Stand'). If the success screen is not shown again (expected behavior for cold start), the app should navigate to the Device screen showing the Charge Stand firmware version correctly updated \u2014 no incorrect naming is displayed anywhere."
+      "expected": "Charge Stand firmware version reflects the newly updated version. The DFU success screen is no longer shown (expected after force-kill), but the firmware update was applied correctly. No UI artifact shows headset name in place of Charge Stand. Actual (If Bug): App incorrectly displays headset name in any post-DFU UI element referencing the updated component."
     },
     {
-      "title": "TC-DFU-SUCCESS-005: Verify DFU success screen name after Bluetooth disconnect/reconnect during DFU completion",
+      "title": "DFU Success Screen \u2014 Charge Stand Only Update on Multi-Component Device (Headset + Charge Stand) \u2014 Verify Headset Firmware Unchanged",
       "steps": [
-        "Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-        "Navigate to Device Settings \u2192 Software.",
-        "Verify Charge Stand firmware update is available and headset is up to date.",
-        "Tap 'Update' on the Charge Stand firmware card only.",
-        "When DFU reaches ~90% completion, trigger a Bluetooth disconnection (e.g., turn off Bluetooth on phone or move out of range).",
-        "Wait for DFU to complete (device-side installation may still finish).",
-        "Re-enable Bluetooth and allow the device to reconnect.",
-        "Observe the screen that appears after reconnection.",
-        "If a DFU success screen is shown, note the component name displayed."
+        "Precondition: Headset + Charge Stand connected. Note current headset firmware version (e.g., v1.2.3). Only Charge Stand has a pending update.",
+        "Navigate to: Device \u2192 Settings \u2192 Firmware Update",
+        "Tap 'Update' for Charge Stand only",
+        "Wait for DFU to complete and success screen to appear",
+        "Verify success screen shows 'Charge Stand' as updated component",
+        "Navigate to: Device \u2192 Device Info",
+        "Check headset firmware version"
       ],
-      "expected": "After Bluetooth disconnect/reconnect, if a DFU success screen is displayed, it shows the correct component name ('Charge Stand'). The name is not replaced by the headset's Bluetooth name or any cached/generic name."
+      "expected": "Success screen shows 'Charge Stand' as the updated component. Headset firmware version remains unchanged (still v1.2.3). The success screen does NOT claim the headset was updated. Actual (If Bug): Success screen shows headset name, or headset firmware version is incorrectly reported as changed."
     },
     {
-      "title": "TC-DFU-SUCCESS-006: Verify DFU success screen name when updating Charge Stand on Voyager Free 60+ (Touchscreen Case) vs. other product lines",
+      "title": "DFU Success Screen \u2014 Charge Stand Only Update \u2014 Verify Charge Stand Name Matches Product Nomenclature",
       "steps": [
-        "Connect a Voyager Free 60+ UC device to Poly Studio Mobile.",
-        "Navigate to Device Settings \u2192 Software.",
-        "Verify Charge Stand (Touchscreen Case) firmware update is available and headset is up to date.",
-        "Tap 'Update' on the Charge Stand firmware card only.",
-        "Wait for DFU to complete.",
-        "Observe the success screen and note the component name displayed.",
-        "Repeat steps 1-6 with a different product line that has a Charge Stand (e.g., a headset with a desk Charge Stand like Voyager Focus 2).",
-        "Compare the component names displayed on both success screens."
+        "Precondition: Headset + Charge Stand connected. Only Charge Stand has a pending update. Know the exact product name of the Charge Stand (e.g., 'Poly Charge Stand' or 'Voyager Free 60+ Charge Stand').",
+        "Navigate to: Device \u2192 Settings \u2192 Firmware Update",
+        "Initiate Charge Stand-only firmware update",
+        "Wait for DFU to complete and success screen to appear",
+        "Capture the exact component name string displayed on the success screen"
       ],
-      "expected": "For Voyager Free 60+ UC, the success screen displays 'Charge Case' or 'Touchscreen Case' (the correct product-specific name). For other product lines with a Charge Stand, the success screen displays 'Charge Stand' or the appropriate component name. Neither screen incorrectly displays the headset's name in place of the charging component name."
-    },
-    {
-      "title": "TC-DFU-SUCCESS-007: Verify DFU success screen name source \u2014 change device Bluetooth name before update",
-      "steps": [
-        "Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-        "Navigate to Device Settings \u2192 Device Info or General Settings.",
-        "Change the device Bluetooth name to 'My Test Headset' (or a custom name).",
-        "Navigate to Device Settings \u2192 Software.",
-        "Verify Charge Stand firmware update is available and headset is up to date.",
-        "Tap 'Update' on the Charge Stand firmware card only.",
-        "Wait for DFU to complete.",
-        "Observe the DFU success screen and note the component name displayed."
-      ],
-      "expected": "The DFU success screen displays the correct component name ('Charge Stand' or 'Charge Case'), NOT the custom Bluetooth name ('My Test Headset'). This confirms the success screen name is sourced from the component identifier in the DFU response payload, not from the device's advertised Bluetooth name."
-    },
-    {
-      "title": "TC-DFU-SUCCESS-008: Verify DFU success screen name when both headset and Charge Stand are updated simultaneously",
-      "steps": [
-        "Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-        "Navigate to Device Settings \u2192 Software.",
-        "Verify both Headset and Charge Stand firmware updates are available.",
-        "Tap 'Update All' or update both components (if individual selection is required, select both).",
-        "Wait for the DFU process to complete for both components.",
-        "Observe the DFU success/completion screen.",
-        "Note the component name(s) displayed on the success screen."
-      ],
-      "expected": "The DFU success screen correctly identifies both updated components (e.g., 'Headset and Charge Case updated successfully' or shows two separate success messages). Neither component name is replaced by the other, and the headset's Bluetooth name is not shown in place of either component name."
+      "expected": "The component name displayed on the success screen exactly matches the official Charge Stand product name (e.g., 'Charge Stand' or 'Poly Charge Stand'). It does NOT show the headset name, a generic label like 'Accessory', or a truncated/malformed string. Actual (If Bug): The success screen shows the headset name or an incorrect/generic component label."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:30.109399Z"
+  "processed_at": "2026-04-25T09:45:56.519122Z"
 }
