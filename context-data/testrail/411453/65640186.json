@@ -7,12 +7,12 @@
   "feature": "App Settings",
   "scenario": "Analytics event logged when user opens Support > Device screen in Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. From the Home screen, tap the menu icon or navigate to the Support section.",
-    "3. Tap on the Device option under the Support section to open the Support > Device screen.",
-    "4. Observe the analytics event being logged in Firebase."
+    "Open the Poly Studio Mobile app on the mobile device.",
+    "Navigate to the Home screen.",
+    "Tap on the Support option from the Home screen or menu.",
+    "On the Support screen, tap on the Device option to open the Device screen."
   ],
-  "expected": "An analytics event is logged in Firebase when the user opens the Support > Device screen. The event includes default analytics elements such as event graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, and app environment.",
+  "expected": "An analytics event is logged when the user opens the Support > Device screen. The event should track usage analytics including event count by country, gender, app version, app build, and app environment.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -20,13 +20,13 @@
     "support-screen",
     "device-screen",
     "analytics-event",
-    "firebase-logging",
-    "android-app",
-    "in-app-navigation"
+    "in-app-navigation",
+    "mobile-app-ui",
+    "user-interaction"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "a1d07777524c30f0b895829918a079de109eff8068fb6fc95db4cad58536ba0a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.991497Z",
+  "processed_at": "2026-04-25T08:21:31.066276Z",
   "status": "active"
 }
