@@ -1,185 +1,171 @@
 [
   {
-    "title": "TC-DFU-FAIL-001: DFU Failure at >90% \u2014 Firmware Version Reversion After Device Restart (Voyager Free 60+ UC)",
+    "title": "TC-DFU-FAIL-001: Firmware version rollback after DFU failure at >90% \u2014 device power cycle",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Navigate to Device \u2192 Device Info and record current firmware version (e.g., v1.2.3).",
-      "3. Trigger a firmware update via the DFU notification in the app.",
-      "4. Monitor the progress bar on the DFU screen. Allow the update to proceed past 90% completion.",
-      "5. At >90% (e.g., 93-97%), simulate a failure condition: either force-kill the Poly Studio Mobile app OR disconnect Bluetooth from the phone's settings.",
-      "6. Wait 30 seconds, then reconnect Bluetooth and reopen Poly Studio Mobile app.",
-      "7. Observe the DFU completion screen or error notification.",
-      "8. Navigate to Device \u2192 Device Info and read the displayed firmware version.",
-      "9. Power cycle the Voyager Free 60+ UC earbuds (place in charge case, close lid for 10s, reopen, remove earbuds).",
-      "10. Reconnect to the app and navigate to Device \u2192 Device Info again.",
-      "11. Compare the firmware version displayed before the DFU, after the DFU failure, and after the power cycle."
+      "Precondition: Device on firmware v1.0.0. New firmware v2.0.0 available.",
+      "Navigate to: Device \u2192 Software & Updates \u2192 Start firmware update.",
+      "Allow DFU to progress to >90% (e.g., 93%).",
+      "Force DFU failure at >90%: Simulate Bluetooth disconnection OR app force-kill at 93% completion.",
+      "Observe: DFU fails. Do NOT restart device yet.",
+      "Navigate to: Device \u2192 Software & Updates. Record reported firmware version.",
+      "Power OFF device \u2192 Power ON device \u2192 Reconnect via Bluetooth.",
+      "Navigate to: Device \u2192 Software & Updates. Record reported firmware version.",
+      "Repeat steps 2\u20138 for 3 total attempts to capture intermittent behavior."
     ],
-    "expected": "The firmware version displayed after the power cycle reverts to the pre-DFU version (e.g., v1.2.3), confirming the partial update did not commit. The app may show an error or 'Update Failed' message, but the version should not show the new version as 'installed'."
+    "expected": "Immediately after failure (Step 6): Firmware version shows v1.0.0 (original). Actual (If Bug): Shows v2.0.0 partially applied or incorrectly shows 'Up to Date'. After power cycle (Step 8): Firmware version MUST show v1.0.0 (original). Actual (If Bug): Shows v2.0.0 (incorrectly indicating success) OR shows a corrupted/invalid version string. The version must not change between Step 6 and Step 8 unless a full successful DFU occurred."
   },
   {
-    "title": "TC-DFU-FAIL-002: DFU Failure at >90% \u2014 Firmware Version Displayed as 'Up-to-Date' but Reverts on Restart",
+    "title": "TC-DFU-FAIL-002: Language change DFU \u2014 apparent success then silent revert after device restart",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Navigate to Device \u2192 Device Info and record current firmware version (e.g., v1.2.3).",
-      "3. Trigger a firmware update via the DFU notification.",
-      "4. Allow the update to reach >90% completion (e.g., 95%).",
-      "5. At >90%, simulate a Bluetooth disconnection by turning off Bluetooth on the phone.",
-      "6. Wait 15 seconds, then re-enable Bluetooth and allow the device to reconnect.",
-      "7. Open Poly Studio Mobile app. Observe if the app shows a success screen or 'Firmware up to date' message.",
-      "8. Navigate to Device \u2192 Device Info and note the firmware version displayed.",
-      "9. Without power cycling, check if the version shown is the new version (e.g., v1.3.0) or the old version (v1.2.3).",
-      "10. Power cycle the device: place earbuds in charge case, close lid for 30s, reopen, remove earbuds.",
-      "11. Reconnect to the app and navigate to Device \u2192 Device Info again.",
-      "12. Compare the firmware version before DFU, after reconnection (step 8), and after power cycle (step 11)."
+      "Precondition: Device on firmware v1.0.0, language set to English.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Language \u2192 Select 'Deutsch'.",
+      "Confirm language change (triggers DFU for language pack).",
+      "Observe DFU progress. Allow it to reach >90% completion.",
+      "Force DFU failure at >90% (e.g., disconnect Bluetooth).",
+      "Observe: Language briefly shows 'Deutsch' on device UI.",
+      "Do NOT restart device. Check language on device UI immediately after failure.",
+      "Power OFF device \u2192 Power ON \u2192 Reconnect.",
+      "Check language on device UI.",
+      "Use device for 2 minutes (play media, adjust volume, answer a call). Re-check language.",
+      "Repeat steps 2\u201310 for 3 total attempts."
     ],
-    "expected": "If the app incorrectly shows the new firmware version as 'up-to-date' after reconnection (step 7-8), the version MUST revert to the pre-DFU version after the power cycle (step 11-12). This validates the bug scenario where the version display is misleading until a restart exposes the true state."
+    "expected": "Step 6: Language may briefly show 'Deutsch' (apparent success). Step 7: Immediately after failure, language reverts to 'English'. Step 9: After power cycle, language MUST show 'English'. Step 10: After brief use, language MUST remain 'English'. Actual (If Bug): Language shows 'Deutsch' after restart (Step 9) but silently reverts to 'English' after brief use (Step 10). The revert must be caught within 2 minutes of use."
   },
   {
-    "title": "TC-DFU-FAIL-003: Language Change Failure at >90% \u2014 Language Reversion After Device Restart",
+    "title": "TC-DFU-FAIL-003: Multi-component device \u2014 earbud update succeeds, charge case update fails at >90% causing partial rollback",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Navigate to Device \u2192 Device Settings \u2192 Language.",
-      "3. Record the current language (e.g., English).",
-      "4. Select a different language (e.g., French) and begin the language update process.",
-      "5. Monitor the progress bar on the charge case touchscreen (if available) or app. Allow the update to proceed past 90% completion.",
-      "6. At >90% (e.g., 94%), simulate a failure: either force-kill the Poly Studio Mobile app OR briefly remove one earbud from the charge case and reinsert it.",
-      "7. Wait 20 seconds, then reopen the app and reconnect to the device.",
-      "8. Observe the language displayed on the charge case touchscreen (if available) and in the app's Language setting.",
-      "9. Power cycle the device: place both earbuds in the charge case, close lid for 30s, reopen.",
-      "10. Remove earbuds, reconnect to the app, and navigate to Device \u2192 Device Settings \u2192 Language.",
-      "11. Use the device for 2-3 minutes (play media, make a short call), then check the Language setting again.",
-      "12. Compare the language setting at each step."
+      "Precondition: Voyager Free 60+ on firmware v1.0.0 (both earbuds and charge case). New v2.0.0 available.",
+      "Navigate to: Device \u2192 Software & Updates \u2192 Start firmware update.",
+      "Monitor individual component progress (earbuds + charge case).",
+      "Allow earbud update to complete successfully (100%).",
+      "Allow charge case update to reach >90% (e.g., 95%).",
+      "Force failure on charge case update at 95% (e.g., remove earbuds from case during update).",
+      "Observe: DFU fails. Device restarts.",
+      "Navigate to: Device \u2192 Software & Updates. Record firmware version for earbuds and charge case.",
+      "Power OFF device \u2192 Power ON \u2192 Reconnect.",
+      "Navigate to: Device \u2192 Software & Updates. Record firmware version for both components.",
+      "Test all audio features: Play media, make a call, test ANC/Transparency.",
+      "Repeat steps 2\u201311 for 3 total attempts."
     ],
-    "expected": "After the failure at >90%, the language may temporarily appear changed (e.g., French on the charge case screen), but after the power cycle and brief use, the language reverts to the original language (English). This confirms the partial language update did not commit."
+    "expected": "Step 8: Earbuds show v2.0.0 (success). Charge case shows v1.0.0 (rolled back). Actual (If Bug): Charge case incorrectly shows v2.0.0 (partial/corrupt version) OR both components show v2.0.0 despite failed charge case update. Step 10: After power cycle, charge case MUST still show v1.0.0. Step 11: Audio features must work normally despite version mismatch. If bug exists, features dependent on charge case firmware may be broken or inconsistent."
   },
   {
-    "title": "TC-DFU-FAIL-004: Language Change Failure at >90% \u2014 Charge Case vs. Earbud Language Mismatch After Partial Update",
+    "title": "TC-DFU-FAIL-004: Immediate state trigger \u2014 firmware version check immediately after DFU failure at >90% (no restart)",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Navigate to Device \u2192 Device Settings \u2192 Language. Set language to English.",
-      "3. Initiate a language change to German.",
-      "4. Allow the update to reach >90% completion on the progress indicator.",
-      "5. At >90%, simulate a failure by disconnecting Bluetooth from the phone's quick settings panel.",
-      "6. Wait 10 seconds, then reconnect Bluetooth.",
-      "7. Open the app and navigate to Device \u2192 Device Settings \u2192 Language.",
-      "8. Observe the language setting displayed in the app.",
-      "9. Check the charge case touchscreen display language (if available).",
-      "10. Remove the left earbud and check any voice prompts language.",
-      "11. Remove the right earbud and check any voice prompts language.",
-      "12. Power cycle the device (close lid 30s, reopen).",
-      "13. Reconnect and check all three: app language setting, charge case display language, and earbud voice prompt language."
+      "Precondition: Device on firmware v1.0.0. New firmware v2.0.0 available.",
+      "Navigate to: Device \u2192 Software & Updates \u2192 Start firmware update.",
+      "Allow DFU to reach >90% (e.g., 97%).",
+      "IMMEDIATELY force-kill the Poly Studio Mobile app (do NOT navigate away, do NOT switch tabs).",
+      "Reopen Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software & Updates. Record firmware version.",
+      "Check if 'Software Update' banner/button is still present.",
+      "Check if device is responsive (play/pause media, volume control).",
+      "Do NOT restart device. Repeat steps 2\u20138 for 3 total attempts."
     ],
-    "expected": "After the partial failure, there may be a mismatch between the charge case display language and earbud voice prompt language (e.g., charge case shows German, earbuds still speak English). After power cycle, all components should revert to the original language (English), confirming the partial update did not fully commit across all device components."
+    "expected": "Step 6: Firmware version MUST show v1.0.0 (original). Actual (If Bug): Shows v2.0.0 (incorrectly indicating success) OR shows a blank/corrupt version string. Step 7: 'Software Update' banner/button MUST still be present (update available). Actual (If Bug): Banner disappears incorrectly showing 'Up to Date'. Step 8: Device must remain responsive. If bug exists, device may be unresponsive or in a partial update state."
   },
   {
-    "title": "TC-DFU-FAIL-005: Intermittent Failure Mode \u2014 Repeated DFU Attempts at >90% to Reproduce Flaky Behavior",
+    "title": "TC-DFU-FAIL-005: Repeatability loop \u2014 intermittent DFU failure at >90% across 5 consecutive attempts",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Navigate to Device \u2192 Device Info and record current firmware version.",
-      "3. Trigger a firmware update.",
-      "4. Allow the update to reach >90% completion.",
-      "5. At >90%, force-kill the Poly Studio Mobile app.",
-      "6. Reopen the app, reconnect, and observe the result.",
-      "7. Repeat steps 2-6 for a total of 5 iterations, each time recording:",
-      "   a. The exact percentage at which the app was killed.",
-      "   b. Whether the firmware version changed or reverted after restart.",
-      "   c. Any error messages or UI state displayed.",
-      "8. After the 5th iteration, perform a full device power cycle (close lid 30s, reopen).",
-      "9. Navigate to Device \u2192 Device Info and confirm the final firmware version.",
-      "10. Document the number of times the version appeared to update vs. reverted."
+      "Precondition: Device on firmware v1.0.0. New firmware v2.0.0 available.",
+      "For attempt = 1 to 5:",
+      "Navigate to: Device \u2192 Software & Updates \u2192 Start firmware update.",
+      "Allow DFU to reach >90% completion.",
+      "Force DFU failure at >90% (alternate failure methods across attempts: Bluetooth disconnect, app force-kill, device power-off, remove device from range, low battery simulation).",
+      "Record: Firmware version shown immediately after failure.",
+      "Record: Whether device is responsive or in a stuck state.",
+      "Power OFF device \u2192 Power ON \u2192 Reconnect.",
+      "Record: Firmware version after power cycle.",
+      "Record: Whether 'Software Update' banner is present after power cycle.",
+      "End for.",
+      "After 5 attempts, verify cumulative state: Is device still on v1.0.0? Is DFU still offered?"
     ],
-    "expected": "The failure is intermittent \u2014 not all 5 iterations may exhibit the reversion bug. At least 1-2 iterations should show the firmware version reverting after restart, demonstrating the flaky nature of the >90% failure mode. The final version after all iterations should match the original pre-DFU version."
+    "expected": "After all 5 attempts: Device MUST remain on firmware v1.0.0. 'Software Update' banner MUST still be present for v2.0.0. Device must be fully responsive after each power cycle. Actual (If Bug): On any attempt, device shows v2.0.0 after power cycle (false success), OR device becomes unresponsive after repeated failures, OR 'Software Update' banner disappears after N failures incorrectly marking update as complete. Intermittent pattern: Bug may only manifest on 1\u20132 of 5 attempts."
   },
   {
-    "title": "TC-DFU-FAIL-006: Device State During Critical >90% Window \u2014 Battery Dip During Final 10% of DFU",
+    "title": "TC-DFU-FAIL-006: Language change DFU \u2014 immediate state trigger without navigation",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Ensure the charge case battery is between 20-30% (low but not critical).",
-      "3. Navigate to Device \u2192 Device Info and record current firmware version.",
-      "4. Trigger a firmware update.",
-      "5. Allow the update to reach >90% completion.",
-      "6. At >90%, place the charge case on a wireless charger to simulate battery fluctuation during charging.",
-      "7. Alternatively, if battery is low enough, allow the charge case battery to dip below 10% during the update.",
-      "8. Observe the DFU progress bar behavior \u2014 does it stall, jump, or show an error?",
-      "9. After the update completes or fails, navigate to Device \u2192 Device Info.",
-      "10. Power cycle the device (close lid 30s, reopen).",
-      "11. Reconnect and check the firmware version again.",
-      "12. Check the battery level display for the charge case and both earbuds."
+      "Precondition: Device on firmware v1.0.0, language set to English.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Language \u2192 Select 'Fran\u00e7ais'.",
+      "Confirm language change (triggers DFU).",
+      "Allow DFU to reach >90% completion.",
+      "IMMEDIATELY force-kill Poly Studio Mobile app (do NOT navigate away from DFU progress screen).",
+      "Reopen app \u2192 Reconnect to device.",
+      "Check language displayed on device UI.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Language. Record selected language.",
+      "Power OFF device \u2192 Power ON \u2192 Reconnect.",
+      "Check language on device UI again.",
+      "Use device for 3 minutes (play media, make call). Re-check language."
     ],
-    "expected": "A battery dip during the critical >90% window may cause the DFU to fail silently. The firmware version should revert to the pre-DFU version after power cycle. The battery level display should remain accurate. The device should not enter an unrecoverable state (bricked) \u2014 it should remain functional for calls and media."
+    "expected": "Step 7: Device UI shows 'English' (original language). Actual (If Bug): Shows 'Fran\u00e7ais' briefly (apparent success). Step 8: App shows 'English' selected. Step 10: After power cycle, language MUST be 'English'. Step 11: After 3 minutes use, language MUST remain 'English'. Actual (If Bug): Language shows 'Fran\u00e7ais' after restart but reverts to 'English' after brief use \u2014 the silent revert pattern."
   },
   {
-    "title": "TC-DFU-FAIL-007: App UI State During >90% DFU Failure \u2014 Background/Foreground Lifecycle",
+    "title": "TC-DFU-FAIL-007: Multi-component asymmetry \u2014 charge case update succeeds, earbud update fails at >90%",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Trigger a firmware update.",
-      "3. Allow the update to reach >90% completion.",
-      "4. At >90%, press the Home button to background the app.",
-      "5. Wait 30 seconds, then reopen the app from the recent apps list.",
-      "6. Observe the DFU progress bar \u2014 does it resume, reset, or show an error?",
-      "7. Note any status messages displayed.",
-      "8. Background the app again (Home button), wait 10 seconds, then force-kill the app from the app switcher.",
-      "9. Reopen the app and reconnect to the device.",
-      "10. Observe the UI state: is there a DFU completion screen, an error dialog, or a prompt to retry?",
-      "11. Navigate to Device \u2192 Device Info and check the firmware version.",
-      "12. Power cycle the device and check the firmware version again."
+      "Precondition: Voyager Free 60+ on firmware v1.0.0 (both components). New v2.0.0 available.",
+      "Navigate to: Device \u2192 Software & Updates \u2192 Start firmware update.",
+      "Monitor individual component progress.",
+      "Allow charge case update to complete successfully (100%).",
+      "Allow earbud update to reach >90% (e.g., 92%).",
+      "Force failure on earbud update at 92% (e.g., remove earbuds from Bluetooth range).",
+      "Observe: DFU fails. Device restarts.",
+      "Navigate to: Device \u2192 Software & Updates. Record firmware version for earbuds and charge case.",
+      "Test: Place earbuds in charge case \u2192 check if charge case touchscreen shows correct firmware info.",
+      "Power OFF device \u2192 Power ON \u2192 Reconnect.",
+      "Navigate to: Device \u2192 Software & Updates. Record firmware version for both components.",
+      "Test all features: Media playback, call, ANC/Transparency, charge case touchscreen."
     ],
-    "expected": "After backgrounding and foregrounding, the progress bar may resume or show an error. After force-kill and reopen, the app should handle the failed state gracefully \u2014 showing an appropriate error message or retry prompt, not a false success. The firmware version should revert after power cycle."
+    "expected": "Step 8: Charge case shows v2.0.0 (success). Earbuds show v1.0.0 (rolled back). Actual (If Bug): Earbuds incorrectly show v2.0.0 (partial/corrupt) OR charge case incorrectly shows v1.0.0 (unnecessary full rollback). Step 9: Charge case touchscreen must show correct version info. Step 11: After power cycle, earbuds MUST still show v1.0.0. Step 12: Features dependent on earbud firmware (ANC, Transparency, media playback) must work. If bug exists, earbuds may be in a partially updated state causing feature degradation."
   },
   {
-    "title": "TC-DFU-FAIL-008: Combined DFU + Language Failure \u2014 Parallel Symptom Validation",
+    "title": "TC-DFU-FAIL-008: Deep lifecycle \u2014 DFU failure at >90% followed by phone reboot",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Navigate to Device \u2192 Device Info and record firmware version (e.g., v1.2.3).",
-      "3. Navigate to Device \u2192 Device Settings \u2192 Language and record current language (e.g., English).",
-      "4. Trigger a firmware update and allow it to reach >90% completion.",
-      "5. At >90%, simulate failure by disconnecting Bluetooth.",
-      "6. Reconnect and observe the DFU result.",
-      "7. Without power cycling, immediately navigate to Device \u2192 Device Settings \u2192 Language and initiate a language change to Spanish.",
-      "8. Allow the language update to reach >90% completion.",
-      "9. At >90%, simulate failure by force-killing the app.",
-      "10. Reopen the app, reconnect, and navigate to Device \u2192 Device Info and Device \u2192 Device Settings \u2192 Language.",
-      "11. Power cycle the device (close lid 30s, reopen).",
-      "12. Reconnect and check both firmware version and language setting.",
-      "13. Use the device for 3-5 minutes (play music, make a call), then recheck both settings."
+      "Precondition: Device on firmware v1.0.0. New firmware v2.0.0 available. Device connected to phone.",
+      "Navigate to: Device \u2192 Software & Updates \u2192 Start firmware update.",
+      "Allow DFU to reach >90% (e.g., 94%).",
+      "Force DFU failure at 94% (app force-kill).",
+      "Do NOT restart device. Do NOT reopen app yet.",
+      "Reboot the Android phone completely.",
+      "After phone reboot, reopen Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software & Updates. Record firmware version.",
+      "Check if device auto-reconnects to phone after phone reboot.",
+      "Check if 'Software Update' banner is present.",
+      "Power OFF device \u2192 Power ON \u2192 Reconnect.",
+      "Navigate to: Device \u2192 Software & Updates. Record firmware version again."
     ],
-    "expected": "Both the DFU and language change should exhibit the same failure pattern \u2014 partial completion at >90% followed by reversion after power cycle. The firmware version should revert to v1.2.3 and the language should revert to English after the power cycle and brief use. This confirms both symptoms share the same root cause (partial completion corruption)."
+    "expected": "Step 8: Firmware version shows v1.0.0. Actual (If Bug): Shows v2.0.0 or blank/corrupt. Step 9: Device must auto-reconnect after phone reboot. If bug exists, device may fail to reconnect or show as 'disconnected'. Step 10: 'Software Update' banner MUST be present. Step 12: After device power cycle, firmware MUST remain v1.0.0. The phone reboot must not alter the device firmware state."
   },
   {
-    "title": "TC-DFU-FAIL-009: Component State Consistency After >90% DFU Failure \u2014 Left/Right Earbud and Charge Case Firmware Mismatch",
+    "title": "TC-DFU-FAIL-009: Post-failure settings persistence after DFU failure at >90%",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Navigate to Device \u2192 Device Info and record the firmware versions for: left earbud, right earbud, and charge case (if displayed separately).",
-      "3. Trigger a firmware update.",
-      "4. Allow the update to reach >90% completion.",
-      "5. At >90%, remove the left earbud from the charge case while keeping the right earbud in the case.",
-      "6. Wait 10 seconds, then reinsert the left earbud.",
-      "7. Observe the DFU progress bar behavior.",
-      "8. After the update completes or fails, navigate to Device \u2192 Device Info.",
-      "9. Check the firmware version for each component: left earbud, right earbud, charge case.",
-      "10. Power cycle the device (close lid 30s, reopen).",
-      "11. Reconnect and check all three component firmware versions again.",
-      "12. Test basic functionality: play audio through left earbud, right earbud, and verify charge case touchscreen responsiveness."
+      "Precondition: Device on firmware v1.0.0. Set ANC to 80, Transparency Surround to 70, EQ to Bass Boost.",
+      "Navigate to: Device \u2192 Software & Updates \u2192 Start firmware update.",
+      "Allow DFU to reach >90% (e.g., 96%).",
+      "Force DFU failure at 96% (Bluetooth disconnect).",
+      "Reconnect device.",
+      "Navigate to: Device \u2192 Audio Settings. Record: ANC level, Transparency Surround level, EQ setting.",
+      "Power OFF device \u2192 Power ON \u2192 Reconnect.",
+      "Navigate to: Device \u2192 Audio Settings. Record: ANC level, Transparency Surround level, EQ setting.",
+      "Verify all settings match pre-update values."
     ],
-    "expected": "After the >90% failure with one earbud removed, there may be a firmware version mismatch between the left and right earbuds (e.g., left on old version, right on partially updated version). After power cycle, all components should revert to the original pre-DFU firmware version. The device should remain functional \u2014 no component should be bricked or unresponsive."
+    "expected": "Step 6: ANC = 80, Transparency Surround = 70, EQ = Bass Boost (all preserved). Actual (If Bug): Settings reset to defaults (ANC = 50, Transparency Surround = 50, EQ = Neutral) due to partial firmware state corruption. Step 8: After power cycle, settings MUST remain ANC = 80, Transparency Surround = 70, EQ = Bass Boost. If bug exists, settings may reset after power cycle even if they appeared preserved in Step 6."
   },
   {
-    "title": "TC-DFU-FAIL-010: DFU Failure at >90% \u2014 Bluetooth Disconnect During Final 10% with Auto-Reconnect",
+    "title": "TC-DFU-FAIL-010: DFU failure at exact boundary values (90%, 95%, 99%, 100%)",
     "steps": [
-      "1. Open Poly Studio Mobile app and connect to Voyager Free 60+ UC.",
-      "2. Navigate to Device \u2192 Device Info and record current firmware version.",
-      "3. Trigger a firmware update.",
-      "4. Allow the update to reach >90% completion (e.g., 92%).",
-      "5. At >90%, turn off Bluetooth on the phone for exactly 5 seconds, then turn it back on.",
-      "6. Allow the device to auto-reconnect to the phone.",
-      "7. Open Poly Studio Mobile app and observe the UI state.",
-      "8. Note any error messages, retry prompts, or success indicators.",
-      "9. Navigate to Device \u2192 Device Info and check the firmware version.",
-      "10. Without power cycling, check if the device functions normally (play media, adjust volume via charge case touchscreen).",
-      "11. Power cycle the device (close lid 30s, reopen).",
-      "12. Reconnect and check the firmware version again.",
-      "13. Verify all audio settings (ANC, Transparency, EQ) are preserved and functional."
+      "Precondition: Device on firmware v1.0.0. New firmware v2.0.0 available.",
+      "For each boundary in [90%, 95%, 99%, 100%]:",
+      "Navigate to: Device \u2192 Software & Updates \u2192 Start firmware update.",
+      "Allow DFU to reach exactly {boundary}%.",
+      "Force DFU failure at {boundary}% (use consistent method: Bluetooth disconnect).",
+      "Record: Firmware version immediately after failure.",
+      "Power OFF device \u2192 Power ON \u2192 Reconnect.",
+      "Record: Firmware version after power cycle.",
+      "Record: Whether device is fully responsive.",
+      "Record: Whether 'Software Update' banner is present.",
+      "Reset device to v1.0.0 before next boundary test.",
+      "End for."
     ],
-    "expected": "After the brief Bluetooth disconnect at >90%, the DFU should fail. The app should display an appropriate error (not a false success). The firmware version should revert after power cycle. All audio settings should remain at their pre-DFU values. The device should remain fully functional for calls, media, and charge case touchscreen operations."
+    "expected": "For 90%, 95%, 99%: Firmware MUST show v1.0.0 after failure and after power cycle. Device must be responsive. 'Software Update' banner must be present. For 100%: Firmware MUST show v2.0.0 (success). Actual (If Bug): At 99%, device incorrectly shows v2.0.0 after power cycle (false success) OR at 100% device shows v1.0.0 (false failure). The 99% boundary is the highest risk for the 'almost complete' false success pattern."
   }
 ]
