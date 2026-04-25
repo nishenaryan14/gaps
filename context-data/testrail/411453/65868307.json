@@ -10,15 +10,15 @@
     "Open Poly Studio Mobile app on the phone.",
     "Navigate to Home screen and tap on the connected headset's name to open Device Settings.",
     "In Device Settings, scroll to and tap 'Reset Device'.",
-    "Under 'Clear Trusted Device List', tap 'Clear' to disconnect the headset from the app.",
-    "Go to the phone's system Bluetooth settings and remove (forget) the headset from the paired devices list.",
+    "Tap 'Clear' next to 'Clear Trusted Device List' to disconnect the headset from the app.",
+    "Go to the phone's system Bluetooth settings and remove/forget the headset from the paired devices list.",
     "Return to the Poly Studio Mobile app and ensure the headset is no longer listed.",
     "Re-pair the headset with the phone by putting the headset into pairing mode (press and hold the Bluetooth button) and selecting it in the phone's Bluetooth settings.",
-    "Open the Poly Studio Mobile app and confirm the headset reconnects successfully.",
-    "Navigate to Device Settings > Software Update.",
+    "Open the Poly Studio Mobile app and complete the pairing/reconnection flow.",
+    "Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software Update.",
     "Verify that no information about the Charge Stand is displayed on the Software Update screen."
   ],
-  "expected": "After unpairing the headset from the Charge Stand and re-pairing it with the phone/app, the Software Update screen in Device Settings should show no information related to the Charge Stand.",
+  "expected": "After unpairing the headset from the Charge Stand and re-pairing it with the phone/app, the Software Update screen should not show any information related to the Charge Stand.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -34,6 +34,6 @@
   "source_last_updated": "1769430362",
   "source_hash": "08d8776a6e678a3bcd735952d35df8e25661640e8365febfa2806082a9f8e783",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.799378Z",
+  "processed_at": "2026-04-25T07:55:31.880715Z",
   "status": "active"
 }
