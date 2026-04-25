@@ -5,13 +5,13 @@
   "project": "411453",
   "title": "First screen, Close button",
   "feature": "App Settings",
-  "scenario": "Onboarding first screen Close button returns user to start screen instead of exiting onboarding flow",
+  "scenario": "Onboarding first screen Close button returns user to Home screen instead of dismissing onboarding",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. On the Home screen, tap the 'Add Device' or 'Supported Devices' option to begin onboarding.",
+    "2. On the Home screen, tap the menu icon or navigate to the onboarding flow (e.g., via 'Add Device' or first-time setup).",
     "3. On the first onboarding screen, locate and tap the Close button (X) in the upper right corner."
   ],
-  "expected": "The user is returned to the original start screen (Home screen or Supported Devices screen).",
+  "expected": "The user is returned to the original start screen (Supported Devices or Home screen).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -19,14 +19,13 @@
     "onboarding-flow",
     "close-button",
     "home-screen",
-    "add-device",
-    "supported-devices",
+    "first-time-setup",
     "ui-navigation",
-    "app-exit-behavior"
+    "dismiss-onboarding"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "033fed9a4d6f7deff4563014f47ab3a70d18ccc4677762c1dd2102869b5759e9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.016264Z",
+  "processed_at": "2026-04-25T09:32:26.271548Z",
   "status": "active"
 }
