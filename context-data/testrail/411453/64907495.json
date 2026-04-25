@@ -4,29 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Support - Device page Cancel",
-  "feature": "Support - Device page",
-  "scenario": "Verify tapping Cancel (X) on the device details modal closes it and returns to the Support page with the paired device list.",
+  "feature": "App Settings",
+  "scenario": "Tapping Cancel (X) on the device details modal on the Poly Support > Device page closes the modal and returns to the Support page with the paired devices list",
   "steps": [
-    "Pair and connect a headset, launch the app, navigate to Menu > Poly Support > Device.",
-    "Tap on a specific device.",
-    "Tap the Cancel (X) button."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the Support option to open the Poly Support page.",
+    "4. On the Support page, tap on a paired device to open the device details modal.",
+    "5. Tap the Cancel (X) button on the device details modal."
   ],
-  "expected": "Modal closes and user is back at the Support page with the device list.",
+  "expected": "The device details modal closes, and the user is returned to the Support page showing the list of paired devices.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Cancel",
-    "X button",
-    "device details modal",
-    "close modal",
-    "Support page",
-    "paired device list",
-    "dismiss",
-    "modal"
+    "poly-studio-mobile",
+    "support-page",
+    "device-details-modal",
+    "cancel-button",
+    "paired-devices-list",
+    "modal-dismissal",
+    "android-app"
   ],
   "source_last_updated": "1759761737",
   "source_hash": "b100068ac6a8eaa513a6ae20fdedde0fc6962ad076f3d07815807fac79dffabb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.172829Z",
+  "processed_at": "2026-04-25T05:37:16.770006Z",
   "status": "active"
 }
