@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Language change - Case Update Needed popup is not present after Language Change",
-  "feature": "Language Change",
-  "scenario": "\"Case Update Needed\" popup fails to appear after changing the app language, though it should only show after a firmware DFU for earbuds.",
+  "feature": "Firmware Updates",
+  "scenario": "\"Case Update Needed\" popup is not displayed after changing language in Device Settings on Poly Studio Mobile app",
   "steps": [
-    "Open the app",
-    "Go to Settings",
-    "Change the language to a different language",
-    "Observe whether the 'Case Update Needed' popup appears"
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the device name to open Device Settings.",
+    "Navigate to Device Settings \u2192 Languages.",
+    "Select a different language from the list.",
+    "Confirm the language change and allow the update to complete.",
+    "Observe the screen after the update completes."
   ],
-  "expected": "The \"Case Update Needed\" popup should NOT appear after a language change. It should only appear after a firmware DFU for earbuds (via Settings > Software Update).",
+  "expected": "After the language change update completes, the \"Case Update Needed\" popup/card should be displayed, as this card is expected to appear after any firmware update (including language change updates) for the earbuds.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Case Update Needed popup",
-    "app language change",
-    "firmware DFU",
-    "earbuds",
-    "Settings",
-    "popup visibility",
-    "language switch",
-    "firmware update"
+    "poly-studio-mobile",
+    "device-settings",
+    "languages",
+    "case-update-needed",
+    "popup",
+    "language-change",
+    "app-ui"
   ],
   "source_last_updated": "1763382835",
   "source_hash": "2f7419fff0d1f7c9ff04fdab2ee49b38fbf130529d4db896bb6d3beb9be8e492",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.227426Z",
+  "processed_at": "2026-04-25T05:37:16.805407Z",
   "status": "active"
 }
