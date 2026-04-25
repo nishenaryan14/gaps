@@ -4,16 +4,16 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "ANDROID | Low battery notification shown on app cold start despite full battery",
-  "feature": "Battery/Charging",
-  "scenario": "Low battery notification incorrectly appears on app cold start despite connected device having full/high battery level",
-  "description_clean": "Low battery notification incorrectly appears on app cold start (first launch) even when the connected device has a full/high battery level. Expected behavior: no low battery notification should be shown if the device battery level is high.",
+  "feature": "Battery",
+  "scenario": "Low battery notification erroneously displayed on app cold start despite connected device having high battery level",
+  "description_clean": "Low battery notification incorrectly shown on app cold start (first launch) even though the connected device's battery level is high. Expected behavior: no low battery notification should appear when the device battery level is high.",
   "steps": [
     "1. Launch Poly Studio Mobile app (cold start / first launch after force close).",
-    "2. Ensure a Poly Bluetooth audio device (e.g., Poly Voyager 5200) is connected with a full or high battery level.",
-    "3. Observe the Home screen for any low battery notification."
+    "2. Connect to a Poly Bluetooth audio device with a high battery level (e.g., >80%).",
+    "3. Observe the Home screen for any notification or banner."
   ],
-  "expected": "No low battery notification is displayed on the Home screen when the connected device has a full or high battery level.",
-  "actual": "A low battery notification incorrectly appears on the Home screen even though the connected device has a full/high battery level.",
+  "expected": "No low battery notification should appear on the Home screen when the connected device's battery level is high.",
+  "actual": "A low battery notification is incorrectly displayed on the Home screen upon cold start, even though the device battery level is high.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -24,12 +24,11 @@
     "battery-level",
     "home-screen",
     "battery-persistence",
-    "poly-voyager-5200",
     "false-battery-alert"
   ],
   "source_last_updated": "2026-04-22T12:01:07.000+0000",
   "source_hash": "42c6fcb4d71dfc5c9bbe168472448eb5c3e1b7301b12b3f91fa8804489a1ba06",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:15.660718Z",
+  "processed_at": "2026-04-25T07:55:31.137379Z",
   "status": "active"
 }
