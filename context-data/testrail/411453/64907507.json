@@ -9,28 +9,28 @@
   "steps": [
     "1. Open the Poly Studio Mobile app on the mobile device.",
     "2. Register a mobile user on a tenant.",
-    "3. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
+    "3. Navigate to Home \u2192 Menu (hamburger icon) \u2192 Support \u2192 App.",
     "4. Verify that the tenant information is displayed correctly.",
     "5. Install a new version of the Poly Studio Mobile app (e.g., via app store update or sideload).",
     "6. Launch the updated Poly Studio Mobile app.",
-    "7. Navigate again to Poly Lens Menu \u2192 Support \u2192 App.",
+    "7. Navigate to Home \u2192 Menu (hamburger icon) \u2192 Support \u2192 App.",
     "8. Observe the tenant information displayed."
   ],
-  "expected": "The tenant information should be cleared or reset after updating the app, as tenant data should not persist across app updates.",
+  "expected": "After updating the app, the tenant information should be cleared or reset, as tenant info should not persist across app updates.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "tenant-persistence",
     "app-update",
-    "poly-lens-menu",
     "support-menu",
+    "mobile-app-upgrade",
     "tenant-information",
-    "mobile-app-upgrade"
+    "poly-lens-menu"
   ],
   "source_last_updated": "1759752032",
   "source_hash": "3ede487d871c29b92d8d4609f8c684a821c980ac12effd4a027cf7ef43502879",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.953179Z",
+  "processed_at": "2026-04-25T09:32:26.189521Z",
   "status": "active"
 }
