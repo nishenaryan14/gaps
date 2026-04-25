@@ -5,28 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Continue as guest",
   "feature": "App Settings",
-  "scenario": "Onboarding 'Continue as guest' flow skips location permission and passcode prompts on Android compared to iOS",
+  "scenario": "Onboarding flow differs between Android and iOS after tapping 'Continue as guest' \u2014 iOS shows additional location permission and passcode prompts before reaching home screen",
   "steps": [
     "1. Launch the Poly Studio Mobile app on an Android device.",
     "2. On the onboarding screen, tap 'Continue as guest'.",
-    "3. When prompted, select either 'Allow' or 'Don't Allow' for the relevant permission.",
-    "4. Observe the next screen that appears."
+    "3. When prompted, select either 'Allow' or 'Don't Allow' for the displayed permission.",
+    "4. Observe the Poly Product Improvement Program popup that appears.",
+    "5. Dismiss the popup and observe the final screen."
   ],
-  "expected": "After tapping 'Continue as guest' and selecting 'Allow' or 'Don't Allow', the Poly Product Improvement Program popup appears, and the user is directed to the Home screen.",
+  "expected": "After tapping 'Continue as guest' and selecting Allow/Don't Allow, the Poly Product Improvement Program popup appears, then the user is directed to the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-flow",
     "continue-as-guest",
+    "android-vs-ios",
     "location-permission",
     "passcode-prompt",
-    "android-vs-ios",
-    "permission-handling"
+    "product-improvement-program",
+    "home-screen"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "38eb4a276c4a6eff4181ee3b84ba470c4aff89443a0a94f6fa07fabedf945a39",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.704093Z",
+  "processed_at": "2026-04-25T07:55:31.774991Z",
   "status": "active"
 }
