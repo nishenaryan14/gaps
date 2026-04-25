@@ -5,24 +5,24 @@
   "project": "411453",
   "title": "Find My Device - Main screen",
   "feature": "App Settings",
-  "scenario": "Find My Device main screen displays map and headset list when accessed via Poly Studio Mobile app menu",
+  "scenario": "Find My Device main screen displays map and headset list when accessed from Poly Studio Mobile app menu",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Ensure a Poly Bluetooth headset is connected to the app.",
-    "3. From the Home screen, tap the App Menu (hamburger icon or menu icon).",
-    "4. In the App Menu, tap \"Find My Device\".",
-    "5. If prompted with a location access permission dialog, tap \"Allow\" or \"Grant\" to enable location access.",
-    "6. Observe the main Find My Headset screen."
+    "1. Launch the Poly Studio Mobile app on your mobile device.",
+    "2. Ensure a Poly Bluetooth headset is connected to the app (Home screen shows the connected device).",
+    "3. Tap the App Menu (hamburger icon or menu icon) in the top-left or top-right corner of the Home screen.",
+    "4. From the menu, tap \"Find My Device\".",
+    "5. If prompted with a location access permission dialog, tap \"Allow\" or \"While Using the App\" to grant location access.",
+    "6. Observe the main Find My Headset screen that appears."
   ],
-  "expected": "The main Find My Headset screen displays a map and a list of connected/disconnected headsets.",
+  "expected": "The main Find My Headset screen displays a map showing the device's location and a list of connected/disconnected headsets.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
-    "find-my-headset",
     "poly-studio-mobile",
+    "find-my-headset",
     "app-menu",
-    "location-access",
+    "location-permission",
     "map-view",
     "headset-list",
     "bluetooth-headset"
@@ -30,6 +30,6 @@
   "source_last_updated": "1759926560",
   "source_hash": "8ca2c6457559f489e663664e5a75fa877914707f07e7662c427be5a339de06f6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.935975Z",
+  "processed_at": "2026-04-25T09:32:26.169172Z",
   "status": "active"
 }
