@@ -1,300 +1,107 @@
 [
   {
-    "title": "Voyager 5200 \u2014 Language Pack Update Progress Bar Stall at 99% \u2014 Basic Observation",
+    "title": "Voyager 5200 \u2014 Language Update Progress Bar Stuck at 99% \u2014 Completion Validation",
     "steps": [
-      "Connect Voyager 5200 headset to the phone via Bluetooth.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager 5200 device tile to enter Device screen.",
-      "Navigate to Settings \u2192 Language Pack Update.",
-      "Initiate a language pack update (tap 'Update' or 'Download' if an update is available).",
-      "Observe the progress bar during the update process.",
-      "Note the time when the progress bar first reaches 99%.",
-      "Continue observing the progress bar without interacting with the app.",
-      "Record the total time spent at 99% before the update completes (reaches 100% or 'Complete' status)."
+      "Precondition: Voyager 5200 connected to Poly Studio Mobile app. Headset charged >50%.",
+      "Navigate to: Device \u2192 Settings \u2192 Language Update",
+      "Initiate language update via 'Update Language' button.",
+      "Observe progress bar from 0% to 99%.",
+      "Record timestamp when progress bar first reaches 99%.",
+      "Continue observing until update completes (progress bar reaches 100% and 'Update Complete' appears).",
+      "Record timestamp when update completes.",
+      "Calculate delta between reaching 99% and completion."
     ],
-    "expected": "The language pack update eventually completes. The time spent stalled at 99% is documented. If the stall exceeds 8 minutes, this is flagged as a potential performance bug. The progress bar does not freeze the app UI \u2014 the app remains responsive and the back button works."
+    "expected": "Progress bar reaches 99% and may stall for up to 8 minutes before completing. Delta must not exceed 10 minutes. If delta > 10 minutes, this is a regression (Bug Signature: Language update stuck at 99% indefinitely). After completion, headset reboots automatically and reconnects. Language pack version in app reflects the updated language."
   },
   {
-    "title": "Voyager 8200 \u2014 Language Pack Update Progress Bar Stall at 99% \u2014 Basic Observation",
+    "title": "Voyager 8200 UC \u2014 Language Update Progress Bar Stuck at 99% \u2014 Completion Validation",
     "steps": [
-      "Connect Voyager 8200 headset to the phone via Bluetooth.",
-      "Open Poly Studio Mobile app.",
-      "Tap the Voyager 8200 device tile to enter Device screen.",
-      "Navigate to Settings \u2192 Language Pack Update.",
-      "Initiate a language pack update.",
-      "Observe the progress bar during the update process.",
-      "Note the time when the progress bar first reaches 99%.",
-      "Continue observing the progress bar without interacting with the app.",
-      "Record the total time spent at 99% before the update completes."
+      "Precondition: Voyager 8200 UC connected to Poly Studio Mobile app. Headset charged >50%.",
+      "Navigate to: Device \u2192 Settings \u2192 Language Update",
+      "Initiate language update.",
+      "Monitor progress bar continuously.",
+      "When progress bar reaches 99%, start a 10-minute timer.",
+      "Verify headset remains responsive (no audio dropouts, no unexpected disconnects) during the 99% stall period.",
+      "If update completes before 10 minutes, record actual stall duration.",
+      "If update does not complete within 10 minutes, log as FAIL."
     ],
-    "expected": "The language pack update eventually completes. The time spent stalled at 99% is documented. If the stall exceeds 8 minutes, this is flagged as a potential performance bug. The app remains responsive throughout the stall period."
+    "expected": "Progress bar reaches 99% and may stall for up to 8 minutes. Headset remains connected and responsive during stall. Update completes within 10 minutes of reaching 99%. After completion, headset reboots and reconnects automatically. Actual (If Bug): Update never completes \u2014 progress bar stuck at 99% indefinitely, requiring force-kill of app or power cycle of headset."
   },
   {
-    "title": "Voyager 5200 \u2014 Language Update Progress Bar \u2014 App Responsiveness During 99% Stall",
+    "title": "Voyager 5200 \u2014 Language Update Stuck at 99% \u2014 App Force-Kill During Stall",
     "steps": [
-      "Connect Voyager 5200 and begin a language pack update as described in TC-001.",
-      "When the progress bar reaches 99%, immediately attempt to tap the back arrow in the top-left corner of the Language Pack Update screen.",
-      "Verify whether the app navigates back to the Settings screen.",
-      "If navigation succeeds, navigate back into Language Pack Update and observe the progress bar state.",
-      "While still at 99%, tap the Home button on the phone to background the app.",
-      "Wait 10 seconds, then reopen Poly Studio Mobile from the app switcher.",
-      "Observe the progress bar state upon return.",
-      "While still at 99%, attempt to tap other navigation elements (e.g., Device screen tab, Audio Settings)."
-    ],
-    "expected": "The app remains fully responsive during the 99% stall. The back button works and navigates away. Returning to the Language Pack Update screen shows the progress bar still at 99% (or updated if progress was made in the background). Backgrounding and foregrounding the app does not crash the update or reset the progress bar. Tapping other navigation elements either works or shows a graceful 'Update in progress' dialog."
-  },
-  {
-    "title": "Voyager 8200 \u2014 Language Update Progress Bar \u2014 App Responsiveness During 99% Stall",
-    "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "When the progress bar reaches 99%, attempt to tap the back arrow.",
-      "Verify navigation behavior.",
-      "Background the app by pressing the Home button.",
-      "Wait 15 seconds, then reopen the app from the app switcher.",
-      "Observe the progress bar state.",
-      "While at 99%, attempt to rotate the phone from portrait to landscape and back.",
-      "Observe whether the progress bar persists correctly after rotation."
-    ],
-    "expected": "The app remains responsive. Back navigation works. Backgrounding/foregrounding does not break the update flow. The progress bar persists correctly through phone rotation without resetting to 0% or disappearing."
-  },
-  {
-    "title": "Voyager 5200 \u2014 Language Update Progress Bar \u2014 Force Kill and Restart During 99% Stall",
-    "steps": [
-      "Connect Voyager 5200 and begin a language pack update.",
-      "When the progress bar reaches 99%, force-kill the Poly Studio Mobile app (swipe away from recent apps).",
-      "Wait 10 seconds.",
-      "Reopen Poly Studio Mobile app.",
-      "Navigate to the Voyager 5200 device screen.",
-      "Observe the state of the language pack \u2014 check Settings \u2192 Language Pack Update.",
-      "Verify whether the update resumed, completed, or failed.",
-      "Check if the headset still functions correctly (play audio, answer a call)."
-    ],
-    "expected": "The app reconnects to the headset. The language pack update state is handled gracefully \u2014 either the update is shown as complete (if the DFU continued in the background), or the update is shown as failed/interrupted with an option to retry. The headset remains functional and is not bricked. No crash or infinite loop occurs."
-  },
-  {
-    "title": "Voyager 8200 \u2014 Language Update Progress Bar \u2014 Force Kill and Restart During 99% Stall",
-    "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "When the progress bar reaches 99%, force-kill the Poly Studio Mobile app.",
-      "Wait 10 seconds.",
-      "Reopen Poly Studio Mobile app.",
-      "Navigate to the Voyager 8200 device screen.",
-      "Check Settings \u2192 Language Pack Update for update status.",
-      "Verify headset functionality (play media, test call)."
-    ],
-    "expected": "The app handles the interrupted update gracefully. The headset is not bricked. The update either shows as complete or offers a retry option. No crash or boot loop occurs on the headset."
-  },
-  {
-    "title": "Voyager 5200 \u2014 Language Update Progress Bar \u2014 Bluetooth Disconnect During 99% Stall",
-    "steps": [
-      "Connect Voyager 5200 and begin a language pack update.",
-      "When the progress bar reaches 99%, turn off Bluetooth on the phone from the quick settings panel.",
+      "Precondition: Voyager 5200 connected. Language update initiated.",
+      "Wait for progress bar to reach and stall at 99%.",
+      "Immediately force-kill the Poly Studio Mobile app (swipe from recents).",
       "Wait 30 seconds.",
-      "Re-enable Bluetooth on the phone.",
-      "Wait for the Voyager 5200 to automatically reconnect.",
-      "Open Poly Studio Mobile app and navigate to the Voyager 5200 device screen.",
-      "Check Settings \u2192 Language Pack Update for the update status.",
-      "Verify headset functionality (play audio, test call)."
+      "Reopen Poly Studio Mobile app.",
+      "Observe connection state and language version."
     ],
-    "expected": "After Bluetooth is re-enabled and the headset reconnects, the app shows the language pack update status appropriately. The headset is not bricked. If the update failed due to disconnect, a retry option is presented. The headset remains usable for calls and media."
+    "expected": "After reopening app, headset reconnects automatically. Language version in device settings reflects the updated language (update completed in background despite app kill). If language version is NOT updated, this is a regression (Bug Signature: Force-killing app during 99% stall causes update to abort silently, leaving headset in indeterminate state)."
   },
   {
-    "title": "Voyager 8200 \u2014 Language Update Progress Bar \u2014 Bluetooth Disconnect During 99% Stall",
+    "title": "Voyager 8200 UC \u2014 Language Update Stuck at 99% \u2014 Bluetooth Disconnect During Stall",
     "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "When the progress bar reaches 99%, turn off Bluetooth on the phone.",
-      "Wait 30 seconds.",
-      "Re-enable Bluetooth and allow reconnection.",
-      "Open Poly Studio Mobile and navigate to the Voyager 8200 device screen.",
-      "Check Settings \u2192 Language Pack Update for status.",
-      "Verify headset functionality."
+      "Precondition: Voyager 8200 UC connected. Language update initiated.",
+      "Wait for progress bar to reach and stall at 99%.",
+      "From phone Bluetooth settings, tap 'Forget' / unpair the headset.",
+      "Wait 60 seconds.",
+      "Re-pair and reconnect Voyager 8200 UC to the phone.",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Settings \u2192 Language Version"
     ],
-    "expected": "The app handles the Bluetooth disconnect gracefully during the 99% stall. After reconnection, the update status is correctly reported. The headset is functional and not bricked."
+    "expected": "Headset re-pairs successfully. Language version shows the updated language. If language version shows the OLD language, this is a regression (Bug Signature: Bluetooth unpair during 99% stall corrupts the language update, causing rollback to previous language)."
   },
   {
-    "title": "Voyager 5200 \u2014 Language Update Progress Bar \u2014 UI Rendering vs. Actual Progress Validation",
+    "title": "Voyager 5200 \u2014 Language Update \u2014 End-to-End Timing Performance Baseline",
     "steps": [
-      "Connect Voyager 5200 and begin a language pack update.",
-      "Enable developer options on the phone and enable 'Show GPU view updates' or 'Profile GPU rendering' to monitor UI rendering.",
-      "When the progress bar reaches 99%, start a screen recording or logcat capture focusing on the progress bar's on-screen percentage value.",
-      "While at 99%, monitor logcat for any DFU progress callbacks from the Bluetooth stack (filter for 'DFU', 'progress', 'language', 'OTA').",
-      "Compare the logcat progress values with the on-screen progress bar percentage every 30 seconds.",
-      "Continue until the update completes.",
-      "Document any discrepancy between logcat-reported progress and UI-reported progress."
+      "Precondition: Voyager 5200 connected. Factory default language (English) active.",
+      "Navigate to: Device \u2192 Settings \u2192 Language Update",
+      "Select a different language (e.g., French).",
+      "Start a stopwatch at the moment 'Update' is confirmed.",
+      "Record progress at each 10% interval (10%, 20%, 30%... 100%).",
+      "Record the timestamp when progress bar reaches 100% and 'Update Complete' appears.",
+      "Calculate total update duration.",
+      "Repeat test 3 times with different target languages (e.g., German, Spanish, Japanese)."
     ],
-    "expected": "If logcat shows progress values increasing (e.g., 99.1%, 99.5%, 99.9%) while the UI remains stuck at 99%, this indicates a UI rendering/rounding issue. If logcat also shows a flat 99% for 8 minutes, this indicates a genuine DFU processing delay. The test documents which type of issue is occurring."
+    "expected": "Total update duration is consistent across runs (within \u00b115% variance). Progress bar moves smoothly through 0-98% without stalling longer than 30 seconds at any single percentage. 99% stall may last up to 8 minutes but total update must complete within 12 minutes. If any run exceeds 15 minutes total, flag as performance regression."
   },
   {
-    "title": "Voyager 8200 \u2014 Language Update Progress Bar \u2014 UI Rendering vs. Actual Progress Validation",
+    "title": "Voyager 8200 UC \u2014 Language Update \u2014 Progress Bar Never Reaches 100% \u2014 Timeout Behavior",
     "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "Enable developer options and enable 'Show GPU view updates' on the phone.",
-      "When the progress bar reaches 99%, start logcat capture filtering for DFU progress events.",
-      "Monitor both the on-screen progress bar percentage and logcat progress values every 30 seconds.",
-      "Continue until the update completes.",
-      "Document any discrepancy between logcat and UI progress values."
+      "Precondition: Voyager 8200 UC connected.",
+      "Navigate to: Device \u2192 Settings \u2192 Language Update",
+      "Initiate language update.",
+      "Allow update to proceed to 99% stall.",
+      "After 10 minutes at 99%, observe app UI behavior.",
+      "Check for any timeout dialog, error message, or automatic retry.",
+      "If no UI feedback after 10 minutes, check headset functionality: make a test call, play media."
     ],
-    "expected": "The test determines whether the 99% stall is a UI rendering issue or a genuine backend processing delay. Results are documented for engineering review."
+    "expected": "App should display a timeout or error message after 10 minutes of no progress (e.g., 'Update failed. Please try again.'). Headset remains functional for calls and media playback despite failed update. If app shows no error and remains stuck indefinitely with no user feedback, this is a regression (Bug Signature: No timeout mechanism \u2014 user has no indication that update has failed and no way to recover without force-killing app)."
   },
   {
-    "title": "Voyager 5200 \u2014 Language Update \u2014 Maximum Acceptable Time at Any Progress Percentage",
+    "title": "Voyager 5200 \u2014 Language Update \u2014 Rapid Initiation During 99% Stall (Concurrent Request)",
     "steps": [
-      "Connect Voyager 5200 and begin a language pack update.",
-      "Start a stopwatch or use automated timing.",
-      "Record the time spent at each integer progress percentage value (e.g., time at 0%, 1%, 2%, ... 99%).",
-      "Pay special attention to time spent at 99%.",
-      "Compare against a defined acceptable threshold (e.g., no single percentage should take longer than 2 minutes without progress).",
-      "Document the maximum time spent at any single percentage value."
+      "Precondition: Voyager 5200 connected. Language update in progress, stalled at 99%.",
+      "While stalled at 99%, tap 'Update Language' button again.",
+      "Observe app response.",
+      "Check if a second update is queued, rejected, or causes undefined behavior.",
+      "Wait for original update to complete (or timeout).",
+      "Verify final language version."
     ],
-    "expected": "No single progress percentage should stall for an excessive duration. If 99% takes 8 minutes, this exceeds a reasonable threshold (e.g., 2 minutes) and should be flagged as a performance issue. The test establishes a baseline for acceptable progress bar granularity."
+    "expected": "App should disable the 'Update Language' button during an active update, or show a toast: 'Update already in progress'. Initiating a second update must not corrupt the first update. Final language version must match the first requested language. If second update overwrites or cancels the first, this is a regression (Bug Signature: Concurrent language update requests cause device to enter undefined language state)."
   },
   {
-    "title": "Voyager 8200 \u2014 Language Update \u2014 Maximum Acceptable Time at Any Progress Percentage",
+    "title": "Voyager 8200 UC \u2014 Language Update \u2014 Low Battery Interruption During 99% Stall",
     "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "Start a stopwatch or use automated timing.",
-      "Record the time spent at each integer progress percentage value.",
-      "Pay special attention to time spent at 99%.",
-      "Compare against a defined acceptable threshold (e.g., no single percentage should take longer than 2 minutes without progress).",
-      "Document the maximum time spent at any single percentage value."
+      "Precondition: Voyager 8200 UC connected. Headset battery at ~15-20%.",
+      "Initiate language update.",
+      "Allow update to reach 99% stall.",
+      "Allow battery to drain naturally or via continuous audio playback to accelerate drain.",
+      "When headset announces 'Battery low' / 'Power off', observe app behavior.",
+      "After headset powers off, charge headset to >50%.",
+      "Power on and reconnect. Check language version."
     ],
-    "expected": "No single progress percentage should stall for an excessive duration. If 99% takes 8 minutes, this exceeds a reasonable threshold and should be flagged as a performance issue."
-  },
-  {
-    "title": "Voyager 5200 \u2014 Language Update \u2014 Cancel Operation During 99% Stall",
-    "steps": [
-      "Connect Voyager 5200 and begin a language pack update.",
-      "When the progress bar reaches 99%, check if a Cancel or X button is visible on the Language Pack Update screen.",
-      "If a Cancel button is present, tap it.",
-      "Observe the app behavior \u2014 does a confirmation dialog appear? Does the update stop immediately?",
-      "After cancellation, navigate to Settings \u2192 Language Pack Update and check the language pack version.",
-      "Verify headset functionality (play audio, test call).",
-      "Attempt to re-initiate the language pack update from scratch."
-    ],
-    "expected": "If a Cancel button is present, tapping it should either immediately stop the update or show a confirmation dialog ('Are you sure you want to cancel?'). After cancellation, the headset should remain functional. The language pack should either remain at the previous version or show as 'Update failed'. The user should be able to retry the update."
-  },
-  {
-    "title": "Voyager 8200 \u2014 Language Update \u2014 Cancel Operation During 99% Stall",
-    "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "When the progress bar reaches 99%, check if a Cancel or X button is visible.",
-      "If present, tap Cancel.",
-      "Observe app behavior and any confirmation dialogs.",
-      "After cancellation, check language pack version in Settings \u2192 Language Pack Update.",
-      "Verify headset functionality.",
-      "Attempt to re-initiate the language pack update."
-    ],
-    "expected": "Cancel operation works gracefully. Headset remains functional. User can retry the update."
-  },
-  {
-    "title": "Voyager 5200 \u2014 Language Update \u2014 Timeout Handling During 99% Stall",
-    "steps": [
-      "Connect Voyager 5200 and begin a language pack update.",
-      "When the progress bar reaches 99%, start a timer.",
-      "Allow the update to continue without any user interaction.",
-      "If the update does not complete within 15 minutes of reaching 99%, observe whether the app shows any timeout error, 'Update failed' message, or remains stuck indefinitely.",
-      "If a timeout error appears, verify the error message text and any retry options.",
-      "If no timeout handling exists, document that the app remains stuck at 99% indefinitely."
-    ],
-    "expected": "The app should have reasonable timeout handling for language pack updates. If the update is genuinely still processing, the app should show some indication (e.g., 'Installing...' instead of a frozen progress bar). If the update has failed silently, the app should detect this and show an error with a retry option within a reasonable timeframe (e.g., 10-15 minutes)."
-  },
-  {
-    "title": "Voyager 8200 \u2014 Language Update \u2014 Timeout Handling During 99% Stall",
-    "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "When the progress bar reaches 99%, start a timer.",
-      "Allow the update to continue without any user interaction for up to 15 minutes.",
-      "Observe whether the app shows any timeout error, 'Update failed' message, or remains stuck indefinitely.",
-      "If a timeout error appears, verify the error message and retry options.",
-      "Document the behavior."
-    ],
-    "expected": "The app should have reasonable timeout handling. If no timeout handling exists and the progress bar remains stuck indefinitely, this is a bug. The app should either complete the update, show an error, or provide feedback that the update is still processing."
-  },
-  {
-    "title": "Voyager 5200 \u2014 Language Update \u2014 App Backgrounding and Foregrounding Multiple Times During 99% Stall",
-    "steps": [
-      "Connect Voyager 5200 and begin a language pack update.",
-      "When the progress bar reaches 99%, press the Home button to background the app.",
-      "Wait 2 minutes.",
-      "Reopen the app from the app switcher.",
-      "Observe the progress bar.",
-      "Press the Home button again to background the app.",
-      "Wait 3 minutes.",
-      "Reopen the app.",
-      "Observe the progress bar.",
-      "Repeat backgrounding/foregrounding one more time (wait 3 more minutes).",
-      "Observe the final state of the update."
-    ],
-    "expected": "The language pack update continues in the background (or resumes correctly upon foregrounding) across multiple background/foreground cycles. The progress bar does not reset to 0%. The app does not crash. The update eventually completes successfully."
-  },
-  {
-    "title": "Voyager 8200 \u2014 Language Update \u2014 App Backgrounding and Foregrounding Multiple Times During 99% Stall",
-    "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "When the progress bar reaches 99%, background the app via Home button.",
-      "Wait 2 minutes, then reopen.",
-      "Observe progress bar.",
-      "Background again, wait 3 minutes, reopen.",
-      "Observe progress bar.",
-      "Background again, wait 3 minutes, reopen.",
-      "Observe final update state."
-    ],
-    "expected": "The update progresses correctly across multiple background/foreground cycles. No crash, no progress bar reset, and the update eventually completes."
-  },
-  {
-    "title": "Voyager 5200 \u2014 Language Update \u2014 Incoming Call During 99% Stall",
-    "steps": [
-      "Connect Voyager 5200 and begin a language pack update.",
-      "When the progress bar reaches 99%, have a second phone call the primary phone.",
-      "Answer the incoming call on the Voyager 5200 headset.",
-      "Conduct a brief call (30 seconds).",
-      "End the call.",
-      "Return to Poly Studio Mobile app.",
-      "Observe the progress bar state.",
-      "Wait for the update to complete or observe any error state."
-    ],
-    "expected": "The language pack update should either pause during the call and resume after, or continue in the background. The headset should handle the call normally. After the call, the progress bar should not be stuck or broken. The update should eventually complete or show a manageable error state."
-  },
-  {
-    "title": "Voyager 8200 \u2014 Language Update \u2014 Incoming Call During 99% Stall",
-    "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "When the progress bar reaches 99%, have a second phone call the primary phone.",
-      "Answer the call on the Voyager 8200 headset.",
-      "Conduct a brief call (30 seconds).",
-      "End the call.",
-      "Return to Poly Studio Mobile app.",
-      "Observe the progress bar state.",
-      "Wait for the update to complete or observe any error state."
-    ],
-    "expected": "The language pack update handles the incoming call gracefully. The headset functions normally for the call. After the call, the update either continues or shows an appropriate status. The headset is not bricked."
-  },
-  {
-    "title": "Voyager 5200 \u2014 Language Update \u2014 Media Playback During 99% Stall",
-    "steps": [
-      "Connect Voyager 5200 and begin a language pack update.",
-      "When the progress bar reaches 99%, start playing music or a podcast on the phone via the headset.",
-      "Observe whether audio plays through the headset during the update.",
-      "Adjust volume up and down during playback.",
-      "Stop media playback.",
-      "Return to Poly Studio Mobile app.",
-      "Observe the progress bar state.",
-      "Wait for the update to complete."
-    ],
-    "expected": "Media playback may or may not be available during a language pack update (DFU typically disables audio). If audio is disabled, the app should show a clear message like 'Audio unavailable during update'. If audio is available, it should work correctly. The update should not be disrupted by media playback attempts."
-  },
-  {
-    "title": "Voyager 8200 \u2014 Language Update \u2014 Media Playback During 99% Stall",
-    "steps": [
-      "Connect Voyager 8200 and begin a language pack update.",
-      "When the progress bar reaches 99%, attempt to play music via the headset.",
-      "Observe whether audio plays.",
-      "If audio plays, adjust volume.",
-      "Stop media playback.",
-      "Return to Poly Studio Mobile app.",
-      "Observe the progress bar state.",
-      "Wait for the update to complete."
-    ],
-    "expected": "The app handles media playback attempts gracefully during the update. If audio is unavailable, a clear message is shown. The update is not disrupted."
+    "expected": "If headset powers off during 99% stall, the language update should resume or roll back gracefully. After recharge and reconnect, language version should either show the updated language (if flash completed before power loss) or the original language (if flash was interrupted). Headset must not be bricked or stuck in a boot loop. If headset becomes unresponsive or fails to power on after charging, this is a critical regression (Bug Signature: Low battery power-off during language update 99% stall corrupts firmware, bricking the device)."
   }
 ]
