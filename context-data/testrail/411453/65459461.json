@@ -10,12 +10,13 @@
     "Open Poly Studio Mobile app",
     "Go to Home screen",
     "Tap on the connected device name to open Device Settings",
-    "Scroll down and tap 'Software Update'",
-    "Tap 'Check for Update' or the available update prompt",
-    "Tap 'Update' or 'Install' to begin the DFU process",
-    "Observe the updating screen that appears"
+    "Scroll to and tap 'Software Update'",
+    "Tap 'Update' button",
+    "Tap 'Continue' on the prompt",
+    "Tap 'Start Update' to begin the DFU process",
+    "Observe the 'Updating' screen that appears"
   ],
-  "expected": "The updating screen is displayed with a progress bar and the message: \"Answering a call may interrupt the update and require you to restart the update once the call ends. To avoid interruptions, we recommend completing the update before using your device for calls.\"",
+  "expected": "The \"Updating\" screen is shown with a progress bar and a message: \"Answering a call may interrupt the update and require you to restart the update once the call ends. To avoid interruptions, we recommend completing the update before using your device for calls.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +25,12 @@
     "call-interruption-warning",
     "device-settings",
     "poly-studio-mobile",
-    "firmware-update-screen",
-    "update-install"
+    "updating-screen",
+    "firmware-update"
   ],
   "source_last_updated": "1763369574",
   "source_hash": "974b30f6c9546699f4049c24d4a2314412280526a160d4fa66d0eb971e5c34e1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.952691Z",
+  "processed_at": "2026-04-25T08:21:31.023592Z",
   "status": "active"
 }
