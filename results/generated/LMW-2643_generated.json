@@ -1,108 +1,67 @@
 [
   {
-    "title": "[Home Screen] Verify Poly Voyager Free 20 headset image appears after fresh install + pairing",
+    "title": "[Voyager Free 20] Fresh Install \u2192 Pair \u2192 Home Screen Headset Image Rendering",
     "steps": [
-      "Ensure Poly Voyager Free 20 is in pairing mode (LED flashing).",
-      "Clear app data / uninstall Poly Studio Mobile app.",
-      "Fresh install Poly Studio Mobile app from Play Store / App Store.",
-      "Launch Poly Studio Mobile app.",
-      "Complete EULA/Onboarding flow (accept permissions as prompted).",
-      "On the Home screen, verify the 'No Device' state is displayed (no headset image).",
-      "Tap 'Add Device' or 'Pair New Device' button.",
-      "Select 'Poly Voyager Free 20' from the device list.",
-      "Complete Bluetooth pairing flow (confirm pairing code on phone and earbuds).",
-      "After successful pairing, observe the Home screen."
+      "Precondition: Poly Studio Mobile app is NOT installed. Bluetooth is ON. Poly Voyager Free 20 earbuds are in pairing mode (fresh out of box / factory reset).",
+      "Install Poly Studio Mobile app from Play Store / App Store.",
+      "Launch app. Skip / complete onboarding (EULA, permissions) until pairing screen is shown.",
+      "Pair Poly Voyager Free 20 via the in-app pairing flow.",
+      "Wait for pairing to complete and Home screen to load.",
+      "Observe the headset image / icon displayed on the Home screen."
     ],
-    "expected": "The Home screen displays the Poly Voyager Free 20 headset image/icon prominently. The image is correctly rendered (not a broken image placeholder, not blank, not a generic/default icon). The device name 'Poly Voyager Free 20' is shown alongside the image."
+    "expected": "Home screen displays the correct headset image for Poly Voyager Free 20 (distinct earbuds + case visual). Image is fully rendered (not a placeholder, broken icon, or generic silhouette). No loading spinner remains. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): If the image asset fails to load, the Home screen shows a blank/grey placeholder or a generic headset icon instead of the Voyager Free 20 specific graphic."
   },
   {
-    "title": "[Home Screen] Verify Free 20 headset image persists after app background/foreground",
+    "title": "[Voyager Free 20] Home Screen Headset Image \u2014 App Kill & Relaunch Persistence",
     "steps": [
-      "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20 (see previous test case for pairing steps).",
-      "Confirm the Free 20 headset image is displayed on the Home screen.",
-      "Press the Home button to background the app.",
+      "Precondition: Poly Voyager Free 20 is already paired and Home screen shows the headset image.",
+      "Force-kill the Poly Studio Mobile app (swipe from recents / app settings force stop).",
+      "Relaunch the app.",
+      "Observe the Home screen headset image."
+    ],
+    "expected": "Headset image for Poly Voyager Free 20 is displayed correctly immediately upon Home screen load. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Image does not degrade to a placeholder or generic icon after app restart. No asset loading failure on cold start."
+  },
+  {
+    "title": "[Voyager Free 20] Home Screen Headset Image \u2014 Bluetooth Disconnect & Reconnect",
+    "steps": [
+      "Precondition: Poly Voyager Free 20 is paired and Home screen shows the correct headset image.",
+      "Disconnect Bluetooth (turn off earbuds or disable Bluetooth on phone).",
+      "Wait 10 seconds. Observe Home screen.",
+      "Reconnect Bluetooth (turn on earbuds / re-enable Bluetooth).",
+      "Wait for auto-reconnect. Observe Home screen headset image."
+    ],
+    "expected": "On disconnect: Home screen shows the paired device name but headset image may remain or show a 'disconnected' state indicator. On reconnect: Headset image for Voyager Free 20 is restored correctly. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Image does not permanently disappear or revert to a generic placeholder after Bluetooth state transition."
+  },
+  {
+    "title": "[Voyager Free 20] Home Screen Headset Image \u2014 App Background & Foreground Cycle",
+    "steps": [
+      "Precondition: Poly Voyager Free 20 is paired and Home screen shows the correct headset image.",
+      "Press Home button to background the app.",
       "Wait 30 seconds.",
-      "Reopen Poly Studio Mobile app from the app switcher or launcher.",
-      "Observe the Home screen."
+      "Reopen app from recent apps / launcher.",
+      "Observe Home screen headset image."
     ],
-    "expected": "The Poly Voyager Free 20 headset image is still displayed correctly on the Home screen. No broken image, no placeholder, no regression to 'No Device' state."
+    "expected": "Headset image for Poly Voyager Free 20 is displayed correctly upon foregrounding. No image flicker, placeholder, or loading state. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Image asset survives app lifecycle suspension (onStop/onRestart) without corruption."
   },
   {
-    "title": "[Home Screen] Verify Free 20 headset image persists after app kill and relaunch",
+    "title": "[Voyager Free 20] Home Screen Headset Image \u2014 Correct Model Differentiation vs Other Poly Devices",
     "steps": [
-      "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20.",
-      "Confirm the Free 20 headset image is displayed on the Home screen.",
-      "Force-kill the Poly Studio Mobile app (swipe away from recent apps or use OS settings to force stop).",
-      "Relaunch Poly Studio Mobile app.",
-      "Observe the Home screen."
+      "Precondition: Poly Voyager Free 20 is paired and Home screen shows the headset image.",
+      "Note the specific visual details of the headset image (earbuds-in-case form factor, color, shape).",
+      "Compare against known reference images for other Poly devices (e.g., Voyager Surround 80 UC over-ear, Voyager Free 60+ with touchscreen case).",
+      "Verify the image matches the Voyager Free 20 form factor (true wireless earbuds with charging case, no touchscreen on case)."
     ],
-    "expected": "The Home screen displays the Poly Voyager Free 20 headset image correctly. The image is not broken, missing, or replaced with a generic placeholder. The device is still recognized and shown."
+    "expected": "Home screen displays the Voyager Free 20 specific image \u2014 NOT a generic earbud icon, NOT the Voyager Free 60+ image (which has a touchscreen case), and NOT the Voyager Surround 80 UC over-ear image. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Device-specific asset mapping is correct. If asset mapping is wrong, the wrong device image appears (e.g., Free 60+ case with screen shown for Free 20)."
   },
   {
-    "title": "[Home Screen] Verify Free 20 headset image persists after Bluetooth disconnect/reconnect",
+    "title": "[Voyager Free 20] Home Screen Headset Image \u2014 IMMEDIATE STATE TRIGGER (Kill During Pairing Completion)",
     "steps": [
-      "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20.",
-      "Confirm the Free 20 headset image is displayed on the Home screen.",
-      "Turn off Bluetooth on the phone or put the earbuds in the case and close the lid to disconnect.",
-      "Wait 10 seconds.",
-      "Observe the Home screen in disconnected state.",
-      "Reconnect Bluetooth (turn Bluetooth back on or open the case).",
-      "Wait for the app to update the connection state.",
-      "Observe the Home screen."
+      "Precondition: Poly Studio Mobile app is NOT installed. Voyager Free 20 in pairing mode.",
+      "Install and launch app. Complete onboarding until pairing screen.",
+      "Begin in-app pairing flow. As soon as pairing succeeds and before Home screen fully renders (during the transition animation/loading), IMMEDIATELY force-kill the app.",
+      "Relaunch the app.",
+      "Observe Home screen headset image."
     ],
-    "expected": "During disconnection: The Home screen may show the device with a 'Disconnected' status, but the Free 20 headset image should still be visible (not replaced by a generic icon). After reconnection: The Free 20 headset image is displayed correctly with 'Connected' status. No broken image asset."
-  },
-  {
-    "title": "[Home Screen] Verify Free 20 headset image is model-specific (not generic placeholder)",
-    "steps": [
-      "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20.",
-      "On the Home screen, take a screenshot of the headset image.",
-      "Compare the screenshot against the official Poly Voyager Free 20 product image assets.",
-      "Check for distinguishing visual features: earbud shape, charging case design, color scheme, Poly branding.",
-      "Repeat the test with a different model (e.g., Poly Voyager Surround 80 UC) if available, and compare the Home screen images."
-    ],
-    "expected": "The headset image on the Home screen is a unique, model-specific asset for the Poly Voyager Free 20 \u2014 not a generic earbud icon, not a placeholder, and not the same image used for other Poly headset models. The image accurately represents the Free 20 form factor (TWS earbuds with charging case)."
-  },
-  {
-    "title": "[Home Screen] Verify Free 20 headset image loads correctly on first pairing after fresh install (asset caching test)",
-    "steps": [
-      "Enable Airplane Mode on the phone (no internet connection).",
-      "Clear app data / uninstall Poly Studio Mobile app.",
-      "Fresh install Poly Studio Mobile app while still in Airplane Mode.",
-      "Launch the app and complete EULA/Onboarding (offline).",
-      "Turn on Bluetooth (keep Airplane Mode on).",
-      "Put Poly Voyager Free 20 into pairing mode.",
-      "Tap 'Add Device' and pair the Free 20.",
-      "After successful pairing, observe the Home screen headset image.",
-      "Disable Airplane Mode (restore internet).",
-      "Force-kill and relaunch the app.",
-      "Observe the Home screen again."
-    ],
-    "expected": "The Free 20 headset image appears correctly on the Home screen even when paired for the first time offline \u2014 indicating the image asset is bundled in the app APK/IPA and does not require a download. After restoring internet and relaunching, the image still displays correctly."
-  },
-  {
-    "title": "[Home Screen] Verify Home screen transitions from 'No Device' to Free 20 image immediately after pairing completes",
-    "steps": [
-      "Fresh install Poly Studio Mobile app and launch it.",
-      "On the Home screen, verify the 'No Device' placeholder state is shown (no headset image, prompt to add device).",
-      "Begin the pairing flow for Poly Voyager Free 20.",
-      "Complete the pairing process.",
-      "Immediately upon returning to the Home screen (do not navigate away), observe the transition."
-    ],
-    "expected": "The Home screen transitions smoothly from the 'No Device' state to displaying the Poly Voyager Free 20 headset image. There is no intermediate blank state, no loading spinner that hangs, no broken image, and no delay longer than 2 seconds. The image renders immediately upon successful pairing."
-  },
-  {
-    "title": "[Home Screen] Verify Free 20 headset image survives phone rotation and configuration changes",
-    "steps": [
-      "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20.",
-      "Confirm the Free 20 headset image is displayed on the Home screen.",
-      "Rotate the phone to landscape orientation.",
-      "Observe the Home screen.",
-      "Rotate the phone back to portrait orientation.",
-      "Observe the Home screen.",
-      "Trigger a configuration change (e.g., change system font size, then return to app).",
-      "Observe the Home screen."
-    ],
-    "expected": "The Poly Voyager Free 20 headset image is displayed correctly in both portrait and landscape orientations. The image scales appropriately without distortion, clipping, or disappearing. After font size changes, the image remains intact and properly positioned."
+    "expected": "App recovers gracefully. Home screen displays the correct Voyager Free 20 headset image. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): No crash, no blank image, no 'failed to load asset' placeholder. The pairing state is committed and the image asset loads correctly on cold restart even if the initial render was interrupted."
   }
 ]
