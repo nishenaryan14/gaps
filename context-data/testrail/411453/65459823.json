@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "Notifications  - Device updating OFF",
   "feature": "Notifications",
-  "scenario": "No DFU notification appears when device firmware is outdated and software update notifications are disabled in app settings while the app is in the background.",
+  "scenario": "No firmware update notification shown when Device Software Update notifications are disabled in App Settings > General > Notifications & Device Alerts",
   "steps": [
-    "1. Ensure the device has a firmware version lower than the current server version.",
-    "2. Go to App Settings > General > Notifications & Device Alerts.",
-    "3. Turn OFF the 'Device Software Update' notification.",
-    "4. Send the app to the background.",
-    "5. Initiate a DFU (Device Firmware Update) process on the device.",
-    "6. Observe whether any notification appears."
+    "Open Poly Studio Mobile app",
+    "Go to App Settings \u2192 General \u2192 Notifications & Device Alerts",
+    "Set Device Software Update notifications to OFF",
+    "Return to Home screen",
+    "Pair a Poly Bluetooth audio device (if not already paired)",
+    "Start a Device Firmware Update (DFU) on the paired device",
+    "Press the Home button or switch to another app to put Poly Studio Mobile in the background",
+    "Observe the device notification area (status bar / notification shade)"
   ],
-  "expected": "No notification should pop up when the DFU process begins while the app is in the background.",
+  "expected": "No notification is shown in the device notification area when the firmware update begins while the app is in the background.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU notification",
-    "firmware update",
-    "software update notifications disabled",
-    "app background",
-    "device firmware update",
-    "notification not appearing",
-    "app settings notifications"
+    "device-software-update-notifications",
+    "app-settings-notifications",
+    "poly-studio-mobile",
+    "firmware-update-notification",
+    "dfu",
+    "notification-alerts",
+    "background-notifications"
   ],
   "source_last_updated": "1761223796",
   "source_hash": "26c289bcf1b1d09691f7e732c002b55d692130795753b152167dd498afb9a8d1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.305513Z",
+  "processed_at": "2026-04-25T05:37:16.943306Z",
   "status": "active"
 }
