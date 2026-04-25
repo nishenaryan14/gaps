@@ -5,35 +5,28 @@
   "project": "411453",
   "title": "Analytics - Logout Initiated",
   "feature": "App Settings",
-  "scenario": "Logout initiated event is not tracked in Firebase Analytics when user logs out of Poly account in the Poly Studio Mobile app",
+  "scenario": "User logout event is logged via Firebase Analytics in the Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. Ensure the user is logged into their Poly account (navigate to Account screen if needed).",
-    "3. Open the Account screen (Poly Studio Mobile \u2192 Account).",
-    "4. Tap the 'Log Out' or 'Sign Out' button to log out of the Poly account.",
-    "5. Open Firebase Analytics console and navigate to the Events section.",
-    "6. Search for the 'logout_initiated' event.",
-    "7. Note the current event count for 'logout_initiated' (including breakdowns by country, gender, app version, app build, and app environment).",
-    "8. Repeat steps 1\u20134 to log out again.",
-    "9. Return to Firebase Analytics and refresh the 'logout_initiated' event data.",
-    "10. Compare the new event count with the previously noted count."
+    "Open Poly Studio Mobile app",
+    "Go to Account screen",
+    "Tap Log Out / Sign Out button",
+    "Confirm logout if prompted"
   ],
-  "expected": "The 'logout_initiated' event count in Firebase Analytics increases by at least 1 after each logout action. Default event parameters (country, gender, app version, app build, app environment) are correctly populated.",
+  "expected": "Firebase Analytics logs a logout event with default event data (event count by country, gender, app version, app build, app environment).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "firebase-analytics",
-    "logout-initiated",
+    "user-logout",
     "account-screen",
-    "event-tracking",
-    "android",
-    "poly-account",
-    "sign-out"
+    "sign-out",
+    "logout-event",
+    "app-analytics"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "cd2636a2ad732cc814c85f4e6c9b9dacc4dd6a5972ccb161744941094de5914f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.991497Z",
+  "processed_at": "2026-04-25T08:21:31.062127Z",
   "status": "active"
 }
