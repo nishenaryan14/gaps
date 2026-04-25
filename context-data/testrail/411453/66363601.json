@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "DFU - Emu/Tern - Charge Case update needed popup after earbud DFU",
   "feature": "Firmware Update",
-  "scenario": "\"Case Update Needed\" popup appears on Device Home Screen after earbud DFU, requiring charging case firmware update via Poly Lens Desktop app on Voyager Free 60+ or Voyager Free 20",
+  "scenario": "\"Case Update Needed\" popup appears on Device Home Screen after earbud DFU when charge case firmware is outdated, directing user to Poly Lens Desktop app",
   "steps": [
-    "Open Poly Studio Mobile app on Android",
-    "Navigate to Home screen",
-    "Connect Voyager Free 60+ or Voyager Free 20 earbuds",
-    "Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update",
-    "Complete the Device Firmware Update (DFU) for the earbuds",
-    "Observe the popup on the Device Home screen after DFU completes"
+    "1. Open Poly Studio Mobile app on Android.",
+    "2. Navigate to the Home screen.",
+    "3. Connect a pair of Voyager Free 60+ or Free 20 earbuds where both the earbuds and the charge case are on outdated firmware.",
+    "4. Initiate and complete a Device Firmware Update (DFU) for the earbuds via the app.",
+    "5. Observe the Home screen after the earbud DFU completes."
   ],
-  "expected": "After DFU completes, no popup should appear, or the app should provide a clear in-app path to update the charging case firmware directly within Poly Studio Mobile.",
+  "expected": "A popup appears on the Device Home Screen stating \"Case Update Needed\" with a message that the earbuds have been updated but the case update must be done using the Poly Lens Desktop app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "case-update-needed",
-    "charging-case-firmware",
-    "poly-lens-desktop",
+    "poly-studio-mobile",
     "voyager-free-60-plus",
     "voyager-free-20",
-    "device-firmware-update-dfu",
-    "poly-studio-mobile-app",
-    "device-home-screen-popup"
+    "device-firmware-update",
+    "charge-case-firmware",
+    "poly-lens-desktop",
+    "home-screen-popup"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "a4c24963db074d8790b9c7300aed625f773a899faad801748db4da62a4fe52c6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:17.103339Z",
+  "processed_at": "2026-04-25T07:55:32.748100Z",
   "status": "active"
 }
