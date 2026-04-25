@@ -4,31 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Updating screen above 90%",
-  "feature": "Firmware Update",
-  "scenario": "DFU progress screen shows \"Verifying\" message and \"Almost there, don't leave yet\" text from 90% to 99% during firmware update",
+  "feature": "Firmware Updates",
+  "scenario": "Firmware update via Device Settings > Software Update shows \"Verifying\" message and \"Almost there, don't leave yet\" text from 90% to 99% progress",
   "steps": [
-    "Open Poly Studio Mobile app on Android",
-    "Navigate to Home screen",
-    "Connect to a Poly Bluetooth audio device",
-    "Initiate a firmware update (DFU) for the connected device",
-    "Observe the progress bar during the update",
-    "Wait until the progress reaches 90%"
+    "Open Poly Studio Mobile app",
+    "Go to Home screen",
+    "Tap on the desired device name to open Device Settings",
+    "Navigate to Device Settings \u2192 Software Update",
+    "Initiate a firmware update",
+    "Observe the progress bar as the update proceeds",
+    "When the progress reaches 90%, note the screen change"
   ],
-  "expected": "When the firmware update progress reaches 90%, the screen displays a \"Verifying\" message on the progress bar along with the text \"Almost there, don't leave yet\". This screen remains visible from 90% to 99% progress.",
+  "expected": "When the firmware update progress reaches 90%, the screen displays a \"Verifying\" message on the progress bar along with the text \"Almost there, don't leave yet\". This screen is present from 90% to 99%.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu-progress-screen",
-    "verifying-message",
     "firmware-update",
-    "poly-studio-mobile",
+    "software-update",
+    "verifying-message",
     "progress-bar",
-    "almost-there-dont-leave-yet",
-    "android"
+    "poly-studio-mobile",
+    "device-settings",
+    "update-progress"
   ],
   "source_last_updated": "1763133872",
   "source_hash": "b14545fa16862476894f7a1d8c8dc606eb4a65c4bacba1a148afc8841f228388",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.024595Z",
+  "processed_at": "2026-04-25T09:32:26.284038Z",
   "status": "active"
 }
