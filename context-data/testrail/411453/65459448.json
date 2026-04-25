@@ -7,31 +7,30 @@
   "feature": "Firmware Updates",
   "scenario": "Language update notification does not appear when app is backgrounded during firmware update on Device Settings > Language screen",
   "steps": [
-    "1. Launch Poly Studio Mobile app on Android.",
-    "2. Pair and connect a supported Poly Bluetooth headset.",
+    "1. Launch Poly Studio Mobile app on the Android device.",
+    "2. Pair and connect a supported Poly Bluetooth headset to the Android device.",
     "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Language.",
     "4. Select a supported language from the list.",
-    "5. Tap \"Update now.\"",
-    "6. Observe the popup window and the \"Software update - Three easy steps\" screen with animation.",
+    "5. Tap the \"Update now\" button.",
+    "6. Observe the popup window that appears, followed by the \"Software update - Three easy steps\" screen with animation.",
     "7. While the update is in progress, press the Home button or switch to another app to put the Poly Studio Mobile app in the background.",
-    "8. Check the Android notification shade for a notification."
+    "8. Check the Android notification shade for a notification from the Poly Studio Mobile app."
   ],
-  "expected": "A notification showing \"Device update in progress\" should appear while the update is running in the background. After the update completes successfully, a notification that the device is updated should be displayed.",
+  "expected": "A notification should appear in the Android notification shade stating \"device update is in progress\" while the update is ongoing. After the update completes successfully, a notification should appear stating that the device is updated.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "language-update-notification",
-    "firmware-update",
-    "backgrounded-app",
-    "device-settings-language",
+    "firmware-update-background",
     "poly-studio-mobile",
-    "android-notification",
-    "software-update-screen",
-    "bluetooth-headset"
+    "device-settings-language",
+    "background-notification",
+    "software-update-progress",
+    "android-notification-shade"
   ],
   "source_last_updated": "1763382922",
   "source_hash": "07a6efddc3ae38d96be7ba081661b6b5f1218306872876d0cf4a0830448505ec",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.896680Z",
+  "processed_at": "2026-04-25T08:21:30.982034Z",
   "status": "active"
 }
