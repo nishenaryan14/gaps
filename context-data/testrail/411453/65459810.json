@@ -7,12 +7,12 @@
   "feature": "App Settings",
   "scenario": "PPIP dialog appears after onboarding when tapping \"Continue as Guest\" on Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Complete the onboarding screens.",
-    "3. On the final onboarding screen, tap \"Continue as Guest\".",
-    "4. Observe the dialog that appears."
+    "Launch Poly Studio Mobile app",
+    "Complete the onboarding screens",
+    "Tap \"Continue as Guest\"",
+    "Observe the dialog that appears"
   ],
-  "expected": "The PPIP (Product and Personal Improvement Program) dialog appears, asking the user to share basic device and app information (model, serial number, software version, feature usage) to help improve performance and support. The dialog states no personal information is collected or shared with third parties, and preferences can be changed anytime in Settings. Two options are presented: \"Don't Share\" and \"Share Data\".",
+  "expected": "The PPIP (Product and Personal Improvement Program) dialog appears, asking the user to share basic device and app information (model, serial number, software version, feature usage) to help improve performance and support. The dialog states no personal information is collected or shared with third parties, and preferences can be changed anytime in Settings. Options presented: \"Don't Share\" and \"Share Data\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,12 +21,12 @@
     "continue-as-guest",
     "ppip-dialog",
     "guest-mode",
-    "app-launch",
-    "ui-dialog"
+    "app-dialog",
+    "user-consent"
   ],
   "source_last_updated": "1760536922",
   "source_hash": "5124052491945a95b02769748f4dbf40e8773d251cb84960e2ef6daae5f1e39e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.715900Z",
+  "processed_at": "2026-04-25T07:55:31.782541Z",
   "status": "active"
 }
