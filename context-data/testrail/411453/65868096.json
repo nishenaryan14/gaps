@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "Device  Home Screen - Starting app without internet connection",
   "feature": "App Settings",
-  "scenario": "Poly Studio Mobile app home screen fails to load images and data when opened without internet connection, but recovers after reconnecting",
+  "scenario": "Poly Studio Mobile app home screen fails to load images and internet-dependent features when opened without network connectivity, but recovers after reconnecting",
   "steps": [
-    "1. Turn off Wi-Fi and cellular data on the Android device (no internet connection).",
-    "2. Open the Poly Studio Mobile app.",
-    "3. Observe the Home screen.",
-    "4. Note that the paired Poly audio device is still displayed on the Home screen.",
-    "5. Observe that features requiring internet (e.g., images on the Home page) are missing or not loaded.",
-    "6. Re-enable Wi-Fi or cellular data to restore internet connectivity.",
-    "7. Observe the Home screen again."
+    "1. Open the Poly Studio Mobile app on the mobile device.",
+    "2. Ensure the app is connected to the internet (Wi-Fi or cellular) and a Poly Bluetooth audio device is paired and displayed on the Home screen.",
+    "3. Close the app or minimize it.",
+    "4. Turn off all internet connections on the mobile device (disable both Wi-Fi and cellular data).",
+    "5. Reopen the Poly Studio Mobile app.",
+    "6. Observe the Home screen for the paired device and any internet-dependent content (e.g., images, banners, or promotional graphics).",
+    "7. Reconnect the mobile device to the internet (enable Wi-Fi or cellular data).",
+    "8. Observe the Home screen again for the paired device and internet-dependent content."
   ],
-  "expected": "After reconnecting to the internet, all data and images on the Home screen should load and display properly.",
+  "expected": "When the app is opened without an internet connection, the paired device should still be displayed on the Home screen. Internet-dependent features (e.g., images on the Home page) may be missing or not loaded. After reconnecting to the internet, all data and images should load and display properly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile-app",
+    "poly-studio-mobile",
     "home-screen",
     "offline-mode",
-    "no-internet-connection",
+    "network-connectivity",
     "image-loading",
-    "data-recovery",
-    "connectivity-resilience",
-    "android"
+    "internet-dependent-features",
+    "bluetooth-pairing",
+    "connection-recovery"
   ],
   "source_last_updated": "1761837735",
   "source_hash": "804d39e90d36b8909a435313b070366d438613f18094783d4b0a6db6e19b443f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.734514Z",
+  "processed_at": "2026-04-25T07:55:31.801063Z",
   "status": "active"
 }
