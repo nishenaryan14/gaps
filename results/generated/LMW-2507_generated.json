@@ -1,143 +1,151 @@
 [
   {
-    "title": "CC (Central Coordinator) Device Firmware Update - Initiation",
+    "title": "TC-DFU-CC-001: Verify app does not crash when initiating DFU for Charge Case (CC) from Device Settings",
     "steps": [
-      "Launch the app and ensure the user is logged in",
-      "Navigate to the device management screen",
-      "Select a Central Coordinator (CC) device from the device list",
-      "Tap on the 'Firmware Update' or 'DFU' option for the CC device",
-      "Verify that the DFU initiation screen appears without crashing",
-      "Check that the current firmware version is displayed",
-      "Tap 'Start Update' or equivalent button"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CC/CS-capable device (e.g., Poly Voyager Free 60+ UC) is connected via Bluetooth.",
+      "3. Tap the connected [Device Name] to open Device Settings screen.",
+      "4. Tap 'Firmware Update' from the Device Settings menu.",
+      "5. On the Firmware Update screen, verify that the Charge Case (CC) is listed as a sub-device component.",
+      "6. Tap 'Update' or 'Check for Updates' next to the Charge Case (CC) entry.",
+      "7. If an update is available, tap 'Start Update' or 'Download & Install' to initiate the DFU process for the CC.",
+      "8. Observe the app behavior during the DFU initiation (downloading/installing prompt).",
+      "9. Wait 10 seconds and verify the app remains responsive and does not crash."
     ],
-    "expected": "The CC DFU process initiates successfully without any app crash. The user sees a progress indicator or confirmation that the update has started."
+    "expected": "Poly Studio Mobile app does not crash, freeze, or become unresponsive when initiating a DFU for the Charge Case sub-device. The app shows a progress indicator or confirmation dialog and remains stable."
   },
   {
-    "title": "CC (Central Coordinator) Device Firmware Update - Progress Monitoring",
+    "title": "TC-DFU-CS-001: Verify app does not crash when initiating DFU for Charge Stand (CS) from Device Settings",
     "steps": [
-      "Initiate a CC DFU as per the previous test case",
-      "Observe the DFU progress screen",
-      "Monitor the progress bar or percentage indicator for at least 10 seconds",
-      "Verify that the progress updates in real-time",
-      "Check that the app does not freeze or crash during the update process"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CS-capable device (e.g., Poly Voyager Focus 2 with Charge Stand) is connected via Bluetooth.",
+      "3. Tap the connected [Device Name] to open Device Settings screen.",
+      "4. Tap 'Firmware Update' from the Device Settings menu.",
+      "5. On the Firmware Update screen, verify that the Charge Stand (CS) is listed as a sub-device component.",
+      "6. Tap 'Update' or 'Check for Updates' next to the Charge Stand (CS) entry.",
+      "7. If an update is available, tap 'Start Update' or 'Download & Install' to initiate the DFU process for the CS.",
+      "8. Observe the app behavior during the DFU initiation.",
+      "9. Wait 10 seconds and verify the app remains responsive and does not crash."
     ],
-    "expected": "The DFU progress updates smoothly without any app crash or freeze. The progress indicator shows accurate and incremental progress."
+    "expected": "Poly Studio Mobile app does not crash, freeze, or become unresponsive when initiating a DFU for the Charge Stand sub-device. The app shows a progress indicator or confirmation dialog and remains stable."
   },
   {
-    "title": "CC (Central Coordinator) Device Firmware Update - Completion",
+    "title": "TC-DFU-CC-002: Verify app stability when rapidly navigating to Firmware Update and initiating CC DFU multiple times",
     "steps": [
-      "Wait for the CC DFU process to complete",
-      "Observe the completion/final screen",
-      "Verify that a success message is displayed",
-      "Check that the new firmware version is shown",
-      "Navigate back to the device details screen",
-      "Verify the firmware version is updated in the device info"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CC-capable device (e.g., Poly Voyager Free 60+ UC) is connected via Bluetooth.",
+      "3. Tap the connected [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "4. Tap 'Update' next to Charge Case (CC) to initiate DFU.",
+      "5. As soon as the DFU initiation dialog appears, tap 'Cancel' or press Back to abort.",
+      "6. Immediately tap 'Update' next to Charge Case (CC) again to re-initiate DFU.",
+      "7. Repeat steps 5-6 rapidly 5 times in succession.",
+      "8. After the 5th attempt, allow the DFU to proceed without cancelling.",
+      "9. Observe app behavior throughout the rapid initiation/cancellation cycle and during the final DFU."
     ],
-    "expected": "The DFU completes successfully. The app displays a success message with the new firmware version. The device info screen reflects the updated firmware version."
+    "expected": "Poly Studio Mobile app does not crash, ANR (Application Not Responding), or freeze during rapid initiation and cancellation of CC DFU. The app remains responsive and the final DFU proceeds normally."
   },
   {
-    "title": "CS (Central Switch) Device Firmware Update - Initiation",
+    "title": "TC-DFU-CC-003: Verify app crash recovery when DFU initiation for CC fails mid-process",
     "steps": [
-      "Launch the app and ensure the user is logged in",
-      "Navigate to the device management screen",
-      "Select a Central Switch (CS) device from the device list",
-      "Tap on the 'Firmware Update' or 'DFU' option for the CS device",
-      "Verify that the DFU initiation screen appears without crashing",
-      "Check that the current firmware version is displayed",
-      "Tap 'Start Update' or equivalent button"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CC-capable device (e.g., Poly Voyager Free 60+ UC) is connected via Bluetooth.",
+      "3. Tap the connected [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "4. Tap 'Update' next to Charge Case (CC) to initiate DFU.",
+      "5. During the DFU download/installation phase, force a Bluetooth disconnection by turning off the earbuds or charge case.",
+      "6. Wait 15 seconds.",
+      "7. Reconnect the device by turning it back on and re-establishing Bluetooth connection.",
+      "8. Open Poly Studio Mobile app and navigate to [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "9. Observe the app state: check if an error message is displayed, if the DFU status is shown as 'Failed', and if the app is still responsive.",
+      "10. Tap 'Retry' or 'Update' next to Charge Case (CC) to attempt DFU again."
     ],
-    "expected": "The CS DFU process initiates successfully without any app crash. The user sees a progress indicator or confirmation that the update has started."
+    "expected": "Poly Studio Mobile app does not crash when a CC DFU is interrupted by Bluetooth disconnection. The app gracefully handles the error, displays an appropriate error message (e.g., 'Update failed' or 'Connection lost'), and allows the user to retry the DFU without crashing."
   },
   {
-    "title": "CS (Central Switch) Device Firmware Update - Progress and Completion",
+    "title": "TC-DFU-CC-004: Verify app does not crash when initiating CC DFU while audio is streaming",
     "steps": [
-      "Initiate a CS DFU as per the previous test case",
-      "Observe the DFU progress screen for the entire duration of the update",
-      "Verify that the progress updates in real-time without app freeze",
-      "Wait for the DFU process to complete",
-      "Verify that a success message is displayed",
-      "Check that the new firmware version is shown on the completion screen",
-      "Navigate back to device details and confirm the firmware version is updated"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CC-capable device (e.g., Poly Voyager Free 60+ UC) is connected via Bluetooth.",
+      "3. Start media playback (e.g., music or podcast) on the connected device.",
+      "4. While audio is streaming, open Poly Studio Mobile app.",
+      "5. Tap the connected [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "6. Tap 'Update' next to Charge Case (CC) to initiate DFU.",
+      "7. Observe app behavior during DFU initiation while audio is actively streaming.",
+      "8. Verify that the app does not crash and that audio continues to play or is gracefully paused/handled."
     ],
-    "expected": "The CS DFU progresses smoothly, completes successfully, and the firmware version is updated in the device info. No crashes or freezes occur."
+    "expected": "Poly Studio Mobile app does not crash when initiating a CC DFU while audio is streaming. The app remains stable and responsive. Audio may continue playing or be paused as part of the DFU process, but the app does not force-close or become unresponsive."
   },
   {
-    "title": "Sub-Device Firmware Update - Initiation",
+    "title": "TC-DFU-CS-002: Verify app does not crash when initiating CS DFU and then immediately backgrounding the app",
     "steps": [
-      "Launch the app and ensure the user is logged in",
-      "Navigate to the device management screen",
-      "Select a parent device (CC or CS) that has sub-devices associated",
-      "Navigate to the sub-devices list",
-      "Select a sub-device from the list",
-      "Tap on the 'Firmware Update' or 'DFU' option for the sub-device",
-      "Verify that the DFU initiation screen appears without crashing",
-      "Check that the current firmware version of the sub-device is displayed",
-      "Tap 'Start Update' or equivalent button"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CS-capable device (e.g., Poly Voyager Focus 2 with Charge Stand) is connected via Bluetooth.",
+      "3. Tap the connected [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "4. Tap 'Update' next to Charge Stand (CS) to initiate DFU.",
+      "5. Immediately after tapping 'Start Update', press the Home button to background the Poly Studio Mobile app.",
+      "6. Wait 10 seconds.",
+      "7. Reopen the Poly Studio Mobile app from the app switcher or home screen.",
+      "8. Observe the app state: check if the app shows the DFU progress, an error, or if it has crashed.",
+      "9. Navigate to [Device Name] \u2192 Device Settings \u2192 Firmware Update to verify the DFU status."
     ],
-    "expected": "The sub-device DFU process initiates successfully without any app crash. The user sees a progress indicator or confirmation that the update has started."
+    "expected": "Poly Studio Mobile app does not crash when backgrounded immediately after initiating a CS DFU. Upon returning to the app, it remains stable and either shows the ongoing DFU progress or an appropriate status message. The app does not force-close or show a blank screen."
   },
   {
-    "title": "Sub-Device Firmware Update - Progress and Completion",
+    "title": "TC-DFU-CC-005: Verify app stability when initiating CC DFU at low battery on charge case",
     "steps": [
-      "Initiate a sub-device DFU as per the previous test case",
-      "Observe the DFU progress screen for the entire duration of the update",
-      "Verify that the progress updates in real-time without app freeze or crash",
-      "Wait for the DFU process to complete",
-      "Verify that a success message is displayed",
-      "Check that the new firmware version is shown on the completion screen",
-      "Navigate back to the sub-device details and confirm the firmware version is updated"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CC-capable device (e.g., Poly Voyager Free 60+ UC) is connected via Bluetooth.",
+      "3. Verify that the Charge Case battery level is low (below 15%) via the app's Device screen.",
+      "4. Tap the connected [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "5. Tap 'Update' next to Charge Case (CC) to initiate DFU.",
+      "6. Observe if the app displays a low battery warning dialog before proceeding.",
+      "7. If a warning is shown, tap 'Continue' or 'Update Anyway' to proceed.",
+      "8. Observe app behavior during DFU initiation under low battery condition."
     ],
-    "expected": "The sub-device DFU progresses smoothly, completes successfully, and the firmware version is updated in the sub-device info. No crashes or freezes occur."
+    "expected": "Poly Studio Mobile app does not crash when initiating a CC DFU with low charge case battery. The app either displays an appropriate low battery warning and allows the user to proceed, or gracefully blocks the update with a clear message. In either case, the app remains stable and responsive."
   },
   {
-    "title": "Sub-Device Firmware Update - Multiple Sub-Devices Sequential Update",
+    "title": "TC-DFU-CC-006: Verify app does not crash when switching between sub-device DFU tabs (CC vs Earbuds) during update",
     "steps": [
-      "Launch the app and ensure the user is logged in",
-      "Navigate to a parent device with multiple sub-devices",
-      "Select the first sub-device and initiate DFU",
-      "Wait for the first sub-device DFU to complete successfully",
-      "Navigate back to the sub-devices list",
-      "Select a second sub-device and initiate DFU",
-      "Verify that the second DFU starts without crash",
-      "Wait for the second sub-device DFU to complete"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CC-capable device (e.g., Poly Voyager Free 60+ UC) is connected via Bluetooth.",
+      "3. Tap the connected [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "4. Tap 'Update' next to Charge Case (CC) to initiate CC DFU.",
+      "5. While the CC DFU is in progress (downloading/installing), tap on the Earbuds/Headset tab or entry in the Firmware Update screen.",
+      "6. Tap back on the Charge Case (CC) tab/entry.",
+      "7. Repeat steps 5-6 rapidly 3 times.",
+      "8. Observe app behavior during tab switching while DFU is active."
     ],
-    "expected": "Multiple sub-devices can be updated sequentially without any app crash. Each DFU completes successfully."
+    "expected": "Poly Studio Mobile app does not crash, freeze, or ANR when switching between sub-device tabs (CC vs Earbuds) during an active CC DFU. The app remains responsive and the DFU progress is correctly displayed when returning to the CC tab."
   },
   {
-    "title": "DFU Error Handling - Network Interruption During Update",
+    "title": "TC-DFU-CC-007: Verify app stability when initiating DFU for CC immediately after app force-kill and relaunch",
     "steps": [
-      "Initiate a DFU for any device (CC, CS, or sub-device)",
-      "During the DFU process, simulate a network disconnection (e.g., enable airplane mode)",
-      "Observe the app behavior",
-      "Verify that an appropriate error message is displayed (e.g., 'Update failed due to network error')",
-      "Reconnect the network",
-      "Verify that the user can retry the DFU or the app recovers gracefully"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CC-capable device (e.g., Poly Voyager Free 60+ UC) is connected via Bluetooth.",
+      "3. Tap the connected [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "4. Tap 'Update' next to Charge Case (CC) to initiate DFU.",
+      "5. During the DFU initiation, force-kill the Poly Studio Mobile app from the Android app settings or recent apps menu.",
+      "6. Wait 5 seconds.",
+      "7. Relaunch the Poly Studio Mobile app.",
+      "8. Ensure the device reconnects automatically or manually reconnect via Bluetooth settings.",
+      "9. Navigate to [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "10. Tap 'Update' next to Charge Case (CC) to initiate DFU again.",
+      "11. Observe app behavior during the second DFU initiation after force-kill."
     ],
-    "expected": "The app handles network interruption gracefully without crashing. An appropriate error message is shown, and the user can retry the update after reconnection."
+    "expected": "Poly Studio Mobile app does not crash when initiating a CC DFU after a previous force-kill during DFU. The app recovers cleanly, shows the correct DFU state, and allows a fresh DFU initiation without crashing or showing stale state."
   },
   {
-    "title": "DFU Error Handling - Device Disconnection During Update",
+    "title": "TC-DFU-CS-003: Verify app does not crash when initiating CS DFU while a call is in progress",
     "steps": [
-      "Initiate a DFU for a device (CC, CS, or sub-device)",
-      "During the DFU process, simulate device disconnection (e.g., turn off the device or move out of range)",
-      "Observe the app behavior",
-      "Verify that an appropriate error message is displayed (e.g., 'Device disconnected. Update failed.')",
-      "Verify that the app does not crash",
-      "Reconnect the device and verify the user can attempt DFU again"
+      "1. Launch Poly Studio Mobile app on Android device.",
+      "2. Ensure a CS-capable device (e.g., Poly Voyager Focus 2 with Charge Stand) is connected via Bluetooth.",
+      "3. Place or receive an active call on the connected headset.",
+      "4. While the call is active, open Poly Studio Mobile app.",
+      "5. Tap the connected [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+      "6. Tap 'Update' next to Charge Stand (CS) to initiate DFU.",
+      "7. Observe app behavior during DFU initiation while a call is active.",
+      "8. Verify that the app does not crash and that the call is handled gracefully (either continues or is put on hold with user notification)."
     ],
-    "expected": "The app handles device disconnection gracefully without crashing. An appropriate error message is shown, and the user can retry the update after reconnection."
-  },
-  {
-    "title": "DFU Cancellation Mid-Update",
-    "steps": [
-      "Initiate a DFU for any device (CC, CS, or sub-device)",
-      "While the DFU is in progress, tap the 'Cancel' or 'Stop' button",
-      "Verify that the update process stops",
-      "Verify that a confirmation dialog appears (if applicable)",
-      "Confirm cancellation",
-      "Verify that the app returns to the previous screen without crashing",
-      "Check that the device firmware version remains unchanged"
-    ],
-    "expected": "The DFU can be cancelled mid-update without crashing the app. The device firmware version remains at the previous version."
+    "expected": "Poly Studio Mobile app does not crash when initiating a CS DFU while a call is in progress. The app remains stable. The call may be put on hold or ended as part of the DFU process, but the app does not force-close or become unresponsive."
   }
 ]
