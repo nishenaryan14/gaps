@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Policy: Remove some settings from Policy - Settings Unlocked",
   "feature": "App Settings",
-  "scenario": "Policy settings removed from Cloud become unlocked and editable in the Poly Studio Mobile app",
+  "scenario": "Policy-removed settings become unlocked and editable in the app after Cloud policy changes are applied",
   "steps": [
-    "1. On the Poly Cloud portal, navigate to the Policy configuration for the device. Remove one or more settings (e.g., ANC, Transparency Mode, Equalizer) from the Policy and apply/save the changes.",
-    "2. On the Poly Studio Mobile app, go to Home \u2192 [Device Name] \u2192 Audio Settings.",
-    "3. Verify that the settings previously locked by the policy (e.g., ANC, Transparency Mode, Equalizer) now appear unlocked and editable.",
-    "4. Tap on one of the previously policy-affected settings (e.g., ANC).",
-    "5. Attempt to change its value (e.g., toggle ANC On/Off or adjust the slider)."
+    "1. On the Cloud, remove one or more settings from the Policy and apply the changes.",
+    "2. Open Poly Studio Mobile app on the device.",
+    "3. Navigate to the settings that were previously locked by the Policy (e.g., Home \u2192 [Device Name] \u2192 Audio Settings \u2192 [Feature]).",
+    "4. Verify that the previously locked settings are now unlocked and editable.",
+    "5. Tap on any previously policy-affected setting.",
+    "6. Attempt to change its value."
   ],
-  "expected": "The previously locked settings become unlocked and editable in the app. Tapping on any previously policy-affected setting allows the user to change its value successfully.",
+  "expected": "The previously policy-locked settings in the Poly Studio Mobile app become unlocked and editable. Tapping on any such setting allows the user to change its value.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "policy-settings",
     "cloud-policy",
+    "policy-removed-settings",
+    "settings-unlocked",
     "poly-studio-mobile",
-    "anc",
-    "transparency-mode",
-    "equalizer",
-    "settings-unlock",
-    "audio-settings"
+    "settings-editable",
+    "policy-changes-applied",
+    "device-settings"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "731bf71fbade4da8fbb49b8a533846500f64722dc37205db01278478f3b33310",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.980776Z",
+  "processed_at": "2026-04-25T08:21:31.051787Z",
   "status": "active"
 }
