@@ -5,17 +5,15 @@
   "project": "411453",
   "title": "App Settings - General - Privacy Policy",
   "feature": "App Settings",
-  "scenario": "Privacy Policy page opens via Main Menu > General > Privacy Policy with close button in upper right corner",
+  "scenario": "Privacy Policy link in Main Menu > General navigates to Poly Privacy Policy page with close button in upper right corner",
   "steps": [
-    "Open the Poly Studio Mobile app on the Home screen.",
-    "Tap the Main Menu (hamburger icon) in the upper left corner.",
-    "Tap General.",
-    "Tap Privacy Policy.",
-    "Observe the page that loads.",
-    "Look for a close button (X) in the upper right corner of the Privacy Policy page.",
-    "Verify there is no back button (arrow) in the upper left corner."
+    "Open the Poly Studio Mobile app on the Android device.",
+    "On the Home screen, tap the Main Menu (hamburger icon) in the upper left corner.",
+    "From the Main Menu, select 'General'.",
+    "In the General settings, tap 'Privacy Policy'.",
+    "Observe the page that loads."
   ],
-  "expected": "The Poly Privacy Policy page loads successfully. A close button (X) is present in the upper right corner. No back button (arrow) is present in the upper left corner.",
+  "expected": "The Poly Privacy Policy page is displayed. A close button (X) is visible in the upper right corner of the page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,13 +21,14 @@
     "privacy-policy",
     "main-menu",
     "general-settings",
+    "android-app",
+    "navigation",
     "close-button",
-    "ui-navigation",
-    "app-screen"
+    "in-app-browser"
   ],
   "source_last_updated": "1759416441",
   "source_hash": "8098722329e6077a4d3343e3e94a441a64948d495dd444b4d3e287e40eb811ba",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.825228Z",
+  "processed_at": "2026-04-25T08:21:30.930707Z",
   "status": "active"
 }
