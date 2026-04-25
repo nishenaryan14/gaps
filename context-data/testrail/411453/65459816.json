@@ -14,24 +14,25 @@
     "5. Navigate to App Settings \u2192 General \u2192 Account.",
     "6. Observe the \"Share Data\" toggle is present.",
     "7. Tap \"Log in\" and log in with valid Poly credentials.",
-    "8. After successful login, observe the Account screen again."
+    "8. After successful login, return to App Settings \u2192 General \u2192 Account.",
+    "9. Observe the \"Share Data\" toggle."
   ],
-  "expected": "The \"Share Data\" toggle should remain visible in App Settings > General > Account after logging in with Poly credentials.",
+  "expected": "The \"Share Data\" toggle should remain visible in App Settings \u2192 General \u2192 Account after logging in with Poly credentials.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "share-data-toggle",
     "poly-studio-mobile",
+    "share-data-toggle",
     "app-settings",
-    "account-screen",
-    "poly-credentials-login",
-    "data-sharing-option",
-    "onboarding-flow",
-    "guest-continue"
+    "account-settings",
+    "poly-credentials",
+    "login",
+    "data-sharing",
+    "onboarding"
   ],
   "source_last_updated": "1760538045",
   "source_hash": "479fa81840340ef2505c52aa3494402e536f04427d5c316f23899f459dbdc1f8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.718938Z",
+  "processed_at": "2026-04-25T07:55:31.784581Z",
   "status": "active"
 }
