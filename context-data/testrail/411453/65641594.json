@@ -5,29 +5,25 @@
   "project": "411453",
   "title": "EQ - Changed custom EQ, not saved, exit/return to EQ, changes are present",
   "feature": "Equalizer",
-  "scenario": "Unsaved custom EQ changes persist after exiting and returning to the EQ screen without saving",
+  "scenario": "Unsaved custom EQ changes persist after exiting and returning to the EQ screen instead of being discarded",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
     "Tap on the connected device name to open Device Settings",
     "Tap on Audio Settings",
     "Tap on Equalizer",
-    "Select Custom EQ profile",
-    "Modify one or more EQ band sliders (e.g., adjust bass or treble)",
-    "Do NOT tap Save or Apply",
+    "Modify one or more custom EQ band sliders (do not tap Save)",
     "Exit the EQ screen by tapping the back arrow (\u2190) to return to Audio Settings",
-    "Alternatively, close the app or kill the process",
-    "Reopen Poly Studio Mobile app (if closed)",
-    "Navigate back to Home \u2192 Device Settings \u2192 Audio Settings \u2192 Equalizer",
-    "Observe the Custom EQ settings"
+    "Re-open Equalizer from Audio Settings",
+    "Observe the EQ band slider positions"
   ],
-  "expected": "The unsaved custom EQ changes should be discarded, and the EQ should revert to the previously saved settings or default flat profile.",
+  "expected": "Unsaved custom EQ changes should be discarded. The EQ sliders should return to their previously saved state (or default flat settings if no custom preset was saved).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "equalizer",
-    "custom-eq-profile",
+    "custom-eq",
     "eq-band-sliders",
     "unsaved-changes-persistence",
     "audio-settings",
@@ -36,6 +32,6 @@
   "source_last_updated": "1761213340",
   "source_hash": "4e0a08866a1edac4cba9373669535fb75a2076e201c5e1affa32bbe92503e8bd",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.843845Z",
+  "processed_at": "2026-04-25T07:55:31.934844Z",
   "status": "active"
 }
