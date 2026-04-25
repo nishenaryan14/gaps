@@ -5,36 +5,31 @@
   "project": "411453",
   "title": "Home Screen - Device is up to date - Both earbuds are connected",
   "feature": "Firmware Updates",
-  "scenario": "Home Screen shows \"Device is up to date\" status with battery levels and connected status for both earbuds on Poly Studio Mobile app",
+  "scenario": "Home Screen shows \"Device is up to date\" status with battery levels and software version when both earbuds are connected",
   "steps": [
-    "1. Open Poly Studio Mobile app on the Android device.",
-    "2. Ensure both earbuds are connected and have the latest firmware installed.",
+    "1. Launch Poly Studio Mobile app on Android.",
+    "2. Ensure both earbuds are connected to the phone via Bluetooth.",
     "3. Observe the Home screen.",
-    "4. Locate the Status Box on the Home screen.",
-    "5. Verify the battery levels for Left, Right, and Case earbuds are displayed with green indicators.",
-    "6. Verify the 'connected' status is shown with a green indicator.",
-    "7. Verify the device image shows both earbuds.",
-    "8. Verify the 'Device is up to date' status is displayed.",
-    "9. Tap the Status Box to expand it.",
-    "10. Observe the 'Software' field within the expanded Status Box.",
-    "11. Verify the current software version is displayed with a green indicator."
+    "4. Check the Status Box on the Home screen.",
+    "5. Tap the Status Box to expand it.",
+    "6. Observe the expanded Status Box details."
   ],
-  "expected": "Home screen displays 'Device is up to date' status. Status Box shows battery levels for Left, Right, and Case earbuds with green indicators, a 'connected' status with green indicator, and a device image showing both earbuds. Tapping the Status Box reveals the 'Software' field with the current software version and green indicator.",
+  "expected": "1. Home screen displays \"Device is up to date\" status. 2. Status Box shows battery levels for Left, Right, and Case earbuds with green indicators. 3. Status Box shows a \"connected\" status with a green indicator. 4. Status Box displays a device image showing both earbuds. 5. Tapping the Status Box reveals a \"Software\" field with the software version and a green indicator.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "home-screen",
     "status-box",
-    "device-is-up-to-date",
-    "battery-levels",
-    "connected-status",
+    "device-up-to-date",
+    "battery-level",
     "software-version",
-    "firmware-update"
+    "earbuds-connected",
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "aaa1ef69448b04fffbfc4afae8f34ec5ba0d7a340ace32d9fe731176c55b7a69",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.011871Z",
+  "processed_at": "2026-04-25T08:21:31.085240Z",
   "status": "active"
 }
