@@ -5,32 +5,35 @@
   "project": "411453",
   "title": "Software Update - DFU - Perform DFU with no internet [New]",
   "feature": "Firmware Update",
-  "scenario": "DFU shows \"Feature unavailable\" dialog when internet connection is lost during firmware update flow on Device Settings > Software Update",
+  "scenario": "DFU with no internet connection shows \"Feature unavailable\" dialog in Device Settings > Software Update",
   "steps": [
-    "1. Pair the headset with the mobile device and launch the Poly Studio Mobile app.",
-    "2. Turn off Wi-Fi on the mobile device.",
+    "1. Pair the headset with the phone and launch the Poly Studio Mobile app.",
+    "2. Turn off Wi-Fi on the phone (disable internet connection).",
     "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software Update.",
     "4. Tap the Update button.",
-    "5. Turn on Wi-Fi on the mobile device.",
-    "6. Tap the Update button again.",
-    "7. Turn off Wi-Fi on the mobile device.",
-    "8. Tap the Continue button."
+    "5. Observe the dialog that appears.",
+    "6. Turn on Wi-Fi on the phone.",
+    "7. Tap the Update button again.",
+    "8. Observe the DFU screens (should show a 3-step update process).",
+    "9. Turn off Wi-Fi again.",
+    "10. Tap the Continue button on the DFU screen.",
+    "11. Observe the dialog that appears."
   ],
-  "expected": "Step 4: A \"Feature unavailable\" dialog is displayed. Step 6: The 3-step DFU (Device Firmware Update) screens are shown. Step 8: A \"Feature unavailable\" dialog is displayed again.",
+  "expected": "Step 4: A \"Feature unavailable\" dialog should appear when tapping Update without internet. Step 7: The 3-step DFU screens should appear when internet is available. Step 10: A \"Feature unavailable\" dialog should appear again when tapping Continue without internet.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu",
-    "firmware-update",
     "feature-unavailable",
-    "internet-connection",
     "software-update",
+    "no-internet-connection",
     "poly-studio-mobile",
-    "device-settings"
+    "device-settings",
+    "firmware-update"
   ],
   "source_last_updated": "1772713947",
   "source_hash": "5edef2ae912351a8d7da2cfe19e8674f25969ac31ec1c62387369fff75cec3cf",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.967112Z",
+  "processed_at": "2026-04-25T08:21:31.045061Z",
   "status": "active"
 }
