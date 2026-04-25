@@ -11,8 +11,8 @@
     "Ensure a supported Poly Bluetooth audio device is connected.",
     "Tap on the connected device name to open Device Settings.",
     "Navigate to Audio Settings \u2192 Equalizer.",
-    "Select the 'Custom EQ' option.",
-    "Adjust one or more slider values (e.g., Bass, Mid, Treble) to desired levels.",
+    "Select the 'Custom' EQ option.",
+    "Adjust one or more EQ slider values (e.g., Bass, Mid, Treble) to desired levels.",
     "Tap the 'Save EQ' button to save the custom preset."
   ],
   "expected": "The custom EQ preset is saved successfully and appears in the list of available EQ presets.",
@@ -20,17 +20,17 @@
   "edge_cases": [],
   "keywords": [
     "custom-eq",
-    "equalizer",
-    "save-eq",
+    "eq-preset-save",
+    "equalizer-sliders",
     "device-settings",
-    "audio-settings",
     "poly-studio-mobile",
-    "eq-preset",
-    "slider-values"
+    "audio-settings",
+    "bass-mid-treble",
+    "save-eq-button"
   ],
   "source_last_updated": "1761145090",
   "source_hash": "b924199adb58cb142d2a073b788ab32d74f6fd378f464aea92b7f3de3bf7dc5a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.927866Z",
+  "processed_at": "2026-04-25T08:21:31.003014Z",
   "status": "active"
 }
