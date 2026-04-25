@@ -4,29 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Find My Device - Screen with No Devices Connected",
-  "feature": "Find My Device",
-  "scenario": "Verify the \"No Devices Connected\" screen displays correctly when opening Find My Device from App Settings, showing a map, warning sign, error message, and \"Not seeing your device?\" button.",
+  "feature": "App Settings",
+  "scenario": "Find My Device screen shows \"No devices were found\" message and map when no Poly device is connected",
   "steps": [
-    "Open App Settings.",
-    "Navigate to Find My Device.",
-    "Observe the screen that appears."
+    "1. Open the Poly Studio Mobile app on the Home screen with 'No Devices Connected' displayed.",
+    "2. Tap the hamburger menu icon (three horizontal lines) to open the side navigation menu.",
+    "3. Tap 'Find My Device' from the menu.",
+    "4. If prompted, grant location permission to the app.",
+    "5. Observe the Find My Device screen."
   ],
-  "expected": "The screen displays a map, a warning sign, the message \"No devices were found. Connect your Poly device using Bluetooth and try again.\", and a \"Not seeing your device?\" button.",
+  "expected": "The Find My Device screen should display a map, a warning sign, the message \"No devices were found. Connect your Poly device using Bluetooth and try again.\", and a \"Not seeing your device?\" button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "No Devices Connected",
-    "Find My Device",
-    "App Settings",
-    "map",
-    "warning sign",
-    "error message",
-    "Not seeing your device",
-    "empty state"
+    "find-my-device",
+    "no-devices-found",
+    "poly-studio-mobile",
+    "no-devices-connected",
+    "location-permission",
+    "hamburger-menu",
+    "device-discovery"
   ],
   "source_last_updated": "1762437205",
   "source_hash": "84243257d6679e5a76506d27552ab66fc719bd4467b40b1a2282ea748abc43ce",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.167752Z",
+  "processed_at": "2026-04-25T05:37:16.768997Z",
   "status": "active"
 }
