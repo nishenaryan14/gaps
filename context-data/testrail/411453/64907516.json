@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "Support - Verify that data is correct after moving between Accounts linked to different Tenants",
   "feature": "App Settings",
-  "scenario": "Support/App data does not update correctly when switching between accounts linked to different tenants in Poly Lens Menu",
+  "scenario": "Support > App data does not update correctly when switching between accounts linked to different tenants",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Home screen.",
     "2. Log in with Account A (Tenant A).",
-    "3. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
-    "4. Verify that the App screen displays Tenant A information.",
-    "5. Log out of Account A from the Account screen.",
+    "3. Navigate to Account \u2192 Support \u2192 App.",
+    "4. Verify that the App info displayed corresponds to Tenant A.",
+    "5. Log out from Account A.",
     "6. Log in with Account B (Tenant B).",
-    "7. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
-    "8. Verify that the App screen now displays Tenant B information."
+    "7. Navigate to Account \u2192 Support \u2192 App.",
+    "8. Verify that the App info displayed corresponds to Tenant B."
   ],
-  "expected": "After switching accounts, the Support > App screen correctly updates to show the tenant information corresponding to the currently logged-in account (Tenant A info for Account A, Tenant B info for Account B).",
+  "expected": "After switching accounts, the Support > App screen correctly updates to show the tenant-specific information for the currently logged-in account (Tenant A info for Account A, Tenant B info for Account B).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "poly-lens-menu",
-    "support-app",
     "account-switching",
-    "tenant-data",
     "multi-tenant",
-    "app-data-persistence",
-    "account-login"
+    "app-data-update",
+    "support-screen",
+    "tenant-configuration",
+    "login-logout"
   ],
   "source_last_updated": "1759752644",
   "source_hash": "e2e1d9b5ca51d1c18e1aeb4b2a9ddd369e6179a31144b5e9fd3ac6cfb1589374",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.784670Z",
+  "processed_at": "2026-04-25T07:55:31.855961Z",
   "status": "active"
 }
