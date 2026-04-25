@@ -5,24 +5,32 @@
   "project": "411453",
   "title": "Notifications - Device disconnected OFF",
   "feature": "Notifications",
-  "scenario": "No \"Device is disconnected\" notification appears when the notification toggle is disabled in Poly Lens Menu > General > Notifications & Device Alerts and the headset is turned off while the app is in the background",
-  "steps": [],
-  "expected": "",
+  "scenario": "No \"Device is disconnected\" notification appears when notification toggle is disabled in Poly Lens Menu > General > Notifications & Device Alerts and headset is turned off with app in background",
+  "steps": [
+    "1. Launch Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Poly Lens Menu \u2192 General \u2192 Notifications & Device Alerts.",
+    "3. Locate the 'Device Disconnected' notification toggle and ensure it is turned OFF.",
+    "4. Pair and connect a supported Poly Bluetooth headset to the Android device.",
+    "5. Press the Power button on the headset to turn it OFF.",
+    "6. Immediately press the Home button on the Android device to send the Poly Studio Mobile app to the background.",
+    "7. Observe the Android notification shade for any incoming notifications."
+  ],
+  "expected": "No 'Device is disconnected' notification appears in the Android notification shade after turning off the headset while the app is in the background.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-lens",
-    "notifications",
-    "device-disconnected",
+    "poly-studio-mobile",
+    "device-disconnected-notification",
     "notification-toggle",
-    "general-settings",
+    "notifications-and-device-alerts",
+    "bluetooth-headset",
     "background-app",
-    "device-alerts",
-    "headset-power-off"
+    "android-notification-shade",
+    "poly-lens-menu"
   ],
   "source_last_updated": "1761226715",
   "source_hash": "ff0482c1a1713d14ce73586225b8ea9dec2d09db220674fd7a394c49ba8bb131",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.945328Z",
+  "processed_at": "2026-04-25T07:55:31.967112Z",
   "status": "active"
 }
