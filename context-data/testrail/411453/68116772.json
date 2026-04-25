@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - Quick Settings disabled",
   "feature": "Device Management",
-  "scenario": "Quick Settings are not displayed on Device Home Screen when Quick Settings Selection toggle is set to OFF in Device Settings",
+  "scenario": "Quick Settings section remains visible on Device Home Screen when Quick Settings Selection toggle is set to OFF in Device Settings",
   "steps": [
     "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the device name to open Device Settings",
+    "Go to Home screen",
+    "Tap on a connected device to open Device Settings",
     "Locate the Quick Settings Selection toggle",
     "Set the Quick Settings Selection toggle to OFF",
-    "Return to the Home screen"
+    "Return to the Device Home screen"
   ],
-  "expected": "Quick Settings are not displayed on the Device Home Screen.",
+  "expected": "The Quick Settings section should not be displayed on the Device Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "quick-settings-selection",
+    "device-home-screen",
     "device-settings",
-    "home-screen",
-    "quick-settings-display",
     "poly-studio-mobile",
     "toggle-off",
-    "device-home-screen"
+    "quick-settings-visibility",
+    "ui-persistence"
   ],
   "source_last_updated": "1764601183",
   "source_hash": "3309f8697019c57b509501245cfb18badbc4003b1aca8493d1586977c015652b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.738043Z",
+  "processed_at": "2026-04-25T07:55:31.804348Z",
   "status": "active"
 }
