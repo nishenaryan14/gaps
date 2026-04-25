@@ -4,27 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Emu/Tern CC battery - CC battery level less than 30%, yellow icon",
-  "feature": "Battery Indicator",
-  "scenario": "Verify that the battery icon on the Home screen turns yellow when the Emu/Tern CC battery level drops below 30%.",
+  "feature": "Battery",
+  "scenario": "Charging case battery icon on Home screen does not display yellow when battery level is below 30%",
   "steps": [
-    "Check the battery level of the Emu/Tern CC.",
-    "If the battery level is less than 30%, observe the battery icon on the Home screen."
+    "Open the Poly Studio Mobile app.",
+    "Navigate to the Home screen.",
+    "Ensure a Poly Bluetooth audio device (e.g., Voyager 5200, Free 60+) is connected.",
+    "Place the device in its charging case.",
+    "Allow the charging case battery level to drop below 30%.",
+    "Observe the battery icon displayed on the Home screen for the charging case."
   ],
-  "expected": "The battery icon on the Home screen should display as yellow.",
+  "expected": "The charging case battery icon on the Home screen displays as yellow when the battery level is below 30%.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "battery icon",
-    "Home screen",
-    "yellow",
-    "Emu/Tern CC",
-    "battery level",
-    "below 30%",
-    "low battery indicator"
+    "poly-studio-mobile",
+    "home-screen",
+    "charging-case",
+    "battery-icon",
+    "battery-level",
+    "low-battery-indicator",
+    "voyager-5200",
+    "voyager-free-60"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "4df2bca123082bfd31d8568b508bf4ce2810ee5ea3eefbcbdb9543e630aefe98",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.352481Z",
+  "processed_at": "2026-04-25T05:37:17.005859Z",
   "status": "active"
 }
