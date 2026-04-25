@@ -5,23 +5,23 @@
   "project": "411453",
   "title": "Analytics - Firmware Update",
   "feature": "Firmware Update",
-  "scenario": "Firebase analytics firmware update event does not log all required fields (Success, Device Name, Firmware Update Status, version details, progress, update time, error description) after completing a DFU on a Poly headset",
+  "scenario": "Firebase DFU event logging does not increment firmware-specific field counts after completing a device firmware update on a Poly headset",
   "steps": [],
   "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "firmware-update",
+    "dfu-event-logging",
     "firebase-analytics",
-    "dfu",
+    "firmware-specific-field-counts",
+    "poly-headset",
     "device-firmware-update",
-    "event-logging",
-    "firmware-update-status",
-    "poly-headset"
+    "event-tracking"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "3afe2fc5df7b9fcbd603683988ce1a4042d55767aafcc9d753744593479a62a5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.976724Z",
+  "processed_at": "2026-04-25T07:55:32.003768Z",
   "status": "active"
 }
