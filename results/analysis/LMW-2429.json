@@ -19,150 +19,126 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test covers the scenario where a DFU update button remains tappable/visible after a successful Charge Case firmware update, leading to a failure on re-tap until app restart.",
-    "No test covers post-DFU button state management \u2014 verifying that the Software Update button or 'Update All' button becomes disabled, hidden, or transitions to an 'Up to Date' state immediately after a successful firmware update completes.",
-    "No test covers the user experience of tapping a stale DFU button after a completed update and verifying the app handles it gracefully (e.g., shows 'already up to date' message) rather than failing silently or requiring an app restart.",
-    "No test covers the specific device model Voyager Legend 50 (this appears to be a typo or non-existent model \u2014 the domain knowledge references Voyager Free 60+ and Voyager Legend series separately; the bug may be misattributed to a wrong device, but no test covers this exact post-update button persistence failure on any Poly TWS device with a charge case).",
-    "No test covers DFU button lifecycle across app restart \u2014 verifying that after a successful update, killing and relaunching the app correctly shows the updated state without the stale update button."
+    "No test case validates the post-DFU UI state where the 'Update' button remains visible with the same build number after a successful Charge Case firmware update on Voyager Legend 50.",
+    "No test case covers tapping the 'Update' button a second time after a successful DFU to verify the app handles the 'already up-to-date' state gracefully (e.g., showing a proper message, disabling the button, or preventing a failed re-attempt).",
+    "No test case validates that the 'Update' button is properly disabled, hidden, or its state refreshed after a successful DFU without requiring an app restart.",
+    "No test case covers the lifecycle dimension: the bug requires an app restart to clear the stale button state \u2014 no existing test validates that the button state persists incorrectly across the DFU completion lifecycle event.",
+    "No test case covers the Voyager Legend 50 device specifically for post-DFU button state behavior \u2014 existing DFU-related tests focus on Voyager Free 60+ and language-change scenarios, not the basic 'same build number re-tap' failure on Legend 50.",
+    "No test case validates the Software tab UI state transition from 'Update available' to 'Up-to-date' after a DFU completes successfully, which is the core failure point of this bug."
   ],
   "generated_testcases": [
     {
-      "title": "TC-DFU-001: Verify Software Update button becomes disabled/hidden immediately after successful Charge Case firmware update",
+      "title": "TC-DFU-LEG50-001: Verify 'Update' button is disabled/hidden after successful Charge Case DFU on Voyager Legend 50",
       "steps": [
-        "Open Poly Studio Mobile app on the paired phone.",
-        "Tap the connected device (e.g., Voyager Free 60+ UC) to enter Device screen.",
-        "Navigate to Settings \u2192 Software Update.",
-        "Verify the 'Update All' or 'Update' button is visible and tappable (indicating an update is available).",
-        "Tap 'Update All' to begin the Charge Case firmware update.",
-        "Wait for the update to complete (observe progress reaches 100% and device restarts).",
-        "After the device reconnects, observe the Software Update screen WITHOUT leaving the app or restarting it.",
-        "Check the state of the 'Update All' / 'Update' button."
+        "Open Poly Studio Mobile app.",
+        "Tap the Voyager Legend 50 device tile to enter Device screen.",
+        "Navigate to Settings \u2192 Software.",
+        "Verify the Software tab shows 'Update available' and an 'Update' button with the current Charge Case firmware build number.",
+        "Tap 'Update' to begin the Charge Case firmware update.",
+        "Wait for the DFU to complete successfully (progress reaches 100% and success confirmation appears).",
+        "Observe the 'Update' button state on the Software tab immediately after DFU completion.",
+        "Do NOT restart the app or disconnect Bluetooth.",
+        "Verify the 'Update' button is now disabled (greyed out) or hidden.",
+        "Verify the Software tab now displays 'Up-to-date' or equivalent status text.",
+        "Verify the build number shown matches the newly installed firmware version."
       ],
-      "expected": "Immediately after the successful Charge Case firmware update completes and the device reconnects, the 'Update All' or 'Update' button should be disabled, hidden, or replaced with an 'Up to Date' / 'No Updates Available' message. The button should NOT remain tappable in the same active state as before the update."
+      "expected": "After successful Charge Case DFU on Voyager Legend 50, the 'Update' button is disabled/hidden and the Software tab shows 'Up-to-date' status without requiring an app restart."
     },
     {
-      "title": "TC-DFU-002: Verify tapping stale DFU button after successful update shows graceful message instead of silent failure",
+      "title": "TC-DFU-LEG50-002: Verify tapping 'Update' button again after successful DFU shows graceful 'already up-to-date' message",
       "steps": [
-        "Open Poly Studio Mobile app and connect to the device (e.g., Voyager Free 60+ UC).",
-        "Navigate to Settings \u2192 Software Update.",
-        "Tap 'Update All' to perform a Charge Case firmware update.",
-        "Wait for the update to complete successfully (100% progress, device restart, reconnection).",
-        "Without leaving the Software Update screen, tap the 'Update All' / 'Update' button again.",
-        "Observe the app's response."
+        "Open Poly Studio Mobile app.",
+        "Tap the Voyager Legend 50 device tile to enter Device screen.",
+        "Navigate to Settings \u2192 Software.",
+        "Tap 'Update' to perform the Charge Case firmware update.",
+        "Wait for DFU to complete successfully.",
+        "Immediately tap the 'Update' button again (if still visible/enabled).",
+        "Observe the app response."
       ],
-      "expected": "The app should display a graceful message such as 'Your device is already up to date' or 'No updates available'. The app should NOT show a silent failure (e.g., spinner stuck indefinitely, no feedback, or an error toast without explanation). The app should NOT require a force-kill and restart to recover from this state."
+      "expected": "The app handles the re-tap gracefully: either the button is disabled so no action occurs, or tapping it shows a clear message like 'Firmware is already up-to-date' or 'No update available'. No crash, no failed update attempt, no error state requiring app restart."
     },
     {
-      "title": "TC-DFU-003: Verify DFU button state persists correctly across app restart after successful Charge Case update",
+      "title": "TC-DFU-LEG50-003: Verify Software tab UI state transitions from 'Update available' to 'Up-to-date' after successful DFU on Voyager Legend 50",
       "steps": [
-        "Open Poly Studio Mobile app and connect to the device (e.g., Voyager Free 60+ UC).",
-        "Navigate to Settings \u2192 Software Update.",
-        "Verify an update is available and tap 'Update All'.",
-        "Wait for the Charge Case firmware update to complete successfully (100% progress, device restart, reconnection).",
-        "Force-kill the Poly Studio Mobile app (swipe it away from the recent apps list).",
-        "Reopen Poly Studio Mobile app and wait for the device to reconnect.",
-        "Navigate to Settings \u2192 Software Update.",
-        "Observe the state of the 'Update All' / 'Update' button."
+        "Open Poly Studio Mobile app.",
+        "Tap the Voyager Legend 50 device tile.",
+        "Navigate to Settings \u2192 Software.",
+        "Capture the initial UI state: note the presence of 'Update available' text, the 'Update' button, and the current build number.",
+        "Initiate the Charge Case firmware update by tapping 'Update'.",
+        "Wait for the DFU to reach 100% and show success confirmation.",
+        "Immediately after success, observe the Software tab UI.",
+        "Check for the following elements: status text (should now say 'Up-to-date' or 'Firmware is up to date'), 'Update' button state (should be disabled or absent), build number (should reflect the new version).",
+        "Navigate away from the Software tab (e.g., tap Audio Settings), then navigate back to Settings \u2192 Software.",
+        "Verify the 'Up-to-date' status persists after navigation."
       ],
-      "expected": "After the app restart, the Software Update screen should correctly reflect the updated state. The 'Update All' / 'Update' button should be disabled, hidden, or replaced with an 'Up to Date' message. The stale update button should NOT reappear after the app restart."
+      "expected": "The Software tab UI transitions cleanly from 'Update available' to 'Up-to-date' immediately after DFU completion. The stale 'Update' button with the old build number is not present. The state persists after navigating away and back."
     },
     {
-      "title": "TC-DFU-004: Verify DFU button state after successful update when navigating away and back to Software Update screen",
+      "title": "TC-DFU-LEG50-004: Verify post-DFU button state persists incorrectly across app lifecycle without restart (bug reproduction)",
       "steps": [
-        "Open Poly Studio Mobile app and connect to the device (e.g., Voyager Free 60+ UC).",
-        "Navigate to Settings \u2192 Software Update.",
-        "Tap 'Update All' to perform a Charge Case firmware update.",
-        "Wait for the update to complete successfully (100% progress, device restart, reconnection).",
-        "Tap the back button to return to the Device screen.",
-        "Navigate back to Settings \u2192 Software Update.",
-        "Observe the state of the 'Update All' / 'Update' button."
+        "Open Poly Studio Mobile app.",
+        "Tap the Voyager Legend 50 device tile.",
+        "Navigate to Settings \u2192 Software.",
+        "Note the current Charge Case build number and the presence of the 'Update' button.",
+        "Tap 'Update' and complete the Charge Case firmware DFU successfully.",
+        "After success confirmation, observe the 'Update' button state.",
+        "If the button is still visible and enabled (bug state), tap it again.",
+        "Observe the result (expected bug: immediate failure or error).",
+        "Without restarting the app, background the app (press Home button).",
+        "Reopen the app from the recent apps list.",
+        "Navigate back to Settings \u2192 Software on the Voyager Legend 50 device.",
+        "Observe the 'Update' button state again.",
+        "Now force-kill the app (swipe from recent apps).",
+        "Reopen Poly Studio Mobile, reconnect to Voyager Legend 50.",
+        "Navigate to Settings \u2192 Software.",
+        "Observe the final 'Update' button state."
       ],
-      "expected": "After navigating away from and back to the Software Update screen, the button should reflect the updated state (disabled/hidden/'Up to Date'). The stale active update button should NOT reappear due to screen re-entry."
+      "expected": "This test reproduces the bug: after DFU, the 'Update' button remains visible with the same build number. Tapping it causes immediate failure. Backgrounding and reopening the app does NOT fix the stale state. Only a full app restart (force-kill and relaunch) clears the stale button state and shows 'Up-to-date'."
     },
     {
-      "title": "TC-DFU-005: Verify DFU button state after successful update when switching between sub-settings and returning",
+      "title": "TC-DFU-LEG50-005: Verify post-DFU button state across Bluetooth disconnect/reconnect on Voyager Legend 50",
       "steps": [
-        "Open Poly Studio Mobile app and connect to the device (e.g., Voyager Free 60+ UC).",
-        "Navigate to Settings \u2192 Software Update.",
-        "Tap 'Update All' to perform a Charge Case firmware update.",
-        "Wait for the update to complete successfully (100% progress, device restart, reconnection).",
-        "Without leaving the Software Update screen, navigate to a different settings sub-screen (e.g., Audio Settings \u2192 Transparency Mode \u2192 Environment).",
-        "Navigate back to Settings \u2192 Software Update.",
-        "Observe the state of the 'Update All' / 'Update' button."
+        "Open Poly Studio Mobile app.",
+        "Connect to Voyager Legend 50.",
+        "Navigate to Settings \u2192 Software.",
+        "Perform a successful Charge Case firmware update via DFU.",
+        "After DFU completion, do NOT restart the app.",
+        "Disconnect Bluetooth from the phone's Settings or toggle Bluetooth off.",
+        "Wait 5 seconds.",
+        "Re-enable Bluetooth and reconnect to Voyager Legend 50.",
+        "Open Poly Studio Mobile app (if not already open).",
+        "Navigate to Settings \u2192 Software.",
+        "Observe the 'Update' button state and status text."
       ],
-      "expected": "After navigating to another settings sub-screen and returning to Software Update, the button should correctly show the updated state (disabled/hidden/'Up to Date'). The stale active button should not reappear."
+      "expected": "After Bluetooth disconnect/reconnect, the Software tab should show 'Up-to-date' status and the 'Update' button should be disabled/hidden. The stale button state should not persist across a Bluetooth reconnection cycle."
     },
     {
-      "title": "TC-DFU-006: Verify DFU button state after successful update when Bluetooth disconnects and reconnects",
+      "title": "TC-DFU-LEG50-006: Verify DFU button state when Charge Case is already up-to-date on initial connection (Voyager Legend 50)",
       "steps": [
-        "Open Poly Studio Mobile app and connect to the device (e.g., Voyager Free 60+ UC).",
-        "Navigate to Settings \u2192 Software Update.",
-        "Tap 'Update All' to perform a Charge Case firmware update.",
-        "Wait for the update to complete successfully (100% progress, device restart, reconnection).",
-        "Disconnect the device by turning off Bluetooth on the phone or putting the device in the case and closing it.",
-        "Wait 10 seconds, then reconnect the device (turn Bluetooth back on or open the case).",
-        "Wait for the app to reconnect to the device.",
-        "Navigate to Settings \u2192 Software Update.",
-        "Observe the state of the 'Update All' / 'Update' button."
+        "Ensure Voyager Legend 50 Charge Case has the latest firmware already installed.",
+        "Open Poly Studio Mobile app.",
+        "Tap the Voyager Legend 50 device tile.",
+        "Navigate to Settings \u2192 Software.",
+        "Observe the Software tab UI."
       ],
-      "expected": "After a Bluetooth disconnect and reconnect cycle following a successful update, the Software Update screen should correctly show the updated state. The 'Update All' / 'Update' button should be disabled, hidden, or show 'Up to Date'. The stale active button should not reappear."
+      "expected": "When the Charge Case is already up-to-date on initial connection, the Software tab should show 'Up-to-date' status and no 'Update' button should be available. This validates the correct baseline state before any DFU is performed."
     },
     {
-      "title": "TC-DFU-007: Verify DFU button state after successful update when device powers off and on",
+      "title": "TC-DFU-LEG50-007: Verify tapping 'Update' button after successful DFU on a different device (Voyager Free 60+) does NOT exhibit the same bug",
       "steps": [
-        "Open Poly Studio Mobile app and connect to the device (e.g., Voyager Free 60+ UC).",
-        "Navigate to Settings \u2192 Software Update.",
-        "Tap 'Update All' to perform a Charge Case firmware update.",
-        "Wait for the update to complete successfully (100% progress, device restart, reconnection).",
-        "Power off the device (e.g., place earbuds in case and close lid, or press and hold the case button to power off).",
-        "Wait 15 seconds, then power on the device (open case lid or press button).",
-        "Wait for the app to reconnect to the device.",
-        "Navigate to Settings \u2192 Software Update.",
-        "Observe the state of the 'Update All' / 'Update' button."
+        "Open Poly Studio Mobile app.",
+        "Connect to a Voyager Free 60+ device.",
+        "Navigate to Settings \u2192 Software.",
+        "Perform a successful Charge Case firmware update via DFU.",
+        "After DFU completion, observe the 'Update' button state.",
+        "If the button is still visible, tap it again.",
+        "Observe the app response.",
+        "Force-kill and restart the app, reconnect to Voyager Free 60+.",
+        "Navigate to Settings \u2192 Software and confirm the correct 'Up-to-date' state."
       ],
-      "expected": "After a device power-off and power-on cycle following a successful update, the Software Update screen should correctly show the updated state. The 'Update All' / 'Update' button should be disabled, hidden, or show 'Up to Date'."
-    },
-    {
-      "title": "TC-DFU-008: Verify DFU button state after successful update when phone is rotated (configuration change)",
-      "steps": [
-        "Open Poly Studio Mobile app and connect to the device (e.g., Voyager Free 60+ UC).",
-        "Navigate to Settings \u2192 Software Update.",
-        "Tap 'Update All' to perform a Charge Case firmware update.",
-        "Wait for the update to complete successfully (100% progress, device restart, reconnection).",
-        "Rotate the phone from portrait to landscape (or vice versa) to trigger a configuration change / activity recreation.",
-        "Observe the Software Update screen after rotation.",
-        "Check the state of the 'Update All' / 'Update' button."
-      ],
-      "expected": "After a phone rotation (configuration change) following a successful update, the Software Update screen should correctly show the updated state. The 'Update All' / 'Update' button should be disabled, hidden, or show 'Up to Date'. The stale active button should not reappear due to activity recreation."
-    },
-    {
-      "title": "TC-DFU-009: Verify DFU button state after successful update when app is backgrounded and foregrounded",
-      "steps": [
-        "Open Poly Studio Mobile app and connect to the device (e.g., Voyager Free 60+ UC).",
-        "Navigate to Settings \u2192 Software Update.",
-        "Tap 'Update All' to perform a Charge Case firmware update.",
-        "Wait for the update to complete successfully (100% progress, device restart, reconnection).",
-        "Press the Home button to background the app.",
-        "Wait 30 seconds, then reopen the app from the app launcher or recent apps.",
-        "Wait for the app to reconnect to the device.",
-        "Observe the Software Update screen.",
-        "Check the state of the 'Update All' / 'Update' button."
-      ],
-      "expected": "After backgrounding and foregrounding the app following a successful update, the Software Update screen should correctly show the updated state. The 'Update All' / 'Update' button should be disabled, hidden, or show 'Up to Date'."
-    },
-    {
-      "title": "TC-DFU-010: Verify DFU button state after successful update when tapping button rapidly multiple times",
-      "steps": [
-        "Open Poly Studio Mobile app and connect to the device (e.g., Voyager Free 60+ UC).",
-        "Navigate to Settings \u2192 Software Update.",
-        "Tap 'Update All' to perform a Charge Case firmware update.",
-        "Wait for the update to complete successfully (100% progress, device restart, reconnection).",
-        "Immediately after reconnection, rapidly tap the 'Update All' / 'Update' button 5 times in quick succession (within 2 seconds).",
-        "Observe the app's response after each tap and after the rapid tapping stops."
-      ],
-      "expected": "The app should handle rapid tapping gracefully. Either the button should be disabled after the first tap (preventing further taps), or each tap should show a consistent 'already up to date' message. The app should NOT crash, freeze, or enter an unrecoverable state. No silent failures should occur."
+      "expected": "This test validates whether the bug is specific to Voyager Legend 50 or affects Voyager Free 60+ as well. The expected behavior on Free 60+ may differ \u2014 document the actual result for comparison."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T05:50:22.488464Z"
+  "processed_at": "2026-04-25T08:35:09.765302Z"
 }
