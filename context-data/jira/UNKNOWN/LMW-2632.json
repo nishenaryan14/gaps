@@ -5,15 +5,15 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 | CCL | CCL during call is blinking for blocking settings",
   "feature": "Call Management",
-  "scenario": "CCL (Call Control Layer) settings blink during an active call instead of being locked/blocked",
-  "description_clean": "During a call, the CCL (Call Control Layer) settings are blinking instead of being locked/blocked as expected. Steps: Go to CCL and start a call. Observed: CCL settings blink. Expected: CCL settings should be locked.",
+  "scenario": "CCL (Call Control Layer) settings blink instead of being locked during an active call",
+  "description_clean": "During a call, the CCL (Call Control Layer) settings are blinking instead of being locked/blocked as expected. Steps: Go to CCL and start a call. Observed: CCL settings blink. Expected: CCL settings are locked.",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen and ensure a Poly Bluetooth audio device is connected.",
+    "2. Navigate to the Home screen and ensure your Poly Bluetooth audio device is connected.",
     "3. Tap on the connected device name to open Device Settings.",
-    "4. Locate the Call Control Layer (CCL) settings within the device settings menu.",
-    "5. Initiate a phone call from the connected device (e.g., press the Call button or dial from the phone).",
-    "6. While the call is active, observe the CCL settings in the Poly Studio Mobile app."
+    "4. Locate the Call Control Layer (CCL) settings within the device settings.",
+    "5. Initiate a call (e.g., make or receive a phone call via the connected device).",
+    "6. While the call is active, observe the behavior of the CCL settings in the app."
   ],
   "expected": "The CCL settings should be locked/blocked and not interactive during an active call.",
   "actual": "The CCL settings are blinking instead of being locked/blocked during an active call.",
@@ -21,18 +21,17 @@
   "severity": "",
   "labels": [],
   "keywords": [
+    "poly-studio-mobile",
     "call-control-layer",
     "ccl-settings",
-    "poly-studio-mobile",
     "active-call",
-    "bluetooth-audio-device",
     "device-settings",
-    "call-management",
-    "ui-behavior"
+    "bluetooth-audio",
+    "android-app"
   ],
   "source_last_updated": "2026-04-23T06:17:58.000+0000",
   "source_hash": "a7c27afaec7dab1295b62c37675cea103deea76ebad1d868c03852468cb0307f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:15.867631Z",
+  "processed_at": "2026-04-25T07:55:31.138411Z",
   "status": "active"
 }
