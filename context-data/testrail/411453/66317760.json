@@ -12,23 +12,25 @@
     "Tap on the connected device name to open Device Settings",
     "Scroll down and tap 'Reset Device' option",
     "Tap 'Restore Defaults' or 'Restore' button",
-    "Observe the confirmation popup that appears"
+    "Observe the confirmation popup that appears",
+    "Tap 'No' button on the confirmation popup"
   ],
-  "expected": "A confirmation popup appears with the message \"Are you sure you want to restore to default settings?\" and two buttons: \"No\" and \"Yes\". Tapping \"No\" closes the popup without resetting the device, and the user remains on the same Device Settings screen.",
+  "expected": "The confirmation popup closes, the device is NOT reset to default settings, and the user remains on the same Device Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "restore-defaults",
     "confirmation-popup",
     "device-settings",
     "reset-device",
-    "cancel-action",
-    "ui-behavior"
+    "poly-studio-mobile",
+    "no-button",
+    "cancel-reset",
+    "ui-persistence"
   ],
   "source_last_updated": "1762260719",
   "source_hash": "cddf6bb9546eafb2156bbc28dbeb0dc40bd3a10ee78e2238d3ab3dd49cbf845d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.279705Z",
   "status": "active"
 }
