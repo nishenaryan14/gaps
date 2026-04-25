@@ -8,28 +8,26 @@
   "scenario": "Charging case battery icon on Home screen does not turn yellow when battery level drops below 30%",
   "steps": [
     "Open the Poly Studio Mobile app on your Android device.",
-    "Ensure a Poly Bluetooth audio device (with a charging case) is paired and connected.",
-    "Navigate to the Home screen of the app.",
-    "Check the charging case battery level displayed on the Home screen.",
-    "If the charging case battery level is above 30%, discharge the case until the battery level drops below 30%.",
-    "Observe the color of the charging case battery icon on the Home screen."
+    "Ensure a Poly Bluetooth audio device with a charging case is connected.",
+    "Navigate to the Home screen.",
+    "Observe the battery icon for the charging case.",
+    "Check the battery level of the charging case is less than 30%."
   ],
-  "expected": "When the charging case battery level is less than 30%, the battery icon on the Home screen should display as yellow.",
+  "expected": "The charging case battery icon on the Home screen displays as yellow when the battery level is less than 30%.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
+    "charging-case-battery-icon",
     "home-screen",
-    "charging-case",
-    "battery-icon",
-    "battery-level",
+    "battery-level-below-30",
+    "poly-studio-mobile",
+    "battery-icon-color",
     "low-battery-indicator",
-    "android-app",
-    "ui-color-change"
+    "android-app"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "4df2bca123082bfd31d8568b508bf4ce2810ee5ea3eefbcbdb9543e630aefe98",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.091233Z",
+  "processed_at": "2026-04-25T09:32:26.347042Z",
   "status": "active"
 }
