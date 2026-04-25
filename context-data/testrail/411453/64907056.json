@@ -8,12 +8,12 @@
   "scenario": "Navigate to Notifications & Device Alerts under App Settings > General and verify UI matches Figma design",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Home screen.",
-    "2. Tap the hamburger menu icon (\u2630) in the upper left corner to open App Settings.",
+    "2. Tap the hamburger menu (App Settings icon) in the top-left corner.",
     "3. Tap General.",
     "4. Tap Notifications & Device Alerts.",
-    "5. Tap the back button (\u2190) to return to the App Settings page."
+    "5. Tap the back button (or back arrow) to return to the App Settings page."
   ],
-  "expected": "Step 4: The Notifications & Device Alerts screen matches the Figma design. Step 5: The user returns to the App Settings (General) page.",
+  "expected": "Step 4: The Notifications & Device Alerts screen matches the Figma design. Step 5: User returns to the App Settings (General) page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,12 +22,12 @@
     "notifications-and-device-alerts",
     "general-settings",
     "hamburger-menu",
-    "ui-figma-verification",
-    "device-alerts"
+    "ui-verification",
+    "figma-design"
   ],
   "source_last_updated": "1759416431",
   "source_hash": "8cb620288a75e740611cfcaeacc690acdc64e1ddb21358b077a36c3592a4045e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.822217Z",
+  "processed_at": "2026-04-25T08:21:30.933298Z",
   "status": "active"
 }
