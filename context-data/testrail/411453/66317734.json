@@ -5,23 +5,34 @@
   "project": "411453",
   "title": "Rename device - new name in FMD",
   "feature": "Device Management",
-  "scenario": "Renaming a device in Poly Studio Mobile app Settings > Rename updates the device name displayed in the Find My Device list",
-  "steps": [],
-  "expected": "",
+  "scenario": "Renaming a device in Poly Studio Mobile app Settings does not update the device name in the Poly Find My Device list",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen and ensure your Poly Bluetooth audio device is connected.",
+    "3. Tap on the connected device to open Device Settings.",
+    "4. In Device Settings, tap on the 'Rename' option (or navigate to Settings > Rename).",
+    "5. Enter a new name for the device and confirm/save the change.",
+    "6. Close the Poly Studio Mobile app.",
+    "7. Open the Poly Find My Device (FMD) app or feature.",
+    "8. Locate your device in the FMD list.",
+    "9. Observe the device name displayed in the FMD list."
+  ],
+  "expected": "The device name displayed in the Poly Find My Device (FMD) list should show the new name that was set in the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "rename-device",
-    "find-my-device",
     "device-name",
-    "settings",
-    "bluetooth-rename",
-    "app-settings"
+    "poly-find-my-device",
+    "fmd-list",
+    "device-settings",
+    "name-persistence",
+    "bluetooth-audio"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "1c6f1244a0e33e3d7af336348627ae91b604c22c4874a20ae484ab7b420de56b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.974497Z",
+  "processed_at": "2026-04-25T09:32:26.226429Z",
   "status": "active"
 }
