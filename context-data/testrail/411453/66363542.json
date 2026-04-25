@@ -5,31 +5,36 @@
   "project": "411453",
   "title": "Next button",
   "feature": "App Settings",
-  "scenario": "Tapping \"Next\" button correctly advances through all six onboarding screens in Poly Studio Mobile app",
+  "scenario": "Onboarding wizard Next button advances through all six screens correctly",
   "steps": [
     "1. Launch the Poly Studio Mobile app for the first time (or clear app data to reset onboarding).",
     "2. Observe the first onboarding screen (Step 1).",
-    "3. Tap the \"Next\" button.",
-    "4. Observe that the app advances to the second onboarding screen (Step 2).",
-    "5. Continue tapping the \"Next\" button on each subsequent screen.",
-    "6. Repeat until reaching the sixth (final) onboarding screen.",
-    "7. On the sixth screen, tap the \"Next\" or \"Get Started\" button to complete onboarding."
+    "3. Tap the 'Next' button.",
+    "4. Verify the app advances to the second onboarding screen (Step 2).",
+    "5. Tap the 'Next' button again.",
+    "6. Verify the app advances to the third onboarding screen (Step 3).",
+    "7. Tap the 'Next' button again.",
+    "8. Verify the app advances to the fourth onboarding screen (Step 4).",
+    "9. Tap the 'Next' button again.",
+    "10. Verify the app advances to the fifth onboarding screen (Step 5).",
+    "11. Tap the 'Next' button again.",
+    "12. Verify the app advances to the sixth (final) onboarding screen (Step 6)."
   ],
-  "expected": "Tapping \"Next\" on each onboarding screen advances to the next screen in sequence, and the final screen completes the onboarding flow and transitions to the Home screen.",
+  "expected": "Tapping 'Next' on each onboarding screen advances to the subsequent screen in sequence, ending at the sixth (final) screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "onboarding-screens",
+    "onboarding-wizard",
     "next-button",
-    "app-navigation",
-    "get-started",
+    "screen-advancement",
     "first-launch",
-    "screen-advancement"
+    "app-navigation",
+    "step-progression"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "69ad13ce91b1e48c4a023791c556ec1bd878cfbb373b26af5864cbc43064dbc7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.947058Z",
+  "processed_at": "2026-04-25T08:21:31.019282Z",
   "status": "active"
 }
