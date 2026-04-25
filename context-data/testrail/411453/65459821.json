@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Notifications  - Update failed",
-  "feature": "Notifications",
-  "scenario": "User taps the \"Device didn't update\" notification after a DFU failure and is redirected to the Software update failure screen.",
+  "feature": "Firmware Update",
+  "scenario": "Firmware update failure notification \"Device didn't update\" redirects to Poly Lens app software update failure screen when tapped",
   "steps": [
-    "Initiate a device firmware update (DFU) on a Poly device.",
-    "Interrupt the update process (e.g., turn off the device) to cause a failure.",
-    "Observe the notification that appears on the user's device.",
-    "Tap the notification."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "3. Initiate a firmware update (DFU) for the connected Poly Bluetooth audio device.",
+    "4. During the firmware update process, turn off the Poly audio device (e.g., press and hold the Power button to power off).",
+    "5. Observe the notification that appears on the Android device after the update fails.",
+    "6. Tap the notification displayed on the Android device."
   ],
-  "expected": "A notification \"Device didn't update\" appears. Tapping it redirects the user to the Software update failure screen in the Poly Lens application.",
+  "expected": "A notification \"Device didn't update\" is displayed. Tapping the notification redirects the user to the Poly Lens app's software update failure screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU failure",
-    "Device didn't update notification",
-    "Software update failure screen",
-    "Poly device firmware update",
-    "Update interrupted",
-    "DFU notification tap",
-    "Firmware update error",
-    "Device update failed"
+    "firmware-update",
+    "dfu-failure",
+    "poly-studio-mobile",
+    "device-didnt-update",
+    "notification-redirect",
+    "lens-app",
+    "software-update-failure",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1761223129",
   "source_hash": "5474bac5a6b5c9f31687cd374edab459b4b006998feb2df1a5421c873cf40d6e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.304002Z",
+  "processed_at": "2026-04-25T05:37:16.941770Z",
   "status": "active"
 }
