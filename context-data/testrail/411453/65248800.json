@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Find My Device - Don't Allow - Enable now - Allow Once [Only This Time - Android] [Deprecated for IOS]",
   "feature": "App Settings",
-  "scenario": "Find My Device location permission prompt reappears after denying and re-enabling permission via system settings on Poly Studio Mobile app",
+  "scenario": "Find My Device location permission prompt reappears after denying and re-enabling from system settings on Poly Studio Mobile app",
   "steps": [],
   "expected": "",
   "coverage": [],
@@ -16,12 +16,12 @@
     "location-permission",
     "permission-prompt",
     "system-settings",
-    "permission-re-enable",
+    "permission-persistence",
     "android-permissions"
   ],
   "source_last_updated": "1760352215",
   "source_hash": "172df16d660f02df5b18f33120a6a0fa999e392affa8542effd1cb1776665a3c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.847438Z",
+  "processed_at": "2026-04-25T08:21:30.950988Z",
   "status": "active"
 }
