@@ -4,27 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Swipe right, next screen",
-  "feature": "Quick Start Guide (QSG)",
-  "scenario": "Verify that swiping right through the Quick Start Guide screens displays the correct content (second screen with two earbuds, third screen with charge case outside, fourth screen with charge case inside) matching the Figma design.",
+  "feature": "App Settings",
+  "scenario": "Quick Start Guide onboarding screens do not match Figma design when swiping through earbuds and charge case views",
   "steps": [
-    "Swipe right to navigate through the Quick Start Guide screens.",
-    "Swipe from the right side to advance through the screens."
+    "Open the Poly Studio Mobile app for the first time (or after clearing app data) to enter the Quick Start Guide (QSG) onboarding flow.",
+    "On the first QSG screen, swipe right from the right edge of the screen.",
+    "Observe the second QSG screen showing two earbuds.",
+    "Swipe right from the right edge of the screen again.",
+    "Observe the third QSG screen showing the charge case (outside view).",
+    "Swipe right from the right edge of the screen again.",
+    "Observe the fourth QSG screen showing the charge case (inside view with earbuds)."
   ],
-  "expected": "The screen should show: second screen with two earbuds, third screen with the charge case outside, and fourth screen with the charge case inside. All screens should match the Figma design.",
+  "expected": "All QSG screens (two earbuds, charge case outside, charge case inside) display correctly and match the Figma design specifications.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Quick Start Guide",
-    "swipe right",
-    "earbuds",
-    "charge case",
-    "Figma design",
-    "screen navigation",
-    "onboarding screens"
+    "quick-start-guide",
+    "onboarding-flow",
+    "poly-studio-mobile",
+    "earbuds-view",
+    "charge-case-view",
+    "figma-design-mismatch",
+    "swipe-navigation",
+    "qsg-screens"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "22341cdda76b21748508c112ec6394807128808564f7a34ddb4850155f482aa4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.270722Z",
+  "processed_at": "2026-04-25T05:37:16.849491Z",
   "status": "active"
 }
