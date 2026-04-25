@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Connecting Headset when device list is empty",
   "feature": "Bluetooth Pairing",
-  "scenario": "Newly connected headset does not appear in Poly Studio Mobile app device list when returning from Bluetooth menu with empty home screen",
+  "scenario": "Empty device list on home screen does not update with newly connected headset after Bluetooth pairing and returning to the app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and ensure the Home screen is displayed with an empty device list (no previously paired devices shown).",
-    "2. Open the device's system Bluetooth settings menu.",
-    "3. Pair and connect a Poly Bluetooth headset (e.g., Poly Voyager 5200) via the system Bluetooth menu.",
-    "4. Return to the Poly Studio Mobile app (navigate back to the Home screen).",
-    "5. Observe the device list on the Home screen."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Ensure the Home screen shows an empty device list (no previously paired headsets).",
+    "3. Open the Android Bluetooth settings menu (Settings \u2192 Bluetooth).",
+    "4. Pair and connect a Poly Bluetooth headset (e.g., Poly Voyager 5200) via the Bluetooth menu.",
+    "5. Return to the Poly Studio Mobile app (navigate back to the Home screen).",
+    "6. Observe the device list on the Home screen."
   ],
-  "expected": "The newly connected headset should appear in the app's device list on the Home screen.",
+  "expected": "The newly connected Poly headset should appear in the app's device list on the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-list",
     "home-screen",
+    "device-list",
     "bluetooth-pairing",
-    "poly-voyager-5200",
     "device-discovery",
-    "app-refresh"
+    "ui-refresh",
+    "poly-voyager-5200",
+    "connection-state"
   ],
   "source_last_updated": "1761740908",
   "source_hash": "8b1f2ad02c5d3d3e13bb26e9d2594fa39eaa1248b63e2e2ed798fff51756d731",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.917421Z",
+  "processed_at": "2026-04-25T09:32:26.138529Z",
   "status": "active"
 }
