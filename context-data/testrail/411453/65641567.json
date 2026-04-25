@@ -5,29 +5,32 @@
   "project": "411453",
   "title": "EQ - Dialog for \"i\" button is present and can be closed",
   "feature": "Equalizer",
-  "scenario": "EQ info dialog appears and dismisses when tapping the \"i\" icon in Device Settings > EQ tab",
+  "scenario": "Info icon next to EQ headline in Device Settings displays and dismisses explanatory dialog on tap",
   "steps": [
-    "Open Poly Studio Mobile app with an EQ-supporting device connected.",
-    "Go to Device Settings \u2192 Audio Settings \u2192 Equalizer (EQ) tab.",
-    "Tap the 'i' icon next to the EQ headline.",
-    "Observe the dialog that appears centered over the EQ controls.",
-    "Tap the dialog or anywhere on the screen to close it."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen and select the connected device.",
+    "3. Go to Device Settings \u2192 Audio Settings \u2192 Equalizer.",
+    "4. Observe the \"i\" (info) icon next to the EQ headline.",
+    "5. Tap the \"i\" icon.",
+    "6. Observe the dialog that appears with explanatory text about Equalizer (EQ) functionality.",
+    "7. Tap on the dialog or anywhere else on the screen to dismiss it."
   ],
-  "expected": "A dialog appears centered over the EQ controls with text explaining that EQ enhances clarity by adjusting frequency for preferred sound signature and that changes affect music streaming, not telephony. Tapping the dialog or anywhere on the screen closes it.",
+  "expected": "The \\\"i\\\" (info) icon is present next to the EQ headline. Tapping it shows a dialog with explanatory text about EQ functionality. The dialog can be dismissed by tapping on it or anywhere else on the screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "equalizer-eq",
-    "eq-info-dialog",
+    "equalizer",
+    "eq-headline",
+    "info-icon",
     "device-settings",
     "audio-settings",
-    "eq-tab",
-    "info-icon"
+    "explanatory-dialog",
+    "ui-dismiss"
   ],
   "source_last_updated": "1761143067",
   "source_hash": "76477cfe547feeb21837022f49f28c0e9db9344af5c35924c2cad58ed915fbe6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.998328Z",
+  "processed_at": "2026-04-25T09:32:26.251883Z",
   "status": "active"
 }
