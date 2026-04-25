@@ -1,6 +1,8 @@
 {
   "bug_id": "LMW-2632",
   "matched_testcases": [
+    "65641597",
+    "65641606",
     "65458387",
     "65293009",
     "65293034",
@@ -13,81 +15,130 @@
     "65293012",
     "65293013",
     "65293014",
-    "65293015",
-    "65293021",
-    "65293022"
+    "65293015"
   ],
-  "coverage_status": "none",
+  "coverage_status": "partial",
   "gaps": [
-    "No existing test case covers CCL (Current Call Limit) settings behavior during an active call.",
-    "No existing test case verifies UI stability (blinking vs. stable) of locked settings during a call.",
-    "All existing test cases focus on onboarding, EULA, splash screen, and location permissions \u2014 none relate to in-call CCL settings."
+    "No test covers CCL (Call Control Layer) settings behavior during an active call \u2014 the bug is about CCL settings blinking instead of being locked/blocked. Test ID 65641606 covers 'Close Conversation Limiting' settings being locked/greyed out during a call, but this is a different setting (Conversation Limiter vs. Call Control Layer).",
+    "No test covers the specific UI behavior of CCL settings during an active call \u2014 whether they blink, flash, remain interactive, or become locked/greyed out. The existing test (65641606) covers a different setting's locked state but not CCL.",
+    "No test covers CCL settings persistence or state after call ends \u2014 if CCL settings were blinking/interactive during the call, does the value set during the call persist correctly after the call ends? This is a common bug pattern for settings persistence across Bluetooth state transitions (call active -> call ended)."
   ],
   "generated_testcases": [
     {
-      "title": "Verify locked CCL settings remain stable during an active call",
+      "title": "CCL Settings Locked/Greyed Out During Active Call",
       "steps": [
-        "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
-        "2. Navigate to CCL (Current Call Limit) settings.",
-        "3. Lock the CCL settings (e.g., toggle lock icon or enable lock via settings menu).",
-        "4. Initiate or receive an active call (simulate in-call state).",
-        "5. While the call is active, observe the CCL settings UI for any visual changes.",
-        "6. Monitor the locked CCL settings display for at least 30 seconds during the call."
+        "Open Poly Studio Mobile app",
+        "Tap on the connected Poly device (e.g., Poly Sync 20, Voyager 5200, or Voyager 4320)",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify CCL settings are visible and interactive (not greyed out) before the call",
+        "Note the current CCL setting value (e.g., 'On' or 'Off')",
+        "Place an active outgoing call from the paired smartphone (dial any number)",
+        "Once the call is connected, return to the Poly Studio Mobile app",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify that all CCL settings are locked/greyed out and NOT blinking or flashing",
+        "Verify that the CCL setting value displayed matches the value noted before the call",
+        "Attempt to tap on any CCL toggle or control \u2014 verify no change occurs"
       ],
-      "expected": "The locked CCL settings UI remains stable and does not blink, flash, or flicker during the entire duration of the active call. All locked values and indicators stay consistently visible without any visual instability."
+      "expected": "CCL settings are locked/greyed out during an active call. Settings do NOT blink or flash. The displayed value matches the pre-call value. Tapping on CCL controls produces no change."
     },
     {
-      "title": "Verify locked CCL settings persist after ending an active call",
+      "title": "CCL Settings Locked/Greyed Out During Incoming Active Call",
       "steps": [
-        "1. Launch the application and complete onboarding.",
-        "2. Navigate to CCL settings and lock a specific CCL value.",
-        "3. Initiate an active call.",
-        "4. During the call, verify the locked CCL setting remains stable (no blinking).",
-        "5. End the active call.",
-        "6. Return to the CCL settings screen."
+        "Open Poly Studio Mobile app",
+        "Tap on the connected Poly device",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify CCL settings are interactive before the call",
+        "Note the current CCL setting value",
+        "Have a second phone call the paired smartphone",
+        "Answer the incoming call",
+        "While the call is active, return to the Poly Studio Mobile app",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify that all CCL settings are locked/greyed out and NOT blinking or flashing",
+        "Verify the displayed CCL value matches the pre-call value",
+        "Attempt to toggle the CCL setting \u2014 verify no change occurs"
       ],
-      "expected": "The locked CCL setting persists after the call ends. The value remains unchanged and the lock indicator is still active. No blinking or UI instability occurs during or after the call."
+      "expected": "CCL settings are locked/greyed out during an active incoming call. No blinking or flashing occurs. The displayed value is unchanged from the pre-call state. Tapping is ignored."
     },
     {
-      "title": "Verify unlocked CCL settings behavior during an active call (baseline comparison)",
+      "title": "CCL Settings Persistence After Call Ends \u2014 Value Set During Call Should Be Ignored",
       "steps": [
-        "1. Launch the application and complete onboarding.",
-        "2. Navigate to CCL settings and ensure settings are unlocked.",
-        "3. Initiate an active call.",
-        "4. During the call, observe the CCL settings UI for any visual changes or blinking.",
-        "5. Attempt to modify a CCL setting while the call is active.",
-        "6. End the call and verify the final state of CCL settings."
+        "Open Poly Studio Mobile app",
+        "Tap on the connected Poly device",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Set CCL to 'Off' (or note the current state)",
+        "Place an active outgoing call from the paired smartphone",
+        "Once call is connected, return to the Poly Studio Mobile app",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify CCL settings are locked/greyed out",
+        "End the call from the smartphone",
+        "Wait 5 seconds for the call state to fully disconnect",
+        "Return to the Poly Studio Mobile app",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify CCL settings are now interactive (not greyed out)",
+        "Verify the CCL setting value is still 'Off' (the pre-call value) \u2014 i.e., any phantom taps during the call were ignored",
+        "Toggle CCL to 'On' and verify the change takes effect"
       ],
-      "expected": "Unlocked CCL settings may allow modification during a call (if designed). The UI should not blink or flicker regardless of lock state. This test serves as a baseline to confirm the blinking issue is specific to locked state."
+      "expected": "After the call ends, CCL settings become interactive again. The value persists correctly as the pre-call value ('Off'). Any inadvertent taps during the call are ignored. The user can then change the setting normally."
     },
     {
-      "title": "Verify locked CCL settings stability across multiple consecutive calls",
+      "title": "CCL Settings Blinking/Flashing UI Verification During Active Call",
       "steps": [
-        "1. Launch the application and complete onboarding.",
-        "2. Navigate to CCL settings and lock the settings.",
-        "3. Initiate a first active call and observe CCL UI for 15 seconds \u2014 verify no blinking.",
-        "4. End the first call.",
-        "5. Initiate a second active call and observe CCL UI for 15 seconds \u2014 verify no blinking.",
-        "6. End the second call.",
-        "7. Initiate a third active call and observe CCL UI for 15 seconds \u2014 verify no blinking.",
-        "8. End the third call."
+        "Open Poly Studio Mobile app",
+        "Tap on the connected Poly device",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Take a screenshot of the CCL settings UI as a baseline",
+        "Place an active call from the paired smartphone",
+        "Once call is connected, return to the Poly Studio Mobile app",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Observe the CCL settings UI for 10 seconds \u2014 watch for any blinking, flashing, or intermittent visibility of CCL controls",
+        "Take a screenshot of the CCL settings UI during the call",
+        "Compare the two screenshots \u2014 verify the CCL controls appear identical (same greyed-out/locked state, no visual artifacts)",
+        "Verify that no CCL control toggles, animates, or changes opacity during the observation period"
       ],
-      "expected": "Locked CCL settings remain stable (no blinking) across all three consecutive calls. The UI does not exhibit any flickering or visual instability in any of the call sessions."
+      "expected": "CCL settings UI is stable during the active call \u2014 no blinking, flashing, opacity changes, or animation of any CCL controls. The UI appears identical to the baseline screenshot except for the locked/greyed-out state."
     },
     {
-      "title": "Verify locked CCL settings stability during incoming call notification",
+      "title": "CCL Settings During Call \u2014 Rapid Call Start/Stop Cycle",
       "steps": [
-        "1. Launch the application and complete onboarding.",
-        "2. Navigate to CCL settings and lock the settings.",
-        "3. Simulate an incoming call (do not answer yet \u2014 ringing state).",
-        "4. Observe the CCL settings UI during the incoming call notification.",
-        "5. Answer the incoming call.",
-        "6. Observe the CCL settings UI during the active call.",
-        "7. End the call."
+        "Open Poly Studio Mobile app",
+        "Tap on the connected Poly device",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Set CCL to 'On'",
+        "Place an active call from the paired smartphone",
+        "Once connected, verify CCL settings are locked/greyed out",
+        "End the call",
+        "Immediately (within 2 seconds) place another call from the paired smartphone",
+        "While the second call is connecting, navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify CCL settings remain locked/greyed out during call setup phase",
+        "Once the second call is connected, verify CCL settings are still locked/greyed out and NOT blinking",
+        "End the second call",
+        "Wait 5 seconds",
+        "Return to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify CCL settings are interactive and the value is still 'On'"
       ],
-      "expected": "Locked CCL settings remain stable (no blinking) during both the incoming call notification (ringing) state and the active call state. No visual flickering or instability occurs."
+      "expected": "CCL settings remain locked/greyed out during both calls and the call setup phase. No blinking occurs. After the rapid call cycle ends, CCL settings return to interactive state with the correct persisted value ('On')."
+    },
+    {
+      "title": "CCL Settings Locked State During Call \u2014 Slider and Toggle Interaction Attempt",
+      "steps": [
+        "Open Poly Studio Mobile app",
+        "Tap on the connected Poly device",
+        "Navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify CCL has interactive controls (toggles, sliders, or dropdowns depending on device)",
+        "Place an active call from the paired smartphone",
+        "Once call is connected, navigate to Audio Settings \u2192 Call Control Layer (CCL)",
+        "Verify CCL controls are greyed out/locked",
+        "Attempt to drag any CCL slider (if present) \u2014 verify slider does not move",
+        "Attempt to tap any CCL toggle \u2014 verify toggle does not change state",
+        "Attempt to tap any CCL dropdown/selector \u2014 verify no dropdown appears",
+        "While still on the CCL screen, end the call from the smartphone",
+        "Wait 5 seconds",
+        "Verify CCL controls become interactive again without needing to navigate away and back",
+        "Verify the CCL value is unchanged from the pre-call value"
+      ],
+      "expected": "All CCL control types (sliders, toggles, dropdowns) are non-interactive during the call. After the call ends, controls become interactive in real-time without navigation refresh. The pre-call value is preserved."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-24T12:05:41.592349Z"
+  "processed_at": "2026-04-25T05:50:17.140475Z"
 }
