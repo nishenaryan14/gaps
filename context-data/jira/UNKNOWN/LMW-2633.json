@@ -4,37 +4,37 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "ANDROID | Falcon Grey | EQ settings not saved for Custom",
-  "feature": "EQ Settings",
-  "scenario": "Custom EQ settings are not persisted after saving and reopening the EQ settings page on Falcon Grey (Android).",
-  "description_clean": "On Falcon Grey (Android), custom EQ settings are not saved after clicking Save and reopening the EQ settings page.",
+  "feature": "Equalizer",
+  "scenario": "Custom EQ settings are not persisted after saving and reopening the EQ settings page",
+  "description_clean": "Custom EQ settings are not saved after clicking Save and reopening the EQ settings page. Steps: Connect device, go to EQ settings, make changes, click Save, reopen EQ settings. Observed: Settings are not saved. Expected: Settings are saved.",
   "steps": [
-    "Open Falcon Grey on Android device",
-    "Navigate to EQ settings page",
-    "Adjust EQ settings to custom values",
-    "Click Save button",
-    "Close EQ settings page",
-    "Reopen EQ settings page"
+    "1. Launch Poly Studio Mobile app on the Android device.",
+    "2. Connect to a supported Poly Bluetooth audio device.",
+    "3. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "4. Make custom adjustments to the EQ bands (e.g., increase bass, adjust mids/treble).",
+    "5. Tap the Save button to save the custom EQ settings.",
+    "6. Exit the Equalizer settings page (e.g., tap Back or navigate away).",
+    "7. Reopen the Equalizer settings page via Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer."
   ],
-  "expected": "Custom EQ settings should be saved and displayed after reopening the EQ settings page",
-  "actual": "Custom EQ settings are not saved after reopening the EQ settings page",
+  "expected": "The custom EQ settings (band adjustments) are saved and displayed as previously configured when reopening the Equalizer settings page.",
+  "actual": "The custom EQ settings are not saved; the EQ bands revert to default/flat values when reopening the Equalizer settings page.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "NeedsEngineeringReview"
   ],
   "keywords": [
-    "Falcon Grey",
-    "EQ settings",
-    "custom EQ",
-    "settings not persisted",
-    "Android",
-    "EQ save",
-    "EQ reset",
-    "audio settings"
+    "equalizer",
+    "custom-eq",
+    "eq-persistence",
+    "audio-settings",
+    "poly-studio-mobile",
+    "eq-save",
+    "eq-settings-page"
   ],
   "source_last_updated": "2026-04-23T07:54:54.000+0000",
   "source_hash": "3bb3a0a0fb141045a6fb07af45a2038d0c1ad94d044a642c004cb21f39ad88f1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:52.720482Z",
+  "processed_at": "2026-04-25T05:37:16.247262Z",
   "status": "active"
 }
