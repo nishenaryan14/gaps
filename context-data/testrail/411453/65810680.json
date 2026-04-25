@@ -5,36 +5,34 @@
   "project": "411453",
   "title": "Quick Guide - Osprey/Tern - Custom Swipe animation screen",
   "feature": "App Settings",
-  "scenario": "Quick Guide Custom Swipe animation cannot be interrupted by tap or swipe gestures during playback on Osprey/Tern",
+  "scenario": "Quick Guide Custom Swipe animation Replay button does not interrupt playback when tapping screen or swiping on Osprey/Tern",
   "steps": [
     "1. Launch the Poly Studio Mobile app with an Osprey or Tern device connected.",
     "2. Open the Quick Guide from the Home screen.",
     "3. Navigate to the 2nd screen (showing two earbuds).",
-    "4. Tap the right blue circle to zoom in and play the Custom Swipe animation.",
-    "5. Observe the animation playback.",
-    "6. After the animation ends, note the 'Replay' button that appears.",
-    "7. Tap the 'Replay' button.",
-    "8. Observe that the animation replays while staying zoomed in.",
-    "9. During animation playback, tap anywhere on the screen.",
-    "10. During animation playback, swipe left or right.",
-    "11. Tap the blue circle again."
+    "4. Tap the right blue circle to zoom into the earbud and play the Custom Swipe animation.",
+    "5. Wait for the animation to complete.",
+    "6. Tap the 'Replay' button that appears.",
+    "7. During the animation playback, tap anywhere on the screen.",
+    "8. During the animation playback, swipe left or right.",
+    "9. After the animation completes (zoomed in view), tap the blue circle again."
   ],
-  "expected": "- The Custom Swipe animation plays when tapping the right blue circle.\\n- After animation ends, a 'Replay' button appears.\\n- Tapping Replay replays the animation while staying zoomed in.\\n- Tapping anywhere or swiping left/right during animation does not interrupt playback.\\n- Tapping the blue circle again zooms out to show both earbuds.",
+  "expected": "1. App launches successfully with Osprey/Tern connected.\\n2. Quick Guide opens.\\n3. 2nd screen displays two earbuds.\\n4. View zooms into the right earbud and the Custom Swipe animation plays.\\n5. A 'Replay' button appears after animation completes.\\n6. Animation replays while staying zoomed in.\\n7. Tapping anywhere on screen does not interrupt playback.\\n8. Swiping left/right does not interrupt playback.\\n9. Tapping the blue circle again zooms out to show both earbuds.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "quick-guide",
     "custom-swipe-animation",
+    "replay-button",
     "osprey",
     "tern",
-    "poly-studio-mobile",
-    "gesture-interruption",
     "animation-playback",
-    "replay-button"
+    "touch-interruption"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "930ac17b5c345d8447d1ac160c301316002d0fc0c949018d545acf8e550696ee",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.274593Z",
   "status": "active"
 }
