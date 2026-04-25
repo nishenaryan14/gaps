@@ -7,14 +7,15 @@
   "feature": "App Settings",
   "scenario": "Fit test can be started for connected Poly Voyager Free 60/60+/20 via App Settings > User Guides > Onboarding section",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. Ensure a Poly Voyager Free 60/60+/20 device is connected to the app.",
-    "3. Tap the Menu icon (hamburger menu) or navigate to the Home screen.",
-    "4. Tap on 'User Guides' from the app menu.",
-    "5. Tap on the 'Onboarding' section within User Guides.",
-    "6. Verify that the Fit test option is displayed and can be started for the currently connected device."
+    "Open the Poly Studio Mobile app on your Android device.",
+    "Ensure a Poly Voyager Free 60, 60+, or 20 device is connected via Bluetooth.",
+    "Tap the Menu icon (hamburger) or navigate to the Home screen.",
+    "Tap on App Settings (gear icon or menu option).",
+    "Scroll down and tap on User Guides.",
+    "Tap on the Onboarding section.",
+    "Verify that the Fit test option is available and can be started for the currently connected device."
   ],
-  "expected": "The Fit test can be started for the currently connected Poly Voyager Free 60/60+/20 device via App Settings > User Guides > Onboarding section.",
+  "expected": "The Fit test can be started for the currently connected Poly Voyager Free 60/60+/20 device from App Settings > User Guides > Onboarding.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,11 +25,12 @@
     "fit-test",
     "onboarding",
     "user-guides",
-    "poly-studio-mobile-app"
+    "poly-studio-mobile",
+    "app-settings"
   ],
   "source_last_updated": "1760437629",
   "source_hash": "aa081092c1a54e08cbf9c50ac6f0d43602cc6469e670c7b4469a222e00f57733",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.840328Z",
+  "processed_at": "2026-04-25T08:21:30.946442Z",
   "status": "active"
 }
