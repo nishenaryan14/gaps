@@ -5,29 +5,27 @@
   "project": "411453",
   "title": "Device Home Screen - No Device Connected - Phone Settings Button(Android)",
   "feature": "Bluetooth Pairing",
-  "scenario": "Phone Settings button on Device Home Screen does not navigate to Bluetooth settings when no device is connected",
+  "scenario": "Tapping Phone Settings button from Device Home Screen with no device connected does not navigate to Bluetooth settings page",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. On the Home screen, ensure no device is connected.",
-    "3. Tap the Phone Settings button (gear icon) located on the Home screen.",
-    "4. Observe the screen that appears."
+    "2. Ensure no device is connected (Home screen shows \"No Device Connected\" or similar).",
+    "3. On the Home screen, locate and tap the Phone Settings button (gear icon or labeled button)."
   ],
-  "expected": "The user is taken to the device's Bluetooth settings page.",
+  "expected": "The app navigates to the device's Bluetooth settings page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "phone-settings",
-    "home-screen",
-    "bluetooth-settings",
+    "phone-settings-button",
+    "device-home-screen",
     "no-device-connected",
-    "gear-icon",
-    "navigation",
-    "app-ui"
+    "bluetooth-settings-navigation",
+    "app-navigation",
+    "settings-button-behavior"
   ],
   "source_last_updated": "1761657139",
   "source_hash": "2e0749d4bdd53e34d2b438a23f6246283d99f559099005d3e919f700539f631a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.718938Z",
+  "processed_at": "2026-04-25T07:55:31.784581Z",
   "status": "active"
 }
