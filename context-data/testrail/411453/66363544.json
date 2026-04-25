@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Trouble screen, Done",
   "feature": "App Settings",
-  "scenario": "Onboarding flow: \"Having trouble\" screen's \"Done\" button does not return user to the original screen (Supported devices or Tutorial)",
+  "scenario": "Onboarding \"Having trouble\" screen Done button does not return user to original screen (Supported devices or Tutorial)",
   "steps": [
     "Open Poly Studio Mobile app",
-    "Navigate through the onboarding flow until reaching the 'Having trouble' screen (sixth screen)",
+    "Navigate through onboarding screens until reaching the 'Having trouble' screen (sixth screen)",
     "Tap the 'Done' button"
   ],
-  "expected": "User is returned to the original screen (Supported devices or Tutorial)",
+  "expected": "User is returned to the original screen (Supported devices or Tutorial).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "onboarding-flow",
+    "onboarding",
     "having-trouble-screen",
     "done-button",
     "navigation-issue",
-    "supported-devices-screen",
+    "supported-devices",
     "tutorial-screen",
     "ui-regression"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "145dca3bbb8c46f7513ff066caf9927b0d955e6df9e3d861326b8922bfc77c64",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.868858Z",
+  "processed_at": "2026-04-25T07:55:31.945520Z",
   "status": "active"
 }
