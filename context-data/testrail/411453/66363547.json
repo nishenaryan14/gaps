@@ -6,22 +6,30 @@
   "title": "Screens UI",
   "feature": "App Settings",
   "scenario": "Onboarding flow screens do not match Figma design specifications",
-  "steps": [],
-  "expected": "",
+  "steps": [
+    "Launch the Poly Studio Mobile app for the first time (or clear app data to reset onboarding).",
+    "Observe the first onboarding screen (Welcome / Get Started screen).",
+    "Tap 'Next' or swipe left to advance through each onboarding screen.",
+    "For each screen in the flow, compare the UI elements (title text, body text, illustrations, buttons, progress indicators) against the approved Figma design.",
+    "Continue until the final onboarding screen (e.g., 'Let's Go' or 'Finish' screen) is displayed.",
+    "Tap the final action button to exit onboarding and reach the Home screen."
+  ],
+  "expected": "Every screen in the Onboarding flow matches the Figma design exactly \u2014 including layout, typography, colors, iconography, button styles, and spacing.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "onboarding-flow",
     "figma-design-specifications",
-    "ui-screen-mismatch",
-    "poly-studio-mobile",
-    "user-interface",
-    "visual-regression",
-    "setup-wizard"
+    "ui-mismatch",
+    "welcome-screen",
+    "home-screen",
+    "progress-indicators",
+    "app-launch"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "1bc0fe03499b9a42a167e75e056b42bc8df3c86c9c0c0c85d4321804055d93f7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.948066Z",
+  "processed_at": "2026-04-25T08:21:31.019282Z",
   "status": "active"
 }
