@@ -5,34 +5,29 @@
   "project": "411453",
   "title": "EQ - Dialog for \"i\" button is present and can be closed",
   "feature": "Equalizer",
-  "scenario": "EQ info icon in Device Settings displays explanatory dialog that can be dismissed by tapping anywhere on screen",
+  "scenario": "EQ info dialog appears and dismisses when tapping the \"i\" icon in Device Settings > EQ tab",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
-    "3. In Device Settings, locate the Audio Settings section and tap on it.",
-    "4. Find the Equalizer (EQ) headline.",
-    "5. Verify that an info (\"i\") icon is present next to the EQ headline.",
-    "6. Tap the info (\"i\") icon.",
-    "7. Observe the dialog that appears.",
-    "8. Verify the dialog text explains that EQ enhances clarity by adjusting frequency for preferred sound signature and that changes affect music streaming, not telephony.",
-    "9. Tap on the dialog itself to dismiss it.",
-    "10. Alternatively, tap anywhere on the screen outside the dialog to dismiss it."
+    "Open Poly Studio Mobile app with an EQ-supporting device connected.",
+    "Go to Device Settings \u2192 Audio Settings \u2192 Equalizer (EQ) tab.",
+    "Tap the 'i' icon next to the EQ headline.",
+    "Observe the dialog that appears centered over the EQ controls.",
+    "Tap the dialog or anywhere on the screen to close it."
   ],
-  "expected": "An info (\"i\") icon is present next to the EQ headline. Tapping it shows a dialog with the correct explanation. The dialog can be dismissed by tapping on it or anywhere on the screen.",
+  "expected": "A dialog appears centered over the EQ controls with text explaining that EQ enhances clarity by adjusting frequency for preferred sound signature and that changes affect music streaming, not telephony. Tapping the dialog or anywhere on the screen closes it.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "equalizer",
-    "eq-info-icon",
+    "equalizer-eq",
+    "eq-info-dialog",
     "device-settings",
     "audio-settings",
-    "dialog-dismissal",
-    "eq-explanatory-dialog"
+    "eq-tab",
+    "info-icon"
   ],
   "source_last_updated": "1761143067",
   "source_hash": "76477cfe547feeb21837022f49f28c0e9db9344af5c35924c2cad58ed915fbe6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.919234Z",
+  "processed_at": "2026-04-25T08:21:30.998328Z",
   "status": "active"
 }
