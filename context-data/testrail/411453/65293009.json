@@ -5,23 +5,31 @@
   "project": "411453",
   "title": "Onboarding - Screens in dark mode",
   "feature": "App Settings",
-  "scenario": "Onboarding screens do not render correctly in dark mode when phone is set to dark mode before launching the app",
-  "steps": [],
-  "expected": "",
+  "scenario": "Onboarding screens do not render correctly in dark mode when phone is set to dark mode",
+  "steps": [
+    "1. Set the phone's system theme to Dark Mode (Settings \u2192 Display \u2192 Dark theme).",
+    "2. Launch the Poly Studio Mobile app.",
+    "3. If not a fresh install, clear app data or reinstall the app to trigger the onboarding flow.",
+    "4. Observe each onboarding screen as it appears (e.g., Welcome, Permissions, Device Pairing prompts).",
+    "5. For each screen, verify that all UI elements (text, buttons, illustrations, logos) are rendered correctly.",
+    "6. Compare the displayed colors, images, and layout against the Figma design specification for dark mode."
+  ],
+  "expected": "All onboarding screens display correctly in dark mode. All elements, images, and colors match the Figma design specification.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "dark-mode",
-    "onboarding-screens",
+    "onboarding-flow",
     "ui-rendering",
-    "app-launch",
-    "display-settings",
-    "theme-persistence",
-    "poly-app"
+    "theme-compatibility",
+    "figma-design-spec",
+    "welcome-screen",
+    "permissions-screen"
   ],
   "source_last_updated": "1760524200",
   "source_hash": "3f990d6859d6895c8d07cf35199c2be6909c4f145f04e9d57b460261b208b152",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.770846Z",
+  "processed_at": "2026-04-25T08:21:30.899647Z",
   "status": "active"
 }
