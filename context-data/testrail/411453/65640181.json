@@ -7,26 +7,27 @@
   "feature": "App Settings",
   "scenario": "Firebase analytics logs default elements when user opens Find My Device screen in Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the connected Android device.",
-    "2. From the Home screen, navigate to the Device Settings screen for the connected Poly Bluetooth audio device.",
-    "3. Locate and tap on the \"Find My Device\" option from the Device Settings menu.",
-    "4. Observe the \"Find My Device\" screen that loads."
+    "Open the Poly Studio Mobile app on the connected mobile device.",
+    "Navigate to the Home screen.",
+    "Tap on the device name to access Device Settings.",
+    "Locate and tap on the 'Find My Device' option from the Device Settings menu.",
+    "Observe the screen that loads."
   ],
-  "expected": "The \"Find My Device\" screen displays correctly with all default elements: a graph showing device location history, events from the last 30 minutes, event count broken down by country and gender, events per session, and app metadata (app version, app build, app environment). The Firebase analytics event is properly logged when the screen is opened.",
+  "expected": "The 'Find My Device' screen displays correctly with all expected elements: a graph showing signal strength or location data, events from the last 30 minutes, event count by country/gender, events per session, and app metadata (app version, app build, app environment). A Firebase analytics event is logged upon opening the screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "find-my-device",
     "poly-studio-mobile",
+    "find-my-device",
     "device-settings",
     "firebase-analytics",
-    "android",
-    "bluetooth-audio-device",
-    "home-screen"
+    "home-screen",
+    "mobile-app",
+    "default-events"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "feff8cfd6b10ff5a87df450547cb66e55759853bb0b0b9ba73c041f79568dfee",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.965946Z",
+  "processed_at": "2026-04-25T07:55:31.993014Z",
   "status": "active"
 }
