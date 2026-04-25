@@ -4,31 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "ANC - 10.-ANC is OFF without selected values and the User does not toggle it ON during a call when Transparency is ON before a call",
-  "feature": "ANC (Active Noise Cancellation) / Transparency Mode",
-  "scenario": "ANC remains off and Transparency Mode returns to its previous ON state after a call when ANC was off with no value selected and Transparency was on before the call.",
-  "steps": [
-    "1. Ensure ANC is OFF with no value selected.",
-    "2. Turn ON Transparency Mode with a selected value.",
-    "3. Initiate or receive a call.",
-    "4. During the call, observe ANC state and do not toggle it ON.",
-    "5. End the call.",
-    "6. Observe ANC and Transparency Mode states after the call."
-  ],
-  "expected": "During the call, ANC remains OFF without selected values. After the call, ANC stays OFF and Transparency returns to its previous ON state with the previously selected value.",
+  "feature": "ANC",
+  "scenario": "Transparency Mode becomes greyed out and inaccessible during a call when ANC is OFF, returning to normal after call ends",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "ANC off",
-    "Transparency Mode on",
-    "call handling",
-    "state persistence",
-    "audio mode switching",
-    "post-call behavior",
-    "noise control"
+    "transparency-mode",
+    "anc-off",
+    "call-management",
+    "greyed-out",
+    "mode-inaccessibility",
+    "call-behavior",
+    "audio-mode-persistence"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "53a9095d9bbe5780cfeed5e5bed2153081f75bbc5203d07d8b5e3c4e0cf256b5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.242580Z",
+  "processed_at": "2026-04-25T05:37:16.833699Z",
   "status": "active"
 }
