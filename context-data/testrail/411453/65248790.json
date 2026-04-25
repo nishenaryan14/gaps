@@ -5,32 +5,30 @@
   "project": "411453",
   "title": "Find My Device - Connected / Nearby device details",
   "feature": "App Settings / Device Management",
-  "scenario": "Find My Device screen shows device name, connection status, and Play button when GPS location permission is granted",
+  "scenario": "\"Find My Device\" feature in App Settings correctly displays device name, connection status, description, and Play button for connected headset",
   "steps": [
-    "1. Ensure a Poly Bluetooth headset is paired and connected to the phone via the Poly Studio Mobile app.",
-    "2. Open the Poly Studio Mobile app on the Android device.",
-    "3. Navigate to App Settings (gear icon or menu).",
-    "4. Tap on 'Find My Device'.",
-    "5. Ensure GPS location permission has been granted to the app.",
-    "6. Tap the blue geo icon (location/map icon).",
-    "7. Observe the new window that opens."
+    "1. Launch the Poly Studio Mobile app with a headset already paired and connected.",
+    "2. Navigate to App Settings (e.g., tap the menu icon or gear icon to access Settings).",
+    "3. Tap 'Find My Device' in the App Settings menu.",
+    "4. If prompted, allow GPS/location permissions.",
+    "5. Tap the blue geo icon (location/map icon) to view device location details."
   ],
-  "expected": "A new window opens showing: the device name, connection status (\"Connected\"), a description instructing the user to ensure this device is the main audio source to play a tone, and a Play button.",
+  "expected": "A new window displays the device name, connection status (\"Connected\"), a description stating \"Make sure this device is being used as your main audio source to play tone\", and a Play button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "poly-studio-mobile",
-    "gps-location-permission",
+    "app-settings",
     "connection-status",
-    "play-button",
-    "bluetooth-headset",
-    "geo-icon",
-    "app-settings"
+    "device-location",
+    "gps-permissions",
+    "bluetooth-pairing",
+    "device-name"
   ],
   "source_last_updated": "1759928440",
   "source_hash": "ecaf3032835267094300f02f0aa5ea9903fde256c84772523a36b0d4d1ec1b7f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.832350Z",
+  "processed_at": "2026-04-25T08:21:30.940379Z",
   "status": "active"
 }
