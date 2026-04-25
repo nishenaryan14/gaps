@@ -4,29 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Find My Device - Disconnected / Out of range device details",
-  "feature": "Find My Device",
-  "scenario": "Tapping the gray geo icon for an offline/disconnected device in Find My Device displays a window with the last known address, device name, status, last connection date, and battery percentage.",
+  "feature": "App Settings",
+  "scenario": "Find My Device geo icon does not display last known location details (address, device status, date, battery) for disconnected/out-of-range headset",
   "steps": [
-    "Ensure a device is disconnected or out of range in Find My Device.",
-    "Tap the gray geo icon for that device.",
-    "Observe the window that appears."
+    "1. Launch Poly Studio Mobile app on the mobile device.",
+    "2. Ensure a Poly Bluetooth headset is paired but currently disconnected (out of range or powered off).",
+    "3. Navigate to the Home screen.",
+    "4. Tap the App Menu (hamburger icon or menu icon).",
+    "5. Tap 'Find My Device' from the menu. (If prompted, grant GPS location access.)",
+    "6. Locate the gray geo icon on the Find My Device screen.",
+    "7. Tap the gray geo icon."
   ],
-  "expected": "A new window is displayed showing: the address of the last known location (street & city), device name and status, date of last connection, and last known battery percentage.",
+  "expected": "A new window is displayed showing: address of the last known location (street & city), device name & status, date of last connection, and last known battery percentage.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Find My Device",
-    "gray geo icon",
-    "offline device",
-    "disconnected device",
-    "last known address",
-    "device status",
-    "last connection date",
-    "battery percentage"
+    "find-my-device",
+    "geo-icon",
+    "last-known-location",
+    "poly-studio-mobile",
+    "disconnected-headset",
+    "out-of-range",
+    "battery-persistence",
+    "device-status"
   ],
   "source_last_updated": "1759927716",
   "source_hash": "155aba18f56f37deea67dd4769664baabf2d0d36362256fc06bd4a0d2996b005",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.146486Z",
+  "processed_at": "2026-04-25T05:37:16.768997Z",
   "status": "active"
 }
