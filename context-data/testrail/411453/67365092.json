@@ -8,30 +8,29 @@
   "scenario": "Verify all non-toggle settings in Device Settings can be changed and display updated values correctly",
   "steps": [
     "1. Pair the headset with the phone and launch the Poly Studio Mobile app.",
-    "2. On the Home screen, tap the connected [Device Name] to open Device Settings.",
-    "3. Tap any non-toggle option (e.g., Language, Sidetone, or other list-based setting).",
-    "4. Verify that a picker (list of available values) displays.",
-    "5. Select a new value from the picker.",
-    "6. Confirm that the picker closes and the option now displays the newly selected value.",
-    "7. Repeat steps 3\u20136 for every non-toggle option available for the device.",
-    "8. After changing all options, verify that all updated values are displayed correctly on the Device Settings screen."
+    "2. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
+    "3. Tap any non-toggle option (e.g., Language, Sidetone, or other picker-based settings).",
+    "4. Verify that a picker dialog displays listing all available values for that option.",
+    "5. Select any value from the picker.",
+    "6. Confirm that the picker closes and the selected option updates to show the new value on the Device Settings screen.",
+    "7. Repeat steps 3\u20136 for every non-toggle option available for the device."
   ],
-  "expected": "All non-toggle settings can be changed. Tapping a non-toggle option opens a picker with all available values. Selecting a value closes the picker and updates the option display. All changes persist and display correctly on the Device Settings screen.",
+  "expected": "All non-toggle settings can be changed via a picker. After selecting a value, the picker closes and the Device Settings screen reflects the updated value for each option.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "device-settings",
     "non-toggle-settings",
+    "picker-dialog",
+    "value-persistence",
     "poly-studio-mobile",
-    "picker-values",
     "sidetone",
     "language-setting",
-    "settings-persistence",
-    "value-update"
+    "settings-ui-validation"
   ],
   "source_last_updated": "1763549465",
   "source_hash": "ee74d23177e7a7ccb717e31fe60c88ac8327cbd8b3e898bba062b3f3da394cfb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.971341Z",
+  "processed_at": "2026-04-25T09:32:26.223429Z",
   "status": "active"
 }
