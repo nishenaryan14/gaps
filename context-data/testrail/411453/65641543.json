@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "ANC - Change Transparency Mode value (Environment/Speech)",
   "feature": "ANC",
-  "scenario": "Transparency Mode sub-setting (Environment/Speech) selection does not persist after closing and reopening the ANC tab",
+  "scenario": "Transparency Mode sub-setting (Environment/Speech) selection does not persist after closing and reopening the ANC tab in Device Settings",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen and tap on your connected Poly Bluetooth audio device.",
-    "3. Go to Device Settings \u2192 Audio Settings \u2192 ANC.",
-    "4. In the ANC settings, locate the Transparency Mode option.",
-    "5. Change the Transparency Mode value from the current setting to 'Environment'.",
-    "6. Close the ANC tab by navigating back to the Audio Settings screen.",
-    "7. Re-open the ANC tab by tapping on ANC again.",
-    "8. Observe the Transparency Mode value displayed.",
-    "9. Repeat steps 5\u20138, this time changing the Transparency Mode value to 'Speech' instead of 'Environment'."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Tap on ANC",
+    "Select Transparency Mode",
+    "Choose either Environment or Speech mode",
+    "Close the ANC tab by tapping the back arrow or swiping back",
+    "Reopen the ANC tab by tapping ANC again in Device Settings"
   ],
-  "expected": "The Transparency Mode value (Environment or Speech) selected in step 5 or step 9 persists and is displayed correctly when re-opening the ANC tab.",
+  "expected": "The Transparency Mode value (Environment/Speech) selected earlier should persist and be displayed as the current mode after reopening the ANC tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "transparency-mode",
     "environment-sub-setting",
     "speech-sub-setting",
-    "anc",
+    "anc-tab",
+    "device-settings",
     "poly-studio-mobile",
-    "setting-persistence",
-    "audio-settings"
+    "persistence",
+    "anc"
   ],
   "source_last_updated": "1761055511",
   "source_hash": "7f491405d721713a3dcca0965365fcc13dc007735690d525df1cc01ec858785d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.910822Z",
+  "processed_at": "2026-04-25T08:21:30.983549Z",
   "status": "active"
 }
