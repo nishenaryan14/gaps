@@ -12,28 +12,27 @@
     "2. Ensure no Poly Bluetooth headset is connected to the Android device.",
     "3. From the Home screen, tap the 'Supported Devices' option.",
     "4. Close the Supported Devices screen (e.g., tap the back button or close icon).",
-    "5. Within approximately 2 seconds, reopen the Supported Devices screen from the Home screen."
+    "5. Within approximately 2 seconds, reopen the Supported Devices screen from the Home screen again."
   ],
-  "expected": "The user should be able to freely navigate through the app. The Supported Devices screen should open and function normally, allowing the user to view supported devices or navigate away.",
-  "actual": "The user gets stuck on the Supported Devices screen and cannot navigate away or interact with the app normally.",
+  "expected": "The user should be able to freely navigate through the app. The Supported Devices screen should open normally and the user should be able to close it or navigate away without issue.",
+  "actual": "The user gets stuck on the Supported Devices screen and cannot navigate away or interact with the app freely.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "NeedsEngineeringReview"
   ],
   "keywords": [
-    "poly-studio-mobile",
     "supported-devices-screen",
+    "poly-studio-mobile",
     "home-screen",
     "screen-unresponsive",
-    "ui-freeze",
     "no-headset-connected",
-    "screen-navigation",
-    "android-app"
+    "ui-freeze",
+    "screen-navigation"
   ],
   "source_last_updated": "2026-04-15T08:55:23.000+0000",
   "source_hash": "0c6f17de704111a0acac2651ac859501c24009ab168170b8f4f7b1c2da4b7d3d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.787324Z",
+  "processed_at": "2026-04-25T09:32:26.049111Z",
   "status": "active"
 }
