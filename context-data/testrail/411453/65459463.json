@@ -5,33 +5,23 @@
   "project": "411453",
   "title": "Software Update - DFU -  Houston... screen Cancel button",
   "feature": "Firmware Update",
-  "scenario": "Device Firmware Update failure handling - turning off headset during update redirects user to device home screen after cancelling",
-  "steps": [
-    "1. Pair the headset with the mobile device and launch the Poly Studio Mobile app.",
-    "2. From the Home screen, tap on the connected device to open Device Settings.",
-    "3. Navigate to Device Settings > Software Update.",
-    "4. Tap \"Update\" to begin checking for available firmware updates.",
-    "5. Tap \"Continue\" on the update information screen.",
-    "6. Tap \"Start Update\" to initiate the Device Firmware Update (DFU) process.",
-    "7. During the update process (e.g., at 10% progress), trigger a DFU failure by turning off the headset (press and hold the Power button to power off).",
-    "8. On the Houston (update progress) screen, tap \"Cancel\" to abort the update."
-  ],
-  "expected": "User is directed back to the Home screen for the currently connected device.",
+  "scenario": "DFU failure recovery: turning off headset during firmware update at 10% and tapping Cancel returns user to device home screen",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "dfu-failure-recovery",
     "firmware-update",
-    "dfu-failure",
-    "device-firmware-update",
-    "poly-studio-mobile",
-    "software-update",
-    "update-cancellation",
+    "cancel-button",
+    "device-home-screen",
+    "update-interruption",
     "power-off-during-update",
-    "houston-screen"
+    "brick-prevention"
   ],
   "source_last_updated": "1763130666",
   "source_hash": "d387f3f3b2130fe5fe1e50215bdfde6ae5dbbb0f82f8be2159873365c3f95931",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.958227Z",
+  "processed_at": "2026-04-25T08:21:31.026594Z",
   "status": "active"
 }
