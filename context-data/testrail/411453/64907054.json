@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "App Settings - General",
   "feature": "App Settings",
-  "scenario": "Verify that tapping the hamburger icon and selecting General opens the General screen with Account, About, Notifications & Device Alerts, Privacy Policy, and Licenses sections, and pressing Back returns to the Poly Lens Menu",
+  "scenario": "Navigating to General from App Settings hamburger menu displays Account, About, Notifications & Device Alerts, Privacy Policy, and Licenses sections, and back returns to Poly Lens Menu",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. On the Home screen, tap the hamburger menu icon (App Settings) in the top-left corner.",
-    "3. From the menu, select 'General'.",
+    "2. On the Home screen, tap the App Settings (hamburger) icon located in the top-left or top-right corner.",
+    "3. From the menu that appears, select \"General\".",
     "4. Observe the new screen that opens.",
-    "5. Verify the following sections are displayed: Account, About, Notifications & Device Alerts, Privacy Policy, and Licenses.",
-    "6. Press the Back button (either the device's hardware back button or the on-screen back arrow).",
-    "7. Observe the screen that appears after pressing Back."
+    "5. Verify that the screen displays the following sections: Account, About, Notifications & Device Alerts, Privacy Policy, and Licenses.",
+    "6. Tap the back button (either the system back button or the in-app back arrow)."
   ],
-  "expected": "Tapping the hamburger icon and selecting General opens a screen displaying sections for Account, About, Notifications & Device Alerts, Privacy Policy, and Licenses. Pressing Back returns the user to the Poly Lens Menu.",
+  "expected": "The General screen displays sections for Account, About, Notifications & Device Alerts, Privacy Policy, and Licenses. After tapping back, the user returns to the Poly Lens Menu (Home screen).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "hamburger-menu",
-    "general-screen",
     "app-settings",
-    "navigation",
-    "back-button",
+    "hamburger-menu",
+    "general-settings",
+    "account-section",
+    "notifications-and-device-alerts",
+    "privacy-policy",
     "poly-lens-menu"
   ],
   "source_last_updated": "1762436500",
   "source_hash": "208dbfe322158cfbe6ccc2ca9750e18718a1deeba344ed4533b810102e12fc3e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.818092Z",
+  "processed_at": "2026-04-25T08:21:30.927667Z",
   "status": "active"
 }
