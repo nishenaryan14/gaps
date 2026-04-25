@@ -8,30 +8,31 @@
   "scenario": "Renamed device name does not persist after closing and reopening the Device Settings > General screen",
   "steps": [
     "Open Poly Studio Mobile app on the Home screen.",
-    "Tap on the connected device name to enter Device Settings.",
-    "Tap General.",
+    "Tap the device name or gear icon to open Device Settings.",
+    "Navigate to General settings.",
     "Tap the device's official name field.",
-    "Enter a new name for the device.",
+    "Enter a new custom name for the device.",
     "Tap Done to save the new name.",
-    "Close the Settings screen (e.g., navigate back to Home or exit the app).",
-    "Reopen Poly Studio Mobile app and navigate back to Device Settings > General.",
+    "Close the Settings screen (e.g., tap back or exit the app).",
+    "Reopen Poly Studio Mobile and navigate back to Device Settings > General.",
     "Observe the device name displayed."
   ],
-  "expected": "The new device name is still displayed in the General settings after reopening.",
+  "expected": "The new custom device name is displayed in the General settings screen after reopening.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-name-persistence",
     "device-settings",
     "general-screen",
-    "rename-device",
+    "device-name-persistence",
+    "custom-name",
     "name-field",
-    "settings-persistence"
+    "settings-persistence",
+    "ui-state-retention"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "0899afcdc846955b524bd0e58866aece877ba7a51645f5e2d1fb9e725c75e2a6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.800387Z",
+  "processed_at": "2026-04-25T07:55:31.882861Z",
   "status": "active"
 }
