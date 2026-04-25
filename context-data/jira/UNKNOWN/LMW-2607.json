@@ -4,20 +4,20 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS | Morpheus | Unable to track inCall status",
-  "feature": "iOS / Morpheus",
-  "scenario": "Morpheus devices fail to report in-call status via deckardId 0x0E35, preventing proper DFU blocking and ANC transparency mode control during active calls.",
-  "description_clean": "The iOS application cannot reliably determine if a user is in a call when connected to Morpheus devices. This prevents the app from showing appropriate alerts or blocking DFU initiation and ANC transparency mode switching during an active call. The root cause is that Morpheus devices do not send or respond to deckardId 0x0E35. The fix is to also use deckardId 0x0E22, which correctly reflects call state on Morpheus devices. Acceptance criteria: all devices correctly respond to in-call status; DFU availability is enabled/blocked based on call state; ANC transparency control is enabled/disabled accordingly.",
+  "feature": "Call Management",
+  "scenario": "iOS app fails to detect active call state on Voyager 4245 Office (Morpheus) devices due to unsupported deckardId, preventing call-aware alerts and blocking of DFU/ANC changes",
+  "description_clean": "The iOS app cannot reliably detect when a user is in an active call when connected to Morpheus (Voyager 4245 Office) devices. This prevents the app from showing appropriate alerts and blocking DFU (firmware updates) or ANC/transparency mode changes during calls. The root cause is that Morpheus devices do not support deckardId 0x0E35. The fix is to use deckardId 0x0E22 instead, which correctly reports call state for these devices. The Android team has already adopted this approach.",
   "steps": [
-    "Connect iOS application to a Morpheus device",
-    "Initiate an active call on the iOS device",
-    "Observe the app's ability to detect the in-call status",
-    "Attempt to initiate DFU (Device Firmware Update) while in the call",
-    "Attempt to switch ANC transparency mode while in the call",
-    "Apply the fix to also use deckardId 0x0E22 for call state detection",
-    "Re-test steps 2-5 with the fix applied"
+    "1. Connect a Morpheus (Voyager 4245 Office) device to the iOS device via Bluetooth.",
+    "2. Open the Poly Studio Mobile app on the iOS device.",
+    "3. Verify the device is shown on the Home screen.",
+    "4. Initiate or receive an active phone call on the iOS device.",
+    "5. While in the active call, observe the Poly Studio Mobile app for any call-state-related alerts or UI changes.",
+    "6. Attempt to trigger a DFU (firmware update) from the app.",
+    "7. Attempt to change ANC or Transparency Mode settings from the app (e.g., Poly Studio Mobile \u2192 [Device Name] \u2192 Audio Settings \u2192 ANC / Transparency Mode)."
   ],
-  "expected": "All devices correctly respond to in-call status; DFU availability is blocked during an active call; ANC transparency control is disabled during an active call.",
-  "actual": "The iOS application cannot reliably determine if a user is in a call when connected to Morpheus devices. This prevents the app from showing appropriate alerts or blocking DFU initiation and ANC transparency mode switching during an active call.",
+  "expected": "The app should detect the active call state, display appropriate call-related alerts, and block DFU firmware updates and ANC/Transparency Mode changes during the call.",
+  "actual": "The app does not reliably detect the active call state. No call-related alerts are shown, and DFU firmware updates or ANC/Transparency Mode changes are not blocked during the call.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -26,17 +26,18 @@
     "iOS15"
   ],
   "keywords": [
-    "Morpheus",
+    "voyager-4245-office",
+    "morpheus",
+    "call-state-detection",
     "deckardId",
-    "in-call status",
-    "DFU blocking",
-    "ANC transparency mode",
-    "call state detection",
-    "iOS application"
+    "call-aware-alerts",
+    "dfu-blocking",
+    "anc-blocking",
+    "poly-studio-mobile"
   ],
   "source_last_updated": "2026-04-22T06:49:29.000+0000",
   "source_hash": "e337b587d4b165194746a1aad623b2b8b64dc5d2f3ff0e55c426cdf26d4b9e71",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.072179Z",
+  "processed_at": "2026-04-25T05:37:16.691400Z",
   "status": "active"
 }
