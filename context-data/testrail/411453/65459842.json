@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "Notifications - Master Toggle OFF - Device updating",
   "feature": "Notifications",
-  "scenario": "No notification pop-ups appear during DFU process when Notification master toggle is OFF in App Settings > General > Notifications & Device Alerts",
-  "steps": [],
-  "expected": "",
+  "scenario": "No notification appears during DFU when Notification master toggle is OFF in App Settings > General > Notifications & Device Alerts",
+  "steps": [
+    "Open the Poly Studio Mobile app.",
+    "Go to App Settings (gear icon).",
+    "Navigate to General \u2192 Notifications & Device Alerts.",
+    "Set the Notification master toggle to OFF.",
+    "Pair or connect a Poly Bluetooth audio device to the app.",
+    "Trigger a Device Firmware Update (DFU) process for the connected device.",
+    "Send the app to the background (e.g., press the Home button or switch to another app).",
+    "Observe whether any notification related to the DFU process appears in the device's notification shade."
+  ],
+  "expected": "No DFU-related notification appears in the notification shade while the app is in the background.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "notification-master-toggle",
-    "dfu-process",
-    "firmware-update",
+    "dfu-notification",
+    "poly-studio-mobile",
     "app-settings",
-    "notifications-device-alerts",
-    "notification-pop-ups",
-    "general-settings"
+    "notifications-and-device-alerts",
+    "firmware-update",
+    "background-notification",
+    "device-alerts"
   ],
   "source_last_updated": "1761230695",
   "source_hash": "a95974e8f32411d6ffed9c0ab2fcd6146ed376ecfbca9981ed021d651c88b511",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.968619Z",
+  "processed_at": "2026-04-25T08:21:31.044053Z",
   "status": "active"
 }
