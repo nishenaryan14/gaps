@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Support - App, user not logged ever, dialog",
-  "feature": "Support - App",
-  "scenario": "Guest user installing mobile app, completing onboarding, and tapping Support > App button sees a login prompt dialog with \"Later\" and \"Login\" options.",
+  "feature": "App Settings",
+  "scenario": "Guest user in Poly Studio Mobile app is prompted to log in with Poly Lens account when tapping App button in Support screen",
   "steps": [
-    "Install the mobile app",
-    "Go through onboarding as a Guest",
-    "Navigate to Support via the hamburger menu",
-    "Click the App button"
+    "1. Install the Poly Studio Mobile app.",
+    "2. During onboarding, select \"Go as Guest\".",
+    "3. Open the hamburger menu (three-line icon in the top-left corner).",
+    "4. Tap \"Support\" from the menu.",
+    "5. On the Support screen, tap the \"App\" button.",
+    "6. Observe the dialog that appears."
   ],
-  "expected": "A dialog should appear prompting the user to log in with their Poly Lens account. The dialog displays the message: \"Log in with your Poly Lens account to access useful information that can improve your support experience.\" with \"Later\" and \"Login\" buttons.",
+  "expected": "No login dialog should appear, or the user should remain in guest mode without being prompted to log in.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Guest user",
-    "Mobile app",
-    "Onboarding",
-    "Support",
-    "App button",
-    "Login prompt",
-    "Hamburger menu",
-    "Authentication"
+    "poly-studio-mobile",
+    "guest-user",
+    "poly-lens-account",
+    "login-prompt",
+    "support-screen",
+    "app-button",
+    "onboarding",
+    "hamburger-menu"
   ],
   "source_last_updated": "1759751857",
   "source_hash": "0c33eee5ec36788b26cd43b446544ed6593a760b189a79b9feea02817770068c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.183954Z",
+  "processed_at": "2026-04-25T05:37:16.775611Z",
   "status": "active"
 }
