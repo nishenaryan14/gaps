@@ -4,28 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Support - Verify that data is correct after moving from Account linked to the Tenant to Account with pending invite",
-  "feature": "Support / Account Linking",
-  "scenario": "Verify data correctness when switching from an account linked to a tenant to an account with a pending invite",
+  "feature": "App Settings",
+  "scenario": "Tenant info persists incorrectly in Support > App when switching from a tenant-linked account to an account with a pending invite",
   "steps": [
-    "Log in with Account linked to Tenant A, go to Support > App, and confirm Tenant A info is present.",
-    "Log out, log in with a different Account that is not linked to any Tenant but has a pending invite, go to Support > App, and confirm Tenant name and ID are not present on the card."
+    "1. Open the Poly Studio Mobile app and log in with an account that is linked to Tenant A.",
+    "2. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
+    "3. Observe that Tenant A info (tenant name and ID) is displayed on the card.",
+    "4. Log out of the current account.",
+    "5. Log in with a different account that has a pending invite but is not yet linked to any tenant.",
+    "6. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
+    "7. Observe the tenant info on the card."
   ],
-  "expected": "Data is correct after moving from an Account linked to a Tenant to an Account with a pending invite. Tenant A info is present for the first account, and Tenant name and ID are not present on the card for the second account.",
+  "expected": "For the account linked to Tenant A, the tenant name and ID should be present on the Support \u2192 App card. For the account with a pending invite (not yet linked to any tenant), the tenant name and ID should NOT be present on the card.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "tenant switching",
-    "account invite",
-    "data correctness",
-    "pending invite",
-    "tenant info visibility",
-    "support app",
-    "multi-tenant",
-    "access validation"
+    "poly-studio-mobile",
+    "tenant-persistence",
+    "support-app",
+    "pending-invite",
+    "account-switching",
+    "tenant-info",
+    "poly-lens-menu"
   ],
   "source_last_updated": "1759752651",
   "source_hash": "30b956325211cdc09072cf4d2d9c1c07a50af9c3eba9a0c0255b268b0a266923",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.197011Z",
+  "processed_at": "2026-04-25T05:37:16.784670Z",
   "status": "active"
 }
