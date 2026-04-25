@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Quick Start Guide - Osprey/Tern - First screen, single earbud/pairing - zoom in/out",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide zoom in/out animation fails on the single earbud/pairing screen in Device Settings",
+  "scenario": "Quick Start Guide zoom in/out toggle on pairing screen does not animate or match Figma spec on Voyager Free 60+",
   "steps": [
     "Open the Poly Studio Mobile app.",
-    "Navigate to Home screen.",
-    "Tap Device Settings for the connected device.",
-    "Tap Quick Start Guide.",
-    "Tap the blue circle button.",
-    "Verify the earbud zooms in and the text matches the Figma Pairing screen.",
+    "Go to Home \u2192 Device Settings \u2192 Quick Start Guide.",
+    "Tap the blue circle button on the Quick Start Guide screen.",
+    "Verify the earbud image zooms in and the on-screen text matches the Figma Pairing screen design.",
     "Tap the blue circle button again.",
-    "Verify the screen zooms out to the original screen."
+    "Verify the screen zooms out to the original view."
   ],
-  "expected": "The earbud zooms in with text matching the Figma Pairing screen on first tap. On second tap, the screen zooms out to the original Quick Start Guide screen.",
+  "expected": "The earbud zooms in on first tap with text matching the Figma Pairing screen, and zooms back out to the original view on second tap.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "quick-start-guide",
-    "zoom-animation",
+    "zoom-in-out-toggle",
     "pairing-screen",
-    "device-settings",
+    "voyager-free-60",
     "poly-studio-mobile",
-    "single-earbud",
-    "figma-verification",
-    "ui-animation"
+    "figma-spec",
+    "earbud-image-animation",
+    "device-settings"
   ],
   "source_last_updated": "1763036615",
   "source_hash": "c93c3e1864fe34b0f03550698d010c63943c592f6b1bf88c01afa4b155c79ab7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.939470Z",
+  "processed_at": "2026-04-25T08:21:31.010610Z",
   "status": "active"
 }
