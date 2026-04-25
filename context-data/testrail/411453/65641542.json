@@ -5,32 +5,30 @@
   "project": "411453",
   "title": "ANC - Switch from ANC Mode to Transparency Mode",
   "feature": "ANC / Transparency Mode",
-  "scenario": "Transparency Mode fails to default to Environment sub-setting when switching from ANC Mode in Device Settings",
+  "scenario": "Verify ANC switches OFF and its sub-setting is greyed out when Transparency Mode is turned ON in Device Settings",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
+    "Open Poly Studio Mobile app \u2192 Home screen",
     "Tap on the connected device name to open Device Settings",
-    "Tap on Audio Settings",
-    "Tap on ANC",
-    "Ensure ANC Mode is currently ON (e.g., Adaptive or Standard selected)",
-    "Tap on Transparency Mode to switch from ANC Mode to Transparency Mode",
-    "Observe the UI behavior"
+    "Navigate to Audio Settings \u2192 ANC / Transparency Mode",
+    "Ensure ANC is currently ON (either Adaptive or Standard mode selected)",
+    "Tap on Transparency Mode to turn it ON",
+    "Observe the ANC toggle and mode selection options"
   ],
-  "expected": "Transparency Mode turns ON with \"Environment\" selected by default (if first switch). ANC Mode turns OFF and its previously selected value (Adaptive or Standard) is greyed out/disabled.",
+  "expected": "Transparency Mode is turned ON with Environment selected by default. ANC switches OFF and its previously selected value (Adaptive or Standard) is disabled/greyed out.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "transparency-mode",
-    "environment-sub-setting",
     "anc",
+    "transparency-mode",
     "device-settings",
-    "poly-studio-mobile",
     "audio-settings",
-    "mode-switching"
+    "poly-studio-mobile",
+    "anc-sub-setting",
+    "anc-toggle"
   ],
   "source_last_updated": "1761045491",
   "source_hash": "1aac5c591bf3460b44db3f13374590561b2d7b034f63f80ef6e81ea9353d9c10",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.906269Z",
+  "processed_at": "2026-04-25T08:21:30.987072Z",
   "status": "active"
 }
