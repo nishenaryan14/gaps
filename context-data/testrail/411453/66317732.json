@@ -7,28 +7,29 @@
   "feature": "Device Management",
   "scenario": "Device Name setting incorrectly appears in Device Settings > General for unsupported Poly devices",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on a connected device that does NOT support renaming (e.g., any Poly device not in the supported list: Poly Voyager Free 60+ UC, Poly Voyager Free 60 UC, Poly Voyager Free 20, Poly Sync 20, Poly Sync 20M, Poly Sync 40)",
-    "Go to Device Settings",
-    "Tap on General"
+    "1. Launch the Poly Studio Mobile app on an Android device.",
+    "2. Pair and connect a Poly Bluetooth audio device that does NOT support renaming (e.g., a Voyager 5200, Voyager 4320, or any device not in the supported list).",
+    "3. Navigate to the Home screen.",
+    "4. Tap on the connected device name to open Device Settings.",
+    "5. Tap on General.",
+    "6. Observe the list of options displayed under General."
   ],
-  "expected": "The \"Device Name\" option is NOT displayed in the General section of Device Settings for devices that do not support renaming.",
+  "expected": "The \"Device Name\" option must NOT appear in Device Settings > General for devices that do not support renaming.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-settings",
-    "general",
-    "device-name",
+    "general-settings",
+    "device-rename",
+    "voyager-5200",
+    "voyager-4320",
     "unsupported-devices",
-    "renaming",
-    "voyager-free-60",
-    "poly-sync-20"
+    "android"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "39d3b53a4fb0c26c374e68f2cd7aab08b16efdd697b608675b3c6947f1d66553",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.803903Z",
+  "processed_at": "2026-04-25T07:55:31.883385Z",
   "status": "active"
 }
