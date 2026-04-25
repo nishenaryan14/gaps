@@ -1,106 +1,135 @@
 [
   {
-    "title": "TC-ONBOARD-001: Verify commercial product name displayed on device discovery screen during first launch",
+    "title": "TC-ONB-001: Validate consumer product name (not code name) on onboarding device discovery screen",
     "steps": [
-      "Ensure Poly Sync 20 (Falcon) device is powered off.",
-      "Clear app data: Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Storage \u2192 Clear Data.",
-      "Launch Poly Studio Mobile app (first launch experience).",
-      "Tap 'Add Device' or '+' on the 'No Devices' screen.",
-      "Power on the Poly Sync 20 device by connecting USB power or pressing the power button.",
-      "Put the device in pairing mode: Press and hold the Bluetooth button for 2 seconds until you hear 'pairing' and the LCD flashes a crossing blue pattern.",
-      "Observe the device name displayed in the scanning/discovery list on screen."
+      "Factory reset the Poly device (e.g., Poly Sync 20) to ensure it is in pairing mode.",
+      "Ensure Poly Studio Mobile app is not installed or has been freshly installed (clear app data).",
+      "Launch Poly Studio Mobile app for the first time (first-launch onboarding).",
+      "Observe the device discovery/scanning screen that lists available devices.",
+      "Verify the device name displayed in the discovered devices list.",
+      "Tap the device to proceed to pairing."
     ],
-    "expected": "The device appears in the discovery list with its commercial product name 'Poly Sync 20' (NOT 'Falcon' or any internal code name)."
+    "expected": "The device is displayed using its consumer-facing product name (e.g., 'Poly Sync 20') \u2014 NOT an internal code name like 'Falcon'. The name matches the official product branding."
   },
   {
-    "title": "TC-ONBOARD-002: Verify commercial product name on pairing confirmation screen",
+    "title": "TC-ONB-002: Validate consumer product name on onboarding pairing/connection confirmation screen",
     "steps": [
-      "Ensure Poly Sync 20 (Falcon) device is in pairing mode (Bluetooth button held 2 seconds, LCD flashing blue).",
-      "Launch Poly Studio Mobile app with cleared data (first launch).",
-      "Tap 'Add Device' \u2192 wait for device to appear in scan list.",
-      "Tap the device name from the list to initiate pairing.",
-      "Observe the device name shown on the pairing/connecting progress screen.",
-      "Complete the pairing process by confirming any Bluetooth pairing request on the phone.",
-      "Observe the device name shown on the 'Connection Successful' or 'Device Connected' confirmation screen."
+      "Factory reset the Poly device (e.g., Poly Sync 20) to ensure it is in pairing mode.",
+      "Clear app data / fresh install Poly Studio Mobile app.",
+      "Launch the app and proceed through onboarding until the device discovery screen.",
+      "Tap the discovered device (e.g., 'Poly Sync 20') to initiate pairing.",
+      "On the pairing/connection confirmation screen (shown during Bluetooth pairing handshake), observe the device name displayed.",
+      "Complete the pairing process."
     ],
-    "expected": "The commercial product name 'Poly Sync 20' is displayed consistently on the pairing progress screen and the connection confirmation screen. No internal code names (e.g., 'Falcon') appear."
+    "expected": "The pairing/connection confirmation screen displays the consumer-facing product name (e.g., 'Poly Sync 20') \u2014 NOT an internal code name like 'Falcon'. The name is consistent with the device discovery screen."
   },
   {
-    "title": "TC-ONBOARD-003: Verify commercial product name on onboarding after factory reset of device",
+    "title": "TC-ONB-003: Validate consumer product name on onboarding success/completion screen",
     "steps": [
-      "Factory reset the Poly Sync 20 device (refer to device manual for reset procedure, typically holding mute + volume up for 5 seconds).",
-      "Clear app data: Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Storage \u2192 Clear Data.",
-      "Launch Poly Studio Mobile app.",
-      "Tap 'Add Device'.",
-      "Power on the Poly Sync 20 and put it in pairing mode (Bluetooth button 2 seconds).",
-      "Wait for device to appear in the scan list.",
-      "Observe the device name in the scan list.",
-      "Tap the device to pair.",
-      "Observe the device name on the pairing and connection confirmation screens."
+      "Factory reset the Poly device (e.g., Poly Sync 20) to ensure it is in pairing mode.",
+      "Clear app data / fresh install Poly Studio Mobile app.",
+      "Launch the app and proceed through the full onboarding flow: device discovery \u2192 pairing \u2192 connection confirmation.",
+      "On the final onboarding success/completion screen (e.g., 'Your device is ready' or similar), observe the device name displayed.",
+      "Complete onboarding and enter the main app screen."
     ],
-    "expected": "After device factory reset, the onboarding screens display 'Poly Sync 20' as the device name throughout discovery, pairing, and connection confirmation. No code names are shown."
+    "expected": "The onboarding success/completion screen displays the consumer-facing product name (e.g., 'Poly Sync 20') \u2014 NOT an internal code name like 'Falcon'. The name is consistent across all onboarding screens."
   },
   {
-    "title": "TC-ONBOARD-004: Verify commercial product name on device details screen immediately after onboarding",
+    "title": "TC-ONB-004: Validate consumer product name on onboarding screens after factory-reset-triggered re-onboarding",
     "steps": [
-      "Perform a fresh onboarding flow: Clear app data \u2192 Launch app \u2192 Add Device \u2192 Pair with Poly Sync 20.",
-      "After the connection confirmation screen, observe the main device screen that appears.",
-      "Note the device name displayed at the top of the device details/settings screen.",
-      "Tap the device name or info area to view device details if applicable."
+      "Ensure a Poly device (e.g., Poly Sync 20) is already paired and connected to the Poly Studio Mobile app.",
+      "Perform a factory reset on the Poly device (hold specific button combination per device manual to reset).",
+      "Observe the app behavior \u2014 the app should detect the device is no longer connected and may trigger a re-onboarding or re-pairing flow.",
+      "If the app shows a re-onboarding/discovery flow, observe the device name on the discovery screen.",
+      "Proceed through re-pairing and observe the device name on the pairing confirmation screen.",
+      "Complete the re-pairing process."
     ],
-    "expected": "The device details screen immediately after onboarding displays the commercial product name 'Poly Sync 20'. No internal code name 'Falcon' is visible anywhere on the screen."
+    "expected": "After factory reset triggers a re-onboarding flow, all screens (discovery, pairing, completion) display the consumer-facing product name (e.g., 'Poly Sync 20') \u2014 NOT an internal code name like 'Falcon'."
   },
   {
-    "title": "TC-ONBOARD-005: Verify commercial product name persists after app restart post-onboarding",
+    "title": "TC-ONB-005: Validate consumer product name on onboarding screens for multiple device types (asymmetry check)",
     "steps": [
-      "Complete the full onboarding flow for a Poly Sync 20 device (Clear data \u2192 Launch \u2192 Add Device \u2192 Pair).",
-      "Observe the device name on the main device screen.",
-      "Fully close the Poly Studio Mobile app (swipe from recent apps or force stop).",
-      "Re-launch the Poly Studio Mobile app.",
-      "Observe the device name displayed on the main screen and any device info/details screens."
+      "Factory reset Poly Sync 20 speakerphone.",
+      "Factory reset a second compatible device (e.g., Poly Sync 20+ or a Poly headset like Poly Voyager 4320).",
+      "Clear app data / fresh install Poly Studio Mobile app.",
+      "Launch the app and observe the device discovery screen \u2014 both devices should appear in the list.",
+      "Verify the displayed name for each device.",
+      "Tap the first device (e.g., Poly Sync 20) and observe the pairing confirmation screen name.",
+      "Complete pairing, then go back and repeat the onboarding flow for the second device (clear app data again or use 'Add Device' flow if available).",
+      "Observe the device name for the second device on discovery and pairing screens."
     ],
-    "expected": "After app restart, the device continues to display the commercial product name 'Poly Sync 20' on all screens. No code name 'Falcon' appears."
+    "expected": "Each device type displays its own correct consumer-facing product name (e.g., 'Poly Sync 20' for Sync 20, 'Poly Sync 20+' for Sync 20+, 'Poly Voyager 4320' for the headset). No device shows an internal code name like 'Falcon'."
   },
   {
-    "title": "TC-ONBOARD-006: Verify commercial product name for Sync 20+ (Falcon variant) on onboarding screens",
+    "title": "TC-ONB-006: Validate consumer product name persists correctly after app backgrounding during onboarding",
     "steps": [
-      "Ensure Poly Sync 20+ device is powered off.",
-      "Clear app data: Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Storage \u2192 Clear Data.",
-      "Launch Poly Studio Mobile app.",
-      "Tap 'Add Device'.",
-      "Power on the Poly Sync 20+ and put it in pairing mode (Bluetooth button 2 seconds).",
-      "Wait for device to appear in the scan list.",
-      "Observe the device name in the scan list.",
-      "Tap the device to pair.",
-      "Observe the device name on the pairing and connection confirmation screens."
+      "Factory reset the Poly device (e.g., Poly Sync 20).",
+      "Clear app data / fresh install Poly Studio Mobile app.",
+      "Launch the app and proceed to the device discovery screen on onboarding.",
+      "Verify the device name shown is the consumer product name (e.g., 'Poly Sync 20').",
+      "Press the Home button to background the app.",
+      "Wait 10 seconds, then reopen the app from the recent apps list.",
+      "Observe the device name on the discovery screen.",
+      "Tap the device and proceed to the pairing confirmation screen.",
+      "Press the Home button again to background the app.",
+      "Reopen the app and observe the device name on the pairing confirmation screen."
     ],
-    "expected": "The onboarding screens display 'Poly Sync 20+' (not 'Falcon' or 'Sync 20') throughout discovery, pairing, and connection confirmation. The '+' variant is correctly identified."
+    "expected": "After app backgrounding and reopening during onboarding, the device name remains the consumer-facing product name (e.g., 'Poly Sync 20') on all screens \u2014 NOT an internal code name like 'Falcon'."
   },
   {
-    "title": "TC-ONBOARD-007: Verify commercial product name on onboarding screens when phone language is set to non-English",
+    "title": "TC-ONB-007: Validate consumer product name after app force-kill during onboarding",
     "steps": [
-      "Change phone system language to a supported language (e.g., French, German, Japanese).",
-      "Clear app data: Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Storage \u2192 Clear Data.",
-      "Launch Poly Studio Mobile app.",
-      "Tap 'Add Device'.",
-      "Power on Poly Sync 20 and put in pairing mode (Bluetooth button 2 seconds).",
-      "Wait for device to appear in scan list.",
-      "Observe the device name in the scan list.",
-      "Tap the device to pair.",
-      "Observe the device name on pairing and connection confirmation screens."
+      "Factory reset the Poly device (e.g., Poly Sync 20).",
+      "Clear app data / fresh install Poly Studio Mobile app.",
+      "Launch the app and proceed to the device discovery screen on onboarding.",
+      "Verify the device name shown is the consumer product name (e.g., 'Poly Sync 20').",
+      "Force-kill the app (swipe from recent apps or use 'Force Stop' in Settings).",
+      "Re-launch the app.",
+      "Observe the device name on the discovery screen (app may restart onboarding or resume from a saved state).",
+      "If the app resumes to the pairing confirmation screen, verify the device name there as well."
     ],
-    "expected": "The commercial product name 'Poly Sync 20' is displayed correctly on all onboarding screens regardless of phone language. The product name itself is not translated or replaced with a code name."
+    "expected": "After force-kill and relaunch during onboarding, the device name remains the consumer-facing product name (e.g., 'Poly Sync 20') \u2014 NOT an internal code name like 'Falcon'."
   },
   {
-    "title": "TC-ONBOARD-008: Verify commercial product name on onboarding screens when device is already bonded via system Bluetooth",
+    "title": "TC-ONB-008: Validate consumer product name on onboarding screens with localization (English vs. non-English locale)",
     "steps": [
-      "Pair Poly Sync 20 with the phone via system Bluetooth settings (Settings \u2192 Bluetooth \u2192 Pair new device).",
-      "Clear app data: Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Storage \u2192 Clear Data.",
-      "Launch Poly Studio Mobile app.",
-      "Observe the main screen \u2014 the app should detect the already-paired device.",
-      "Tap the detected device or follow the onboarding prompt to connect.",
-      "Observe the device name on the connection/onboarding screens."
+      "Set the phone system language to English (US).",
+      "Factory reset the Poly device (e.g., Poly Sync 20).",
+      "Clear app data / fresh install Poly Studio Mobile app.",
+      "Launch the app and proceed through onboarding \u2014 observe device name on discovery, pairing, and completion screens.",
+      "Note the exact device name string displayed.",
+      "Change the phone system language to a non-English language (e.g., French, German, Japanese).",
+      "Clear app data again / fresh install the app.",
+      "Launch the app and proceed through onboarding again.",
+      "Observe the device name on discovery, pairing, and completion screens."
     ],
-    "expected": "Even when the device was previously paired via system Bluetooth, the onboarding screens in the app display the commercial product name 'Poly Sync 20' (not 'Falcon' or the raw Bluetooth name)."
+    "expected": "The device name displayed is the consumer-facing product name (e.g., 'Poly Sync 20') in both English and non-English locales. The product name itself should NOT be translated or replaced with a code name. Localized string resources (e.g., button labels, instructions) may change, but the device name remains the correct product name."
+  },
+  {
+    "title": "TC-ONB-009: Validate that device name on onboarding matches device name on main app screen after pairing",
+    "steps": [
+      "Factory reset the Poly device (e.g., Poly Sync 20).",
+      "Clear app data / fresh install Poly Studio Mobile app.",
+      "Launch the app and proceed through the full onboarding flow.",
+      "On the device discovery screen, note the device name displayed.",
+      "On the pairing confirmation screen, note the device name displayed.",
+      "On the onboarding completion screen, note the device name displayed.",
+      "Complete onboarding and enter the main app home screen.",
+      "Observe the device name shown on the main device card or device tile (e.g., under 'My Devices' or the top banner)."
+    ],
+    "expected": "The device name displayed on all onboarding screens (discovery, pairing, completion) matches the device name displayed on the main app home screen after pairing. All instances show the consumer-facing product name (e.g., 'Poly Sync 20'), not an internal code name."
+  },
+  {
+    "title": "TC-ONB-010: Validate that onboarding screens do not display internal code name in any UI element (title, subtitle, description)",
+    "steps": [
+      "Factory reset the Poly device (e.g., Poly Sync 20).",
+      "Clear app data / fresh install Poly Studio Mobile app.",
+      "Launch the app and proceed through the full onboarding flow.",
+      "On the device discovery screen, inspect ALL text elements: title, subtitle, device list item name, any description text.",
+      "On the pairing confirmation screen, inspect ALL text elements: title, subtitle, device name, any instructional text.",
+      "On the onboarding completion screen, inspect ALL text elements: title, subtitle, device name, any congratulatory text.",
+      "Take screenshots of each screen for documentation."
+    ],
+    "expected": "No UI element on any onboarding screen contains the internal code name (e.g., 'Falcon'). All references to the device use the correct consumer-facing product name (e.g., 'Poly Sync 20'). The code name does not appear in titles, subtitles, descriptions, or any visible text."
   }
 ]
