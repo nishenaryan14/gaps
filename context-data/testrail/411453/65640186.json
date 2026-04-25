@@ -5,14 +5,14 @@
   "project": "411453",
   "title": "Analytics - Support Device Opened",
   "feature": "App Settings",
-  "scenario": "Analytics event logged when user opens Support > Device screen in Poly Studio Mobile app",
+  "scenario": "Analytics event logged when Support > Device screen is opened in the Poly Studio Mobile app",
   "steps": [
-    "Open the Poly Studio Mobile app on the mobile device.",
+    "Open Poly Studio Mobile app on the mobile device.",
     "Navigate to the Home screen.",
     "Tap on the Support option from the Home screen or menu.",
-    "On the Support screen, tap on the Device option to open the Device screen."
+    "Tap on the Device screen under the Support section."
   ],
-  "expected": "An analytics event is logged when the user opens the Support > Device screen. The event should track usage analytics including event count by country, gender, app version, app build, and app environment.",
+  "expected": "An analytics event is logged when the Support > Device screen is opened. The event should include usage analytics data such as event count by country, gender, app version, app build, and app environment.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -20,13 +20,13 @@
     "support-screen",
     "device-screen",
     "analytics-event",
-    "in-app-navigation",
-    "mobile-app-ui",
-    "user-interaction"
+    "app-navigation",
+    "home-screen",
+    "support-section"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "a1d07777524c30f0b895829918a079de109eff8068fb6fc95db4cad58536ba0a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.066276Z",
+  "processed_at": "2026-04-25T09:32:26.326117Z",
   "status": "active"
 }
