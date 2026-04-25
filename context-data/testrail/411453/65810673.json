@@ -5,15 +5,15 @@
   "project": "411453",
   "title": "QSG - X button",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide X button does not close and return to Device Settings screen consistently across all QSG pages",
+  "scenario": "Quick Start Guide X button does not close QSG and return to Device Settings screen consistently across all swipes/screens",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen and tap on a connected Poly Bluetooth device to enter Device Settings.",
+    "2. Navigate to the Home screen and tap on the connected device name to enter Device Settings.",
     "3. In Device Settings, locate and tap the Quick Start Guide (QSG) option to open it.",
-    "4. Once the QSG page is displayed, tap the X button located in the upper right corner of the screen.",
-    "5. Repeat steps 3-4 after swiping to different screens/pages within the Quick Start Guide (e.g., swipe left/right to navigate through QSG pages)."
+    "4. Once the Quick Start Guide page is displayed, tap the X button located in the upper right corner of the screen.",
+    "5. Repeat steps 3-4 after swiping through different screens/pages within the Quick Start Guide (e.g., swipe to the next page, then tap X)."
   ],
-  "expected": "The Quick Start Guide page closes and the user is returned to the Device Settings screen. This behavior works consistently regardless of which screen/page within the Quick Start Guide the user is currently viewing.",
+  "expected": "The Quick Start Guide page closes and the user is returned to the Device Settings screen. This behavior should work consistently regardless of which screen/page within the Quick Start Guide the user is currently viewing.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,12 +22,13 @@
     "device-settings",
     "poly-studio-mobile",
     "ui-navigation",
-    "back-navigation",
+    "close-behavior",
+    "swipe-navigation",
     "android-app"
   ],
   "source_last_updated": "1761316060",
   "source_hash": "516376bbd0bcd52085b317942c0b0f2585febe3ff9f97688ba79106f5c97bd97",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.936953Z",
+  "processed_at": "2026-04-25T08:21:31.009092Z",
   "status": "active"
 }
