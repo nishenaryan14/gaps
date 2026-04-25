@@ -5,31 +5,34 @@
   "project": "411453",
   "title": "Analytics - Login Success",
   "feature": "App Settings",
-  "scenario": "Successful Poly account login via mobile app logs Firebase Analytics events with default tracking elements",
+  "scenario": "Successful Poly account login via mobile app captures default analytics events and increases event count",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Account screen (tap the Account icon/profile icon).",
-    "3. On the Account screen, tap 'Sign In' or 'Log In'.",
-    "4. Enter valid Poly account credentials (email and password).",
-    "5. Tap the 'Sign In' or 'Log In' button to submit.",
-    "6. Observe the app behavior after the login attempt."
+    "2. On the Home screen, tap the Account icon or navigate to the Account section.",
+    "3. On the Login screen, enter valid Poly cloud account credentials (email and password).",
+    "4. Tap the Login or Sign In button to complete authentication.",
+    "5. Wait for the login process to complete and the Home screen to display.",
+    "6. Open the Firebase console or analytics dashboard for the app (Login Success event page).",
+    "7. Verify that the Login Success event is logged with the following default analytics elements: event graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+    "8. Confirm that the event captures screen name, user type, and action metadata.",
+    "9. Check that the event count increases after a few hours (asynchronously)."
   ],
-  "expected": "The user is successfully logged in. The login event is tracked in Firebase Analytics with default elements: graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+  "expected": "The Login Success event is logged in Firebase with all default analytics elements (event graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment) and includes screen name, user type, and action. The event count increases after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "account-login",
     "firebase-analytics",
-    "sign-in",
-    "android",
-    "tracking-events",
-    "authentication",
-    "mobile-app"
+    "login-success-event",
+    "event-count",
+    "default-analytics-elements",
+    "app-version",
+    "user-type-metadata"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "7762487f51a505db23b9fcf7815457f22ccfb52790213dfe2615280cdefdf237",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.964234Z",
+  "processed_at": "2026-04-25T07:55:31.993534Z",
   "status": "active"
 }
