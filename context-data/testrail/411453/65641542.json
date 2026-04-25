@@ -5,35 +5,32 @@
   "project": "411453",
   "title": "ANC - Switch from ANC Mode to Transparency Mode",
   "feature": "ANC / Transparency Mode",
-  "scenario": "Verify ANC switches OFF and its sub-setting is greyed out when Transparency Mode is turned ON in Device Settings",
+  "scenario": "Transparency Mode fails to default to Environment sub-setting when switching from ANC Mode in Device Settings",
   "steps": [
     "Open Poly Studio Mobile app",
-    "Go to Home screen",
+    "Navigate to Home screen",
     "Tap on the connected device name to open Device Settings",
-    "Navigate to Audio Settings",
+    "Tap on Audio Settings",
     "Tap on ANC",
-    "Select either Adaptive or Standard ANC mode",
-    "Return to Audio Settings",
-    "Tap on Transparency Mode",
-    "Toggle Transparency Mode ON",
-    "Observe the ANC section"
+    "Ensure ANC Mode is currently ON (e.g., Adaptive or Standard selected)",
+    "Tap on Transparency Mode to switch from ANC Mode to Transparency Mode",
+    "Observe the UI behavior"
   ],
-  "expected": "Transparency Mode is ON (with Environment selected by default on first switch). ANC is switched OFF and its previously selected value (Adaptive or Standard) is disabled/greyed out.",
+  "expected": "Transparency Mode turns ON with \"Environment\" selected by default (if first switch). ANC Mode turns OFF and its previously selected value (Adaptive or Standard) is greyed out/disabled.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "anc",
     "transparency-mode",
+    "environment-sub-setting",
+    "anc",
     "device-settings",
-    "audio-settings",
     "poly-studio-mobile",
-    "adaptive-anc",
-    "standard-anc",
-    "anc-sub-setting-greyed-out"
+    "audio-settings",
+    "mode-switching"
   ],
   "source_last_updated": "1761045491",
   "source_hash": "1aac5c591bf3460b44db3f13374590561b2d7b034f63f80ef6e81ea9353d9c10",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.819730Z",
+  "processed_at": "2026-04-25T07:55:31.906269Z",
   "status": "active"
 }
