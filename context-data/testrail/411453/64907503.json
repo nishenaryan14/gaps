@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Support - App, user is logged during install process, correct data",
   "feature": "App Settings",
-  "scenario": "Support > App section in Poly Studio Mobile app displays correct app version, tenant name, tenant ID, user ID, app ID, and last connection info after onboarding login",
+  "scenario": "Support screen in hamburger menu displays correct app version, tenant name, tenant ID, user ID, app ID, and last connection info after onboarding login",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Complete the onboarding flow and log in with valid credentials.",
-    "3. Tap the hamburger menu (\u2630) in the top-left corner of the Home screen.",
-    "4. Tap \"Support\" from the hamburger menu.",
-    "5. Observe the \"App\" section on the Support screen."
+    "1. Install the Poly Studio Mobile app on the mobile device.",
+    "2. Launch the app and complete the onboarding flow by logging in with valid credentials.",
+    "3. Tap the hamburger menu (\u2630) icon in the top-left corner of the Home screen.",
+    "4. From the menu, select \"Support\".",
+    "5. On the Support screen, locate the \"App\" section.",
+    "6. Verify the following fields are displayed and contain correct data:\n   - App version\n   - Tenant name\n   - Tenant ID\n   - User ID\n   - App ID\n   - Last connection info"
   ],
-  "expected": "The App section displays the following correct data: app version, tenant name, tenant ID, user ID, app ID, and last connection info.",
+  "expected": "The App section under Support displays all six fields (App version, Tenant name, Tenant ID, User ID, App ID, Last connection info) with accurate data matching the logged-in account and app installation.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile-app",
+    "poly-studio-mobile",
     "support-screen",
+    "hamburger-menu",
     "app-version",
-    "tenant-name",
-    "tenant-id",
+    "tenant-info",
     "user-id",
-    "app-id",
+    "last-connection",
     "onboarding-login"
   ],
   "source_last_updated": "1759751942",
   "source_hash": "f308e2c41ab5fd46f0e85efb54ae6033b3cc0a4ede4aa612c7b5b388c5b2c9d4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.778113Z",
+  "processed_at": "2026-04-25T07:55:31.850117Z",
   "status": "active"
 }
