@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "EB and CC on the latest - Language change",
   "feature": "Firmware Updates",
-  "scenario": "Companion Card pop-up appears incorrectly on Device Home Screen after language change via Device Settings when CC firmware is already up to date",
+  "scenario": "CC pop-up card incorrectly appears on Device Home Screen after language change and firmware update when CC firmware is already up to date",
   "steps": [
-    "Open Poly Studio Mobile app \u2192 Home screen",
-    "Tap Device Settings for the connected Poly device",
-    "Select Language and change to a different language (e.g., English \u2192 French)",
-    "Confirm the language change and return to the Home screen",
-    "If prompted, complete any pending firmware update for the device",
-    "After firmware update completes, observe the Home screen for the Companion Card (CC) pop-up card"
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Device Settings \u2192 Language.",
+    "3. Change the device language to a different language (e.g., from English to French).",
+    "4. Complete the firmware update process (if prompted).",
+    "5. Return to the Home screen of the app.",
+    "6. Observe whether the Companion Cloud (CC) pop-up card is displayed on the Device Home Screen."
   ],
-  "expected": "The CC (Companion Card) pop-up card should NOT appear on the Device Home Screen, as the CC firmware is already up to date.",
+  "expected": "The CC pop-up card should NOT appear on the Device Home Screen, as the CC firmware is already up to date.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "companion-card-popup",
+    "cc-pop-up-card",
     "device-home-screen",
     "language-change",
-    "device-settings",
     "firmware-update",
     "poly-studio-mobile",
-    "cc-firmware",
-    "ui-regression"
+    "companion-cloud",
+    "ui-regression",
+    "language-persistence"
   ],
   "source_last_updated": "1763382835",
   "source_hash": "43a57e60742c28c8d70e7d41fec7e5d99d3e52cd608d48b2e6c4ff7221a00632",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.813260Z",
+  "processed_at": "2026-04-25T07:55:31.890612Z",
   "status": "active"
 }
