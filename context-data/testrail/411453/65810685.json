@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Charge case inside screen/forth screen, right zoom in/out",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide charge case inside screen zoom in/out toggle fails when clicking the right circle button",
+  "scenario": "Quick Start Guide charge case inside screen zoom toggle fails when clicking right circle button to zoom in/out",
   "steps": [
-    "Open the Poly Studio Mobile app.",
+    "Open the Poly Studio Mobile app on your Android device.",
     "Navigate to the Home screen.",
-    "Tap on the Quick Start Guide (QSG) option.",
-    "Swipe or navigate to the fourth screen showing the charge case inside.",
+    "Locate and tap the Quick Start Guide (QSG) option.",
+    "Swipe or navigate to the fourth screen of the QSG showing the charge case inside view.",
     "Tap the right circle button on the screen.",
-    "Tap the right circle button again."
+    "Observe the charge case inside view.",
+    "Tap the same right circle button again."
   ],
-  "expected": "First tap: The screen zooms in and displays new text related to the charge case inside. Second tap: The screen zooms out to the original view showing the charge case inside.",
+  "expected": "On first tap, the charge case inside view zooms in and displays new text. On second tap, the view zooms out to the original charge case inside screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "quick-start-guide",
     "charge-case-inside",
-    "screen-zoom-toggle",
+    "zoom-toggle",
     "right-circle-button",
-    "ui-navigation",
-    "app-home-screen"
+    "android-app",
+    "ui-navigation"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "2148b22681bff987d2cc37779edfc087f87554f676b0b7933317001c28d700e8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.858583Z",
+  "processed_at": "2026-04-25T07:55:31.941979Z",
   "status": "active"
 }
