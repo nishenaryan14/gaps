@@ -4,29 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - Disconnected device",
-  "feature": "Device Home Screen",
-  "scenario": "When a paired and connected device is turned off, the Device Home Screen shows the device as \"Not Connected\" with a crossed red dot, greyed out image and battery icons, and version info.",
+  "feature": "Device Management",
+  "scenario": "Device Home Screen UI shows \"Not Connected\" status with greyed-out elements when paired headset is disconnected",
   "steps": [
-    "1. Pair and connect a device.",
-    "2. Turn off the device.",
-    "3. Observe the Device Home Screen."
+    "1. Pair and connect a Poly Bluetooth headset to the mobile device.",
+    "2. Launch the Poly Studio Mobile app.",
+    "3. Navigate to the Device Home screen (Home \u2192 [Device Name]).",
+    "4. Turn off the headset (e.g., press and hold the Power button until the LED turns off).",
+    "5. Observe the Device Home screen UI."
   ],
-  "expected": "The Device Home Screen displays: Device Name (with \"i\" icon if applicable), a crossed red dot with \"Not Connected\" label, a greyed out device image, a \"...\" button, greyed out Battery icons, and \"Version X.Y.Z\".",
+  "expected": "The Device Home Screen displays: the device name (with an \"i\" icon if applicable), a crossed red dot with \"Not Connected\" label, a greyed-out device image, a \"...\" button, greyed-out battery icons, and the firmware version \"X.Y.Z\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "paired device",
-    "connected device",
-    "device turned off",
-    "Not Connected status",
-    "Device Home Screen",
-    "disconnected state",
-    "battery icon greyed out",
-    "connection status indicator"
+    "not-connected-status",
+    "device-home-screen",
+    "greyed-out-elements",
+    "poly-studio-mobile",
+    "bluetooth-disconnection",
+    "paired-headset",
+    "ui-state"
   ],
   "source_last_updated": "1775206608",
   "source_hash": "9b34d1f2b52081163ce4a2e0f815a9a3effca07e7a2113dcb379a4202c3b6846",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.118436Z",
+  "processed_at": "2026-04-25T05:37:16.736022Z",
   "status": "active"
 }
