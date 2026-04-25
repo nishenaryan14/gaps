@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "EB and CC on the latest - Language change",
-  "feature": "Language Change / Software Update",
-  "scenario": "Verify that no CC update pop-up appears on the Device Home Screen after a successful language change when the CC firmware is already up to date.",
+  "feature": "Firmware Updates",
+  "scenario": "Companion Card pop-up appears incorrectly on Device Home Screen after language change via Device Settings when CC firmware is already up to date",
   "steps": [
-    "1. Go to Device Settings > Language.",
-    "2. Change the device language to a different language.",
-    "3. Wait for the language change to complete successfully.",
-    "4. Return to the Device Home Screen.",
-    "5. Observe whether the CC (Connectivity Card) pop-up card appears."
+    "Open Poly Studio Mobile app \u2192 Home screen",
+    "Tap Device Settings for the connected Poly device",
+    "Select Language and change to a different language (e.g., English \u2192 French)",
+    "Confirm the language change and return to the Home screen",
+    "If prompted, complete any pending firmware update for the device",
+    "After firmware update completes, observe the Home screen for the Companion Card (CC) pop-up card"
   ],
-  "expected": "The CC pop-up card should NOT be present since the CC is already on the latest firmware.",
+  "expected": "The CC (Companion Card) pop-up card should NOT appear on the Device Home Screen, as the CC firmware is already up to date.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "CC update pop-up",
-    "Device Home Screen",
-    "language change",
-    "CC firmware up to date",
-    "Connectivity Card",
-    "Device Settings Language",
-    "pop-up card verification"
+    "companion-card-popup",
+    "device-home-screen",
+    "language-change",
+    "device-settings",
+    "firmware-update",
+    "poly-studio-mobile",
+    "cc-firmware",
+    "ui-regression"
   ],
   "source_last_updated": "1763382835",
   "source_hash": "43a57e60742c28c8d70e7d41fec7e5d99d3e52cd608d48b2e6c4ff7221a00632",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.228934Z",
+  "processed_at": "2026-04-25T05:37:16.813260Z",
   "status": "active"
 }
