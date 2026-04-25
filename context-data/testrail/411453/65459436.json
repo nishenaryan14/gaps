@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "Software Update - DFU - Entering airplane mode during update",
   "feature": "Firmware Update",
-  "scenario": "DFU fails with \"Houston...\" error when airplane mode is enabled during early update progress, then recovers and completes successfully after retry",
-  "steps": [],
-  "expected": "",
+  "scenario": "DFU fails with \"Houston...\" error when airplane mode is enabled during firmware update, then recovers and completes after retry",
+  "steps": [
+    "Open Poly Studio Mobile app on the mobile device.",
+    "Navigate to Home screen and select the connected Poly audio device.",
+    "Initiate a Device Firmware Update (DFU) on the device.",
+    "While the DFU is in progress (between 0\u201320% completion, or 0\u201310% if updating a headset and charge case/stand simultaneously), enable Airplane Mode on the mobile device.",
+    "Wait for the update to fail.",
+    "Observe the error screen displayed.",
+    "Turn off Airplane Mode on the mobile device.",
+    "On the error screen, tap the \"Retry\" button.",
+    "Wait for the update to restart and complete."
+  ],
+  "expected": "After enabling Airplane Mode during the DFU, a \"Houston...\" error page should appear indicating the update failed. After turning off Airplane Mode and tapping \"Retry\", the update should restart and finish successfully.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu",
-    "firmware-update",
+    "dfu-failure",
     "airplane-mode",
     "houston-error",
-    "update-recovery",
-    "retry-behavior",
-    "update-progress"
+    "firmware-update-recovery",
+    "poly-studio-mobile",
+    "retry-dfu",
+    "update-interruption"
   ],
   "source_last_updated": "1763370003",
   "source_hash": "a966f65551d52f06efd2448bc5ff7322f52c7c2304fbfe765bc83e2eaaaae771",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.960746Z",
+  "processed_at": "2026-04-25T08:21:31.032728Z",
   "status": "active"
 }
