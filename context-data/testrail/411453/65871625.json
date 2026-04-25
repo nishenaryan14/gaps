@@ -4,31 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Home Screen - Onboarding in not displayed over DFU screens after connecting new device",
-  "feature": "Firmware Update",
-  "scenario": "Onboarding dialog not displayed over DFU screens when new device connected during active firmware update",
+  "feature": "Firmware Updates",
+  "scenario": "Onboarding dialog not displayed over DFU screens when new device connects during active firmware update on Voyager Free 60/60+/20",
   "steps": [
-    "1. Launch Poly Studio Mobile app on Android.",
-    "2. Connect a Poly Bluetooth audio device that supports onboarding (e.g., Voyager Free 60, Voyager Free 60+, Voyager Free 20) that has a pending firmware update.",
-    "3. Initiate a Device Firmware Update (DFU) for the connected device.",
-    "4. While the DFU is in progress, connect a second device that also supports onboarding (e.g., another Voyager Free 60).",
-    "5. Wait for the DFU to complete.",
-    "6. Observe the Home screen after the DFU completes."
+    "1. Launch Poly Studio Mobile app and ensure no device is connected.",
+    "2. Connect a device that supports onboarding (e.g., Voyager Free 60, Voyager Free 60+, Voyager Free 20) that has a pending DFU update.",
+    "3. Observe that the DFU process begins automatically or manually initiate the DFU update.",
+    "4. While the DFU is in progress, disconnect and reconnect the same device (or connect another onboarding-capable device).",
+    "5. Complete the DFU process.",
+    "6. Navigate to the Home screen of the Poly Studio Mobile app.",
+    "7. Observe whether the onboarding dialog is displayed."
   ],
-  "expected": "After the DFU completes and the user returns to the Home screen, the onboarding dialog for the newly connected device should be displayed.",
+  "expected": "The onboarding dialog should be displayed on the Home screen after the DFU completes and the user returns to the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "onboarding-dialog",
-    "dfu-screens",
+    "dfu-screen",
     "firmware-update",
-    "poly-studio-mobile",
     "voyager-free-60",
+    "poly-studio-mobile",
     "device-connection",
-    "home-screen"
+    "dfu-persistence"
   ],
   "source_last_updated": "1763381751",
   "source_hash": "35666c47341454f508f34164d2b272579703a4238695e87c951eebf684d4843b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.941770Z",
+  "processed_at": "2026-04-25T07:55:31.966106Z",
   "status": "active"
 }
