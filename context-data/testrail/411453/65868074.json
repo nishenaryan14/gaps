@@ -4,27 +4,28 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - Starting app with one connected Headset",
-  "feature": "Device Home Screen",
-  "scenario": "Start the app with one connected headset and verify it appears in the device list.",
+  "feature": "Device Management",
+  "scenario": "Connected headset not displayed in device list on Poly Studio Mobile app home screen when app is launched with headset already paired",
   "steps": [
-    "Pair and connect headset.",
-    "Start the app."
+    "1. Ensure a Poly Bluetooth headset is already paired and connected to the Android device.",
+    "2. Launch the Poly Studio Mobile app.",
+    "3. Observe the Home screen device list."
   ],
-  "expected": "Connected headset shown in device list.",
+  "expected": "The connected headset is displayed in the device list on the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "app startup",
-    "headset connection",
-    "device list",
-    "pairing",
-    "bluetooth headset",
-    "device discovery",
-    "connected devices"
+    "poly-studio-mobile-app",
+    "device-list",
+    "home-screen",
+    "bluetooth-pairing",
+    "connected-headset",
+    "android",
+    "headset-not-displayed"
   ],
   "source_last_updated": "1761742088",
   "source_hash": "907b93b0c2268e739cac48d46061a2feb08ecaf29faecd5f0889519f67d44d37",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.108299Z",
+  "processed_at": "2026-04-25T05:37:16.729901Z",
   "status": "active"
 }
