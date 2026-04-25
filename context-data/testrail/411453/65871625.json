@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Home Screen - Onboarding in not displayed over DFU screens after connecting new device",
   "feature": "Firmware Updates",
-  "scenario": "Onboarding dialog not displayed over DFU screens when new device connects during active firmware update on Voyager Free 60/60+/20",
+  "scenario": "Onboarding dialog is not displayed over DFU screen when a new device is connected during firmware update",
   "steps": [
-    "1. Launch Poly Studio Mobile app and ensure no device is connected.",
-    "2. Connect a device that supports onboarding (e.g., Voyager Free 60, Voyager Free 60+, Voyager Free 20) that has a pending DFU update.",
-    "3. Observe that the DFU process begins automatically or manually initiate the DFU update.",
-    "4. While the DFU is in progress, disconnect and reconnect the same device (or connect another onboarding-capable device).",
-    "5. Complete the DFU process.",
-    "6. Navigate to the Home screen of the Poly Studio Mobile app.",
-    "7. Observe whether the onboarding dialog is displayed."
+    "1. Launch the Poly Studio Mobile app and connect to a Bluetooth audio device (e.g., Voyager 5200).",
+    "2. Initiate a Device Firmware Update (DFU) process for the connected device.",
+    "3. While the DFU is in progress, pair a new device that supports onboarding (e.g., Emu, Tern, Osprey) via the phone's Bluetooth settings.",
+    "4. Observe the app screen during the DFU process.",
+    "5. After the DFU completes, tap the Close button on the DFU completion screen.",
+    "6. Observe the app screen after closing the DFU screen."
   ],
-  "expected": "The onboarding dialog should be displayed on the Home screen after the DFU completes and the user returns to the Home screen.",
+  "expected": "The onboarding dialog for the newly paired device should appear immediately, even while the DFU screen is displayed, or at least as soon as the DFU process completes and before returning to the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding-dialog",
-    "dfu-screen",
-    "firmware-update",
-    "voyager-free-60",
     "poly-studio-mobile",
-    "device-connection",
-    "dfu-persistence"
+    "device-firmware-update",
+    "dfu-screen",
+    "onboarding-dialog",
+    "bluetooth-pairing",
+    "voyager-5200",
+    "dfu-completion",
+    "ui-overlay-priority"
   ],
   "source_last_updated": "1763381751",
   "source_hash": "35666c47341454f508f34164d2b272579703a4238695e87c951eebf684d4843b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.966106Z",
+  "processed_at": "2026-04-25T08:21:31.042979Z",
   "status": "active"
 }
