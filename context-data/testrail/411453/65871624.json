@@ -5,30 +5,33 @@
   "project": "411453",
   "title": "Device Home Screen - No Device Connected - Supported List - Other Devices",
   "feature": "App Settings",
-  "scenario": "\"Supported Devices\" link and \"Other devices\" button navigation from Device Home Screen with no device connected",
+  "scenario": "Supported Devices screen in Lens app displays correct text per Figma and tapping \"Other devices\" opens Poly support products web page",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. On the Home screen, ensure no device is connected.",
-    "3. Tap the 'Supported Devices' link.",
-    "4. Observe the displayed text.",
-    "5. Tap the 'Other devices' button.",
-    "6. Observe the resulting action."
+    "2. Ensure no Poly device is connected to the phone.",
+    "3. On the Home screen, tap the menu icon (hamburger) or navigate to the Account / Settings section.",
+    "4. Tap on \"Supported Devices\" (or \"Lens\" \u2192 \"Supported Devices\").",
+    "5. Observe the text and layout displayed on the Supported Devices screen.",
+    "6. Compare the displayed text and UI elements against the Figma design specifications.",
+    "7. Tap the \"Other devices\" button/link on the Supported Devices screen.",
+    "8. Observe the resulting action."
   ],
-  "expected": "1. Tapping 'Supported Devices' displays text matching the Figma design. 2. Tapping 'Other devices' opens the Poly support products web page (https://www.poly.com/us/en/support/products).",
+  "expected": "The Supported Devices screen displays the correct text and layout per the Figma design. Tapping \"Other devices\" opens the Poly support products web page in the device's default browser.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-home-screen",
-    "no-device-connected",
-    "supported-devices-link",
-    "other-devices-button",
-    "app-navigation",
-    "device-list"
+    "supported-devices-screen",
+    "lens-app",
+    "other-devices",
+    "poly-support-products-webpage",
+    "figma-design-specs",
+    "ui-text-validation",
+    "hamburger-menu-navigation"
   ],
   "source_last_updated": "1761657130",
   "source_hash": "58d47865c6e84c1cb4e89fcc28c86ffacaedcaaedf0d57fb0230beb4b977e3de",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.793843Z",
+  "processed_at": "2026-04-25T08:21:30.917421Z",
   "status": "active"
 }
