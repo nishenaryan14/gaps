@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "1 step DFU - Houston screen during CC update (only CC update)",
   "feature": "Firmware Update",
-  "scenario": "\"Houston\" screen is displayed when earbuds are placed in charging case during a Charge Case-only 1-step DFU update",
+  "scenario": "Placing earbuds into charge case during 1-step CC DFU over 20% triggers Houston screen on Voyager Free 60+ and Voyager Legend 50",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Home screen and ensure the earbuds are connected.",
+    "1. Open Poly Studio Mobile app on your Android device.",
+    "2. Connect to a Voyager Free 60+ or Voyager Legend 50 device.",
     "3. Initiate a 1-step Device Firmware Update (DFU) for the Charge Case (CC) only.",
-    "4. Wait for the update progress to reach over 20%.",
-    "5. While the update is in progress (over 20%), place the earbuds into the charging case.",
-    "6. Observe the screen displayed on the app."
+    "4. Wait for the CC update to progress past 20%.",
+    "5. While the CC update is in progress (over 20%), place the earbuds into the charge case.",
+    "6. Observe the app screen."
   ],
-  "expected": "The app displays the \\\"Houston\\\" screen (specific UI screen/animation indicating the update is ongoing) when the earbuds are placed into the charging case during a CC-only firmware update at over 20% progress.",
+  "expected": "The app should continue to display the DFU progress screen or a relevant status update for the Charge Case update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "dfu",
-    "charge-case",
-    "firmware-update",
-    "houston-screen",
-    "earbuds-in-case",
+    "voyager-free-60-plus",
+    "voyager-legend-50",
     "1-step-dfu",
-    "charging-case"
+    "charge-case-firmware-update",
+    "houston-screen",
+    "poly-studio-mobile",
+    "earbuds-in-case-during-update",
+    "cc-dfu-interruption"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "716c323320ccabbd9fbfd4a304d0825704ec2b65fe9803cdac6120370d6a5c83",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.903064Z",
+  "processed_at": "2026-04-25T07:55:31.966106Z",
   "status": "active"
 }
