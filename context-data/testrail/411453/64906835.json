@@ -10,23 +10,24 @@
     "Open the Poly Studio Mobile app.",
     "Navigate to the Home screen.",
     "Tap on the Quick Settings icon or area.",
-    "Observe the state of the Quick Settings toggles."
+    "Observe the state of the Quick Settings toggles (e.g., ANC, Transparency Mode, Equalizer)."
   ],
-  "expected": "Quick Settings toggles are enabled and interactive, allowing the user to quickly adjust audio features (e.g., ANC, Transparency Mode, Equalizer).",
+  "expected": "Quick Settings toggles are enabled and interactive, allowing the user to quickly change audio settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "quick-settings",
+    "anc",
+    "transparency-mode",
+    "equalizer",
     "home-screen",
-    "app-ui",
     "settings-disabled",
-    "toggle-state",
-    "mobile-app"
+    "app-ui"
   ],
   "source_last_updated": "1759226530",
   "source_hash": "2cde4669f15e724d24a5f70d9acbc4694d5573022d90cf59b92a1a75e4e5e6a6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.070857Z",
+  "processed_at": "2026-04-25T09:32:26.330116Z",
   "status": "active"
 }
