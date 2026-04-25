@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "Notifications - Update Available",
   "feature": "Notifications",
-  "scenario": "Background firmware update notification redirects to Device Settings > Software Update tab when tapped on Poly Studio Mobile app",
+  "scenario": "Firmware update notification appears when out-of-date device is paired and app is in background; tapping notification opens Device Settings > Software Update tab",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. Pair a Poly Bluetooth audio device that has firmware lower than the current version available on the server.",
+    "2. Pair a Poly Bluetooth audio device that has firmware lower than the current server version.",
     "3. Press the Home button on the Android device to send the Poly Studio Mobile app to the background.",
-    "4. Wait for the app to check for firmware updates in the background.",
-    "5. Observe the Android notification shade for a notification indicating a firmware update is available.",
-    "6. Tap the firmware update notification.",
-    "7. Observe the app behavior after tapping the notification."
+    "4. Observe the Android notification shade for any incoming notifications from the Poly Studio Mobile app.",
+    "5. If a notification appears, tap on it.",
+    "6. Verify that the Poly Studio Mobile app opens and navigates to Device Settings \u2192 Software Update tab."
   ],
-  "expected": "A notification appears in the Android notification shade indicating a firmware update is available. Tapping the notification opens the Poly Studio Mobile app and redirects the user to Device Settings > Software Update tab.",
+  "expected": "A notification appears in the Android notification shade indicating a firmware update is available. Tapping the notification opens the Poly Studio Mobile app and redirects the user to Device Settings \u2192 Software Update tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "firmware-update",
-    "background-notification",
+    "firmware-update-notification",
     "poly-studio-mobile",
-    "software-update-tab",
+    "background-app",
     "device-settings",
+    "software-update-tab",
     "bluetooth-pairing",
-    "notification-redirect",
-    "android"
+    "out-of-date-firmware",
+    "android-notification"
   ],
   "source_last_updated": "1761219965",
   "source_hash": "bfbd3897c2e23cc2f97b9ac8aab802bb9bdaa29dfe2541ec61fe6d9603915fa9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.967112Z",
+  "processed_at": "2026-04-25T08:21:31.044053Z",
   "status": "active"
 }
