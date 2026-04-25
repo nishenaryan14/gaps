@@ -5,28 +5,29 @@
   "project": "411453",
   "title": "Two earbuds screen/second screen, right zoom in",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide earbuds screen zooms in and displays new text when tapping the right circle button",
+  "scenario": "Tapping the right circle button on the two-earbuds screen causes the view to zoom in and display new text",
   "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Navigate to the Quick Start Guide (QSG).",
-    "Swipe or tap to view the second screen (earbuds screen) of the QSG.",
-    "Tap the right circle button on that screen."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the connected device name to open Device Settings.",
+    "4. On the Device Settings screen, locate the two-earbuds view (second screen).",
+    "5. Tap the right circle button on the two-earbuds screen."
   ],
-  "expected": "The screen zooms in and displays new text as expected.",
+  "expected": "The view should zoom in and display new text related to the right earbud.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile-app",
-    "quick-start-guide",
-    "qsg",
-    "earbuds-screen",
+    "two-earbuds-screen",
     "right-circle-button",
-    "ui-zoom",
-    "screen-navigation"
+    "device-settings",
+    "zoom-in-view",
+    "home-screen",
+    "connected-device"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "27632c44fc9cfe1d4ae3be71b909f0c69f544ae41846687b056663c8b6e8b5f1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.849491Z",
+  "processed_at": "2026-04-25T07:55:31.937961Z",
   "status": "active"
 }
