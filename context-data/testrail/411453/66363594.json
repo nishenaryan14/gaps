@@ -5,17 +5,18 @@
   "project": "411453",
   "title": "DFU - Case Update Needed popup present if Charge Case is on outdated FW",
   "feature": "Firmware Updates",
-  "scenario": "\"Case Update Needed\" card on Home Screen is dismissable and does not reappear after app restart when earbuds firmware is updated via app but case firmware remains outdated",
+  "scenario": "\"Case Update Needed\" card on Home Screen is dismissible and does not reappear after app restart when earbuds firmware is updated via app but case firmware remains outdated",
   "steps": [
     "1. Ensure both earbuds and charge case are on outdated firmware.",
-    "2. Open Poly Studio Mobile app and navigate to Home screen.",
-    "3. Update the earbuds firmware via the app.",
-    "4. Observe the Home screen after the update completes.",
-    "5. Tap on the \"Case Update Needed\" card to dismiss it.",
-    "6. Close and restart the Poly Studio Mobile app.",
-    "7. Observe the Home screen after restarting the app."
+    "2. Open Poly Studio Mobile app.",
+    "3. Navigate to Home screen.",
+    "4. Update the earbuds via the app (Device Settings \u2192 [Device Name] \u2192 Firmware Update).",
+    "5. Observe the Home screen after the update completes.",
+    "6. Tap the \"Case Update Needed\" card that appears.",
+    "7. Close and restart the Poly Studio Mobile app.",
+    "8. Observe the Home screen again."
   ],
-  "expected": "After updating the earbuds, a \"Case Update Needed\" card appears on the Home screen informing the user that case updates must be done via Poly Lens Desktop app. Tapping the card dismisses it, and it does not reappear after restarting the app.",
+  "expected": "After tapping the \"Case Update Needed\" card, it is dismissed. After restarting the app, the card does not reappear on the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,12 +26,12 @@
     "firmware-update",
     "earbuds-firmware",
     "case-firmware",
-    "dismissable-card",
+    "dismissible-card",
     "app-restart"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "416482f602d5f74f8aeb547717740aa3b8e3330234274dae66bee945c2bcad30",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.211921Z",
+  "processed_at": "2026-04-25T09:32:26.670564Z",
   "status": "active"
 }
