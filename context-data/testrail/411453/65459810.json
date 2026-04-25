@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "PPIP - Dialog after Onboarding - UI",
   "feature": "App Settings",
-  "scenario": "PPIP dialog appears after onboarding when tapping \"Continue as Guest\" on Poly Studio Mobile app",
+  "scenario": "PPIP data sharing dialog appears after onboarding when tapping \"Continue as Guest\" on Poly Studio Mobile app",
   "steps": [
-    "Launch Poly Studio Mobile app",
-    "Complete the onboarding screens",
-    "Tap \"Continue as Guest\"",
-    "Observe the dialog that appears"
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Complete the onboarding screens.",
+    "3. On the final onboarding screen, tap \"Continue as Guest\".",
+    "4. Observe the dialog that appears."
   ],
-  "expected": "The PPIP (Product and Personal Improvement Program) dialog appears, asking the user to share basic device and app information (model, serial number, software version, feature usage) to help improve performance and support. The dialog states no personal information is collected or shared with third parties, and preferences can be changed anytime in Settings. Options presented: \"Don't Share\" and \"Share Data\".",
+  "expected": "A PPIP (Product and Personal Improvement Program) dialog is displayed with the title/header text \"Help us improve your experience.\" and two buttons: \"Don't Share\" and \"Share Data\". The dialog body explains that HP may collect basic device and app information (model, serial number, software version, feature usage) to improve performance and support, notes that no personal information is collected, and states that preferences can be changed later in Settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "onboarding",
     "continue-as-guest",
-    "ppip-dialog",
+    "ppip-data-sharing",
+    "onboarding",
+    "privacy-dialog",
     "guest-mode",
-    "app-dialog",
-    "user-consent"
+    "data-sharing-consent"
   ],
   "source_last_updated": "1760536922",
   "source_hash": "5124052491945a95b02769748f4dbf40e8773d251cb84960e2ef6daae5f1e39e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.782541Z",
+  "processed_at": "2026-04-25T08:21:30.907326Z",
   "status": "active"
 }
