@@ -5,31 +5,33 @@
   "project": "411453",
   "title": "Rename device - new name on the FMD disconnected card",
   "feature": "Device Management",
-  "scenario": "Renamed device name does not persist on the disconnected card in the Find My Device screen after disconnecting",
+  "scenario": "Renamed device name does not update on Find My Device disconnected card after renaming in Settings and disconnecting",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
-    "3. In Device Settings, tap on the device name field and rename the device to a new name (e.g., \"My Poly Headset\").",
-    "4. Confirm the rename and return to the Home screen.",
-    "5. Disconnect the device by pressing the Power button on the device or using the app's disconnect option.",
-    "6. Navigate to the Find My Device (FMD) screen from the Home screen or menu.",
-    "7. Observe the disconnected device card on the FMD screen."
+    "2. Navigate to the Home screen and ensure the target Poly Bluetooth audio device is connected.",
+    "3. Tap on the connected device name to open Device Settings.",
+    "4. In Device Settings, locate and tap the 'Rename' option (or the pencil/edit icon next to the device name).",
+    "5. Enter a new name for the device and confirm/save the change.",
+    "6. Disconnect the device (e.g., turn off the device, move out of range, or use the app to disconnect).",
+    "7. On the Home screen, locate the 'Find My Device' (FMD) section or card showing disconnected devices.",
+    "8. Observe the device name displayed on the disconnected FMD card."
   ],
-  "expected": "The disconnected device card on the Find My Device screen displays the new device name (e.g., \"My Poly Headset\") that was set in Device Settings.",
+  "expected": "The disconnected FMD card displays the new (renamed) device name.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
+    "rename-device",
     "find-my-device",
-    "device-rename",
-    "device-name-persistence",
     "disconnected-card",
-    "android",
-    "device-settings"
+    "device-settings",
+    "bluetooth-disconnect",
+    "device-name-persistence",
+    "android-app"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "cda0f47859dd4f1cafdb2109e728d8762ad822472cf35a619a021f660ac287c5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.882314Z",
+  "processed_at": "2026-04-25T08:21:30.975495Z",
   "status": "active"
 }
