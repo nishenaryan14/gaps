@@ -5,32 +5,23 @@
   "project": "411453",
   "title": "Find My Device - Playing Tone - app in the background",
   "feature": "App Settings",
-  "scenario": "Find My Device tone continues playing when Poly Studio Mobile app is sent to background",
-  "steps": [
-    "1. Launch the Poly Studio Mobile app with a headset paired and connected.",
-    "2. Go to the Home screen and tap on the Account or Settings icon to access App Settings.",
-    "3. Tap on 'Find My Device'. If prompted, allow GPS location access.",
-    "4. Tap on the blue geo icon or tap on the connected device from the list.",
-    "5. Tap the 'Play' button.",
-    "6. Tap 'OK, Got It' on the confirmation prompt.",
-    "7. Tap the 'Play' button again to start the tone.",
-    "8. Put the app in the background (e.g., press the Home button or switch to another app)."
-  ],
-  "expected": "1. The tone stops immediately once the app is placed in the background. 2. When the app is brought back to the foreground, the Play button is present and no tone is heard.",
+  "scenario": "Find My Device tone continues playing when Poly Studio Mobile app is sent to the background",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "poly-studio-mobile",
+    "background-audio",
     "tone-persistence",
-    "background-app-behavior",
-    "device-locator-tone",
-    "app-settings",
-    "bluetooth-connected"
+    "app-backgrounding",
+    "audio-routing",
+    "poly-studio-mobile-app"
   ],
   "source_last_updated": "1759933511",
   "source_hash": "8e8597152ebeca9ee564e7a84894dfc071bb5a8ea49b22c9ca8ed4011a984129",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.950988Z",
+  "processed_at": "2026-04-25T09:32:26.184464Z",
   "status": "active"
 }
