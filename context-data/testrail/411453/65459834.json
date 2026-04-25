@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, dialog",
   "feature": "Notifications",
-  "scenario": "Notifications toggle in App Settings > General shows OS redirect dialog when user previously denied notification permission during onboarding",
+  "scenario": "Notifications toggle in App Settings > General shows OS redirect dialog when re-enabled after selecting \"Don't Allow\" during onboarding",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
     "2. During onboarding, when prompted for notification permissions, select \"Don't Allow\".",
@@ -18,17 +18,17 @@
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "notification-permissions",
+    "notifications-toggle",
     "app-settings",
     "general-settings",
-    "notifications-toggle",
     "os-redirect-dialog",
     "onboarding",
-    "permission-denial"
+    "notification-permissions",
+    "don't-allow"
   ],
   "source_last_updated": "1761229604",
   "source_hash": "cbfecf81e93ce8c88b9d4202366a2076e02ce2597272f3d40c90f7109a0e698a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.049272Z",
+  "processed_at": "2026-04-25T09:32:26.304707Z",
   "status": "active"
 }
