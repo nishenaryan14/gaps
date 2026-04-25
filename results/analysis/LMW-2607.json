@@ -19,185 +19,195 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test covers detection of active call state on Voyager 4245 Office (Morpheus) devices via the Poly Studio Mobile iOS app.",
-    "No test verifies that the app correctly identifies the deckardId for Morpheus devices to enable call-aware features.",
-    "No test covers the blocking of DFU (firmware update) during an active call on Morpheus devices.",
-    "No test covers the blocking of ANC/Transparency Mode changes during an active call on Morpheus devices.",
-    "No test covers call-aware alert behavior (e.g., UI indicators, toasts, or banners) when an active call is detected on a Morpheus device.",
-    "No test validates that unsupported or missing deckardId causes failure in call state detection, which is the root cause of this bug."
+    "No existing test case validates that the Poly Studio Mobile app on iOS correctly detects an active call state on Voyager 4245 Office (Morpheus) devices. The bug involves the app failing to recognize the call state, which is a prerequisite for call-aware behaviors (alerts, blocking DFU/ANC changes).",
+    "No test case covers the lifecycle of call state detection: connecting to Morpheus device, initiating/receiving a call, and verifying the app's awareness of that call state on the Home screen.",
+    "No test case validates that DFU (firmware update) is blocked during an active call on Morpheus devices. This is a critical safety/UX requirement.",
+    "No test case validates that ANC or Transparency Mode changes are blocked during an active call on Morpheus devices. The bug specifically calls out that changes to these settings should be prevented during a call.",
+    "No test case covers device-specific behavior for Voyager 4245 Office (Morpheus) regarding call state awareness. The existing test 65641606 covers Conversation Limiting settings being locked during a call, but that is a different feature and does not test DFU blocking or ANC/Transparency blocking on Morpheus.",
+    "No test case validates the app's Home screen behavior/indicators during an active call on a Morpheus device (e.g., does the UI show a call-active state, disable certain controls, etc.).",
+    "No test case covers the state transition: entering a call -> verifying blocked operations -> ending call -> verifying operations become unblocked on Morpheus devices.",
+    "No test case covers iOS-specific call state detection differences (e.g., how iOS reports call state via AVAudioSession vs. Android Telephony) for Morpheus devices."
   ],
   "generated_testcases": [
     {
-      "title": "TC-4245-CALL-001: Verify iOS app detects active call state on Voyager 4245 Office (Morpheus) via correct deckardId",
+      "title": "TC-CALL-STATE-001: Verify Poly Studio Mobile iOS app detects active call state on Voyager 4245 Office (Morpheus) via Home screen indicator",
       "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Tap the connected Voyager 4245 Office (Morpheus) device name from the device list.",
-        "Navigate to Device Info or About screen and verify the device is recognized as 'Voyager 4245 Office' (confirm deckardId is supported).",
-        "Return to the main device screen.",
-        "Place an active outgoing call from the iOS device (e.g., dial a test number).",
-        "Wait for the call to connect (caller hears ringing/connected).",
-        "Observe the Poly Studio Mobile app UI for any call-aware indicators (e.g., banner, toast, status text, or icon indicating 'On a call' or 'Call active').",
-        "While the call is active, navigate to Audio Settings \u2192 Transparency Mode.",
-        "Attempt to adjust the Surround level slider (e.g., set to 50).",
-        "Attempt to adjust the Free level slider (e.g., set to 50).",
-        "Navigate to Audio Settings \u2192 ANC Level and attempt to change the ANC level.",
-        "Navigate to Device Settings \u2192 Firmware Update and attempt to start a DFU."
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device via Bluetooth.",
+        "Open Poly Studio Mobile app on iOS.",
+        "Tap the connected [Voyager 4245 Office] device tile on the Home screen to enter the device detail screen.",
+        "Verify the Home screen shows the device as 'Connected' with battery level and device name.",
+        "Minimize the app (press Home button) and place an outgoing call from the iOS native Phone app to a test number.",
+        "Return to the Poly Studio Mobile app (tap app icon).",
+        "Observe the Home screen and device detail screen for any call-state indicator (e.g., 'On a call' badge, phone icon overlay, or disabled controls).",
+        "Verify that the app UI reflects the active call state (e.g., a call-active banner, icon, or status text appears on the device tile or detail screen)."
       ],
-      "expected": "The Poly Studio Mobile app correctly detects the active call state on the Voyager 4245 Office (Morpheus) device. A call-aware indicator (banner, toast, or status text) is displayed. ANC/Transparency Mode changes are blocked or disabled during the active call. DFU (firmware update) is blocked or shows a warning that a call is in progress. The app does not silently fail to detect the call state."
+      "expected": "The Poly Studio Mobile app on iOS correctly detects and displays the active call state on the Voyager 4245 Office (Morpheus) device. The Home screen or device detail screen shows a visual indicator (e.g., 'On a call' badge, phone icon, or status text) confirming the app is aware of the ongoing call."
     },
     {
-      "title": "TC-4245-CALL-002: Verify deckardId detection for Morpheus device enables call-aware features",
+      "title": "TC-CALL-STATE-002: Verify DFU (Firmware Update) is blocked during an active call on Voyager 4245 Office (Morpheus)",
       "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Connect to a Voyager 4245 Office (Morpheus) headset.",
-        "Navigate to Device \u2192 About / Device Information.",
-        "Locate the field displaying the device model or deckardId (e.g., 'Model: Voyager 4245 Office' or 'deckardId: ...').",
-        "Take a screenshot or note the displayed identifier.",
-        "Place an active call from the iOS device.",
-        "While on the call, navigate to the main device screen in the app.",
-        "Verify that the app displays a call-active state indicator (e.g., 'On a call' badge, phone icon, or toast notification).",
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device. A firmware update package is available (or a mock DFU screen is accessible).",
+        "Open Poly Studio Mobile app on iOS.",
+        "Tap [Voyager 4245 Office] \u2192 Settings \u2192 Firmware Update (or Software Update).",
+        "Verify the Firmware Update screen shows available update info.",
+        "Press the Home button to background the app.",
+        "Place an active call from the iOS native Phone app to a test number.",
+        "Return to the Poly Studio Mobile app.",
+        "Navigate to Settings \u2192 Firmware Update.",
+        "Attempt to tap 'Update Now' or 'Install' to start the firmware update process.",
+        "Observe the app behavior: does it allow the update to proceed or block it with a message?"
+      ],
+      "expected": "The Poly Studio Mobile app blocks the firmware update (DFU) during an active call on the Voyager 4245 Office (Morpheus). A clear user-facing message is displayed (e.g., 'Cannot update during a call' or 'End call to update firmware'), and the 'Update Now' button is disabled or non-functional."
+    },
+    {
+      "title": "TC-CALL-STATE-003: Verify ANC changes are blocked during an active call on Voyager 4245 Office (Morpheus)",
+      "steps": [
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device.",
+        "Open Poly Studio Mobile app on iOS.",
+        "Tap [Voyager 4245 Office] \u2192 Audio Settings \u2192 ANC (Active Noise Cancellation).",
+        "Verify the ANC slider is adjustable and functional when NOT on a call (set to a mid value like 50 to confirm).",
+        "Press the Home button to background the app.",
+        "Place an active call from the iOS native Phone app to a test number.",
+        "Return to the Poly Studio Mobile app.",
+        "Navigate to Audio Settings \u2192 ANC.",
+        "Attempt to adjust the ANC slider (e.g., drag from 50 to 80).",
+        "Observe whether the slider moves and whether the change is applied to the headset."
+      ],
+      "expected": "The ANC slider is disabled or non-functional during an active call on the Voyager 4245 Office (Morpheus). The app may show a lock icon, grayed-out slider, or a message such as 'ANC unavailable during a call'. The ANC level does not change on the headset."
+    },
+    {
+      "title": "TC-CALL-STATE-004: Verify Transparency Mode changes are blocked during an active call on Voyager 4245 Office (Morpheus)",
+      "steps": [
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device.",
+        "Open Poly Studio Mobile app on iOS.",
+        "Tap [Voyager 4245 Office] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "Verify Transparency Mode toggle and sub-settings (Environment/Speech) are adjustable when NOT on a call.",
+        "Set Transparency Mode to ON and set Surround level to 60, Free level to 40.",
+        "Press the Home button to background the app.",
+        "Place an active call from the iOS native Phone app to a test number.",
+        "Return to the Poly Studio Mobile app.",
+        "Navigate to Audio Settings \u2192 Transparency Mode.",
+        "Attempt to toggle Transparency Mode OFF, or adjust Surround level slider, or adjust Free level slider.",
+        "Observe whether the changes are accepted or blocked."
+      ],
+      "expected": "Transparency Mode changes (toggle ON/OFF, Surround level, Free level adjustments) are blocked during an active call on the Voyager 4245 Office (Morpheus). Controls are disabled, grayed out, or show a message indicating unavailability during a call."
+    },
+    {
+      "title": "TC-CALL-STATE-005: Verify call-aware alerts are suppressed during an active call on Voyager 4245 Office (Morpheus)",
+      "steps": [
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device.",
+        "Open Poly Studio Mobile app on iOS.",
+        "Tap [Voyager 4245 Office] \u2192 Settings \u2192 Notifications / Alerts.",
+        "Note the current alert settings (e.g., low battery alerts, connection alerts).",
+        "Press the Home button to background the app.",
+        "Place an active call from the iOS native Phone app to a test number.",
+        "While on the call, trigger a condition that would normally generate an in-app alert (e.g., reduce headset battery to low level, or simulate a Bluetooth reconnection event).",
+        "Return to the Poly Studio Mobile app.",
+        "Observe whether any alert banners, pop-ups, or notification toasts appear during the active call."
+      ],
+      "expected": "Call-aware alerts (e.g., low battery warnings, connection notifications) are suppressed or deferred during an active call on the Voyager 4245 Office (Morpheus). No intrusive alert UI appears that would disrupt the call experience."
+    },
+    {
+      "title": "TC-CALL-STATE-006: Verify state transition \u2014 entering call blocks operations, ending call unblocks operations on Voyager 4245 Office (Morpheus)",
+      "steps": [
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device.",
+        "Open Poly Studio Mobile app on iOS.",
+        "Tap [Voyager 4245 Office] \u2192 Audio Settings \u2192 ANC.",
+        "Verify ANC slider is adjustable (set to 50).",
+        "Place an active call from the iOS native Phone app.",
+        "Return to the Poly Studio Mobile app and navigate to Audio Settings \u2192 ANC.",
+        "Verify ANC slider is disabled/grayed out. Attempt to adjust it \u2014 confirm it is blocked.",
+        "Navigate to Audio Settings \u2192 Transparency Mode. Verify controls are blocked.",
+        "Navigate to Settings \u2192 Firmware Update. Verify 'Update Now' is blocked.",
+        "End the call from the iOS native Phone app.",
+        "Return to the Poly Studio Mobile app.",
+        "Navigate to Audio Settings \u2192 ANC and verify the slider is now adjustable.",
+        "Navigate to Audio Settings \u2192 Transparency Mode and verify controls are adjustable.",
+        "Navigate to Settings \u2192 Firmware Update and verify 'Update Now' is tappable."
+      ],
+      "expected": "The app correctly transitions between call-aware states: during an active call, ANC, Transparency Mode, and DFU are blocked. After the call ends, all operations become unblocked and fully functional again on the Voyager 4245 Office (Morpheus)."
+    },
+    {
+      "title": "TC-CALL-STATE-007: Verify call state detection works for incoming calls on Voyager 4245 Office (Morpheus)",
+      "steps": [
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device.",
+        "Open Poly Studio Mobile app on iOS.",
+        "Tap [Voyager 4245 Office] to enter the device detail screen.",
+        "From a second phone, place an incoming call to the iOS device connected to the Morpheus headset.",
+        "Answer the call on the headset (tap the headset call button).",
+        "Return to the Poly Studio Mobile app.",
+        "Observe the Home screen and device detail screen for call-state indicators.",
+        "Navigate to Audio Settings \u2192 ANC and verify it is blocked.",
+        "Navigate to Audio Settings \u2192 Transparency Mode and verify it is blocked.",
+        "Navigate to Settings \u2192 Firmware Update and verify it is blocked.",
+        "End the call from the headset.",
+        "Return to the app and verify all controls are unblocked."
+      ],
+      "expected": "The Poly Studio Mobile app correctly detects incoming call state on the Voyager 4245 Office (Morpheus). ANC, Transparency Mode, and DFU are blocked during the incoming call. After the call ends, all controls are restored to normal functionality."
+    },
+    {
+      "title": "TC-CALL-STATE-008: Verify call state detection survives app backgrounding and foregrounding on Voyager 4245 Office (Morpheus)",
+      "steps": [
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device.",
+        "Open Poly Studio Mobile app on iOS.",
+        "Place an active call from the iOS native Phone app.",
+        "Return to the Poly Studio Mobile app and confirm call state is detected (ANC blocked).",
+        "Press the Home button to background the app.",
+        "Wait 10 seconds.",
+        "Reopen the app by tapping the app icon.",
+        "Navigate to Audio Settings \u2192 ANC and verify it is still blocked.",
+        "Navigate to Audio Settings \u2192 Transparency Mode and verify it is still blocked.",
+        "Navigate to Settings \u2192 Firmware Update and verify it is still blocked.",
+        "Force-kill the app (swipe up from app switcher).",
+        "Reopen the Poly Studio Mobile app.",
+        "Verify the app reconnects to the Morpheus device.",
+        "Navigate to Audio Settings \u2192 ANC and verify it is still blocked (call is still active).",
         "End the call.",
-        "Verify the call-active indicator disappears and normal settings control is restored."
+        "Return to the app and verify all controls are unblocked."
       ],
-      "expected": "The app correctly identifies the Voyager 4245 Office (Morpheus) device via its deckardId. When a call is active, the app shows a call-aware indicator. When the call ends, the indicator is removed and full settings control is restored. This confirms the deckardId is properly mapped to enable call-aware features."
+      "expected": "The call state detection persists across app lifecycle events (backgrounding, foregrounding, force-kill and relaunch) on the Voyager 4245 Office (Morpheus). ANC, Transparency Mode, and DFU remain blocked as long as the call is active, and are restored after the call ends."
     },
     {
-      "title": "TC-4245-CALL-003: Verify DFU (firmware update) is blocked during an active call on Morpheus device",
+      "title": "TC-CALL-STATE-009: Verify call state detection survives Bluetooth disconnect/reconnect during active call on Voyager 4245 Office (Morpheus)",
       "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Connect to a Voyager 4245 Office (Morpheus) headset.",
-        "Place an active outgoing call from the iOS device and wait for connection.",
-        "While the call is active, navigate to Device Settings \u2192 Firmware Update.",
-        "Tap 'Check for Updates' or 'Update Now' (if an update is available).",
-        "Observe the app response: look for a blocking dialog, toast, or disabled button.",
-        "If a dialog appears, read the message text and tap OK/Dismiss.",
-        "End the call.",
-        "Immediately navigate back to Firmware Update and attempt to start the update again."
-      ],
-      "expected": "During the active call, the DFU (firmware update) process is blocked. The app displays a clear message such as 'Cannot update during a call' or the update button is disabled/greyed out. After the call ends, the DFU option becomes available again and the update can proceed normally."
-    },
-    {
-      "title": "TC-4245-CALL-004: Verify ANC/Transparency Mode changes are blocked during an active call on Morpheus device",
-      "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Connect to a Voyager 4245 Office (Morpheus) headset.",
-        "Note the current ANC level and Transparency Mode settings (Surround and Free levels).",
-        "Place an active outgoing call from the iOS device and wait for connection.",
-        "While on the call, navigate to Audio Settings \u2192 ANC Level.",
-        "Attempt to change the ANC level (e.g., slide from current to a different value).",
-        "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment.",
-        "Attempt to adjust the Surround level slider to a new value (e.g., 75).",
-        "Navigate to Transparency Mode \u2192 Speech.",
-        "Attempt to adjust the Free level slider to a new value (e.g., 40).",
-        "End the call.",
-        "Immediately navigate back to Audio Settings \u2192 ANC Level and check the value.",
-        "Navigate to Transparency Mode \u2192 Environment and check the Surround level.",
-        "Navigate to Transparency Mode \u2192 Speech and check the Free level."
-      ],
-      "expected": "During the active call, all ANC level changes and Transparency Mode slider adjustments (Surround and Free) are blocked or disabled. The sliders may appear greyed out, or changes are rejected. After the call ends, the settings return to their original values (before the call), confirming that no changes were applied during the call."
-    },
-    {
-      "title": "TC-4245-CALL-005: Verify call-aware alert UI (banner/toast) appears when active call is detected on Morpheus device",
-      "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Connect to a Voyager 4245 Office (Morpheus) headset.",
-        "Ensure the app is in the foreground on the device screen.",
-        "Place an active outgoing call from the iOS device.",
-        "Observe the Poly Studio Mobile app UI for 10 seconds while the call connects.",
-        "Note any visual indicators: banner at top, toast popup, status bar change, or icon change on the device card.",
-        "While the call is active, navigate to different screens in the app (Audio Settings, Device Settings, Home).",
-        "Verify the call-aware indicator persists across screen navigation.",
-        "End the call.",
-        "Observe the app UI for 5 seconds after the call ends."
-      ],
-      "expected": "When the call becomes active, the Poly Studio Mobile app displays a clear call-aware alert UI element (e.g., a banner saying 'On a call', a toast notification, or a persistent status badge). This indicator remains visible as the user navigates between screens. When the call ends, the indicator disappears within a few seconds, confirming the app correctly detects the call state transition."
-    },
-    {
-      "title": "TC-4245-CALL-006: Verify unsupported/missing deckardId causes call state detection failure (negative test)",
-      "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Connect to a Voyager 4245 Office (Morpheus) headset.",
-        "Navigate to Device \u2192 About / Device Information and record the deckardId or model identifier.",
-        "Simulate an unsupported deckardId scenario: either by using a test build where the deckardId is removed from the supported list, or by connecting a device with an unknown/unsupported deckardId.",
-        "Place an active outgoing call from the iOS device.",
-        "While on the call, navigate to Audio Settings \u2192 ANC Level and attempt to change it.",
-        "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment and attempt to adjust the Surround level.",
-        "Navigate to Device Settings \u2192 Firmware Update and attempt to start a DFU.",
-        "Observe whether the app shows any call-aware indicator (banner/toast).",
-        "End the call."
-      ],
-      "expected": "When the deckardId is unsupported or missing from the app's device mapping, the app fails to detect the active call state. No call-aware indicator (banner/toast) is displayed. ANC level changes and Transparency Mode adjustments are incorrectly allowed during the call. DFU (firmware update) is also incorrectly allowed to proceed. This confirms that the missing/unsupported deckardId is the root cause of the call state detection failure."
-    },
-    {
-      "title": "TC-4245-CALL-007: Verify call state detection on Morpheus device after app force-kill and relaunch during active call",
-      "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Connect to a Voyager 4245 Office (Morpheus) headset.",
-        "Place an active outgoing call from the iOS device and wait for connection.",
-        "While the call is active, force-kill the Poly Studio Mobile app (swipe up from app switcher).",
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device.",
+        "Open Poly Studio Mobile app on iOS.",
+        "Place an active call from the iOS native Phone app.",
+        "Return to the app and confirm call state is detected (ANC blocked).",
+        "Disconnect Bluetooth on the iOS device (toggle Bluetooth OFF in Control Center or Settings).",
         "Wait 5 seconds.",
-        "Re-launch the Poly Studio Mobile app.",
-        "Observe the app's home screen for any call-aware indicator.",
-        "Navigate to Audio Settings \u2192 ANC Level and attempt to change it.",
-        "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment and attempt to adjust the Surround level.",
-        "Navigate to Device Settings \u2192 Firmware Update and attempt to start a DFU.",
+        "Re-enable Bluetooth on the iOS device.",
+        "Wait for the Voyager 4245 Office (Morpheus) to automatically reconnect.",
+        "Open the Poly Studio Mobile app.",
+        "Navigate to Audio Settings \u2192 ANC and verify it is still blocked (call is still active on the headset).",
+        "Navigate to Audio Settings \u2192 Transparency Mode and verify it is still blocked.",
+        "Navigate to Settings \u2192 Firmware Update and verify it is still blocked.",
         "End the call.",
-        "Observe the app UI after the call ends."
+        "Return to the app and verify all controls are unblocked."
       ],
-      "expected": "After force-kill and relaunch during an active call, the Poly Studio Mobile app correctly detects the ongoing call state. A call-aware indicator (banner/toast) is displayed. ANC/Transparency Mode changes are blocked. DFU is blocked. After the call ends, the indicator disappears and settings control is restored."
+      "expected": "The call state detection survives a Bluetooth disconnect and reconnect cycle on the Voyager 4245 Office (Morpheus). ANC, Transparency Mode, and DFU remain blocked after reconnection while the call is still active, and are restored after the call ends."
     },
     {
-      "title": "TC-4245-CALL-008: Verify call state detection on Morpheus device after Bluetooth disconnect/reconnect during active call",
+      "title": "TC-CALL-STATE-010: Verify call state detection works with multiple concurrent calls (call waiting) on Voyager 4245 Office (Morpheus)",
       "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Connect to a Voyager 4245 Office (Morpheus) headset.",
-        "Place an active outgoing call from the iOS device and wait for connection.",
-        "While the call is active, disconnect the headset via iOS Bluetooth settings (tap 'Disconnect' or turn off Bluetooth).",
-        "Wait 5 seconds.",
-        "Reconnect the headset via iOS Bluetooth settings or by powering the headset off and on.",
-        "Wait for the Poly Studio Mobile app to re-establish connection (observe the device card appearing).",
-        "Observe whether the app shows a call-aware indicator.",
-        "Navigate to Audio Settings \u2192 ANC Level and attempt to change it.",
-        "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment and attempt to adjust the Surround level.",
-        "Navigate to Device Settings \u2192 Firmware Update and attempt to start a DFU.",
-        "End the call."
+        "Precondition: Voyager 4245 Office (Morpheus) is paired and connected to the iOS device. iOS call waiting is enabled.",
+        "Open Poly Studio Mobile app on iOS.",
+        "Place an active call (Call A) from the iOS native Phone app.",
+        "Return to the app and confirm call state is detected (ANC blocked).",
+        "From a second phone, place an incoming call (Call B) to the iOS device.",
+        "Answer Call B (placing Call A on hold) using the headset.",
+        "Return to the Poly Studio Mobile app.",
+        "Navigate to Audio Settings \u2192 ANC and verify it is still blocked.",
+        "Navigate to Audio Settings \u2192 Transparency Mode and verify it is still blocked.",
+        "Navigate to Settings \u2192 Firmware Update and verify it is still blocked.",
+        "Swap back to Call A (using headset or phone UI).",
+        "Return to the app and verify controls remain blocked.",
+        "End all calls.",
+        "Return to the app and verify all controls are unblocked."
       ],
-      "expected": "After Bluetooth disconnect and reconnect during an active call, the Poly Studio Mobile app correctly detects the ongoing call state. A call-aware indicator is displayed. ANC/Transparency Mode changes are blocked. DFU is blocked. The app does not lose track of the call state due to the Bluetooth reconnection."
-    },
-    {
-      "title": "TC-4245-CALL-009: Verify call state detection on Morpheus device when receiving an incoming call",
-      "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Connect to a Voyager 4245 Office (Morpheus) headset.",
-        "From a second phone, place a call to the iOS device.",
-        "Answer the incoming call on the iOS device.",
-        "Observe the Poly Studio Mobile app UI for a call-aware indicator.",
-        "While on the call, navigate to Audio Settings \u2192 ANC Level and attempt to change it.",
-        "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment and attempt to adjust the Surround level.",
-        "Navigate to Device Settings \u2192 Firmware Update and attempt to start a DFU.",
-        "End the call.",
-        "Observe the app UI after the call ends."
-      ],
-      "expected": "When an incoming call is answered on the Morpheus device, the Poly Studio Mobile app correctly detects the active call state. A call-aware indicator is displayed. ANC/Transparency Mode changes are blocked. DFU is blocked. After the call ends, the indicator disappears and settings control is restored."
-    },
-    {
-      "title": "TC-4245-CALL-010: Verify call state detection on Morpheus device during call waiting/switching between two calls",
-      "steps": [
-        "Open Poly Studio Mobile app on iOS device.",
-        "Connect to a Voyager 4245 Office (Morpheus) headset.",
-        "Place Call A from the iOS device to a first test number and wait for connection.",
-        "While on Call A, place Call B on hold and dial a second test number (call waiting).",
-        "Switch between Call A and Call B using the iOS call UI.",
-        "Observe the Poly Studio Mobile app UI during each call switch for the call-aware indicator.",
-        "While on Call B, navigate to Audio Settings \u2192 ANC Level and attempt to change it.",
-        "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment and attempt to adjust the Surround level.",
-        "Navigate to Device Settings \u2192 Firmware Update and attempt to start a DFU.",
-        "End both calls.",
-        "Observe the app UI after all calls end."
-      ],
-      "expected": "The Poly Studio Mobile app correctly detects the active call state throughout call waiting and switching scenarios. The call-aware indicator persists across call switches. ANC/Transparency Mode changes are blocked during all active calls. DFU is blocked. After all calls end, the indicator disappears and settings control is restored."
+      "expected": "The Poly Studio Mobile app correctly detects the active call state during multiple concurrent calls (call waiting scenario) on the Voyager 4245 Office (Morpheus). ANC, Transparency Mode, and DFU remain blocked regardless of which call is active, and are restored only after all calls end."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T05:50:17.154533Z"
+  "processed_at": "2026-04-25T08:35:09.799369Z"
 }
