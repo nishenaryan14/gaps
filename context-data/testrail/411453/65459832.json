@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Notifications - Onboarding - Allow, UI",
   "feature": "Notifications",
-  "scenario": "Notification master toggle and individual notification settings are accessible and functional in App Settings > General after onboarding",
+  "scenario": "Notification master toggle and individual settings are not properly displayed after onboarding in Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and complete the onboarding flow.",
-    "2. When prompted during onboarding, tap \"Allow\" to grant notification permissions.",
-    "3. After onboarding completes, navigate to the Home screen.",
-    "4. Tap the menu icon (hamburger) or your profile icon to access App Settings.",
-    "5. Go to App Settings \u2192 General \u2192 Notifications.",
+    "1. Launch the Poly Studio Mobile app and begin the onboarding flow.",
+    "2. When prompted, tap \"Allow\" to grant notification permissions.",
+    "3. Complete the onboarding process.",
+    "4. From the Home screen, tap the menu icon (\u2630) or your profile avatar to open the side navigation.",
+    "5. Tap \"App Settings\" \u2192 \"General\" \u2192 \"Notifications\".",
     "6. Observe the Notifications screen UI."
   ],
-  "expected": "The Notifications screen displays a master toggle for Notifications set to ON. Individual notification settings (e.g., call alerts, message alerts, firmware update notifications) are visible and can be toggled independently.",
+  "expected": "A master toggle for \"Notifications\" is present and set to ON. Individual notification settings (e.g., call alerts, firmware updates, promotional offers) are visible and can be toggled independently.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "app-settings",
     "notification-permissions",
     "notification-master-toggle",
-    "individual-notification-settings",
+    "notification-settings",
     "onboarding-flow",
-    "general-settings"
+    "app-settings",
+    "notifications-screen",
+    "side-navigation"
   ],
   "source_last_updated": "1761227849",
   "source_hash": "38c93f85d50c71fddfa0c72ded23e9753a15e360e45e4fc5479d9f1e03885f31",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.046571Z",
+  "processed_at": "2026-04-25T09:32:26.312500Z",
   "status": "active"
 }
