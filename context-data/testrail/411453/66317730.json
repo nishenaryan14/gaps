@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "Rename device - Rename, max chars",
   "feature": "Device Management",
-  "scenario": "Device name supports up to 30 bytes (30 English characters) when renamed in Device Settings > General",
+  "scenario": "Device name field in Device Settings > General accepts up to 30 bytes (30 English characters) for renaming",
   "steps": [
     "Open the Poly Studio Mobile app on your Android device.",
-    "On the Home screen, tap the device name or gear icon to enter Device Settings.",
+    "On the Home screen, tap the device name or gear icon to navigate to Device Settings.",
     "In Device Settings, tap General.",
-    "Tap the device's official name field.",
-    "Enter exactly 30 English characters (30 bytes).",
-    "Tap Done to save the new name."
+    "Tap on the device's official name field to edit it.",
+    "Enter exactly 30 bytes (30 English characters) for the new device name.",
+    "Tap Done to save the name.",
+    "Verify the device name is updated and displayed correctly on the Home screen and in Device Settings."
   ],
-  "expected": "The device's name is changed successfully to the entered 30-character name.",
+  "expected": "The device's name is changed successfully and displays the full 30-character name on the Home screen and in Device Settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-name",
-    "30-bytes-limit",
     "device-settings",
     "general-settings",
+    "device-name",
+    "name-field",
+    "30-bytes-limit",
     "rename-device",
-    "character-limit"
+    "android-app"
   ],
   "source_last_updated": "1772624686",
   "source_hash": "d2421490694c55660a929ab9bf4f5469facf1122b712789e2f7345856698e4a7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.798337Z",
+  "processed_at": "2026-04-25T07:55:31.882314Z",
   "status": "active"
 }
