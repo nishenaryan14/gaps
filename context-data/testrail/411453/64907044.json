@@ -5,32 +5,23 @@
   "project": "411453",
   "title": "App Settings - General - About - New update available",
   "feature": "App Settings",
-  "scenario": "App Update flow from General > About shows version info, Release Notes link, and Update button redirecting to app store",
-  "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Tap the hamburger menu (\u2630) in the top-left corner.",
-    "3. Navigate to General \u2192 About.",
-    "4. Observe the About screen when an app update is available on the cloud.",
-    "5. Tap the Release Notes link.",
-    "6. Tap the 'X' button to close the Release Notes view.",
-    "7. Tap the 'Update' button."
-  ],
-  "expected": "1. The About screen displays: \\\"App Updates Needed\\\" text, an \\\"Update\\\" button, current and available firmware versions, and a link to Release Notes.<br>2. Tapping the Release Notes link opens the Poly Lens Mobile release notes page showing latest and older version info.<br>3. Tapping the \\\"X\\\" button returns the user to the General section with the About tab expanded.<br>4. Tapping the \\\"Update\\\" button opens the app store page for Poly Lens.",
+  "scenario": "App Update flow in About section under General settings displays update info, opens Release Notes, and navigates to app store on Update tap",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "app-update",
-    "about-screen",
-    "release-notes",
-    "update-button",
+    "about-section",
     "general-settings",
-    "app-store-redirect",
-    "version-info"
+    "release-notes",
+    "app-store-navigation",
+    "firmware-update",
+    "update-flow"
   ],
   "source_last_updated": "1759416409",
   "source_hash": "db8b60bb834092500c980e1eb7879bb17af81cc9cfd989804fe7437e9f846d8f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.828229Z",
+  "processed_at": "2026-04-25T08:21:30.938301Z",
   "status": "active"
 }
