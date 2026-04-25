@@ -5,34 +5,22 @@
   "project": "411453",
   "title": "Language Change",
   "feature": "Firmware Update",
-  "scenario": "Language change for voice prompts triggers DFU process and applies correctly after firmware update on Device Settings screen",
-  "steps": [
-    "Open Poly Studio Mobile app \u2192 Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Scroll to and tap 'Language' option",
-    "Select a new language from the list (e.g., French, German, Spanish)",
-    "Observe the popup informing that a software update is required to apply the language change",
-    "Tap 'Update now' on the popup",
-    "Wait for the DFU (Device Firmware Update) process to complete",
-    "After update completes, observe the Home screen is displayed",
-    "Verify the selected language is applied to voice prompts and alerts (e.g., 'Incoming call from John' or 'Mute on')"
-  ],
-  "expected": "After the DFU completes, the user is returned to the Home screen and the selected language is properly applied to all voice prompts and alerts.",
+  "scenario": "Language change for voice prompts requires firmware update via DFU process in Device Settings",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "language-change",
-    "voice-prompts",
-    "dfu-process",
     "firmware-update",
+    "dfu-process",
     "device-settings",
-    "poly-studio-mobile",
-    "software-update-prompt",
-    "language-application"
+    "voice-prompts",
+    "language-change",
+    "poly-bluetooth"
   ],
   "source_last_updated": "1762244218",
   "source_hash": "0d1e2685e2fe0d37ef7519d21974a1297a6b378c5a31c1fcec0a0940ffa9e10d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.977004Z",
+  "processed_at": "2026-04-25T09:32:26.227935Z",
   "status": "active"
 }
