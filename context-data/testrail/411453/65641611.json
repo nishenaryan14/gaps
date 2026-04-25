@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Fit test - 2nd screen UI",
   "feature": "Device Management",
-  "scenario": "Fit Test 2nd screen UI displays correctly when starting test from Device Settings on Voyager Free 60/60+ or Voyager Free 20",
+  "scenario": "Fit Test second screen UI does not match Figma design specifications when accessed via Device Settings > Fit Test > Start Test on Osprey/Tern and Emu variants",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the mobile device.",
-    "2. Ensure a supported device (Voyager Free 60/60+ or Voyager Free 20) is connected via Bluetooth.",
-    "3. From the Home screen, tap on the connected device name to open Device Settings.",
-    "4. Scroll down and tap on 'Fit Test'.",
-    "5. On the Fit Test screen, tap the 'Start Test' button.",
-    "6. Observe the UI displayed on the 2nd screen after tapping 'Start Test'."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Scroll to and tap 'Fit Test'",
+    "Tap 'Start Test'",
+    "Observe the second screen UI that appears"
   ],
-  "expected": "The 2nd screen UI after tapping 'Start Test' matches the Figma design specifications, including correct layout, text, icons, and interactive elements.",
+  "expected": "The second screen UI of the Fit Test feature matches the Figma design specifications for both Osprey/Tern and Emu variants.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
     "device-settings",
-    "voyager-free-60",
-    "voyager-free-60-plus",
-    "voyager-free-20",
+    "ui-mismatch",
+    "osprey",
+    "tern",
+    "emu",
     "poly-studio-mobile",
-    "start-test",
-    "fit-test-ui"
+    "start-test"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "704d4698a62ce390485063bdf04fd44662c61982d3b590454aa08c5102219730",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.816209Z",
+  "processed_at": "2026-04-25T07:55:31.904112Z",
   "status": "active"
 }
