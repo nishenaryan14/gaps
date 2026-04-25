@@ -5,18 +5,17 @@
   "project": "411453",
   "title": "Feedback - send a Suggestion feedback with names/email",
   "feature": "App Settings",
-  "scenario": "Suggestion feedback with name and email is sent successfully from App Settings > Feedback section",
+  "scenario": "Suggestion feedback with name and email sent successfully from App Settings > Feedback section",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Home screen.",
-    "2. Tap the menu icon (hamburger) or navigate to App Settings.",
-    "3. Tap on Feedback.",
-    "4. Select the \"Suggestion\" option from the feedback type list.",
+    "2. Tap the menu icon (hamburger) or gear icon to navigate to App Settings.",
+    "3. In App Settings, tap on Feedback.",
+    "4. On the Feedback screen, select the \"Suggestion\" option.",
     "5. Enter text for the feedback body.",
-    "6. Enter a name in the Name field.",
-    "7. Enter an email address in the Email field.",
-    "8. Tap the Send button."
+    "6. Enter the user's name and email address in the respective fields.",
+    "7. Tap the Send button."
   ],
-  "expected": "The feedback is sent successfully with the name and email attached. A confirmation message appears indicating the feedback was submitted.",
+  "expected": "The Suggestion feedback is successfully sent with the name and email attached. A confirmation message appears indicating the feedback was submitted.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,12 +24,13 @@
     "feedback",
     "suggestion",
     "send-feedback",
-    "name-email",
-    "feedback-submission"
+    "user-name",
+    "user-email",
+    "in-app-feedback"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "096d189162dab7f9844552bfe3bb50c3b08a52efdc295b4834eda24a7265a814",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.965005Z",
+  "processed_at": "2026-04-25T09:32:26.197409Z",
   "status": "active"
 }
