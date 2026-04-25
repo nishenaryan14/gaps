@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "Onboarding - Permission for location tracking is accepted and then revoked [Android]",
   "feature": "App Settings",
-  "scenario": "Find My Device does not prompt for location permission when permission is revoked after onboarding on Poly Studio Mobile app",
+  "scenario": "Find My Device prompts for location permission again after permission is revoked via Android Settings on Poly Studio Mobile app",
   "steps": [
-    "1. Launch Poly Studio Mobile app and complete onboarding, accepting the Location permission when prompted.",
-    "2. Navigate to Android Settings > Apps > Poly Lens > Permissions and revoke the Location permission.",
-    "3. Return to the Poly Studio Mobile app and go to the Home screen.",
-    "4. Tap the menu icon (hamburger menu) or locate the Find My Device feature on the Home screen.",
-    "5. Tap on Find My Device to attempt using the feature.",
-    "6. Observe the app's response when location permission is missing."
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Accept the license agreement on the Home screen.",
+    "3. Complete the onboarding flow.",
+    "4. Connect a Poly Bluetooth audio device.",
+    "5. Go to Android Settings \u2192 Apps \u2192 Poly Lens \u2192 Permissions and revoke the Location permission.",
+    "6. Return to the Poly Studio Mobile app.",
+    "7. Navigate to the Find My Device feature (Home screen \u2192 [Device Name] \u2192 Find My Device).",
+    "8. Observe the app behavior when accessing Find My Device."
   ],
-  "expected": "The app should display an appropriate prompt explaining that Location permission is required for Find My Device, and provide a way to re-enable the permission (e.g., a button to go to Android Settings or an in-app grant dialog).",
+  "expected": "The app should detect that the Location permission has been revoked and prompt the user to grant the Location permission again before allowing access to the Find My Device feature.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "location-permission",
-    "permission-revoked",
+    "permission-revocation",
+    "android-settings",
     "poly-studio-mobile",
-    "onboarding",
-    "android-permissions",
-    "permission-prompt"
+    "permission-prompt",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1760528524",
   "source_hash": "a198a395f8d20a34bca9f1ee410054e156086656ea04610a45fe64c70887fd0f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.903790Z",
+  "processed_at": "2026-04-25T09:32:26.121520Z",
   "status": "active"
 }
