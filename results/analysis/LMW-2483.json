@@ -8,173 +8,198 @@
     "66317769",
     "66363584",
     "65482650",
+    "65459458",
+    "65459460",
     "65459439",
     "65459462",
     "65459463",
     "65459464",
-    "65459446",
     "65459440",
-    "65459441",
-    "65459429"
+    "65459441"
   ],
-  "coverage_status": "none",
+  "coverage_status": "partial",
   "gaps": [
-    "MISSING: False success message after DFU failure \u2014 No test case validates that the app displays 'updated successfully' (or similar completion message) when the update actually failed. All existing DFU failure tests (65459462, 65459463, 65459464) focus on the 'Houston' error screen with Cancel/Retry, not on the scenario where the app incorrectly reports success.",
-    "MISSING: 'Update unavailable' message on retry after failed DFU \u2014 No test case covers the scenario where, after a failed DFU, tapping Retry shows 'update unavailable' instead of allowing a retry. This is a distinct failure path not covered by the Houston error flow.",
-    "MISSING: State persistence after DFU interruption \u2014 The bug involves the app persisting a 'success' state (or corrupted state) after a failed DFU, which then blocks future update attempts. No test validates what firmware version/status is stored and displayed after an interrupted DFU, or how that state affects subsequent retry attempts.",
-    "MISSING: App lifecycle interaction with DFU failure state \u2014 No test covers what happens when the app is backgrounded/foregrounded or killed/relaunched after a failed DFU that showed false success. The bug's 'update unavailable' on retry may be tied to stale cached state that persists across app restarts.",
-    "MISSING: Bluetooth reconnection after DFU failure \u2014 The bug involves interrupting Bluetooth during DFU. No test validates the firmware update screen state after the headset reconnects post-failure, specifically whether the app correctly detects the actual (unchanged) firmware version vs. a phantom 'updated' version.",
-    "MISSING: Device-specific asymmetry \u2014 The bug does not specify which Poly device, but the domain knowledge shows multiple device types (Voyager Surround 80 UC with touch control, Voyager Legend 50/30, Voyager 4210-4220 office system). No existing tests validate DFU failure behavior across different device families, which may have different firmware update protocols and error handling."
+    "MISSING: Post-DFU-failure state persistence \u2014 No test verifies what the app reports on the Firmware Update screen AFTER a failed DFU has been dismissed/returned to. The bug is that the app falsely says 'up to date' instead of showing the available update again. Existing tests (65459462, 65459463, 65459464) cover the 'Houston' error screen and retry flow, but none check what happens if the user navigates away and comes back, or what the main Firmware Update screen shows after the error is dismissed.",
+    "MISSING: Firmware version comparison after failure \u2014 No test validates that the app's reported firmware version/status on the Device Settings \u2192 Firmware Update screen correctly reflects the ACTUAL device firmware (which did NOT change due to the failed DFU). The bug is a mismatch between the available update and the displayed status.",
+    "MISSING: App lifecycle interaction with DFU failure state \u2014 No test covers: (a) backgrounding the app during the 'Houston' error screen and returning, (b) killing and relaunching the app after a DFU failure, and (c) checking whether the 'up to date' false state persists across app restarts or clears on reconnect.",
+    "MISSING: Bluetooth reconnection after DFU failure \u2014 The bug scenario involves disconnecting mid-update. No test verifies the Firmware Update screen state after the device reconnects following a failed DFU. The app might incorrectly cache the 'update succeeded' state on reconnect.",
+    "MISSING: Device asymmetry \u2014 No test differentiates between headset types (e.g., Voyager Surround 85 vs. Free 60 vs. Sync 20) for post-DFU-failure behavior. Different devices may have different firmware update mechanisms or state reporting that could affect whether the 'up to date' false positive occurs.",
+    "MISSING: Multiple failure modes \u2014 Existing tests only cover 'headset power-off' and 'internet disconnection' as failure causes. The bug scenario also mentions 'disconnect mid-update' and 'timeout'. No test covers timeout-based DFU failure or Bluetooth disconnection (without power-off) as the failure trigger.",
+    "MISSING: Retry option persistence \u2014 No test verifies that the retry option remains available after: (a) navigating to another app screen and back, (b) rotating the device, (c) receiving a phone call during the error state."
   ],
   "generated_testcases": [
     {
-      "title": "TC-DFU-FALSE-SUCCESS-001: Verify app does NOT display 'updated successfully' when DFU fails due to Bluetooth disconnection",
+      "title": "Post-DFU-failure: Firmware Update screen shows available update after navigating away and back (Voyager Surround 85)",
       "steps": [
-        "Open Poly Studio Mobile app",
-        "Tap the connected device name (e.g., 'Poly Voyager Surround 80 UC')",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Note the current firmware version displayed (e.g., '1.2.3')",
-        "Tap 'Check for Update' and confirm an update is available",
-        "Tap 'Update Now' to start the firmware update process",
-        "During the update progress (at ~30-50%), force a Bluetooth disconnection by turning off the headset or moving out of range",
-        "Wait for the app to show a connection lost indicator",
-        "Reconnect the headset by powering it on and waiting for Bluetooth reconnection",
-        "Observe the Firmware Update screen"
+        "Precondition: Device (Voyager Surround 85) has an available firmware update. Ensure device is connected via Bluetooth.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Tap 'Update' to start DFU.",
+        "During DFU, trigger failure by disconnecting Bluetooth from phone settings (do NOT power off device).",
+        "Observe 'Houston' error screen appears.",
+        "Tap 'Dismiss' or navigate back to Device Settings screen.",
+        "Navigate back to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Observe the firmware status text and available update banner."
       ],
-      "expected": "The app does NOT display 'Updated successfully' or any success/completion message. The firmware version shown should still be the original version (e.g., '1.2.3'), not a phantom updated version. The app should display an error or failure state (e.g., 'Update failed', 'Connection lost during update')."
+      "expected": "Firmware Update screen shows the available update banner again (e.g., 'Update available: v2.5.1'). Status does NOT read 'Up to date'. Actual (If Bug): App falsely displays 'Your device is up to date' despite device still running the older firmware version."
     },
     {
-      "title": "TC-DFU-FALSE-SUCCESS-002: Verify app does NOT display 'updated successfully' when DFU fails due to app force-kill during transfer",
+      "title": "Post-DFU-failure: Firmware version mismatch validation after failed update (Free 60)",
       "steps": [
-        "Open Poly Studio Mobile app",
-        "Tap the connected device name (e.g., 'Poly Voyager Legend 50')",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Note the current firmware version (e.g., '2.0.1')",
-        "Tap 'Check for Update' and confirm an update is available",
-        "Tap 'Update Now' to start the firmware update",
-        "During the update progress (at ~40-60%), force-kill the Poly Studio Mobile app (swipe away from recent apps)",
-        "Reopen Poly Studio Mobile app",
-        "Wait for the app to reconnect to the headset automatically",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Observe the firmware version and any status messages"
+        "Precondition: Free 60 connected. Note current firmware version on device (e.g., v1.2.0). Available update is v1.4.0.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Verify 'Update available: v1.4.0' is shown.",
+        "Initiate DFU. During update, trigger failure by turning device off.",
+        "After error screen appears, dismiss it.",
+        "Navigate to: Device \u2192 About Device",
+        "Note the reported firmware version.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Observe the status text."
       ],
-      "expected": "The app does NOT display 'Updated successfully'. The firmware version should remain the original version (e.g., '2.0.1'). The app should show the update as incomplete/failed, or prompt to retry the update. No false success state is persisted across app restart."
+      "expected": "About Device shows firmware version v1.2.0 (unchanged from pre-update). Firmware Update screen shows 'Update available: v1.4.0'. Actual (If Bug): App reports 'Up to date' or shows current version as v1.4.0 despite device still on v1.2.0."
     },
     {
-      "title": "TC-DFU-RETRY-UNAVAILABLE-001: Verify 'Update unavailable' message when retrying DFU after a failed update that showed false success",
+      "title": "App lifecycle: Background and return during DFU failure 'Houston' error screen (Sync 20)",
       "steps": [
-        "Open Poly Studio Mobile app",
-        "Tap the connected device name (e.g., 'Poly Voyager Surround 80 UC')",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Note the current firmware version (e.g., '3.0.0')",
-        "Tap 'Check for Update' and confirm an update is available to version '3.1.0'",
-        "Tap 'Update Now' to start the firmware update",
-        "During the update (at ~50%), force a Bluetooth disconnection by turning off the headset",
-        "Wait 10 seconds, then turn the headset back on",
-        "Reconnect to the headset in the app",
-        "Observe the Firmware Update screen \u2014 note any success/failure message",
-        "Tap 'Retry' or 'Check for Update' again",
-        "Observe the message displayed"
+        "Precondition: Sync 20 connected. Available firmware update.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Start DFU. Trigger failure by disconnecting Bluetooth.",
+        "Wait for 'Houston' error screen to appear.",
+        "Press Home button to background the app.",
+        "Wait 10 seconds.",
+        "Reopen Poly Studio Mobile app from recent apps.",
+        "Observe the current screen and state.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update"
       ],
-      "expected": "If the app incorrectly shows 'Updated successfully' (the bug scenario), tapping 'Check for Update' or 'Retry' should NOT show 'Update unavailable'. The app should either allow a retry of the update or correctly show the original firmware version and allow a fresh update attempt. If the bug is present, this test documents the 'Update unavailable' false blocking state."
+      "expected": "App returns to the 'Houston' error screen OR the Firmware Update screen showing the available update. After navigating to Firmware Update, the available update banner is displayed. Actual (If Bug): App dismisses error state on background/foreground and shows 'Up to date'."
     },
     {
-      "title": "TC-DFU-STATE-PERSISTENCE-001: Verify firmware version displayed after interrupted DFU survives app restart and Bluetooth reconnection",
+      "title": "App lifecycle: Force-kill and relaunch after DFU failure (Voyager Surround 85)",
       "steps": [
-        "Open Poly Studio Mobile app",
-        "Connect to a Poly device (e.g., 'Poly Voyager Legend 30')",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Record the current firmware version (e.g., '1.5.0')",
-        "Start a firmware update to version '1.6.0'",
-        "At ~60% progress, turn off the headset to interrupt the update",
-        "Wait 15 seconds",
-        "Turn the headset back on and allow Bluetooth reconnection",
-        "Observe the Firmware Update screen \u2014 record the firmware version shown",
-        "Close the Poly Studio Mobile app (background it)",
-        "Reopen the app and navigate back to Firmware Update",
-        "Record the firmware version shown again",
-        "Force-kill the app (swipe away from recent apps)",
-        "Reopen the app, reconnect to the headset, navigate to Firmware Update",
-        "Record the firmware version shown a third time"
+        "Precondition: Voyager Surround 85 connected. Available firmware update v2.0.0. Device currently on v1.8.0.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Start DFU. Trigger failure by disconnecting Bluetooth mid-update.",
+        "Wait for 'Houston' error screen.",
+        "Force-kill the Poly Studio Mobile app (swipe from recent apps).",
+        "Reopen the app and wait for Bluetooth reconnection.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Observe the firmware status and available update."
       ],
-      "expected": "The firmware version displayed should consistently show the ORIGINAL version (e.g., '1.5.0') across all three checks \u2014 after reconnection, after app background/foreground, and after app force-kill/relaunch. The app should NOT persist a phantom 'updated' version. The version should match what the headset actually reports via Bluetooth."
+      "expected": "After relaunch and reconnect, Firmware Update screen shows 'Update available: v2.0.0'. Device About page shows v1.8.0. Actual (If Bug): App shows 'Up to date' after relaunch, incorrectly caching the failed update as successful."
     },
     {
-      "title": "TC-DFU-BT-RECONNECT-001: Verify firmware update screen correctly reflects actual headset firmware after DFU failure and Bluetooth reconnection cycle",
+      "title": "Bluetooth reconnection after DFU failure: Firmware Update screen state (Free 60)",
       "steps": [
-        "Open Poly Studio Mobile app",
-        "Connect to a Poly device (e.g., 'Poly Voyager Surround 80 UC')",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Record the current firmware version (e.g., '2.2.0')",
-        "Start a firmware update to version '2.3.0'",
-        "At ~40% progress, force Bluetooth disconnection by turning off the headset",
-        "Wait 5 seconds, turn the headset back on",
-        "Allow the app to automatically reconnect to the headset",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Record the firmware version displayed",
-        "Disconnect Bluetooth from phone Settings (tap 'Forget this device')",
-        "Re-pair the headset with the phone",
-        "Open Poly Studio Mobile app and reconnect to the headset",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Record the firmware version displayed a second time",
-        "Compare both recorded versions to the original version (2.2.0)"
+        "Precondition: Free 60 connected. Available firmware update.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Start DFU. During update, turn off the device Bluetooth (or power off device).",
+        "Wait for 'Houston' error screen. Dismiss it.",
+        "Turn device back on and wait for automatic Bluetooth reconnection.",
+        "Observe the app screen after reconnection.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Observe the firmware status."
       ],
-      "expected": "Both post-reconnection checks should show the ORIGINAL firmware version (2.2.0), not a phantom updated version. The app should correctly read the actual firmware version from the headset after each reconnection cycle, regardless of the interrupted DFU state."
+      "expected": "After Bluetooth reconnection, Firmware Update screen shows the available update banner. The app does NOT display 'Up to date'. Actual (If Bug): App incorrectly caches 'update succeeded' state on reconnect and shows 'Your device is up to date'."
     },
     {
-      "title": "TC-DFU-DEVICE-ASYMMETRY-001: Verify DFU failure handling on Poly Voyager Surround 80 UC (touch control device)",
+      "title": "Device asymmetry: Post-DFU-failure behavior comparison (Voyager Surround 85 vs. Free 60 vs. Sync 20)",
       "steps": [
-        "Open Poly Studio Mobile app",
-        "Connect to a 'Poly Voyager Surround 80 UC' headset",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Record current firmware version",
-        "Start a firmware update",
-        "During the update, use the touch control surface on the right earcup: tap to play/pause media",
-        "Observe if the touch gesture interrupts the DFU process",
-        "If the update continues, swipe to skip track during the update",
-        "Observe the app behavior and any error messages",
-        "After the update attempt completes (or fails), check the firmware version displayed",
-        "Attempt to retry the update by tapping 'Check for Update'"
+        "Precondition: Three test devices \u2014 Voyager Surround 85, Free 60, Sync 20 \u2014 each connected to separate test phones. Each has an available firmware update.",
+        "For each device: Navigate to Device \u2192 Software & Updates \u2192 Firmware Update. Note the available update version.",
+        "For each device: Start DFU and trigger failure by disconnecting Bluetooth mid-update.",
+        "For each device: Dismiss the 'Houston' error screen.",
+        "For each device: Navigate back to Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Record the displayed status for each device type.",
+        "For each device: Force-kill app, relaunch, reconnect, and re-check Firmware Update screen.",
+        "Compare results across all three device types."
       ],
-      "expected": "Touch control gestures during DFU should not corrupt the update state. If the update fails due to touch input interference, the app should show a clear error (not false success). The firmware version should remain unchanged. Retry should be available without showing 'Update unavailable'. The touch control device should handle DFU interruptions gracefully."
+      "expected": "All three device types (Voyager Surround 85, Free 60, Sync 20) show the available update banner after DFU failure, both after dismiss and after app relaunch. Actual (If Bug): One or more device types falsely display 'Up to date' while others correctly show the available update, indicating device-specific state caching logic."
     },
     {
-      "title": "TC-DFU-DEVICE-ASYMMETRY-002: Verify DFU failure handling on Poly Voyager 4210-4220 Office System (base station device)",
+      "title": "DFU failure by timeout: Firmware Update screen state after timeout error (Sync 20)",
       "steps": [
-        "Open Poly Studio Mobile app",
-        "Connect to a 'Poly Voyager 4210/4220' office headset system (headset connected to base)",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Record current firmware version of the headset",
-        "Start a firmware update",
-        "During the update, lift the headset from the base (simulating a desk phone call)",
-        "Observe if the base disconnection interrupts the DFU",
-        "Place the headset back on the base",
-        "Wait for reconnection",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Record the firmware version displayed",
-        "Attempt to retry the update"
+        "Precondition: Sync 20 connected. Available firmware update. Ensure network connectivity is stable.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Start DFU. During update, move device out of Bluetooth range (e.g., 30+ meters away) to cause timeout.",
+        "Wait for error screen to appear (may take 2-5 minutes).",
+        "Bring device back into range and wait for reconnection.",
+        "Dismiss the error screen.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Observe the firmware status."
       ],
-      "expected": "The office base station system should handle headset lift/return during DFU without corrupting state. The firmware version should remain the original version. No false success message should appear. The retry option should be available without 'Update unavailable' message. The base station's unique hook-switch behavior should not cause state persistence issues."
+      "expected": "Firmware Update screen shows the available update banner after timeout-based failure. Actual (If Bug): App shows 'Up to date' after a timeout failure, treating the incomplete update as successful."
     },
     {
-      "title": "TC-DFU-LIFECYCLE-001: Verify DFU failure state after app backgrounding during update and subsequent foregrounding",
+      "title": "DFU failure by Bluetooth disconnection (no power-off): Firmware Update screen state (Voyager Surround 85)",
       "steps": [
-        "Open Poly Studio Mobile app",
-        "Connect to a Poly device (e.g., 'Poly Voyager Legend 50')",
-        "Navigate to Settings \u2192 Firmware Update",
-        "Record current firmware version (e.g., '4.0.0')",
-        "Start a firmware update to version '4.1.0'",
-        "At ~50% progress, press the Home button to background the app",
-        "Wait 30 seconds",
-        "Reopen the app from the app switcher",
-        "Observe the Firmware Update screen",
-        "Record the firmware version and any status messages",
-        "Tap 'Check for Update' or the available action button",
-        "Observe the result"
+        "Precondition: Voyager Surround 85 connected. Available firmware update.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Start DFU. During update, go to phone Bluetooth settings and 'Forget' or disconnect the device (do NOT power off the headset).",
+        "Wait for 'Houston' error screen.",
+        "Re-pair and reconnect the device via Bluetooth settings.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Observe the firmware status."
       ],
-      "expected": "After backgrounding and foregrounding during an active DFU, the app should not show a false 'Updated successfully' message. The firmware version should remain the original version (4.0.0). The app should either show the update as interrupted/failed or resume the update. No 'Update unavailable' blocking message should appear on retry."
+      "expected": "After Bluetooth disconnection (without power-off) and re-pairing, Firmware Update screen shows the available update banner. Actual (If Bug): App shows 'Up to date' after re-pairing, incorrectly treating the disconnected mid-update state as a completed update."
+    },
+    {
+      "title": "Retry option persistence after navigating to another app screen and back (Free 60)",
+      "steps": [
+        "Precondition: Free 60 connected. Available firmware update.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Start DFU. Trigger failure by turning device off.",
+        "Wait for 'Houston' error screen with retry option.",
+        "Tap 'Dismiss' or navigate back to Device Settings.",
+        "Navigate to: Device \u2192 Audio Settings",
+        "Navigate back to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Observe if the retry option (Update button) is available."
+      ],
+      "expected": "Firmware Update screen shows the 'Update' button with the available firmware version. User can tap to retry the update. Actual (If Bug): App shows 'Up to date' with no retry option, or the Update button is missing/greyed out."
+    },
+    {
+      "title": "Retry option persistence after device rotation during error state (Sync 20)",
+      "steps": [
+        "Precondition: Sync 20 connected. Available firmware update.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Start DFU. Trigger failure by disconnecting Bluetooth.",
+        "Wait for 'Houston' error screen with retry option.",
+        "Rotate device to landscape orientation.",
+        "Rotate device back to portrait orientation.",
+        "Observe the screen state after rotation.",
+        "Tap retry option if available.",
+        "Observe behavior."
+      ],
+      "expected": "After rotation, the error screen or Firmware Update screen persists with the retry option still available. Tapping retry initiates a new DFU attempt. Actual (If Bug): Rotation causes the error state to be dismissed and replaced with 'Up to date', or the retry button disappears after config change."
+    },
+    {
+      "title": "Retry option persistence after incoming phone call during DFU failure state (Voyager Surround 85)",
+      "steps": [
+        "Precondition: Voyager Surround 85 connected. Available firmware update.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Start DFU. Trigger failure by disconnecting Bluetooth.",
+        "Wait for 'Houston' error screen with retry option.",
+        "Receive an incoming phone call on the test phone (do not answer \u2014 let it ring and go to voicemail or reject).",
+        "After call ends, observe the app screen.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update if needed.",
+        "Observe if retry option is available."
+      ],
+      "expected": "After the incoming call interruption, the Firmware Update screen still shows the available update with retry option. Actual (If Bug): The incoming call causes the app to reset the DFU state, showing 'Up to date' instead of the available update."
+    },
+    {
+      "title": "Immediate state trigger: Kill app IMMEDIATELY after DFU failure before dismissing error (Free 60)",
+      "steps": [
+        "Precondition: Free 60 connected. Available firmware update.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Start DFU. Trigger failure by powering off device.",
+        "Wait for 'Houston' error screen to appear.",
+        "DO NOT dismiss or navigate away. IMMEDIATELY force-kill the app.",
+        "Power on the device and wait for Bluetooth reconnection.",
+        "Reopen Poly Studio Mobile app.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 Firmware Update",
+        "Observe the firmware status."
+      ],
+      "expected": "After force-kill during the error screen (before any dismiss action), relaunch shows the available update banner on the Firmware Update screen. Actual (If Bug): App shows 'Up to date' because the error state was never formally dismissed/acknowledged, causing the app to default to a cached 'success' state."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:37.533689Z"
+  "processed_at": "2026-04-25T09:46:23.868795Z"
 }
