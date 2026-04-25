@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Analytics - Events are gathered if user is logged in",
   "feature": "App Settings",
-  "scenario": "Firebase analytics event count for device serial number does not increment after triggering device_added event in Poly Studio Mobile app",
+  "scenario": "Analytics events (e.g. device_added) are logged to Firebase with device Serial Number when user is logged into Poly Studio Mobile app",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. Log into the app using valid credentials.",
+    "2. Log into the app using valid Poly account credentials.",
     "3. Navigate to the Home screen and ensure a Poly Bluetooth audio device is connected.",
-    "4. Trigger a Firebase analytics event (e.g., device_added) by performing the corresponding action (e.g., pairing or adding a new device).",
-    "5. Wait a few hours (overnight recommended) for Firebase event counts to update.",
-    "6. Open the Firebase console and navigate to the Analytics events dashboard.",
-    "7. Locate the triggered event (e.g., device_added) and verify the event count for the specific device's serial number."
+    "4. Trigger a device-related analytics event, such as device_added, by performing a device connection or reconnection (e.g., power cycle the device or disconnect/reconnect via Bluetooth).",
+    "5. Open Firebase Console and navigate to the Analytics \u2192 Events section for the Poly Studio Mobile app project.",
+    "6. Locate the event name (e.g., device_added) in the event list.",
+    "7. Check the event count for the specific Serial Number of the connected device (e.g., by filtering or viewing event parameters).",
+    "8. Verify that the event count for that device's Serial Number has increased by 1 (or more, depending on how many times the event was triggered)."
   ],
-  "expected": "The event count for the triggered event (e.g., device_added) associated with the device's serial number increases in Firebase Analytics.",
+  "expected": "The event count for the device's Serial Number in Firebase Analytics increases after triggering the event.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "firebase-analytics",
-    "device-added-event",
     "poly-studio-mobile",
-    "event-count",
-    "device-serial-number",
-    "analytics-dashboard",
-    "bluetooth-pairing"
+    "analytics-events",
+    "device-added",
+    "firebase-console",
+    "serial-number",
+    "bluetooth-connection",
+    "event-count-verification"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "6403e6ced2dfc3bdc5d9da5fb2494e377e0658474cd4d65dbf14302fc23f7ff2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.964234Z",
+  "processed_at": "2026-04-25T07:55:31.991497Z",
   "status": "active"
 }
