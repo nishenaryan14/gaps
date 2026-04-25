@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Software Update - DFU -  Complete screen",
   "feature": "Firmware Updates",
-  "scenario": "Firmware update via Device Settings > Software Update shows \"Update complete\" screen with 100% progress and returns to home screen on tapping Close",
+  "scenario": "Firmware update via Device Settings > Software Update shows \"Update complete\" screen with 100% progress bar and successful completion message, then returns to home screen on tapping Close",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. From the Home screen, tap on the connected device name to open Device Settings.",
-    "3. In Device Settings, scroll down and tap on \"Software Update\".",
-    "4. If an update is available, tap \"Update\" to begin the firmware update process.",
-    "5. Wait for the firmware update to complete.",
-    "6. Observe the screen after the update finishes.",
-    "7. Tap the \"Close\" button on the \"Update complete\" screen."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the desired device name to open Device Settings.",
+    "Scroll to and tap 'Software Update'.",
+    "If an update is available, tap 'Update' to begin the firmware update process.",
+    "Wait for the firmware update to complete.",
+    "Observe the screen after the update finishes."
   ],
-  "expected": "The \"Update complete\" screen is displayed with the progress bar at 100% and a message confirming the update was successful. After tapping \"Close\", the user is returned to the Home screen.",
+  "expected": "The \"Update complete\" screen is displayed with the progress bar at 100% and a message indicating the software update for the device name has successfully completed. Tapping \"Close\" returns the user to the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "firmware-update",
     "software-update",
-    "update-complete",
+    "update-complete-screen",
+    "progress-bar",
     "poly-studio-mobile",
     "device-settings",
-    "android",
-    "update-progress"
+    "update-successful"
   ],
   "source_last_updated": "1763132567",
   "source_hash": "cf32727fabb515bff1ac0591eba2e2b7a09e9633c56a7c0b79755ccb4ac06cc0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.023592Z",
+  "processed_at": "2026-04-25T09:32:26.282366Z",
   "status": "active"
 }
