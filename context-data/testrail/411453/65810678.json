@@ -5,33 +5,23 @@
   "project": "411453",
   "title": "Two earbuds screen/second screen, left zoom in/out",
   "feature": "App Settings",
-  "scenario": "Tapping left circle button on earbud visualization screen zooms in and out instead of performing expected action",
-  "steps": [
-    "Open the Poly Studio Mobile app on your Android device.",
-    "Navigate to the Home screen.",
-    "Tap on the connected earbud device name or icon to access the Device Settings screen.",
-    "On the Device Settings screen, locate the earbud visualization (two earbuds/second screen).",
-    "Tap the left circle button on the earbud visualization.",
-    "Observe the screen zoom in and new text appear.",
-    "Tap the same left circle button again.",
-    "Observe the screen zoom out to the original view."
-  ],
-  "expected": "Tapping the left circle button on the earbud visualization should toggle between zoomed-in (with additional text) and zoomed-out (original) views smoothly.",
+  "scenario": "Tapping left circle button on earbuds/second screen zooms in and out instead of managing earbud settings on Poly Voyager Free 60+",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "earbud-visualization",
+    "poly-voyager-free-60-plus",
     "left-circle-button",
-    "device-settings-screen",
     "zoom-in-out",
-    "android-app",
-    "ui-navigation",
-    "button-functionality"
+    "earbud-settings",
+    "button-mapping",
+    "touch-controls",
+    "gesture-configuration"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "bce66374d8d8dd866f3780c04169aa72c36f1b7f0ba41d44cae4ecfaf121ffb1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.863821Z",
+  "processed_at": "2026-04-25T07:55:31.940475Z",
   "status": "active"
 }
