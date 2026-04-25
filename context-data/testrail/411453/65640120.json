@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "Headset settings are changed",
   "feature": "Device Management",
-  "scenario": "Headset settings changed in Poly Studio Mobile app are not reflected correctly on the Lens tenant device inventory or user profile",
-  "steps": [],
-  "expected": "",
+  "scenario": "Headset settings changed in Poly Studio Mobile app are not reflected correctly on the Lens tenant Inventory or Device user profile",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the paired smartphone.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "3. Note the current settings values (e.g., ANC mode, EQ preset, Transparency mode, etc.).",
+    "4. Log in to the Lens tenant (Inventory or Device user profile) via a web browser.",
+    "5. Locate the registered headset and verify that its settings match the values observed in the Poly Studio Mobile app.",
+    "6. Return to the Poly Studio Mobile app and change a setting value (e.g., toggle ANC from On to Off, or change an EQ preset).",
+    "7. Refresh the Lens tenant page for the same headset.",
+    "8. Verify that the changed setting value is now reflected on the Lens tenant."
+  ],
+  "expected": "Settings changed in the Poly Studio Mobile app are accurately reflected on the Lens tenant (Inventory or Device user profile) after refreshing the page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
+    "poly-studio-mobile-app",
     "lens-tenant",
-    "device-inventory",
-    "user-profile",
-    "settings-sync",
-    "headset-configuration",
-    "cloud-management"
+    "device-settings",
+    "anc-mode",
+    "eq-preset",
+    "transparency-mode",
+    "inventory-sync",
+    "device-user-profile"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "9008db5bcac2b2c964a1708e4767df9acf82cd83ff5ab9e13576eaff86a390f8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.063734Z",
+  "processed_at": "2026-04-25T09:32:26.323491Z",
   "status": "active"
 }
