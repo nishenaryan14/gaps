@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "PPIP - Setting persistence when Share Data toggle is OFF",
   "feature": "App Settings",
-  "scenario": "Share Data toggle remains persistently OFF after app restart when user has set it to OFF",
-  "steps": [],
-  "expected": "",
+  "scenario": "Share Data toggle does not persist as OFF after app restart when user continues as Guest on Poly Studio Mobile",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app for the first time.",
+    "2. Complete the onboarding flow.",
+    "3. On the account selection screen, tap \"Continue as Guest\".",
+    "4. Navigate to App Settings \u2192 General \u2192 Account.",
+    "5. Verify the \"Share Data\" toggle is displayed and confirm it is in the OFF state.",
+    "6. Verify the description text below the toggle is correct.",
+    "7. Force close and restart the Poly Studio Mobile app.",
+    "8. Navigate again to App Settings \u2192 General \u2192 Account.",
+    "9. Observe the state of the \"Share Data\" toggle."
+  ],
+  "expected": "The \"Share Data\" toggle remains persistently in the OFF state after restarting the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "share-data",
-    "data-toggle",
+    "share-data-toggle",
+    "poly-studio-mobile",
+    "guest-mode",
+    "account-settings",
+    "toggle-persistence",
     "app-restart",
-    "persistence",
-    "setting-retention",
-    "privacy-setting",
-    "poly-app"
+    "onboarding-flow"
   ],
   "source_last_updated": "1760537927",
   "source_hash": "af2e9989573e736542cf3b635a0906fb7afc1decc81e90b3bb11eccc13d61120",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.784581Z",
+  "processed_at": "2026-04-25T08:21:30.913901Z",
   "status": "active"
 }
