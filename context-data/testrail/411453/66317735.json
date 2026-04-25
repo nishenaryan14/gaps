@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Rename device - new name on the FMD connected card",
   "feature": "Device Management",
-  "scenario": "Renamed device name does not update on the connected card in the Find My Device screen after renaming in Settings",
+  "scenario": "Renamed device name is not reflected on the connected card in the Find My Device screen after renaming in Settings",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. From the Home screen, tap the Settings icon (gear icon).",
-    "3. In the Settings menu, tap on the connected device name to access Device Settings.",
-    "4. In Device Settings, tap on 'Rename' (or the pencil/edit icon next to the device name).",
-    "5. Enter a new name for the device (e.g., 'My Poly Headset').",
-    "6. Confirm/save the new name.",
-    "7. Navigate back to the Home screen.",
-    "8. Tap on the 'Find My Device' (FMD) option or screen.",
-    "9. Observe the connected device card displayed on the FMD screen."
+    "Open Poly Studio Mobile app \u2192 Home screen",
+    "Tap on the connected device card to open Device Settings",
+    "Tap on the device name field and rename the device (e.g., change to 'My Poly Headset')",
+    "Tap Save or confirm the rename",
+    "Navigate back to the Home screen",
+    "Tap on Find My Device (FMD) from the Home screen",
+    "Observe the connected device card on the FMD screen"
   ],
-  "expected": "The new name entered in step 5 is correctly displayed on the connected device card in the Find My Device (FMD) screen.",
+  "expected": "The device card on the Find My Device screen displays the new name (e.g., 'My Poly Headset') that was set in Device Settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "rename-device",
     "find-my-device",
-    "device-name-sync",
+    "device-rename",
     "poly-studio-mobile",
     "device-settings",
-    "connected-card",
-    "name-persistence"
+    "connected-device-card",
+    "name-persistence",
+    "ui-refresh"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "7afa80bfc8f6c9e9df39f97ebb03fba7a7a86f907536a2f6405b548cd18c52e2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.978004Z",
+  "processed_at": "2026-04-25T09:32:26.223429Z",
   "status": "active"
 }
