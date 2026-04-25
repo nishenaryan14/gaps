@@ -4,31 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "1 step DFU - Content of the Software Update tab when there is update available only for Charge Case",
-  "feature": "Firmware Updates",
-  "scenario": "Software Update tab shows earbuds as up to date and Charge Case with version, release notes, and Update button when firmware update is available only for the Charge Case",
+  "feature": "Firmware Update",
+  "scenario": "Software Update tab shows Charge Case update available with release notes and Update button while earbuds are marked up to date on Poly Voyager Free 60+",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Ensure a Bluetooth audio device (earbuds + charge case) is connected.",
-    "Navigate to Device Settings \u2192 [Device Name].",
-    "Tap on Software Update.",
-    "Observe the Software Update tab content when a firmware update is available only for the Charge Case (CC)."
+    "1. Launch the Poly Studio Mobile app with Osprey (Poly Voyager Free 60+) connected, ensuring only the Charge Case has a firmware update available (CC on at least version 5039, earbuds on latest version).",
+    "2. Tap the Settings icon (gear icon) on the Home screen.",
+    "3. Tap the 'Software Update' tab.",
+    "4. Observe the displayed information for both the earbuds and the Charge Case."
   ],
-  "expected": "The earbuds are marked as \"Up to date\". The Charge Case displays the current firmware version, the available firmware version, release notes, and an \"Update\" button.",
+  "expected": "Earbuds are marked as 'Up to date'. Charge Case shows current version, available version, release notes, and an 'Update' button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
+    "poly-voyager-free-60-plus",
     "software-update",
+    "charge-case-firmware",
     "firmware-update",
-    "charge-case",
-    "earbuds",
-    "bluetooth-audio-device",
-    "device-settings",
-    "release-notes"
+    "poly-studio-mobile-app",
+    "release-notes",
+    "earbuds-up-to-date",
+    "settings-menu"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "9a543314c45c3180005229bacdd54e70e397de1c214d295d0edc5522e0766188",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.893812Z",
+  "processed_at": "2026-04-25T07:55:31.960746Z",
   "status": "active"
 }
