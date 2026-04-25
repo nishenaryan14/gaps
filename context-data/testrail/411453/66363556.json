@@ -4,30 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "Language Change - Earbuds/Headsets and smart Charge Chase/Stand are out of date",
-  "feature": "Language Change / DFU",
-  "scenario": "Verify that after changing device language on a multi-component device with outdated firmware, the Language Change DFU updates all components to the latest firmware and applies the language change to the smart charge case.",
-  "steps": [
-    "Ensure the device has multiple components (e.g., Earbuds with Charge Case or Headset with Charge Stand) all on outdated firmware.",
-    "Change the device language to a new language.",
-    "Tap 'Update Now' to initiate the update.",
-    "Observe that the software update screen is displayed.",
-    "Wait for the Language Change DFU to complete."
-  ],
-  "expected": "All components should be updated to the latest firmware version, and the language on the smart charge case (Free 60+) should also change accordingly.",
+  "feature": "Firmware Updates",
+  "scenario": "Language change in Device Settings triggers DFU for all outdated components including smart charge case on Voyager Free 60+",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Language Change DFU",
-    "firmware update",
-    "multi-component device",
-    "smart charge case",
-    "device language change",
-    "outdated firmware",
-    "DFU update"
+    "language-change",
+    "device-settings",
+    "dfu",
+    "firmware-update",
+    "smart-charge-case",
+    "voyager-free-60-plus",
+    "outdated-components"
   ],
   "source_last_updated": "1769432314",
   "source_hash": "108f4e2bd981ee2a5b65d7c9e4a73e9ff31a2bdf9f28287e6016775b566d4e31",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.223816Z",
+  "processed_at": "2026-04-25T05:37:16.814266Z",
   "status": "active"
 }
