@@ -5,22 +5,24 @@
   "project": "411453",
   "title": "ANC - 4.-ANC is ON and its value is either\u202fAdaptive\u202for\u202fStandard\u202fand User doesn\u2019t change value during call when Transparency is OFF without selected values",
   "feature": "ANC",
-  "scenario": "ANC remains ON and Transparency Mode is greyed out during a call, then returns to normal after call ends",
+  "scenario": "ANC remains ON and Transparency Mode is greyed out during a call, then returns to normal toggle behavior after call ends",
   "steps": [
-    "1. Launch Poly Studio Mobile app on Android.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 ANC.",
-    "3. Set ANC to Adaptive or Standard mode.",
-    "4. Ensure Transparency Mode is OFF with no value selected.",
-    "5. Initiate or receive a call on the connected device.",
-    "6. During the call, observe the ANC setting in Audio Settings.",
-    "7. Check that Transparency Mode is greyed out and inaccessible.",
-    "8. Tap on Transparency Mode and observe the popup message.",
-    "9. End the call.",
-    "10. After the call ends, navigate to Audio Settings \u2192 ANC and verify ANC remains ON with the previously selected value (Adaptive or Standard).",
-    "11. Verify Transparency Mode remains OFF with no value selected.",
-    "12. Attempt to toggle between ANC and Transparency modes normally."
+    "1. Open Poly Studio Mobile app on the Home screen.",
+    "2. Tap on the connected [Device Name] to open Device Settings.",
+    "3. Tap on Audio Settings.",
+    "4. Set ANC to ON with either 'Adaptive' or 'Standard' mode selected.",
+    "5. Ensure Transparency Mode is OFF with no value selected.",
+    "6. Make or receive a call using the Poly device.",
+    "7. During the call, observe the ANC setting in Audio Settings.",
+    "8. During the call, observe the Transparency Mode setting in Audio Settings.",
+    "9. During the call, tap on Transparency Mode.",
+    "10. End the call.",
+    "11. After the call ends, observe the ANC setting in Audio Settings.",
+    "12. After the call ends, observe the Transparency Mode setting in Audio Settings.",
+    "13. Tap on Transparency Mode and toggle it ON, then toggle back to OFF.",
+    "14. Toggle between ANC and Transparency modes normally."
   ],
-  "expected": "During the call, ANC remains ON with the previously selected option (Adaptive or Standard). Transparency Mode is greyed out and inaccessible. Tapping Transparency Mode shows a popup indicating the option is unavailable during a call. After the call ends, ANC remains ON with the previously selected value, Transparency Mode remains OFF with no value selected, and the user can toggle between ANC and Transparency modes normally.",
+  "expected": "1. ANC remains ON with the previously selected option (Adaptive or Standard) during the call. 2. Transparency Mode is greyed out and inaccessible during the call. 3. Tapping Transparency Mode during the call shows a popup stating the option is unavailable during a call. 4. After the call ends, ANC remains ON with the previously selected value. 5. After the call ends, Transparency Mode remains OFF with no value selected. 6. After the call, the user can toggle between ANC and Transparency modes normally.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -30,11 +32,12 @@
     "audio-settings",
     "poly-studio-mobile",
     "anc-persistence",
-    "transparency-greyed-out"
+    "mode-toggle",
+    "call-behavior"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "7b84460240a536edf0ad6ce048bdcba4d379eacf245c59621e7024bc3d4867c7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.833187Z",
+  "processed_at": "2026-04-25T07:55:31.919234Z",
   "status": "active"
 }
