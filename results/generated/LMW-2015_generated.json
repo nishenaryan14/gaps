@@ -1,88 +1,159 @@
 [
   {
-    "title": "TC-IDLE-001: Verify stale earbud connection state after extended idle period shows both disconnected",
+    "title": "TC-PROLONGED-IDLE-001: Verify Surround 80 connection state accuracy after 30-minute phone idle (sleep/wake cycle)",
     "steps": [
-      "1. Launch app and ensure both earbuds are connected (left and right show connected state).",
-      "2. Put the app in the background and leave it idle for an extended period (e.g., 30+ minutes or simulate idle timeout).",
-      "3. Bring the app back to the foreground.",
-      "4. Observe the earbud connection status displayed on the main screen.",
-      "5. Check the actual Bluetooth connection status via system Bluetooth settings."
+      "Open Poly Studio Mobile app",
+      "Ensure a Surround 80 device is connected (verify both left and right earbuds show as connected on the Home screen)",
+      "Navigate to Audio Settings \u2192 ANC Level and set to 50",
+      "Press the phone's Power button to put the phone to sleep (screen off)",
+      "Wait 30 minutes (phone remains idle/sleeping)",
+      "Wake the phone (press Power button, unlock)",
+      "Open Poly Studio Mobile app",
+      "Observe the Home screen device card for Surround 80",
+      "Observe the earbud connection indicators (left/right icons)",
+      "Tap the device card to navigate into Surround 80 device details screen",
+      "Observe the connection state for left and right earbuds"
     ],
-    "expected": "The app should display both earbuds as disconnected. The displayed state must match the actual Bluetooth connection status (both disconnected). The stale state (left connected, right disconnected) must NOT be shown."
+    "expected": "The app correctly displays Surround 80 as the connected device. Both left and right earbuds show as connected. The device list shows Surround 80 without requiring an app restart. No stale or incorrect connection state is displayed."
   },
   {
-    "title": "TC-IDLE-002: Verify settings access is blocked when earbuds are in stale/disconnected state",
+    "title": "TC-PROLONGED-IDLE-002: Verify app device list refresh after prolonged idle with Surround 80 connected",
     "steps": [
-      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
-      "2. Attempt to navigate to the Settings screen by tapping the settings icon/button.",
-      "3. Observe if the settings screen opens or if access is blocked.",
-      "4. If settings opens, attempt to toggle any setting (e.g., EQ, sound mode, etc.)."
+      "Open Poly Studio Mobile app",
+      "Connect to a Surround 80 device (confirm connection on Home screen)",
+      "Navigate to Settings \u2192 Device List",
+      "Verify Surround 80 is listed as the connected device",
+      "Press the Home button to background the app",
+      "Wait 45 minutes with the phone idle (do not interact with the app)",
+      "Reopen Poly Studio Mobile app from the app switcher or home screen",
+      "Navigate to Settings \u2192 Device List",
+      "Observe the list of available and connected devices",
+      "Tap the Back button to return to the Home screen",
+      "Observe the currently connected device name displayed"
     ],
-    "expected": "Settings access should be blocked or restricted when both earbuds are not properly connected. A message indicating that earbuds must be connected to access settings should be displayed. Any attempted toggle should have no effect or be prevented."
+    "expected": "The device list correctly shows Surround 80 as the connected device without requiring an app restart. The Home screen displays Surround 80 as the active device. No stale state or missing device entry is observed."
   },
   {
-    "title": "TC-IDLE-003: Verify toggling a setting in stale state has no effect",
+    "title": "TC-PROLONGED-IDLE-003: Verify earbud-level connection indicators after phone sleep/wake cycle with Surround 80",
     "steps": [
-      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
-      "2. If settings are accessible (against expected behavior), navigate to Settings.",
-      "3. Toggle a specific setting (e.g., enable/disable noise cancellation, change EQ preset).",
-      "4. Exit settings and return to the main screen.",
-      "5. Re-enter settings and check the state of the toggled setting.",
-      "6. Restart the app and check the setting state again."
+      "Open Poly Studio Mobile app",
+      "Connect to a Surround 80 device",
+      "On the Home screen, verify both left and right earbud icons show as connected (green/active state)",
+      "Set Transparency Mode to On and set Surround level to 80",
+      "Press the Power button to put the phone to sleep",
+      "Wait 15 minutes",
+      "Wake the phone and unlock",
+      "Open Poly Studio Mobile app",
+      "Observe the earbud connection icons on the Home screen for left and right",
+      "Tap into the Surround 80 device details screen",
+      "Observe the per-earbud connection status",
+      "Navigate back to Home screen",
+      "Observe the device name and connection state"
     ],
-    "expected": "The toggled setting should have reverted to its original state or the toggle action should have been prevented entirely. After app restart, the setting should reflect the original value, confirming the toggle had no persistent effect."
+    "expected": "Both left and right earbuds show as connected on the Home screen and in the device details screen. The app displays Surround 80 as the connected device. No 'left connected, right disconnected' state is shown. The connection state is accurate and matches the actual Bluetooth connection."
   },
   {
-    "title": "TC-IDLE-004: Verify app restart recovers correct disconnected state after stale display",
+    "title": "TC-PROLONGED-IDLE-004: Verify Surround 80 settings persistence and connection state after extended idle and app force-kill",
     "steps": [
-      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
-      "2. Observe the incorrect stale state displayed on screen.",
-      "3. Force close the app (swipe from recent apps or kill process).",
-      "4. Relaunch the app.",
-      "5. Observe the earbud connection status displayed on the main screen."
+      "Open Poly Studio Mobile app",
+      "Connect to a Surround 80 device",
+      "Navigate to Audio Settings \u2192 ANC Level and set to 75",
+      "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment and set Surround level to 60",
+      "Navigate back to Home screen",
+      "Press the Power button to put the phone to sleep",
+      "Wait 20 minutes",
+      "Wake the phone, unlock",
+      "Force-kill the Poly Studio Mobile app (swipe away from recent apps)",
+      "Reopen Poly Studio Mobile app",
+      "Observe the Home screen for the connected device",
+      "Observe the earbud connection indicators (left/right)",
+      "Navigate to Audio Settings \u2192 ANC Level and note the value",
+      "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment and note the Surround level"
     ],
-    "expected": "After app restart, both earbuds should be correctly displayed as disconnected. The app should recover from the stale state and show the actual Bluetooth connection status without requiring any additional user action."
+    "expected": "The app correctly shows Surround 80 as the connected device immediately upon launch. Both left and right earbuds show as connected. ANC Level persists at 75. Surround level persists at 60. No app restart is needed to see the connected device."
   },
   {
-    "title": "TC-IDLE-005: Verify no stale state occurs when app is idle but earbuds remain connected",
+    "title": "TC-PROLONGED-IDLE-005: Verify Surround 80 connection state after multiple sleep/wake cycles over 2 hours",
     "steps": [
-      "1. Launch app and ensure both earbuds are connected.",
-      "2. Keep earbuds physically connected and powered on.",
-      "3. Put the app in the background for an extended idle period (e.g., 30+ minutes).",
-      "4. Bring the app back to the foreground.",
-      "5. Observe the earbud connection status."
+      "Open Poly Studio Mobile app",
+      "Connect to a Surround 80 device",
+      "Verify both earbuds show as connected on Home screen",
+      "Put phone to sleep (screen off)",
+      "After 10 minutes, wake phone and unlock",
+      "Open Poly Studio Mobile app and verify connection state (both earbuds connected, Surround 80 displayed)",
+      "Put phone to sleep again",
+      "After 20 minutes, wake phone and unlock",
+      "Open Poly Studio Mobile app and verify connection state",
+      "Put phone to sleep again",
+      "After 30 minutes, wake phone and unlock",
+      "Open Poly Studio Mobile app and verify connection state",
+      "Put phone to sleep again",
+      "After 60 minutes, wake phone and unlock",
+      "Open Poly Studio Mobile app and verify connection state",
+      "Navigate to Settings \u2192 Device List and confirm Surround 80 is listed as connected",
+      "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Speech and set Free level to 40",
+      "Navigate back to Home screen and verify device name and earbud state"
     ],
-    "expected": "The app should continue to show both earbuds as connected. No stale or incorrect state should appear when the actual Bluetooth connection remains active and stable during the idle period."
+    "expected": "After each sleep/wake cycle, the app correctly displays Surround 80 as the connected device. Both left and right earbuds consistently show as connected. The device list always shows Surround 80 without requiring an app restart. Free level setting of 40 persists correctly."
   },
   {
-    "title": "TC-IDLE-006: Verify stale state does not persist after toggling Bluetooth off/on",
+    "title": "TC-PROLONGED-IDLE-006: Verify app correctly shows Surround 80 (not stale device) after idle with Bluetooth disconnect/reconnect",
     "steps": [
-      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
-      "2. Without restarting the app, turn off Bluetooth from system settings.",
-      "3. Wait 5 seconds, then turn Bluetooth back on.",
-      "4. Wait for the app to update its connection status.",
-      "5. Observe the earbud connection status displayed on the main screen."
+      "Open Poly Studio Mobile app",
+      "Connect to a Surround 80 device",
+      "Verify Surround 80 is shown on Home screen with both earbuds connected",
+      "Put the phone to sleep (screen off)",
+      "Wait 10 minutes",
+      "While phone is asleep, place the Surround 80 earbuds into the charging case and close the lid (device disconnects)",
+      "Wait 5 minutes",
+      "Remove Surround 80 earbuds from the charging case (device reconnects)",
+      "Wake the phone and unlock",
+      "Open Poly Studio Mobile app",
+      "Observe the Home screen device card and earbud connection indicators",
+      "Navigate to Settings \u2192 Device List",
+      "Observe the list of devices"
     ],
-    "expected": "After toggling Bluetooth off and on, the app should refresh and display the correct disconnected state (both earbuds disconnected) without requiring an app restart. The stale state should be cleared by the Bluetooth state change."
+    "expected": "After the disconnect/reconnect cycle during idle, the app correctly shows Surround 80 as the connected device with both earbuds connected. The device list accurately reflects the reconnected state. No stale 'disconnected' state or incorrect earbud connection indicators are shown."
   },
   {
-    "title": "TC-IDLE-007: Verify stale state detection triggers reconnection attempt",
+    "title": "TC-PROLONGED-IDLE-007: Verify app connection state after phone idle during active media playback on Surround 80",
     "steps": [
-      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
-      "2. Observe if the app automatically attempts to reconnect to the earbuds.",
-      "3. If reconnection is attempted, observe the connection status after the attempt.",
-      "4. If no reconnection is attempted, note the behavior."
+      "Open Poly Studio Mobile app",
+      "Connect to a Surround 80 device",
+      "Verify both earbuds show as connected",
+      "Start playing music or a podcast on the phone (audio routed to Surround 80)",
+      "Press the Power button to put the phone to sleep (screen off, audio continues playing)",
+      "Wait 25 minutes (audio continues playing through Surround 80 during idle)",
+      "Wake the phone and unlock",
+      "Open Poly Studio Mobile app",
+      "Observe the Home screen device card and earbud connection indicators",
+      "Pause the media playback",
+      "Observe the connection state again",
+      "Navigate to Audio Settings \u2192 ANC Level and verify the current value"
     ],
-    "expected": "The app should detect the stale/inconsistent state and automatically attempt to reconnect to both earbuds. If reconnection succeeds, both earbuds should show as connected. If reconnection fails, both should show as disconnected. The app should not remain in a mixed stale state."
+    "expected": "The app correctly displays Surround 80 as the connected device with both earbuds connected, even after prolonged idle with active media playback. ANC Level setting is preserved. No stale or incorrect connection state is displayed despite the phone having been asleep."
   },
   {
-    "title": "TC-IDLE-008: Verify UI indicators reflect stale state correctly (no partial connection icons)",
+    "title": "TC-PROLONGED-IDLE-008: Verify Surround 80 connection state accuracy after phone idle with Transparency Mode active",
     "steps": [
-      "1. Launch app and allow it to enter a stale state (left connected, right disconnected) after idle period.",
-      "2. Observe all UI indicators for earbud connection status (icons, text, LED indicators, etc.).",
-      "3. Check if any UI element shows a partial or ambiguous connection state.",
-      "4. Compare with the actual Bluetooth connection status."
+      "Open Poly Studio Mobile app",
+      "Connect to a Surround 80 device",
+      "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment",
+      "Set Surround level to 85",
+      "Set Free level to 30",
+      "Enable Transparency Mode (set to On)",
+      "Navigate back to Home screen",
+      "Verify both earbuds show as connected",
+      "Press the Power button to put the phone to sleep",
+      "Wait 35 minutes",
+      "Wake the phone and unlock",
+      "Open Poly Studio Mobile app",
+      "Observe the Home screen device card and earbud connection indicators",
+      "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment",
+      "Observe the Surround level and Free level values",
+      "Switch to Transparency Mode \u2192 Speech tab",
+      "Observe the Surround level and Free level values"
     ],
-    "expected": "The UI should not display any partial connection indicators (e.g., one earbud icon showing connected, the other showing disconnected). The app should either show both as disconnected or display a clear 'connection error' or 'reconnecting' state. Ambiguous or contradictory UI states should not occur."
+    "expected": "The app correctly shows Surround 80 as the connected device with both earbuds connected. Transparency Mode Environment settings persist: Surround level at 85, Free level at 30. Switching to Speech tab shows the last set values for that sub-setting (not reset). No stale connection state or incorrect earbud indicators are displayed."
   }
 ]
