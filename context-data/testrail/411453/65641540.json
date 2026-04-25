@@ -5,16 +5,15 @@
   "project": "411453",
   "title": "ANC - UI",
   "feature": "ANC",
-  "scenario": "Transparency Environment and Speech sub-settings are disabled/greyed out when ANC/Adaptive is ON by default",
+  "scenario": "Transparency Environment and Speech sub-settings remain disabled/greyed out when ANC/Adaptive is enabled by default",
   "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Navigate to Home screen.",
-    "Tap on the connected device name to open Device Settings.",
-    "Tap on Audio Settings.",
-    "Tap on ANC to open the ANC screen.",
-    "Observe the default state of the ANC screen."
+    "1. Launch the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen and tap on the connected Poly audio device.",
+    "3. Tap on Audio Settings.",
+    "4. Tap on ANC (Active Noise Cancellation) to open the ANC/Transparency screen.",
+    "5. Observe the default state of the screen."
   ],
-  "expected": "The ANC screen displays two sections: ANC (with Adaptive and Standard options) and Transparency (with Environment and Speech options). By default, ANC/Adaptive is ON, Transparency/Environment is OFF, and all Transparency values are disabled/greyed out.",
+  "expected": "The ANC/Transparency screen shows two sections: ANC and Transparency. ANC is ON by default with Adaptive mode selected (\"Automatically adjusts to provide the best ANC experience\") and Standard mode available (\"Provide a more natural audio experience and enhanced sidetone comfort\"). Transparency is OFF by default with both Environment (\"Optimized to hear your surroundings\") and Speech (\"Best for face-to-face communication\") options disabled/greyed out.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,11 +23,11 @@
     "adaptive-anc",
     "poly-studio-mobile",
     "audio-settings",
-    "anc-screen-default-state"
+    "anc-transparency-screen"
   ],
   "source_last_updated": "1761045502",
   "source_hash": "60c462c9b5b7bb7c8f96c56056183c84d3960e11a011449eb4e7832bdc0b6e18",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.989644Z",
+  "processed_at": "2026-04-25T09:32:26.241770Z",
   "status": "active"
 }
