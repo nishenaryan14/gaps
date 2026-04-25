@@ -4,30 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Find My Device Sound Played",
-  "feature": "Analytics",
-  "scenario": "Log \"findMyDevice_soundplayed\" event when sound is played from the Find My Device screen, with event counts updating after a few hours.",
-  "steps": [
-    "Go to the Find My Device screen on the device.",
-    "Play a sound using the Find My Device feature.",
-    "Wait a few hours for event counts to update.",
-    "Check the analytics dashboard for the event named \"findMyDevice_soundplayed\".",
-    "Verify the following default dashboard elements are present: graph for the event, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment."
-  ],
-  "expected": "The event \"findMyDevice_soundplayed\" is logged and appears in the analytics dashboard with all default elements (graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment) after a few hours.",
+  "feature": "Device Management",
+  "scenario": "Find My Device sound play event count does not update immediately on Firebase after triggering sound from the app",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "findMyDevice_soundplayed",
-    "Find My Device",
-    "sound played",
-    "analytics dashboard",
-    "event tracking",
-    "event counts",
-    "default dashboard elements"
+    "find-my-device",
+    "sound-play-event",
+    "firebase-analytics",
+    "event-count",
+    "poly-app",
+    "device-locator",
+    "event-tracking"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "68cb614e6a2f781db7f4c3f10005482677a15d43c408a6d2471b7428cb18d666",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.335141Z",
+  "processed_at": "2026-04-25T05:37:16.965946Z",
   "status": "active"
 }
