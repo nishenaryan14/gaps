@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "FMD - Both earbuds disconnected",
-  "feature": "Find My Device (FMD)",
-  "scenario": "Both earbuds disconnected: Open Lens app settings > Find My Device with Osprey device disconnected and location permission granted, verify Osprey shows 3 disconnected devices (Case, Left, Right) on map while Tern shows 2 earbuds on headset card.",
+  "feature": "Bluetooth Pairing",
+  "scenario": "Find My Device map shows three disconnected devices for Voyager Free 60 Series but only two earbuds for Voyager Free 20, with no case shown",
   "steps": [
-    "Open Lens app with Osprey device disconnected.",
-    "Tap on App Settings icon (hamburger icon).",
-    "Tap on Find My Device."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Ensure the Voyager Free 60 Series (Osprey) device is paired but currently disconnected.",
+    "Navigate to the Find My Device feature from the Home screen or device settings.",
+    "Observe the map view showing disconnected devices.",
+    "Repeat steps 1-4 with a Voyager Free 20 (Tern) device paired but disconnected."
   ],
-  "expected": "Osprey device is recognized on the map as 3 devices (Case, Left, Right), all disconnected. Note: Tern device is recognized as 2 devices (no case), only earbuds visible on headset card.",
+  "expected": "For Voyager Free 60 Series (Osprey): The map should show three disconnected devices: the case, left earbud, and right earbud. For Voyager Free 20 (Tern): The map should show two disconnected devices: the left earbud and right earbud (no case).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Lens app",
-    "Find My Device",
-    "Osprey disconnected",
-    "location permission",
-    "disconnected devices",
-    "map",
-    "Tern earbuds",
-    "headset card"
+    "find-my-device",
+    "voyager-free-60-series",
+    "voyager-free-20",
+    "poly-studio-mobile",
+    "disconnected-devices",
+    "map-view",
+    "earbuds-case",
+    "osprey-tern"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "b20248c05211464ed3eeb5547d1180bb7602f20acc58acf22299aa647793ebea",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.400150Z",
+  "processed_at": "2026-04-25T05:37:16.987812Z",
   "status": "active"
 }
