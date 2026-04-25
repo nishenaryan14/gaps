@@ -7,33 +7,31 @@
   "feature": "Equalizer",
   "scenario": "Custom EQ slider touch indicator (white circle) does not appear, follow, or disappear correctly on all 7 sliders in the Custom EQ screen",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Tap on Audio Settings",
-    "Tap on Equalizer",
-    "Select Custom EQ mode",
-    "Touch and hold any one of the 7 slider dots",
-    "While holding, slide the dot left or right",
-    "Release the slider dot",
-    "Repeat steps 7-9 for all 7 sliders"
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "3. Select the 'Custom' EQ mode.",
+    "4. On the Custom EQ screen, locate any one of the 7 frequency sliders.",
+    "5. Touch and hold the slider dot on that frequency slider.",
+    "6. While holding, slide the dot left or right along the slider.",
+    "7. Release the slider dot.",
+    "8. Repeat steps 4\u20137 for each of the remaining 6 frequency sliders."
   ],
-  "expected": "A white circle appears around the slider dot when the user touches and holds it. The white circle follows the dot as the user slides left/right. The white circle disappears when the user releases the dot. This behavior applies to all 7 sliders in the Custom EQ screen.",
+  "expected": "A white circle appears around the slider dot when the user touches and holds it. The white circle follows the dot as the user slides left/right. The white circle disappears when the user releases the dot. This behavior is consistent across all 7 sliders in the Custom EQ screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "custom-eq",
     "eq-slider",
     "touch-indicator",
+    "frequency-slider",
     "poly-studio-mobile",
-    "equalizer-screen",
-    "slider-dot",
     "audio-settings",
-    "device-settings"
+    "equalizer-screen",
+    "slider-dot"
   ],
   "source_last_updated": "1760956310",
   "source_hash": "6180b2dd6d57b87c4674d05b1067eadafe2966cebec098af1182b100e2a0d618",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.927866Z",
+  "processed_at": "2026-04-25T08:21:31.006054Z",
   "status": "active"
 }
