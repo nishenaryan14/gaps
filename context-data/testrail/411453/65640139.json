@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Personal user - no tenant data in the mobile app",
-  "feature": "Mobile App - Personal User",
-  "scenario": "Guest user with no tenant data sees \"None\" for tenant info and \"Unknown\" for last connected after tapping \"Later\" in App Support menu",
+  "feature": "App Settings",
+  "scenario": "Guest user in Poly Studio Mobile app shows \"None\" for Tenant name, Tenant ID, and User ID, and \"Unknown\" for Last connected in Poly Lens Menu > Support > App",
   "steps": [
-    "Install the mobile app on a device",
-    "Log in as Guest",
-    "Navigate to Poly Lens Menu > Support > App",
-    "Tap 'Later'"
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Log in as Guest (personal user, no tenant).",
+    "3. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
+    "4. Observe the displayed values for Tenant name, Tenant ID, User ID, and Last connected.",
+    "5. Tap the 'Later' button.",
+    "6. Navigate back to Poly Lens Menu \u2192 Support \u2192 App and observe the values again."
   ],
-  "expected": "Tenant name, Tenant ID, and User ID should show \"None\", and Last connected should show \"Unknown\".",
+  "expected": "For a Guest user, the Tenant name, Tenant ID, and User ID should display appropriate values (e.g., \"N/A\" or blank) and Last connected should show a valid timestamp or \"N/A\" rather than \"Unknown\". Tapping \"Later\" should not alter these values.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Guest user",
-    "tenant data",
-    "None",
-    "Unknown",
-    "last connected",
-    "Later",
-    "App Support menu",
-    "Poly Lens"
+    "poly-studio-mobile",
+    "guest-user",
+    "tenant-name",
+    "tenant-id",
+    "user-id",
+    "last-connected",
+    "poly-lens-menu",
+    "support-app"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "f4730afc86fb3c114bca643218b3bb723eb5634dc57b14f5e7c5a507db72a70e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.319401Z",
+  "processed_at": "2026-04-25T05:37:16.956010Z",
   "status": "active"
 }
