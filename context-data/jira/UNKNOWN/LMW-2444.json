@@ -4,30 +4,33 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 FALCON \ud83c\udfa7 \"Falcon\" code name on onboarding screens",
-  "feature": "iOS FALCON - Onboarding",
-  "scenario": "Onboarding screens display device code name \"Falcon\" instead of the proper product name when a Falcon device is paired.",
-  "description_clean": "On the onboarding screens, the device code name \"Falcon\" is displayed instead of the proper product name. Steps: Pair a Falcon device with the app, then go to Device Settings > Onboarding. Expected: The proper name should be used on onboarding screens.",
+  "feature": "Device Management",
+  "scenario": "Onboarding screens show device code name \"Falcon\" instead of the proper product name",
+  "description_clean": "Onboarding screens display the device code name \"Falcon\" instead of the proper product name for the Falcon device.",
   "steps": [
-    "Pair a Falcon device with the app",
-    "Go to Device Settings > Onboarding"
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Observe the onboarding screens that appear upon first launch or after a factory reset.",
+    "3. Look for the device name displayed on the onboarding screens (e.g., device discovery, pairing, or connection confirmation screens).",
+    "4. Note the text shown for the device name."
   ],
-  "expected": "The proper name should be used on onboarding screens.",
-  "actual": "The device code name \"Falcon\" is displayed instead of the proper product name.",
+  "expected": "The onboarding screens display the proper product name (e.g., \"Poly Voyager Focus 2\" or the correct commercial name for the Falcon device).",
+  "actual": "The onboarding screens display the internal code name \"Falcon\" instead of the proper product name.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "Falcon",
-    "device code name",
-    "product name",
-    "onboarding screens",
-    "device pairing",
-    "Device Settings",
-    "Onboarding"
+    "poly-studio-mobile",
+    "onboarding-screens",
+    "device-name",
+    "falcon",
+    "product-name",
+    "device-discovery",
+    "pairing-screen",
+    "factory-reset"
   ],
   "source_last_updated": "2026-04-14T11:32:09.000+0000",
   "source_hash": "53e4081ec8f5a6e584d4bdac8092f69dcd84285052b42e5dceee63a49d43367e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.074693Z",
+  "processed_at": "2026-04-25T05:37:16.690394Z",
   "status": "active"
 }
