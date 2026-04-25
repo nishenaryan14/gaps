@@ -7,30 +7,29 @@
   "feature": "Notifications",
   "scenario": "DFU notification \"Device software is updating...\" appears and tapping it opens the app to the Software Update screen with progress bar",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and ensure a Poly Bluetooth audio device is connected.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "1. Launch Poly Studio Mobile app and pair a Poly Bluetooth audio device.",
+    "2. Ensure the app is in the foreground and navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
     "3. Initiate a device firmware update (DFU) from the Software Update section.",
     "4. Observe the notification area for the message \"Device software is updating...\".",
-    "5. Press the Home button to send the app to the background.",
-    "6. Tap the \"Device software is updating...\" notification.",
-    "7. Observe the screen that the app opens to."
+    "5. Press the Home button (or gesture) to send the Poly Studio Mobile app to the background.",
+    "6. Tap the \"Device software is updating...\" notification from the notification shade."
   ],
-  "expected": "1. A notification \"Device software is updating...\" appears when the DFU begins.\\n2. Tapping the notification while the app is in the background brings the app to the foreground and opens the Software Update screen showing the DFU progress bar.",
+  "expected": "1. The notification \"Device software is updating...\" appears when the DFU begins.\\n2. Tapping the notification while the app is in the background brings the Poly Studio Mobile app to the foreground and opens the Software Update screen showing the DFU progress bar.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-notification",
     "device-software-updating",
-    "firmware-update",
     "software-update-screen",
     "progress-bar",
     "poly-studio-mobile",
+    "firmware-update",
     "notification-tap",
-    "background-resume"
+    "background-app"
   ],
   "source_last_updated": "1761222555",
   "source_hash": "b9b4913f6577e3f20197653d645ce19d36fc67a79ef4ce6f9fb351c06dc2a77a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.967112Z",
+  "processed_at": "2026-04-25T08:21:31.042979Z",
   "status": "active"
 }
