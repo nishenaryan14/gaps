@@ -19,132 +19,153 @@
   ],
   "coverage_status": "partial",
   "gaps": [
-    "MISSING: Repeated dialog popup loop \u2014 No test verifies that after denying location during onboarding, the Find My Device dialog does NOT repeatedly re-appear in main settings. Existing tests (65293013, 65293021) check the initial denial flow and navigation, but none validate that the dialog is suppressed on subsequent visits to the main settings screen.",
-    "MISSING: App lifecycle persistence of denial state \u2014 No test covers the scenario where location is denied during onboarding, the app is backgrounded/foregrounded or killed/relaunched, and the Find My Device dialog should NOT re-trigger in main settings. This is a lifecycle persistence gap.",
-    "MISSING: Main settings screen entry trigger \u2014 No test validates what triggers the Find My Device dialog specifically when entering the main settings screen (as opposed to tapping 'Enable now' on Organized screen or navigating to Find My Device menu). The bug is about the dialog popping up unsolicited in main settings, which is a different entry point than existing tests cover.",
-    "MISSING: Repeated denial loop \u2014 No test checks that repeatedly denying location permission does not cause an infinite loop of dialog re-prompts. The bug implies the dialog keeps coming back; existing tests only check a single denial event."
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Repeated dialog persistence: The bug involves the FMD location dialog appearing REPEATEDLY after 'Don't allow' is selected. None of the existing test cases verify what happens after the dialog is dismissed multiple times \u2014 specifically whether it stops reappearing after the first occurrence (step 7 of the bug). This is a lifecycle/persistence gap: the dialog's reappearance behavior across screen transitions, app backgrounding, or subsequent navigations is not tested.",
+    "\ud83e\udde0 STATE TRIGGER \u2014 Dialog reappearance trigger not isolated: The bug says the dialog appears repeatedly in 'main settings (Home \u2192 Device Settings)'. Existing tests (65293013, 65293014) cover initial denial and revocation scenarios, but none test the exact trigger: does the dialog reappear on every entry to Device Settings? On every app foreground? On every Bluetooth reconnect? The specific trigger condition for the repeated appearance is untested.",
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Post-dismissal state verification: Step 7 says 'After the first occurrence, verify that the dialog no longer reappears.' No existing test verifies that after dismissing the dialog once (post-onboarding), navigating away and back to Device Settings does NOT trigger the dialog again. This is a critical persistence gap.",
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 App lifecycle interaction: No test covers the scenario where the user denies permission during onboarding, then backgrounds the app, reopens it, and checks whether the dialog reappears. The bug's repeated dialog could be triggered by app lifecycle events (onResume, onStart) that are not tested.",
+    "\ud83e\udde0 DEVICE ASYMMETRY \u2014 No device-specific validation: The bug scenario does not specify a device type, but Poly has multiple device families (Sync 20/20+, Free 60, Voyager 5200, Surround 85). The FMD feature may behave differently depending on whether the device supports Find My Device (e.g., some Poly devices lack FMD capability entirely). No test validates the dialog behavior across different Poly device types.",
+    "\ud83e\udde0 STATE TRIGGER \u2014 Missing test for dialog dismissal count/rate limiting: The bug implies the dialog appears 'repeatedly' but eventually stops. This suggests there may be a rate-limiting or dismissal-count mechanism. No test verifies how many times the dialog appears before it stops, or whether the count resets after app restart or phone reboot."
   ],
   "generated_testcases": [
     {
-      "title": "TC-FMD-001: Find My Device dialog does NOT re-appear in main settings after denying location during onboarding (single visit)",
+      "title": "FMD Dialog \u2014 Repeated denial: dialog stops reappearing after first dismissal on Device Settings entry",
       "steps": [
-        "1. Fresh install Poly Studio Mobile app (or clear app data).",
-        "2. Launch the app and proceed through onboarding.",
-        "3. When the location permission prompt appears during onboarding, tap 'Deny' or 'While Using the App' \u2192 select 'Deny'.",
-        "4. Complete the rest of the onboarding flow.",
-        "5. Once on the main Device screen (main settings), observe the screen for 5 seconds.",
-        "6. Navigate away: tap a different tab (e.g., 'Organized' or 'Settings' tab).",
-        "7. Navigate back to the main Device screen (tap the device name or home tab).",
-        "8. Observe the screen for 5 seconds."
+        "Precondition: Fresh install. During onboarding, select 'Don't Allow' for FMD location permission.",
+        "Navigate to: Home \u2192 Device Settings",
+        "When FMD dialog appears, tap 'Don't Allow' (or system deny).",
+        "Navigate away: Home \u2192 Back to Device List",
+        "Navigate back: Device List \u2192 Device Settings",
+        "Observe whether FMD dialog reappears.",
+        "Repeat steps 4-5 two more times."
       ],
-      "expected": "The Find My Device dialog does NOT appear at any point on the main settings screen \u2014 neither on first visit after onboarding (step 5) nor on return visit (step 7). The main settings screen displays normally without any unsolicited overlay."
+      "expected": "\ud83e\udde0 BUG SIGNATURE: FMD dialog appears on first entry to Device Settings after onboarding denial. After dismissing it once, dialog MUST NOT reappear on subsequent entries to Device Settings. Actual (If Bug): Dialog reappears on every entry to Device Settings, never rate-limited."
     },
     {
-      "title": "TC-FMD-002: Find My Device dialog suppressed after app backgrounding/foregrounding with location denied during onboarding",
+      "title": "FMD Dialog \u2014 App backgrounding triggers re-dialog after onboarding denial",
       "steps": [
-        "1. Fresh install Poly Studio Mobile app (or clear app data).",
-        "2. Launch the app and proceed through onboarding.",
-        "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
-        "4. Complete onboarding and land on the main Device screen.",
-        "5. Verify no Find My Device dialog is visible.",
-        "6. Press the Home button to background the app.",
-        "7. Wait 10 seconds.",
-        "8. Re-open the app from the recent apps list (foreground the app).",
-        "9. Observe the main Device screen for 5 seconds.",
-        "10. Navigate to another tab (e.g., 'Organized'), then return to the main Device screen.",
-        "11. Observe the screen for 5 seconds."
+        "Precondition: Fresh install. During onboarding, select 'Don't Allow' for FMD location permission.",
+        "Navigate to: Home \u2192 Device Settings",
+        "When FMD dialog appears, tap 'Don't Allow'.",
+        "Press Home button to background the app.",
+        "Wait 5 seconds, then reopen app from recent apps.",
+        "Observe whether FMD dialog reappears immediately or on any navigation.",
+        "Navigate: Device Settings \u2192 Back \u2192 Device Settings again.",
+        "Observe dialog behavior."
       ],
-      "expected": "The Find My Device dialog does NOT appear after foregrounding the app (step 9) nor after navigating back to the main Device screen (step 11). The denial state persists correctly across the app backgrounding lifecycle event."
+      "expected": "\ud83e\udde0 BUG SIGNATURE: After onboarding denial and one dialog dismissal, backgrounding and foregrounding the app MUST NOT trigger the FMD dialog again \u2014 neither on resume nor on re-entry to Device Settings. Actual (If Bug): Dialog reappears on app foreground (onResume trigger) or on next Device Settings visit."
     },
     {
-      "title": "TC-FMD-003: Find My Device dialog suppressed after app force-kill and relaunch with location denied during onboarding",
+      "title": "FMD Dialog \u2014 Bluetooth disconnect/reconnect triggers re-dialog after onboarding denial",
       "steps": [
-        "1. Fresh install Poly Studio Mobile app (or clear app data).",
-        "2. Launch the app and proceed through onboarding.",
-        "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
-        "4. Complete onboarding and land on the main Device screen.",
-        "5. Verify no Find My Device dialog is visible.",
-        "6. Force-kill the app (swipe away from recent apps or use 'Force Stop' in device Settings \u2192 Apps).",
-        "7. Wait 5 seconds.",
-        "8. Relaunch the app.",
-        "9. Observe the main Device screen for 5 seconds.",
-        "10. Navigate to another tab (e.g., 'Organized'), then return to the main Device screen.",
-        "11. Observe the screen for 5 seconds."
+        "Precondition: Fresh install. During onboarding, select 'Don't Allow' for FMD location permission.",
+        "Navigate to: Home \u2192 Device Settings",
+        "When FMD dialog appears, tap 'Don't Allow'.",
+        "Disconnect Bluetooth from phone Settings (or turn off headset).",
+        "Wait 10 seconds, reconnect Bluetooth.",
+        "Navigate: Device Settings (if not already there).",
+        "Observe whether FMD dialog reappears."
       ],
-      "expected": "The Find My Device dialog does NOT appear after relaunching the app (step 9) nor after navigating back to the main Device screen (step 11). The denial state is persisted to disk and correctly restored on app restart."
+      "expected": "\ud83e\udde0 BUG SIGNATURE: After onboarding denial and one dialog dismissal, a Bluetooth disconnect+reconnect cycle MUST NOT trigger the FMD dialog again on re-entry to Device Settings. Actual (If Bug): Dialog reappears after Bluetooth state transition, indicating the permission denial state is not persisted across reconnections."
     },
     {
-      "title": "TC-FMD-004: Find My Device dialog suppressed after Bluetooth disconnect/reconnect with location denied during onboarding",
+      "title": "FMD Dialog \u2014 App force-kill and relaunch: dialog does not reappear after onboarding denial",
       "steps": [
-        "1. Fresh install Poly Studio Mobile app (or clear app data).",
-        "2. Launch the app and proceed through onboarding.",
-        "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
-        "4. Complete onboarding and land on the main Device screen.",
-        "5. Verify no Find My Device dialog is visible.",
-        "6. Disconnect the Bluetooth headset (turn off headset or disable Bluetooth from phone quick settings).",
-        "7. Wait 5 seconds.",
-        "8. Reconnect the Bluetooth headset (turn on headset or re-enable Bluetooth).",
-        "9. Wait for the app to re-establish connection (observe the device name appears in the app).",
-        "10. Observe the main Device screen for 5 seconds.",
-        "11. Navigate to another tab and back to the main Device screen.",
-        "12. Observe the screen for 5 seconds."
+        "Precondition: Fresh install. During onboarding, select 'Don't Allow' for FMD location permission.",
+        "Navigate to: Home \u2192 Device Settings",
+        "When FMD dialog appears, tap 'Don't Allow'.",
+        "Force-kill the app (swipe from recent apps).",
+        "Relaunch app and reconnect to device.",
+        "Navigate to: Home \u2192 Device Settings",
+        "Observe whether FMD dialog reappears."
       ],
-      "expected": "The Find My Device dialog does NOT appear after Bluetooth reconnection (step 10) nor after navigating back to the main Device screen (step 12). The denial state is preserved across Bluetooth state transitions."
+      "expected": "\ud83e\udde0 BUG SIGNATURE: After onboarding denial and one dialog dismissal, force-killing and relaunching the app MUST NOT trigger the FMD dialog again on re-entry to Device Settings. Actual (If Bug): Dialog reappears after app restart, indicating the 'don't show again' flag is not persisted to disk."
     },
     {
-      "title": "TC-FMD-005: Repeated denial of location permission does NOT cause infinite dialog loop in main settings",
+      "title": "FMD Dialog \u2014 Phone reboot: dialog does not reappear after onboarding denial",
       "steps": [
-        "1. Fresh install Poly Studio Mobile app (or clear app data).",
-        "2. Launch the app and proceed through onboarding.",
-        "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
-        "4. Complete onboarding and land on the main Device screen.",
-        "5. Verify no Find My Device dialog is visible.",
-        "6. Navigate to the 'Organized' tab.",
-        "7. Tap 'Enable now' (or similar CTA that triggers Find My Device setup).",
-        "8. When the Find My Device dialog appears, tap 'Deny' or 'Cancel'.",
-        "9. Navigate back to the main Device screen (tap device name or home tab).",
-        "10. Observe the screen for 5 seconds \u2014 the Find My Device dialog should NOT appear.",
-        "11. Repeat steps 6-10 for a total of 3 iterations.",
-        "12. On the 3rd return to the main Device screen, observe for 10 seconds."
+        "Precondition: Fresh install. During onboarding, select 'Don't Allow' for FMD location permission.",
+        "Navigate to: Home \u2192 Device Settings",
+        "When FMD dialog appears, tap 'Don't Allow'.",
+        "Reboot the phone.",
+        "After reboot, launch app and reconnect to device.",
+        "Navigate to: Home \u2192 Device Settings",
+        "Observe whether FMD dialog reappears."
       ],
-      "expected": "The Find My Device dialog does NOT appear unsolicited on the main Device screen at any iteration (steps 10, 12). The dialog only appears when explicitly triggered from the Organized screen (step 8), and denying it there does not cause it to re-trigger automatically upon returning to main settings. No infinite loop occurs."
+      "expected": "\ud83e\udde0 BUG SIGNATURE: After onboarding denial and one dialog dismissal, a full phone reboot MUST NOT trigger the FMD dialog again on re-entry to Device Settings. Actual (If Bug): Dialog reappears after reboot, indicating the dismissal preference is not persisted across device reboots."
     },
     {
-      "title": "TC-FMD-006: Find My Device dialog does NOT re-appear in main settings after phone reboot with location denied during onboarding",
+      "title": "FMD Dialog \u2014 Dismissal count/rate-limiting: verify dialog stops after N dismissals",
       "steps": [
-        "1. Fresh install Poly Studio Mobile app (or clear app data).",
-        "2. Launch the app and proceed through onboarding.",
-        "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
-        "4. Complete onboarding and land on the main Device screen.",
-        "5. Verify no Find My Device dialog is visible.",
-        "6. Reboot the phone.",
-        "7. After phone restarts, launch the Poly Studio Mobile app.",
-        "8. Observe the main Device screen for 5 seconds.",
-        "9. Navigate to another tab and back to the main Device screen.",
-        "10. Observe the screen for 5 seconds."
+        "Precondition: Fresh install. During onboarding, select 'Don't Allow' for FMD location permission.",
+        "Navigate to: Home \u2192 Device Settings",
+        "When FMD dialog appears, tap 'Don't Allow'. Count = 1.",
+        "Navigate: Device Settings \u2192 Back \u2192 Device Settings",
+        "If dialog reappears, tap 'Don't Allow'. Count = 2.",
+        "Repeat step 4 until dialog no longer appears on entry.",
+        "Record total dismissal count (N) before dialog stops.",
+        "Force-kill app, relaunch, reconnect, navigate to Device Settings.",
+        "Observe whether dialog reappears (count reset check)."
       ],
-      "expected": "The Find My Device dialog does NOT appear after phone reboot (step 8) nor after navigating back to the main Device screen (step 10). The location denial state is persisted across device reboots."
+      "expected": "\ud83e\udde0 BUG SIGNATURE: The FMD dialog must stop reappearing after a finite number of dismissals (expected: 1). Record actual N. After force-kill and relaunch, the dialog MUST NOT reappear (count must persist). Actual (If Bug): Dialog reappears indefinitely (no rate limit) OR count resets after app restart."
     },
     {
-      "title": "TC-FMD-007: Find My Device dialog does NOT re-appear in main settings when location permission is set to 'Deny' from phone Settings app after onboarding",
+      "title": "FMD Dialog \u2014 Device asymmetry: behavior on FMD-capable vs non-FMD device",
       "steps": [
-        "1. Fresh install Poly Studio Mobile app (or clear app data).",
-        "2. Launch the app and proceed through onboarding.",
-        "3. When the location permission prompt appears during onboarding, tap 'Allow While Using App'.",
-        "4. Complete onboarding and land on the main Device screen.",
-        "5. Verify no Find My Device dialog is visible.",
-        "6. Navigate to phone Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions \u2192 Location.",
-        "7. Set Location permission to 'Deny'.",
-        "8. Return to the Poly Studio Mobile app.",
-        "9. Observe the main Device screen for 5 seconds.",
-        "10. Navigate to another tab and back to the main Device screen.",
-        "11. Observe the screen for 5 seconds.",
-        "12. Force-kill the app and relaunch.",
-        "13. Observe the main Device screen for 5 seconds."
+        "Precondition: Two devices paired \u2014 Device A (FMD-capable, e.g., Voyager 5200 series) and Device B (non-FMD, e.g., Sync 20 without FMD).",
+        "For Device A: Fresh install. During onboarding, select 'Don't Allow' for FMD location.",
+        "Navigate to: Home \u2192 Device Settings (Device A)",
+        "When FMD dialog appears, tap 'Don't Allow'.",
+        "Navigate away and back to Device Settings \u2014 verify no re-dialog.",
+        "Switch to Device B: Navigate to: Home \u2192 Device Settings (Device B)",
+        "Observe whether any FMD-related dialog appears for Device B.",
+        "Navigate away and back to Device Settings (Device B) \u2014 observe."
       ],
-      "expected": "The Find My Device dialog does NOT appear on the main Device screen after changing location to 'Deny' from phone settings (step 9), after navigating back (step 11), or after app restart (step 13). The app correctly detects the denied state and suppresses the dialog."
+      "expected": "\ud83e\udde0 DEVICE ASYMMETRY: For FMD-capable device (A): dialog appears once post-onboarding denial, then stops. For non-FMD device (B): NO FMD dialog should ever appear, even on first entry to Device Settings. Actual (If Bug): Dialog appears for non-FMD device (incorrect) OR dialog reappears repeatedly for FMD-capable device."
+    },
+    {
+      "title": "FMD Dialog \u2014 Immediate state trigger: kill app mid-dialog before dismissal",
+      "steps": [
+        "Precondition: Fresh install. During onboarding, select 'Don't Allow' for FMD location permission.",
+        "Navigate to: Home \u2192 Device Settings",
+        "FMD dialog appears on screen. DO NOT tap any button.",
+        "Force-kill the app immediately while dialog is visible.",
+        "Relaunch app and reconnect to device.",
+        "Navigate to: Home \u2192 Device Settings",
+        "Observe whether FMD dialog appears."
+      ],
+      "expected": "\ud83e\udde0 IMMEDIATE STATE TRIGGER: If the app is killed while the FMD dialog is showing (before any dismissal action), the dialog MUST reappear on next Device Settings entry (state was never committed). Actual (If Bug): Dialog does not reappear (incorrectly treats unhandled dialog as dismissed) OR dialog reappears indefinitely (no state tracking)."
+    },
+    {
+      "title": "FMD Dialog \u2014 System-level permission revocation after onboarding denial",
+      "steps": [
+        "Precondition: Fresh install. During onboarding, select 'Don't Allow' for FMD location permission.",
+        "Navigate to: Home \u2192 Device Settings",
+        "When FMD dialog appears, tap 'Don't Allow'.",
+        "Verify dialog does not reappear on re-entry.",
+        "Go to phone Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions",
+        "Manually grant Location permission (if denied).",
+        "Return to app, navigate to: Home \u2192 Device Settings",
+        "Observe whether FMD dialog appears now that system permission is granted.",
+        "Navigate away and back \u2014 observe re-dialog behavior."
+      ],
+      "expected": "\ud83e\udde0 BUG SIGNATURE: After onboarding denial and one dialog dismissal, if user later manually grants Location via system Settings, the FMD dialog SHOULD appear once on next Device Settings entry (since permission state changed). After dismissing it, it must NOT reappear. Actual (If Bug): Dialog does not appear after manual grant (missed opportunity to enable FMD) OR dialog reappears indefinitely after grant."
+    },
+    {
+      "title": "FMD Dialog \u2014 Onboarding 'Allow' then later system revocation triggers dialog",
+      "steps": [
+        "Precondition: Fresh install. During onboarding, select 'Allow' for FMD location permission.",
+        "Complete setup, navigate to: Home \u2192 Device Settings",
+        "Verify no FMD dialog appears (already granted).",
+        "Go to phone Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions",
+        "Revoke Location permission.",
+        "Return to app, navigate to: Home \u2192 Device Settings",
+        "Observe whether FMD dialog appears (should prompt to re-enable).",
+        "Tap 'Don't Allow' on the dialog.",
+        "Navigate away and back to Device Settings \u2014 observe re-dialog."
+      ],
+      "expected": "\ud83e\udde0 BUG SIGNATURE: After system-level revocation of a previously-granted permission, the FMD dialog MUST appear once on next Device Settings entry. After dismissing with 'Don't Allow', it must NOT reappear on subsequent entries. Actual (If Bug): Dialog does not appear after system revocation (silent failure) OR dialog reappears repeatedly after dismissal."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:09.759159Z"
+  "processed_at": "2026-04-25T09:45:49.453051Z"
 }
