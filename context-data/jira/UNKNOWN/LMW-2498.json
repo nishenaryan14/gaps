@@ -5,34 +5,32 @@
   "project": "UNKNOWN",
   "summary": "iOS | FOCUS 2 | Apps settings section is missing",
   "feature": "App Settings",
-  "scenario": "\"Apps\" section with Amazon Alexa and Tile options missing from Device Settings for Voyager Focus 2 on iOS",
-  "description_clean": "On iOS, after pairing a Voyager Focus 2 headset and navigating to Device settings, the \"Apps\" section is missing. According to the Focus 2 UI specs, the Apps section should be present with Amazon Alexa and Tile options.",
+  "scenario": "Apps section missing from Device settings after pairing Voyager Focus 2 on iOS",
+  "description_clean": "On iOS, after pairing a Voyager Focus 2 headset, the \"Apps\" section is missing from Device settings. According to the Focus 2 UI specs, the Apps section should be present with Amazon Alexa and Tile options.",
   "steps": [
-    "1. Launch Poly Studio Mobile app on iOS.",
-    "2. Pair a Voyager Focus 2 headset to the iOS device.",
-    "3. Navigate to Home screen.",
-    "4. Tap on the paired Voyager Focus 2 device name to open Device Settings.",
-    "5. Scroll down to view all available sections in Device Settings.",
-    "6. Look for the \"Apps\" section."
+    "1. Open the Poly Studio Mobile app on an iOS device.",
+    "2. Pair a Voyager Focus 2 headset to the iOS device via Bluetooth.",
+    "3. Once paired, navigate to the Home screen and tap on the connected Voyager Focus 2 device to open Device Settings.",
+    "4. Scroll through the Device Settings screen.",
+    "5. Observe the available sections listed under Device Settings."
   ],
-  "expected": "The \"Apps\" section should be present in Device Settings, containing Amazon Alexa and Tile options.",
-  "actual": "The \"Apps\" section is missing from Device Settings. No Amazon Alexa or Tile options are displayed.",
+  "expected": "The \"Apps\" section should be present in Device Settings, containing options for Amazon Alexa and Tile.",
+  "actual": "The \"Apps\" section is missing from Device Settings. No Amazon Alexa or Tile options are visible.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "voyager-focus-2",
+    "poly-studio-mobile",
     "device-settings",
     "apps-section",
-    "amazon-alexa",
-    "tile",
-    "poly-studio-mobile",
     "ios",
-    "missing-feature"
+    "bluetooth-pairing",
+    "home-screen"
   ],
   "source_last_updated": "2026-04-14T11:48:13.000+0000",
   "source_hash": "d13c99ba4e87e42cd3404a31450a5eace4691ade83174b86c5082c72cb5f4448",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.762260Z",
+  "processed_at": "2026-04-25T08:21:30.784713Z",
   "status": "active"
 }
