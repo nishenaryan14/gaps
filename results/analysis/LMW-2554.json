@@ -1,177 +1,194 @@
 {
   "bug_id": "LMW-2554",
   "matched_testcases": [
-    "65458387",
-    "65293009",
-    "65293034",
-    "65293028",
-    "65293010",
-    "65293019",
-    "65293025",
-    "65293011",
-    "65293016",
-    "65293012",
-    "65293013",
-    "65293014",
-    "65293015",
-    "65293021",
-    "65293022"
+    "64839439",
+    "64839422",
+    "66363556",
+    "66363557",
+    "66363558",
+    "66363559",
+    "66363583",
+    "66363596",
+    "65459448",
+    "65459456",
+    "65459427",
+    "65459458",
+    "65459457",
+    "65459438",
+    "65459432"
   ],
-  "coverage_status": "none",
+  "coverage_status": "partial",
   "gaps": [
-    "No existing test cases cover DFU (Device Firmware Update) operations or firmware version verification after update/restart.",
-    "No existing test cases cover Language Change operations or language persistence after restart.",
-    "No existing test cases cover progress-based failure scenarios (e.g., failure at >90% completion).",
-    "No existing test cases cover post-update state verification (e.g., device showing as 'up to date' but reverting after restart).",
-    "All existing test cases focus on onboarding, EULA, splash screen, and location permissions \u2014 none relate to firmware updates, language changes, or device restart behavior."
+    "No test covers DFU failure at >90% completion with firmware version reversion after device restart \u2014 existing DFU tests focus on UI elements, blocking conditions (active call), and multi-component updates, but none test the specific failure mode where the update appears to progress past 90% then fails, causing the firmware to revert to the previous version.",
+    "No test covers language change failure at >90% completion where the language briefly applies then reverts after device restart \u2014 existing language change tests (66363556, 66363557, 66363558, 66363583) cover DFU-triggered language changes, multi-component failures, and earbud disconnection scenarios, but none test the specific case where the language update progresses past 90% then fails and reverts.",
+    "No test covers the intermittent nature of DFU or language change failures \u2014 the bug scenario requires repeating steps 4-12 multiple times to confirm intermittent behavior, which is a reliability/stress testing gap not covered by any existing test case.",
+    "No test verifies the app's post-failure state display \u2014 the bug notes that after a failed DFU past 90%, the device may show as 'Up to date' in the app, which is a misleading UI state. No existing test validates the app's firmware version display accuracy after a failed/interrupted DFU.",
+    "No test covers the device state transition during the critical >90% phase of a DFU \u2014 existing tests cover blocking conditions (active call, earbud disconnected) but not the scenario where the update proceeds past 90% and then fails, which is a distinct failure mode likely related to the final write/commit phase of the firmware update process."
   ],
   "generated_testcases": [
     {
-      "title": "TC-DFU-001: Successful DFU completion and firmware version persistence after restart",
+      "title": "TC-DFU-FAIL-001: DFU Failure at >90% \u2014 Firmware Version Reversion After Device Restart",
       "steps": [
-        "1. Connect the device to the test harness and ensure it is powered on.",
-        "2. Navigate to Settings > Device Firmware Update (DFU).",
-        "3. Initiate a firmware update to a known target version (e.g., v2.5.0).",
-        "4. Allow the update to progress to 100% completion.",
-        "5. Observe the device UI showing 'Update Complete' or 'Up to Date'.",
-        "6. Record the firmware version displayed on the device.",
-        "7. Restart the device via power cycle (hard restart).",
-        "8. After reboot, navigate to Settings > About Device and record the firmware version.",
-        "9. Compare the firmware version after restart with the target version from step 3."
+        "1. Open Poly Studio Mobile app and connect to the Poly device (e.g., Poly Sync 20, Voyager 5200, or Poly Studio E60).",
+        "2. Navigate to Device \u2192 Software & Updates and note the current firmware version displayed.",
+        "3. Tap 'Check for Updates' and confirm a firmware update is available.",
+        "4. Tap 'Update Now' to begin the firmware update process.",
+        "5. Monitor the update progress bar on the Software & Updates screen.",
+        "6. When the progress bar reaches 90-95%, perform ONE of the following actions to simulate a failure at the critical write phase:\n   a) Force-kill the Poly Studio Mobile app via phone settings (Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Force Stop), OR\n   b) Toggle Bluetooth OFF on the phone for 10 seconds, then ON, OR\n   c) Place an outgoing call from the phone.",
+        "7. Wait 2 minutes for the device to complete its internal process.",
+        "8. If the app was force-killed, reopen Poly Studio Mobile app and reconnect to the device.",
+        "9. Navigate to Device \u2192 Software & Updates.",
+        "10. Tap 'Check for Updates' again.",
+        "11. Note the firmware version displayed on the Software & Updates screen.",
+        "12. Power cycle the device: turn the device OFF, wait 10 seconds, then turn it ON.",
+        "13. Reconnect to the device in Poly Studio Mobile app.",
+        "14. Navigate to Device \u2192 Software & Updates and note the firmware version again.",
+        "15. Compare the firmware version from Step 2 (pre-update) with the versions from Steps 11 and 14."
       ],
-      "expected": "The firmware version displayed after restart matches the target update version (v2.5.0). The device does not revert to the previous firmware version."
+      "expected": "The firmware version displayed in Steps 11 and 14 MUST match the pre-update firmware version from Step 2. The device MUST NOT show a newer firmware version. The app MUST NOT display 'Up to date' if the firmware version is the same as before the update attempt. The device should function normally (connect, play audio, adjust settings) after the reversion."
     },
     {
-      "title": "TC-DFU-002: DFU failure at >90% progress \u2014 device state and recovery",
+      "title": "TC-DFU-FAIL-002: DFU Failure at >90% \u2014 Misleading 'Up to Date' UI State Validation",
       "steps": [
-        "1. Connect the device and navigate to Settings > DFU.",
-        "2. Initiate a firmware update to a known target version.",
-        "3. Monitor the update progress bar.",
-        "4. When the progress reaches >90% (e.g., 93%), simulate an interruption (e.g., disconnect power or network).",
-        "5. Observe the device UI and any error messages.",
-        "6. Record the firmware version currently displayed on the device.",
-        "7. Restart the device.",
-        "8. After reboot, navigate to Settings > About Device and record the firmware version.",
-        "9. Attempt to re-initiate the DFU process and observe behavior."
+        "1. Open Poly Studio Mobile app and connect to the Poly device.",
+        "2. Navigate to Device \u2192 Software & Updates and record the current firmware version (e.g., '1.2.3').",
+        "3. Tap 'Check for Updates' and confirm a newer firmware version is available (e.g., '2.0.0').",
+        "4. Tap 'Update Now' to begin the firmware update.",
+        "5. When the progress bar reaches 90-95%, disconnect the device by turning off the device's power.",
+        "6. Wait 30 seconds, then turn the device back ON.",
+        "7. Reconnect to the device in Poly Studio Mobile app.",
+        "8. Navigate to Device \u2192 Software & Updates.",
+        "9. Observe the firmware version displayed and the status message shown (e.g., 'Up to date', 'Update available', or showing the version number).",
+        "10. Tap 'Check for Updates' and observe the result.",
+        "11. Navigate to Device \u2192 Device Info (or equivalent) and verify the firmware version listed there.",
+        "12. Compare all observed firmware versions and status messages against the pre-update version from Step 2."
       ],
-      "expected": "The device shows an appropriate error message or remains on the previous firmware version. After restart, the device does not falsely report being 'Up to Date' with the target version. The user can re-attempt the DFU process."
+      "expected": "The firmware version displayed in Steps 8-11 MUST match the pre-update version from Step 2 (e.g., '1.2.3'). The app MUST NOT display 'Up to date' when the firmware version is the same as before the update. The app should either show the current version number or indicate that an update is available. The 'Check for Updates' action should again find the newer firmware version (e.g., '2.0.0') available for download."
     },
     {
-      "title": "TC-DFU-003: DFU progress stuck at >90% then completes \u2014 version integrity after restart",
+      "title": "TC-DFU-FAIL-003: DFU Failure at >90% \u2014 Repeated Intermittent Failure Stress Test (5 Cycles)",
       "steps": [
-        "1. Connect the device and navigate to Settings > DFU.",
-        "2. Initiate a firmware update to a known target version.",
-        "3. Allow the update to reach >90% (e.g., 95%) and pause/stall the process for 30 seconds.",
-        "4. Resume the update and allow it to reach 100% completion.",
-        "5. Observe the device showing 'Update Complete' or 'Up to Date'.",
-        "6. Record the firmware version displayed.",
-        "7. Restart the device.",
-        "8. After reboot, navigate to Settings > About Device and record the firmware version.",
-        "9. Verify the firmware version matches the target version."
+        "1. Open Poly Studio Mobile app and connect to the Poly device.",
+        "2. Navigate to Device \u2192 Software & Updates and record the current firmware version.",
+        "3. Tap 'Check for Updates' and confirm a firmware update is available.",
+        "4. Tap 'Update Now' to begin the firmware update.",
+        "5. When the progress bar reaches 90-95%, force-kill the Poly Studio Mobile app.",
+        "6. Wait 1 minute.",
+        "7. Reopen Poly Studio Mobile app and reconnect to the device.",
+        "8. Navigate to Device \u2192 Software & Updates and verify the firmware version reverted to the pre-update version.",
+        "9. Repeat Steps 3-8 for a total of 5 cycles.",
+        "10. After the 5th cycle, power cycle the device (OFF \u2192 10s wait \u2192 ON).",
+        "11. Reconnect in Poly Studio Mobile app.",
+        "12. Navigate to Device \u2192 Software & Updates and verify the firmware version.",
+        "13. Navigate to Audio Settings and verify all settings are functional: adjust ANC Level, Transparency Mode, and EQ preset.",
+        "14. Make a test call and verify audio works (microphone and speaker).",
+        "15. Play media audio and verify playback."
       ],
-      "expected": "The firmware version after restart matches the target update version. The device does not revert to the previous firmware despite the stall at >90%."
+      "expected": "After each of the 5 cycles, the firmware version MUST revert to the pre-update version. After the final cycle and device restart, the firmware version must still match the pre-update version. The device must remain fully functional: audio settings adjustable and persisted, call audio working, media playback working. The device must not enter a bricked or unresponsive state after repeated failed DFU attempts."
     },
     {
-      "title": "TC-DFU-004: DFU update shows 'Up to Date' but reverts after restart (intermittent bug reproduction)",
+      "title": "TC-LANG-FAIL-001: Language Change Failure at >90% \u2014 Language Reverts After Device Restart",
       "steps": [
-        "1. Connect the device and navigate to Settings > DFU.",
-        "2. Initiate a firmware update to a known target version.",
-        "3. Allow the update to reach >90% (e.g., 97%) and then simulate a brief network interruption (disconnect for 2 seconds, then reconnect).",
-        "4. Observe the device UI \u2014 it may show 'Update Complete' or 'Up to Date'.",
-        "5. Record the firmware version displayed on the device.",
-        "6. Restart the device.",
-        "7. After reboot, navigate to Settings > About Device and record the firmware version.",
-        "8. Compare the version after restart with the target version and the version displayed before restart.",
-        "9. Repeat steps 1-8 for 10 iterations to assess intermittency."
+        "1. Open Poly Studio Mobile app and connect to the Poly device.",
+        "2. Navigate to Device \u2192 Device Settings \u2192 Language (or equivalent language selection screen).",
+        "3. Note the currently active language (e.g., 'English').",
+        "4. Select a different language from the list (e.g., 'Deutsch' / German).",
+        "5. Tap 'Apply' or 'Confirm' to begin the language update.",
+        "6. Monitor the progress indicator on the language update screen.",
+        "7. When the progress reaches 90-95%, force-kill the Poly Studio Mobile app.",
+        "8. Wait 30 seconds.",
+        "9. Reopen Poly Studio Mobile app and reconnect to the device.",
+        "10. Navigate to Device \u2192 Device Settings \u2192 Language.",
+        "11. Observe the language displayed as active.",
+        "12. Power cycle the device: turn OFF \u2192 wait 10 seconds \u2192 turn ON.",
+        "13. Reconnect in Poly Studio Mobile app.",
+        "14. Navigate to Device \u2192 Device Settings \u2192 Language and observe the active language.",
+        "15. Use the device for 2-3 minutes: play audio, adjust volume, make a test call, and listen for voice prompts in the device's language.",
+        "16. After 2-3 minutes of use, navigate back to Device \u2192 Device Settings \u2192 Language and observe the active language again."
       ],
-      "expected": "The firmware version after restart consistently matches the target update version across all iterations. No instance of the device reverting to the previous firmware version is observed."
+      "expected": "After the force-kill (Step 7-11), the language may temporarily show the new language (e.g., 'Deutsch') or the original language. After device restart (Steps 12-14), the language MUST revert to the original pre-change language (e.g., 'English'). After 2-3 minutes of use (Steps 15-16), the language must remain reverted to the original language. Voice prompts from the device must be in the original language, not the attempted new language."
     },
     {
-      "title": "TC-LANG-001: Language change completes successfully and persists after restart",
+      "title": "TC-LANG-FAIL-002: Language Change Failure at >90% \u2014 Intermittent Failure Stress Test (3 Cycles)",
       "steps": [
-        "1. Connect the device and navigate to Settings > Language.",
-        "2. Select a new language from the available list (e.g., switch from English to French).",
-        "3. Confirm the language change and observe the UI updating to the new language.",
-        "4. Verify that all UI elements, menus, and system dialogs are displayed in the new language.",
-        "5. Restart the device.",
-        "6. After reboot, navigate through the UI and verify the language setting.",
-        "7. Check system menus, settings, and notification dialogs for language consistency."
+        "1. Open Poly Studio Mobile app and connect to the Poly device.",
+        "2. Navigate to Device \u2192 Device Settings \u2192 Language and note the current language (e.g., 'English').",
+        "3. Select a different language (e.g., 'Fran\u00e7ais' / French) and tap 'Apply'.",
+        "4. When the progress reaches 90-95%, toggle Bluetooth OFF on the phone for 15 seconds, then ON.",
+        "5. Wait 30 seconds for the device to reconnect.",
+        "6. Open Poly Studio Mobile app and navigate to Device \u2192 Device Settings \u2192 Language.",
+        "7. Note the active language displayed.",
+        "8. Power cycle the device: OFF \u2192 10s \u2192 ON.",
+        "9. Reconnect and navigate to Device \u2192 Device Settings \u2192 Language.",
+        "10. Note the active language.",
+        "11. Repeat Steps 3-10 for a total of 3 cycles, alternating the target language each cycle (e.g., Cycle 1: French, Cycle 2: Spanish, Cycle 3: German).",
+        "12. After the 3rd cycle, use the device for 5 minutes: play media, make a call, adjust volume, listen for voice prompts.",
+        "13. After 5 minutes, navigate to Device \u2192 Device Settings \u2192 Language and note the active language."
       ],
-      "expected": "The device language remains set to the selected language (French) after restart. All UI elements are consistently displayed in the new language."
+      "expected": "After each cycle, following device restart (Step 8-9), the language MUST revert to the original language from Step 2 (e.g., 'English'). The language must NOT persist as any of the attempted languages (French, Spanish, German) after any device restart. After 5 minutes of use (Steps 12-13), the language must remain as the original language. Voice prompts must be in the original language throughout the test."
     },
     {
-      "title": "TC-LANG-002: Language change at >90% progress bar (simulated) \u2014 persistence after restart",
+      "title": "TC-LANG-FAIL-003: Language Change Failure at >90% \u2014 App UI State vs Device Actual State Mismatch",
       "steps": [
-        "1. Connect the device and navigate to Settings > Language.",
-        "2. Initiate a language change (e.g., English to German).",
-        "3. If a progress indicator is shown, wait until it reaches >90% completion.",
-        "4. If no progress bar exists, simulate a delay by interrupting the process at the final confirmation step (e.g., force close the settings app at the 'Applying' stage).",
-        "5. Observe the device UI and any partial language changes.",
-        "6. Record the current language displayed.",
-        "7. Restart the device.",
-        "8. After reboot, navigate to Settings > Language and verify the active language.",
-        "9. Check system-wide UI elements for language consistency."
+        "1. Open Poly Studio Mobile app and connect to the Poly device.",
+        "2. Navigate to Device \u2192 Device Settings \u2192 Language and set the device to 'English' (confirm via voice prompt).",
+        "3. Select 'Deutsch' (German) and tap 'Apply'.",
+        "4. When the progress reaches 90-95%, force-kill the Poly Studio Mobile app.",
+        "5. Wait 30 seconds.",
+        "6. Reopen Poly Studio Mobile app and reconnect to the device.",
+        "7. Navigate to Device \u2192 Device Settings \u2192 Language and observe what language is shown as selected/highlighted in the UI.",
+        "8. WITHOUT changing any setting, power cycle the device: OFF \u2192 10s \u2192 ON.",
+        "9. Reconnect in Poly Studio Mobile app.",
+        "10. Navigate to Device \u2192 Device Settings \u2192 Language and observe what language is shown as selected.",
+        "11. Trigger a voice prompt (e.g., press the Bluetooth button on the device and listen for the pairing prompt).",
+        "12. Note the language of the voice prompt heard from the device.",
+        "13. Compare the app UI language selection from Steps 7 and 10 with the actual device voice prompt language from Step 12."
       ],
-      "expected": "The device either fully applies the new language or reverts cleanly to the previous language. No mixed-language UI state persists after restart. The device does not display a language that was not explicitly selected."
+      "expected": "After the force-kill (Step 7), the app UI may incorrectly show 'Deutsch' as selected. After device restart (Steps 8-10), the app UI MUST show 'English' as the selected language. The voice prompt from Step 12 MUST be in English, confirming the device's actual language is English. The app UI must not persistently show a language that does not match the device's actual language. This validates that the app correctly refreshes its language state from the device after a restart."
     },
     {
-      "title": "TC-LANG-003: Rapid language change followed by restart \u2014 state consistency",
+      "title": "TC-DFU-FAIL-004: DFU Failure at >90% \u2014 Device State Transition During Critical Write Phase",
       "steps": [
-        "1. Connect the device and navigate to Settings > Language.",
-        "2. Change language from English to Spanish and confirm.",
-        "3. Immediately (within 2 seconds) restart the device without waiting for full UI refresh.",
-        "4. After reboot, navigate to Settings > Language and record the active language.",
-        "5. Verify system UI elements, menus, and dialogs for language consistency.",
-        "6. Repeat steps 1-5 for 5 iterations with different language pairs (e.g., EN->DE, EN->FR, EN->IT, EN->PT, EN->NL)."
+        "1. Open Poly Studio Mobile app and connect to the Poly device.",
+        "2. Navigate to Device \u2192 Software & Updates and record the current firmware version.",
+        "3. Tap 'Check for Updates' and confirm a newer firmware version is available.",
+        "4. Tap 'Update Now' to begin the firmware update.",
+        "5. When the progress bar reaches 90-95%, perform the following action: press and hold the device's power button for 10 seconds to force a device power-off.",
+        "6. Wait 30 seconds.",
+        "7. Power ON the device by pressing the power button.",
+        "8. Open Poly Studio Mobile app and attempt to reconnect to the device.",
+        "9. Navigate to Device \u2192 Software & Updates and observe the firmware version displayed.",
+        "10. Tap 'Check for Updates' and observe the result.",
+        "11. Navigate to Device \u2192 Device Info and verify the firmware version.",
+        "12. Test basic device functionality: play media audio, adjust volume using the device's volume buttons, test the mute function.",
+        "13. Navigate to Audio Settings \u2192 ANC Level and adjust the slider to 50, then verify the change is applied.",
+        "14. Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment and set Surround level to 75, then verify."
       ],
-      "expected": "The device language is consistently set to the selected language after each restart. No partial or mixed-language states are observed. The language setting is persisted correctly even when restart occurs immediately after selection."
+      "expected": "The firmware version in Steps 9-11 MUST match the pre-update version from Step 2. The device must successfully reconnect to the app after the forced power-off during the DFU critical phase. All basic functionality (media playback, volume control, mute) must work normally. Audio settings (ANC Level, Transparency Surround level) must be adjustable and persist after being set. The device must not be bricked or stuck in a boot loop after the forced power-off during the DFU write phase."
     },
     {
-      "title": "TC-LANG-004: Language change reverts after restart (intermittent bug reproduction)",
+      "title": "TC-DFU-FAIL-005: DFU Failure at >90% \u2014 Bluetooth Disconnect During Critical Phase with Multi-Device Pairing",
       "steps": [
-        "1. Connect the device and navigate to Settings > Language.",
-        "2. Change language from English to Japanese and confirm.",
-        "3. Observe the UI updating to Japanese.",
-        "4. Record the current language as displayed.",
-        "5. Restart the device.",
-        "6. After reboot, navigate to Settings > Language and record the active language.",
-        "7. Compare the language after restart with the selected language from step 2.",
-        "8. Repeat steps 1-7 for 10 iterations to assess intermittency.",
-        "9. If reversion is observed, document the iteration number and any patterns (e.g., specific language pair, timing)."
+        "1. Pair the Poly device with Phone A (primary) and Phone B (secondary).",
+        "2. On Phone A, open Poly Studio Mobile app and connect to the device.",
+        "3. Navigate to Device \u2192 Software & Updates and record the current firmware version.",
+        "4. Tap 'Check for Updates' and confirm a newer firmware version is available.",
+        "5. Tap 'Update Now' to begin the firmware update.",
+        "6. When the progress bar reaches 90-95%, on Phone B, initiate a Bluetooth connection to the Poly device (simulating a multi-device switching event during the critical write phase).",
+        "7. Wait 1 minute.",
+        "8. On Phone A, observe the Poly Studio Mobile app UI \u2014 note any error messages, disconnection alerts, or progress bar state.",
+        "9. Close and reopen Poly Studio Mobile app on Phone A.",
+        "10. Attempt to reconnect to the device from Phone A.",
+        "11. Navigate to Device \u2192 Software & Updates and note the firmware version.",
+        "12. Tap 'Check for Updates' and observe the result.",
+        "13. Power cycle the device: OFF \u2192 10s \u2192 ON.",
+        "14. Reconnect from Phone A and navigate to Device \u2192 Software & Updates.",
+        "15. Note the firmware version again.",
+        "16. Verify the device can still connect to both Phone A and Phone B for audio."
       ],
-      "expected": "The device language remains set to Japanese after restart across all 10 iterations. No reversion to English or any other language is observed."
-    },
-    {
-      "title": "TC-DFU-LANG-001: Combined DFU and language change \u2014 both persist after restart",
-      "steps": [
-        "1. Connect the device and ensure it is on a known firmware version (e.g., v2.4.0) and language (English).",
-        "2. Navigate to Settings > Language and change language to French. Confirm.",
-        "3. While the language change is active, navigate to Settings > DFU.",
-        "4. Initiate a firmware update to target version v2.5.0.",
-        "5. Allow the DFU to reach 100% completion.",
-        "6. Observe the device showing 'Update Complete' in French.",
-        "7. Record the firmware version and language displayed.",
-        "8. Restart the device.",
-        "9. After reboot, verify the firmware version (should be v2.5.0) and language (should be French)."
-      ],
-      "expected": "Both the firmware version (v2.5.0) and language (French) persist correctly after restart. No reversion of either setting occurs."
-    },
-    {
-      "title": "TC-DFU-LANG-002: Language change during DFU at >90% \u2014 both settings integrity after restart",
-      "steps": [
-        "1. Connect the device on firmware v2.4.0 with language set to English.",
-        "2. Navigate to Settings > DFU and initiate update to v2.5.0.",
-        "3. When DFU progress reaches >90% (e.g., 92%), navigate to Settings > Language.",
-        "4. Change language from English to German and confirm.",
-        "5. Allow the DFU to complete to 100%.",
-        "6. Observe the device UI and record displayed firmware version and language.",
-        "7. Restart the device.",
-        "8. After reboot, verify firmware version (should be v2.5.0) and language (should be German).",
-        "9. Check for any UI inconsistencies or mixed-language elements."
-      ],
-      "expected": "The firmware version is v2.5.0 and the language is German after restart. No UI inconsistencies, mixed-language states, or setting reversions are observed."
+      "expected": "The firmware version in Steps 11, 14, and 15 MUST match the pre-update version from Step 3. The app on Phone A should show a disconnection or update failure notification after the multi-device switching event. The device must remain functional and connectable to both paired phones. The 'Check for Updates' action must again find the newer firmware version available. The device must not show any signs of corruption (e.g., unable to pair, unable to play audio, distorted audio)."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-24T12:05:41.609601Z"
+  "processed_at": "2026-04-25T05:50:17.153529Z"
 }
