@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Onboarding - Organized - Allow \"Poly Lens\" to use your location window [Android]",
   "feature": "App Settings",
-  "scenario": "Onboarding \"Organized\" screen \"Enable now\" triggers location permission dialog for Poly Lens with Allow Once, Allow while using app, and Don't allow options",
+  "scenario": "Location permission dialog appears when tapping \"Enable now\" on the Organized onboarding screen for device finding",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and begin the onboarding flow.",
-    "2. Navigate to the \"Organized\" screen.",
-    "3. Tap the \"Enable now\" button.",
-    "4. Observe the location permission dialog that appears for Poly Lens."
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Navigate to the Onboarding flow.",
+    "3. On the Organized screen, tap the 'Enable now' button.",
+    "4. Observe the system location permission dialog that appears."
   ],
-  "expected": "A location permission dialog appears for Poly Lens with the following options: \"Allow Once\", \"Allow while using app\", \"Don't allow\" (or \"Only This Time\" on Android). The dialog text explains that Poly Lens uses location to find your device, and includes a link to the Privacy Policy in General Settings.",
+  "expected": "The system location permission dialog appears with options 'Allow Once' (or 'Only This Time' on Android), 'Allow while using app', and 'Don't allow'. The dialog text reads: 'Allow Poly Lens to use your location - Poly Lens uses your location to find your device. See the Poly Privacy Policy in General Settings for more information.' The user remains on the Organized page in the background.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "onboarding",
+    "onboarding-flow",
     "organized-screen",
     "enable-now",
     "location-permission",
-    "poly-lens",
-    "android-permissions"
+    "device-finding",
+    "system-dialog"
   ],
   "source_last_updated": "1760528532",
   "source_hash": "14299e2029342100613c0488a66b7879daa5a3fd94efd501582921027aa2e081",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.777003Z",
+  "processed_at": "2026-04-25T08:21:30.903161Z",
   "status": "active"
 }
