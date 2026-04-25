@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "Support  - App page Cancel",
   "feature": "App Settings",
-  "scenario": "Cancel (X) button on the App page in the Support section dismisses the screen and returns to the Support first screen",
+  "scenario": "Tapping Cancel (X) button on the App page in the Support section dismisses the screen and returns to the Support main screen",
   "steps": [
-    "Open the Poly Studio Mobile app on the Android device.",
-    "Navigate to the Home screen.",
-    "Tap the Menu icon or navigate to the Support section.",
-    "On the Support screen, tap the App page option.",
-    "Once the App page is displayed, tap the Cancel (X) button located on the screen."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap the Menu icon (hamburger) or navigate to the Account section.",
+    "4. Select Support from the menu.",
+    "5. Tap on any option or link to navigate to a sub-page within the Support section (e.g., FAQ, Contact Us, etc.).",
+    "6. Tap the Cancel (X) button located on the sub-page."
   ],
-  "expected": "The App page is dismissed and the user is returned to the Support first screen.",
+  "expected": "The sub-page is dismissed and the user is returned to the Support first screen (main Support menu).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "support-section",
-    "app-page",
     "cancel-button",
     "navigation",
     "android",
-    "ui-dismissal"
+    "app-ui",
+    "back-navigation",
+    "menu-hamburger"
   ],
   "source_last_updated": "1759762356",
   "source_hash": "e958a43206c7c5bfe7541a175cca2d33467bfafcdadea8158a21ab27ced12210",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.840875Z",
+  "processed_at": "2026-04-25T08:21:30.946442Z",
   "status": "active"
 }
