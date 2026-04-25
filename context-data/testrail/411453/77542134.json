@@ -4,33 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Can be completed for standalone headsets",
-  "feature": "Firmware Updates",
-  "scenario": "Software Update (DFU) completes successfully for standalone headset via Device Settings > Software",
+  "feature": "Firmware Update",
+  "scenario": "DFU completes successfully for standalone headset via Poly Studio Mobile app Device Settings > Software",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Ensure the headset is paired and connected to the app via Bluetooth.",
-    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
-    "4. In Device Settings, scroll to and tap on 'Software' (or 'Software Update').",
-    "5. Tap the 'Update' or 'Check for Update' button.",
-    "6. Wait for the DFU (Device Firmware Update) process to download and install the new firmware.",
-    "7. Do not disconnect or power off the headset until the update completes."
+    "2. Pair the standalone headset with the app via the Home screen.",
+    "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "4. Tap on Software (or Software Update) under Device Settings.",
+    "5. Tap the Update button to initiate the DFU (Device Firmware Update).",
+    "6. Wait for the firmware update process to complete without interruption."
   ],
-  "expected": "The headset firmware is successfully updated to the latest version. The app displays a success message and the headset reconnects automatically.",
+  "expected": "The firmware update completes successfully. The headset reboots (if required) and the updated firmware version is displayed in Device Settings > Software.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu",
-    "device-firmware-update",
-    "software-update",
+    "firmware-update",
     "poly-studio-mobile",
-    "firmware-download",
-    "bluetooth-pairing",
+    "device-settings",
+    "software-update",
     "standalone-headset",
-    "firmware-install"
+    "android"
   ],
   "source_last_updated": "1770389945",
   "source_hash": "5e8c37248a199e0a213482a9202bf21fe603bd9c93598f6e38f34d4972a05f3d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.896428Z",
+  "processed_at": "2026-04-25T07:55:31.966106Z",
   "status": "active"
 }
