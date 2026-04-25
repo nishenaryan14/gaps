@@ -4,30 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Settings - Headset disconnected on Settings screen",
-  "feature": "Device Settings",
-  "scenario": "Disconnect headset while on Device Settings screen and verify page updates to show only available options",
+  "feature": "Device Management",
+  "scenario": "Device Settings screen does not update available options when headset is disconnected",
   "steps": [
-    "1. Connect a headset to the device.",
-    "2. Navigate to the Device Settings screen.",
-    "3. Disconnect the headset while on the Device Settings screen.",
-    "4. Observe the settings page."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen and ensure a Poly Bluetooth headset is connected.",
+    "3. Tap on the connected device name to open the Device Settings screen.",
+    "4. While on the Device Settings screen, disconnect the headset (e.g., by turning off the headset or moving out of range).",
+    "5. Observe the Device Settings screen after the disconnection."
   ],
-  "expected": "The settings page should update to show only options available while the device is disconnected.",
+  "expected": "The Device Settings screen should update to show only options available while the device is disconnected (e.g., limited settings or a reconnection prompt).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "headset disconnect",
-    "Device Settings screen",
-    "settings page update",
-    "available options",
-    "audio device removal",
-    "UI dynamic update",
-    "settings visibility",
-    "device configuration"
+    "poly-studio-mobile",
+    "device-settings-screen",
+    "headset-disconnected",
+    "ui-update",
+    "bluetooth-disconnection",
+    "settings-options",
+    "connected-device"
   ],
   "source_last_updated": "1762433859",
   "source_hash": "49f3c0f6536e7e4f9f2b37532f604668dbd86f8a4aa528872b3800e571b211a6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.202571Z",
+  "processed_at": "2026-04-25T05:37:16.790278Z",
   "status": "active"
 }
