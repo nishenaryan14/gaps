@@ -7,13 +7,13 @@
   "feature": "App Settings",
   "scenario": "\"Welcome to Poly Studio\" onboarding screen appears after app update from pre-5.0.0.X version, and tapping \"Get Started\" navigates to Home Screen",
   "steps": [
-    "1. Install a previous version of the Poly Studio Mobile app (before 5.0.0.X) on the device.",
-    "2. Update the app to the latest version.",
+    "1. Install a previous version of Poly Studio Mobile (before 5.0.0.X) on the Android device.",
+    "2. Update the app to the latest version of Poly Studio Mobile.",
     "3. Launch the Poly Studio Mobile app.",
     "4. Observe the screen that appears after launch.",
     "5. Tap the \"Get Started\" button on the \"Welcome to Poly Studio\" screen."
   ],
-  "expected": "After updating and launching the app, a \"Welcome to Poly Studio\" screen should appear. Tapping \"Get Started\" dismisses the screen and brings the user to the Home Screen.",
+  "expected": "After updating and launching the app, a \"Welcome to Poly Studio\" screen (What's New) is displayed. Tapping \"Get Started\" dismisses the screen and brings the user to the Home Screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,12 +22,12 @@
     "app-update",
     "get-started",
     "home-screen",
-    "version-migration",
-    "welcome-screen"
+    "android",
+    "version-migration"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "61c8fedd2d2ff1ab7eb910f096f580b3d9a52b7fd64cc29f029dbb51f964af1f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.705601Z",
+  "processed_at": "2026-04-25T07:55:31.779000Z",
   "status": "active"
 }
