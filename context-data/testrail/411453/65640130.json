@@ -4,28 +4,34 @@
   "type": "testcase",
   "project": "411453",
   "title": "Policy: Policy applied - Restart Headset - Settings stay locked",
-  "feature": "Policy",
-  "scenario": "Policy-applied settings remain locked on headset after device restart",
+  "feature": "App Settings",
+  "scenario": "Policy-locked settings become editable after headset restart despite policy being applied via Poly Studio Mobile app",
   "steps": [
-    "Apply a policy to a device.",
-    "Restart the headset."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen and select the connected Poly Bluetooth headset.",
+    "3. Go to Device Settings and apply a policy that locks specific settings (e.g., ANC, Transparency Mode, Equalizer).",
+    "4. Confirm the policy is applied and the locked settings are grayed out/unchangeable in the app.",
+    "5. Power off the headset by pressing and holding the Power button.",
+    "6. Power on the headset by pressing and holding the Power button until it reconnects.",
+    "7. Open the Poly Studio Mobile app and navigate to the Device Settings for the headset.",
+    "8. Attempt to change the previously locked settings (e.g., ANC, Transparency Mode, Equalizer)."
   ],
-  "expected": "The settings affected by the policy remain locked.",
+  "expected": "After restarting the headset, the policy-locked settings should remain locked and unchangeable in the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "policy-applied settings",
-    "locked settings",
-    "headset restart",
-    "device restart",
-    "policy persistence",
-    "settings retention",
-    "reboot",
-    "device policy"
+    "policy-locked-settings",
+    "poly-studio-mobile-app",
+    "headset-restart",
+    "anc",
+    "transparency-mode",
+    "equalizer",
+    "device-settings",
+    "policy-persistence"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "87b89c33be0d2faa33bf1481741b1b42af608c874ed14fb33d2dce1a03238f8a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.313645Z",
+  "processed_at": "2026-04-25T05:37:16.951887Z",
   "status": "active"
 }
