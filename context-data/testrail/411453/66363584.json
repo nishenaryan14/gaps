@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Language Change - Checking pop up if at least one component is at low battery",
-  "feature": "Language Change",
-  "scenario": "Verify that changing the language shows an \"Update currently not available\" pop-up when at least one component has low battery.",
+  "feature": "Firmware Update",
+  "scenario": "Language update blocked with low battery pop-up when any connected component has less than 5% battery",
   "steps": [
-    "1. Ensure at least one component (headset, earbud, or smart case) is at low battery level.",
-    "2. Attempt to change the language on the device.",
-    "3. Observe the pop-up message that appears."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure a Poly Bluetooth audio device (single headset, earbuds, or earbuds with smart case) is connected.",
+    "3. Verify that at least one component of the connected device (headset, earbud, or smart case) has a battery level below 5%.",
+    "4. Navigate to the Device Settings screen for the connected device.",
+    "5. Attempt to change the language setting for the device.",
+    "6. Observe the app's response."
   ],
-  "expected": "A pop-up message \"Update currently not available, please try back later\" should appear.",
+  "expected": "The app displays a pop-up message: \"Update currently not available, please try back later\" and prevents the language update from proceeding.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "language change",
-    "low battery",
-    "update not available",
-    "pop-up message",
-    "headset",
-    "earbud",
-    "smart case",
-    "battery level"
+    "poly-studio-mobile",
+    "language-update",
+    "low-battery-pop-up",
+    "battery-threshold",
+    "device-settings",
+    "bluetooth-audio-device",
+    "smart-case"
   ],
   "source_last_updated": "1763383741",
   "source_hash": "c0d89590446522d37af0026886eccdd4e85134cd065141155b2eee7acbf40370",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.222303Z",
+  "processed_at": "2026-04-25T05:37:16.806413Z",
   "status": "active"
 }
