@@ -5,29 +5,27 @@
   "project": "411453",
   "title": "Studio UI - Quick Settings enabled",
   "feature": "App Settings",
-  "scenario": "Quick Settings toggle does not persist or function correctly when enabled in the Poly Studio Mobile app UI",
+  "scenario": "Quick Settings toggle does not persist or function as expected in the Poly Studio Mobile app UI",
   "steps": [
     "Open Poly Studio Mobile app on the Home screen.",
-    "Tap on the Quick Settings icon (gear or shortcut icon) on the Home screen.",
-    "Verify that the Quick Settings panel or overlay is displayed.",
-    "Check the available toggles/options in the Quick Settings panel (e.g., ANC, Transparency Mode, Equalizer presets, etc.)."
+    "Tap on the Quick Settings icon (gear or shortcut) to enable Quick Settings.",
+    "Verify the Quick Settings panel or overlay appears."
   ],
-  "expected": "Quick Settings panel is displayed with relevant audio device toggles and options accessible from the Home screen.",
+  "expected": "Quick Settings panel is displayed, showing toggles for common features (e.g., ANC, Transparency Mode, Equalizer).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "quick-settings",
-    "anc",
-    "transparency-mode",
-    "equalizer-presets",
     "settings-persistence",
+    "ui-toggle",
     "home-screen",
-    "toggle-functionality"
+    "settings-overlay",
+    "app-ui"
   ],
   "source_last_updated": "1759226530",
   "source_hash": "38066f69ae4b47140f2fd62b25262f90f6341a8e3266da1aa0b3f483e009b5b3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.975727Z",
+  "processed_at": "2026-04-25T07:55:32.000255Z",
   "status": "active"
 }
