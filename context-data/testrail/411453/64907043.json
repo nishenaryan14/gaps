@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "App Settings - General - About - Up to date, release notes",
-  "feature": "App Settings - General - About",
-  "scenario": "Verify that the \"Release Notes\" link in the About section opens the correct Lens version web page as specified in the Figma design.",
+  "feature": "App Settings",
+  "scenario": "Release Notes link in App Settings > General > About opens correct web page for current Lens version release notes",
   "steps": [
-    "Open App Settings",
-    "Navigate to General section",
-    "Tap on About",
-    "Tap on the 'Release Notes' link",
-    "Observe the web page that opens"
+    "Open the Poly Studio Mobile app.",
+    "Navigate to App Settings (gear icon).",
+    "Tap General.",
+    "Tap About.",
+    "Tap the Release Notes link.",
+    "Observe the web page that opens."
   ],
-  "expected": "The 'Release Notes' link opens the URL https://info.lens.poly.com/lens-mobile-rn, which displays the correct Lens version web page as specified in the Figma design.",
+  "expected": "The Release Notes link opens the correct web page displaying the release notes for the current version of the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Release Notes",
-    "About section",
-    "Lens version",
-    "App Settings",
-    "General section",
-    "Figma design",
-    "web page navigation",
-    "version verification"
+    "poly-studio-mobile",
+    "release-notes",
+    "app-settings",
+    "general-settings",
+    "about-screen",
+    "lens-version",
+    "web-link-navigation"
   ],
   "source_last_updated": "1759416405",
   "source_hash": "8dcfca9aba77d5da0a7c940d7c0010f380929a1fe8c887dcedb12f4347a1c70e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.136294Z",
+  "processed_at": "2026-04-25T05:37:16.752830Z",
   "status": "active"
 }
