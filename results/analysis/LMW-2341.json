@@ -19,133 +19,170 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test covers the User Guides section under App Settings at all",
-    "No test covers device image loading behavior in any list/scrolling context within the app",
-    "No test covers pagination or lazy-loading behavior for device lists (e.g., images loading only for first N items)",
-    "No test covers scrolling behavior in the User Guides device list to verify images render beyond the initial visible set",
-    "No test covers placeholder/fallback UI behavior when device images fail to load"
+    "No test case covers the User Guides section under App Settings at all",
+    "No test case covers device image loading behavior in any list/scrolling context",
+    "No test case covers lazy loading or pagination of device assets (images loading only for first N items)",
+    "No test case covers scrolling behavior in the User Guides device list",
+    "No test case covers placeholder/fallback UI for missing or failed image loads",
+    "No test case covers the User Guides section's device list population logic",
+    "No test case covers memory or resource constraints when loading multiple device images in a scrollable list"
   ],
   "generated_testcases": [
     {
-      "title": "TC-UG-001: Verify device images load for all devices in User Guides list after full scroll",
+      "title": "TC-UG-001: Verify User Guides section displays device list and loads images for first 6 devices",
       "steps": [
         "Open Poly Studio Mobile app",
-        "Tap the hamburger menu (\u2630) in the top-left corner",
-        "Tap 'App Settings'",
+        "Tap App Settings (gear icon)",
         "Scroll down and tap 'User Guides'",
-        "Observe the list of devices displayed",
-        "Slowly scroll down through the entire device list until the last device is visible",
+        "Observe the device list displayed",
+        "Verify that at least 6 device entries are visible in the list",
+        "For each of the first 6 devices, verify that a device image/thumbnail is displayed next to the device name",
+        "Tap on one of the first 6 device entries",
+        "Verify that the corresponding user guide PDF or web page loads correctly"
+      ],
+      "expected": "User Guides section shows a scrollable list of devices. The first 6 devices each display a valid device image (not a placeholder/icon). Tapping a device entry loads the correct user guide."
+    },
+    {
+      "title": "TC-UG-002: Verify device images load correctly when scrolling beyond the first 6 devices in User Guides",
+      "steps": [
+        "Open Poly Studio Mobile app",
+        "Tap App Settings (gear icon)",
+        "Scroll down and tap 'User Guides'",
+        "Observe the initial device list",
+        "Scroll down slowly through the entire device list until all devices are visible",
+        "For each device entry beyond the first 6 (e.g., 7th, 8th, 9th...), visually inspect the device image/thumbnail",
         "Scroll back up to the top of the list",
-        "For each device visible in the list, verify that a device image (thumbnail/icon) is displayed next to the device name"
+        "Verify that the first 6 device images are still displayed correctly"
       ],
-      "expected": "All devices in the User Guides list display their corresponding device images. No placeholder icons, broken image indicators, or blank spaces appear for any device, including those beyond the initial visible set."
+      "expected": "All device entries in the User Guides list, including those beyond the first 6, display valid device images. No placeholder icons, broken image symbols, or blank spaces appear for any device. Scrolling back up does not cause previously loaded images to disappear."
     },
     {
-      "title": "TC-UG-002: Verify device images load for devices beyond the top 6 after scrolling",
+      "title": "TC-UG-003: Verify placeholder/fallback UI appears when a device image fails to load in User Guides",
       "steps": [
         "Open Poly Studio Mobile app",
-        "Navigate: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
-        "Count the number of devices visible on screen without scrolling (initial viewport)",
-        "Note the device names and whether images are visible for these top N devices",
-        "Scroll down past the initial viewport to reveal devices 7, 8, 9, etc.",
-        "For each newly revealed device, observe the device image area",
-        "Wait 5 seconds for images to load",
-        "Scroll back up and down slowly through the entire list"
+        "Tap App Settings (gear icon)",
+        "Scroll down and tap 'User Guides'",
+        "Scroll down to a device entry beyond the first 6 that may have a missing image",
+        "If a device image fails to load, observe the fallback UI displayed",
+        "Verify that a placeholder icon (e.g., generic headset/speakerphone icon or device silhouette) is shown instead of a broken image",
+        "Verify that the device name text is still displayed correctly next to the placeholder",
+        "Tap the device entry with the placeholder",
+        "Verify that the user guide still loads correctly despite the missing image"
       ],
-      "expected": "Devices beyond the top 6 (i.e., those not visible in the initial viewport) load their device images successfully after scrolling reveals them. No placeholder icons, gray boxes, or broken image symbols are shown for any device."
+      "expected": "When a device image fails to load, a placeholder/fallback icon is displayed instead of a broken image symbol. The device name remains visible and tappable. The user guide content loads correctly regardless of image load failure."
     },
     {
-      "title": "TC-UG-003: Verify placeholder/fallback UI when device image fails to load",
+      "title": "TC-UG-004: Verify User Guides device list population includes all compatible Poly devices",
       "steps": [
         "Open Poly Studio Mobile app",
-        "Navigate: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
-        "Identify any device entry that shows a placeholder instead of a device image",
-        "If no placeholder is visible, enable Airplane Mode on the phone",
-        "Return to the Poly Studio Mobile app",
-        "Navigate back to User Guides (hamburger menu \u2192 App Settings \u2192 User Guides)",
-        "Scroll through the entire device list",
-        "Observe the image area for each device entry",
-        "Disable Airplane Mode and wait 10 seconds",
-        "Scroll through the device list again"
+        "Tap App Settings (gear icon)",
+        "Scroll down and tap 'User Guides'",
+        "Obtain the full list of device entries displayed",
+        "Cross-reference the displayed device list with the list of all Poly devices compatible with the Poly Studio Mobile app (e.g., Voyager Free 60+ UC, Voyager 5200, Voyager 4320, Voyager 4220, Voyager 6200, Voyager 8200, Voyager Focus 2, Blackwire 8225, Blackwire 7225, Savi 8220, Calisto 7200, Calisto 5300, Sync 20, Sync 40, Sync 60)",
+        "Verify that every compatible device model appears in the User Guides list",
+        "Verify that no duplicate entries exist",
+        "Verify that no non-Poly or unrelated devices appear in the list"
       ],
-      "expected": "When device images fail to load (e.g., due to no network), a proper placeholder/fallback UI element is displayed (e.g., a generic device icon, silhouette, or gray box with a camera/photo icon). The placeholder is visually consistent with the app's design. After network is restored, images load correctly and replace the placeholders."
+      "expected": "The User Guides section displays a complete list of all Poly devices compatible with the app. No devices are missing from the list, no duplicates exist, and no unrelated devices are shown."
     },
     {
-      "title": "TC-UG-004: Verify device images load correctly after app restart and re-scroll",
+      "title": "TC-UG-005: Verify device images load correctly after app restart and re-scroll in User Guides",
       "steps": [
         "Open Poly Studio Mobile app",
-        "Navigate: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
-        "Scroll down to the bottom of the device list",
-        "Scroll back up to the top",
-        "Verify all device images are loaded",
+        "Tap App Settings (gear icon)",
+        "Scroll down and tap 'User Guides'",
+        "Scroll down to the bottom of the device list to trigger lazy loading of all device images",
+        "Scroll back to the top and verify the first 6 device images are displayed",
         "Press the Home button to background the app",
-        "Reopen the Poly Studio Mobile app",
-        "Navigate back: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
-        "Scroll down to the bottom of the list again",
-        "Scroll back up to the top"
+        "Reopen Poly Studio Mobile app from the recent apps list",
+        "Navigate back to App Settings \u2192 User Guides",
+        "Scroll down to the bottom of the device list again",
+        "Scroll back up and verify all device images (including those beyond the first 6) are displayed correctly"
       ],
-      "expected": "After app backgrounding and reopening, all device images in the User Guides list load correctly on re-scroll. No images are missing or replaced by placeholders for any device, including those beyond the initial viewport."
+      "expected": "After app backgrounding and return, all device images in the User Guides list load correctly. No images are replaced by placeholders or broken icons after the app lifecycle transition."
     },
     {
-      "title": "TC-UG-005: Verify device images load after app force-kill and relaunch",
+      "title": "TC-UG-006: Verify device images load correctly after Bluetooth disconnect/reconnect cycle",
       "steps": [
+        "Connect a Poly device (e.g., Voyager Free 60+ UC) to the phone via Bluetooth",
         "Open Poly Studio Mobile app",
-        "Navigate: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
-        "Scroll through the entire device list to trigger image loading",
-        "Verify images are displayed for all devices",
-        "Force-kill the app (swipe it away from the Recent Apps list)",
-        "Relaunch the Poly Studio Mobile app",
-        "Navigate: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
-        "Immediately scroll to the bottom of the device list without waiting",
-        "Observe device images as they appear during scrolling",
-        "Scroll back to the top and verify all images"
-      ],
-      "expected": "After a full app restart, device images load successfully for all devices in the User Guides list, including those beyond the initial viewport. Images may load lazily as the user scrolls, but no permanent placeholders or broken images remain after scrolling through the entire list."
-    },
-    {
-      "title": "TC-UG-006: Verify device images load correctly after device rotation during scroll",
-      "steps": [
-        "Open Poly Studio Mobile app",
-        "Navigate: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
-        "Scroll down approximately halfway through the device list",
-        "Rotate the phone to landscape orientation",
-        "Observe the device images for visible devices",
-        "Scroll to the bottom of the list in landscape mode",
-        "Rotate the phone back to portrait orientation",
-        "Scroll back to the top of the list",
-        "Verify all device images are displayed correctly"
-      ],
-      "expected": "After device rotation, all visible device images in the User Guides list render correctly in both orientations. No images are lost, replaced by placeholders, or misaligned due to the orientation change. Scrolling after rotation loads images for all devices."
-    },
-    {
-      "title": "TC-UG-007: Verify device images load for all devices after rapid scrolling",
-      "steps": [
-        "Open Poly Studio Mobile app",
-        "Navigate: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
-        "Perform a rapid fling scroll from the top of the device list to the bottom",
-        "Immediately perform a rapid fling scroll from the bottom back to the top",
-        "Wait 10 seconds for any pending image loads to complete",
-        "Slowly scroll through the entire list from top to bottom",
-        "For each device entry, check the device image area"
-      ],
-      "expected": "After rapid scrolling, all device images eventually load correctly. No devices show permanent placeholders, broken image icons, or blank spaces. The app does not crash or become unresponsive during rapid scrolling."
-    },
-    {
-      "title": "TC-UG-008: Verify device images load correctly when switching between User Guides and other app sections",
-      "steps": [
-        "Open Poly Studio Mobile app",
-        "Navigate: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
-        "Scroll down to reveal devices beyond the initial viewport",
-        "Verify images are loading for visible devices",
-        "Tap the hamburger menu (\u2630) and navigate to a different section (e.g., 'My Devices')",
+        "Tap App Settings (gear icon)",
+        "Scroll down and tap 'User Guides'",
+        "Scroll through the device list and verify images load for all devices",
+        "Disconnect the Bluetooth connection from the phone's Bluetooth settings",
         "Wait 5 seconds",
-        "Navigate back: hamburger menu (\u2630) \u2192 App Settings \u2192 User Guides",
+        "Reconnect the Bluetooth device",
+        "Reopen Poly Studio Mobile app",
+        "Navigate to App Settings \u2192 User Guides",
         "Scroll through the entire device list",
-        "Repeat the navigation away and back 3 times, scrolling through the list each time"
+        "Verify that all device images load correctly, including devices beyond the first 6"
       ],
-      "expected": "Each time the User Guides section is re-entered, all device images load correctly after scrolling. No cumulative image loading failures occur. The image loading behavior is consistent regardless of how many times the user navigates away and back."
+      "expected": "Device images in the User Guides list load correctly after a Bluetooth disconnect/reconnect cycle. No images fail to load or show placeholders due to the Bluetooth state change."
+    },
+    {
+      "title": "TC-UG-007: Verify device images load correctly under low memory/constrained conditions",
+      "steps": [
+        "Open Poly Studio Mobile app",
+        "Tap App Settings (gear icon)",
+        "Scroll down and tap 'User Guides'",
+        "Scroll rapidly up and down the entire device list multiple times (at least 5 full scroll cycles)",
+        "While scrolling, observe if any device images fail to load or revert to placeholders",
+        "Open several other resource-intensive apps (e.g., Chrome, YouTube, Camera) to trigger memory pressure",
+        "Switch back to Poly Studio Mobile app",
+        "Navigate to App Settings \u2192 User Guides",
+        "Scroll through the device list again",
+        "Verify that all device images are displayed correctly, including those beyond the first 6"
+      ],
+      "expected": "Under memory pressure and rapid scrolling, all device images in the User Guides list load correctly. No images show placeholders, broken icons, or fail to load due to resource constraints. The app does not crash or become unresponsive."
+    },
+    {
+      "title": "TC-UG-008: Verify device images persist after orientation change while in User Guides",
+      "steps": [
+        "Open Poly Studio Mobile app",
+        "Tap App Settings (gear icon)",
+        "Scroll down and tap 'User Guides'",
+        "Scroll down to a position where devices beyond the first 6 are visible",
+        "Rotate the phone to landscape orientation",
+        "Verify that the device list and images re-render correctly in landscape",
+        "Scroll through the list and verify all device images are displayed",
+        "Rotate the phone back to portrait orientation",
+        "Verify that the device list and images re-render correctly in portrait",
+        "Verify that the scroll position is approximately maintained",
+        "Verify that all device images (including those beyond the first 6) are still displayed correctly"
+      ],
+      "expected": "After orientation changes, all device images in the User Guides list load and display correctly in both portrait and landscape orientations. The scroll position is maintained. No images show placeholders or fail to load after config change."
+    },
+    {
+      "title": "TC-UG-009: Verify User Guides section handles rapid tapping on multiple device entries",
+      "steps": [
+        "Open Poly Studio Mobile app",
+        "Tap App Settings (gear icon)",
+        "Scroll down and tap 'User Guides'",
+        "Rapidly tap on 3-4 different device entries in quick succession (within 2 seconds)",
+        "Observe the app behavior",
+        "Verify that the app does not crash",
+        "Verify that the last tapped device's user guide loads correctly",
+        "Navigate back to User Guides list",
+        "Verify that all device images in the list are still displayed correctly"
+      ],
+      "expected": "Rapid tapping on multiple device entries does not crash the app. The last tapped device's user guide loads correctly. Returning to the list shows all device images intact."
+    },
+    {
+      "title": "TC-UG-010: Verify device images load correctly when User Guides is accessed without any Poly device connected",
+      "steps": [
+        "Ensure no Poly Bluetooth device is connected to the phone",
+        "Open Poly Studio Mobile app",
+        "Tap App Settings (gear icon)",
+        "Scroll down and tap 'User Guides'",
+        "Observe the device list",
+        "Scroll through the entire list",
+        "Verify that all device entries display device images correctly (including beyond the first 6)",
+        "Tap on any device entry",
+        "Verify that the user guide loads correctly"
+      ],
+      "expected": "The User Guides section displays the full device list with all images loading correctly even when no Poly device is connected. All device images load for devices beyond the first 6. User guides are accessible without a connected device."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T05:50:17.138466Z"
+  "processed_at": "2026-04-25T08:35:09.759159Z"
 }
