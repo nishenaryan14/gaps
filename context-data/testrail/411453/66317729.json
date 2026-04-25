@@ -7,14 +7,14 @@
   "feature": "Device Management",
   "scenario": "Device name can be changed to a single character (1 byte) in Device Settings - General",
   "steps": [
-    "Open the Poly Studio Mobile app on your Android device.",
-    "From the Home screen, tap on the connected device to open Device Settings.",
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the connected device name to open Device Settings.",
     "In Device Settings, tap on General.",
     "Tap on the device's official name field to edit it.",
     "Delete the existing name and enter a single character (1 byte).",
-    "Tap Done to save the new name."
+    "Tap Done to confirm the name change."
   ],
-  "expected": "The device's name is changed successfully to the single character.",
+  "expected": "The device's name is changed successfully to the single character entered.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,13 +22,13 @@
     "device-settings",
     "general-settings",
     "device-name",
-    "single-character-name",
+    "single-character",
     "name-editing",
-    "android-app"
+    "bluetooth-device-name"
   ],
   "source_last_updated": "1772624495",
   "source_hash": "3146ae9d7cd9d7354e062d1369edff03db5cfb30b3411147756db43b3460702f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.799378Z",
+  "processed_at": "2026-04-25T07:55:31.880715Z",
   "status": "active"
 }
