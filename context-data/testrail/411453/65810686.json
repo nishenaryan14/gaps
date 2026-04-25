@@ -8,27 +8,25 @@
   "scenario": "Tutorial screen navigation to Quick Start Guide displays correct image and text per Figma design",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. If this is the first launch, the Tutorial screen will appear. If not, navigate to Account \u2192 Tutorial to access the Tutorial screen.",
-    "3. On the Tutorial screen, locate and tap the 'Quick Start Guide' (QSG) option or button.",
-    "4. Observe the QSG screen that loads.",
-    "5. Compare the displayed image and text on the QSG screen against the Figma design specifications."
+    "2. On the Home screen, locate and tap the Tutorial option.",
+    "3. On the Tutorial screen, find and tap the Quick Start Guide (QSG) option.",
+    "4. Observe the image and text displayed on the QSG screen."
   ],
-  "expected": "The QSG screen displays the correct image and text exactly as specified in the Figma design.",
+  "expected": "The QSG screen displays the correct image and text as specified in the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "tutorial-screen",
     "quick-start-guide",
+    "qsg",
     "figma-design",
     "ui-navigation",
-    "account-settings",
-    "android-app",
-    "onboarding"
+    "android-app"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "fcaf9b55ab132520ac4e2c1d4e452fa87ea115580e96a9bfc2c91e6e5b74dfb8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.014257Z",
+  "processed_at": "2026-04-25T09:32:26.270007Z",
   "status": "active"
 }
