@@ -7,28 +7,29 @@
   "feature": "Firmware Update",
   "scenario": "Software Update tab shows \"Up to date\" when Voyager Free 60+ earbuds are on latest firmware and Charge Case is on firmware 5038 (non-1-step DFU)",
   "steps": [
-    "Open the Poly Studio Mobile app on your Android device.",
-    "Ensure your Poly Voyager Free 60+ earbuds are connected and on the latest firmware.",
+    "Open the Poly Studio Mobile app.",
+    "Ensure the Poly Voyager Free 60+ earbuds are connected and on the latest firmware.",
     "Ensure the Charge Case is on firmware 5038 (which does not support 1-step DFU).",
     "Navigate to the Home screen.",
-    "Locate and tap on the Software Update tab/section.",
-    "Observe the status displayed on the Software Update screen."
+    "Locate and tap the Software Update tab/section.",
+    "Observe the status displayed on the Software Update tab."
   ],
   "expected": "The Software Update tab shows \"Up to date\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "software-update",
+    "software-update-tab",
     "up-to-date",
     "voyager-free-60-plus",
     "charge-case",
     "firmware-5038",
     "poly-studio-mobile",
+    "home-screen",
     "1-step-dfu"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "ac6025826f16abae5cc21ae4c8c5e57523ffd4dce6b5b15f6d1fd6c95c4a7657",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.038420Z",
+  "processed_at": "2026-04-25T09:32:26.292827Z",
   "status": "active"
 }
