@@ -5,16 +5,15 @@
   "project": "411453",
   "title": "Rename device - only one earbud is connected, rename is not possible",
   "feature": "Device Management",
-  "scenario": "Device rename option missing from Device Settings - General when only one earbud is connected",
+  "scenario": "Device rename option is unavailable in Device Settings > General when only one earbud is connected",
   "steps": [
-    "Open Poly Studio Mobile app on the Android device.",
-    "Ensure only one earbud (left or right) is connected to the phone via Bluetooth.",
-    "Navigate to Home screen.",
-    "Tap on the connected device name to open Device Settings.",
-    "Tap on General.",
-    "Look for the Rename Device option."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Tap on the connected device name to open Device Settings.",
+    "3. Tap on General.",
+    "4. Attempt to rename the device by tapping on the device name field.",
+    "5. Observe if the rename option is available or if the field is editable."
   ],
-  "expected": "The Rename Device option should be available in Device Settings \u2192 General regardless of whether one or both earbuds are connected.",
+  "expected": "The user should be able to rename the device from Device Settings > General regardless of whether one or both earbuds are connected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,12 +22,12 @@
     "device-settings",
     "general-settings",
     "single-earbud",
-    "bluetooth-connection",
-    "android-app"
+    "rename-unavailable",
+    "app-configuration"
   ],
   "source_last_updated": "1769431307",
   "source_hash": "ac2db836b12a7467309ddf136381716d9b5c52d7270e92800e2a0dcf1eb4f6e0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.794828Z",
+  "processed_at": "2026-04-25T07:55:31.871747Z",
   "status": "active"
 }
