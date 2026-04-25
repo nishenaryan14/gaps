@@ -4,31 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Language Change - \"Later\" button",
-  "feature": "Language Settings",
-  "scenario": "Changing device language and tapping \"Later\" on the update prompt incorrectly changes the language instead of keeping the current language displayed.",
+  "feature": "App Settings",
+  "scenario": "Tapping \"Later\" on firmware update prompt dismisses language selection list and keeps current language unchanged in Poly Studio Mobile app",
   "steps": [
-    "1. Open device settings.",
-    "2. Navigate to language settings.",
-    "3. Change the device language to a different language.",
-    "4. When the update prompt appears, tap the \"Later\" button.",
-    "5. Observe the displayed language on the device."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Navigate to Account \u2192 Settings \u2192 Language.",
+    "Select a new language from the list (e.g., French).",
+    "Observe the firmware update prompt appear.",
+    "Tap the \"Later\" button on the firmware update prompt."
   ],
-  "expected": "The language should not be changed and the current language should remain displayed.",
+  "expected": "The language selection list is dismissed, and the current language remains unchanged (the language does not switch to the selected one).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device language",
-    "language settings",
-    "update prompt",
-    "Later button",
-    "language change bug",
-    "incorrect language display",
-    "settings navigation",
-    "language persistence"
+    "poly-studio-mobile",
+    "firmware-update",
+    "language-selection",
+    "later-button",
+    "settings-language",
+    "dismiss-prompt",
+    "language-persistence"
   ],
   "source_last_updated": "1762252394",
   "source_hash": "dda47d64465751ad0ad3a04c66e01c33348695f4b250dc4b26e805c536a2a8b0",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.226428Z",
+  "processed_at": "2026-04-25T05:37:16.803903Z",
   "status": "active"
 }
