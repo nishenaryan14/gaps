@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Device Settings - Headset disconnected on Settings screen",
   "feature": "Device Management",
-  "scenario": "Device Settings screen does not update to show disconnected-state options when headset is disconnected",
+  "scenario": "Device Settings screen does not update available options when headset is disconnected",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Ensure a Poly Bluetooth headset is connected and paired.",
-    "3. Navigate to the Home screen and tap on the connected [Device Name] to enter the Device Settings screen.",
-    "4. Observe the available settings options (e.g., Audio Settings, ANC, Transparency Mode, Equalizer, etc.) while the headset is connected.",
-    "5. Disconnect the headset (e.g., turn off the headset, move out of range, or disconnect via Bluetooth settings).",
-    "6. Return to the Device Settings screen in the Poly Studio Mobile app.",
-    "7. Observe the settings options now displayed on the Device Settings screen."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen and ensure a Poly Bluetooth headset is connected.",
+    "3. Tap on the connected device name to open the Device Settings screen.",
+    "4. While on the Device Settings screen, disconnect the headset (e.g., turn off the headset or move out of range).",
+    "5. Observe the Device Settings screen after the disconnection."
   ],
-  "expected": "The Device Settings screen should update to show only options available while the device is disconnected (e.g., limited settings or a prompt to reconnect). Connected-headset-specific options (e.g., ANC, Transparency Mode, Equalizer) should no longer be displayed.",
+  "expected": "The Device Settings screen should update to show only options available while the device is disconnected (e.g., limited settings or a \"reconnect\" prompt).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-settings-screen",
-    "disconnected-state",
     "bluetooth-disconnection",
-    "settings-options-persistence",
-    "anc",
-    "transparency-mode",
-    "equalizer"
+    "ui-update",
+    "headset-disconnected",
+    "settings-options",
+    "poly-bluetooth-headset"
   ],
   "source_last_updated": "1762433859",
   "source_hash": "49f3c0f6536e7e4f9f2b37532f604668dbd86f8a4aa528872b3800e571b211a6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.970834Z",
+  "processed_at": "2026-04-25T09:32:26.201836Z",
   "status": "active"
 }
