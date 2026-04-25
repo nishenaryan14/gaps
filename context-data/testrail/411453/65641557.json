@@ -7,22 +7,23 @@
   "feature": "ANC",
   "scenario": "ANC mode switching between Adaptive and Standard during a call with Transparency pre-enabled results in different post-call ANC/Transparency behavior across Emu/Osprey/Tern vs Lark/Peregrine devices",
   "steps": [
-    "1. Open Poly Studio Mobile app and navigate to Home screen.",
-    "2. Tap on the connected device name to open Device Settings.",
-    "3. Go to Audio Settings \u2192 ANC and ensure ANC Mode is OFF and set to either Adaptive or Standard.",
-    "4. Go to Audio Settings \u2192 Transparency Mode and ensure it is ON and set to either Environment or Speech.",
+    "1. Open Poly Studio Mobile app on the Home screen.",
+    "2. Tap the connected device name to open Device Settings.",
+    "3. Set preconditions: ANC Mode = OFF, ANC Type = Adaptive (or Standard).",
+    "4. Set Transparency Mode = ON, Transparency Type = Environment (or Speech).",
     "5. Start or join a call (e.g., Zoom, Teams, or Mobile call).",
-    "6. Observe that ANC turns ON with the previously selected option (Adaptive or Standard), and Transparency becomes greyed out and OFF.",
-    "7. Tap the Transparency toggle in Audio Settings.",
-    "8. Observe the popup informing that Transparency is not available during a call.",
-    "9. In Audio Settings \u2192 ANC, change the ANC mode between Adaptive and Standard.",
-    "10. Verify that the user can switch between Adaptive and Standard during the call.",
+    "6. Observe that ANC turns ON with the previously selected type (Adaptive or Standard), and Transparency becomes greyed out and OFF.",
+    "7. Tap the Transparency toggle in the app.",
+    "8. Observe the popup informing that Transparency is not available during a call. Dismiss the popup.",
+    "9. In Audio Settings, change ANC between Adaptive and Standard.",
+    "10. Verify the user can switch between Adaptive and Standard during the call.",
     "11. End/leave the call.",
-    "12. On Emu/Osprey/Tern devices: Verify that ANC stays ON with the value selected during the call, and Transparency becomes accessible again and is set to OFF (with its previous value retained).",
-    "13. On Lark/Peregrine devices: Verify that ANC turns OFF with the value selected during the call, and Transparency becomes accessible again and is set to ON (with its previous value retained).",
-    "14. Tap the ANC and Transparency toggles and verify the user can move between ANC and Transparency modes."
+    "12. On Emu/Osprey/Tern devices: Verify ANC stays ON with the value selected during the call, and Transparency becomes accessible again and is set to OFF (with previous value preserved).",
+    "13. On Lark/Peregrine devices: Verify ANC turns OFF with the value selected during the call, and Transparency becomes accessible again and is set to ON (with previous value preserved).",
+    "14. Tap the ANC toggle and the Transparency toggle.",
+    "15. Verify the user can move freely between ANC and Transparency modes."
   ],
-  "expected": "On Emu/Osprey/Tern devices: After the call, ANC stays ON with the value selected during the call, Transparency becomes accessible again and is set to OFF with its previous value retained. On Lark/Peregrine devices: After the call, ANC turns OFF with the value selected during the call, Transparency becomes accessible again and is set to ON with its previous value retained. In both cases, the user can toggle between ANC and Transparency modes freely after the call.",
+  "expected": "On Emu/Osprey/Tern: After the call, ANC stays ON with the value selected during the call; Transparency becomes accessible again and is set to OFF with the previous value preserved. On Lark/Peregrine: After the call, ANC turns OFF with the value selected during the call; Transparency becomes accessible again and is set to ON with the previous value preserved. In both cases, the user can toggle between ANC and Transparency modes freely after the call.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -32,12 +33,12 @@
     "transparency-mode",
     "post-call-behavior",
     "poly-studio-mobile",
-    "audio-settings",
-    "device-behavior-difference"
+    "device-settings",
+    "call-management"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "5e2a50395bea0d73007cde2d00551df74fa882b3437fe7aa45e47d116bec8e11",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.933835Z",
+  "processed_at": "2026-04-25T08:21:31.009092Z",
   "status": "active"
 }
