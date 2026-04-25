@@ -4,31 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "App Settings - General - Notifications & Device Alerts - Navigation",
-  "feature": "App Settings - General - Notifications & Device Alerts",
-  "scenario": "Verify navigation from App Settings to Notifications & Device Alerts and back matches Figma design",
+  "feature": "App Settings",
+  "scenario": "Navigate to Notifications & Device Alerts under App Settings > General and verify UI matches Figma design",
   "steps": [
-    "Start the app",
-    "Tap the App Settings icon (hamburger menu)",
-    "Tap General",
-    "Tap Notifications & Device Alerts",
-    "Tap back"
+    "1. Open the Poly Studio Mobile app on the Home screen.",
+    "2. Tap the hamburger menu icon (App Settings) to open the side menu.",
+    "3. Tap General.",
+    "4. Tap Notifications & Device Alerts.",
+    "5. Tap the back button."
   ],
-  "expected": "The Notifications & Device Alerts tab matches Figma design (https://www.figma.com/file/IgfSERyqCoRH3Iyejre5oE/Lens-Mobile?node-id=17096%3A132638). After tapping back, the user returns to the App Settings page.",
+  "expected": "Step 4: The Notifications & Device Alerts screen matches the Figma design. Step 5: User returns to the App Settings (General) page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "App Settings",
-    "Notifications & Device Alerts",
-    "Navigation",
-    "Hamburger menu",
-    "General",
-    "Back navigation",
-    "Figma design",
-    "UI verification"
+    "poly-studio-mobile",
+    "app-settings",
+    "notifications-and-device-alerts",
+    "general-settings",
+    "hamburger-menu",
+    "ui-figma-verification",
+    "side-menu-navigation"
   ],
   "source_last_updated": "1759416431",
   "source_hash": "8cb620288a75e740611cfcaeacc690acdc64e1ddb21358b077a36c3592a4045e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.144442Z",
+  "processed_at": "2026-04-25T05:37:16.758406Z",
   "status": "active"
 }
