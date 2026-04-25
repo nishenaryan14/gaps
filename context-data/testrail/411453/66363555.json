@@ -7,12 +7,13 @@
   "feature": "Firmware Updates",
   "scenario": "Charge Chase popup card incorrectly displayed on Device Home screen after earbud firmware update via app",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. On the Home screen, ensure the earbuds (EB) have a firmware update available and the Charge Chase (CC) is on the latest firmware version.",
-    "3. Initiate the earbuds firmware update from the Home screen.",
-    "4. Wait for the firmware update to complete successfully.",
-    "5. After the update completes, return to the Device Home screen.",
-    "6. Observe whether the Charge Chase popup card is displayed on the Device Home screen."
+    "1. Ensure the Poly Studio Mobile app is installed and the Charge Chase (CC) is on the latest firmware version.",
+    "2. Ensure the earbuds have a pending firmware update available.",
+    "3. Open the Poly Studio Mobile app and navigate to the Home screen.",
+    "4. Initiate the earbuds firmware update from the Home screen.",
+    "5. Wait for the firmware update to complete successfully.",
+    "6. Return to the Device Home screen.",
+    "7. Observe whether the Charge Chase popup card is displayed."
   ],
   "expected": "The earbuds firmware update completes successfully. After returning to the Device Home screen, the Charge Chase popup card is NOT displayed.",
   "coverage": [],
@@ -22,13 +23,13 @@
     "device-home-screen",
     "firmware-update",
     "poly-studio-mobile",
-    "earbuds",
+    "earbud-firmware",
     "popup-card-display",
-    "post-update-ui"
+    "ui-persistence"
   ],
   "source_last_updated": "1762331320",
   "source_hash": "5c5f04e079da441ff1c2864e431fb3f19b39b8bfadacce7b0be954510c4081fb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.980757Z",
+  "processed_at": "2026-04-25T07:55:32.008337Z",
   "status": "active"
 }
