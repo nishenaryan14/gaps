@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Find My Device - Play/Stop - multiple tries and exits",
   "feature": "App Settings",
-  "scenario": "Find My Device play/stop tone does not behave correctly after repeated start/stop cycles in Poly Studio Mobile app",
+  "scenario": "Find My Device play/stop tone fails to behave correctly after repeated start/stop cycles in Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app with a headset connected.",
+    "1. Launch the Poly Studio Mobile app with a Poly Bluetooth headset connected.",
     "2. Navigate to the Home screen.",
-    "3. Tap the menu icon (hamburger) or navigate to App Settings.",
-    "4. Tap 'Find My Device'.",
-    "5. If prompted, grant GPS location access permission.",
+    "3. Tap on App Settings (gear icon).",
+    "4. Tap on Find My Device.",
+    "5. If prompted, allow GPS location access.",
     "6. Tap the Play button to start the Find My Device tone.",
-    "7. Wait for the tone to play for a few seconds.",
-    "8. Tap the Stop button to stop the Find My Device tone.",
-    "9. Repeat steps 6\u20138 multiple times (e.g., 5\u201310 cycles of play/stop)."
+    "7. Tap the Stop button to stop the Find My Device tone.",
+    "8. Repeat steps 6\u20137 multiple times (e.g., 5\u201310 cycles)."
   ],
-  "expected": "The Find My Device tone plays correctly each time Play is tapped and stops immediately each time Stop is tapped, with no audio glitches, delays, or failures after repeated play/stop cycles.",
+  "expected": "The Find My Device tone plays immediately when Play is tapped and stops immediately when Stop is tapped. The sound behaves correctly and consistently after every start/stop cycle.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "poly-studio-mobile",
     "play-stop-tone",
-    "tone-behavior",
-    "start-stop-cycles",
+    "bluetooth-headset",
     "app-settings",
-    "gps-location-permission"
+    "tone-cycling",
+    "gps-location-access",
+    "home-screen"
   ],
   "source_last_updated": "1759932186",
   "source_hash": "1f8a7852716e60e4bc01fe4020042334aeddec3d09fe9c463b6cdb56732f0ce5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.834515Z",
+  "processed_at": "2026-04-25T08:21:30.944936Z",
   "status": "active"
 }
