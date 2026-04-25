@@ -5,37 +5,29 @@
   "project": "411453",
   "title": "Onboarding - Permission for location tracking is not accepted [Android]",
   "feature": "App Settings",
-  "scenario": "Find My Device location permission denial leaves feature window open instead of returning user to Organized screen on Poly Studio Mobile app",
+  "scenario": "Find My Device location permission denial breaks onboarding flow and does not return to Organized screen on Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app for the first time.",
-    "2. Accept the License/Privacy Policy.",
-    "3. Tap Continue on the onboarding screens.",
-    "4. Reach the \"Organized\" screen.",
-    "5. Tap \"Enable now\" on the Find My Device prompt.",
-    "6. Tap \"Deny\" on the location permission pop-up.",
-    "7. Log in or continue as guest.",
-    "8. Connect a Poly Bluetooth audio device.",
-    "9. Navigate to Poly Lens menu \u2192 Find My Device (or from Device Home for a disconnected device).",
-    "10. Tap OK on the Find My Device prompt.",
-    "11. Tap \"Deny\" on the system location permission dialog.",
-    "12. Go back to Find My Device and tap \"Allow\" on the system permission dialog."
+    "1. Launch Poly Studio Mobile app for the first time.",
+    "2. Accept the license/privacy policy when prompted.",
+    "3. On the 'Organized' screen, tap 'Find My Device'.",
+    "4. When the location permission dialog appears, tap 'Deny'.",
+    "5. Observe the resulting screen and behavior."
   ],
-  "expected": "1. After denying the initial location permission on the \"Organized\" screen, the user should be returned to the \"Organized\" screen. 2. The app should display a prompt informing the user that location data is collected for Find My Device. 3. The system permission prompt should appear when accessing Find My Device. 4. After allowing location permission, the user should see their devices displayed on a map.",
+  "expected": "After denying location permission, the user should be returned to the 'Organized' screen and the Find My Device feature should gracefully indicate that location permission is required to proceed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "find-my-device",
     "location-permission",
-    "poly-studio-mobile",
+    "onboarding-flow",
     "organized-screen",
     "permission-denial",
-    "bluetooth-audio-device",
-    "poly-lens-menu",
-    "device-home"
+    "app-crash"
   ],
   "source_last_updated": "1760528516",
   "source_hash": "7b0f7649c0991056344df6269d173b865b56602c261fe44d749b85e45fd7d1e2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.725390Z",
+  "processed_at": "2026-04-25T07:55:31.779000Z",
   "status": "active"
 }
