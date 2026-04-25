@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "Quick Start Guide - Emu - First Screen, Charge Case/ Pairing 1 - zoom in/out",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide Charge Case screen zoom in/out functionality fails to match Figma Pairing screen on Voyager Free 60+",
+  "scenario": "Quick Start Guide zoom in/out toggle on Charge Case screen does not match Figma Pairing (Option 1) text or fails to zoom out on second tap",
   "steps": [
-    "Open Poly Studio Mobile app \u2192 Home screen",
-    "Tap Device Settings for the connected device",
-    "Tap Quick Start Guide",
-    "On the 'Charge Case' screen, tap the blue circle button",
-    "Tap the blue circle button again"
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to Home \u2192 Device Settings \u2192 [Connected Device Name].",
+    "3. Tap on 'Quick Start Guide'.",
+    "4. On the first screen (Charge Case/Pairing 1), locate and tap the blue circle button on the 'Charge Case' section.",
+    "5. Observe the earbud view on screen.",
+    "6. Tap the same blue circle button again."
   ],
-  "expected": "1) After first tap: Earbud zooms in and the screen text matches the Figma Pairing (Option 1) screen. 2) After second tap: Screen zooms out to the original view.",
+  "expected": "1. After first tap: The earbud zooms in and the screen text matches the Figma Pairing (Option 1) screen design. 2. After second tap: The screen zooms out to the original view.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "voyager-free-60-plus",
     "quick-start-guide",
     "charge-case-screen",
-    "zoom-in-out",
+    "zoom-toggle",
     "poly-studio-mobile",
-    "figma-pairing-screen",
-    "device-settings"
+    "pairing-option-1",
+    "earbud-view",
+    "figma-mismatch",
+    "ui-interaction"
   ],
   "source_last_updated": "1763037043",
   "source_hash": "ee9a34f8bff038d7b1c5fd7dc67ae81a8d9fd28fd4dc3ae50015cf0301675cf9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.274593Z",
   "status": "active"
 }
