@@ -6,31 +6,22 @@
   "title": "Device Settings - List of supported settings vs UI headset spec",
   "feature": "Device Management",
   "scenario": "Verify that headset settings listed in Poly Studio Mobile app match the headset UI specification for supported devices",
-  "steps": [
-    "1. Acquire the headset UI specification document for the tested Poly Bluetooth headset.",
-    "2. Open the Poly Studio Mobile app on the mobile device.",
-    "3. Ensure the headset is connected via Bluetooth.",
-    "4. Navigate to the Home screen and tap on the connected [Device Name] to open Device Settings.",
-    "5. Scroll through the list of available settings in Device Settings.",
-    "6. Compare each setting item against the headset UI specification document.",
-    "7. Verify that all settings defined in the spec (e.g., ANC, Transparency Mode, Equalizer, Audio Settings, Notifications) are present in the app."
-  ],
-  "expected": "All supported headset settings from the UI specification are present in the Poly Studio Mobile app under Device Settings.",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile-app",
-    "device-settings",
-    "headset-ui-specification",
-    "anc",
-    "transparency-mode",
-    "equalizer",
-    "audio-settings",
-    "notifications"
+    "poly-studio-mobile",
+    "headset-settings",
+    "ui-specification",
+    "settings-matching",
+    "device-support",
+    "app-ui-verification",
+    "headset-configuration"
   ],
   "source_last_updated": "1762351152",
   "source_hash": "4bde86ea1b94796d4ea89b1643efa4a47fb020725f5c9709effbc47856d17e41",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.793822Z",
+  "processed_at": "2026-04-25T07:55:31.864847Z",
   "status": "active"
 }
