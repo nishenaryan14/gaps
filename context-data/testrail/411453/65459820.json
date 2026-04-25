@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "Notifications  - Update successful",
   "feature": "Notifications",
-  "scenario": "Firmware update completion triggers \"Device is updated\" notification when Poly Lens app is in background; tapping notification redirects to Software update complete screen",
+  "scenario": "Firmware update completion notification redirects to Software update complete screen when app is in background",
   "steps": [
-    "1. Launch the Poly Lens app on the Android device.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Software Update.",
-    "3. Initiate a firmware update for the connected Poly Bluetooth audio device.",
-    "4. While the firmware update is in progress, press the Home button on the Android device to send the Poly Lens app to the background.",
+    "1. Launch Poly Studio Mobile app and connect to a Poly Bluetooth audio device.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software Update.",
+    "3. Initiate a firmware update on the device.",
+    "4. While the firmware update is in progress, press the Home button or switch to another app to send the Poly Studio Mobile app to the background.",
     "5. Wait for the firmware update to complete successfully.",
-    "6. Observe the Android notification shade for a notification.",
-    "7. Tap the 'Device is updated' notification.",
-    "8. Observe the screen that is displayed in the Poly Lens app."
+    "6. Observe the notification area (status bar / notification shade) for a \"Device is updated\" notification.",
+    "7. Tap the \"Device is updated\" notification."
   ],
-  "expected": "A \"Device is updated\" notification appears in the Android notification shade. Tapping the notification redirects the user to the Software update complete screen in the Poly Lens app.",
+  "expected": "A \"Device is updated\" notification appears after the firmware update completes while the app is in the background. Tapping the notification redirects the user to the Software update complete screen in the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "firmware-update",
-    "device-is-updated-notification",
-    "poly-lens-app",
+    "update-completion-notification",
     "software-update-screen",
-    "notification-redirect",
     "background-app",
-    "android-notification"
+    "poly-studio-mobile",
+    "device-updated-notification",
+    "notification-redirect"
   ],
   "source_last_updated": "1761223216",
   "source_hash": "9c2866a8e4cd0dd81c4cdecc98480d96617467c7de09133e71286e87b612bf68",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.967112Z",
+  "processed_at": "2026-04-25T08:21:31.040426Z",
   "status": "active"
 }
