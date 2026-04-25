@@ -7,14 +7,14 @@
   "feature": "App Settings",
   "scenario": "\"Share Data\" toggle remains persistently ON after app restart when enabled during onboarding on Poly Studio Mobile",
   "steps": [
-    "1. Launch Poly Studio Mobile for the first time and complete the onboarding flow.",
-    "2. Tap \"Continue as Guest\" when prompted.",
-    "3. Tap \"Share Data\" and select any location permission option presented.",
+    "1. Launch the Poly Studio Mobile app for the first time and complete the onboarding flow.",
+    "2. On the onboarding screen, tap \"Continue as Guest\".",
+    "3. Tap the \"Share Data\" toggle to enable it (select any location permission option if prompted).",
     "4. Navigate to App Settings \u2192 General \u2192 Account.",
-    "5. Confirm the \"Share Data\" toggle is ON and the description is correct.",
-    "6. Restart the Poly Studio Mobile app.",
+    "5. Verify the \"Share Data\" toggle is ON and the correct description is displayed.",
+    "6. Force close and restart the Poly Studio Mobile app.",
     "7. Navigate to App Settings \u2192 General \u2192 Account.",
-    "8. Verify the \"Share Data\" toggle is still ON."
+    "8. Observe the state of the \"Share Data\" toggle."
   ],
   "expected": "The \"Share Data\" toggle remains persistently ON after restarting the app.",
   "coverage": [],
@@ -22,7 +22,7 @@
   "keywords": [
     "share-data-toggle",
     "poly-studio-mobile",
-    "onboarding-flow",
+    "onboarding",
     "data-persistence",
     "app-restart",
     "account-settings",
@@ -31,6 +31,6 @@
   "source_last_updated": "1760537917",
   "source_hash": "b088e6cfc142a8a9f75f0ea49ded4fccd173aea05d7f24b0ae336b4f585eeb90",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.910862Z",
+  "processed_at": "2026-04-25T09:32:26.130114Z",
   "status": "active"
 }
