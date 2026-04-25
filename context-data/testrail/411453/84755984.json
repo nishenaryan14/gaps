@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Support - App page Go button no wifi [New]",
-  "feature": "Support - App Page",
-  "scenario": "When WiFi is off, tapping the Go Button on the Support > App page shows an error screen instead of expected behavior.",
+  "feature": "App Settings",
+  "scenario": "Poly Studio Mobile app shows \"Something is wrong\" screen when tapping Go in Support > App with Wi-Fi turned off",
   "steps": [
-    "1. Turn off WiFi on the device.",
-    "2. Open the Support section.",
-    "3. Navigate to the App page.",
-    "4. Tap the Go Button."
+    "1. Open the Poly Studio Mobile app on the mobile device.",
+    "2. Ensure Wi-Fi is turned OFF on the device.",
+    "3. Navigate to the Support section from the Home screen.",
+    "4. Tap on the 'App' option within Support.",
+    "5. Tap the 'Go' button on the screen.",
+    "6. Observe the app's response."
   ],
-  "expected": "The app should handle the lack of internet connection gracefully (e.g., show a relevant message or attempt to proceed).",
+  "expected": "The app should detect that Wi-Fi is off and display a user-friendly message or prompt indicating that an internet connection is required, or gracefully handle the state without crashing or showing an error screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "WiFi off",
-    "Go Button",
-    "Support page",
-    "App page",
-    "error screen",
-    "offline behavior",
-    "button tap",
-    "network error"
+    "poly-studio-mobile",
+    "support-section",
+    "app-error",
+    "wifi-off",
+    "something-is-wrong",
+    "error-screen",
+    "app-crash"
   ],
   "source_last_updated": "1773312447",
   "source_hash": "f89e803a6a5e6a265937877bc733a0ec3a9e444fbfcea3fa4a1eac5128237bc6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.197011Z",
+  "processed_at": "2026-04-25T05:37:16.784670Z",
   "status": "active"
 }
