@@ -4,28 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "App Settings - General - Notifications & Device Alerts - Tab UI",
-  "feature": "App Settings - General - Notifications & Device Alerts",
-  "scenario": "Verify the Notification tab UI under General settings matches the Figma design",
+  "feature": "Notifications",
+  "scenario": "Notifications & Device Alerts tab UI under General settings does not match Figma design",
   "steps": [
-    "Navigate to General settings.",
-    "Click on the Notification tab.",
-    "Check the menu."
+    "Open the Poly Studio Mobile app.",
+    "Navigate to the Home screen.",
+    "Tap on the menu icon or settings gear to access Settings.",
+    "Select General settings.",
+    "Tap on the Notifications tab (or Notifications & Device Alerts).",
+    "Observe the UI elements, layout, and available options on the screen."
   ],
-  "expected": "The tab is present as shown in Figma design.",
+  "expected": "The Notifications & Device Alerts screen UI matches the Figma design in terms of layout, labels, toggles, and styling.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Notification tab",
-    "General settings",
-    "UI verification",
-    "Figma design",
-    "menu check",
-    "settings UI",
-    "notification settings"
+    "poly-studio-mobile",
+    "general-settings",
+    "notifications-tab",
+    "device-alerts",
+    "ui-mismatch",
+    "figma-design",
+    "settings-screen"
   ],
   "source_last_updated": "1759416420",
   "source_hash": "9290dda9f56da59096a74c37e517fdfe4c3b02f217142f7a28c93c59471794cb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.137304Z",
+  "processed_at": "2026-04-25T05:37:16.755335Z",
   "status": "active"
 }
