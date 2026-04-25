@@ -6,15 +6,15 @@
   "summary": "iOS \ud83d\udc40 Free60+/20 | Image missing on Home Screen",
   "feature": "App Settings",
   "scenario": "Headset image missing from Poly Studio Mobile app Home Screen when Voyager Free 60+ or Voyager Free 20 is paired",
-  "description_clean": "Headset image is missing from the Poly Studio Mobile app Home Screen when a Poly Voyager Free 60+ or Poly Voyager Free 20 is paired. No placeholder image is displayed either. Expected: The headset image should appear on the Home Screen.",
+  "description_clean": "Headset image is missing from the Poly Studio Mobile app Home Screen when a Poly Voyager Free 60+ or Poly Voyager Free 20 is paired. No placeholder image is displayed on the test build, while two placeholder images appear side by side on the production app. Expected: The correct headset image should be shown on the Home Screen.",
   "steps": [
-    "Open the Poly Studio Mobile app on your Android device.",
-    "Ensure no device is currently connected or paired.",
-    "Pair a Poly Voyager Free 60+ or Poly Voyager Free 20 headset via Bluetooth.",
-    "Observe the Home Screen of the app after pairing is complete."
+    "1. Launch the Poly Studio Mobile app on an Android device.",
+    "2. Pair a Poly Voyager Free 60+ or Poly Voyager Free 20 Bluetooth audio device with the Android device.",
+    "3. Observe the Home Screen of the Poly Studio Mobile app.",
+    "4. Check for the headset image corresponding to the paired device."
   ],
-  "expected": "The headset image for the Poly Voyager Free 60+ or Poly Voyager Free 20 should appear on the Home Screen of the Poly Studio Mobile app.",
-  "actual": "The headset image is missing from the Home Screen. No placeholder image is displayed either.",
+  "expected": "The correct headset image for the paired Poly Voyager Free 60+ or Poly Voyager Free 20 should be displayed on the Home Screen.",
+  "actual": "The headset image is missing from the Home Screen. No placeholder image is displayed on the test build, while two placeholder images appear side by side on the production app.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -24,13 +24,13 @@
     "headset-image",
     "voyager-free-60-plus",
     "voyager-free-20",
-    "bluetooth-pairing",
     "android",
+    "bluetooth-pairing",
     "device-image-missing"
   ],
   "source_last_updated": "2026-04-23T13:42:08.000+0000",
   "source_hash": "6bb2e07279ee96ba8c6b35fdd0b75ac0634b9ec78e66fdd1bb2dd2a7095c2673",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.587049Z",
+  "processed_at": "2026-04-25T09:32:25.083490Z",
   "status": "active"
 }
