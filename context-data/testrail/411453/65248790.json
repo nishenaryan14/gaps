@@ -4,31 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Find My Device - Connected / Nearby device details",
-  "feature": "App Settings",
-  "scenario": "\"Find My Device\" feature in App Settings correctly displays connected device name, connection status, instruction text, and Play button",
+  "feature": "App Settings / Device Management",
+  "scenario": "Find My Device screen shows device name, connection status, and Play button when GPS location permission is granted",
   "steps": [
-    "Open Poly Studio Mobile app on the mobile device.",
-    "Navigate to the Home screen.",
-    "Tap on the connected device name to open Device Settings.",
-    "Tap on the menu icon (three dots or hamburger) or navigate to App Settings.",
-    "Select 'Find My Device' from the App Settings menu.",
-    "Observe the displayed information on the Find My Device screen."
+    "1. Ensure a Poly Bluetooth headset is paired and connected to the phone via the Poly Studio Mobile app.",
+    "2. Open the Poly Studio Mobile app on the Android device.",
+    "3. Navigate to App Settings (gear icon or menu).",
+    "4. Tap on 'Find My Device'.",
+    "5. Ensure GPS location permission has been granted to the app.",
+    "6. Tap the blue geo icon (location/map icon).",
+    "7. Observe the new window that opens."
   ],
-  "expected": "The Find My Device screen displays the connected/nearby device details including: device name, connection status (Connected), a description instructing the user to ensure the device is the main audio source to play a tone, and a Play button.",
+  "expected": "A new window opens showing: the device name, connection status (\"Connected\"), a description instructing the user to ensure this device is the main audio source to play a tone, and a Play button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "poly-studio-mobile",
-    "app-settings",
-    "device-settings",
+    "gps-location-permission",
     "connection-status",
     "play-button",
-    "device-name"
+    "bluetooth-headset",
+    "geo-icon",
+    "app-settings"
   ],
   "source_last_updated": "1759928440",
   "source_hash": "ecaf3032835267094300f02f0aa5ea9903fde256c84772523a36b0d4d1ec1b7f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.765048Z",
+  "processed_at": "2026-04-25T07:55:31.832350Z",
   "status": "active"
 }
