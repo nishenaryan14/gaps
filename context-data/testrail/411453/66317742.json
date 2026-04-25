@@ -5,23 +5,31 @@
   "project": "411453",
   "title": "Rename device - the app in/out the background",
   "feature": "Device Management",
-  "scenario": "Device name does not persist after renaming in Device Settings when app is backgrounded and foregrounded on Poly Studio Mobile",
-  "steps": [],
-  "expected": "",
+  "scenario": "Device name change does not persist after app is backgrounded and foregrounded in Device Settings",
+  "steps": [
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the device name to enter Device Settings.",
+    "Tap on the device name field and rename the device (e.g., change to \"My Poly Device\").",
+    "Confirm or save the new name.",
+    "Press the Home button or swipe up to send the app to the background.",
+    "Reopen the Poly Studio Mobile app by tapping its icon or bringing it back to the foreground.",
+    "Navigate back to Device Settings and observe the device name."
+  ],
+  "expected": "The renamed device name (e.g., \"My Poly Device\") persists and is displayed correctly in Device Settings after the app is brought back to the foreground.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "device-name-persistence",
     "poly-studio-mobile",
-    "device-name",
     "device-settings",
-    "rename-persistence",
     "background-foreground",
-    "app-state-management",
-    "name-persistence"
+    "rename-device",
+    "app-state-preservation",
+    "name-change-persistence"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "0ca24dba338049847df21affe86e2f32d2a378c4c1e5f1e96e3bbef4f1f0f85f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.883385Z",
+  "processed_at": "2026-04-25T08:21:30.975495Z",
   "status": "active"
 }
