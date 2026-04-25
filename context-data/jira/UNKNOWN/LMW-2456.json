@@ -4,33 +4,33 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 FALCON \ud83c\udfa7 \"Falcon\" code name on onboarding screens",
-  "feature": "App Settings",
-  "scenario": "Device Settings > Onboarding screens display code name \"Falcon\" instead of proper product name",
-  "description_clean": "On the Device Settings > Onboarding screens, the device code name \"Falcon\" is displayed instead of the proper product name. The expected behavior is that the proper device name should be shown on onboarding screens.",
+  "feature": "Device Management",
+  "scenario": "Onboarding screens show internal code name \"Falcon\" instead of the correct product name for the paired device",
+  "description_clean": "Onboarding screens display the internal code name \"Falcon\" instead of the proper product name for the paired device.",
   "steps": [
-    "Open the Poly Studio Mobile app on your Android device.",
+    "Open the Poly Studio Mobile app.",
     "Navigate to the Home screen.",
-    "Tap on the device name to access Device Settings.",
-    "Observe the Onboarding screens (e.g., device connection or setup wizard).",
-    "Look for the device name displayed on the Onboarding screens."
+    "Observe the onboarding screens or device pairing/connection screens.",
+    "Look for the displayed device name or product identifier."
   ],
-  "expected": "The proper product name (e.g., Poly Voyager Focus 2) should be displayed on the Onboarding screens.",
-  "actual": "The internal code name \"Falcon\" is displayed instead of the proper product name on the Onboarding screens.",
+  "expected": "The onboarding screens should display the proper product name (e.g., \"Poly Voyager Focus 2\") for the paired device.",
+  "actual": "The onboarding screens display the internal code name \"Falcon\" instead of the proper product name.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-screens",
-    "device-name-display",
-    "falcon-codename",
-    "device-settings",
-    "product-name-labeling",
-    "setup-wizard"
+    "device-name",
+    "product-identifier",
+    "falcon",
+    "paired-device",
+    "ui-labeling",
+    "branding"
   ],
   "source_last_updated": "2026-04-20T13:03:02.000+0000",
   "source_hash": "94495772c4eda2cf2691037a59f15ca8effe7505713e8f0374b85d5e0b0fc958",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.299231Z",
+  "processed_at": "2026-04-25T08:21:30.588562Z",
   "status": "active"
 }
