@@ -6,23 +6,35 @@
   "title": "Rename device - new name in the Notifications",
   "feature": "Notifications",
   "scenario": "Custom device name set in Device Settings > General is not reflected in system notifications (disconnect, low battery, firmware updates)",
-  "steps": [],
-  "expected": "",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen and tap on the connected Poly device to open Device Settings.",
+    "3. In Device Settings, tap on General.",
+    "4. Locate the device name field and enter a new custom name (e.g., \"My Poly Headset\").",
+    "5. Confirm/save the new name.",
+    "6. Disconnect the device (e.g., turn off the headset or move out of range).",
+    "7. Observe the system notification that appears for the disconnect event.",
+    "8. Reconnect the device and allow the battery to drain to a low level, or simulate a low battery condition.",
+    "9. Observe the system notification that appears for low battery.",
+    "10. Trigger a firmware update notification (e.g., via the app or device behavior).",
+    "11. Observe the system notification that appears for the firmware update."
+  ],
+  "expected": "All system notifications (disconnect, low battery, firmware update) display the new custom name instead of the default device name.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "custom-device-name",
     "device-settings",
-    "general-settings",
     "system-notifications",
+    "poly-studio-mobile",
     "disconnect-notification",
     "low-battery-notification",
     "firmware-update-notification",
-    "device-name-persistence"
+    "general-settings"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "22182f7364d925c6499f0736ed5c1d0035c4988ee93f928a56bff587b355efa2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.885153Z",
+  "processed_at": "2026-04-25T08:21:30.978004Z",
   "status": "active"
 }
