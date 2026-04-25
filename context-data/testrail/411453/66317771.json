@@ -5,32 +5,23 @@
   "project": "411453",
   "title": "Device Settings - Setting change propagation",
   "feature": "Device Settings",
-  "scenario": "Device settings changes made in Poly Studio Mobile app are not propagated to other connected devices (e.g., Poly Lens mobile/desktop app)",
-  "steps": [
-    "Pair and connect a Poly Bluetooth headset to Phone A via the Poly Studio Mobile app.",
-    "Pair and connect the same headset to Phone B (or desktop) running Poly Lens mobile/desktop app.",
-    "On Phone A, open the Poly Studio Mobile app.",
-    "Navigate to the Home screen and tap the device name or the \"...\" (More) button to enter Device Settings.",
-    "Change a setting value (e.g., ANC mode, Transparency Mode, Equalizer preset, or Notification settings).",
-    "On Phone B (or desktop), open the Poly Lens app and verify the corresponding setting reflects the change made on Phone A.",
-    "Repeat steps 5\u20136 for each available device setting (Audio Settings \u2192 ANC, Transparency Mode, Equalizer, Notifications, etc.)."
-  ],
-  "expected": "All setting changes made in the Poly Studio Mobile app on Phone A are propagated and visible in the Poly Lens app on the other connected device.",
+  "scenario": "Device setting changes made in Poly Studio Mobile app are not propagated to other connected devices (e.g., Poly Lens mobile/desktop app)",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile-app",
-    "poly-lens-app",
-    "device-settings-propagation",
-    "anc-mode",
-    "transparency-mode",
-    "equalizer-preset",
-    "multi-device-sync",
-    "bluetooth-headset"
+    "poly-studio-mobile",
+    "setting-sync",
+    "multi-device",
+    "poly-lens-mobile",
+    "poly-lens-desktop",
+    "configuration-propagation",
+    "device-settings"
   ],
   "source_last_updated": "1762431573",
   "source_hash": "05a85f8dee0cc14f79c13586587b8af18c4a365434abf088c230043576a5b588",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.795828Z",
+  "processed_at": "2026-04-25T07:55:31.863754Z",
   "status": "active"
 }
