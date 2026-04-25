@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Notifications - Onboarding - Allow, UI",
-  "feature": "Notifications - Onboarding",
-  "scenario": "Verify that after allowing notifications during onboarding, the Notification settings screen shows a master toggle set to ON and allows individual notification toggles to be changed.",
+  "feature": "Notifications",
+  "scenario": "Notification master toggle and individual notification settings are accessible in App Settings > General after onboarding",
   "steps": [
-    "1. Launch the app and proceed through the onboarding flow.",
-    "2. When prompted, allow notifications.",
-    "3. Navigate to the Notification settings screen.",
-    "4. Observe the master toggle for notifications.",
-    "5. Attempt to change individual notification toggles."
+    "1. Launch the Poly Studio Mobile app and complete the onboarding flow.",
+    "2. When prompted during onboarding, tap \"Allow\" to grant notification permissions.",
+    "3. After onboarding completes, navigate to the Home screen.",
+    "4. Tap the menu icon (hamburger) or your profile icon to access App Settings.",
+    "5. Go to App Settings \u2192 General \u2192 Notifications.",
+    "6. Observe the Notifications screen."
   ],
-  "expected": "The Notification settings screen shows a master toggle set to ON and allows individual notification toggles to be changed.",
+  "expected": "The Notifications screen displays a master toggle for Notifications set to ON. Individual notification settings (e.g., call alerts, meeting reminders, firmware updates) are visible and can be toggled on/off independently.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "notification settings",
-    "master toggle",
-    "individual notification toggles",
-    "onboarding",
-    "allow notifications",
-    "toggle ON",
-    "notification permissions"
+    "poly-studio-mobile",
+    "app-settings",
+    "notification-permissions",
+    "notification-master-toggle",
+    "individual-notification-settings",
+    "onboarding-flow",
+    "general-settings",
+    "notifications-screen"
   ],
   "source_last_updated": "1761227849",
   "source_hash": "38c93f85d50c71fddfa0c72ded23e9753a15e360e45e4fc5479d9f1e03885f31",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.312120Z",
+  "processed_at": "2026-04-25T05:37:16.943306Z",
   "status": "active"
 }
