@@ -5,30 +5,23 @@
   "project": "411453",
   "title": "EQ - EQ screen",
   "feature": "Equalizer",
-  "scenario": "EQ screen displays correctly with default Bass preset selected when opening from Settings screen",
-  "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Navigate to the Home screen.",
-    "Tap on the connected device name to open Device Settings.",
-    "Select Audio Settings.",
-    "Tap on Equalizer (EQ).",
-    "Observe the EQ screen and note which preset is selected by default."
-  ],
-  "expected": "The EQ screen displays correctly with the default Bass preset selected.",
+  "scenario": "EQ screen displays selected preset with Bass as default in Poly Studio Mobile app Settings",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "equalizer",
     "eq-screen",
-    "bass-preset",
-    "default-preset",
-    "audio-settings",
-    "device-settings"
+    "preset",
+    "bass",
+    "default",
+    "settings",
+    "app"
   ],
   "source_last_updated": "1761142774",
   "source_hash": "8fae3b2d955be97ff6b6b3d3c8aa52f0f1eec7874e8a826e420ca6a266d744ca",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.912339Z",
+  "processed_at": "2026-04-25T08:21:30.991150Z",
   "status": "active"
 }
