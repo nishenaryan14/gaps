@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "Flamingo/Spoonbill - Software update for standalone headset",
   "feature": "Firmware Update",
-  "scenario": "DFU (software update) completes successfully on a standalone headset (not paired with charge case) via Poly Studio Mobile app Device Settings",
+  "scenario": "DFU (software update) can be performed successfully for a standalone headset not paired with a charge case via Device Settings Software Update tab",
   "steps": [
-    "1. Open Poly Studio Mobile app on the Home screen.",
-    "2. Tap the update button on the device Home screen.",
-    "3. Verify that Device Settings opens with the Software Update tab expanded and only one \"Update\" button visible.",
-    "4. Tap the Update button to initiate the DFU process.",
-    "5. Complete the DFU process on the standalone headset (not paired with a charge case)."
+    "1. Ensure the headset is powered on and not paired with a charge case (standalone mode).",
+    "2. Open the Poly Studio Mobile app and navigate to the Home screen.",
+    "3. Tap the update button displayed on the device Home screen.",
+    "4. Verify that the Device Settings screen opens with the Software Update tab expanded.",
+    "5. Confirm that only one \"Update\" button is shown on the Software Update screen.",
+    "6. Tap the Update button to initiate the DFU process.",
+    "7. Wait for the DFU process to complete without interruption."
   ],
-  "expected": "The DFU process for the standalone headset completes successfully.",
+  "expected": "The DFU process completes successfully. The headset is updated to the latest firmware version and remains functional in standalone mode.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu",
-    "firmware-update",
     "software-update",
-    "poly-studio-mobile",
     "standalone-headset",
+    "poly-studio-mobile",
     "device-settings",
+    "firmware-update",
     "update-button"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "783431837a2b217fa64a8f1d883d71aa30460ac2cd11202b0dc5ee8d7f67ff8f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.077644Z",
+  "processed_at": "2026-04-25T09:32:26.334665Z",
   "status": "active"
 }
