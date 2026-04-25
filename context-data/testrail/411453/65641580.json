@@ -5,25 +5,24 @@
   "project": "411453",
   "title": "EQ - Custom EQ, UI screen, first time",
   "feature": "Equalizer",
-  "scenario": "Custom EQ screen UI displays centered sliders sorted by frequency with disabled Reset and Save buttons on first access",
+  "scenario": "Custom EQ screen UI shows centered sliders sorted high-to-low frequency with disabled Reset and Save buttons on first access",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Ensure a device that supports EQ is connected.",
-    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
-    "4. In Device Settings, tap on Audio Settings.",
-    "5. In Audio Settings, tap on Equalizer (EQ).",
-    "6. On the Equalizer screen, select Custom EQ.",
-    "7. Observe the Custom EQ screen UI."
+    "1. Launch the Poly Studio Mobile app with a connected device that supports Equalizer (EQ).",
+    "2. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
+    "3. In Device Settings, tap on Audio Settings.",
+    "4. In Audio Settings, tap on Equalizer.",
+    "5. On the Equalizer screen, select Custom EQ.",
+    "6. Observe the Custom EQ screen UI."
   ],
-  "expected": "A screen with sliders appears. The number of sliders depends on the connected device. Default slider values are centered. Sliders are sorted from high to low frequency. Reset EQ and Save EQ buttons are present but disabled.",
+  "expected": "A screen with sliders appears. The number of sliders depends on the device. Default slider values are centered. Sliders are sorted from high to low frequency. Reset EQ and Save EQ buttons are present but disabled.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "custom-eq",
     "equalizer-screen",
-    "frequency-sliders",
     "poly-studio-mobile",
     "audio-settings",
+    "frequency-sliders",
     "reset-button-disabled",
     "save-button-disabled",
     "device-settings"
@@ -31,6 +30,6 @@
   "source_last_updated": "1761144835",
   "source_hash": "267c594a8b171a3d255faa41ee1dda161818808949d0213915b2c5b0369081c3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.933326Z",
+  "processed_at": "2026-04-25T08:21:31.003014Z",
   "status": "active"
 }
