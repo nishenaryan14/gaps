@@ -5,31 +5,34 @@
   "project": "411453",
   "title": "Device Home Screen - Zoom out the application to verify that it remains the same",
   "feature": "App Settings",
-  "scenario": "App home screen and Device Settings screen state is preserved after switching away via app switcher and returning to full screen",
+  "scenario": "Poly Studio Mobile app correctly restores home screen and Device Settings screen state after switching via app switcher",
   "steps": [
-    "1. Open the Poly Studio Mobile app with a connected Poly Bluetooth audio device.",
-    "2. Ensure the app is on the Home screen.",
-    "3. Open the device app switcher (multitasking) and verify the preview shows the Home screen correctly.",
-    "4. Tap to return to full screen and verify the app is still on the Home screen with no changes.",
-    "5. Tap the \"...\" (More) button on the Home screen to open Device Settings.",
-    "6. Open the device app switcher (multitasking) and verify the preview shows the Device Settings screen correctly.",
-    "7. Tap to return to full screen and verify the app is still on the Device Settings screen with no changes."
+    "1. Open the Poly Studio Mobile app with a connected Bluetooth audio device.",
+    "2. Open the app switcher (multitasking/recents screen).",
+    "3. Verify the app preview shows the Home screen correctly.",
+    "4. Tap the app preview to return to full screen.",
+    "5. Verify the app is on the same Home screen (no unexpected navigation or restart).",
+    "6. From the Home screen, tap the \"...\" (More) button to open Device Settings.",
+    "7. Open the app switcher again.",
+    "8. Verify the app preview shows the Device Settings screen correctly.",
+    "9. Tap the app preview to return to full screen.",
+    "10. Verify the app remains on the same Device Settings screen (no unexpected navigation or restart)."
   ],
-  "expected": "The app remains on the same screen (Home or Device Settings) after switching away via the app switcher and returning to full screen. The preview in the app switcher correctly shows the current screen.",
+  "expected": "The app maintains its state correctly when switching away and back via the app switcher. The preview shows the correct screen (Home or Device Settings), and returning to full screen keeps the app on the same screen without restarting or navigating away.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "app-switcher",
-    "state-persistence",
     "home-screen",
     "device-settings",
-    "poly-studio-mobile",
+    "state-restoration",
     "multitasking",
-    "screen-preservation"
+    "screen-persistence"
   ],
   "source_last_updated": "1769425374",
   "source_hash": "8999eb834ab093ac34f03e78bd8337a2a5f08f2b04ac7c20eb698ae4661a3adb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.744595Z",
+  "processed_at": "2026-04-25T07:55:31.810673Z",
   "status": "active"
 }
