@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Find My Device - Don't Allow - Enable Now - Allow While Using App [Deprecated for IOS]",
   "feature": "App Settings",
-  "scenario": "Find My Device location permission flow fails when user initially denies then grants \"While Using the App\" permission",
+  "scenario": "Find My Device location permission flow: dialogs appear correctly when denying and then granting \"While Using the App\" permission",
   "steps": [
-    "1. Open the Poly Studio Mobile app with a headset connected.",
-    "2. From the Home screen, tap the main menu (hamburger icon).",
-    "3. Tap \"Find My Device\".",
-    "4. When the location permission popup appears, tap \"Don't Allow\".",
-    "5. Tap \"Enable Now\" on the Find My Device screen.",
-    "6. When the system location permission dialog appears, select \"While Using the App\" to grant permission.",
+    "1. Launch the Poly Studio Mobile app with a supported Bluetooth headset connected.",
+    "2. On the Home screen, tap the main menu (hamburger icon).",
+    "3. From the menu, tap \"Find My Device\".",
+    "4. When the location permission dialog appears, tap \"Don't Allow\".",
+    "5. Observe the in-app prompt and tap \"Enable Now\".",
+    "6. In the system permission dialog, grant location permission by selecting \"While Using the App\".",
     "7. Return to the Poly Studio Mobile app."
   ],
-  "expected": "The location permission popup appears at step 3. After tapping \"Don't Allow\", the Find My Device screen shows an \"Enable Now\" button. After tapping \"Enable Now\", the system permission dialog appears. After granting \"While Using the App\" permission and returning to the app, the Find My Device screen opens without any permission window.",
+  "expected": "After granting location permission, the Find My Device screen opens with no permission dialog remaining. All permission dialogs appear correctly at each step.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "location-permission",
     "while-using-the-app",
-    "permission-flow",
     "poly-studio-mobile",
-    "permission-denied",
-    "enable-now"
+    "permission-dialog",
+    "grant-deny-flow",
+    "bluetooth-headset"
   ],
   "source_last_updated": "1760352232",
   "source_hash": "3ca702ea9176c05b6e6f50b71bc51a5f3fc8c29c1af325e11733fe4d921669b7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.948464Z",
+  "processed_at": "2026-04-25T09:32:26.179906Z",
   "status": "active"
 }
