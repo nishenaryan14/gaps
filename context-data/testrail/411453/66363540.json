@@ -10,10 +10,10 @@
     "Open the Poly Studio Mobile app for the first time (or after clearing app data) to reach the onboarding flow.",
     "Swipe left repeatedly to navigate through all onboarding screens until reaching the sixth (last) screen.",
     "From the sixth screen, swipe left once \u2014 observe the screen transition.",
-    "Continue swiping left and observe the navigation through screens 5, 4, 3, and 2.",
-    "From the second screen, swipe left again and observe the behavior."
+    "Continue swiping left from each subsequent screen and note which screen is displayed.",
+    "Once on the second screen, swipe left again and observe the behavior."
   ],
-  "expected": "Swiping left from the sixth screen navigates back through screens 5, 4, 3, and 2. After reaching the second screen, further left swipes have no effect (the screen stays on the second screen). All screens match the Figma design.",
+  "expected": "Swiping left from the sixth screen navigates back through screens 5, 4, 3, and 2 in order. When on the second screen, further left swipes have no effect (the screen stays on the second screen). All screens match the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,13 +21,13 @@
     "onboarding-flow",
     "left-swipe-navigation",
     "screen-transition",
-    "carousel-navigation",
-    "ui-navigation-bug",
-    "app-first-launch"
+    "ui-navigation",
+    "app-first-launch",
+    "carousel-behavior"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "91ec45d90bf4c1f236303794a87ec611120485f2ea305f1392ae65f857a95bdf",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.947058Z",
+  "processed_at": "2026-04-25T08:21:31.018774Z",
   "status": "active"
 }
