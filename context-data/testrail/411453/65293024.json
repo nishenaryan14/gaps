@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "[IOS]Onboarding - Organized page has a continue button",
   "feature": "App Settings",
-  "scenario": "Onboarding flow shows Poly Lens Login screen after accepting license agreement and tapping Continue on the Organized page",
+  "scenario": "Onboarding flow shows Poly Lens Login screen after tapping Skip on Organized page instead of skipping login",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. On the onboarding flow, accept the License Agreement and Privacy Policy.",
-    "3. Observe the screen that appears after acceptance.",
-    "4. Tap the 'Continue' button on the 'Organized' page.",
-    "5. Observe the screen that appears after tapping Continue."
+    "Open Poly Studio Mobile app",
+    "On the onboarding screen, accept the License and Privacy terms",
+    "Tap Skip on the onboarding flow",
+    "Observe the 'Organized' page displayed",
+    "Tap the 'Continue' button on the 'Organized' page",
+    "Observe the next screen"
   ],
-  "expected": "After accepting the license agreement and privacy policy, the \"Organized\" page is displayed with a \"Continue\" button and text about Poly Lens location tracking. Tapping Continue leads to the POLY LENS Login screen with Login and Continue as Guest options.",
+  "expected": "After tapping Continue on the 'Organized' page, the Poly Lens Login screen should be displayed with 'Login' and 'Continue as Guest' options.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-flow",
-    "license-agreement",
     "organized-page",
     "poly-lens-login",
-    "continue-button",
-    "privacy-policy"
+    "skip-login",
+    "license-privacy-terms",
+    "continue-button"
   ],
   "source_last_updated": "1764319860",
   "source_hash": "815e7efb7f3f8ba69170856220818683e683d5c03b6622e5572c9ecfa3c83bed",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.779000Z",
+  "processed_at": "2026-04-25T08:21:30.909858Z",
   "status": "active"
 }
