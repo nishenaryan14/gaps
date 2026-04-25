@@ -5,30 +5,24 @@
   "project": "411453",
   "title": "CCL - Put the app in the background",
   "feature": "App Settings",
-  "scenario": "CCL setting persists correctly when app is backgrounded and foregrounded in Device Settings > Advanced",
-  "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Advanced.",
-    "3. Locate the Call/Chat Control Lock (CCL) setting and note its current state (e.g., ON or OFF).",
-    "4. Press the Home button or recent apps button to send the app to the background.",
-    "5. Wait a few seconds, then bring the app back to the foreground (e.g., tap the app icon or select it from recent apps).",
-    "6. Navigate back to Device Settings \u2192 Advanced and observe the CCL setting."
-  ],
-  "expected": "The previously selected CCL setting (ON or OFF) is still displayed correctly after bringing the app back to the foreground.",
+  "scenario": "CCL setting persists correctly when returning to Device Settings > Advanced after backgrounding and foregrounding the Poly Studio Mobile app on Voyager Free 60+/60 and Voyager Legend 50",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "ccl",
-    "call-chat-control-lock",
+    "ccl-setting",
     "device-settings",
     "advanced-settings",
-    "background-foreground",
-    "setting-persistence",
-    "poly-studio-mobile"
+    "poly-studio-mobile",
+    "voyager-free-60-plus",
+    "voyager-free-60",
+    "voyager-legend-50",
+    "background-foreground"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "d1b30a7c25ac568daabad0dcecada69bcd5103be540e11165b0d4d587dc029e2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.009092Z",
+  "processed_at": "2026-04-25T09:32:26.266485Z",
   "status": "active"
 }
