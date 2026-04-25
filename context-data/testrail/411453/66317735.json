@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Rename device - new name on the FMD connected card",
   "feature": "Device Management",
-  "scenario": "Renamed device name is not reflected on the connected card in the Find My Device screen",
+  "scenario": "Renamed device name does not update on the connected card in the Find My Device screen after renaming in Settings",
   "steps": [
-    "Open Poly Studio Mobile app on the Android device.",
-    "Ensure a Bluetooth audio device (e.g., Poly Voyager Focus 2) is connected.",
-    "Tap the device name on the Home screen to open Device Settings.",
-    "Tap the device name field (e.g., 'Poly Voyager Focus 2') and rename it to a new name (e.g., 'My Poly Headset').",
-    "Confirm the rename by tapping Save or Done.",
-    "Navigate back to the Home screen.",
-    "Tap the Find My Device (FMD) option or navigate to the FMD screen.",
-    "Observe the device card displayed on the FMD screen."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. From the Home screen, tap the Settings icon (gear icon).",
+    "3. In the Settings menu, tap on the connected device name to access Device Settings.",
+    "4. In Device Settings, tap on 'Rename' (or the pencil/edit icon next to the device name).",
+    "5. Enter a new name for the device (e.g., 'My Poly Headset').",
+    "6. Confirm/save the new name.",
+    "7. Navigate back to the Home screen.",
+    "8. Tap on the 'Find My Device' (FMD) option or screen.",
+    "9. Observe the connected device card displayed on the FMD screen."
   ],
-  "expected": "The device card on the Find My Device (FMD) screen displays the new name (e.g., 'My Poly Headset') that was set in Device Settings.",
+  "expected": "The new name entered in step 5 is correctly displayed on the connected device card in the Find My Device (FMD) screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "rename-device",
     "find-my-device",
-    "device-rename",
-    "device-name-persistence",
+    "device-name-sync",
     "poly-studio-mobile",
     "device-settings",
     "connected-card",
-    "bluetooth-audio-device",
-    "poly-voyager-focus-2"
+    "name-persistence"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "7afa80bfc8f6c9e9df39f97ebb03fba7a7a86f907536a2f6405b548cd18c52e2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.882861Z",
+  "processed_at": "2026-04-25T08:21:30.978004Z",
   "status": "active"
 }
