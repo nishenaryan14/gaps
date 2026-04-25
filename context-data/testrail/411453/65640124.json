@@ -5,23 +5,31 @@
   "project": "411453",
   "title": "Policy: Restore Defaults with Policy applied",
   "feature": "Device Management",
-  "scenario": "Restore Defaults action in Poly Studio Mobile app does not unlock or reset policy-affected settings on Poly Bluetooth audio devices",
-  "steps": [],
-  "expected": "",
+  "scenario": "Restore Defaults action in Poly Studio Mobile app does not unlock or reset policy-locked settings on Poly device",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the paired smartphone.",
+    "2. Navigate to Settings \u2192 Reset Device \u2192 Restore Defaults.",
+    "3. Tap \"Restore Defaults\" to initiate the factory reset/restore process.",
+    "4. After the device restarts and reconnects, navigate to the Device Settings screen for the Poly device.",
+    "5. Verify that any settings previously locked by a policy (e.g., ANC, Transparency Mode, Equalizer, Notifications) remain locked and are not editable.",
+    "6. Check that the values of policy-affected settings still reflect the policy-defined values (i.e., they were not reset to factory defaults)."
+  ],
+  "expected": "Policy-locked settings remain locked and retain their policy-defined values after the Restore Defaults action is performed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "restore-defaults",
-    "policy-affected-settings",
-    "settings-unlock",
-    "settings-reset",
-    "bluetooth-audio-devices",
-    "device-policy"
+    "policy-locked-settings",
+    "factory-reset",
+    "device-settings",
+    "anc",
+    "transparency-mode",
+    "equalizer"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "76951c27bc0808de79ffadd081caea6e584def39cb74fa15a2c668c10535bd06",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.049272Z",
+  "processed_at": "2026-04-25T09:32:26.315823Z",
   "status": "active"
 }
