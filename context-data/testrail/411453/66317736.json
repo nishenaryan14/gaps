@@ -5,33 +5,30 @@
   "project": "411453",
   "title": "Rename device - new name on the FMD disconnected card",
   "feature": "Device Management",
-  "scenario": "Renamed device name does not update on Find My Device disconnected card after renaming in Settings and disconnecting",
+  "scenario": "Renamed device name does not persist on Find My Device disconnected card after renaming in Settings and disconnecting",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Home screen and ensure the target Poly Bluetooth audio device is connected.",
-    "3. Tap on the connected device name to open Device Settings.",
-    "4. In Device Settings, locate and tap the 'Rename' option (or the pencil/edit icon next to the device name).",
-    "5. Enter a new name for the device and confirm/save the change.",
-    "6. Disconnect the device (e.g., turn off the device, move out of range, or use the app to disconnect).",
-    "7. On the Home screen, locate the 'Find My Device' (FMD) section or card showing disconnected devices.",
-    "8. Observe the device name displayed on the disconnected FMD card."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the connected device to open Device Settings.",
+    "Tap on the device name or the Rename option in Device Settings.",
+    "Enter a new name for the device and confirm/save the change.",
+    "Disconnect the device (e.g., turn off the device or disconnect via Bluetooth settings).",
+    "Navigate to the Find My Device (FMD) screen in the app."
   ],
-  "expected": "The disconnected FMD card displays the new (renamed) device name.",
+  "expected": "The disconnected device card on the Find My Device (FMD) screen displays the new device name that was set in Settings/Rename.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "rename-device",
+    "device-rename",
     "find-my-device",
-    "disconnected-card",
     "device-settings",
-    "bluetooth-disconnect",
-    "device-name-persistence",
-    "android-app"
+    "name-persistence",
+    "disconnect-behavior",
+    "bluetooth-disconnection"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "cda0f47859dd4f1cafdb2109e728d8762ad822472cf35a619a021f660ac287c5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.975495Z",
+  "processed_at": "2026-04-25T09:32:26.223429Z",
   "status": "active"
 }
