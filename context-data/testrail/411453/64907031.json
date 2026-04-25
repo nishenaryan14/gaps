@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "App Settings - General - Privacy Policy",
   "feature": "App Settings",
-  "scenario": "Privacy Policy link from Main Menu > General navigates to Poly Privacy Policy page with close button in upper right corner",
+  "scenario": "Privacy Policy page opens via Main Menu > General > Privacy Policy with close button in upper right corner",
   "steps": [
-    "Open the Poly Studio Mobile app on the Android device.",
-    "On the Home screen, tap the Menu icon (hamburger menu) in the upper left corner to open the Main Menu.",
-    "In the Main Menu, tap 'General'.",
-    "In the General settings screen, tap 'Privacy Policy'.",
-    "Observe the page that loads."
+    "Open the Poly Studio Mobile app on the Home screen.",
+    "Tap the Main Menu (hamburger icon) in the upper left corner.",
+    "Tap General.",
+    "Tap Privacy Policy.",
+    "Observe the page that loads.",
+    "Look for a close button (X) in the upper right corner of the Privacy Policy page.",
+    "Verify there is no back button (arrow) in the upper left corner."
   ],
-  "expected": "The user is directed to the Poly Privacy Policy page. A close button (X) is present in the upper right corner of the screen. There is no back button (arrow) in the upper left corner.",
+  "expected": "The Poly Privacy Policy page loads successfully. A close button (X) is present in the upper right corner. No back button (arrow) is present in the upper left corner.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
+    "privacy-policy",
     "main-menu",
     "general-settings",
-    "privacy-policy",
-    "android-app",
-    "navigation",
-    "close-button"
+    "close-button",
+    "ui-navigation",
+    "app-screen"
   ],
   "source_last_updated": "1759416441",
   "source_hash": "8098722329e6077a4d3343e3e94a441a64948d495dd444b4d3e287e40eb811ba",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.760485Z",
+  "processed_at": "2026-04-25T07:55:31.825228Z",
   "status": "active"
 }
