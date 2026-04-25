@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Onboarding - Permission for location tracking is accepted and then revoked [Android]",
-  "feature": "Onboarding / Permissions",
-  "scenario": "User revokes location permission after onboarding and app should gracefully handle Find My Device access with re-enable prompts",
+  "feature": "App Settings",
+  "scenario": "Find My Device does not prompt for location permission after it is revoked via Android Settings",
   "steps": [
-    "Launch the app and complete the onboarding process, accepting the location tracking permission when prompted.",
-    "Navigate to the device's Settings > Apps > Poly Lens > Permissions.",
-    "Revoke the location permission for the app.",
-    "Return to the app and access the 'Find My Device' feature."
+    "1. Launch Poly Studio Mobile app and complete onboarding, accepting the Location permission when prompted.",
+    "2. Navigate to Android Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions and revoke the Location permission.",
+    "3. Return to the Poly Studio Mobile app Home screen.",
+    "4. Tap the menu icon (hamburger menu) or locate the Find My Device feature on the Home screen.",
+    "5. Tap on Find My Device.",
+    "6. Observe the app's response."
   ],
-  "expected": "The app should handle the revoked permission gracefully by showing appropriate prompts (e.g., explaining why location permission is needed) and providing a way for the user to re-enable the location permission.",
+  "expected": "The app should detect that Location permission is revoked and display an appropriate prompt/message asking the user to grant Location permission. The user should be able to re-enable Location permission from the prompt to use Find My Device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "location permission revoked",
-    "Find My Device",
-    "re-enable prompt",
-    "permission handling",
-    "graceful degradation",
-    "onboarding",
-    "Poly Lens",
-    "location access"
+    "find-my-device",
+    "location-permission",
+    "poly-studio-mobile",
+    "android-permissions",
+    "permission-revocation",
+    "permission-prompt",
+    "app-settings"
   ],
   "source_last_updated": "1760528524",
   "source_hash": "a198a395f8d20a34bca9f1ee410054e156086656ea04610a45fe64c70887fd0f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.087343Z",
+  "processed_at": "2026-04-25T05:37:16.707240Z",
   "status": "active"
 }
