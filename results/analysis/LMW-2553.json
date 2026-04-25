@@ -8,225 +8,134 @@
     "66317769",
     "66363584",
     "65482650",
-    "65459460",
-    "65459437",
     "65459439",
     "65459462",
     "65459463",
     "65459464",
     "65459446",
-    "65459465"
+    "65459440",
+    "65459441",
+    "65459429"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test covers the Find My Device (FMD) feature at all \u2014 none of the existing test cases reference FMD tone playback, stop, or replay functionality.",
-    "No test covers rapid Play button presses on FMD causing audio stacking (multiple overlapping tones) \u2014 a concurrent operations / rapid input bug pattern.",
-    "No test covers the Play/Pause button UI state disappearing after rapid Play presses \u2014 a UI state corruption bug pattern.",
-    "No test covers the FMD tone failing to play after a Stop \u2192 Play sequence \u2014 a settings/feature state persistence bug pattern.",
-    "No test covers FMD tone behavior across app lifecycle events (backgrounding, restart) or Bluetooth state transitions (disconnect/reconnect) while tone is playing.",
-    "No test covers FMD tone behavior during concurrent operations such as active call, media streaming, or low battery condition."
+    "No existing test case covers rapid Play/Pause button presses on the connected Poly Bluetooth device.",
+    "No existing test case validates tone stacking or missing tones (FMD - Firmware Missing/Deferred tones) as a failure mode.",
+    "No existing test case covers recovery behavior (device power-off required) after rapid button input.",
+    "No existing test case tests button debounce or rapid input handling on the physical Poly device (e.g., Sync 20, Voyager, Free 60, Surround 85).",
+    "No existing test case validates audio output integrity (tone correctness, no stacking, no missing tones) during or after rapid media control button presses.",
+    "No existing test case covers the interaction between physical button events on the headset/speakerphone and the app's audio/media state management."
   ],
   "generated_testcases": [
     {
-      "title": "FMD-001: Find My Device tone plays successfully on first Play press",
+      "title": "FMD-001: Rapid Play/Pause Button Presses \u2014 Tone Stacking Detection on Sync 20",
       "steps": [
-        "Open Poly Studio Mobile app on the paired mobile device.",
-        "Ensure the Poly device (e.g., Sync 20, Voyager 5200, or other supported device) is connected via Bluetooth.",
-        "Tap the device name at the top of the home screen to enter Device Settings.",
-        "Scroll down and tap 'Find My Device' (or 'Find My Poly').",
-        "Tap the 'Play' button to start the Find My Device tone.",
-        "Observe the device for audible tone output.",
-        "Observe the app UI for the Play/Pause button state."
+        "Open Poly Studio Mobile app and ensure Sync 20 is connected via Bluetooth.",
+        "Play streaming audio (e.g., Spotify, YouTube Music) at 50% volume.",
+        "On the physical Sync 20 device, press the Play/Pause button rapidly 10 times within 3 seconds.",
+        "Observe audio output for tone stacking (multiple overlapping tones) or missing tones.",
+        "Attempt to play/pause audio normally using the Sync 20 Play/Pause button.",
+        "If audio is unresponsive or distorted, power off the Sync 20 by pressing and holding the Power button for 2 seconds, then power back on.",
+        "Reconnect to Sync 20 via Poly Studio Mobile and attempt normal Play/Pause playback."
       ],
-      "expected": "The Find My Device tone plays audibly from the Poly device. The Play button changes to a Pause button in the app UI. No audio distortion or overlapping tones are heard."
+      "expected": "No tone stacking or missing tones occur during or after rapid Play/Pause presses. Audio playback responds correctly to subsequent normal Play/Pause presses. If audio becomes unresponsive, power cycling the Sync 20 restores normal Play/Pause functionality without further issues."
     },
     {
-      "title": "FMD-002: Find My Device tone stops correctly on Pause press",
+      "title": "FMD-002: Rapid Play/Pause Button Presses \u2014 Tone Stacking Detection on Voyager Series",
       "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen (Device Settings \u2192 Find My Device).",
-        "Tap 'Play' to start the FMD tone.",
-        "Wait 3 seconds for the tone to be playing steadily.",
-        "Tap the 'Pause' button to stop the tone.",
-        "Observe that the tone stops immediately.",
-        "Observe the button state in the UI."
+        "Open Poly Studio Mobile app and ensure Voyager (e.g., Voyager 5200, Voyager 4320) is connected via Bluetooth.",
+        "Start media playback (music or podcast) on the connected phone.",
+        "On the physical Voyager device, rapidly press the Play/Pause button 15 times within 5 seconds.",
+        "Listen carefully for overlapping tones, stuttering, or missing audio cues (FMD tones).",
+        "After the rapid presses, press Play/Pause once normally to resume playback.",
+        "If playback is stuck or tones are corrupted, power off the Voyager by sliding the Power switch to Off, wait 5 seconds, then power back on.",
+        "Reconnect via Poly Studio Mobile and verify normal Play/Pause behavior."
       ],
-      "expected": "The FMD tone stops immediately upon tapping Pause. The Pause button reverts to a Play button in the app UI. No residual audio or echo is heard from the device."
+      "expected": "No tone stacking or missing tones are heard during or after rapid Play/Pause presses. Normal single press of Play/Pause correctly toggles playback state. If audio corruption occurs, power cycling the Voyager fully restores correct tone generation and playback control."
     },
     {
-      "title": "FMD-003: Find My Device tone fails to play after Stop \u2192 Play sequence (regression test)",
+      "title": "FMD-003: Rapid Play/Pause Button Presses \u2014 Missing Tones on Free 60",
       "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Tap 'Play' to start the FMD tone.",
-        "Wait 2 seconds, then tap 'Pause' to stop the tone.",
-        "Wait 2 seconds, then tap 'Play' again to replay the tone.",
-        "Observe whether the tone plays on the second Play press.",
-        "Repeat the Stop \u2192 Play sequence 3 more times (total of 4 cycles)."
+        "Open Poly Studio Mobile app and confirm Free 60 earbuds are connected via Bluetooth.",
+        "Play audio media (e.g., streaming music) at moderate volume.",
+        "On the Free 60 earbud (left or right), rapidly press the Play/Pause button 12 times within 4 seconds.",
+        "Monitor audio output for missing tones \u2014 i.e., expected Play/Pause confirmation tones that do not play.",
+        "After the rapid presses, press Play/Pause once and verify the correct tone plays and media toggles.",
+        "If tones are missing or playback is unresponsive, place Free 60 earbuds in the charging case, close the lid, wait 10 seconds, then remove and reconnect.",
+        "Verify in Poly Studio Mobile that Free 60 reconnects and Play/Pause functions normally."
       ],
-      "expected": "The FMD tone plays successfully on every Play press after each Stop. The tone is audible and clear on each replay. The Play/Pause button toggles correctly each cycle."
+      "expected": "All Play/Pause tones play correctly without any missing tones during rapid presses. After rapid input, a single press correctly toggles playback and plays the appropriate tone. If tones are lost, placing earbuds in the case and removing them restores normal tone and playback behavior."
     },
     {
-      "title": "FMD-004: Rapid double-tap Play causes audio stacking (overlapping tones)",
+      "title": "FMD-004: Rapid Play/Pause Button Presses \u2014 Audio Output Integrity on Surround 85",
       "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Tap 'Play' once to start the FMD tone.",
-        "Within 1 second of the first tap, tap 'Play' again rapidly (before the UI updates to Pause).",
-        "Listen for any overlapping or stacked audio tones from the device.",
-        "Observe the Play/Pause button state in the UI.",
-        "Tap the visible button (whatever state it is in) to attempt to stop the tone."
+        "Open Poly Studio Mobile app and ensure Surround 85 headphones are connected via Bluetooth.",
+        "Start media playback (e.g., a test track with clear audio cues) at 50% volume.",
+        "On the Surround 85 right earcup, rapidly press the Play/Pause button 20 times within 5 seconds.",
+        "Evaluate audio output for: (a) tone stacking \u2014 overlapping tones playing simultaneously, (b) missing tones \u2014 expected tones not heard, (c) audio stutter or distortion.",
+        "After rapid presses, press Play/Pause once and verify correct single tone and playback state toggle.",
+        "If audio output is corrupted, power off Surround 85 by holding the Power button for 4 seconds, wait 10 seconds, then power back on.",
+        "Reconnect via Poly Studio Mobile and verify audio integrity with normal Play/Pause."
       ],
-      "expected": "Only one instance of the FMD tone should play. No overlapping/stacked audio should be heard. The Play/Pause button should show the correct state (Pause if tone is playing). The user should be able to stop the tone with a single tap."
+      "expected": "Audio output remains clear with no tone stacking, missing tones, stutter, or distortion during or after rapid Play/Pause presses. A single press after rapid input correctly toggles playback with a single clean tone. Power cycling the Surround 85 fully restores audio integrity if corruption occurs."
     },
     {
-      "title": "FMD-005: Rapid repeated Play presses (5+ taps) cause UI state corruption and audio stacking",
+      "title": "FMD-005: Rapid Play/Pause Button Presses \u2014 App Audio State Sync After Recovery",
       "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Rapidly tap the 'Play' button 5 times in quick succession (within 2 seconds).",
-        "Listen for audio output from the device.",
-        "Observe the Play/Pause button state in the app UI.",
-        "Attempt to stop any playing tone by tapping the visible button.",
-        "If the button is missing or unresponsive, force-close the app and reopen.",
-        "Navigate back to Find My Device and check the button state."
+        "Open Poly Studio Mobile app and connect a Poly Bluetooth device (e.g., Sync 20, Voyager, Free 60, or Surround 85).",
+        "Play media audio from the connected phone.",
+        "On the physical device, rapidly press Play/Pause 15 times within 5 seconds to trigger potential FMD tone corruption.",
+        "Observe the Poly Studio Mobile app UI \u2014 check the Play/Pause icon state on the Now Playing or Audio Settings screen.",
+        "If audio becomes unresponsive, power off the physical device and power it back on.",
+        "Reconnect the device in Poly Studio Mobile.",
+        "Verify that the app's Play/Pause icon state matches the actual audio playback state (playing or paused).",
+        "Press Play/Pause from the app UI and verify correct audio state transition."
       ],
-      "expected": "No audio stacking or overlapping tones should occur \u2014 at most one tone instance plays. The Play/Pause button should remain visible and in the correct state (Pause if tone is playing). If the button disappears, this is a UI corruption bug. After app restart, the FMD screen should show the Play button (idle state)."
+      "expected": "The Poly Studio Mobile app UI correctly reflects the audio playback state after rapid button presses. After device power cycle and reconnection, the app's Play/Pause icon accurately shows the current playback state. Pressing Play/Pause from the app correctly toggles audio playback."
     },
     {
-      "title": "FMD-006: Find My Device tone behavior when app is backgrounded during playback",
+      "title": "FMD-006: Rapid Play/Pause Button Presses \u2014 Device Debounce Validation on Sync 20+",
       "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Tap 'Play' to start the FMD tone.",
-        "While the tone is playing, press the Home button on the phone to background the app.",
-        "Wait 5 seconds.",
-        "Observe whether the tone continues to play or stops.",
-        "Reopen the Poly Studio Mobile app from the app switcher.",
-        "Observe the Find My Device screen and the Play/Pause button state."
+        "Open Poly Studio Mobile app and connect Sync 20+ via Bluetooth.",
+        "Play streaming audio at 50% volume.",
+        "On the Sync 20+, rapidly press the Play/Pause button 25 times within 5 seconds (simulating a stuck or bouncing button scenario).",
+        "After the rapid presses, wait 2 seconds, then press Play/Pause once.",
+        "Verify that only one Play/Pause toggle occurs (not multiple toggles from debounce failure).",
+        "Check audio output for any residual tone stacking or missing tones.",
+        "If audio is corrupted, power cycle Sync 20+ by holding Power button for 2 seconds, waiting 5 seconds, and powering back on.",
+        "Reconnect and verify normal single-press Play/Pause behavior."
       ],
-      "expected": "The FMD tone should continue playing when the app is backgrounded (since it's a device-level tone). When the app is reopened, the Find My Device screen should show the Pause button (indicating tone is still playing). The user should be able to tap Pause to stop the tone."
+      "expected": "The Sync 20+ button debounce logic prevents multiple toggles from a single intended press. After rapid presses, a single press results in exactly one Play/Pause toggle. No tone stacking or missing tones are present. Power cycling restores normal behavior if needed."
     },
     {
-      "title": "FMD-007: Find My Device tone behavior when app is force-killed during playback",
+      "title": "FMD-007: Rapid Play/Pause Button Presses \u2014 FMD Tone Recovery Without App Intervention",
       "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Tap 'Play' to start the FMD tone.",
-        "While the tone is playing, force-close the app (swipe away from recent apps / app switcher).",
-        "Observe whether the tone continues to play or stops on the device.",
-        "Wait 10 seconds.",
-        "Reopen the Poly Studio Mobile app.",
-        "Navigate to Device Settings \u2192 Find My Device.",
-        "Observe the button state and whether any tone is playing."
+        "Open Poly Studio Mobile app and connect a Poly Bluetooth device (e.g., Voyager 5200).",
+        "Play media audio.",
+        "On the physical device, rapidly press Play/Pause 10 times within 3 seconds to induce FMD tone stacking or missing tones.",
+        "Do NOT use the Poly Studio Mobile app to intervene.",
+        "On the physical device only, press and hold the Play/Pause button for 5 seconds to attempt a soft reset or state clear.",
+        "Then press Play/Pause once normally.",
+        "If tones remain corrupted, power off the device using the physical Power button, wait 10 seconds, and power back on.",
+        "Verify that normal Play/Pause tone and playback behavior is restored using only physical device controls."
       ],
-      "expected": "The FMD tone should stop when the app is force-killed (since the app manages the tone command). Alternatively, if the tone is device-persistent, it should continue \u2014 document the actual behavior. Upon reopening the app, the Find My Device screen should show the Play button (idle state) and no tone should be playing."
+      "expected": "The Poly device can recover from FMD tone corruption using only physical button controls (long press or power cycle) without requiring the Poly Studio Mobile app. After recovery, single Play/Pause press produces correct tone and toggles playback correctly."
     },
     {
-      "title": "FMD-008: Find My Device tone behavior during Bluetooth disconnect while playing",
+      "title": "FMD-008: Rapid Play/Pause Button Presses \u2014 Concurrent Call and Media Scenario",
       "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Tap 'Play' to start the FMD tone.",
-        "While the tone is playing, disable Bluetooth on the phone (via Quick Settings or Settings app).",
-        "Observe whether the tone stops immediately or continues.",
-        "Wait 5 seconds.",
-        "Re-enable Bluetooth on the phone.",
-        "Wait for the Poly device to reconnect automatically.",
-        "Open the Poly Studio Mobile app and navigate to Find My Device.",
-        "Observe the button state."
+        "Open Poly Studio Mobile app and connect a Poly Bluetooth device (e.g., Surround 85).",
+        "Place an active phone call on the connected device.",
+        "While on the call, start media playback in the background (e.g., music app).",
+        "End the call \u2014 media should resume automatically.",
+        "Immediately after call ends, rapidly press Play/Pause on the physical device 10 times within 3 seconds.",
+        "Observe for tone stacking or missing tones during the rapid presses.",
+        "Press Play/Pause once and verify correct media toggle.",
+        "If audio is corrupted, power cycle the device and reconnect."
       ],
-      "expected": "The FMD tone should stop when the Bluetooth connection is lost (since the tone is streamed/commanded via Bluetooth). After reconnection, the Find My Device screen should show the Play button (idle state). No tone should be playing."
-    },
-    {
-      "title": "FMD-009: Find My Device tone behavior during Bluetooth reconnect while tone is playing",
-      "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Tap 'Play' to start the FMD tone.",
-        "While the tone is playing, power off the Poly device (press and hold Power button for 2 seconds).",
-        "Observe that the tone stops.",
-        "Power on the Poly device (press Power button for 2 seconds).",
-        "Wait for the device to reconnect to the phone.",
-        "Open the Poly Studio Mobile app and navigate to Find My Device.",
-        "Tap 'Play' to attempt playback.",
-        "Observe the result."
-      ],
-      "expected": "The FMD tone stops when the device powers off. After power-on and reconnection, tapping Play should successfully play the FMD tone again. The feature should work normally after the Bluetooth reconnection cycle."
-    },
-    {
-      "title": "FMD-010: Find My Device tone behavior during an active phone call",
-      "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Place or receive an active phone call on the paired Poly device.",
-        "While the call is active, tap 'Play' on the Find My Device screen.",
-        "Observe what happens to the call audio and the FMD tone.",
-        "End the call.",
-        "Navigate back to Find My Device and check the button state."
-      ],
-      "expected": "The FMD tone should either be disabled during an active call (Play button grayed out) or the tone should play briefly and be overridden by call audio priority. The call should not be dropped or disrupted. After the call ends, the Find My Device screen should return to normal state."
-    },
-    {
-      "title": "FMD-011: Find My Device tone behavior during active media streaming",
-      "steps": [
-        "Open Poly Studio Mobile app and ensure a Poly device is connected.",
-        "Start playing music or a podcast on the phone (e.g., Spotify, YouTube Music) and route audio to the Poly device.",
-        "While media is streaming, navigate to Device Settings \u2192 Find My Device.",
-        "Tap 'Play' to start the FMD tone.",
-        "Observe the media audio and FMD tone behavior.",
-        "Tap 'Pause' to stop the FMD tone.",
-        "Observe whether media playback resumes."
-      ],
-      "expected": "The FMD tone should play and may temporarily duck or pause the media audio. When the FMD tone is stopped, media playback should resume normally. No audio artifacts or permanent audio routing changes should occur."
-    },
-    {
-      "title": "FMD-012: Find My Device tone behavior on low battery condition",
-      "steps": [
-        "Ensure the Poly device battery is at a low level (\u226415% or as indicated in the app).",
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Tap 'Play' to start the FMD tone.",
-        "Observe whether the tone plays at normal volume and clarity.",
-        "Let the tone play for 10 seconds.",
-        "Tap 'Pause' to stop the tone.",
-        "Repeat the Play/Stop cycle 3 times.",
-        "Observe the device battery level indicator in the app."
-      ],
-      "expected": "The FMD tone should play at normal volume even on low battery. No audio distortion, reduced volume, or failure to play should occur. The battery level indicator should continue to update correctly. The Play/Pause button should function normally."
-    },
-    {
-      "title": "FMD-013: Find My Device tone \u2014 rapid Play \u2192 Pause \u2192 Play \u2192 Pause cycling (10 cycles)",
-      "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Rapidly cycle through Play \u2192 Pause \u2192 Play \u2192 Pause for 10 complete cycles (each action within 1 second of the previous).",
-        "After the 10th cycle, leave the tone in the Playing state.",
-        "Observe the audio output \u2014 listen for stacking, distortion, or silence.",
-        "Observe the Play/Pause button state in the UI.",
-        "Tap Pause to stop the tone.",
-        "Wait 3 seconds, then tap Play one final time."
-      ],
-      "expected": "After rapid cycling, the tone should play cleanly with no stacking or distortion. The Play/Pause button should correctly reflect the current state after each tap. On the final Play press, the tone should play normally. No UI or audio state corruption should occur."
-    },
-    {
-      "title": "FMD-014: Find My Device tone \u2014 slider interaction while tone is playing (if applicable)",
-      "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Tap 'Play' to start the FMD tone.",
-        "While the tone is playing, navigate away from Find My Device to another screen (e.g., Audio Settings \u2192 EQ).",
-        "Adjust an EQ slider (e.g., Bass slider to +6).",
-        "Navigate back to Find My Device.",
-        "Observe the tone state and button.",
-        "Tap Pause to stop the tone.",
-        "Navigate back to Audio Settings \u2192 EQ and verify the EQ setting persisted."
-      ],
-      "expected": "If the FMD tone continues playing during navigation, it should remain playing when returning to Find My Device. The Pause button should be visible. The EQ adjustment should persist independently. No settings should be corrupted by the FMD tone being active."
-    },
-    {
-      "title": "FMD-015: Find My Device tone \u2014 verify tone stops when device is put into pairing mode",
-      "steps": [
-        "Open Poly Studio Mobile app and navigate to Find My Device screen.",
-        "Tap 'Play' to start the FMD tone.",
-        "While the tone is playing, put the Poly device into Bluetooth pairing mode (press and hold Bluetooth button for 2-4 seconds until 'pairing' is heard).",
-        "Observe whether the FMD tone stops.",
-        "Observe the app UI for Find My Device button state.",
-        "Exit pairing mode on the device (press Bluetooth button briefly or wait for timeout).",
-        "Reconnect to the device if needed.",
-        "Navigate to Find My Device and tap Play."
-      ],
-      "expected": "The FMD tone should stop when the device enters pairing mode (since the Bluetooth connection is interrupted). The app should show the Play button (idle state) or a disconnected state. After reconnection, the FMD feature should work normally."
+      "expected": "No tone stacking or missing tones occur during rapid Play/Pause presses after a call-to-media transition. A single press correctly toggles media playback. The device handles the state transition from call to media without audio corruption from rapid button input."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T05:50:17.148030Z"
+  "processed_at": "2026-04-25T08:35:09.760686Z"
 }
