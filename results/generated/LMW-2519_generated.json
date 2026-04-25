@@ -1,191 +1,103 @@
 [
   {
-    "title": "LIFECYCLE: Disconnect via Android BT Settings while app is in foreground \u2014 verify BroadcastReceiver updates UI",
+    "title": "TC-DISCONNECT-001: Disconnect via Android Bluetooth Settings \u2014 App UI State on Return",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap the connected device name (e.g., 'Poly Sync 20+') to enter Device Details screen",
-      "Verify device status shows 'Connected'",
-      "Press Home button to go to Android Home screen (app goes to background)",
-      "Open Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Tap the gear icon next to the Poly device name",
-      "Tap 'Disconnect' (or 'Forget' if unpairing)",
-      "Observe the device status in Android BT settings shows 'Disconnected'",
-      "Return to Poly Studio Mobile app by tapping the app icon or recent apps",
-      "Observe the device status on the main screen"
+      "Precondition: Device (e.g., Sync 20) is paired and connected to phone. Poly Studio Mobile app is open on Device screen showing 'Connected' status.",
+      "1. Navigate to: Android Settings \u2192 Bluetooth \u2192 Paired Devices \u2192 Tap gear icon next to [Device Name].",
+      "2. Tap 'Disconnect'. Verify device disconnects (Bluetooth settings show 'Disconnected').",
+      "3. Immediately return to Poly Studio Mobile app (do NOT force-kill).",
+      "4. Observe the device connection status on the main Device screen.",
+      "5. Tap into the device detail screen and observe the connection indicator."
     ],
-    "expected": "After returning to Poly Studio Mobile, the device should show as 'Disconnected' or 'Tap to connect'. The app's BroadcastReceiver should have updated the UI to reflect the Bluetooth state change. The stale 'Connected' state should NOT persist."
+    "expected": "\ud83e\udde0 BUG SIGNATURE VALIDATION: App must show 'Disconnected' or 'Tap to Connect' status. Actual (If Bug): App incorrectly shows 'Connected' (stale UI) because it missed the ACTION_ACL_DISCONNECTED broadcast while the user was in Bluetooth settings. The device detail screen must also reflect disconnected state. No phantom 'Connected' badge or green indicator should persist."
   },
   {
-    "title": "LIFECYCLE: Disconnect via Android BT Settings while app is in foreground \u2014 app stays in foreground the entire time",
+    "title": "TC-DISCONNECT-002: Disconnect via Bluetooth Settings While App is Backgrounded \u2014 Foreground Resume Refresh",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap the connected device name to enter Device Details screen",
-      "Verify device status shows 'Connected'",
-      "Without backgrounding the app, use split-screen or quick settings to navigate to Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Tap the gear icon next to the Poly device name",
-      "Tap 'Disconnect'",
-      "Observe the device status in Android BT settings shows 'Disconnected'",
-      "Return focus to Poly Studio Mobile app (still in foreground)",
-      "Observe the device status on the main screen and Device Details screen"
+      "Precondition: Device connected. App open on Device screen showing 'Connected'.",
+      "1. Press Home button to background the Poly Studio Mobile app.",
+      "2. Navigate to: Android Settings \u2192 Bluetooth \u2192 Paired Devices \u2192 Tap gear icon \u2192 'Disconnect'.",
+      "3. Wait 5 seconds after disconnect completes.",
+      "4. Tap the Poly Studio Mobile app icon to bring it to foreground (not from Recents \u2014 from launcher to trigger full lifecycle resume).",
+      "5. Observe the connection status on the main Device screen.",
+      "6. Tap into device detail screen and verify all audio controls (volume, ANC, EQ) are disabled/greyed out."
     ],
-    "expected": "The Poly Studio Mobile app should update the device status to 'Disconnected' in real-time via the Bluetooth state BroadcastReceiver, even while the app remained in the foreground. No stale 'Connected' state should be visible."
+    "expected": "\ud83e\udde0 DEEP LIFECYCLE: App must refresh state on resume from background. Connection status must show 'Disconnected'. All audio controls must be disabled/greyed out. Actual (If Bug): App shows stale 'Connected' state with active controls because onResume() did not trigger a Bluetooth state re-sync. \ud83e\udde0 STATE TRIGGER GAP: This validates that the app correctly processes the disconnect callback even when the broadcast arrives while the app is in the BACKGROUND."
   },
   {
-    "title": "LIFECYCLE: Disconnect via Android BT Settings while app is backgrounded \u2014 verify state sync on return",
+    "title": "TC-DISCONNECT-003: Disconnect \u2192 Reconnect Cycle via Bluetooth Settings \u2014 State Consistency",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap the connected device name to enter Device Details screen",
-      "Verify device status shows 'Connected'",
-      "Press Home button to send app to background",
-      "Open Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Tap the gear icon next to the Poly device name",
-      "Tap 'Disconnect'",
-      "Verify in Android BT settings the device shows 'Disconnected'",
-      "Wait 10 seconds",
-      "Tap the Poly Studio Mobile app icon to bring it to foreground",
-      "Observe the device status on the main screen"
+      "Precondition: Device connected. App open on Device screen.",
+      "1. Navigate to: Android Settings \u2192 Bluetooth \u2192 Paired Devices \u2192 Tap gear icon \u2192 'Disconnect'.",
+      "2. Return to app. Verify 'Disconnected' status.",
+      "3. Navigate back to: Android Settings \u2192 Bluetooth \u2192 Paired Devices \u2192 Tap device name to reconnect.",
+      "4. Wait for connection to establish (Bluetooth settings show 'Connected').",
+      "5. Return to app. Observe connection status.",
+      "6. Repeat steps 1-5 for 3 cycles."
     ],
-    "expected": "Upon returning to the foreground, the Poly Studio Mobile app should sync with the current Bluetooth stack state and display the device as 'Disconnected'. The app should not show a stale 'Connected' state."
+    "expected": "\ud83e\udde0 BUG SIGNATURE VALIDATION: After each disconnect, app must show 'Disconnected'. After each reconnect, app must show 'Connected' with all audio controls functional. No cumulative state drift across cycles. Actual (If Bug): After 2+ cycles, app may show incorrect state (e.g., shows Connected when actually disconnected, or vice versa) due to missed or duplicate broadcast processing."
   },
   {
-    "title": "LIFECYCLE: Disconnect via Android BT Settings, then kill and relaunch app",
+    "title": "TC-DISCONNECT-004: Disconnect via Bluetooth Settings During Active Media Playback \u2014 App Behavior",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap the connected device name to enter Device Details screen",
-      "Verify device status shows 'Connected'",
-      "Press Home button to send app to background",
-      "Open Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Tap the gear icon next to the Poly device name",
-      "Tap 'Disconnect'",
-      "Verify in Android BT settings the device shows 'Disconnected'",
-      "Open recent apps and swipe Poly Studio Mobile away to force-kill the app",
-      "Wait 5 seconds",
-      "Reopen Poly Studio Mobile app from the app launcher",
-      "Observe the device status on the main screen"
+      "Precondition: Device connected. Media (music/podcast) playing through the Poly device.",
+      "1. While media is actively playing, navigate to: Android Settings \u2192 Bluetooth \u2192 Paired Devices \u2192 Tap gear icon \u2192 'Disconnect'.",
+      "2. Observe audio routing (audio should switch to phone speaker).",
+      "3. Return to Poly Studio Mobile app.",
+      "4. Observe connection status.",
+      "5. Tap Play on media app and verify audio routing."
     ],
-    "expected": "After a fresh launch, the app should query the current Bluetooth state and display the device as 'Disconnected'. The app should not show any stale connection state from the previous session."
+    "expected": "\ud83e\udde0 BUG SIGNATURE VALIDATION: App must show 'Disconnected' status. Audio must route to phone speaker immediately upon disconnect. Actual (If Bug): App shows 'Connected' while audio is already on phone speaker \u2014 stale UI. Additionally, if user taps Play, audio should NOT route back to the disconnected Poly device. The app must not attempt to re-establish a connection automatically without explicit user action."
   },
   {
-    "title": "STATE TRIGGER: Disconnect via Android BT Settings while on Audio Settings screen \u2014 verify state change triggers navigation",
+    "title": "TC-DISCONNECT-005: Device Asymmetry \u2014 Disconnect Across Poly Device Families (Sync 20 vs. Voyager Free 60 vs. Voyager Legend 50)",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap the connected device name to enter Device Details screen",
-      "Tap 'Audio Settings' to enter the Audio Settings screen",
-      "Verify you are on the Audio Settings screen (e.g., EQ, ANC controls visible)",
-      "Without leaving the Audio Settings screen, use split-screen or quick settings to navigate to Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Tap the gear icon next to the Poly device name",
-      "Tap 'Disconnect'",
-      "Return focus to Poly Studio Mobile app \u2014 observe the Audio Settings screen",
-      "Observe the device status on the main screen after any automatic navigation"
+      "Precondition: Run this test separately for each device: [Sync 20, Voyager Free 60, Voyager Legend 50]. Each device must be paired and connected.",
+      "1. Open Poly Studio Mobile app. Verify device shows 'Connected'.",
+      "2. Navigate to: Android Settings \u2192 Bluetooth \u2192 Paired Devices \u2192 Tap gear icon \u2192 'Disconnect'.",
+      "3. Return to app. Observe connection status.",
+      "4. Wait 30 seconds. Observe if app auto-reconnects or remains disconnected.",
+      "5. Manually reconnect via Bluetooth settings. Return to app. Verify state."
     ],
-    "expected": "When the device disconnects while the user is on the Audio Settings screen, the app should either: (a) automatically navigate back to the main screen showing 'Disconnected' state, or (b) show a clear disconnected indicator/banner on the Audio Settings screen with controls disabled. The app should not remain on Audio Settings with active controls as if still connected."
+    "expected": "\ud83e\udde0 DEVICE ASYMMETRY GAP: All three device families must show 'Disconnected' immediately upon return to app. However, expected differences: Sync 20 (HFP only) may show disconnect faster than Voyager Free 60 (HFP + A2DP + GATT) which has more profiles to tear down. Voyager Legend 50 (HFP + A2DP) should behave similarly to Sync 20. No device should show stale 'Connected' state. Auto-reconnect behavior must NOT occur \u2014 the app must wait for explicit user reconnection. Document any device-specific timing differences in disconnect detection."
   },
   {
-    "title": "STATE TRIGGER: Disconnect \u2192 Reconnect cycle \u2014 verify app state at each transition",
+    "title": "TC-DISCONNECT-006: Immediate State Trigger \u2014 Disconnect and Force-Kill App Before Returning",
     "steps": [
-      "Open Poly Studio Mobile app with device connected",
-      "Verify device status shows 'Connected'",
-      "Open Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Disconnect the Poly device",
-      "Return to Poly Studio Mobile app \u2014 verify status shows 'Disconnected'",
-      "Open Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Tap the Poly device name to reconnect",
-      "Verify Android BT settings shows 'Connected'",
-      "Return to Poly Studio Mobile app",
-      "Observe the device status on the main screen"
+      "Precondition: Device connected. App open on Device screen.",
+      "1. Navigate to: Android Settings \u2192 Bluetooth \u2192 Paired Devices \u2192 Tap gear icon \u2192 'Disconnect'.",
+      "2. IMMEDIATELY (within 1 second of tapping Disconnect) force-kill the Poly Studio Mobile app via Recent Apps \u2192 Swipe away.",
+      "3. Wait 10 seconds.",
+      "4. Relaunch the Poly Studio Mobile app from the launcher.",
+      "5. Observe the connection status on the main Device screen.",
+      "6. Tap into device detail screen and verify audio controls state."
     ],
-    "expected": "The app should correctly reflect both transitions: 'Connected' \u2192 'Disconnected' after the disconnect action, and 'Disconnected' \u2192 'Connected' after the reconnect action. The app should not get stuck showing a stale state at any point in the cycle."
+    "expected": "\ud83e\udde0 IMMEDIATE STATE TRIGGER: App must show 'Disconnected' on fresh launch. The app must read the current Bluetooth adapter state on startup, not rely on cached state from the previous session. Actual (If Bug): App shows 'Connected' because it restored a stale persisted state from before the disconnect, or because the disconnect broadcast was never processed before the app was killed. All audio controls must be disabled."
   },
   {
-    "title": "DEVICE ASYMMETRY: Poly Sync 20 with Secure Connection enabled \u2014 disconnect after mobile call while app is in foreground",
+    "title": "TC-DISCONNECT-007: Disconnect via Bluetooth Settings While App is on a Sub-Screen (EQ Settings) \u2014 State on Return",
     "steps": [
-      "Pair and connect a Poly Sync 20 to the test phone",
-      "Open Poly Studio Mobile app",
-      "Tap the Sync 20 device name to enter Device Details screen",
-      "Navigate to Settings \u2192 Secure Connection and verify it is enabled (ON)",
-      "Return to the main screen \u2014 verify device shows 'Connected'",
-      "Place an outgoing mobile call from the phone (not VoIP)",
-      "During the call, observe the Poly Studio Mobile app screen",
-      "End the call",
-      "Observe the device status in Poly Studio Mobile app immediately after call ends",
-      "Wait 5 seconds and observe again"
+      "Precondition: Device connected. App open.",
+      "1. Navigate to: Device \u2192 Audio Settings \u2192 Equalizer.",
+      "2. While on the EQ screen, press Home to background the app.",
+      "3. Navigate to: Android Settings \u2192 Bluetooth \u2192 Paired Devices \u2192 Tap gear icon \u2192 'Disconnect'.",
+      "4. Return to Poly Studio Mobile app via launcher.",
+      "5. Observe which screen the app shows (EQ settings or main Device screen).",
+      "6. Verify connection status and EQ control availability."
     ],
-    "expected": "With Secure Connection enabled, after the call ends the Sync 20 should automatically disconnect from the phone. The Poly Studio Mobile app should update to show 'Disconnected' state within a few seconds of the call ending. The app should not remain showing 'Connected'."
+    "expected": "\ud83e\udde0 LIFECYCLE DIMENSION GAP: App should return to the EQ screen (maintaining navigation stack) but must show all controls as disabled/greyed out with a 'Disconnected' banner or indicator. Actual (If Bug): App either crashes, resets to main screen losing navigation state, or shows EQ controls as still adjustable despite the device being disconnected. The EQ sliders must be non-interactive when disconnected."
   },
   {
-    "title": "DEVICE ASYMMETRY: Poly Sync 20 with Secure Connection disabled \u2014 disconnect after mobile call while app is in foreground",
+    "title": "TC-DISCONNECT-008: Disconnect via Bluetooth Settings \u2014 Verify No Phantom Call Audio Routing",
     "steps": [
-      "Pair and connect a Poly Sync 20 to the test phone",
-      "Open Poly Studio Mobile app",
-      "Tap the Sync 20 device name to enter Device Details screen",
-      "Navigate to Settings \u2192 Secure Connection and verify it is disabled (OFF)",
-      "Return to the main screen \u2014 verify device shows 'Connected'",
-      "Place an outgoing mobile call from the phone (not VoIP)",
-      "During the call, observe the Poly Studio Mobile app screen",
-      "End the call",
-      "Observe the device status in Poly Studio Mobile app immediately after call ends"
+      "Precondition: Device connected. Poly Studio Mobile app open.",
+      "1. Navigate to: Android Settings \u2192 Bluetooth \u2192 Paired Devices \u2192 Tap gear icon \u2192 'Disconnect'.",
+      "2. Return to app. Verify 'Disconnected' status.",
+      "3. Initiate a phone call (dial any number).",
+      "4. During the call, observe audio output device (phone earpiece/speaker vs. Poly device).",
+      "5. End the call.",
+      "6. Verify Poly device remains disconnected in the app."
     ],
-    "expected": "With Secure Connection disabled, after the call ends the Sync 20 should remain connected to the phone. The Poly Studio Mobile app should continue to show 'Connected' state. This confirms the behavior is different from the Secure Connection enabled case."
-  },
-  {
-    "title": "DEVICE ASYMMETRY: Voyager Free 60 \u2014 disconnect via case closure while app is in foreground",
-    "steps": [
-      "Pair and connect Voyager Free 60 earbuds to the test phone",
-      "Open Poly Studio Mobile app",
-      "Tap the Free 60 device name to enter Device Details screen",
-      "Verify device status shows 'Connected' and earbud battery levels are visible",
-      "Place both earbuds into the charging case",
-      "Close the charging case lid",
-      "Observe the Poly Studio Mobile app screen immediately",
-      "Wait 10 seconds and observe again",
-      "Open the charging case lid and remove earbuds",
-      "Observe the app screen after earbuds reconnect"
-    ],
-    "expected": "When the Free 60 earbuds are placed in the case and the lid is closed, the app should update to show 'Disconnected' (or 'In Case') state. When the lid is opened and earbuds are removed, the app should update back to 'Connected'. The app should correctly track the connection state through the case interaction lifecycle."
-  },
-  {
-    "title": "DEVICE ASYMMETRY: Voyager Legend 50 \u2014 disconnect via case while app is backgrounded, verify on return",
-    "steps": [
-      "Pair and connect Voyager Legend 50 headset to the test phone",
-      "Open Poly Studio Mobile app",
-      "Verify device status shows 'Connected'",
-      "Press Home button to send app to background",
-      "Place the Legend 50 headset into its charging case and close the lid",
-      "Wait 15 seconds for the headset to fully disconnect",
-      "Open Android Settings \u2192 Connected devices \u2192 Bluetooth \u2014 verify device shows 'Disconnected'",
-      "Tap the Poly Studio Mobile app icon to bring it to foreground",
-      "Observe the device status on the main screen"
-    ],
-    "expected": "Upon returning to the foreground, the Poly Studio Mobile app should reflect the current Bluetooth state and show the Legend 50 as 'Disconnected'. The app should not show a stale 'Connected' state from before the headset was placed in the case."
-  },
-  {
-    "title": "STATE TRIGGER: Disconnect via Android BT Settings while app is on EQ screen \u2014 verify controls become disabled",
-    "steps": [
-      "Open Poly Studio Mobile app with device connected",
-      "Tap the connected device name \u2192 Audio Settings \u2192 EQ",
-      "Verify EQ sliders are interactive and adjustable",
-      "Without leaving the EQ screen, use quick settings to navigate to Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Disconnect the Poly device",
-      "Return focus to Poly Studio Mobile app \u2014 observe the EQ screen",
-      "Attempt to drag any EQ slider",
-      "Navigate back to the main screen and observe device status"
-    ],
-    "expected": "After disconnection, the EQ sliders should become disabled/greyed out and non-interactive. The app should either show a 'Disconnected' banner on the Audio Settings screen or automatically navigate back to the main screen showing 'Disconnected'. Tapping disabled sliders should produce no change."
-  },
-  {
-    "title": "LIFECYCLE: Disconnect via Android BT Settings while app is in foreground \u2014 rapid disconnect/reconnect multiple times",
-    "steps": [
-      "Open Poly Studio Mobile app with device connected",
-      "Verify device status shows 'Connected'",
-      "Open Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Disconnect the Poly device",
-      "Return to Poly Studio Mobile app \u2014 verify 'Disconnected'",
-      "Open Android Settings \u2192 Connected devices \u2192 Bluetooth",
-      "Reconnect the Poly device",
-      "Return to Poly Studio Mobile app \u2014 verify 'Connected'",
-      "Repeat steps 3-8 two more times (total of 3 disconnect/reconnect cycles)",
-      "After the final reconnect, observe the device status and any Audio Settings values"
-    ],
-    "expected": "The app should correctly reflect the connection state after each disconnect and reconnect in the cycle. After the final reconnect, the device should show 'Connected' and any previously configured Audio Settings (EQ, ANC, Transparency) should retain their values. No stale state or data loss should occur."
+    "expected": "\ud83e\udde0 BUG SIGNATURE VALIDATION: Call audio must route to phone earpiece/speaker, NOT to the disconnected Poly device. Actual (If Bug): Call audio routes to the Poly device even though Bluetooth shows disconnected, because the app's stale 'Connected' state caused the system to maintain an audio route to the device. After call ends, app must still show 'Disconnected' \u2014 the call must not trigger an automatic reconnection."
   }
 ]
