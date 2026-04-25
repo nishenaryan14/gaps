@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "[IOS]Onboarding - Organized page has a continue button",
   "feature": "App Settings",
-  "scenario": "Onboarding flow shows \"Organized\" page with Poly Lens location tracking prompt after skipping license/privacy, then navigates to POLY LENS Login screen",
+  "scenario": "Onboarding flow shows Poly Lens Login screen after accepting license agreement and tapping Continue on the Organized page",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. On the onboarding flow, accept the License/Privacy terms.",
-    "3. Tap the Skip button.",
-    "4. Observe the 'Organized' page that appears.",
-    "5. Note the 'Continue' button and the text about Poly Lens location tracking.",
-    "6. Tap the Continue button.",
-    "7. Observe the POLY LENS Login screen that appears."
+    "2. On the onboarding flow, accept the License Agreement and Privacy Policy.",
+    "3. Observe the screen that appears after acceptance.",
+    "4. Tap the 'Continue' button on the 'Organized' page.",
+    "5. Observe the screen that appears after tapping Continue."
   ],
-  "expected": "After tapping Continue, the POLY LENS Login screen should display with two options: Login and Continue as Guest.",
+  "expected": "After accepting the license agreement and privacy policy, the \"Organized\" page is displayed with a \"Continue\" button and text about Poly Lens location tracking. Tapping Continue leads to the POLY LENS Login screen with Login and Continue as Guest options.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-flow",
+    "license-agreement",
     "organized-page",
-    "poly-lens",
-    "location-tracking",
     "poly-lens-login",
-    "license-privacy",
-    "skip-button"
+    "continue-button",
+    "privacy-policy"
   ],
   "source_last_updated": "1764319860",
   "source_hash": "815e7efb7f3f8ba69170856220818683e683d5c03b6622e5572c9ecfa3c83bed",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.710809Z",
+  "processed_at": "2026-04-25T07:55:31.779000Z",
   "status": "active"
 }
