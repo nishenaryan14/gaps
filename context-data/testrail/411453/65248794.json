@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Find My Device - Playing sound from 2 different devices",
   "feature": "Find My Device",
-  "scenario": "\"Find My Device\" tone fails with error on second headset when two headsets are paired and connected in Poly Studio Mobile app",
+  "scenario": "\"Find My Device\" tone fails with error popup on second headset when two headsets are simultaneously paired and connected",
   "steps": [
     "Open Poly Studio Mobile app on the Home screen.",
     "Pair and connect Headset A to the app.",
-    "Pair and connect Headset B to the app (both headsets should be connected simultaneously).",
-    "Navigate to the Device Settings screen for Headset A.",
-    "Tap 'Find My Device' and play a tone on Headset A \u2014 verify the tone plays successfully.",
-    "Return to the Home screen and navigate to the Device Settings screen for Headset B.",
-    "Tap 'Find My Device' and attempt to play a tone on Headset B."
+    "Pair and connect Headset B to the app (both headsets should be simultaneously connected).",
+    "Navigate to Home \u2192 [Headset A] \u2192 Notifications \u2192 Find My Device.",
+    "Tap 'Play Tone' on Headset A and confirm the tone plays successfully.",
+    "Return to Home \u2192 [Headset B] \u2192 Notifications \u2192 Find My Device.",
+    "Tap 'Play Tone' on Headset B."
   ],
-  "expected": "A tone plays on Headset B.",
+  "expected": "The 'Find My Device' tone should play on Headset B without any errors.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
+    "play-tone",
     "poly-studio-mobile",
     "dual-headset-pairing",
-    "device-settings",
-    "tone-playback",
-    "multi-device-connection",
-    "headset-audio-error"
+    "simultaneous-connection",
+    "error-popup",
+    "notifications"
   ],
   "source_last_updated": "1759930181",
   "source_hash": "2207134fbd8939ffa5af4f8d4d848b218c2b858ad376876d622e29fdbd2f28b5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.946442Z",
+  "processed_at": "2026-04-25T09:32:26.175392Z",
   "status": "active"
 }
