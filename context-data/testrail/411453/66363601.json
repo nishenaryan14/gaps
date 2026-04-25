@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "DFU - Emu/Tern - Charge Case update needed popup after earbud DFU",
   "feature": "Firmware Update",
-  "scenario": "Post-DFU popup incorrectly directs user to Poly Lens Desktop for case update instead of allowing in-app case update on Device Home Screen",
+  "scenario": "Post-DFU popup incorrectly directs users to Poly Lens Desktop for case update instead of in-app case update on Device Home Screen",
   "steps": [
     "1. Open Poly Studio Mobile app on Android.",
     "2. Navigate to Home screen.",
-    "3. Connect to a pair of earbuds where both the earbuds and the charge case are on outdated firmware.",
+    "3. Ensure both the earbuds and the charge case are on outdated firmware.",
     "4. Initiate a Device Firmware Update (DFU) for the earbuds via the app.",
     "5. Wait for the DFU to complete successfully.",
-    "6. Observe the Home screen after the update completes."
+    "6. After the update completes, observe the Device Home Screen.",
+    "7. Check for any popup displayed at the bottom of the screen."
   ],
-  "expected": "After the DFU completes, the user should be returned to the Home screen with no popup, or a clear in-app prompt to update the case firmware within the Poly Studio Mobile app.",
+  "expected": "After the DFU completes, the Device Home Screen should display a popup at the bottom stating: \"Case Update Needed: Earbuds have been updated, updates to your case must be made using Poly Lens Desktop app.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-firmware-update",
     "dfu",
-    "home-screen",
+    "device-home-screen",
     "case-update",
     "poly-lens-desktop",
-    "post-dfu-popup",
-    "android"
+    "in-app-update",
+    "post-dfu-popup"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "a4c24963db074d8790b9c7300aed625f773a899faad801748db4da62a4fe52c6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.782053Z",
+  "processed_at": "2026-04-25T09:32:26.603338Z",
   "status": "active"
 }
