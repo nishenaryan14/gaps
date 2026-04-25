@@ -19,146 +19,194 @@
   ],
   "coverage_status": "partial",
   "gaps": [
-    "MISSING: Custom EQ preset persistence after saving and re-opening the EQ screen (not just tab close/reopen, but full navigation out and back into the EQ screen). TC 65641574 tests 'closing and reopening the EQ tab' but the bug is about saving a Custom EQ preset, then navigating away (Home screen) and coming back \u2014 this is a deeper lifecycle path than just tab close/reopen.",
-    "MISSING: Save button interaction as a state trigger. No test verifies that tapping 'Save' actually persists the custom slider values to the device/app storage such that they survive a full navigation exit (Home screen) and re-entry into the EQ screen.",
-    "MISSING: Custom EQ vs Preset asymmetry. Existing tests (65641573, 65641574, 65641575, 65641576, 65641578) test preset persistence (Bass, Flat, Bright) but do NOT specifically test Custom EQ preset persistence. The bug is specific to Custom EQ \u2014 the behavior may differ from preset persistence because Custom EQ involves saving arbitrary slider positions.",
-    "MISSING: Slider value persistence within Custom EQ. No test validates that after saving a Custom EQ with specific slider positions (e.g., Bass +5, Mid -3, Treble +2), those exact values are restored when re-opening the EQ screen."
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Tab switch vs. screen exit gap: The bug is about saving Custom EQ and then reopening the EQ page (navigating away and back). Existing tests 65641575 (navigate away/back) and 65641574 (close/reopen EQ tab) test persistence, but they test preset selection persistence, NOT Custom EQ slider value persistence. The bug specifically involves custom slider adjustments being lost. Test 65641575 says 'EQ setting persists' but doesn't specify if it validates the actual custom slider positions or just the preset selection. This is a critical nuance \u2014 the bug is about the slider values within Custom EQ, not which preset is selected.",
+    "\ud83e\udde0 STATE TRIGGER \u2014 Save button behavior untested: The bug involves tapping the Save button (step 5) and then exiting/re-entering. None of the existing tests explicitly validate that the Save button actually persists the custom slider values to the device/app state. Test 65641568 only checks that Save is disabled until a slider is moved \u2014 it never validates that pressing Save actually works. There is no test that: (a) adjusts custom sliders, (b) taps Save, (c) exits the page, (d) reopens, and (e) verifies the sliders are at the saved positions.",
+    "\ud83e\udde0 DEVICE ASYMMETRY \u2014 No device-specific validation: The bug scenario doesn't specify a device, but the domain knowledge shows different Poly devices have different EQ capabilities (e.g., Voyager Free 60+, Surround 80, Sync 20/20+). None of the existing tests run the Custom EQ save-and-reopen scenario across multiple device types. A bug might exist on one device (e.g., Surround 85) but not another (e.g., Free 60), and this asymmetry is completely untested.",
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 App kill/relaunch with Custom EQ: Test 65641576 tests EQ persistence after app kill/relaunch but only for 'all EQ values (Bass, Flat, Bright, Custom EQ)'. If this test only checks that the Custom EQ preset is still selected (not the actual slider positions), it misses the bug. The bug is about the slider values within Custom EQ being reset to defaults after re-entering the page, which is a different failure mode than the preset selection being lost.",
+    "\ud83e\udde0 EDGE CASE \u2014 No test for rapid save-and-reopen: The bug steps involve a simple save, exit, reopen sequence. There is no test that validates the slider values immediately after saving and reopening (without any other intervening action like backgrounding or disconnect). This is the most basic persistence test and it's missing for Custom EQ slider values specifically."
   ],
   "generated_testcases": [
     {
-      "title": "TC_CUSTOM_EQ_001: Custom EQ preset persistence after full navigation exit and re-entry",
+      "title": "CUSTOM_EQ_001: Custom EQ slider persistence after navigating away and back (Tab switch)",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the connected device name (e.g., 'Poly Voyager Free 60+ UC').",
-        "Navigate to Audio Settings \u2192 Equalizer.",
-        "Tap 'Custom' preset to enter Custom EQ editing mode.",
-        "Set slider positions to: Bass = +5, Mid = -3, Treble = +2.",
-        "Tap the 'Save' button to save the Custom EQ preset.",
-        "Tap the Home/Back button to navigate to the main Home screen of the app.",
-        "Wait 2 seconds.",
-        "Tap the connected device name again.",
-        "Navigate to Audio Settings \u2192 Equalizer.",
-        "Observe the current preset selection and slider positions."
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=+3dB, 250Hz=+1dB, 1kHz=0dB, 4kHz=-2dB, 8kHz=-4dB",
+        "Tap 'Save' button",
+        "Navigate away: Tap back arrow to Audio Settings",
+        "Reopen: Tap Equalizer again",
+        "Observe the Custom EQ slider positions"
       ],
-      "expected": "The Equalizer screen should show 'Custom' preset as selected. The slider positions should display Bass = +5, Mid = -3, Treble = +2, exactly as saved. The values must not have reverted to defaults or to any other preset values."
+      "expected": "Expected: All sliders show saved values (125Hz=+3, 250Hz=+1, 1kHz=0, 4kHz=-2, 8kHz=-4). Actual (If Bug): Sliders reset to default flat (0dB) positions despite 'Custom EQ' preset still being selected."
     },
     {
-      "title": "TC_CUSTOM_EQ_002: Custom EQ persistence after app backgrounding and foregrounding",
+      "title": "CUSTOM_EQ_002: Custom EQ slider persistence after closing and reopening EQ tab (Screen exit)",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the connected device name \u2192 Audio Settings \u2192 Equalizer.",
-        "Tap 'Custom' preset.",
-        "Set slider positions to: Bass = +7, Mid = 0, Treble = -4.",
-        "Tap 'Save' button.",
-        "Press the Home button on the phone to background the app.",
-        "Wait 5 seconds.",
-        "Reopen Poly Studio Mobile app from the app switcher or home screen.",
-        "Navigate to the connected device \u2192 Audio Settings \u2192 Equalizer.",
-        "Observe the preset selection and slider values."
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=+6dB, 500Hz=+3dB, 2kHz=-1dB, 8kHz=-5dB",
+        "Tap 'Save' button",
+        "Exit EQ screen: Tap back arrow to Audio Settings",
+        "Re-enter: Tap Equalizer",
+        "Verify slider positions"
       ],
-      "expected": "The Equalizer screen should show 'Custom' preset selected with Bass = +7, Mid = 0, Treble = -4. The values must persist through the app backgrounding cycle."
+      "expected": "Expected: Sliders at 125Hz=+6, 500Hz=+3, 2kHz=-1, 8kHz=-5. Actual (If Bug): Sliders reset to 0dB defaults. This validates the exact bug scenario \u2014 slider values lost after save+exit+reopen."
     },
     {
-      "title": "TC_CUSTOM_EQ_003: Custom EQ persistence after app force-kill and relaunch",
+      "title": "CUSTOM_EQ_003: Immediate state trigger \u2014 Save and IMMEDIATELY kill app before navigating away",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the connected device name \u2192 Audio Settings \u2192 Equalizer.",
-        "Tap 'Custom' preset.",
-        "Set slider positions to: Bass = +3, Mid = +5, Treble = -2.",
-        "Tap 'Save' button.",
-        "Fully close/kill the Poly Studio Mobile app from the recent apps list (swipe away).",
-        "Wait 3 seconds.",
-        "Reopen Poly Studio Mobile app.",
-        "Wait for the app to connect to the device.",
-        "Navigate to the connected device \u2192 Audio Settings \u2192 Equalizer.",
-        "Observe the preset selection and slider values."
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=+5dB, 1kHz=-3dB, 8kHz=+2dB",
+        "Tap 'Save' button",
+        "IMMEDIATELY force-kill the app (swipe from recents) \u2014 do NOT navigate away or switch tabs first",
+        "Reopen the app",
+        "Wait for device reconnection",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Verify Custom EQ slider positions"
       ],
-      "expected": "The Equalizer screen should show 'Custom' preset selected with Bass = +3, Mid = +5, Treble = -2. The Custom EQ values must survive a full app kill and relaunch."
+      "expected": "Expected: Sliders persist at 125Hz=+5, 1kHz=-3, 8kHz=+2. Actual (If Bug): Sliders reset to 0dB defaults. This validates that the Save button commits state immediately, not just on screen exit."
     },
     {
-      "title": "TC_CUSTOM_EQ_004: Custom EQ persistence after Bluetooth disconnect and reconnect",
+      "title": "CUSTOM_EQ_004: Deep lifecycle \u2014 Custom EQ persistence after Bluetooth disconnect/reconnect",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the connected device name \u2192 Audio Settings \u2192 Equalizer.",
-        "Tap 'Custom' preset.",
-        "Set slider positions to: Bass = +6, Mid = -5, Treble = +4.",
-        "Tap 'Save' button.",
-        "Navigate back to the Home screen.",
-        "Disconnect Bluetooth from the phone's Bluetooth settings or turn off the device.",
-        "Wait 5 seconds.",
-        "Reconnect Bluetooth (turn device back on or reconnect from Bluetooth settings).",
-        "Wait for the app to detect and reconnect to the device.",
-        "Navigate to the connected device \u2192 Audio Settings \u2192 Equalizer.",
-        "Observe the preset selection and slider values."
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=+4dB, 500Hz=+2dB, 2kHz=0dB, 8kHz=-3dB",
+        "Tap 'Save' button",
+        "Exit to Audio Settings",
+        "Disconnect Bluetooth from phone settings",
+        "Wait 5 seconds",
+        "Reconnect Bluetooth",
+        "Wait for app to re-establish connection",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Verify Custom EQ slider positions"
       ],
-      "expected": "The Equalizer screen should show 'Custom' preset selected with Bass = +6, Mid = -5, Treble = +4. The Custom EQ values must persist through a Bluetooth disconnect/reconnect cycle."
+      "expected": "Expected: Sliders persist at 125Hz=+4, 500Hz=+2, 2kHz=0, 8kHz=-3. Actual (If Bug): Sliders reset to 0dB defaults after Bluetooth reconnection cycle."
     },
     {
-      "title": "TC_CUSTOM_EQ_005: Save button as explicit state trigger \u2014 verify persistence without navigating away",
+      "title": "CUSTOM_EQ_005: Deep lifecycle \u2014 Custom EQ persistence after device power off/on",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the connected device name \u2192 Audio Settings \u2192 Equalizer.",
-        "Tap 'Custom' preset.",
-        "Set slider positions to: Bass = +8, Mid = +2, Treble = -6.",
-        "Do NOT tap 'Save'.",
-        "Tap the Home/Back button to navigate to the Home screen.",
-        "Tap the connected device name again.",
-        "Navigate to Audio Settings \u2192 Equalizer.",
-        "Observe the preset selection and slider values."
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=-2dB, 1kHz=+4dB, 8kHz=+1dB",
+        "Tap 'Save' button",
+        "Exit to Audio Settings",
+        "Power off the headset/speakerphone",
+        "Wait 10 seconds",
+        "Power on the device",
+        "Wait for auto-reconnection in app",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Verify Custom EQ slider positions"
       ],
-      "expected": "The Equalizer screen should NOT show the unsaved Custom values. It should either show the previously saved preset (if any) or the default preset. The unsaved slider positions (Bass=+8, Mid=+2, Treble=-6) must NOT appear, confirming that tapping 'Save' is the required state trigger for persistence."
+      "expected": "Expected: Sliders persist at 125Hz=-2, 1kHz=+4, 8kHz=+1. Actual (If Bug): Sliders reset to 0dB defaults after device power cycle."
     },
     {
-      "title": "TC_CUSTOM_EQ_006: Custom EQ vs Preset asymmetry \u2014 verify Custom EQ survives preset switching and return",
+      "title": "CUSTOM_EQ_006: Device asymmetry \u2014 Custom EQ persistence on Poly Sync 20+ (speakerphone)",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the connected device name \u2192 Audio Settings \u2192 Equalizer.",
-        "Tap 'Custom' preset.",
-        "Set slider positions to: Bass = +4, Mid = -2, Treble = +6.",
-        "Tap 'Save' button.",
-        "Switch to a different preset (e.g., 'Bass').",
-        "Switch back to 'Custom' preset.",
-        "Observe the slider positions."
+        "Prerequisite: Poly Sync 20+ connected via Bluetooth",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=+2dB, 500Hz=+1dB, 2kHz=-1dB, 8kHz=-2dB",
+        "Tap 'Save' button",
+        "Exit to Audio Settings",
+        "Reopen Equalizer",
+        "Verify slider positions"
       ],
-      "expected": "When switching back to 'Custom' preset, the slider positions should show Bass = +4, Mid = -2, Treble = +6 \u2014 the exact values that were saved. The Custom EQ values must not be overwritten or reset when switching to another preset and back."
+      "expected": "Expected: Sliders persist at 125Hz=+2, 500Hz=+1, 2kHz=-1, 8kHz=-2. Actual (If Bug): Sliders reset to 0dB defaults. This test targets Sync 20+ specifically to catch device-asymmetric bugs where speakerphone EQ persistence differs from headset EQ persistence."
     },
     {
-      "title": "TC_CUSTOM_EQ_007: Custom EQ slider boundary values persistence",
+      "title": "CUSTOM_EQ_007: Device asymmetry \u2014 Custom EQ persistence on Poly Surround 85",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the connected device name \u2192 Audio Settings \u2192 Equalizer.",
-        "Tap 'Custom' preset.",
-        "Set slider positions to their maximum values: Bass = +10, Mid = +10, Treble = +10.",
-        "Tap 'Save' button.",
-        "Navigate to Home screen.",
-        "Navigate back to the connected device \u2192 Audio Settings \u2192 Equalizer.",
-        "Observe the slider positions.",
-        "Now set slider positions to their minimum values: Bass = -10, Mid = -10, Treble = -10.",
-        "Tap 'Save' button.",
-        "Navigate to Home screen.",
-        "Navigate back to the connected device \u2192 Audio Settings \u2192 Equalizer.",
-        "Observe the slider positions."
+        "Prerequisite: Poly Surround 85 connected via Bluetooth",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=+7dB, 250Hz=+5dB, 1kHz=0dB, 4kHz=-3dB, 8kHz=-6dB",
+        "Tap 'Save' button",
+        "Exit to Audio Settings",
+        "Reopen Equalizer",
+        "Verify slider positions"
       ],
-      "expected": "First observation: All sliders should show +10 (maximum values) after saving and re-entering. Second observation: All sliders should show -10 (minimum values) after saving and re-entering. Boundary values at both extremes must persist correctly."
+      "expected": "Expected: Sliders persist at 125Hz=+7, 250Hz=+5, 1kHz=0, 4kHz=-3, 8kHz=-6. Actual (If Bug): Sliders reset to 0dB defaults. This test targets Surround 85 specifically to catch device-asymmetric bugs."
     },
     {
-      "title": "TC_CUSTOM_EQ_008: Custom EQ persistence after phone reboot",
+      "title": "CUSTOM_EQ_008: Rapid save-and-reopen \u2014 immediate re-entry without any intervening action",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the connected device name \u2192 Audio Settings \u2192 Equalizer.",
-        "Tap 'Custom' preset.",
-        "Set slider positions to: Bass = +2, Mid = -1, Treble = +3.",
-        "Tap 'Save' button.",
-        "Navigate to Home screen.",
-        "Reboot the phone.",
-        "After phone restarts, open Poly Studio Mobile app.",
-        "Wait for the app to connect to the device.",
-        "Navigate to the connected device \u2192 Audio Settings \u2192 Equalizer.",
-        "Observe the preset selection and slider values."
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=+3dB, 2kHz=-2dB, 8kHz=+4dB",
+        "Tap 'Save' button",
+        "Immediately tap back arrow to Audio Settings",
+        "Immediately tap Equalizer again (within 1 second)",
+        "Verify slider positions"
       ],
-      "expected": "The Equalizer screen should show 'Custom' preset selected with Bass = +2, Mid = -1, Treble = +3. The Custom EQ values must survive a full phone reboot."
+      "expected": "Expected: Sliders persist at 125Hz=+3, 2kHz=-2, 8kHz=+4. Actual (If Bug): Sliders reset to 0dB defaults. This is the most basic persistence test \u2014 validates that save commits state synchronously before allowing re-entry."
+    },
+    {
+      "title": "CUSTOM_EQ_009: Multiple save cycles \u2014 save, exit, reopen, adjust again, save, exit, reopen",
+      "steps": [
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Cycle 1: Navigate to Equalizer, select Custom EQ, set 125Hz=+3dB, 1kHz=0dB, 8kHz=-2dB, tap Save, exit, reopen \u2014 verify sliders at +3/0/-2",
+        "Cycle 2: Without leaving Custom EQ, adjust to 125Hz=+6dB, 1kHz=-1dB, 8kHz=-4dB, tap Save, exit, reopen \u2014 verify sliders at +6/-1/-4",
+        "Cycle 3: Adjust to 125Hz=0dB, 1kHz=+5dB, 8kHz=+2dB, tap Save, exit, reopen \u2014 verify sliders at 0/+5/+2"
+      ],
+      "expected": "Expected: Each cycle correctly persists the latest saved slider values. Actual (If Bug): Sliders revert to a previous save or to defaults after any cycle, indicating the save operation is not overwriting the persisted state correctly."
+    },
+    {
+      "title": "CUSTOM_EQ_010: Edge case \u2014 Save with all sliders at extreme values (max/min)",
+      "steps": [
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Set all sliders to maximum (+10dB or highest allowed value)",
+        "Tap 'Save' button",
+        "Exit to Audio Settings",
+        "Reopen Equalizer",
+        "Verify all sliders at maximum",
+        "Now set all sliders to minimum (-10dB or lowest allowed value)",
+        "Tap 'Save' button",
+        "Exit to Audio Settings",
+        "Reopen Equalizer",
+        "Verify all sliders at minimum"
+      ],
+      "expected": "Expected: All sliders persist at maximum after first save, and at minimum after second save. Actual (If Bug): Sliders reset to 0dB defaults or to a different value, indicating boundary value persistence failure."
+    },
+    {
+      "title": "CUSTOM_EQ_011: App backgrounding (home button) during Custom EQ page with unsaved changes",
+      "steps": [
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=+4dB, 500Hz=-1dB, 8kHz=+3dB",
+        "Do NOT tap Save",
+        "Press Home button (app goes to background)",
+        "Wait 5 seconds",
+        "Reopen app from recents",
+        "Observe EQ page state"
+      ],
+      "expected": "Expected: App returns to Equalizer page with sliders still showing 125Hz=+4, 500Hz=-1, 8kHz=+3 (unsaved changes preserved in UI). Actual (If Bug): Sliders reset to last saved values or defaults, indicating the UI state is not preserved across backgrounding."
+    },
+    {
+      "title": "CUSTOM_EQ_012: Phone rotation while on Custom EQ page with saved values",
+      "steps": [
+        "Prerequisite: Device connected (e.g., Voyager Free 60+)",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+        "Select 'Custom EQ' preset",
+        "Adjust sliders: 125Hz=+5dB, 2kHz=-3dB, 8kHz=+1dB",
+        "Tap 'Save' button",
+        "Rotate phone to landscape",
+        "Rotate phone back to portrait",
+        "Verify slider positions"
+      ],
+      "expected": "Expected: Sliders persist at 125Hz=+5, 2kHz=-3, 8kHz=+1 after rotation. Actual (If Bug): Sliders reset to 0dB defaults due to Activity recreation losing the slider state."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:09.758150Z"
+  "processed_at": "2026-04-25T09:45:49.460886Z"
 }
