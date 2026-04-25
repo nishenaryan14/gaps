@@ -5,23 +5,32 @@
   "project": "411453",
   "title": "EQ - Custom EQ, save a custom EQ, change some values, Reset EQ",
   "feature": "Equalizer",
-  "scenario": "Custom EQ preset values are not cleared after Reset EQ button is used in Poly Studio Mobile app",
-  "steps": [],
-  "expected": "",
+  "scenario": "Custom EQ values do not reset to default slider positions after using Reset EQ in Device Settings",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app with a connected device that supports Equalizer (EQ).",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Audio Settings \u2192 Equalizer.",
+    "3. Select 'Custom EQ' from the available EQ presets.",
+    "4. Adjust some frequency band sliders to new values and tap 'Save' to save the custom EQ preset.",
+    "5. Change some frequency band sliders to different values (without saving).",
+    "6. Tap the 'Reset EQ' button.",
+    "7. Observe the EQ screen and the positions of the frequency band sliders."
+  ],
+  "expected": "All frequency band sliders return to their default (center/middle) positions, and the previously saved custom EQ preset values are cleared/removed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "custom-eq-preset",
+    "equalizer",
+    "custom-eq",
     "reset-eq",
-    "eq-settings",
-    "audio-equalizer",
-    "app-settings-persistence",
-    "eq-clear"
+    "frequency-band-sliders",
+    "poly-studio-mobile",
+    "device-settings",
+    "audio-settings",
+    "eq-presets"
   ],
   "source_last_updated": "1761210804",
   "source_hash": "1da04c541c42994569d324dcb9d8887f18d5ad3b8422bd665da02dad455e7a36",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.841823Z",
+  "processed_at": "2026-04-25T07:55:31.933835Z",
   "status": "active"
 }
