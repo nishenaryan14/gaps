@@ -5,23 +5,34 @@
   "project": "411453",
   "title": "Rename device - old FW no rename, new FW rename present",
   "feature": "Device Management",
-  "scenario": "Device Name setting hidden in Device Settings > General on old firmware, appears after firmware update on supported Poly devices",
-  "steps": [],
-  "expected": "",
+  "scenario": "Device Name setting visibility in Device Settings > General toggles based on firmware version on supported Poly devices (Voyager Free 60+, Voyager Free 60, Voyager Free 20, Sync 20, Sync 20M, Sync 40)",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen and ensure your Poly device (e.g., Poly Voyager Free 60+) is connected.",
+    "3. Tap on the connected device name to open Device Settings.",
+    "4. In Device Settings, locate and tap on 'General'.",
+    "5. Verify that the 'Device Name' setting is NOT displayed in the General menu.",
+    "6. Update the Poly device firmware to the latest version using the Poly Studio Mobile app (Home \u2192 Device Settings \u2192 Firmware Update).",
+    "7. After the firmware update completes and the device reconnects, navigate back to Device Settings \u2192 General.",
+    "8. Verify that the 'Device Name' setting IS now displayed in the General menu.",
+    "9. Tap on 'Device Name' and confirm you can edit and save a custom name for the device."
+  ],
+  "expected": "The 'Device Name' setting should not appear in Device Settings > General when the device is on old firmware. After updating to new firmware, the 'Device Name' setting should appear and allow renaming of supported devices (Poly Voyager Free 60+, Poly Voyager Free 60, Poly Voyager Free 20, Poly Sync 20, Poly Sync 20M, Poly Sync 40).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "device-name-setting",
+    "general-menu",
     "firmware-update",
+    "poly-studio-mobile",
+    "voyager-free-60-plus",
     "device-settings",
-    "general-settings",
-    "device-name",
-    "setting-visibility",
-    "poly-devices",
-    "post-update-behavior"
+    "custom-device-name",
+    "firmware-version-toggle"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "a653f67b88e0a20b9e69ff9a358b75608776bbe76b00e9603063e64daec62a7f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.883385Z",
+  "processed_at": "2026-04-25T08:21:30.981019Z",
   "status": "active"
 }
