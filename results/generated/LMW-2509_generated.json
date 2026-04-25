@@ -1,87 +1,201 @@
 [
   {
-    "title": "Verify firmware version updates on Home screen immediately after successful DFU without app restart",
+    "title": "TC-FW-VERSION-001: Verify firmware version updates on Home screen immediately after DFU completes (no app restart)",
     "steps": [
-      "1. Launch the app and navigate to the Home screen.",
-      "2. Record the current firmware version displayed on the Home screen (e.g., 'Firmware: v1.0.0').",
-      "3. Navigate to the device settings page and record the firmware version displayed there.",
-      "4. Initiate a DFU (Device Firmware Update) process with a new firmware version (e.g., v2.0.0).",
-      "5. Wait for the DFU process to complete successfully (verify via success pop-up/message).",
-      "6. Dismiss any success pop-ups.",
-      "7. Without restarting the app, navigate back to the Home screen.",
-      "8. Observe the firmware version displayed on the Home screen.",
-      "9. Navigate to the device settings page and observe the firmware version displayed there."
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Navigate to Home screen and note the current firmware version displayed (e.g., under device name or status section).",
+      "Navigate to Device \u2192 Software & Updates and check for available firmware update.",
+      "If an update is available, tap the update banner or 'Update Now' button to start the DFU.",
+      "Confirm the update when prompted.",
+      "Do NOT use the device during the update. Wait for the update to complete (device will restart automatically).",
+      "After the device restarts and reconnects, observe the firmware version displayed on the Home screen.",
+      "Do NOT close or restart the app at any point."
     ],
-    "expected": "The firmware version displayed on both the Home screen and the device settings page immediately reflects the new version (e.g., 'Firmware: v2.0.0') without requiring an app restart. The version matches the firmware that was just installed via DFU."
+    "expected": "The firmware version displayed on the Home screen updates to the new version immediately after the DFU completes and the device reconnects, without requiring an app restart."
   },
   {
-    "title": "Verify firmware version remains updated on Home screen and settings page after app restart following DFU",
+    "title": "TC-FW-VERSION-002: Verify firmware version updates on Device Settings page immediately after DFU completes (no app restart)",
     "steps": [
-      "1. Launch the app and navigate to the Home screen.",
-      "2. Record the current firmware version displayed on the Home screen.",
-      "3. Navigate to the device settings page and record the firmware version displayed there.",
-      "4. Initiate a DFU process with a new firmware version (e.g., v3.1.0).",
-      "5. Wait for the DFU process to complete successfully.",
-      "6. Dismiss any success pop-ups.",
-      "7. Force close (terminate) the app completely.",
-      "8. Relaunch the app.",
-      "9. Navigate to the Home screen and observe the firmware version displayed.",
-      "10. Navigate to the device settings page and observe the firmware version displayed."
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Navigate to Home screen and note the current firmware version.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and note the firmware version displayed there.",
+      "Start a firmware update (DFU) by tapping the update banner or 'Update Now'.",
+      "Confirm the update and wait for it to complete (device restarts automatically).",
+      "After the device reconnects, navigate to Device \u2192 [Device Name] \u2192 Software & Updates.",
+      "Observe the firmware version displayed on this page.",
+      "Do NOT close or restart the app at any point."
     ],
-    "expected": "After relaunching the app, the firmware version displayed on both the Home screen and the device settings page shows the new version (e.g., 'Firmware: v3.1.0') that was installed via DFU. The version is consistent across both screens and matches the updated firmware."
+    "expected": "The firmware version displayed on the Device Settings \u2192 Software & Updates page updates to the new version immediately after the DFU completes and the device reconnects, without requiring an app restart."
   },
   {
-    "title": "Verify firmware version consistency between Home screen and settings page before and after DFU",
+    "title": "TC-FW-VERSION-003: Verify stale firmware version persists across app navigation (Home \u2192 Device Settings) after DFU",
     "steps": [
-      "1. Launch the app and navigate to the Home screen.",
-      "2. Capture the firmware version displayed on the Home screen (Version_A_Home).",
-      "3. Navigate to the device settings page and capture the firmware version displayed there (Version_A_Settings).",
-      "4. Verify that Version_A_Home == Version_A_Settings.",
-      "5. Initiate a DFU process to update to a new firmware version (e.g., v4.0.0).",
-      "6. Wait for the DFU process to complete successfully.",
-      "7. Dismiss any success pop-ups.",
-      "8. Without restarting the app, navigate to the Home screen and capture the firmware version (Version_B_Home).",
-      "9. Navigate to the device settings page and capture the firmware version (Version_B_Settings).",
-      "10. Verify that Version_B_Home == Version_B_Settings.",
-      "11. Verify that Version_B_Home != Version_A_Home (i.e., the version has changed).",
-      "12. Force close and relaunch the app.",
-      "13. Navigate to the Home screen and capture the firmware version (Version_C_Home).",
-      "14. Navigate to the device settings page and capture the firmware version (Version_C_Settings).",
-      "15. Verify that Version_C_Home == Version_C_Settings.",
-      "16. Verify that Version_C_Home == Version_B_Home (i.e., the version persists after restart)."
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Note the current firmware version on the Home screen (e.g., version A).",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and confirm the same version (A) is displayed.",
+      "Perform a firmware update (DFU) and wait for completion and device reboot.",
+      "After the device reconnects, navigate from Home screen to Device \u2192 [Device Name] \u2192 Software & Updates.",
+      "Observe the firmware version on the Software & Updates page.",
+      "Navigate back to the Home screen and observe the firmware version there.",
+      "Repeat navigation between Home screen and Device Settings \u2192 Software & Updates two more times.",
+      "Do NOT close or restart the app."
     ],
-    "expected": "The firmware version is consistent between the Home screen and settings page at all stages: before DFU, immediately after DFU (without restart), and after app restart. The version updates immediately after DFU and persists correctly after app relaunch."
+    "expected": "The firmware version is consistently updated to the new version on both the Home screen and Device Settings \u2192 Software & Updates page across all navigations, with no stale version data persisting."
   },
   {
-    "title": "Verify firmware version display after DFU when downgrading to an older firmware version",
+    "title": "TC-FW-VERSION-004: Verify app restart is NOT required to see updated firmware version after DFU",
     "steps": [
-      "1. Launch the app and navigate to the Home screen.",
-      "2. Record the current firmware version (e.g., v5.0.0).",
-      "3. Initiate a DFU process to downgrade to an older firmware version (e.g., v4.2.0).",
-      "4. Wait for the DFU process to complete successfully.",
-      "5. Dismiss any success pop-ups.",
-      "6. Without restarting the app, navigate to the Home screen and observe the firmware version.",
-      "7. Navigate to the device settings page and observe the firmware version.",
-      "8. Force close and relaunch the app.",
-      "9. Navigate to the Home screen and observe the firmware version.",
-      "10. Navigate to the device settings page and observe the firmware version."
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Record the current firmware version displayed on the Home screen (e.g., version 1.0.0).",
+      "Navigate to Device \u2192 Software & Updates and initiate a firmware update.",
+      "Wait for the DFU to complete and the device to reboot and reconnect.",
+      "Without restarting the app, check the firmware version on the Home screen and record it.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and record the firmware version.",
+      "Force-close the Poly Studio Mobile app (swipe it away from the recent apps list).",
+      "Reopen the Poly Studio Mobile app and wait for the device to reconnect.",
+      "Check the firmware version on the Home screen and on Device \u2192 [Device Name] \u2192 Software & Updates.",
+      "Compare all recorded firmware versions."
     ],
-    "expected": "The firmware version updates immediately to the older version (v4.2.0) on both the Home screen and settings page without requiring an app restart. The version remains correctly displayed after app restart as well."
+    "expected": "The firmware version displayed before the app restart (steps 5-6) matches the firmware version displayed after the app restart (step 9), confirming that an app restart is NOT required to see the updated firmware version after DFU."
   },
   {
-    "title": "Verify firmware version display after multiple consecutive DFU operations",
+    "title": "TC-FW-VERSION-005: Verify firmware version updates on Home screen after DFU with app backgrounded during update",
     "steps": [
-      "1. Launch the app and navigate to the Home screen.",
-      "2. Record the initial firmware version (e.g., v1.0.0).",
-      "3. Perform a DFU to update to version v2.0.0. Wait for completion.",
-      "4. Without restarting, verify the Home screen shows v2.0.0.",
-      "5. Immediately perform a second DFU to update to version v3.0.0. Wait for completion.",
-      "6. Without restarting, navigate to the Home screen and observe the firmware version.",
-      "7. Navigate to the device settings page and observe the firmware version.",
-      "8. Force close and relaunch the app.",
-      "9. Navigate to the Home screen and observe the firmware version.",
-      "10. Navigate to the device settings page and observe the firmware version."
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Note the current firmware version on the Home screen.",
+      "Navigate to Device \u2192 Software & Updates and start a firmware update.",
+      "After confirming the update, press the Home button to background the app (do NOT force-close it).",
+      "Wait for the DFU to complete (device will restart).",
+      "After waiting at least 30 seconds post-reboot, reopen the Poly Studio Mobile app from the recent apps list.",
+      "Observe the firmware version displayed on the Home screen after the app resumes."
     ],
-    "expected": "After each consecutive DFU, the firmware version updates immediately on both the Home screen and settings page without requiring an app restart. After the second DFU, both screens display v3.0.0. The version persists correctly after app restart."
+    "expected": "The firmware version on the Home screen updates to the new version after the app resumes from background following DFU completion, without requiring a full app restart."
+  },
+  {
+    "title": "TC-FW-VERSION-006: Verify firmware version updates on Device Settings page after DFU with app backgrounded during update",
+    "steps": [
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and note the current firmware version.",
+      "Start a firmware update from the Software & Updates page.",
+      "After confirming the update, press the Home button to background the app.",
+      "Wait for the DFU to complete and the device to reboot.",
+      "After 30 seconds, reopen the app from the recent apps list.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and observe the firmware version."
+    ],
+    "expected": "The firmware version on the Device Settings \u2192 Software & Updates page updates to the new version after the app resumes from background following DFU completion, without requiring a full app restart."
+  },
+  {
+    "title": "TC-FW-VERSION-007: Verify firmware version updates on Home screen after DFU with app force-killed and reopened",
+    "steps": [
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Note the current firmware version on the Home screen (e.g., version X).",
+      "Navigate to Device \u2192 Software & Updates and start a firmware update.",
+      "After confirming the update, immediately force-close the app (swipe away from recent apps).",
+      "Wait for the DFU to complete (device will reboot).",
+      "After the device has rebooted and is idle, reopen the Poly Studio Mobile app.",
+      "Wait for the device to reconnect automatically.",
+      "Observe the firmware version displayed on the Home screen."
+    ],
+    "expected": "The firmware version on the Home screen displays the new version after the app is reopened following DFU completion, confirming that the app correctly reads the updated firmware from the device on fresh launch."
+  },
+  {
+    "title": "TC-FW-VERSION-008: Verify firmware version updates on Device Settings page after DFU with app force-killed and reopened",
+    "steps": [
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and note the current firmware version.",
+      "Start a firmware update from the Software & Updates page.",
+      "After confirming the update, immediately force-close the app.",
+      "Wait for the DFU to complete and the device to reboot.",
+      "Reopen the Poly Studio Mobile app and wait for reconnection.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and observe the firmware version."
+    ],
+    "expected": "The firmware version on the Device Settings \u2192 Software & Updates page displays the new version after the app is reopened following DFU completion."
+  },
+  {
+    "title": "TC-FW-VERSION-009: Verify firmware version consistency across Home screen and Device Settings after DFU with rapid navigation",
+    "steps": [
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Note the firmware version on the Home screen.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and note the version.",
+      "Start a firmware update and wait for completion and device reboot.",
+      "After reconnection, rapidly navigate: Home screen \u2192 Device Settings \u2192 Software & Updates \u2192 Home screen \u2192 Device Settings \u2192 Software & Updates (3 full cycles within 10 seconds).",
+      "On each screen visit, observe the displayed firmware version."
+    ],
+    "expected": "The firmware version is consistently and correctly displayed as the new version on every screen visit during rapid navigation, with no stale version appearing on any screen."
+  },
+  {
+    "title": "TC-FW-VERSION-010: Verify firmware version updates after DFU when device is disconnected and reconnected post-update",
+    "steps": [
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Note the current firmware version on the Home screen.",
+      "Navigate to Device \u2192 Software & Updates and start a firmware update.",
+      "Wait for the DFU to complete and the device to reboot.",
+      "After the device reconnects to the app, manually disconnect the device (turn off Bluetooth or put device out of range).",
+      "Wait 10 seconds, then reconnect the device (turn Bluetooth back on or bring device in range).",
+      "Wait for the app to show the device as connected.",
+      "Observe the firmware version on the Home screen.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and observe the firmware version."
+    ],
+    "expected": "The firmware version on both the Home screen and Device Settings \u2192 Software & Updates page displays the new version after the device is disconnected and reconnected post-DFU, without requiring an app restart."
+  },
+  {
+    "title": "TC-FW-VERSION-011: Verify firmware version updates after DFU when phone is rebooted before checking",
+    "steps": [
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Note the current firmware version on the Home screen (e.g., version A).",
+      "Navigate to Device \u2192 Software & Updates and start a firmware update.",
+      "Wait for the DFU to complete and the device to reboot.",
+      "After the device reconnects to the app, reboot the phone (power off and on).",
+      "After phone restarts, open the Poly Studio Mobile app.",
+      "Wait for the device to connect automatically.",
+      "Observe the firmware version on the Home screen.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and observe the firmware version."
+    ],
+    "expected": "The firmware version on both the Home screen and Device Settings \u2192 Software & Updates page displays the new version after a phone reboot, confirming no stale cached version persists across phone reboots."
+  },
+  {
+    "title": "TC-FW-VERSION-012: Verify firmware version updates after DFU when device is powered off and on before checking",
+    "steps": [
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Note the current firmware version on the Home screen.",
+      "Navigate to Device \u2192 Software & Updates and start a firmware update.",
+      "Wait for the DFU to complete and the device to reboot.",
+      "After the device reconnects to the app, power off the device completely.",
+      "Wait 10 seconds, then power on the device.",
+      "Wait for the device to reconnect to the app automatically.",
+      "Observe the firmware version on the Home screen.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and observe the firmware version."
+    ],
+    "expected": "The firmware version on both the Home screen and Device Settings \u2192 Software & Updates page displays the new version after the device is power-cycled post-DFU, without requiring an app restart."
+  },
+  {
+    "title": "TC-FW-VERSION-013: Verify firmware version updates after DFU with slider adjustment immediately after update",
+    "steps": [
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Note the current firmware version on the Home screen.",
+      "Navigate to Device \u2192 Software & Updates and start a firmware update.",
+      "Wait for the DFU to complete and the device to reboot.",
+      "After reconnection, immediately navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment.",
+      "Set Surround level to 75.",
+      "Navigate back to the Home screen and observe the firmware version.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and observe the firmware version.",
+      "Verify that the Surround level is still set to 75."
+    ],
+    "expected": "The firmware version is correctly updated on both the Home screen and Device Settings page after DFU, AND the Surround level setting of 75 persists correctly, confirming that firmware version refresh does not corrupt other settings."
+  },
+  {
+    "title": "TC-FW-VERSION-014: Verify firmware version updates after DFU when app is updated between DFU and version check",
+    "steps": [
+      "Open Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+      "Note the current firmware version on the Home screen.",
+      "Navigate to Device \u2192 Software & Updates and start a firmware update.",
+      "Wait for the DFU to complete and the device to reboot.",
+      "After the device reconnects, check if there is an app update available in the Google Play Store / Apple App Store.",
+      "If an app update is available, update the Poly Studio Mobile app.",
+      "Open the updated app and wait for the device to reconnect.",
+      "Observe the firmware version on the Home screen.",
+      "Navigate to Device \u2192 [Device Name] \u2192 Software & Updates and observe the firmware version."
+    ],
+    "expected": "The firmware version on both the Home screen and Device Settings page displays the new version after the app is updated, confirming that the app correctly reads the device firmware version on first connection after an app update."
   }
 ]
