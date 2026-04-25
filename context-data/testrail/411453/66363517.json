@@ -5,23 +5,30 @@
   "project": "411453",
   "title": "[App] Flamingo - Connect headset already paired with charge case",
   "feature": "Bluetooth Pairing",
-  "scenario": "Verify paired headset and charge case appear correctly with dual battery indicators on home screen and \"Update all\" button in Software Update settings",
-  "steps": [],
-  "expected": "",
+  "scenario": "Headset pre-paired with charge case shows two battery indicators and charge case info in Software Update screen after pairing with Poly Studio Mobile app",
+  "steps": [
+    "Precondition: Headset is already paired with its charge case (headset off, placed in case, case closed, then opened and headset turned on). Headset is not currently paired with the Poly Studio Mobile app.",
+    "Open the Poly Studio Mobile app on your Android device.",
+    "On the Home screen, pair the headset with the app (e.g., tap the device name or follow the pairing prompt).",
+    "Observe the Home screen after successful pairing.",
+    "Tap the menu icon or navigate to Settings.",
+    "Select Software Update."
+  ],
+  "expected": "1) On the Home screen, the headset appears properly with two battery indicators visible \u2014 one for the headset and one for the charge case. 2) On the Software Update screen, an \"Update all\" button is present (if a DFU update is available), and information about both the headset and the charge case is displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dual-battery-indicators",
-    "home-screen",
-    "update-all",
-    "software-update-settings",
-    "paired-headset",
-    "charge-case",
-    "battery-persistence"
+    "poly-studio-mobile-app",
+    "charge-case-pairing",
+    "battery-indicators",
+    "software-update-screen",
+    "home-screen-pairing",
+    "headset-pairing",
+    "android"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "a728fb67f89fb820c08bc598cbf93f04a0e5ed5982e297e9692538a98051735c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.080151Z",
+  "processed_at": "2026-04-25T09:32:26.339337Z",
   "status": "active"
 }
