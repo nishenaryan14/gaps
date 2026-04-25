@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "User Guides - Onboarding screens",
-  "feature": "User Guides - Onboarding",
-  "scenario": "Verify that onboarding screens can be accessed from App Settings > User Guides and that navigating through all onboarding screens displays correct content.",
+  "feature": "App Settings",
+  "scenario": "Onboarding screens opened from App Settings > User Guides display correctly when navigating through all screens",
   "steps": [
-    "Open the app and go to App Settings.",
-    "Navigate to User Guides section.",
-    "Tap on the onboarding screens option.",
-    "Swipe or navigate through all onboarding screens.",
-    "Observe the content displayed on each screen."
+    "Open Poly Studio Mobile app",
+    "Go to Home screen",
+    "Tap on Account or Settings icon to open App Settings",
+    "Scroll to find and tap 'User Guides'",
+    "Tap on 'Onboarding' or 'Onboarding screens'",
+    "Swipe or tap through each onboarding screen (e.g., Next/Back arrows or dots)",
+    "Verify each onboarding screen displays correctly (text, images, layout)"
   ],
-  "expected": "All onboarding screens are accessible from App Settings > User Guides, and navigating through each screen displays the correct content as designed.",
+  "expected": "All onboarding screens open and display correctly with proper text, images, and layout when navigating through them.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding screens",
-    "App Settings",
-    "User Guides",
-    "navigation",
-    "content verification",
-    "swipe",
-    "user guide screens"
+    "poly-studio-mobile",
+    "onboarding-screens",
+    "user-guides",
+    "app-settings",
+    "screen-navigation",
+    "ui-layout",
+    "swipe-gesture"
   ],
   "source_last_updated": "1760352155",
   "source_hash": "546000005ad3f2c3a6a6dcd825ab38e25074cc2113390635bc15e951c351e98e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.172322Z",
+  "processed_at": "2026-04-25T05:37:16.765048Z",
   "status": "active"
 }
