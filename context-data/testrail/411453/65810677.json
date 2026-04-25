@@ -5,30 +5,28 @@
   "project": "411453",
   "title": "Swipe left, previous screen",
   "feature": "App Settings",
-  "scenario": "Quick Setup Guide swipe left from fourth screen navigates back through setup screens in reverse order",
+  "scenario": "Quick Start Guide screens navigate in reverse order when swiping left from the left edge of the screen",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Quick Setup Guide (QSG) by going to Home \u2192 Quick Setup Guide",
-    "Swipe through the setup screens until reaching the fourth screen (final screen)",
-    "From the fourth screen, swipe left to navigate backward",
-    "Observe the screen that appears after swiping left",
-    "Continue swiping left and observe each subsequent screen"
+    "Open the Poly Studio Mobile app",
+    "Navigate to the Quick Start Guide (QSG) screens (e.g., via Home \u2192 Quick Start Guide or Account \u2192 Quick Start Guide)",
+    "Swipe forward to reach screen 4 (e.g., showing the charging case)",
+    "From screen 4, place your finger on the left edge of the screen and swipe left"
   ],
-  "expected": "Swiping left from the fourth screen navigates back to the third screen (charging case), then to the second screen (two earbuds), then to the first screen (one earbud), in reverse order.",
+  "expected": "Swiping left from the left edge navigates backward through the guide screens in reverse order (e.g., from screen 4 \u2192 screen 3 (charging case) \u2192 screen 2 (two earbuds) \u2192 screen 1 (one earbud)).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "quick-setup-guide",
-    "qsg",
+    "quick-start-guide",
     "swipe-navigation",
-    "setup-screens",
-    "reverse-order",
-    "screen-flow"
+    "screen-reversal",
+    "left-edge-swipe",
+    "charging-case-screen",
+    "ui-navigation-bug"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "3023f8cf959a34aec81b41df3db7a0ffc429be5e50eaf122cd4e1bbd7d492f5c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.843845Z",
+  "processed_at": "2026-04-25T07:55:31.940475Z",
   "status": "active"
 }
