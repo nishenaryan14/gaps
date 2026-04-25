@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "CCL - UI",
   "feature": "Call Management",
-  "scenario": "Conversation Clarity Limiter settings UI shows three radio button options with descriptions in Device Settings > Advanced",
+  "scenario": "Conversation Clarity Limiter settings UI displays three radio button options with descriptions in Device Settings > Advanced on Poly Studio Mobile app",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Scroll down and tap on 'Advanced'",
-    "Locate the 'Conversation Clarity Limiter (CCL)' setting",
-    "Observe the description text below the CCL heading",
-    "Observe the three radio button options: 'No Noise Block', 'AI Noise Block', 'UC Noise Block'",
-    "Tap each radio button option and observe the sub-description displayed for each"
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure a Poly Bluetooth audio device is connected.",
+    "3. Tap on the connected device name to open Device Settings.",
+    "4. Scroll down and tap on 'Advanced' to expand the Advanced settings section.",
+    "5. Locate the 'Conversation Clarity Limiter (CCL)' section.",
+    "6. Observe the description text displayed below the CCL section header.",
+    "7. Observe the three radio button options and their labels/subtitles:\n   - 'No Noise Block' with subtitle 'Optimized for voice isolation'\n   - 'AI Noise Block' with subtitle 'Enhanced for hybrid work environments'\n   - 'UC Noise Block' with subtitle 'Best for open office environments'",
+    "8. Tap on each radio button option to verify selection behavior."
   ],
-  "expected": "The CCL setting is displayed with the description: \"Limit the amount of nearby conversation transmitted through your microphone. (Note: changes will take effect on the next call.)\" Three radio button options are available: No Noise Block with sub-description \"Optimized for voice isolation\", AI Noise Block with sub-description \"Enhanced for hybrid work environments\", and UC Noise Block with sub-description \"Best for open office environments\". Each option is selectable and displays its corresponding sub-description.",
+  "expected": "The CCL section is displayed in Device Settings > Advanced with the description: \"Limit the amount of nearby conversation transmitted through your microphone. (Note: changes will take effect on the next call.)\" Three radio button options are present: No Noise Block (\"Optimized for voice isolation\"), AI Noise Block (\"Enhanced for hybrid work environments\"), and UC Noise Block (\"Best for open office environments\"). Each option is selectable via radio button, and only one option can be selected at a time.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "conversation-clarity-limiter",
     "ccl",
-    "no-noise-block",
-    "ai-noise-block",
-    "uc-noise-block",
+    "noise-block",
     "poly-studio-mobile",
     "device-settings",
-    "advanced-settings"
+    "advanced-settings",
+    "ai-noise-block",
+    "uc-noise-block"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "02b284d4d6339ccfc60bce07af7755849b8072a78385ed3b3bc0cdd9f7337aef",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.845877Z",
+  "processed_at": "2026-04-25T07:55:31.940475Z",
   "status": "active"
 }
