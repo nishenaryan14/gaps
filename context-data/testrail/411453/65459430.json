@@ -4,29 +4,25 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Incoming softphone call during update",
-  "feature": "Software Update - DFU",
-  "scenario": "Verify that an incoming softphone call during a DFU does not interrupt the update process.",
-  "steps": [
-    "Start DFU (Device Firmware Update) on the device.",
-    "Receive and answer an incoming softphone call (MS Teams, Skype, or similar).",
-    "End the call."
-  ],
-  "expected": "The update is still running or has successfully completed.",
+  "feature": "Firmware Update",
+  "scenario": "Device Firmware Update (DFU) continues or completes successfully when an incoming softphone call (MS Teams, Skype) is received and answered during the update process",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU",
-    "Device Firmware Update",
-    "softphone call",
-    "incoming call",
-    "MS Teams",
-    "Skype",
-    "call interruption",
-    "update process"
+    "firmware-update",
+    "dfu",
+    "call-management",
+    "softphone-call",
+    "microsoft-teams",
+    "skype",
+    "incoming-call-interruption",
+    "update-persistence"
   ],
   "source_last_updated": "1763371041",
   "source_hash": "5a84b8b54ddf7021c7f3b95dfbacb0ad6e520236472e7767a1897b971bb1cea6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.290466Z",
+  "processed_at": "2026-04-25T05:37:16.881571Z",
   "status": "active"
 }
