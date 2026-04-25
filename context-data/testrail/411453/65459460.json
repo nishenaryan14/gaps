@@ -4,33 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Three easy steps screen",
-  "feature": "Firmware Updates",
-  "scenario": "\"Start Update\" button is missing or inactive on the \"Three easy steps\" screen during software update flow in Device Settings",
+  "feature": "Firmware Update",
+  "scenario": "Software Update flow shows \"Three easy steps\" screen with Start Update button after tapping Update and Continue in Device Settings",
   "steps": [
     "Open Poly Studio Mobile app",
     "Go to Home screen",
     "Tap on the desired device name to open Device Settings",
     "Scroll to and tap 'Software Update'",
     "Tap the 'Update' button",
-    "Tap 'Continue' on the prompt",
-    "Observe the 'Three easy steps' screen with picture and textual instructions",
-    "Check the 'Start Update' button"
+    "Tap 'Continue' on the confirmation prompt",
+    "Observe the 'Three easy steps' screen displayed"
   ],
-  "expected": "The 'Three easy steps' screen is displayed with a picture and textual instructions, and the 'Start Update' button is available and active (tappable).",
+  "expected": "The 'Three easy steps' screen is shown with a picture, textual instructions, and an active 'Start Update' button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "start-update-button",
-    "three-easy-steps-screen",
-    "software-update-flow",
+    "software-update",
+    "three-easy-steps",
+    "start-update",
     "device-settings",
     "poly-studio-mobile",
-    "update-button-missing",
-    "firmware-update"
+    "firmware-update-flow",
+    "update-confirmation"
   ],
   "source_last_updated": "1763369567",
   "source_hash": "3b28feceb9dacb22102ad5be3d852e44392986b9140dc98e660ccf6dfad40b18",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.023592Z",
+  "processed_at": "2026-04-25T09:32:26.276590Z",
   "status": "active"
 }
