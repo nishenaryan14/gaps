@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Software Update - DFU - Back buttons",
   "feature": "Firmware Update",
-  "scenario": "Back button during DFU flow returns user to appropriate previous screen in Device Settings on Poly Studio Mobile app",
+  "scenario": "Back button during DFU flow returns user to the appropriate previous screen in Device Settings on Poly Studio Mobile app",
   "steps": [
     "1. Pair the headset and launch the Poly Studio Mobile app.",
     "2. Navigate to Device Settings \u2192 Software Update.",
@@ -24,11 +24,11 @@
     "dfu-flow",
     "back-button",
     "firmware-update",
-    "navigation"
+    "ui-navigation"
   ],
   "source_last_updated": "1763134292",
   "source_hash": "db7bea9451ea7f921f50c5f7b46c5821033e1d72e2a6279ec1fc84092c0b6b2d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.879993Z",
+  "processed_at": "2026-04-25T07:55:31.955200Z",
   "status": "active"
 }
