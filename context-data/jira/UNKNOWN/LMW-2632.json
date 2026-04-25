@@ -5,33 +5,32 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 | CCL | CCL during call is blinking for blocking settings",
   "feature": "Call Management",
-  "scenario": "CCL settings blink instead of being locked during an active call",
-  "description_clean": "During a call, the CCL (Call Control Layer) settings blink instead of being locked/blocked as expected. Steps: Go to CCL and start a call, then verify CCL settings are locked. Observed: CCL settings are blinking. Expected: CCL settings are locked.",
+  "scenario": "CCL (Call Control Layer) settings blink instead of being locked during an active call",
+  "description_clean": "During a call, the CCL (Call Control Layer) settings are blinking instead of being locked/blocked as expected. Steps: 1. Go to CCL and start a call. 2. Verify CCL settings are locked. Observed: CCL settings are blinking. Expected: CCL settings are locked.",
   "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Navigate to the Home screen.",
-    "Connect to a Poly Bluetooth audio device.",
-    "Initiate a call (e.g., via the device's Call button or through the phone dialer).",
-    "During the active call, navigate to Device Settings \u2192 [Device Name] \u2192 Audio Settings.",
-    "Observe the Call Control Layer (CCL) settings."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen and tap on the connected [Device Name].",
+    "3. Go to Device Settings \u2192 Audio Settings.",
+    "4. Initiate a call from the Android device (e.g., dial a number or receive an incoming call).",
+    "5. During the active call, observe the Call Control Layer (CCL) settings within Audio Settings."
   ],
   "expected": "CCL settings are locked/blocked and not interactive during an active call.",
-  "actual": "CCL settings are blinking instead of being locked/blocked.",
+  "actual": "CCL settings are blinking instead of being locked/blocked during an active call.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "ccl-settings",
     "call-control-layer",
-    "active-call",
+    "ccl-settings",
     "poly-studio-mobile",
     "audio-settings",
+    "active-call",
     "device-settings",
-    "blinking-vs-locked"
+    "blinking-issue"
   ],
   "source_last_updated": "2026-04-23T06:17:58.000+0000",
   "source_hash": "a7c27afaec7dab1295b62c37675cea103deea76ebad1d868c03852468cb0307f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.587049Z",
+  "processed_at": "2026-04-25T09:32:25.290134Z",
   "status": "active"
 }
