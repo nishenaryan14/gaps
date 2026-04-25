@@ -19,163 +19,127 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case covers the Custom Button settings screen at all \u2014 all existing tests focus on Home screen, device list, connection status, and device images.",
-    "No test validates that the Custom Button setting reflects a provider change (e.g., locked to Microsoft Teams) when the headset is connected to a PC via USB.",
-    "No test covers the scenario where a headset is disconnected from a PC (USB) and the app fails to refresh the Custom Button setting to reflect the unlocked/default state.",
-    "No test validates settings persistence/refresh across a USB disconnect event without app restart \u2014 this is a lifecycle/state synchronization gap.",
-    "No test covers the locked/unlocked state of the Custom Button setting based on external connection (PC USB) to the headset.",
-    "No test validates that the app UI refreshes its state from the headset when an external connection event (USB disconnect) occurs, without requiring an app kill/relaunch.",
-    "No test covers the specific scenario of a headset being simultaneously connected to both a PC (via USB) and a mobile device (via Bluetooth), and how settings behave during transitions of the PC connection."
+    "No existing test case covers the Custom Button settings page or its provider options at all.",
+    "No test case validates that the Custom Button setting refreshes its provider state (e.g., MS Teams vs. non-Teams) when the headset's connection to a PC changes.",
+    "No test case covers the lifecycle dimension: the bug requires an app restart to refresh the UI state. None of the existing tests validate that settings persist or refresh correctly across app background/foreground or app kill/relaunch cycles.",
+    "No test case covers the state trigger dimension: the bug occurs because the app does not re-sync the Custom Button provider state when the headset disconnects from a PC (a Bluetooth/audio routing event). Existing tests only check basic connection/disconnection of the headset to/from the phone, not multi-device connection scenarios where the headset is connected to both a phone and a PC simultaneously.",
+    "No test case validates device asymmetry: the Custom Button feature behavior may differ across headset models (e.g., Voyager 4220 UC vs. Voyager Focus 2 vs. Free 60). None of the existing tests validate Custom Button settings across different Poly headset models.",
+    "No test case covers the specific scenario of a headset being connected to a PC (via USB or Bluetooth) while also paired to the phone, and the app's UI reflecting the PC connection state in the Custom Button provider options."
   ],
   "generated_testcases": [
     {
-      "title": "TC-CUSTOM-BTN-001: Custom Button shows 'Locked to Microsoft Teams' when headset is connected to PC via USB",
+      "title": "CUSTOM_BUTTON_001: Provider state refresh on headset-PC disconnect (Voyager 4220 UC)",
       "steps": [
-        "1. Ensure headset is NOT connected to any PC via USB. Open Poly Studio Mobile app.",
-        "2. Tap the connected [Device Name] \u2192 Audio Settings \u2192 Custom Button.",
-        "3. Verify the Custom Button setting shows available options (e.g., Mute, Microsoft Teams, Zoom, etc.) and is NOT locked.",
-        "4. Connect the headset to a PC via USB cable.",
-        "5. On the PC, launch Microsoft Teams and ensure the headset is selected as the audio device.",
-        "6. Return to the Poly Studio Mobile app on the mobile device (do NOT restart the app).",
-        "7. Navigate to Audio Settings \u2192 Custom Button.",
-        "8. Observe the Custom Button setting display."
+        "Precondition: Pair Voyager 4220 UC to phone AND connect to PC via USB Bluetooth adapter. Open Poly Studio Mobile app.",
+        "Navigate to: Device \u2192 Custom Button Settings",
+        "Verify current provider shows 'MS Teams' (connected to PC).",
+        "Disconnect headset from PC (unplug USB adapter OR disconnect Bluetooth from PC).",
+        "Do NOT restart the app. Stay on Custom Button Settings page.",
+        "Observe the provider field for 10 seconds."
       ],
-      "expected": "The Custom Button setting shows 'Locked to Microsoft Teams' (or equivalent locked state indicator) and the option is grayed out / not user-editable, reflecting that the headset is connected to a PC running Microsoft Teams."
+      "expected": "Expected: Provider updates to 'None' or 'No PC Connection' within 5 seconds of PC disconnect. Actual (If Bug): Provider still shows 'MS Teams' as connected until app is force-killed and relaunched."
     },
     {
-      "title": "TC-CUSTOM-BTN-002: Custom Button remains locked to Microsoft Teams after app background/foreground while headset is still connected to PC",
+      "title": "CUSTOM_BUTTON_002: Provider state refresh on headset-PC reconnect (Voyager 4220 UC)",
       "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running (as in TC-CUSTOM-BTN-001), ensure Custom Button shows 'Locked to Microsoft Teams'.",
-        "2. Press the Home button on the mobile device to background the Poly Studio Mobile app.",
-        "3. Wait 10 seconds, then reopen the app from the recent apps list.",
-        "4. Navigate to Audio Settings \u2192 Custom Button.",
-        "5. Observe the Custom Button setting."
+        "Precondition: Voyager 4220 UC paired to phone. Headset NOT connected to PC. App open on Custom Button Settings showing 'No PC Connection'.",
+        "Connect headset to PC (plug USB adapter or pair Bluetooth to PC).",
+        "Do NOT restart the app. Stay on Custom Button Settings page.",
+        "Observe the provider field for 10 seconds."
       ],
-      "expected": "The Custom Button setting still shows 'Locked to Microsoft Teams' and remains grayed out / non-editable. The locked state persists across app background/foreground cycles while the USB connection to PC is active."
+      "expected": "Expected: Provider updates to 'MS Teams' within 5 seconds of PC connection. Actual (If Bug): Provider still shows 'No PC Connection' until app is force-killed and relaunched."
     },
     {
-      "title": "TC-CUSTOM-BTN-003: Custom Button refreshes to unlocked/default state after disconnecting headset from PC (USB disconnect) \u2014 no app restart",
+      "title": "CUSTOM_BUTTON_003: Immediate state trigger \u2014 kill app mid-PC disconnect (Voyager 4220 UC)",
       "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running, verify Custom Button shows 'Locked to Microsoft Teams' in the app.",
-        "2. Disconnect the USB cable from the headset (or PC).",
-        "3. Wait 5-10 seconds for the headset to process the disconnect.",
-        "4. WITHOUT restarting the app, navigate to Audio Settings \u2192 Custom Button.",
-        "5. Observe the Custom Button setting display and interactability."
+        "Precondition: Voyager 4220 UC connected to phone AND PC. App open on Custom Button Settings showing 'MS Teams'.",
+        "Disconnect headset from PC.",
+        "IMMEDIATELY (within 2 seconds) force-kill the app (swipe from recents).",
+        "Reopen the app.",
+        "Navigate to: Device \u2192 Custom Button Settings"
       ],
-      "expected": "The Custom Button setting automatically refreshes to show the unlocked/default state. The 'Locked to Microsoft Teams' indicator is gone, and the user can now select from available options (e.g., Mute, Microsoft Teams, Zoom, etc.). No app restart or force-kill is required."
+      "expected": "Expected: Provider shows 'No PC Connection' reflecting the PC-disconnected state. Actual (If Bug): Provider shows 'MS Teams' because the app was killed before the state sync completed, and no refresh occurs on relaunch."
     },
     {
-      "title": "TC-CUSTOM-BTN-004: Custom Button state persists correctly after USB disconnect \u2192 reconnect cycle without app restart",
+      "title": "CUSTOM_BUTTON_004: Deep lifecycle \u2014 app background/foreground after PC disconnect (Voyager 4220 UC)",
       "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running, verify Custom Button shows 'Locked to Microsoft Teams'.",
-        "2. Disconnect the USB cable from the headset.",
-        "3. Wait 5 seconds, then navigate to Audio Settings \u2192 Custom Button and verify it shows unlocked/default state.",
-        "4. Reconnect the USB cable to the headset (PC still running Microsoft Teams).",
-        "5. Wait 5-10 seconds for the headset to re-establish the connection.",
-        "6. Navigate to Audio Settings \u2192 Custom Button.",
-        "7. Observe the Custom Button setting."
+        "Precondition: Voyager 4220 UC connected to phone AND PC. App open on Custom Button Settings showing 'MS Teams'.",
+        "Disconnect headset from PC.",
+        "Press Home button to background the app.",
+        "Wait 30 seconds.",
+        "Bring app to foreground.",
+        "Observe Custom Button Settings provider field."
       ],
-      "expected": "Step 3: Custom Button shows unlocked/default state. Step 6: Custom Button shows 'Locked to Microsoft Teams' again, reflecting the re-established PC connection. The app correctly transitions between locked and unlocked states without requiring a restart."
+      "expected": "Expected: Provider updates to 'No PC Connection' after foregrounding. Actual (If Bug): Provider still shows 'MS Teams' \u2014 app does not re-sync on foreground lifecycle event."
     },
     {
-      "title": "TC-CUSTOM-BTN-005: Custom Button locked state survives app force-kill and relaunch while headset is connected to PC",
+      "title": "CUSTOM_BUTTON_005: Device asymmetry \u2014 Voyager Focus 2 Custom Button provider refresh on PC disconnect",
       "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running, verify Custom Button shows 'Locked to Microsoft Teams'.",
-        "2. Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
-        "3. Reopen the Poly Studio Mobile app.",
-        "4. Navigate to Audio Settings \u2192 Custom Button.",
-        "5. Observe the Custom Button setting."
+        "Precondition: Pair Voyager Focus 2 to phone AND connect to PC via USB dongle. Open Poly Studio Mobile app.",
+        "Navigate to: Device \u2192 Custom Button Settings",
+        "Verify current provider shows 'MS Teams' (connected to PC).",
+        "Disconnect headset from PC (unplug dongle).",
+        "Do NOT restart the app. Stay on Custom Button Settings page.",
+        "Observe the provider field for 10 seconds."
       ],
-      "expected": "The Custom Button setting still shows 'Locked to Microsoft Teams' and is grayed out. The locked state is correctly fetched from the headset upon app relaunch, confirming the headset persists the locked state information."
+      "expected": "Expected: Provider updates to 'No PC Connection' within 5 seconds. Actual (If Bug): Provider still shows 'MS Teams' \u2014 Focus 2 exhibits same refresh failure as Voyager 4220 UC."
     },
     {
-      "title": "TC-CUSTOM-BTN-006: Custom Button unlocked state survives app force-kill and relaunch after USB disconnect",
+      "title": "CUSTOM_BUTTON_006: Device asymmetry \u2014 Poly Free 60 Custom Button provider refresh on PC disconnect",
       "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running, verify Custom Button shows 'Locked to Microsoft Teams'.",
-        "2. Disconnect the USB cable from the headset.",
-        "3. Wait 5 seconds.",
-        "4. Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
-        "5. Reopen the Poly Studio Mobile app.",
-        "6. Navigate to Audio Settings \u2192 Custom Button.",
-        "7. Observe the Custom Button setting."
+        "Precondition: Pair Poly Free 60 to phone AND connect to PC via Bluetooth. Open Poly Studio Mobile app.",
+        "Navigate to: Device \u2192 Custom Button Settings",
+        "Verify current provider shows 'MS Teams' (connected to PC).",
+        "Disconnect headset from PC (disable Bluetooth on PC or disconnect device).",
+        "Do NOT restart the app. Stay on Custom Button Settings page.",
+        "Observe the provider field for 10 seconds."
       ],
-      "expected": "The Custom Button setting shows the unlocked/default state with all options available for selection. The app correctly fetches the current state from the headset upon relaunch, reflecting that the PC connection is no longer active."
+      "expected": "Expected: Provider updates to 'No PC Connection' within 5 seconds. Actual (If Bug): Provider still shows 'MS Teams' \u2014 Free 60 exhibits same refresh failure as Voyager 4220 UC."
     },
     {
-      "title": "TC-CUSTOM-BTN-007: Custom Button locked state changes when switching PC provider from Microsoft Teams to Zoom while headset is connected via USB",
+      "title": "CUSTOM_BUTTON_007: Custom Button action options reflect correct provider state after PC disconnect (Voyager 4220 UC)",
       "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running, verify Custom Button shows 'Locked to Microsoft Teams'.",
-        "2. On the PC, close Microsoft Teams and open Zoom.",
-        "3. Ensure the headset is selected as the audio device in Zoom.",
-        "4. Wait 5-10 seconds.",
-        "5. Return to the Poly Studio Mobile app (do NOT restart).",
-        "6. Navigate to Audio Settings \u2192 Custom Button.",
-        "7. Observe the Custom Button setting."
+        "Precondition: Voyager 4220 UC connected to phone AND PC. App open on Custom Button Settings showing 'MS Teams'.",
+        "Note the available action options (e.g., 'Mute Microsoft Teams', 'Push-to-Talk', etc.).",
+        "Disconnect headset from PC.",
+        "Wait 10 seconds without restarting app.",
+        "Observe the available action options in the Custom Button settings."
       ],
-      "expected": "The Custom Button setting updates to show 'Locked to Zoom' (or equivalent), reflecting the change in PC provider from Microsoft Teams to Zoom. The app refreshes the locked state without requiring a restart."
+      "expected": "Expected: MS Teams-specific actions (e.g., 'Mute Microsoft Teams', 'Push-to-Talk') are removed/hidden, replaced by generic actions (e.g., 'Mute', 'Answer/End Call'). Actual (If Bug): MS Teams-specific actions remain visible despite PC disconnection."
     },
     {
-      "title": "TC-CUSTOM-BTN-008: Custom Button shows unlocked state when headset is connected to mobile via Bluetooth only (no PC USB connection)",
+      "title": "CUSTOM_BUTTON_008: Custom Button setting persists across app restart after PC disconnect (Voyager 4220 UC)",
       "steps": [
-        "1. Ensure headset is NOT connected to any PC via USB. Headset should only be connected to the mobile device via Bluetooth.",
-        "2. Open Poly Studio Mobile app.",
-        "3. Tap the connected [Device Name] \u2192 Audio Settings \u2192 Custom Button.",
-        "4. Observe the Custom Button setting display and available options."
+        "Precondition: Voyager 4220 UC connected to phone AND PC. Custom Button set to 'Mute Microsoft Teams'.",
+        "Disconnect headset from PC.",
+        "Force-kill the app (swipe from recents).",
+        "Reopen the app.",
+        "Navigate to: Device \u2192 Custom Button Settings"
       ],
-      "expected": "The Custom Button setting shows the unlocked/default state. All available options (e.g., Mute, Microsoft Teams, Zoom, Amazon Chime, etc.) are selectable and editable. No 'Locked to...' indicator is present."
+      "expected": "Expected: Custom Button action shows 'Mute Microsoft Teams' (user's last selection persists). Provider field shows 'No PC Connection'. Actual (If Bug): Custom Button action resets to default or provider incorrectly shows 'MS Teams'."
     },
     {
-      "title": "TC-CUSTOM-BTN-009: Custom Button locked state persists when switching between mobile app screens (navigating away and back) while headset is connected to PC",
+      "title": "CUSTOM_BUTTON_009: Multi-device \u2014 headset connected to phone + PC, then PC disconnects, then phone Bluetooth toggles (Voyager 4220 UC)",
       "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running, verify Custom Button shows 'Locked to Microsoft Teams'.",
-        "2. Tap the Back button to return to the main device screen.",
-        "3. Tap [Device Name] \u2192 Audio Settings \u2192 Custom Button.",
-        "4. Verify Custom Button still shows 'Locked to Microsoft Teams'.",
-        "5. Navigate to the Home screen (tap back twice or use navigation).",
-        "6. Tap the device again \u2192 Audio Settings \u2192 Custom Button.",
-        "7. Observe the Custom Button setting."
+        "Precondition: Voyager 4220 UC connected to phone AND PC. App open on Custom Button Settings showing 'MS Teams'.",
+        "Disconnect headset from PC.",
+        "Verify provider updates to 'No PC Connection' (wait up to 10 seconds).",
+        "Toggle phone Bluetooth OFF, then ON.",
+        "Wait for headset to reconnect to phone.",
+        "Observe Custom Button Settings provider field."
       ],
-      "expected": "At steps 4 and 7, the Custom Button setting consistently shows 'Locked to Microsoft Teams' and remains grayed out. The locked state is preserved across all navigation transitions within the app."
+      "expected": "Expected: Provider remains 'No PC Connection' after Bluetooth reconnect (PC is still disconnected). Actual (If Bug): Provider incorrectly reverts to 'MS Teams' after Bluetooth toggle, or shows stale state."
     },
     {
-      "title": "TC-CUSTOM-BTN-010: Custom Button state refresh after USB disconnect while app is in background \u2014 then brought to foreground",
+      "title": "CUSTOM_BUTTON_010: Custom Button provider state on app launch with headset already disconnected from PC (Voyager 4220 UC)",
       "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running, verify Custom Button shows 'Locked to Microsoft Teams'.",
-        "2. Press the Home button to background the Poly Studio Mobile app.",
-        "3. While the app is backgrounded, disconnect the USB cable from the headset.",
-        "4. Wait 10 seconds.",
-        "5. Bring the Poly Studio Mobile app back to the foreground (from recent apps).",
-        "6. Navigate to Audio Settings \u2192 Custom Button.",
-        "7. Observe the Custom Button setting."
+        "Precondition: Voyager 4220 UC connected to phone. Headset NOT connected to PC. App is closed (force-killed).",
+        "Open Poly Studio Mobile app.",
+        "Navigate to: Device \u2192 Custom Button Settings"
       ],
-      "expected": "The Custom Button setting shows the unlocked/default state. The app correctly refreshes its state upon returning to the foreground, detecting that the USB connection is no longer active, without requiring a manual restart."
-    },
-    {
-      "title": "TC-CUSTOM-BTN-011: Custom Button locked state persists after Bluetooth disconnect/reconnect while headset remains connected to PC via USB",
-      "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running, verify Custom Button shows 'Locked to Microsoft Teams'.",
-        "2. On the mobile device, turn off Bluetooth.",
-        "3. Wait 5 seconds.",
-        "4. Turn Bluetooth back on and allow the headset to reconnect.",
-        "5. Open Poly Studio Mobile app (if not already open).",
-        "6. Navigate to Audio Settings \u2192 Custom Button.",
-        "7. Observe the Custom Button setting."
-      ],
-      "expected": "The Custom Button setting still shows 'Locked to Microsoft Teams' and is grayed out. The locked state is determined by the PC USB connection, not the Bluetooth connection, so a Bluetooth disconnect/reconnect does not change the locked state."
-    },
-    {
-      "title": "TC-CUSTOM-BTN-012: Custom Button locked state clears when PC provider app (Microsoft Teams) is closed on PC while USB is still connected",
-      "steps": [
-        "1. With headset connected to PC via USB and Microsoft Teams running, verify Custom Button shows 'Locked to Microsoft Teams'.",
-        "2. On the PC, close/quit Microsoft Teams completely.",
-        "3. Wait 10-15 seconds for the headset to detect the provider change.",
-        "4. Return to the Poly Studio Mobile app (do NOT restart).",
-        "5. Navigate to Audio Settings \u2192 Custom Button.",
-        "6. Observe the Custom Button setting."
-      ],
-      "expected": "The Custom Button setting shows the unlocked/default state. Even though the USB cable is still physically connected, the absence of a running provider app (Microsoft Teams) means the button is no longer locked. The app correctly refreshes to reflect this state change."
+      "expected": "Expected: Provider shows 'No PC Connection' immediately on first load. Actual (If Bug): Provider shows 'MS Teams' or loading state that never resolves to correct disconnected state."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:17.633526Z"
+  "processed_at": "2026-04-25T09:45:50.818895Z"
 }
