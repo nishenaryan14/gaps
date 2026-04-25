@@ -5,23 +5,32 @@
   "project": "411453",
   "title": "Onboarding - Check onboarding screens UI",
   "feature": "App Settings",
-  "scenario": "Verify the UI of the onboarding screens (Organized, Up-to-Date, Personal) in the Poly Studio Mobile app",
-  "steps": [],
-  "expected": "",
+  "scenario": "Onboarding screens UI verification for Organized, Up-to-Date, and Personal pages in Poly Studio Mobile app",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app for the first time.",
+    "2. Progress through the onboarding screens until reaching the \"Organized\" screen.",
+    "3. Verify the UI elements on the \"Organized\" screen (e.g., title, description text, illustration, navigation dots, Next/Get Started button).",
+    "4. Swipe left to navigate to the next onboarding page (\"Up-to-Date\").",
+    "5. Verify the UI elements on the \"Up-to-Date\" screen (e.g., title, description text, illustration, navigation dots, Next/Get Started button).",
+    "6. Swipe left to navigate to the next onboarding page (\"Personal\").",
+    "7. Verify the UI elements on the \"Personal\" screen (e.g., title, description text, illustration, navigation dots, Get Started button)."
+  ],
+  "expected": "All onboarding screens (Organized, Up-to-Date, Personal) display correctly with proper title, description, illustration, navigation dots, and functional Next/Get Started button. No UI clipping, misalignment, or text truncation.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-screens",
+    "ui-verification",
     "organized-screen",
     "up-to-date-screen",
     "personal-screen",
-    "ui-verification",
-    "app-ui"
+    "navigation-dots",
+    "get-started-button"
   ],
   "source_last_updated": "1768389325",
   "source_hash": "7dd60c5e113dfcf6747fe7928d70b0c469b87bc1c8245cb29c9157dd5eef8b38",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.713856Z",
+  "processed_at": "2026-04-25T07:55:31.784581Z",
   "status": "active"
 }
