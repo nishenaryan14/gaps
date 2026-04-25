@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "CCL - Selecting UC Noise Block",
-  "feature": "CCL (Camera Control Lock)",
-  "scenario": "Verify UC Noise Block option can be selected from Device Settings > Advanced on a CCL-supported device.",
+  "feature": "App Settings",
+  "scenario": "UC Noise Block option can be selected in Device Settings > Advanced on the Poly Studio Mobile app when connected to a supported device",
   "steps": [
-    "Navigate to Device Settings on the device.",
-    "Select the Advanced option from the menu.",
-    "Locate the UC Noise Block option.",
-    "Verify that the UC Noise Block option can be selected."
+    "Open the Poly Studio Mobile app on your Android device.",
+    "Ensure a supported Poly Bluetooth audio device is connected.",
+    "Tap on the connected device name to open Device Settings.",
+    "Scroll down and tap on \"Advanced\" in the Device Settings menu.",
+    "Locate the \"UC Noise Block\" option in the Advanced settings.",
+    "Tap on the \"UC Noise Block\" option to select it."
   ],
-  "expected": "The UC Noise Block option is selectable from Device Settings > Advanced on a device that supports CCL.",
+  "expected": "The \"UC Noise Block\" option is selectable (tappable) and becomes enabled/active in the Advanced settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "UC Noise Block",
-    "Device Settings",
-    "Advanced settings",
-    "CCL-supported device",
-    "Noise Block option",
-    "Device configuration",
-    "Audio settings"
+    "uc-noise-block",
+    "poly-studio-mobile",
+    "device-settings",
+    "advanced-settings",
+    "android",
+    "bluetooth-audio-device",
+    "noise-management"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "ca4eb0fbc294d0213978011e60ec0b636496984d6bbde81dfab20d0e1765e246",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.261927Z",
+  "processed_at": "2026-04-25T05:37:16.841823Z",
   "status": "active"
 }
