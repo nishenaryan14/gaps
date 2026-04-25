@@ -10,14 +10,15 @@
     "Open Poly Studio Mobile app on the Home screen.",
     "Tap Menu (hamburger icon) \u2192 Support.",
     "Note the current device name shown in the Support device list.",
-    "Return to Home screen.",
+    "Go back to Home screen.",
     "Tap on the connected device name to open Device Settings.",
-    "Tap the device name field and rename the device (e.g., change to \"My Poly Headset\").",
-    "Tap Save or confirm the rename.",
-    "Navigate back to Menu \u2192 Support.",
+    "Tap the device name field and rename the device (e.g., change to \"My Poly Device\").",
+    "Confirm the rename.",
+    "Go back to Home screen.",
+    "Tap Menu \u2192 Support.",
     "Observe the device name displayed in the Support device list."
   ],
-  "expected": "The Support device list shows the new device name (e.g., \"My Poly Headset\") after renaming.",
+  "expected": "The new device name (e.g., \"My Poly Device\") is displayed in the Support device list under Menu \u2192 Support.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,13 +26,13 @@
     "device-rename",
     "support-device-list",
     "menu-support",
-    "device-settings",
     "device-name-persistence",
-    "ui-refresh"
+    "device-settings",
+    "home-screen"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "65dc7a7e5eab1a82a47b6766378b2733495a6ab84851990ef0e5f84508a85c3d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.975495Z",
+  "processed_at": "2026-04-25T09:32:26.223429Z",
   "status": "active"
 }
