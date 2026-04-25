@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, UI",
   "feature": "Notifications",
-  "scenario": "Notification master toggle remains OFF and individual toggles are greyed out when notification permission is denied during onboarding",
+  "scenario": "Notification toggles remain greyed out in App Settings > General when notification permission is denied during onboarding",
   "steps": [
     "1. Launch the Poly Studio Mobile app and begin the onboarding flow.",
     "2. When prompted to grant notification permission, tap \"Deny\" or \"Don't Allow\".",
-    "3. Complete the remaining onboarding steps.",
+    "3. Complete the onboarding process and reach the Home screen.",
     "4. Navigate to App Settings \u2192 General \u2192 Notifications.",
-    "5. Observe the master toggle for Notifications.",
-    "6. Observe the individual notification toggle switches (e.g., for call alerts, message alerts, etc.)."
+    "5. Observe the state of the master notification toggle.",
+    "6. Observe the state of all individual notification toggles (e.g., Call alerts, Message alerts, etc.)."
   ],
-  "expected": "The master Notifications toggle is set to OFF. All individual notification toggles are greyed out and cannot be changed.",
+  "expected": "The master notification toggle should be set to OFF, and all individual notification toggles should be greyed out and non-interactive, since notification permission was denied during onboarding.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "notification-permission",
-    "notification-master-toggle",
-    "notification-toggles-greyed-out",
-    "onboarding-flow",
     "poly-studio-mobile",
+    "notification-permission",
+    "onboarding",
     "app-settings",
-    "call-alerts",
-    "message-alerts"
+    "notification-toggles",
+    "greyed-out",
+    "permission-denied",
+    "call-alerts"
   ],
   "source_last_updated": "1761296616",
   "source_hash": "26818fc0b335f37451bf87c5c2046d83db78603e5f4946c1d1bb77f37604a5fc",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.047099Z",
+  "processed_at": "2026-04-25T09:32:26.312500Z",
   "status": "active"
 }
