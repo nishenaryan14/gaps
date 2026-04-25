@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Personal User - download/install, Login with Gmail, not present on any Lens tenant",
   "feature": "App Settings",
-  "scenario": "Personal user logs into Poly Studio Mobile app with non-Lens Gmail account and verifies paired headset displays correctly without Lens tenant registration",
+  "scenario": "Personal user logs into Poly Studio Mobile app with non-Lens Gmail account and verifies paired headset displays correct data without Lens tenant registration",
   "steps": [],
   "expected": "",
   "coverage": [],
@@ -13,15 +13,16 @@
   "keywords": [
     "poly-studio-mobile",
     "gmail-account",
-    "lens-tenant",
     "headset-pairing",
-    "device-display",
+    "device-data-display",
+    "lens-tenant",
     "account-verification",
-    "bluetooth-pairing"
+    "bluetooth-pairing",
+    "personal-user"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "d868da9ad3d789a07fc81aa45d718874559428697f3f8a0daef0aef535d29c2d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.055843Z",
+  "processed_at": "2026-04-25T09:32:26.316892Z",
   "status": "active"
 }
