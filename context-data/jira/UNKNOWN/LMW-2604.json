@@ -5,31 +5,32 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udc40 Free60+/20 | Image missing on Home Screen",
   "feature": "App Settings",
-  "scenario": "Headset image missing from Poly Studio Mobile app Home Screen when pairing Voyager Free 60+ or Voyager Free 20",
-  "description_clean": "Headset image is missing from the Poly Studio Mobile app Home Screen when pairing Poly Voyager Free 60+ or Poly Voyager Free 20. No placeholder image is displayed on the test build, while two placeholder images appear side by side on the production app. Expected: The headset image should display on the Home Screen.",
+  "scenario": "Headset image missing from Poly Studio Mobile app Home Screen for Voyager Free 60+ and Voyager Free 20 devices",
+  "description_clean": "Headset image is missing from the Poly Studio Mobile app Home Screen for Poly Voyager Free 60+ and Poly Voyager Free 20 devices. No placeholder image is displayed on the test builds, while two placeholder images appear side by side on the production app.",
   "steps": [
     "Open the Poly Studio Mobile app on your Android device.",
-    "Ensure no Poly device is currently connected.",
-    "Put the Poly Voyager Free 60+ (or Poly Voyager Free 20) into pairing mode.",
-    "On the app Home Screen, observe the area where the headset image should appear."
+    "Ensure a Poly Voyager Free 60+ or Poly Voyager Free 20 device is paired and connected.",
+    "Navigate to the Home screen of the app.",
+    "Observe the device card area where the headset image is displayed."
   ],
-  "expected": "The headset image for the Poly Voyager Free 60+ (or Poly Voyager Free 20) should display on the Home Screen.",
-  "actual": "The headset image is missing from the Home Screen. No placeholder image is displayed on the test build, while two placeholder images appear side by side on the production app.",
+  "expected": "The correct headset image for the connected Poly Voyager Free 60+ or Poly Voyager Free 20 device should be displayed on the Home screen. If the image is not available, a single placeholder image should be shown.",
+  "actual": "No headset image is displayed on the Home screen for Poly Voyager Free 60+ and Poly Voyager Free 20 devices on test builds. On the production app, two placeholder images appear side by side instead of the correct headset image.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "poly-studio-mobile-app",
     "home-screen",
-    "headset-image-missing",
+    "device-card",
+    "headset-image",
     "voyager-free-60-plus",
     "voyager-free-20",
-    "bluetooth-pairing",
-    "android"
+    "android",
+    "bluetooth-pairing"
   ],
   "source_last_updated": "2026-04-23T13:42:08.000+0000",
   "source_hash": "6bb2e07279ee96ba8c6b35fdd0b75ac0634b9ec78e66fdd1bb2dd2a7095c2673",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:15.661724Z",
+  "processed_at": "2026-04-25T07:55:31.137379Z",
   "status": "active"
 }
