@@ -7,27 +7,26 @@
   "feature": "App Settings",
   "scenario": "Onboarding EULA page Privacy Policy link opens HP Privacy Policy page with close button instead of back button",
   "steps": [
-    "1. Launch the Poly Studio Mobile app for the first time (fresh install or after clearing app data).",
-    "2. Observe the End User License Agreement (EULA) page displayed on the Home screen.",
-    "3. Tap the 'Privacy Policy' link on the EULA page.",
-    "4. Observe the web page that opens."
+    "Launch Poly Studio Mobile app for the first time",
+    "On the EULA (End User License Agreement) page, locate and tap the 'Privacy Policy' link",
+    "Observe the web page that opens"
   ],
-  "expected": "The user is directed to the HP Privacy Policy page (https://www.hp.com/us-en/privacy/privacy.html). The page displays a close button (X) in the upper right corner.",
+  "expected": "The user is directed to the HP Privacy Policy page (https://www.hp.com/us-en/privacy/privacy.html?jumpid=in_R11928_/us/en/corp/privacy-central/privacy-statements). The page displays a close button (X) in the upper right corner.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "eula-page",
-    "privacy-policy-link",
-    "hp-privacy-policy",
+    "eula",
+    "privacy-policy",
+    "onboarding",
+    "ui-navigation",
     "close-button",
     "back-button",
-    "onboarding-flow",
-    "first-launch"
+    "hp-privacy-policy"
   ],
   "source_last_updated": "1760528305",
   "source_hash": "3a3cf17312c6821c86948777b7be38b4d45b982896ccb6920fa9b0a6ba6d81d0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.703096Z",
+  "processed_at": "2026-04-25T07:55:31.770340Z",
   "status": "active"
 }
