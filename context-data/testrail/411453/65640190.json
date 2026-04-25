@@ -5,29 +5,32 @@
   "project": "411453",
   "title": "[IOS]Analytics - Feedback Opened",
   "feature": "App Settings",
-  "scenario": "Analytics events logged when opening Feedback form (Mopinion) in Poly Studio Mobile app",
+  "scenario": "Feedback form (Mopinion) opened event logged as \"feedback_opened\" in Firebase with delayed event count updates in Poly Studio Mobile app",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
     "2. Navigate to the Home screen.",
-    "3. Open the app menu (e.g., hamburger menu or overflow menu).",
-    "4. Select 'Feedback' or 'Send Feedback' to open the Mopinion feedback form.",
-    "5. Observe the analytics/logging data that is captured upon opening the form."
+    "3. Open the Feedback form (Mopinion) from the app interface (e.g., via Account or Settings menu).",
+    "4. Observe the Firebase Analytics event logging.",
+    "5. Wait a few hours for event counts to update in the Firebase console.",
+    "6. In the Firebase console, navigate to the Analytics dashboard for the app.",
+    "7. Verify the event \"feedback_opened\" appears in the event list.",
+    "8. Check the default dashboard elements: graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
   ],
-  "expected": "The following default analytics elements are logged when the Feedback form is opened: graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment. Event counts update after a few hours.",
+  "expected": "The Firebase event \\\"feedback_opened\\\" is logged when the Feedback form is opened. After a few hours, the event count updates in the Firebase console. The default dashboard elements (graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, App Environment) display correctly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "analytics-events",
-    "mopinion-feedback",
-    "feedback-form",
-    "app-menu",
-    "android",
-    "telemetry-logging"
+    "feedback-opened",
+    "mopinion",
+    "firebase-analytics",
+    "event-logging",
+    "analytics-dashboard",
+    "android"
   ],
   "source_last_updated": "1764327314",
   "source_hash": "d0904e84aa879f38b838ffaf80d24ec700b28a41010713f0d6e8449eb9365a80",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.073963Z",
+  "processed_at": "2026-04-25T09:32:26.332139Z",
   "status": "active"
 }
