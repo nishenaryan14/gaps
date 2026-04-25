@@ -4,22 +4,23 @@
   "type": "testcase",
   "project": "411453",
   "title": "Falcon - Unpair Headset from Charge Stand",
-  "feature": "Bluetooth Pairing",
-  "scenario": "Unpairing headset from Charge Stand via Clear Trusted Device List removes Charge Stand info from Software Update screen",
+  "feature": "Device Management",
+  "scenario": "Unpairing headset from Charge Stand via Clear Trusted Device List does not remove Charge Stand info from Software Update screen",
   "steps": [
     "Open Poly Studio Mobile app on the phone.",
-    "Go to Home screen and tap on the connected headset to open Device Settings.",
-    "Scroll to Reset Device and tap it.",
+    "Navigate to Home screen and tap on the connected headset to open Device Settings.",
+    "Scroll down and tap 'Reset Device'.",
     "Tap 'Clear' next to 'Clear Trusted Device List'.",
     "Verify the headset disconnects from the app.",
     "Remove the headset from the app's device list (if still shown).",
-    "Go to phone's Bluetooth settings and forget/unpair the headset.",
-    "Re-pair the headset with the phone and app by putting the headset into pairing mode and selecting it in the app.",
-    "Verify the headset is properly paired and connected.",
-    "Go to Device Settings \u2192 Software Update.",
-    "Observe any information displayed about the Charge Stand."
+    "Go to the phone's system Bluetooth settings and forget/unpair the headset.",
+    "Re-pair the headset with the phone via Bluetooth settings.",
+    "Open Poly Studio Mobile app and complete the pairing/reconnection flow.",
+    "Verify the headset is properly paired and connected in the app.",
+    "Navigate to Device Settings \u2192 Software Update.",
+    "Observe the Software Update screen for any information about the Charge Stand."
   ],
-  "expected": "The headset disconnects from the app after clearing the trusted device list. After re-pairing, the headset is properly connected. In Device Settings \u2192 Software Update, no information about the Charge Stand should appear.",
+  "expected": "After unpairing and re-pairing, the headset is properly connected. In Device Settings \u2192 Software Update, no information about the Charge Stand appears.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -29,11 +30,12 @@
     "poly-studio-mobile",
     "unpairing",
     "device-settings",
+    "bluetooth-pairing",
     "reset-device"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "b11a55740098c2ba195fa856daf8e4597c0ea8da1e058d87ff18612b86f1a411",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.980757Z",
+  "processed_at": "2026-04-25T07:55:32.008337Z",
   "status": "active"
 }
