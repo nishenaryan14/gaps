@@ -4,28 +4,34 @@
   "type": "testcase",
   "project": "411453",
   "title": "[App] Flamingo/Spoonbill - Connect headset as standalone",
-  "feature": "App - Flamingo/Spoonbill",
-  "scenario": "Verify that a Flamingo/Spoonbill headset not paired with a Charge Case can be connected and function as a standalone headset.",
+  "feature": "Device Management",
+  "scenario": "Standalone headset (Voyager Legend 50/30) without Charge Case shows only headset battery indicator and headset info in Settings > Software Update",
   "steps": [
-    "1) Pair the device with the app -> Device should show as standalone headset with only battery indicator.",
-    "2) Go to Settings > Software update -> Only headset information should be displayed."
+    "1. Ensure the Poly Voyager Legend 50 or Poly Voyager Legend 30 headset is NOT paired with a Charge Case.",
+    "2. Power on the headset and put it into pairing mode.",
+    "3. Open the Poly Studio Mobile app on the Android device.",
+    "4. Navigate to the Home screen and confirm the device is connected.",
+    "5. Observe the battery indicator displayed on the Home screen.",
+    "6. Tap on the connected device name to open Device Settings.",
+    "7. Navigate to Settings \u2192 Software Update.",
+    "8. Observe the information displayed under Software Update."
   ],
-  "expected": "When a Flamingo/Spoonbill headset is not paired with a Charge Case, it can be connected as a standalone headset.",
+  "expected": "Only the headset battery indicator is shown on the Home screen (no charge case battery indicator). In Settings > Software Update, only headset information (e.g., headset firmware version, serial number) is displayed, with no charge case information present.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Flamingo headset",
-    "Spoonbill headset",
-    "standalone headset",
-    "no charge case",
-    "unpaired headset",
-    "battery indicator",
-    "software update",
-    "headset information"
+    "voyager-legend-50",
+    "voyager-legend-30",
+    "standalone-headset",
+    "battery-indicator",
+    "software-update",
+    "device-settings",
+    "poly-studio-mobile",
+    "headset-info"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "7d325c94457c6cd8770ef14726f779426f6dbb28fdd2b357191ce1c9eb9f7e35",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.344816Z",
+  "processed_at": "2026-04-25T05:37:16.979750Z",
   "status": "active"
 }
