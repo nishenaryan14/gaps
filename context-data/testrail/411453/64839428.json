@@ -5,31 +5,24 @@
   "project": "411453",
   "title": "[IOS] Location Sharing Dialogue - Don't Allow - Enable Now - Allow Once",
   "feature": "App Settings",
-  "scenario": "Location permission dialogue flow during Find My Device shows unexpected \"Allow Poly Lens to use your location\" prompt after granting permission with \"Ask Next Time or When I Share\"",
-  "steps": [
-    "1. Launch Poly Studio Mobile app and complete onboarding with location permission set to \"Don't Allow\".",
-    "2. Navigate to App Settings within the app.",
-    "3. Tap \"Find My Device\".",
-    "4. Observe the location permission popup that appears with \"Cancel\" and \"Enable Now\" options.",
-    "5. Tap \"Enable Now\".",
-    "6. In the phone system settings, grant location permission with the option \"Ask Next Time or When I Share\".",
-    "7. Return to the Poly Studio Mobile app."
-  ],
-  "expected": "After returning to the app, the user should be able to proceed with the Find My Device flow without any additional location permission prompts, since permission was already granted at the system level.",
+  "scenario": "Location permission prompt reappears with Allow Once/Allow while using app/Don't Allow options after granting \"Ask Next Time\" permission via Find My Device Enable Now flow",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "find-my-device",
     "location-permission",
-    "poly-studio-mobile",
-    "ask-next-time-or-when-i-share",
-    "permission-dialogue",
-    "app-settings",
-    "location-prompt"
+    "ask-next-time",
+    "find-my-device",
+    "allow-once",
+    "allow-while-using-app",
+    "dont-allow",
+    "permission-prompt",
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "8d1b9ca7cab61d0e7e52367505a412a2a26f0005ddb9898161380f7fd0a528db",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.797354Z",
+  "processed_at": "2026-04-25T08:21:30.914908Z",
   "status": "active"
 }
