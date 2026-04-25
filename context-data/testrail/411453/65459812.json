@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "PPIP - Dialog after Onboarding - Tap on Don't Share",
   "feature": "App Settings",
-  "scenario": "PPIP \"Don't Share\" selection results in \"Share data\" toggle being OFF in App Settings > General > Account after onboarding",
+  "scenario": "PPIP \"Don't Share\" selection on onboarding closes dialog and shows Home screen with Share data toggle set to OFF in App Settings > General > Account",
   "steps": [
-    "1. Complete the onboarding flow in the Poly Studio Mobile app.",
-    "2. When the PPIP (Product Privacy Improvement Program) dialog appears, tap \"Don't Share\".",
-    "3. Observe that the dialog closes and the Home screen is displayed.",
+    "1. Launch the Poly Studio Mobile app and complete the onboarding flow.",
+    "2. When the PPIP (Privacy Policy & Information Protection) dialog appears, tap the \"Don't Share\" button.",
+    "3. Observe that the PPIP dialog closes and the Home screen is displayed.",
     "4. Navigate to App Settings \u2192 General \u2192 Account.",
     "5. Observe the \"Share data\" toggle."
   ],
-  "expected": "The \"Share data\" toggle is shown as OFF with a description explaining that basic device and app information (model, serial number, software version, feature usage) is shared to improve the experience, with no personal information shared with third parties.",
+  "expected": "The PPIP dialog closes and the Home screen is displayed. In App Settings > General > Account, the \"Share data\" toggle is shown as OFF with a description about sharing basic device and app information (model, serial number, software version, feature usage) for product improvement, noting no personal data is shared with third parties.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "ppip",
-    "product-privacy-improvement-program",
     "dont-share",
+    "privacy-policy",
     "share-data-toggle",
     "poly-studio-mobile",
-    "app-settings",
     "onboarding",
-    "privacy"
+    "app-settings"
   ],
   "source_last_updated": "1760537278",
   "source_hash": "19f5cf6dd818571a59839ca84398bc8df3f26b2d4b58f2d39221b163f1f37bce",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.784581Z",
+  "processed_at": "2026-04-25T08:21:30.910862Z",
   "status": "active"
 }
