@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Analytics - Location Permission Granted",
   "feature": "App Settings",
-  "scenario": "Location permission choice (allow/deny) is logged to Firebase Analytics with default event tracking elements in Poly Studio Mobile app",
+  "scenario": "Location permission choice (allow/deny) logged in Firebase analytics event \"location_permission_granted\" on Poly Studio Mobile app",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. If prompted for location permissions, observe the permission dialog.",
-    "3. Tap either \"Allow\" or \"Deny\" on the location permission prompt.",
-    "4. Open Firebase Analytics and navigate to the Events dashboard.",
-    "5. Verify that the location permission choice event (allow or deny) is logged.",
-    "6. Check that the event includes default elements: graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment."
+    "2. When prompted for location permissions, observe the system dialog asking for Allow or Deny.",
+    "3. Tap either \"Allow\" or \"Deny\" on the location permission dialog.",
+    "4. Open Firebase Analytics console and navigate to the Events section.",
+    "5. Search for the \"location_permission_granted\" analytics event.",
+    "6. Verify the event is logged with the user's choice (allow or deny) as a parameter.",
+    "7. Check the default analytics elements: graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment."
   ],
-  "expected": "The user's choice (allow or deny) for location permissions is logged as an event in Firebase Analytics, and the event includes all default elements: graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+  "expected": "The user's choice (allow or deny) for location permissions is logged in Firebase under the \"location_permission_granted\" analytics event. Default analytics elements (graph, events in last 30 min, event count by country, event count by gender, events per session, app version, app build, app environment) are populated correctly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "firebase-analytics",
     "location-permission",
-    "event-tracking",
+    "firebase-analytics",
+    "analytics-event",
+    "permission-granted",
     "android-permissions",
-    "app-analytics",
-    "permission-logging"
+    "event-logging"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "7150be7e1bae407b7f0fa6f347d284b85dbea43b7fa204e7f9e9eeb2d5fbbb87",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.070857Z",
+  "processed_at": "2026-04-25T09:32:26.329118Z",
   "status": "active"
 }
