@@ -1,105 +1,139 @@
 {
   "bug_id": "LMW-2486",
   "matched_testcases": [
-    "65458387",
-    "65293009",
-    "65293034",
-    "65293028",
-    "65293010",
-    "65293019",
-    "65293025",
-    "65293011",
-    "65293016",
-    "65293012",
-    "65293013",
-    "65293014",
-    "65293015",
-    "65293021",
-    "65293022"
+    "64839439",
+    "64839422",
+    "66363556",
+    "66363557",
+    "66363558",
+    "66363559",
+    "66363583",
+    "66363596",
+    "65459448",
+    "65459456",
+    "65459427",
+    "65459458",
+    "65459457",
+    "65459438",
+    "65459432"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case covers the DFU (Device Firmware Update) flow at all.",
-    "No test case verifies the success screen content after a Charge Stand firmware update.",
-    "No test case checks that the correct device name (Charge Stand) is displayed on the success screen after updating only the Charge Stand firmware.",
-    "No test case validates the naming logic in the DFU success screen to prevent displaying the headset name instead of the Charge Stand name."
+    "No test covers the DFU success screen UI content verification \u2014 specifically checking whether the correct component name (e.g., 'Charge Stand') is displayed vs. an incorrect name (e.g., headset name) after a single-component firmware update.",
+    "No test covers the scenario of updating only the Charge Stand (or a single non-headset component) via Device Settings > Software, leaving the headset un-updated.",
+    "No test validates the success screen text/string accuracy after a partial DFU (updating only one component of a multi-component device like Voyager Free 60+).",
+    "No test covers post-DFU UI verification for component-specific naming in success dialogs \u2014 a known pattern where the wrong device name could be displayed due to shared success screen logic."
   ],
   "generated_testcases": [
     {
-      "title": "DFU Success Screen Displays Charge Stand Name After Updating Only Charge Stand Firmware",
+      "title": "TC-DFU-SUCCESS-001: Verify Charge Stand name on DFU success screen after updating only the Charge Stand",
       "steps": [
-        "1. Connect the headset and Charge Stand to the test system.",
-        "2. Launch the firmware update application.",
-        "3. Select 'Charge Stand' as the device to update.",
-        "4. Initiate the DFU process for the Charge Stand firmware only.",
-        "5. Wait for the DFU process to complete successfully.",
-        "6. Observe the success screen displayed after the update."
+        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC.",
+        "2. Navigate to Device Settings \u2192 Software (or Device \u2192 [Device Name] \u2192 Software).",
+        "3. Verify the Software screen shows two components: 'Headset' and 'Charge Stand' with their respective firmware versions.",
+        "4. If a firmware update is available for the Charge Stand only, proceed. Otherwise, ensure the headset is on the latest firmware and only the Charge Stand has a pending update.",
+        "5. Tap 'Update' or 'Update All' \u2014 note: if the UI offers per-component update, tap 'Update' next to 'Charge Stand' only.",
+        "6. Wait for the Charge Stand firmware update to complete (do NOT interrupt the process).",
+        "7. Observe the success/completion screen that appears after the update finishes.",
+        "8. Verify the success screen text reads: 'Charge Stand updated successfully' or similar wording that explicitly names 'Charge Stand' (not 'Headset' or the device name 'Voyager Free 60+ UC').",
+        "9. Verify the success screen does NOT display the headset name (e.g., 'Voyager Free 60+ UC' or 'Headset') as the updated component."
       ],
-      "expected": "The success screen shows 'Charge Stand' (or the exact Charge Stand device name) as the updated device. The headset name is NOT displayed anywhere on the success screen."
+      "expected": "The DFU success screen displays the correct component name 'Charge Stand' (not the headset name or the overall device name). The text explicitly indicates the Charge Stand was updated."
     },
     {
-      "title": "DFU Success Screen Displays Headset Name After Updating Only Headset Firmware",
+      "title": "TC-DFU-SUCCESS-002: Verify headset name on DFU success screen after updating only the Headset",
       "steps": [
-        "1. Connect the headset and Charge Stand to the test system.",
-        "2. Launch the firmware update application.",
-        "3. Select 'Headset' as the device to update.",
-        "4. Initiate the DFU process for the headset firmware only.",
-        "5. Wait for the DFU process to complete successfully.",
-        "6. Observe the success screen displayed after the update."
+        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC.",
+        "2. Navigate to Device Settings \u2192 Software.",
+        "3. Verify the Software screen shows 'Headset' and 'Charge Stand' components.",
+        "4. Ensure only the Headset has a pending firmware update (Charge Stand is up-to-date).",
+        "5. Tap 'Update' next to 'Headset' (or 'Update All' if per-component update is not available, but confirm only headset updates).",
+        "6. Wait for the headset firmware update to complete.",
+        "7. Observe the success/completion screen.",
+        "8. Verify the success screen text reads: 'Headset updated successfully' or similar wording that explicitly names 'Headset'.",
+        "9. Verify the success screen does NOT display 'Charge Stand' or the overall device name as the updated component."
       ],
-      "expected": "The success screen shows the headset name (e.g., 'Headset' or the specific headset model name) as the updated device. The Charge Stand name is NOT displayed on the success screen."
+      "expected": "The DFU success screen displays the correct component name 'Headset' (not 'Charge Stand' or the overall device name)."
     },
     {
-      "title": "DFU Success Screen Displays Correct Names After Updating Both Headset and Charge Stand Sequentially",
+      "title": "TC-DFU-SUCCESS-003: Verify success screen after updating both Headset and Charge Stand simultaneously",
       "steps": [
-        "1. Connect the headset and Charge Stand to the test system.",
-        "2. Launch the firmware update application.",
-        "3. Update the headset firmware first via DFU.",
-        "4. Verify the success screen shows the headset name.",
-        "5. Dismiss the success screen.",
-        "6. Update the Charge Stand firmware via DFU.",
-        "7. Verify the success screen shows the Charge Stand name."
+        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC.",
+        "2. Navigate to Device Settings \u2192 Software.",
+        "3. Verify both 'Headset' and 'Charge Stand' have pending firmware updates.",
+        "4. Tap 'Update All' to update both components.",
+        "5. Wait for both firmware updates to complete sequentially.",
+        "6. Observe the final success/completion screen after both updates finish.",
+        "7. Verify the success screen text mentions both components: e.g., 'Headset and Charge Stand updated successfully' or lists both names.",
+        "8. Verify neither component name is missing or replaced by the overall device name."
       ],
-      "expected": "After the headset update, the success screen displays the headset name. After the Charge Stand update, the success screen displays the Charge Stand name. Each success screen correctly reflects the device that was just updated."
+      "expected": "The DFU success screen correctly displays both component names ('Headset' and 'Charge Stand') when both were updated."
     },
     {
-      "title": "DFU Success Screen Displays Charge Stand Name When Charge Stand Is Updated While Headset Is Disconnected",
+      "title": "TC-DFU-SUCCESS-004: Verify success screen after Charge Stand update \u2014 app force-kill and relaunch",
       "steps": [
-        "1. Connect only the Charge Stand to the test system (headset disconnected or powered off).",
-        "2. Launch the firmware update application.",
-        "3. Select 'Charge Stand' as the device to update.",
-        "4. Initiate the DFU process for the Charge Stand firmware only.",
-        "5. Wait for the DFU process to complete successfully.",
-        "6. Observe the success screen displayed after the update."
+        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC.",
+        "2. Navigate to Device Settings \u2192 Software.",
+        "3. Ensure only the Charge Stand has a pending firmware update.",
+        "4. Tap 'Update' next to 'Charge Stand' to start the update.",
+        "5. After the update completes and the success screen appears, force-kill the app (swipe it away from the recent apps list).",
+        "6. Relaunch Poly Studio Mobile app.",
+        "7. Reconnect to the Voyager Free 60+ UC device.",
+        "8. Navigate to Device Settings \u2192 Software.",
+        "9. Verify the Software screen shows the updated firmware version for the Charge Stand.",
+        "10. Verify the success screen does NOT reappear (it should be a one-time dialog)."
       ],
-      "expected": "The success screen shows 'Charge Stand' (or the exact Charge Stand device name) as the updated device. The headset name is not displayed since the headset was not connected."
+      "expected": "The DFU success screen is shown once after update completion and does not reappear after app force-kill and relaunch. The firmware version correctly reflects the Charge Stand update."
     },
     {
-      "title": "DFU Success Screen Displays Correct Device Name After Charge Stand Update With Custom Device Names",
+      "title": "TC-DFU-SUCCESS-005: Verify success screen text after Charge Stand update \u2014 device disconnect/reconnect during success screen",
       "steps": [
-        "1. Connect the headset and Charge Stand to the test system.",
-        "2. Rename the headset to a custom name (e.g., 'My Headset').",
-        "3. Rename the Charge Stand to a custom name (e.g., 'My Stand').",
-        "4. Launch the firmware update application.",
-        "5. Select the Charge Stand for firmware update.",
-        "6. Initiate and complete the DFU process.",
-        "7. Observe the success screen."
+        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC.",
+        "2. Navigate to Device Settings \u2192 Software.",
+        "3. Ensure only the Charge Stand has a pending firmware update.",
+        "4. Tap 'Update' next to 'Charge Stand' to start the update.",
+        "5. Wait for the update to complete and the success screen to appear.",
+        "6. While the success screen is displayed, turn off the Voyager Free 60+ UC earbuds (place them in the case and close the lid, or power off via the touchscreen case).",
+        "7. Wait 5 seconds, then turn the device back on and allow reconnection.",
+        "8. Observe the success screen after reconnection.",
+        "9. Verify the success screen still displays 'Charge Stand updated successfully' (or equivalent) and does not change to an incorrect name.",
+        "10. Dismiss the success screen and verify the Software screen shows the updated firmware version for the Charge Stand."
       ],
-      "expected": "The success screen displays the custom Charge Stand name ('My Stand') as the updated device. The custom headset name ('My Headset') is NOT displayed on the success screen."
+      "expected": "The DFU success screen persists correctly with 'Charge Stand' name even after a device disconnect/reconnect event during the success screen display."
     },
     {
-      "title": "DFU Success Screen Does Not Display Headset Name After Charge Stand Update When Both Devices Have Similar Names",
+      "title": "TC-DFU-SUCCESS-006: Verify success screen after Charge Stand update \u2014 navigate away and return",
       "steps": [
-        "1. Connect the headset and Charge Stand to the test system.",
-        "2. Rename both devices to similar names (e.g., 'Device A' for headset and 'Device A' for Charge Stand, or names that share common substrings).",
-        "3. Launch the firmware update application.",
-        "4. Select the Charge Stand for firmware update.",
-        "5. Initiate and complete the DFU process.",
-        "6. Observe the success screen."
+        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC.",
+        "2. Navigate to Device Settings \u2192 Software.",
+        "3. Ensure only the Charge Stand has a pending firmware update.",
+        "4. Tap 'Update' next to 'Charge Stand' to start the update.",
+        "5. Wait for the update to complete and the success screen to appear.",
+        "6. Without dismissing the success screen, tap the back button or navigate to the Home screen of the app.",
+        "7. Navigate back to Device Settings \u2192 Software.",
+        "8. Verify the success screen is no longer displayed (it should have been dismissed on navigation).",
+        "9. Verify the Software screen shows the updated firmware version for the Charge Stand.",
+        "10. Verify the headset firmware version remains unchanged."
       ],
-      "expected": "The success screen displays the correct Charge Stand name (the name assigned to the Charge Stand). The headset name is not incorrectly substituted on the success screen, even when names are similar."
+      "expected": "Navigating away from the success screen dismisses it. The Software screen correctly reflects the Charge Stand firmware update while the headset version is unchanged."
+    },
+    {
+      "title": "TC-DFU-SUCCESS-007: Verify success screen shows correct name when Charge Stand update fails and then succeeds on retry",
+      "steps": [
+        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC.",
+        "2. Navigate to Device Settings \u2192 Software.",
+        "3. Ensure only the Charge Stand has a pending firmware update.",
+        "4. Tap 'Update' next to 'Charge Stand' to start the update.",
+        "5. During the update, simulate a failure (e.g., move the device out of Bluetooth range, or turn off the charge case).",
+        "6. Observe the failure/error screen \u2014 verify it mentions 'Charge Stand' (e.g., 'Charge Stand update failed').",
+        "7. Bring the device back into range / power on the charge case.",
+        "8. Tap 'Retry' or 'Update' again for the Charge Stand.",
+        "9. Wait for the update to complete successfully.",
+        "10. Observe the success screen \u2014 verify it reads 'Charge Stand updated successfully' (not 'Headset' or the device name)."
+      ],
+      "expected": "Both the failure screen and the subsequent success screen correctly reference 'Charge Stand' as the component being updated."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-24T12:05:50.001688Z"
+  "processed_at": "2026-04-25T05:50:38.514202Z"
 }
