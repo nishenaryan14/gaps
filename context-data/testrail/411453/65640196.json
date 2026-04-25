@@ -7,8 +7,8 @@
   "feature": "App Settings",
   "scenario": "App remains stable and headset stays connected after prolonged idle soak test with app in background",
   "steps": [
-    "1. Install and launch the Poly Studio Mobile app.",
-    "2. Pair a Poly Bluetooth headset with the app.",
+    "1. Install and launch the Poly Studio Mobile Android app.",
+    "2. Pair a Poly Bluetooth headset with the app via Home \u2192 Add Device.",
     "3. Navigate to the Home screen.",
     "4. Put the app in the background (e.g., press the Home button or switch to another app).",
     "5. Leave the phone idle for multiple hours (e.g., overnight)."
@@ -21,14 +21,13 @@
     "background-idle",
     "connection-persistence",
     "bluetooth-pairing",
-    "home-screen",
     "app-stability",
-    "idle-soak-test",
-    "headset-connection"
+    "prolonged-idle",
+    "android"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "26e9e61f5e7afa714f2045b045c2bf99e6945bb8293e9c9554a0fe783f554428",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.074634Z",
+  "processed_at": "2026-04-25T09:32:26.332139Z",
   "status": "active"
 }
