@@ -9,25 +9,27 @@
   "steps": [
     "Open the Poly Studio Mobile app for the first time (or after clearing app data) to reach the onboarding flow.",
     "Swipe left repeatedly to navigate through all onboarding screens until reaching the sixth (last) screen.",
-    "From the sixth screen, swipe left once \u2014 observe the screen transition.",
-    "Continue swiping left from each subsequent screen and note which screen is displayed.",
-    "Once on the second screen, swipe left again and observe the behavior."
+    "From the sixth screen, swipe left once \u2014 observe navigation back to the fifth screen.",
+    "Continue swiping left from the fifth screen \u2014 observe navigation back to the fourth screen.",
+    "Swipe left from the fourth screen \u2014 observe navigation back to the third screen.",
+    "Swipe left from the third screen \u2014 observe navigation back to the second screen.",
+    "From the second screen, swipe left again \u2014 observe that the screen does not change and remains on the second screen."
   ],
-  "expected": "Swiping left from the sixth screen navigates back through screens 5, 4, 3, and 2 in order. When on the second screen, further left swipes have no effect (the screen stays on the second screen). All screens match the Figma design.",
+  "expected": "Swiping left from the sixth screen navigates back through screens 5, 4, 3, and 2. Once on the second screen, further left swipes have no effect (the screen stays on the second screen). All screens match the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-flow",
     "left-swipe-navigation",
-    "screen-transition",
-    "ui-navigation",
+    "screen-navigation-loop",
+    "onboarding-screen-lock",
     "app-first-launch",
-    "carousel-behavior"
+    "ui-navigation-bug"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "91ec45d90bf4c1f236303794a87ec611120485f2ea305f1392ae65f857a95bdf",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.018774Z",
+  "processed_at": "2026-04-25T09:32:26.275592Z",
   "status": "active"
 }
