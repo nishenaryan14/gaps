@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Language Change - Checking pop up if at least one component is at low battery",
   "feature": "Firmware Update",
-  "scenario": "Language update blocked with low battery pop-up when any connected component has less than 5% battery",
+  "scenario": "Language change firmware update blocked with low battery pop-up on headset, earbud, or smart case",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Ensure a Poly device (single headset, earbuds, or earbuds with smart case) is connected via Bluetooth.",
-    "3. Verify that at least one component (headset, earbud, or smart case) has a battery level less than 5%.",
-    "4. Navigate to Poly Studio Mobile \u2192 [Device Name] \u2192 Device Settings.",
-    "5. Locate and tap the Language option.",
-    "6. Attempt to change the language (e.g., select a different language from the list)."
+    "2. Navigate to the Home screen and select your connected Poly audio device.",
+    "3. Go to Device Settings \u2192 Audio Settings \u2192 Language.",
+    "4. Attempt to change the language setting, which triggers a firmware update.",
+    "5. Observe the pop-up message that appears when any component (headset, earbud, or smart case) has a low battery."
   ],
-  "expected": "The app displays a pop-up message: \\\"Update currently not available, please try back later\\\" and prevents the language update from proceeding.",
+  "expected": "The firmware update should proceed normally if all components have sufficient battery. If any component has low battery, a pop-up should appear: \\\"Update currently not available, please try back later\\\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "firmware-update",
+    "low-battery",
+    "language-change",
     "poly-studio-mobile",
-    "language-update",
-    "low-battery-pop-up",
-    "battery-threshold",
+    "pop-up-message",
+    "battery-persistence",
     "device-settings",
-    "bluetooth-connection",
-    "smart-case",
-    "firmware-blocked"
+    "audio-settings"
   ],
   "source_last_updated": "1763383741",
   "source_hash": "c0d89590446522d37af0026886eccdd4e85134cd065141155b2eee7acbf40370",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.896680Z",
+  "processed_at": "2026-04-25T08:21:30.980005Z",
   "status": "active"
 }
