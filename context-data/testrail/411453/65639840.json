@@ -5,28 +5,29 @@
   "project": "411453",
   "title": "1 step DFU - Content of the Software Update tab when there is update available only for Earbuds",
   "feature": "Firmware Updates",
-  "scenario": "Software Update tab shows earbud firmware update details and marks charging case as up to date when update is available only for earbuds",
+  "scenario": "Software Update tab shows earbuds firmware versions, release notes, and Update button while charging case is marked up to date when only earbuds update is available",
   "steps": [
     "Open Poly Studio Mobile app on the Home screen.",
-    "Ensure a Poly Bluetooth earbud device (e.g., Poly Voyager Free 20) is connected.",
+    "Ensure a Poly Bluetooth audio device (earbuds + charging case) is connected.",
     "Navigate to Device Settings \u2192 [Device Name] \u2192 Software Update.",
     "Observe the Software Update tab content when a firmware update is available only for the earbuds (not the charging case)."
   ],
-  "expected": "The Software Update tab displays: current earbud firmware version, available earbud firmware version, release notes for the earbud update, and an Update button. The charging case is shown as 'Up to date' with no update available.",
+  "expected": "The Software Update tab displays the current and available firmware versions for the earbuds, release notes, and an Update button. The charging case is marked as up to date.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "firmware-update",
-    "software-update-tab",
-    "poly-studio-mobile",
-    "poly-voyager-free-20",
+    "software-update",
+    "firmware-versions",
+    "release-notes",
+    "update-button",
     "charging-case",
-    "earbud-firmware",
+    "earbuds",
+    "poly-studio-mobile",
     "device-settings"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "55779b747527aa18c83f5ce7e314c8d6eea23e5dd75f4414bcd7eb83f4191fb6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.960746Z",
+  "processed_at": "2026-04-25T08:21:31.030690Z",
   "status": "active"
 }
