@@ -5,23 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Animations",
   "feature": "App Settings",
-  "scenario": "Onboarding screen animations fail to play on 'Well hello, first thing first...', 'Up-to-Date', 'Personal', and 'Organized' screens in Poly Studio Mobile app",
-  "steps": [],
-  "expected": "",
+  "scenario": "Onboarding animations fail to play on one or more screens during first-time app setup in Poly Studio Mobile",
+  "steps": [
+    "Launch Poly Studio Mobile app for the first time",
+    "Observe the initial setup loading screen",
+    "Observe the 'Well hello, first thing first...' screen",
+    "Observe the 'Up-to-Date' screen",
+    "Observe the 'Personal' screen",
+    "Observe the 'Organized' screen"
+  ],
+  "expected": "Onboarding animations play smoothly and correctly on all screens: initial setup loading screen, 'Well hello, first thing first...', 'Up-to-Date', 'Personal', and 'Organized' screens.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "onboarding-screen",
-    "animation-failure",
-    "app-ui",
+    "onboarding-animations",
     "first-time-setup",
-    "screen-transition",
-    "visual-glitch"
+    "app-launch",
+    "setup-screens",
+    "animation-playback",
+    "initial-setup-loading"
   ],
   "source_last_updated": "1760532131",
   "source_hash": "4cf73628a2144f38f431a5e5bcdcd2b8b523b3a88d75d1d13d32901c3c93abd4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.716422Z",
+  "processed_at": "2026-04-25T07:55:31.783573Z",
   "status": "active"
 }
