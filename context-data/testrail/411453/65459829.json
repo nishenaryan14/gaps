@@ -5,23 +5,23 @@
   "project": "411453",
   "title": "Notifications - Device charging OFF",
   "feature": "Notifications",
-  "scenario": "Device Charging notification does not appear when disabled in Poly Lens Menu > Notifications & Device Alerts while app is in background and headset is connected to charger",
+  "scenario": "Device Charging notification does not appear when disabled in Poly Lens Menu > Notifications & Device Alerts while app is in background and headset is plugged into charger",
   "steps": [],
   "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "device-charging-notification",
     "poly-lens-app",
-    "charging-notification",
     "notifications-and-device-alerts",
     "background-app",
-    "charger-connection",
+    "headset-charging",
     "notification-persistence",
-    "device-alert-settings"
+    "poly-lens-menu"
   ],
   "source_last_updated": "1761226637",
   "source_hash": "d71bf242e5604cdb424f5d8c33f4aff28ea88590ec3cfb5c31943fab5bfb14db",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.045061Z",
+  "processed_at": "2026-04-25T09:32:26.312500Z",
   "status": "active"
 }
