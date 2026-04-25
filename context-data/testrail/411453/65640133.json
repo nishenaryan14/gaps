@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Device(headset) is successfully registered to Cloud",
   "feature": "Device Management",
-  "scenario": "Headset appears in Poly Lens Cloud inventory after pairing with Poly Studio Mobile app",
+  "scenario": "Verify a newly paired headset appears in Poly Lens Cloud inventory after successful registration via the Poly Lens app",
   "steps": [
-    "Open the Poly Lens app with no headsets connected.",
-    "Navigate to Poly Lens Menu \u2192 General \u2192 Account.",
-    "Log in with valid credentials.",
-    "Check the Lens server inventory page \u2014 the device list should show only the Mobile app initially.",
-    "Open the Poly Studio Mobile app and pair a new headset.",
-    "Return to the Poly Lens app and refresh the Lens Cloud inventory page.",
-    "Verify the newly paired headset appears on the inventory list."
+    "1. Open the Poly Studio Mobile app with no headsets connected.",
+    "2. Navigate to Poly Lens Menu \u2192 General \u2192 Account and log in with valid credentials.",
+    "3. Go to the Lens server inventory page and verify the device list shows only the Mobile app.",
+    "4. Pair a new headset with the app via Bluetooth.",
+    "5. Refresh the Lens Cloud inventory page."
   ],
   "expected": "The newly paired headset appears on the Lens Cloud inventory list alongside the Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-lens-cloud",
+    "inventory",
+    "device-registration",
     "poly-studio-mobile",
-    "inventory-page",
     "bluetooth-pairing",
-    "device-discovery",
     "lens-server",
-    "headset-pairing",
-    "cloud-inventory"
+    "headset-pairing"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "2592309e373fb9e6eaad1a0e0e8177d9de1de4e8eb0497ab7f86e24229eb4c58",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.986989Z",
+  "processed_at": "2026-04-25T08:21:31.062127Z",
   "status": "active"
 }
