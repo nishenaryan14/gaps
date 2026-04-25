@@ -4,29 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Events are gathered if user is logged out but opted into data-sharing",
-  "feature": "Analytics",
-  "scenario": "Firebase events are gathered for logged-out users who have opted into data-sharing",
+  "feature": "App Settings",
+  "scenario": "Analytics events continue to be collected after logout when Share Data toggle is enabled in App Settings > General > Account",
   "steps": [
-    "Log out of the application.",
-    "Ensure the user has opted into data-sharing.",
-    "Trigger any Firebase event (e.g., device_added which gathers the device's serial number).",
-    "Check Firebase to verify that the event count for that device's serial number has increased."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Home \u2192 App Settings (gear icon) \u2192 General \u2192 Account.",
+    "3. Ensure the user is logged out of their account.",
+    "4. Verify that the 'Share Data' toggle under Account is set to ON (opted into data-sharing).",
+    "5. Return to the Home screen.",
+    "6. Trigger a device-related event, such as adding a new Poly Bluetooth audio device (e.g., press the Bluetooth button on the device to pair, or connect a device via the app).",
+    "7. Check Firebase Analytics console for the event count (e.g., 'device_added' event with device serial number)."
   ],
-  "expected": "The event count for the device's serial number increases on Firebase.",
+  "expected": "Analytics events (e.g., device_added with device serial number) should NOT be gathered or sent to Firebase when the user is logged out, even if the Share Data toggle is enabled.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Firebase events",
-    "logged-out users",
-    "data-sharing opt-in",
-    "device serial number",
-    "event count verification",
-    "device_added event",
-    "Firebase analytics"
+    "share-data-toggle",
+    "analytics-events",
+    "logout-persistence",
+    "poly-studio-mobile",
+    "app-settings",
+    "firebase-analytics",
+    "data-sharing",
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "08279c2539ff67314735d11d8c4c808177795be9c8cb2ba865d2f49674638324",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.321465Z",
+  "processed_at": "2026-04-25T05:37:16.964234Z",
   "status": "active"
 }
