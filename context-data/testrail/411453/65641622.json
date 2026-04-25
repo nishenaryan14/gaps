@@ -5,33 +5,22 @@
   "project": "411453",
   "title": "Fit test - All screens are properly translated to different languages",
   "feature": "App Settings",
-  "scenario": "Fit Test feature screens show untranslated text when phone language is changed on Poly Studio Mobile app",
-  "steps": [
-    "1. Change the phone system language to the target language (e.g., French, German, Japanese, etc.).",
-    "2. Launch the Poly Studio Mobile app with a supported Poly Bluetooth audio device connected.",
-    "3. On the Home screen, tap the Tutorial screen or navigate to the Fit Test feature from the device settings.",
-    "4. Tap Fit Test to open the Fit Test screen.",
-    "5. Complete a successful fit test (e.g., insert earbuds properly and follow on-screen prompts until completion).",
-    "6. Observe all text displayed during the successful fit test flow (instructions, status messages, completion message).",
-    "7. Complete a failed fit test (e.g., remove earbuds or block the seal to trigger a failure).",
-    "8. Observe all text displayed during the failed fit test flow (error messages, retry prompts, failure notification)."
-  ],
-  "expected": "All text on every screen of the Fit Test feature (Tutorial, in-test instructions, success result, failure result) is properly translated into the target language with no untranslated strings, truncation, or encoding issues.",
+  "scenario": "Fit Test screens within Tutorial section display untranslated or improperly localized text when phone language is changed",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "poly-studio-mobile",
+    "tutorial-section",
     "localization",
-    "untranslated-text",
     "language-change",
-    "earbud-seal",
-    "fit-test-failure",
-    "on-screen-prompts"
+    "ui-text",
+    "poly-bluetooth"
   ],
   "source_last_updated": "1760956350",
   "source_hash": "b7462e2a94ebccee9fa41b7881a305966375236f07af9e29bb68ee5f825d1cb8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.908286Z",
+  "processed_at": "2026-04-25T08:21:30.988638Z",
   "status": "active"
 }
