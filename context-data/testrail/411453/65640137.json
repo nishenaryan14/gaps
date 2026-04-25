@@ -5,23 +5,30 @@
   "project": "411453",
   "title": "Personal User - no headset policy, all settings unlocked",
   "feature": "App Settings",
-  "scenario": "All headset settings are unlocked and changeable for personal users (no headset policy) in Poly Studio Mobile app",
-  "steps": [],
-  "expected": "",
+  "scenario": "All headset settings remain unlocked and changeable for personal users (no headset policy applied) in the Poly Studio Mobile app",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app and log in as a personal user (or continue as Guest).",
+    "2. From the Home screen, tap on the connected headset to open Device Settings.",
+    "3. Navigate through all available settings: Audio Settings (ANC, Transparency Mode, Equalizer), Notifications, and any other toggles or sliders.",
+    "4. Attempt to change each setting (e.g., toggle ANC on/off, adjust EQ sliders, enable/disable Transparency Mode).",
+    "5. Verify the status of each setting reflects the user's changes."
+  ],
+  "expected": "All headset settings are unlocked and can be changed by the personal user. No settings are grayed out, locked, or restricted.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "headset-settings",
-    "personal-users",
-    "no-headset-policy",
-    "settings-unlocked",
-    "settings-changeable",
-    "app-configuration"
+    "device-settings",
+    "anc",
+    "transparency-mode",
+    "equalizer",
+    "notifications",
+    "personal-user",
+    "no-headset-policy"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "189ee3fd10dbcb73a387a58fedf5fc844098072a90a88589ea25d39f0caf4abf",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.982391Z",
+  "processed_at": "2026-04-25T08:21:31.055843Z",
   "status": "active"
 }
