@@ -5,34 +5,23 @@
   "project": "411453",
   "title": "Notifications - Master Toggle OFF - Update successful",
   "feature": "Notifications",
-  "scenario": "No notification shown on successful firmware update when Notifications master toggle is OFF in App Settings",
-  "steps": [
-    "1. Open Poly Studio Mobile app on the Home screen.",
-    "2. Go to App Settings \u2192 General \u2192 Notifications & Device Alerts.",
-    "3. Set the Notifications master toggle to OFF.",
-    "4. Pair the Poly Bluetooth audio device with the mobile device.",
-    "5. Navigate to Device Settings \u2192 [Device Name] \u2192 Software Update.",
-    "6. Start a Device Firmware Update (DFU).",
-    "7. Put the Poly Studio Mobile app in the background.",
-    "8. Wait for the firmware update to complete.",
-    "9. Observe whether any notification appears on the device."
-  ],
-  "expected": "No notification is shown upon successful firmware update completion.",
+  "scenario": "No notification pop-up appears after successful firmware update when Notifications master toggle is OFF in App Settings > General > Notifications & Device Alerts",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "firmware-update",
+    "notification-pop-up",
     "notifications-master-toggle",
     "app-settings",
-    "poly-studio-mobile",
-    "software-update",
-    "dfu",
-    "notification-suppression",
-    "device-alerts"
+    "notifications-and-device-alerts",
+    "general-settings",
+    "update-success-notification"
   ],
   "source_last_updated": "1761230695",
   "source_hash": "424d953999f775f94e927346ed46293d5c096ca20d800007f71281af1dccac8b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.047099Z",
+  "processed_at": "2026-04-25T09:32:26.312500Z",
   "status": "active"
 }
