@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "Notifications  - Device updating OFF",
   "feature": "Notifications",
-  "scenario": "No firmware update notification shown when Device Software Update notifications are disabled in App Settings > General > Notifications & Device Alerts",
+  "scenario": "No firmware update notification appears when Device Software Update notifications are disabled in App Settings > General > Notifications & Device Alerts",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Go to App Settings \u2192 General \u2192 Notifications & Device Alerts",
-    "Set Device Software Update notifications to OFF",
-    "Return to Home screen",
-    "Pair a Poly Bluetooth audio device (if not already paired)",
-    "Start a Device Firmware Update (DFU) on the paired device",
-    "Press the Home button or switch to another app to put Poly Studio Mobile in the background",
-    "Observe the device notification area (status bar / notification shade)"
+    "1. Open Poly Studio Mobile app.",
+    "2. Go to App Settings \u2192 General \u2192 Notifications & Device Alerts.",
+    "3. Set 'Device Software Update' notifications to OFF.",
+    "4. Pair a Poly Bluetooth audio device with the mobile device.",
+    "5. Initiate a Device Firmware Update (DFU) on the paired device.",
+    "6. Press the Home button or switch to another app to put the Poly Studio Mobile app in the background.",
+    "7. Observe the notification area (status bar / notification shade) on the mobile device."
   ],
-  "expected": "No notification is shown in the device notification area when the firmware update begins while the app is in the background.",
+  "expected": "No notification is displayed in the notification area when the device firmware update begins while the app is in the background.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device-software-update-notifications",
-    "app-settings-notifications",
-    "poly-studio-mobile",
     "firmware-update-notification",
-    "dfu",
-    "notification-alerts",
-    "background-notifications"
+    "device-software-update",
+    "notifications-device-alerts",
+    "poly-studio-mobile",
+    "app-settings",
+    "background-app-behavior",
+    "dfu-notification-suppression"
   ],
   "source_last_updated": "1761223796",
   "source_hash": "26c289bcf1b1d09691f7e732c002b55d692130795753b152167dd498afb9a8d1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.943306Z",
+  "processed_at": "2026-04-25T07:55:31.971157Z",
   "status": "active"
 }
