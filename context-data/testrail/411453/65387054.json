@@ -5,33 +5,23 @@
   "project": "411453",
   "title": "User Guides - 'New' tag",
   "feature": "App Settings",
-  "scenario": "Newly released Poly device shows a 'New' tag in the User Guides section of App Settings, and the tag persists for 6 months",
-  "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to the Home screen.",
-    "3. Tap the Menu icon (hamburger) or the Settings gear icon to access App Settings.",
-    "4. Scroll to the User Guides section.",
-    "5. Observe whether a 'New' tag is displayed next to the user guide for the newly released Poly device.",
-    "6. Note the current date.",
-    "7. Wait or simulate the passage of 6 months from the device's release date.",
-    "8. After 6 months, repeat steps 1\u20134.",
-    "9. Observe whether the 'New' tag is still displayed next to the user guide for that device."
-  ],
-  "expected": "A 'New' tag is displayed next to the user guide for the newly released Poly device in the User Guides section of App Settings, and the tag remains visible for 6 months from the device's release date. After 6 months, the 'New' tag should no longer be displayed.",
+  "scenario": "Newly released Poly device shows 'New' tag in User Guides section of App Settings for 6 months from release date",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "app-settings",
-    "user-guides",
     "new-tag",
-    "tag-persistence",
+    "user-guides",
+    "app-settings",
+    "release-date",
+    "poly-app",
     "device-release",
-    "ui-tag-expiration"
+    "tag-expiry"
   ],
   "source_last_updated": "1760351784",
   "source_hash": "5e65658530b8af0d6599c02348c8a6fb9fadf19ad19e22bc91ddd357cac187d4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.842586Z",
+  "processed_at": "2026-04-25T08:21:30.948464Z",
   "status": "active"
 }
