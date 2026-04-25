@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "EB and CC on the latest - Language change",
   "feature": "Firmware Updates",
-  "scenario": "Companion Card pop-up appears on Device Home Screen after language change via Device Settings even when CC and EB firmware are already up to date",
+  "scenario": "Companion Card pop-up appears on Device Home Screen after language change via Device Settings even when CC firmware is already up to date",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Home screen with a Tern/Emu device connected where CC and EB firmware are already up to date.",
-    "2. Navigate to Device Settings > Language.",
-    "3. Select any language from the list.",
-    "4. Tap the \"Update Now\" button to apply the language change.",
-    "5. Wait for the language change to complete.",
-    "6. Return to the Device Home screen."
+    "1. Launch the Poly Studio Mobile app on the paired device.",
+    "2. On the Home screen, verify that the connected device (e.g., Tern/Emu) has no pending firmware updates for Companion Card (CC) or Embedded Bluetooth (EB).",
+    "3. Navigate to Device Settings \u2192 Language.",
+    "4. Select any language from the available list.",
+    "5. Tap the \"Update Now\" button to apply the language change.",
+    "6. Wait for the language change process to complete.",
+    "7. Return to the Device Home screen."
   ],
-  "expected": "The CC (Companion Card) pop-up card should NOT appear on the Device Home screen, since CC firmware is already on the latest version.",
+  "expected": "The Companion Card (CC) pop-up card should NOT appear on the Device Home screen, since the CC firmware is already up to date.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "companion-card-pop-up",
-    "device-home-screen",
     "language-change",
-    "device-settings",
+    "device-home-screen",
     "poly-studio-mobile",
-    "firmware-up-to-date",
-    "cc-firmware",
-    "eb-firmware"
+    "firmware-update",
+    "device-settings",
+    "companion-card-firmware"
   ],
   "source_last_updated": "1763382835",
   "source_hash": "43a57e60742c28c8d70e7d41fec7e5d99d3e52cd608d48b2e6c4ff7221a00632",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.983549Z",
+  "processed_at": "2026-04-25T09:32:26.236157Z",
   "status": "active"
 }
