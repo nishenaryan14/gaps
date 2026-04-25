@@ -5,31 +5,28 @@
   "project": "411453",
   "title": "Software Update - \"1\" or \"2\" tag on the tab if any component is outdated",
   "feature": "Firmware Updates",
-  "scenario": "Software Update tab displays numbered badge indicating count of outdated components (headset, stand, charge case)",
+  "scenario": "Software Update tab does not display numbered badge for available component updates on Poly Studio Mobile app",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Ensure at least one Poly audio device component (headset, stand, or charge case) has an available firmware update.",
-    "Navigate to the Software Update tab (e.g., via Home \u2192 Software Update or Account \u2192 Software Update).",
-    "Observe the numbered tag displayed on the Software Update tab icon or label.",
-    "If one component has an available update, verify the tag shows \"1\".",
-    "If two components have available updates, verify the tag shows \"2\"."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Locate the Software Update tab",
+    "Observe the badge on the Software Update tab"
   ],
-  "expected": "The Software Update tab displays a numbered tag (e.g., \"1\" or \"2\") indicating the count of components (headset, stand, charge case) with an available update. When one component is outdated, a \"1\" tag appears. When two components are outdated, a \"2\" tag appears.",
+  "expected": "The Software Update tab displays a numbered badge (e.g., \"1\" or \"2\") indicating how many components (headset, stand, charge case, etc.) have an available update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "software-update-tab",
-    "firmware-update",
-    "numbered-badge",
     "poly-studio-mobile",
-    "outdated-components",
-    "headset-firmware",
-    "charge-case-firmware",
-    "stand-firmware"
+    "software-update-tab",
+    "badge",
+    "component-updates",
+    "firmware-update",
+    "home-screen",
+    "notification-badge"
   ],
   "source_last_updated": "1763046713",
   "source_hash": "98c254a4a2818dfbc0b03cdf19a68fb4d53ee4106dcd8fa6f62643ecf8b75221",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.955200Z",
+  "processed_at": "2026-04-25T08:21:31.021423Z",
   "status": "active"
 }
