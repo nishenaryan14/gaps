@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Policy: Policy applied - Logout - Settings stay locked",
   "feature": "App Settings",
-  "scenario": "Locked policy settings persist after user logs out of tenant in Poly Studio Mobile app",
+  "scenario": "Locked policy settings persist in the Poly Studio Mobile app after user logs out of tenant",
   "steps": [
     "1. Open Poly Studio Mobile app on the Android device.",
-    "2. Log in to a tenant account that has a device policy applied with certain settings locked (e.g., ANC, Transparency Mode, Equalizer).",
-    "3. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings and verify that the locked settings are grayed out or non-interactive.",
-    "4. Log out of the tenant account from the app (Account \u2192 Log Out).",
-    "5. After logout, navigate again to Home \u2192 [Device Name] \u2192 Audio Settings.",
-    "6. Observe the state of the previously locked settings (e.g., ANC, Transparency Mode, Equalizer)."
+    "2. Log in to the app with a tenant account that has a policy applied to the device.",
+    "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "4. Verify that certain settings (e.g., ANC, Transparency Mode, Equalizer) are locked/greyed out due to the applied policy.",
+    "5. Log out of the tenant account from the app (Account \u2192 Log Out).",
+    "6. Observe the state of the previously locked settings in Device Settings or Audio Settings."
   ],
-  "expected": "After logging out of the tenant, the settings that were locked by the device policy should become unlocked and editable in the app.",
+  "expected": "After logging out of the tenant, the settings that were locked by the policy should become unlocked and editable in the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-policy",
-    "locked-settings",
-    "tenant-logout",
+    "policy-persistence",
+    "device-settings",
     "anc",
     "transparency-mode",
     "equalizer",
-    "policy-persistence"
+    "logout",
+    "tenant-policy"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "d2d70e016842a1485406e1fda39825a7ba85d60ab721b6263717eba42c5ad6ad",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.975758Z",
+  "processed_at": "2026-04-25T08:21:31.051787Z",
   "status": "active"
 }
