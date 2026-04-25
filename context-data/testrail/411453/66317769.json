@@ -12,26 +12,27 @@
     "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
     "4. In Device Settings, tap on 'Language'.",
     "5. Select a new language from the available list.",
-    "6. Tap 'Update Now' to trigger a firmware update for the language change.",
-    "7. During the update, within the first 20% of progress, turn off the Poly headset by pressing and holding the Power button.",
-    "8. Observe the app screen for an error message."
+    "6. Tap 'Update Now' to trigger a firmware update for the headset.",
+    "7. During the update, within the first 20% of progress, turn off the headset by pressing and holding the Power button.",
+    "8. Observe the error screen displayed on the app.",
+    "9. Tap 'Retry' on the error screen."
   ],
-  "expected": "A \"Houston\" error screen appears indicating the update failed. Tapping \"Retry\" returns the user to the previous screen (Language selection) to attempt the update again.",
+  "expected": "After tapping 'Retry', the user is returned to the previous screen (Language selection or Device Settings) to attempt the update again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-settings",
     "language-update",
     "firmware-update",
     "houston-error",
+    "device-settings",
+    "retry",
     "power-off",
-    "update-failure",
-    "retry-behavior"
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1762252574",
   "source_hash": "5d0468a5ea53c3fba035e083d5981d4e68952abe9999a728e448568cb1e23f6b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.896153Z",
+  "processed_at": "2026-04-25T08:21:30.981019Z",
   "status": "active"
 }
