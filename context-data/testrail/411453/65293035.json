@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Check onboarding screens UI",
   "feature": "App Settings",
-  "scenario": "Onboarding screens UI verification for Organized, Up-to-Date, and Personal pages in Poly Studio Mobile app",
+  "scenario": "Onboarding screens (Organized, Up-to-Date, Personal) UI verification on first launch of Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app for the first time.",
-    "2. Progress through the onboarding screens until reaching the \"Organized\" screen.",
-    "3. Verify the UI elements on the \"Organized\" screen (e.g., title, description text, illustration, navigation indicators).",
-    "4. Swipe left to navigate to the next onboarding page (\"Up-to-Date\").",
-    "5. Verify the UI elements on the \"Up-to-Date\" screen (e.g., title, description text, illustration, navigation indicators).",
-    "6. Swipe left to navigate to the next onboarding page (\"Personal\").",
-    "7. Verify the UI elements on the \"Personal\" screen (e.g., title, description text, illustration, navigation indicators)."
+    "Launch the Poly Studio Mobile app for the first time after installation.",
+    "Observe the first onboarding screen titled 'Organized'.",
+    "Swipe left or tap Next to proceed to the second onboarding screen titled 'Up-to-Date'.",
+    "Swipe left or tap Next to proceed to the third onboarding screen titled 'Personal'.",
+    "Observe all UI elements on each screen, including title text, description text, illustrations/graphics, and navigation controls (Next button, Skip button, page indicators)."
   ],
-  "expected": "Each onboarding screen displays correctly with proper title, description, illustration, and navigation dots/indicators. Text is legible, images render without distortion, and the layout is properly aligned.",
+  "expected": "The onboarding screens (Organized, Up-to-Date, Personal) display correctly with proper title text, description text, illustrations, and navigation controls (Next/Skip buttons, page indicators). All text is readable, images are not distorted, and the flow proceeds smoothly from one screen to the next.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-screens",
+    "first-launch",
+    "ui-verification",
     "organized-screen",
     "up-to-date-screen",
     "personal-screen",
-    "ui-verification",
-    "navigation-indicators"
+    "navigation-controls"
   ],
   "source_last_updated": "1768389325",
   "source_hash": "7dd60c5e113dfcf6747fe7928d70b0c469b87bc1c8245cb29c9157dd5eef8b38",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.907830Z",
+  "processed_at": "2026-04-25T09:32:26.121520Z",
   "status": "active"
 }
