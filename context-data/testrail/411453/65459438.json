@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - Release Notes link",
-  "feature": "Software Update",
-  "scenario": "Verify that clicking the Release Notes link in Device Settings > Software Update displays a popup with release notes when a firmware update is available.",
+  "feature": "Firmware Updates",
+  "scenario": "Release Notes link in Device Settings > Software Update displays release notes popup when firmware update is available",
   "steps": [
-    "Ensure the headset is not on the latest firmware.",
-    "Navigate to Device Settings > Software Update.",
-    "Click on the Release Notes link (the blue firmware version next to 'Update Available')."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Ensure a Poly Bluetooth headset is connected and not on the latest firmware (an 'Update Available' banner is visible).",
+    "Tap on the connected device name to open Device Settings.",
+    "Scroll to and tap 'Software Update'.",
+    "Locate the blue firmware version text next to 'Update Available' (the Release Notes link).",
+    "Tap the blue firmware version / Release Notes link.",
+    "Observe the popup that appears."
   ],
-  "expected": "A popup with release notes appears, working similarly to the release notes link on the device home page.",
+  "expected": "A popup is displayed showing the release notes for the available firmware update, similar to the release notes link behavior on the device Home page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Release Notes",
-    "Device Settings",
-    "Software Update",
-    "firmware update",
-    "popup",
-    "firmware version",
-    "Update Available",
-    "headset"
+    "release-notes",
+    "software-update",
+    "firmware-update",
+    "device-settings",
+    "poly-studio-mobile",
+    "update-available",
+    "release-notes-popup"
   ],
   "source_last_updated": "1763039673",
   "source_hash": "cd49981281d85a1b519a7c8fa8fbe4cdb309339023e2130e4738b9e175a1a656",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.274616Z",
+  "processed_at": "2026-04-25T05:37:16.877487Z",
   "status": "active"
 }
