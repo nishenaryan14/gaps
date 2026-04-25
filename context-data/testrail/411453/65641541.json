@@ -7,29 +7,32 @@
   "feature": "ANC",
   "scenario": "ANC mode selection (Adaptive/Standard) does not persist after closing and reopening the ANC tab in Device Settings",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
-    "3. Tap on Audio Settings, then tap on ANC.",
-    "4. In the ANC tab, select an ANC mode (e.g., Adaptive or Standard).",
-    "5. Close the ANC tab by tapping the back arrow or swiping back.",
-    "6. Reopen the ANC tab by navigating again to Device Settings \u2192 Audio Settings \u2192 ANC.",
-    "7. Observe the currently selected ANC mode."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Tap on Audio Settings",
+    "Tap on ANC",
+    "Select ANC mode: Adaptive",
+    "Close the ANC tab (e.g., tap Back or navigate away)",
+    "Reopen ANC tab via Device Settings \u2192 Audio Settings \u2192 ANC",
+    "Observe the selected ANC mode",
+    "Repeat steps 6-9 with ANC mode: Standard"
   ],
-  "expected": "The ANC mode selected in step 4 (e.g., Adaptive or Standard) should remain unchanged and still be selected after reopening the ANC tab.",
+  "expected": "The selected ANC mode (Adaptive or Standard) remains unchanged after closing and reopening the ANC tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "anc-mode-persistence",
     "adaptive-anc",
     "standard-anc",
-    "anc-tab",
     "device-settings",
     "audio-settings",
-    "poly-studio-mobile"
+    "poly-studio-mobile",
+    "anc-tab"
   ],
   "source_last_updated": "1761055504",
   "source_hash": "6afde0f16d3d97e1685b2a65d477d6156c0ec9393efe728ccce409827db1c570",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.906269Z",
+  "processed_at": "2026-04-25T08:21:30.983549Z",
   "status": "active"
 }
