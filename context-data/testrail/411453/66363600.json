@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Device Home Screen - Charge Case battery charging icon",
   "feature": "Battery/Charging",
-  "scenario": "Charge case battery icon charging sign appears and disappears correctly when charger is plugged in and unplugged on Device Home Screen",
+  "scenario": "Charge case battery icon does not show or hide charging sign when charger is plugged/unplugged on Device Home Screen",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen.",
-    "3. Ensure the charge case is opened with both earbuds inside and no charger connected.",
+    "1. Open the Poly Studio Mobile app on your phone.",
+    "2. Navigate to the Home screen where the connected device is displayed.",
+    "3. Open the charge case with the earbuds inside (no charger plugged in).",
     "4. Observe the battery icon for the charge case on the Home screen.",
     "5. Plug a charger into the charge case.",
     "6. Observe the battery icon for the charge case on the Home screen.",
     "7. Unplug the charger from the charge case.",
     "8. Observe the battery icon for the charge case on the Home screen."
   ],
-  "expected": "1. When the charge case is opened with both earbuds inside and no charger connected, the battery icon should show no charging sign. 2. When a charger is plugged into the charge case, the battery icon should display a charging sign. 3. When the charger is unplugged, the charging sign should disappear.",
+  "expected": "Step 4: The charge case battery icon shows no charging sign. Step 6: The charge case battery icon displays a charging sign (e.g., a lightning bolt or similar indicator). Step 8: The charging sign disappears from the charge case battery icon.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "charge-case-battery-icon",
     "charging-indicator",
+    "poly-studio-mobile",
     "device-home-screen",
+    "charger-plugged-unplugged",
     "battery-icon-visibility",
-    "charger-plug-unplug",
-    "android-app"
+    "charge-case"
   ],
   "source_last_updated": "1773155558",
   "source_hash": "564406552c5478e464ec2bd6eea2e94ca299c5c3cadaa13b123266935d04ef69",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.804348Z",
+  "processed_at": "2026-04-25T08:21:30.926670Z",
   "status": "active"
 }
