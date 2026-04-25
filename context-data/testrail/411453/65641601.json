@@ -4,31 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "CCL - Close/reopen the tab and the settings screen",
-  "feature": "CCL (Camera Color Look)",
-  "scenario": "Verify that the CCL setting selected in Device Settings > Advanced persists after closing and reopening the Advanced tab.",
-  "steps": [
-    "1. Open Device Settings.",
-    "2. Navigate to the Advanced tab.",
-    "3. Select a CCL setting.",
-    "4. Close the Advanced tab (or navigate away from it).",
-    "5. Reopen the Advanced tab (or navigate back to it).",
-    "6. Check the CCL setting."
-  ],
-  "expected": "The previously selected CCL setting should be retained.",
+  "feature": "App Settings",
+  "scenario": "Call Control Lock (CCL) setting does not persist after closing and reopening the Advanced tab in Device Settings",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "CCL setting",
-    "Device Settings",
-    "Advanced tab",
-    "persist",
-    "setting persistence",
-    "close and reopen",
-    "setting verification"
+    "call-control-lock",
+    "ccl",
+    "device-settings",
+    "advanced-tab",
+    "setting-persistence",
+    "settings-retention",
+    "poly-device-settings"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "cda507f677d99b6d3fa30a961ba0a11074c1c91b8ada660e6d1a22f3a201d71b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.264455Z",
+  "processed_at": "2026-04-25T05:37:16.843845Z",
   "status": "active"
 }
