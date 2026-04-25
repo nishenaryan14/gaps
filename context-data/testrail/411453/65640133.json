@@ -5,34 +5,32 @@
   "project": "411453",
   "title": "Device(headset) is successfully registered to Cloud",
   "feature": "Device Management",
-  "scenario": "Headset registration to Poly Lens Cloud is verified after pairing via Poly Studio Mobile app",
+  "scenario": "Headset appears in Poly Lens Cloud inventory after pairing with Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Lens app menu.",
-    "2. Navigate to General > Account.",
-    "3. Log in with valid credentials.",
-    "4. Check the Lens server inventory for the current device list.",
-    "5. Open the Poly Studio Mobile app.",
-    "6. Pair a new headset with the Poly Studio Mobile app.",
-    "7. Return to the Poly Lens app.",
-    "8. Refresh the Lens Cloud inventory page.",
-    "9. Verify the newly paired headset appears in the device list."
+    "Open the Poly Lens app with no headsets connected.",
+    "Navigate to Poly Lens Menu \u2192 General \u2192 Account.",
+    "Log in with valid credentials.",
+    "Check the Lens server inventory page \u2014 the device list should show only the Mobile app initially.",
+    "Open the Poly Studio Mobile app and pair a new headset.",
+    "Return to the Poly Lens app and refresh the Lens Cloud inventory page.",
+    "Verify the newly paired headset appears on the inventory list."
   ],
-  "expected": "The newly paired headset appears in the Lens Cloud inventory device list.",
+  "expected": "The newly paired headset appears on the Lens Cloud inventory list alongside the Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-lens-cloud",
     "poly-studio-mobile",
-    "device-registration",
+    "inventory-page",
     "bluetooth-pairing",
-    "lens-inventory",
-    "account-login",
+    "device-discovery",
+    "lens-server",
     "headset-pairing",
-    "cloud-sync"
+    "cloud-inventory"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "2592309e373fb9e6eaad1a0e0e8177d9de1de4e8eb0497ab7f86e24229eb4c58",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.962109Z",
+  "processed_at": "2026-04-25T07:55:31.986989Z",
   "status": "active"
 }
