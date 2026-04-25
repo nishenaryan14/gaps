@@ -4,31 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Putting app in background during update",
-  "feature": "Software Update - DFU",
-  "scenario": "Verify DFU continues successfully when app is backgrounded and foregrounded during and after the update process",
-  "steps": [
-    "Start DFU on the device.",
-    "Put the app in the background during the update.",
-    "Return to the app.",
-    "Put the app in the background again.",
-    "Wait for DFU to finish.",
-    "Return to the app."
-  ],
-  "expected": "1) The DFU update continues successfully when the app is brought back to the foreground. 2) The DFU finishes successfully even while the app is in the background.",
+  "feature": "Firmware Updates",
+  "scenario": "Device Firmware Update (DFU) completes successfully when Poly Studio Mobile app is backgrounded and then brought back to foreground",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU",
-    "Device Firmware Update",
-    "background",
-    "foreground",
-    "app lifecycle",
-    "update continuity",
-    "backgrounding"
+    "firmware-update",
+    "poly-studio-mobile",
+    "background-foreground",
+    "dfu",
+    "app-state-management",
+    "device-firmware-update",
+    "app-persistence"
   ],
   "source_last_updated": "1763371340",
   "source_hash": "6664cb65ba0dea23381235c678dbf78686b65e4c24e5bdc6438007762c0e337c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.289914Z",
+  "processed_at": "2026-04-25T05:37:16.881571Z",
   "status": "active"
 }
