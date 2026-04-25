@@ -8,25 +8,25 @@
   "scenario": "Onboarding dialog is suppressed when a new device is connected during an active DFU process, remaining hidden until DFU completes and user returns to Home screen",
   "steps": [
     "1. Launch Poly Studio Mobile app and navigate to Home screen.",
-    "2. Connect a first device that supports DFU (e.g., Voyager 5200 series) and begin a Device Firmware Update (DFU) process.",
+    "2. Connect a first device that supports DFU (e.g., Voyager 5200 series) and begin a Device Firmware Update process.",
     "3. While the DFU is in progress, connect a second device that supports onboarding (e.g., Emu, Tern, or Osprey).",
     "4. Observe the current screen displayed on the app."
   ],
-  "expected": "The onboarding dialog for the newly connected device (Emu, Tern, or Osprey) should be displayed over the DFU screen immediately upon connection.",
+  "expected": "The onboarding dialog for the newly connected device should be displayed over the DFU screen immediately upon connection.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "dfu-suppression",
     "onboarding-dialog",
-    "dfu-in-progress",
     "device-firmware-update",
     "poly-studio-mobile",
     "home-screen",
-    "onboarding-suppression",
-    "multi-device-connection"
+    "multi-device-connection",
+    "dfu-in-progress"
   ],
   "source_last_updated": "1763378013",
   "source_hash": "7fc59a8f3017aa12ae366fa0b0615836289ac7e7ef61be9007be5f020227ff45",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.959234Z",
+  "processed_at": "2026-04-25T08:21:31.030690Z",
   "status": "active"
 }
