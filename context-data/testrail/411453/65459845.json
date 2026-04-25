@@ -7,29 +7,29 @@
   "feature": "Notifications",
   "scenario": "\"Device has been disconnected\" notification appears despite Notifications master toggle being OFF in Poly Lens Menu > General > Notifications & Device Alerts",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Go to Poly Lens Menu \u2192 General \u2192 Notifications & Device Alerts",
-    "Set the Notifications master toggle to OFF",
-    "Connect a Poly Bluetooth headset to the mobile device",
-    "Press the Power button on the connected headset to turn it off",
-    "Observe whether a 'Device has been disconnected' notification appears"
+    "1. Open the Poly Lens app.",
+    "2. Navigate to Menu \u2192 General \u2192 Notifications & Device Alerts.",
+    "3. Set the Notifications master toggle to OFF.",
+    "4. Connect a supported Poly Bluetooth headset to the mobile device.",
+    "5. Press the Home button or switch to another app to send the Poly Lens app to the background.",
+    "6. Turn off the connected headset (e.g., press and hold the Power button until the headset powers down).",
+    "7. Observe whether a \"Device has been disconnected\" notification appears on the device."
   ],
-  "expected": "No \"Device has been disconnected\" notification should appear when the Notifications master toggle is OFF.",
+  "expected": "No \"Device has been disconnected\" notification should appear, because the Notifications master toggle is OFF.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
+    "poly-lens-app",
     "notifications-master-toggle",
     "device-disconnected-notification",
-    "poly-lens-menu",
-    "notifications-and-device-alerts",
-    "bluetooth-headset",
-    "power-button",
-    "notification-persistence"
+    "notifications-device-alerts",
+    "bluetooth-headset-disconnect",
+    "background-app-behavior",
+    "voyager-free-60"
   ],
   "source_last_updated": "1761230695",
   "source_hash": "d8238b91deb58fded9462671caaa15b12af2bb8ccd717a2abd99a12e2a9d2450",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.971157Z",
+  "processed_at": "2026-04-25T08:21:31.049272Z",
   "status": "active"
 }
