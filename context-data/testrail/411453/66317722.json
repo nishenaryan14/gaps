@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Rename device - dialog",
   "feature": "Device Management",
-  "scenario": "Rename device dialog does not match Figma design when accessed from Device Settings > General on Poly Studio Mobile app",
+  "scenario": "Rename device dialog does not match Figma design when navigating to Device Settings > General and tapping the device name",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
     "2. Navigate to the Home screen.",
-    "3. Tap on the connected device name to enter Device Settings.",
+    "3. Tap on the connected device name to open Device Settings.",
     "4. In Device Settings, tap on General.",
     "5. Locate the device's official name displayed on the General screen.",
     "6. Tap on the device's official name.",
     "7. Observe the dialog that appears."
   ],
-  "expected": "A dialog appears with: a text field pre-filled with the current device name, a Cancel button, a Done button, and the keyboard automatically shown below the dialog. The dialog's visual design matches the Figma mockup.",
+  "expected": "A dialog appears with Cancel and Done buttons, a text field for entering the new device name, and the keyboard is shown below. The dialog matches the Figma design specifications.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "rename-device-dialog",
     "device-settings",
     "general-screen",
-    "figma-design-mismatch",
-    "android-app",
-    "device-name"
+    "rename-device-dialog",
+    "device-name",
+    "ui-mismatch",
+    "figma-design",
+    "android-app"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "24367938404cdf2b6a28d73faf30b5cc531fdde68ce06362dc467f175c13b8c1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.797332Z",
+  "processed_at": "2026-04-25T07:55:31.875235Z",
   "status": "active"
 }
