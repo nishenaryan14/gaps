@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Feedback - send a Compliment feedback without names/email",
   "feature": "App Settings",
-  "scenario": "Compliment feedback can be sent without providing name or email address from App Settings > Feedback screen",
+  "scenario": "Compliment feedback can be sent without providing name or email in App Settings > Feedback",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Home screen.",
-    "2. Navigate to App Settings (gear icon).",
-    "3. Tap on Feedback.",
-    "4. Select the \"Compliment\" option.",
-    "5. Enter text for the feedback body (leave Name and Email fields blank).",
-    "6. Tap Send."
+    "Open the Poly Studio Mobile app.",
+    "Navigate to App Settings (Account or Settings menu).",
+    "Select Feedback.",
+    "Choose Compliment.",
+    "Enter text in the feedback field (leave Name and Email fields blank).",
+    "Tap Send."
   ],
-  "expected": "Feedback is sent successfully without requiring a name or email address.",
+  "expected": "Feedback is sent successfully without requiring name or email.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "app-settings",
-    "feedback-screen",
-    "compliment-feedback",
+    "feedback",
+    "compliment",
     "anonymous-feedback",
-    "send-feedback",
-    "name-optional",
-    "email-optional"
+    "name-field",
+    "email-field",
+    "send-feedback"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "c502f4c6251fd6230294fc1b7a88d61337993bd267f58d48fae7bd9d5833970d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.786175Z",
+  "processed_at": "2026-04-25T07:55:31.858887Z",
   "status": "active"
 }
