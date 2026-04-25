@@ -1,75 +1,150 @@
 [
   {
-    "title": "TC_DFU_LANG_001: Verify language change triggers firmware update on Charge Case during DFU",
+    "title": "TC-VL50-LANG-DFU-001: Verify charge case firmware version matches headset firmware version after language-triggered DFU on Voyager Legend 50",
     "steps": [
-      "1. Connect the Charge Case to the device under test (DUT).",
-      "2. Initiate the DFU (Device Firmware Update) process on the DUT.",
-      "3. During the DFU process, navigate to device Settings > Language & Input.",
-      "4. Change the system language to a different language (e.g., from English to German).",
-      "5. Observe the Charge Case behavior and the DFU progress indicator on the DUT.",
-      "6. Check the system logs or DFU status for any triggered firmware update on the Charge Case."
+      "Precondition: Voyager Legend 50 is fully charged and connected to the phone via Bluetooth. Poly Studio Mobile app is installed and logged in.",
+      "Open Poly Studio Mobile app.",
+      "Tap the Voyager Legend 50 device name from the device list.",
+      "Navigate to Settings \u2192 Device Information.",
+      "Record the current Headset Firmware Version (e.g., 1.2.3).",
+      "Record the current Charge Case Firmware Version (e.g., 1.2.3).",
+      "Navigate back to the main device screen.",
+      "Tap Audio Settings \u2192 Language Settings.",
+      "Change the language setting from the current value to a different language (e.g., from English to French).",
+      "Observe the prompt: 'Changing language will trigger a firmware update. Continue?' \u2014 Tap 'Continue' or 'Yes'.",
+      "Wait for the DFU process to complete. Do not interrupt the update. The device may disconnect and reconnect during the process.",
+      "Once the update completes and the device reconnects, navigate to Settings \u2192 Device Information.",
+      "Record the new Headset Firmware Version.",
+      "Record the new Charge Case Firmware Version.",
+      "Compare the Headset Firmware Version and Charge Case Firmware Version."
     ],
-    "expected": "Changing the system language during an active DFU process triggers a firmware update on the Charge Case. The DFU progress indicator should reflect the Charge Case firmware update, and system logs should show a language-change-initiated firmware update event for the Charge Case."
+    "expected": "The Charge Case Firmware Version matches the Headset Firmware Version exactly. Both versions are updated to the same build number (e.g., both show 1.4.0). No mismatch or discrepancy between the two firmware versions."
   },
   {
-    "title": "TC_DFU_LANG_002: Verify Charge Case firmware update is triggered immediately upon language change before DFU starts",
+    "title": "TC-VL50-LANG-DFU-002: Verify charge case firmware version is reported correctly after language-triggered DFU on Voyager Legend 50 (edge case: downgrade scenario)",
     "steps": [
-      "1. Connect the Charge Case to the DUT.",
-      "2. Navigate to device Settings > Language & Input.",
-      "3. Change the system language to a different language (e.g., from English to French).",
-      "4. Without performing any other action, immediately initiate the DFU process.",
-      "5. Observe whether the Charge Case receives a firmware update as part of the DFU sequence.",
-      "6. Verify the Charge Case firmware version before and after the language change + DFU."
+      "Precondition: Voyager Legend 50 is connected. Poly Studio Mobile app is open on the device screen.",
+      "Navigate to Settings \u2192 Device Information.",
+      "Record the current Headset Firmware Version (e.g., 2.0.0).",
+      "Record the current Charge Case Firmware Version (e.g., 2.0.0).",
+      "Navigate back to the main device screen.",
+      "Tap Audio Settings \u2192 Language Settings.",
+      "Change the language setting to a language that triggers a DFU to an older firmware version (e.g., from English to a language whose firmware bundle is version 1.8.0).",
+      "Tap 'Continue' on the DFU prompt.",
+      "Wait for the DFU process to complete fully.",
+      "After reconnection, navigate to Settings \u2192 Device Information.",
+      "Record the new Headset Firmware Version.",
+      "Record the new Charge Case Firmware Version.",
+      "Verify both versions are identical."
     ],
-    "expected": "Changing the language before starting the DFU process triggers a pending firmware update flag for the Charge Case. When DFU is initiated, the Charge Case firmware update is executed as part of the DFU sequence. The Charge Case firmware version after the process should reflect the updated version."
+    "expected": "Both Headset Firmware Version and Charge Case Firmware Version show the same version number (e.g., 1.8.0). The charge case firmware is downgraded in sync with the headset firmware. No version mismatch."
   },
   {
-    "title": "TC_DFU_LANG_003: Verify Charge Case firmware version is updated after language change and DFU completion",
+    "title": "TC-VL50-LANG-DFU-003: Verify charge case firmware remains functional after language-triggered DFU on Voyager Legend 50",
     "steps": [
-      "1. Record the current firmware version of the Charge Case (e.g., via Settings > About or companion app).",
-      "2. Connect the Charge Case to the DUT.",
-      "3. Change the system language to a different language (e.g., from English to Spanish).",
-      "4. Initiate and complete the full DFU process.",
-      "5. After DFU completion, navigate to the Charge Case firmware version display.",
-      "6. Compare the new firmware version with the previously recorded version."
+      "Precondition: Voyager Legend 50 is connected. Poly Studio Mobile app is open.",
+      "Navigate to Settings \u2192 Device Information and record the pre-update Headset and Charge Case firmware versions.",
+      "Navigate to Audio Settings \u2192 Language Settings.",
+      "Change the language to trigger a DFU (e.g., from English to German).",
+      "Confirm the DFU prompt and wait for completion.",
+      "After the device reconnects, navigate to Settings \u2192 Device Information and confirm both firmware versions match.",
+      "Place the headset into the charge case.",
+      "Close the charge case lid.",
+      "Open the charge case lid and remove the headset.",
+      "Verify the headset powers on and reconnects to the phone automatically.",
+      "Place a test call and verify audio is heard in the earpiece.",
+      "Verify the charge case LED indicates charging status correctly (e.g., solid red when charging, green when fully charged).",
+      "Connect the charge case to a USB-C power source and verify the charge case LED responds appropriately."
     ],
-    "expected": "After a language change followed by a completed DFU process, the Charge Case firmware version is updated to the latest available version. The version number should be higher or different from the version recorded before the test."
+    "expected": "The charge case charges the headset normally (LED indicators function correctly). The headset powers on and reconnects automatically when removed from the case. Call audio works correctly. The charge case firmware update did not break any charge case hardware functionality."
   },
   {
-    "title": "TC_DFU_LANG_004: Verify multiple language changes during DFU do not cause Charge Case firmware corruption",
+    "title": "TC-VL50-LANG-DFU-004: Verify charge case firmware version persists after app restart and device reconnect post-language-triggered DFU",
     "steps": [
-      "1. Connect the Charge Case to the DUT.",
-      "2. Initiate the DFU process.",
-      "3. During the DFU process, change the system language multiple times (e.g., English -> German -> French -> Spanish).",
-      "4. Allow the DFU process to complete.",
-      "5. After completion, verify the Charge Case is responsive and functional.",
-      "6. Check the Charge Case firmware version and compare it to the expected latest version.",
-      "7. Check system logs for any errors or corruption events during the language changes."
+      "Precondition: Voyager Legend 50 is connected. Poly Studio Mobile app is open.",
+      "Navigate to Settings \u2192 Device Information and record the pre-update Headset and Charge Case firmware versions.",
+      "Navigate to Audio Settings \u2192 Language Settings.",
+      "Change the language to trigger a DFU (e.g., from English to Spanish).",
+      "Confirm the DFU prompt and wait for completion.",
+      "After reconnection, navigate to Settings \u2192 Device Information and record the post-update Headset and Charge Case firmware versions. Confirm they match.",
+      "Force-close the Poly Studio Mobile app (swipe it away from the recent apps list).",
+      "Reopen Poly Studio Mobile app.",
+      "Tap the Voyager Legend 50 device name.",
+      "Navigate to Settings \u2192 Device Information.",
+      "Record the Headset Firmware Version and Charge Case Firmware Version.",
+      "Compare with the versions recorded immediately after the DFU."
     ],
-    "expected": "Multiple language changes during the DFU process do not corrupt the Charge Case firmware. The Charge Case remains responsive and functional after DFU completion. The firmware version should be the latest expected version, and system logs should show no corruption or error events related to the language changes."
+    "expected": "The Headset Firmware Version and Charge Case Firmware Version displayed after app restart are identical to the versions recorded immediately after the DFU. The firmware versions persist correctly across app restarts."
   },
   {
-    "title": "TC_DFU_LANG_005: Verify language change triggers Charge Case firmware update when DFU is in paused state",
+    "title": "TC-VL50-LANG-DFU-005: Verify charge case firmware version persists after Bluetooth disconnect/reconnect post-language-triggered DFU",
     "steps": [
-      "1. Connect the Charge Case to the DUT.",
-      "2. Initiate the DFU process and pause it at a mid-point (e.g., 50% progress).",
-      "3. While DFU is paused, change the system language to a different language.",
-      "4. Resume the DFU process.",
-      "5. Observe whether the Charge Case receives a firmware update after resuming.",
-      "6. Verify the final Charge Case firmware version after DFU completion."
+      "Precondition: Voyager Legend 50 is connected. Poly Studio Mobile app is open.",
+      "Navigate to Settings \u2192 Device Information and record the pre-update Headset and Charge Case firmware versions.",
+      "Navigate to Audio Settings \u2192 Language Settings.",
+      "Change the language to trigger a DFU (e.g., from English to Italian).",
+      "Confirm the DFU prompt and wait for completion.",
+      "After reconnection, navigate to Settings \u2192 Device Information and record the post-update Headset and Charge Case firmware versions. Confirm they match.",
+      "On the phone, go to Bluetooth settings and tap 'Forget' or 'Unpair' the Voyager Legend 50.",
+      "Wait 5 seconds.",
+      "Put the Voyager Legend 50 into pairing mode (press and hold the Bluetooth button for 4 seconds until the LED flashes red/blue).",
+      "Re-pair the headset with the phone via Bluetooth settings.",
+      "Open Poly Studio Mobile app.",
+      "Tap the Voyager Legend 50 device name.",
+      "Navigate to Settings \u2192 Device Information.",
+      "Record the Headset Firmware Version and Charge Case Firmware Version.",
+      "Compare with the versions recorded immediately after the DFU."
     ],
-    "expected": "Changing the language while the DFU process is paused triggers a Charge Case firmware update upon resuming the DFU. The Charge Case firmware version after completion should be the latest version, and the DFU should complete without errors."
+    "expected": "The Headset Firmware Version and Charge Case Firmware Version displayed after Bluetooth disconnect and re-pair are identical to the versions recorded immediately after the DFU. The firmware versions persist correctly across Bluetooth state transitions."
   },
   {
-    "title": "TC_DFU_LANG_006: Verify language change back to original language does not skip Charge Case firmware update",
+    "title": "TC-VL50-LANG-DFU-006: Verify charge case firmware version is correctly reported when language-triggered DFU is performed on Voyager Legend 50 with minimum battery level",
     "steps": [
-      "1. Connect the Charge Case to the DUT.",
-      "2. Change the system language from English to German.",
-      "3. Before starting DFU, change the language back to English.",
-      "4. Initiate and complete the DFU process.",
-      "5. Verify whether the Charge Case firmware update was still triggered and applied.",
-      "6. Check the Charge Case firmware version after DFU completion."
+      "Precondition: Voyager Legend 50 headset and charge case are at approximately 20% battery level (low but sufficient for DFU). Phone battery is above 50%.",
+      "Open Poly Studio Mobile app.",
+      "Tap the Voyager Legend 50 device name.",
+      "Navigate to Settings \u2192 Device Information and record the pre-update Headset and Charge Case firmware versions.",
+      "Navigate to Audio Settings \u2192 Language Settings.",
+      "Change the language to trigger a DFU (e.g., from English to Portuguese).",
+      "Confirm the DFU prompt and wait for completion.",
+      "After reconnection, navigate to Settings \u2192 Device Information.",
+      "Record the new Headset Firmware Version and Charge Case Firmware Version.",
+      "Verify both versions match."
     ],
-    "expected": "Changing the language to a different language and then back to the original language still triggers the Charge Case firmware update during the subsequent DFU process. The Charge Case firmware version should be updated to the latest version after DFU completion."
+    "expected": "The DFU completes successfully even at low battery (20%). The Headset Firmware Version and Charge Case Firmware Version match after the update. No corruption or incomplete update occurs due to low battery conditions."
+  },
+  {
+    "title": "TC-VL50-LANG-DFU-007: Verify charge case firmware version is NOT updated when language-triggered DFU is cancelled mid-process on Voyager Legend 50",
+    "steps": [
+      "Precondition: Voyager Legend 50 is connected. Poly Studio Mobile app is open.",
+      "Navigate to Settings \u2192 Device Information and record the pre-update Headset Firmware Version (e.g., 1.2.3) and Charge Case Firmware Version (e.g., 1.2.3).",
+      "Navigate to Audio Settings \u2192 Language Settings.",
+      "Change the language to trigger a DFU (e.g., from English to Dutch).",
+      "When the DFU prompt appears, tap 'Cancel' or 'No'.",
+      "Verify the app returns to the Language Settings screen without initiating any update.",
+      "Navigate to Settings \u2192 Device Information.",
+      "Record the Headset Firmware Version and Charge Case Firmware Version.",
+      "Compare with the pre-cancellation versions."
+    ],
+    "expected": "Both the Headset Firmware Version and Charge Case Firmware Version remain unchanged from their pre-cancellation values (e.g., both still show 1.2.3). No firmware update was applied to either component because the DFU was cancelled."
+  },
+  {
+    "title": "TC-VL50-LANG-DFU-008: Verify charge case firmware version after language-triggered DFU followed by a second language-triggered DFU on Voyager Legend 50",
+    "steps": [
+      "Precondition: Voyager Legend 50 is connected. Poly Studio Mobile app is open.",
+      "Navigate to Settings \u2192 Device Information and record the initial Headset and Charge Case firmware versions.",
+      "Navigate to Audio Settings \u2192 Language Settings.",
+      "Change the language to trigger DFU #1 (e.g., from English to French).",
+      "Confirm and wait for DFU #1 to complete.",
+      "After reconnection, navigate to Settings \u2192 Device Information and record the post-DFU#1 Headset and Charge Case firmware versions. Confirm they match.",
+      "Navigate to Audio Settings \u2192 Language Settings.",
+      "Change the language again to trigger DFU #2 (e.g., from French to German).",
+      "Confirm the DFU prompt and wait for DFU #2 to complete.",
+      "After reconnection, navigate to Settings \u2192 Device Information.",
+      "Record the post-DFU#2 Headset Firmware Version and Charge Case Firmware Version.",
+      "Verify both versions match each other.",
+      "Verify the versions are different from the pre-DFU#1 versions (i.e., the update actually occurred)."
+    ],
+    "expected": "After two consecutive language-triggered DFUs, the Headset Firmware Version and Charge Case Firmware Version still match each other exactly. Both components are updated in sync through multiple DFU cycles. No version drift occurs between headset and charge case."
   }
 ]
