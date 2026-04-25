@@ -5,15 +5,13 @@
   "project": "411453",
   "title": "Find My Device - User location on the map",
   "feature": "App Settings",
-  "scenario": "Find My Device map shows inconsistent location indicator behavior between Android (blue circle with dot when zoomed in) and iOS (white circle when zoomed in)",
+  "scenario": "Find My Device map shows inconsistent location indicator between Android (blue circle with dot) and iOS (white circle) when zoomed in",
   "steps": [
     "1. Launch the Poly Studio Mobile app with a headset either connected or disconnected.",
     "2. Navigate to the App Menu (hamburger menu or menu icon).",
     "3. Tap on 'Find My Device'.",
-    "4. If prompted, allow GPS location access.",
-    "5. Observe the map view showing the user's location.",
-    "6. Zoom out on the map and observe the location indicator.",
-    "7. Zoom in on the map and observe the location indicator."
+    "4. If prompted, grant GPS location access permission.",
+    "5. Observe the map view showing the user's current location."
   ],
   "expected": "On Android: A full blue dot is shown when zoomed out, and a blue circle with a full blue dot in the middle is shown when zoomed in. On iOS: A full blue dot is shown when zoomed out, and a white circle is shown when zoomed in.",
   "coverage": [],
@@ -23,14 +21,13 @@
     "location-indicator",
     "poly-studio-mobile",
     "map-view",
-    "android-vs-ios",
     "gps-location",
-    "zoom-behavior",
-    "bluetooth-headset"
+    "android-vs-ios",
+    "ui-inconsistency"
   ],
   "source_last_updated": "1759929579",
   "source_hash": "cddad7d6d3bc8e5260baa39cf4e3608f7434701aa25eb8f34b667a73f55458e9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.766049Z",
+  "processed_at": "2026-04-25T07:55:31.835591Z",
   "status": "active"
 }
