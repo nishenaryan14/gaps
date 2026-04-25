@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Software Update - DFU - Entering airplane mode during update",
   "feature": "Firmware Update",
-  "scenario": "DFU fails with \"Houston...\" error when airplane mode is enabled during firmware update, then recovers and completes after retry",
+  "scenario": "DFU fails with \"Houston...\" error when airplane mode is enabled during early update progress, then recovers and completes after retry",
   "steps": [
-    "Open Poly Studio Mobile app on the mobile device.",
-    "Navigate to Home screen and select the connected Poly audio device.",
-    "Initiate a Device Firmware Update (DFU) on the device.",
-    "While the DFU is in progress (between 0\u201320% completion, or 0\u201310% if updating a headset and charge case/stand simultaneously), enable Airplane Mode on the mobile device.",
-    "Wait for the update to fail.",
-    "Observe the error screen displayed.",
-    "Turn off Airplane Mode on the mobile device.",
-    "On the error screen, tap the \"Retry\" button.",
-    "Wait for the update to restart and complete."
+    "1. Open Poly Studio Mobile app on the mobile device.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
+    "3. Start the Device Firmware Update (DFU) on the connected Poly audio device.",
+    "4. During the early update progress (0\u201320% for speakerphone devices; 0\u201310% for headset + charge case/stand), enable Airplane Mode on the mobile device.",
+    "5. Wait for the update to fail. Observe the app screen.",
+    "6. Disable Airplane Mode on the mobile device.",
+    "7. On the Poly Studio Mobile app, locate the 'Houston...' error page and tap 'Retry'."
   ],
-  "expected": "After enabling Airplane Mode during the DFU, a \"Houston...\" error page should appear indicating the update failed. After turning off Airplane Mode and tapping \"Retry\", the update should restart and finish successfully.",
+  "expected": "After enabling Airplane Mode during early DFU progress, the update should fail and a \"Houston...\" error page should be displayed. After turning off Airplane Mode and tapping \"Retry\", the update should restart and complete successfully.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-failure",
     "airplane-mode",
     "houston-error",
-    "firmware-update-recovery",
+    "firmware-update",
     "poly-studio-mobile",
-    "retry-dfu",
-    "update-interruption"
+    "retry-recovery",
+    "update-progress-interruption"
   ],
   "source_last_updated": "1763370003",
   "source_hash": "a966f65551d52f06efd2448bc5ff7322f52c7c2304fbfe765bc83e2eaaaae771",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.032728Z",
+  "processed_at": "2026-04-25T09:32:26.289573Z",
   "status": "active"
 }
