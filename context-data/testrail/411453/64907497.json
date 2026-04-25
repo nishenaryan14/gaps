@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Support - Device - No Devices Connected screen",
   "feature": "Device Management",
-  "scenario": "Support > Device screen shows incorrect message or layout when no devices are connected",
+  "scenario": "Support > Device screen shows incorrect \"No Devices Connected\" message when no devices have been previously connected",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Ensure no Poly Bluetooth audio devices are connected or paired to the mobile device.",
-    "Tap the menu icon (hamburger menu) in the top-left or top-right corner.",
-    "From the menu, select 'Support'.",
-    "From the Support screen, select 'Device'.",
-    "Observe the displayed screen and message."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure no Bluetooth audio devices have been previously paired/connected to the app.",
+    "3. Navigate to the Home screen.",
+    "4. Tap on the Support menu option.",
+    "5. Tap on the Device screen within Support.",
+    "6. Observe the message displayed on the screen."
   ],
-  "expected": "The \"No Devices Connected\" screen displays the message: \"No previously connected devices were found. Please connect devices using the mobile device's Bluetooth Settings prior to requesting device support.\" The screen layout matches the Figma design.",
+  "expected": "The screen displays the message: \"No previously connected devices were found. Please connect devices using the mobile device's Bluetooth Settings prior to requesting device support.\" The screen layout matches the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "support-screen",
+    "no-devices-connected",
     "device-screen",
-    "no-device-connected",
-    "empty-state",
-    "ui-layout",
+    "support-menu",
     "bluetooth-pairing",
-    "hamburger-menu"
+    "home-screen",
+    "android"
   ],
   "source_last_updated": "1759761658",
   "source_hash": "4e4d3786b5542f0628b93234c875144cd580fe7b7c780de129e8988fb40f85fd",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.839249Z",
+  "processed_at": "2026-04-25T08:21:30.946442Z",
   "status": "active"
 }
