@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "EQ - Tab is present in Device Settings",
   "feature": "Equalizer",
-  "scenario": "EQ tab is present in Device Settings screen when using a supported Poly device",
+  "scenario": "EQ tab is not displayed in Device Settings screen for supported Poly devices",
   "steps": [
     "1. Launch the Poly Studio Mobile app on your Android device.",
     "2. On the Home screen, tap on the connected Poly device name to open Device Settings.",
     "3. In Device Settings, locate and tap on Audio Settings.",
-    "4. Within Audio Settings, verify that the Equalizer (EQ) tab is visible and accessible."
+    "4. Within Audio Settings, check for the presence of the Equalizer (EQ) tab."
   ],
-  "expected": "The Equalizer (EQ) tab is present and accessible in the Audio Settings section of Device Settings for a supported Poly device.",
+  "expected": "The Equalizer (EQ) tab is visible in the Audio Settings section of Device Settings when a supported Poly device is connected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
+    "eq-tab",
+    "equalizer",
     "device-settings",
     "audio-settings",
-    "equalizer",
-    "eq-tab",
-    "android",
-    "poly-device"
+    "poly-studio-mobile",
+    "android-app",
+    "ui-missing"
   ],
   "source_last_updated": "1761142093",
   "source_hash": "15a206bdce172b5f46c90cc033b2a46f2b82c9352b6195dd0623203d57d5ae2c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.912339Z",
+  "processed_at": "2026-04-25T08:21:30.992157Z",
   "status": "active"
 }
