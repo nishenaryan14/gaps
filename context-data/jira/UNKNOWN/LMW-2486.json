@@ -5,17 +5,17 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 FALCON | Incorrect device name on DFU success screen while updating just the Charge Stand",
   "feature": "Firmware Updates",
-  "scenario": "DFU success screen shows headset name instead of Charge Stand name when updating only the Charge Stand via Device Settings > Software",
-  "description_clean": "When updating only the Charge Stand via Device Settings > Software, the DFU success screen incorrectly displays the name of the headset instead of the name of the Charge Stand.",
+  "scenario": "DFU success screen displays headset name instead of Charge Stand name when updating only the Charge Stand via Device Settings > Software",
+  "description_clean": "When updating only the Charge Stand via Device Settings > Software, the DFU success screen incorrectly shows the name of the headset instead of the name of the Charge Stand.",
   "steps": [
     "Open Poly Studio Mobile app",
-    "Go to Home screen",
+    "Navigate to Home screen",
     "Tap on the connected device name to open Device Settings",
-    "Navigate to Device Settings \u2192 Software",
-    "Select the Charge Stand as the device to update",
-    "Initiate the firmware update for the Charge Stand",
-    "Wait for the DFU process to complete",
-    "Observe the DFU success screen"
+    "Scroll to and tap 'Software' (or 'Software Update')",
+    "Ensure only the Charge Stand firmware update is available (headset firmware is up to date)",
+    "Tap 'Update' or 'Install' to begin the firmware update for the Charge Stand",
+    "Wait for the DFU (Device Firmware Update) process to complete",
+    "Observe the success screen displayed after the update finishes"
   ],
   "expected": "The DFU success screen should display the name of the Charge Stand (e.g., \"Charge Stand updated successfully\").",
   "actual": "The DFU success screen incorrectly displays the name of the headset instead of the name of the Charge Stand.",
@@ -25,16 +25,16 @@
   "keywords": [
     "dfu-success-screen",
     "charge-stand",
-    "device-name",
-    "poly-studio-mobile",
+    "headset-name",
     "device-settings",
     "software-update",
+    "poly-studio-mobile",
     "firmware-update",
-    "headset-name"
+    "device-name-mismatch"
   ],
   "source_last_updated": "2026-04-14T19:23:14.000+0000",
   "source_hash": "d049fb6491ae86860e3e70f25076cc77ffb45710af6d5b8cc5413bf7b7a6295d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.761754Z",
+  "processed_at": "2026-04-25T08:21:30.899647Z",
   "status": "active"
 }
