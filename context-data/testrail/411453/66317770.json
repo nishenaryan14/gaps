@@ -5,33 +5,35 @@
   "project": "411453",
   "title": "Language Change  - Tab when the internet is off",
   "feature": "App Settings",
-  "scenario": "Language tab in Device Settings is greyed out and shows \"Feature unavailable\" dialog when internet is offline",
+  "scenario": "Language tab in Device Settings is greyed out with \"Feature unavailable\" dialog when internet is disconnected",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
     "2. Ensure the device has no internet connection (e.g., enable Airplane Mode or turn off Wi-Fi and mobile data).",
-    "3. Navigate to the Home screen and tap on the connected Poly audio device to enter Device Settings.",
-    "4. Locate the Language tab/section within Device Settings.",
-    "5. Observe that the Language tab appears greyed out.",
-    "6. Tap on the greyed-out Language tab.",
-    "7. Observe the dialog that appears.",
-    "8. Tap the 'Ok got it' button on the dialog."
+    "3. Navigate to the Home screen.",
+    "4. Tap on the connected Poly Bluetooth audio device to open Device Settings.",
+    "5. Locate the Language tab in Device Settings.",
+    "6. Observe that the Language tab appears greyed out.",
+    "7. Tap on the greyed-out Language tab.",
+    "8. Observe the dialog that appears: \"Feature unavailable. An internet connection is required to access this feature.\" with an \"Ok got it\" button.",
+    "9. Tap the \"Ok got it\" button.",
+    "10. Observe that the dialog closes and the Language tab returns to its greyed-out state."
   ],
-  "expected": "The Language tab should be accessible and functional regardless of internet connection, as language settings are a device-local feature.",
+  "expected": "When there is no internet connection, the Language tab in Device Settings should be greyed out. Tapping it should display a dialog: \"Feature unavailable. An internet connection is required to access this feature.\" with an \"Ok got it\" button. Tapping the button should close the dialog and return to the greyed-out state.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "language-tab",
-    "feature-unavailable",
     "device-settings",
-    "offline-mode",
+    "feature-unavailable",
+    "internet-required",
     "poly-studio-mobile",
     "greyed-out",
-    "dialog",
-    "internet-required"
+    "offline-behavior",
+    "dialog-dismissal"
   ],
   "source_last_updated": "1762252670",
   "source_hash": "5113a2fd808bae90f2dc0b8346bc60366cfa3d8220925b930592f326b49e1827",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.885153Z",
+  "processed_at": "2026-04-25T08:21:30.983549Z",
   "status": "active"
 }
