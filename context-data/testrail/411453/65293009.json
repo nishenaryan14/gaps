@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Onboarding - Screens in dark mode",
   "feature": "App Settings",
-  "scenario": "Onboarding screens do not render correctly in dark mode when phone is set to dark mode",
+  "scenario": "Onboarding screens do not render correctly in dark mode when phone is set to dark mode before launching the app",
   "steps": [],
   "expected": "",
   "coverage": [],
@@ -14,14 +14,14 @@
     "dark-mode",
     "onboarding-screens",
     "ui-rendering",
-    "display-theme",
-    "poly-appearance",
-    "visual-bug",
+    "app-launch",
+    "display-settings",
+    "theme-persistence",
     "poly-app"
   ],
   "source_last_updated": "1760524200",
   "source_hash": "3f990d6859d6895c8d07cf35199c2be6909c4f145f04e9d57b460261b208b152",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.700581Z",
+  "processed_at": "2026-04-25T07:55:31.770846Z",
   "status": "active"
 }
