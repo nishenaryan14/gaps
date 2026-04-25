@@ -1,119 +1,136 @@
 {
   "bug_id": "LMW-2523",
   "matched_testcases": [
-    "65458387",
-    "65293009",
-    "65293034",
-    "65293028",
-    "65293010",
-    "65293019",
-    "65293025",
-    "65293011",
-    "65293016",
-    "65293012",
-    "65293013",
-    "65293014",
-    "65293015",
-    "65293021",
-    "65293022"
+    "64839439",
+    "64839422",
+    "66363556",
+    "66363557",
+    "66363558",
+    "66363559",
+    "66363583",
+    "66363596",
+    "65459448",
+    "65459456",
+    "65459427",
+    "65459458",
+    "65459457",
+    "65459438",
+    "65459432"
   ],
-  "coverage_status": "none",
+  "coverage_status": "partial",
   "gaps": [
-    "No test case covers DFU blocking during an active softphone call.",
-    "No test case covers the Software Update screen behavior during an active call.",
-    "No test case covers warning popups or blocking mechanisms for DFU during calls.",
-    "No test case covers the interaction between softphone call state and device firmware update functionality."
+    "No test covers the specific UI path of navigating Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software to trigger DFU during an active call \u2014 existing test ID 65459432 only covers DFU being blocked with a pop-up during an active call but does not specify the exact navigation path or verify the pop-up message content and dismissal behavior.",
+    "No test verifies that the 'Update' button on the Software screen is disabled/greyed out (not just blocked by pop-up) when a call is active, which is a different UX pattern.",
+    "No test covers the scenario where a call ends while the DFU pop-up is displayed \u2014 verifying whether the update can proceed after call ends without re-navigation.",
+    "No test covers the scenario where the user dismisses the pop-up and then navigates away and back to the Software screen while still on the call \u2014 verifying the pop-up re-appears consistently.",
+    "No test covers this behavior on specific device types (e.g., Voyager Free 60+ with multi-component firmware) where the 'Update' button might behave differently for individual component updates vs. 'Update All'."
   ],
   "generated_testcases": [
     {
-      "title": "DFU blocked during active softphone call - Software Update screen",
+      "title": "TC-DFU-CALL-001: Verify DFU 'Update' button is disabled/greyed out on Software screen during an active call",
       "steps": [
-        "1. Establish an active softphone call on the device.",
-        "2. Navigate to Settings > General > Software Update.",
-        "3. Attempt to trigger a Device Firmware Update (DFU) from the Software Update screen.",
-        "4. Observe the system response."
+        "Open Poly Studio Mobile app on the paired phone.",
+        "Tap the [Device Name] (e.g., Voyager Free 60+ UC) on the Home screen to navigate to Device Settings.",
+        "Tap 'Device Settings' \u2192 'Software' (or 'Software & Updates').",
+        "Verify the 'Update' button (or 'Update All' button) is enabled and tappable (baseline check).",
+        "Place an active call from the paired phone (e.g., dial any number or call voicemail).",
+        "While the call is active, navigate back to Poly Studio Mobile \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
+        "Observe the state of the 'Update' button (or 'Update All' button) on the Software screen."
       ],
-      "expected": "A warning popup is displayed indicating that DFU cannot be performed during an active call. The DFU process is blocked and does not proceed."
+      "expected": "The 'Update' button (or 'Update All' button) on the Software screen is disabled/greyed out and cannot be tapped while a call is active. The button becomes enabled again only after the call ends."
     },
     {
-      "title": "DFU blocked during active softphone call - no popup dismissal bypass",
+      "title": "TC-DFU-CALL-002: Verify DFU pop-up appears with correct message when tapping 'Update' during an active call",
       "steps": [
-        "1. Establish an active softphone call on the device.",
-        "2. Navigate to Settings > General > Software Update.",
-        "3. Attempt to trigger DFU.",
-        "4. If a warning popup appears, attempt to dismiss it (e.g., tap 'OK' or 'Cancel').",
-        "5. Attempt to trigger DFU again immediately after dismissal."
+        "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
+        "Place an active call from the paired phone.",
+        "While the call is active, tap the 'Update' button (or 'Update All' button) on the Software screen.",
+        "Observe the pop-up dialog that appears.",
+        "Verify the exact text/message content of the pop-up.",
+        "Tap 'OK' or 'Dismiss' on the pop-up to close it.",
+        "Verify the Software screen is still displayed and the call remains active."
       ],
-      "expected": "The warning popup reappears each time DFU is triggered during the active call. The DFU process remains blocked as long as the call is active."
+      "expected": "A pop-up dialog appears with a message indicating that the firmware update cannot proceed while a call is active (e.g., 'Cannot update during a call. Please end your call to start the update.'). The pop-up includes a dismiss/OK button. After dismissing, the Software screen is shown and the call continues uninterrupted."
     },
     {
-      "title": "DFU allowed after softphone call ends",
+      "title": "TC-DFU-CALL-003: Verify DFU can proceed after call ends while pop-up is displayed (no re-navigation needed)",
       "steps": [
-        "1. Establish an active softphone call on the device.",
-        "2. Navigate to Settings > General > Software Update.",
-        "3. Attempt to trigger DFU and verify it is blocked with a warning popup.",
-        "4. End the softphone call.",
-        "5. Navigate back to Settings > General > Software Update.",
-        "6. Attempt to trigger DFU again."
+        "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
+        "Place an active call from the paired phone.",
+        "While the call is active, tap the 'Update' button on the Software screen to trigger the DFU-blocked pop-up.",
+        "Do NOT dismiss the pop-up. Keep it displayed on screen.",
+        "End the active call from the phone (hang up).",
+        "Observe the pop-up behavior \u2014 does it auto-dismiss, remain, or change?",
+        "If the pop-up remains, tap 'OK'/'Dismiss' to close it.",
+        "Tap the 'Update' button again on the Software screen.",
+        "Observe whether the firmware update begins."
       ],
-      "expected": "After the call ends, no warning popup is displayed and the DFU process proceeds normally without blocking."
+      "expected": "After the call ends, the pop-up may auto-dismiss or remain. In either case, tapping 'Update' again on the Software screen should now initiate the firmware update process (download/install begins) without needing to re-navigate. The update should proceed normally."
     },
     {
-      "title": "DFU blocked during incoming softphone call ringing state",
+      "title": "TC-DFU-CALL-004: Verify DFU pop-up re-appears consistently after dismiss and re-navigation while still on call",
       "steps": [
-        "1. Initiate an incoming softphone call to the device (device is ringing, not yet answered).",
-        "2. While the device is ringing, navigate to Settings > General > Software Update.",
-        "3. Attempt to trigger DFU.",
-        "4. Observe the system response."
+        "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
+        "Place an active call from the paired phone.",
+        "While the call is active, tap the 'Update' button on the Software screen.",
+        "Verify the DFU-blocked pop-up appears.",
+        "Dismiss the pop-up by tapping 'OK' or the close button.",
+        "Navigate away from the Software screen (e.g., tap 'Audio Settings' or tap the back arrow to go to Device Settings).",
+        "Navigate back to the Software screen: Device Settings \u2192 Software.",
+        "While still on the active call, tap the 'Update' button again.",
+        "Observe whether the pop-up appears again.",
+        "Repeat the dismiss-and-re-navigate cycle 3 times."
       ],
-      "expected": "A warning popup is displayed indicating that DFU cannot be performed during an active or incoming call. The DFU process is blocked."
+      "expected": "The DFU-blocked pop-up appears consistently every time the 'Update' button is tapped while a call is active, regardless of how many times the user dismisses it and re-navigates to the Software screen. The pop-up behavior is deterministic and repeatable."
     },
     {
-      "title": "DFU blocked during softphone call - verify no silent background DFU",
+      "title": "TC-DFU-CALL-005: Verify DFU blocked for individual component updates on multi-component firmware device (e.g., Voyager Free 60+) during active call",
       "steps": [
-        "1. Establish an active softphone call on the device.",
-        "2. Navigate to Settings > General > Software Update.",
-        "3. Without tapping any DFU button, leave the Software Update screen open for 30 seconds.",
-        "4. Check if any DFU process started automatically in the background."
+        "Open Poly Studio Mobile app \u2192 Home \u2192 tap 'Voyager Free 60+ UC' \u2192 Device Settings \u2192 Software.",
+        "Verify the Software screen shows multiple firmware components (e.g., 'Earbuds Firmware', 'Charge Case Firmware', 'Touchscreen Firmware') with individual 'Update' buttons and an 'Update All' button.",
+        "Place an active call from the paired phone.",
+        "While the call is active, tap the individual 'Update' button for the first component (e.g., 'Earbuds Firmware').",
+        "Observe the result.",
+        "Dismiss any pop-up if shown.",
+        "Tap the individual 'Update' button for the second component (e.g., 'Charge Case Firmware').",
+        "Observe the result.",
+        "Dismiss any pop-up if shown.",
+        "Tap the 'Update All' button.",
+        "Observe the result."
       ],
-      "expected": "No DFU process starts automatically. The system does not initiate DFU in the background during an active call, even if the Software Update screen is open."
+      "expected": "All individual component 'Update' buttons AND the 'Update All' button are either disabled/greyed out OR show the DFU-blocked pop-up when tapped during an active call. No component update can be initiated while the call is active. The behavior is consistent across all update entry points."
     },
     {
-      "title": "Warning popup content verification during active call",
+      "title": "TC-DFU-CALL-006: Verify DFU blocked pop-up appears when call is received (incoming) while on Software screen",
       "steps": [
-        "1. Establish an active softphone call on the device.",
-        "2. Navigate to Settings > General > Software Update.",
-        "3. Attempt to trigger DFU.",
-        "4. Observe the warning popup text and buttons."
+        "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
+        "Ensure no call is active. Verify the 'Update' button is enabled.",
+        "Have a second phone call the paired phone (incoming call).",
+        "While the phone is ringing (incoming call), tap the 'Update' button on the Software screen.",
+        "Observe the result.",
+        "Answer the incoming call.",
+        "While the call is now active, tap the 'Update' button again.",
+        "Observe the result."
       ],
-      "expected": "The warning popup contains a clear message stating that firmware update is not allowed during an active call. The popup includes at least one dismiss button (e.g., 'OK' or 'Cancel') and no option to proceed with DFU."
+      "expected": "During the incoming call ringing state, tapping 'Update' may either show the pop-up or proceed (depending on whether ringing is treated as 'in use'). After answering the call, tapping 'Update' consistently shows the DFU-blocked pop-up or the button is disabled."
     },
     {
-      "title": "DFU blocked during active call - multiple call scenarios",
+      "title": "TC-DFU-CALL-007: Verify DFU button state and pop-up behavior during call hold/swap scenarios",
       "steps": [
-        "1. Establish an active softphone call on the device.",
-        "2. Place the call on hold.",
-        "3. Navigate to Settings > General > Software Update.",
-        "4. Attempt to trigger DFU.",
-        "5. Observe the system response.",
-        "6. Resume the call and put it on speakerphone.",
-        "7. Attempt to trigger DFU again."
+        "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
+        "Place Call A from the paired phone.",
+        "While Call A is active, verify the 'Update' button is disabled or shows pop-up when tapped.",
+        "Place Call A on hold and answer/switched to Call B (call waiting/swap).",
+        "While Call B is active (Call A on hold), navigate to Software screen and tap 'Update'.",
+        "Observe the result.",
+        "End Call B, resume Call A.",
+        "While Call A is active again, tap 'Update' and observe the result.",
+        "End Call A completely.",
+        "Immediately tap 'Update' and verify the firmware update can proceed."
       ],
-      "expected": "DFU is blocked with a warning popup in both scenarios (call on hold and call on speakerphone). The blocking mechanism is independent of the call state (active, on hold, speakerphone)."
-    },
-    {
-      "title": "DFU blocked during active call - return to Software Update after call ends",
-      "steps": [
-        "1. Establish an active softphone call on the device.",
-        "2. Navigate to Settings > General > Software Update.",
-        "3. Attempt to trigger DFU and verify it is blocked.",
-        "4. Without closing the Software Update screen, end the call.",
-        "5. Wait 5 seconds.",
-        "6. Attempt to trigger DFU again from the same screen."
-      ],
-      "expected": "After the call ends, the DFU button becomes functional and the process proceeds without any warning popup. The screen updates dynamically to reflect the change in call state."
+      "expected": "The DFU update is blocked (button disabled or pop-up shown) during ANY active call state, including when one call is on hold and another is active. The update is only allowed after ALL calls have ended."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-24T12:05:41.611876Z"
+  "processed_at": "2026-04-25T05:50:18.584872Z"
 }
