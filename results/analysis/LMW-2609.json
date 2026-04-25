@@ -1,166 +1,157 @@
 {
   "bug_id": "LMW-2609",
   "matched_testcases": [
-    "65458387",
-    "65293009",
-    "65293034",
-    "65293028",
-    "65293010",
-    "65293019",
-    "65293025",
-    "65293011",
-    "65293016",
-    "65293012",
-    "65293013",
-    "65293014",
-    "65293015",
-    "65293021",
-    "65293022"
+    "66317753",
+    "66317755",
+    "66317756",
+    "66317768",
+    "66317769",
+    "66363584",
+    "65482650",
+    "65459460",
+    "65459437",
+    "65459439",
+    "65459462",
+    "65459463",
+    "65459464",
+    "65459446",
+    "65459465"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case covers language update functionality on Morpheus devices.",
-    "No existing test case addresses update progress tracking or progress bar behavior.",
-    "No existing test case covers performance/timing of updates (e.g., updates taking 10+ minutes vs expected 1-2 minutes).",
-    "No existing test case covers the specific scenario of an update getting stuck at 99%.",
-    "No existing test case targets Morpheus devices (VOY5200, VOY8200) or language update (LANG UPDATE) flows."
+    "No test covers the scenario where a Language/Firmware DFU update gets stuck at 99% for an extended period (8+ minutes), increasing total update time from 1-2 minutes to 10+ minutes on Voyager 5200 Series or Voyager 8200 UC devices.",
+    "No test validates the expected duration/timing behavior of the DFU progress bar during the 90%-99% phase for Morpheus devices (Voyager 5200/8200 UC).",
+    "No test covers the 'Verifying' phase (90%-99%) stalling or taking abnormally long, which is a distinct failure mode from a complete DFU failure (which is covered by Houston error screens at early percentages like 10% or 20%).",
+    "No test validates timeout behavior or user feedback when the DFU progress bar remains at 99% for longer than the expected ~1-2 minute total update window.",
+    "No test specifically targets the Language Update (DFU) flow on Voyager 5200 Series or Voyager 8200 UC (Morpheus devices) for progress bar stalling behavior \u2014 existing DFU tests are generic and don't differentiate by device family."
   ],
   "generated_testcases": [
     {
-      "title": "TC-LANG-001: Verify language update completes within expected time on Morpheus devices",
+      "title": "Voyager 5200 Series \u2014 Language DFU stuck at 99% for extended duration (8+ minutes)",
       "steps": [
-        "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update.",
-        "4. Start a timer at the moment the update begins.",
-        "5. Monitor the update progress bar at regular intervals (every 10 seconds).",
-        "6. Record the time when the update reaches 99% progress.",
-        "7. Record the time when the update completes (reaches 100% or 'Update Complete' status).",
-        "8. Calculate the total update duration from start to completion.",
-        "9. Calculate the duration spent at 99% progress."
+        "Launch Poly Studio Mobile app on a connected Android device.",
+        "Tap the connected Voyager 5200 Series device name from the home screen.",
+        "Navigate to Settings \u2192 Device \u2192 Firmware Update.",
+        "Verify the current firmware version is a version that supports a Language Update (DFU) to a newer build.",
+        "Tap 'Check for Updates' and confirm a Language Update (DFU) is available.",
+        "Tap 'Update' / 'Install' to begin the firmware update process.",
+        "Observe the progress bar as the update proceeds through 0% \u2192 10% \u2192 50% \u2192 90%.",
+        "When the progress bar reaches 90%, start a timer.",
+        "Continue observing the progress bar as it moves from 90% to 99%.",
+        "When the progress bar reaches 99%, note the elapsed time from the 90% mark.",
+        "Continue the timer and observe the progress bar staying at 99% without advancing.",
+        "Monitor the app UI for any timeout message, error dialog, or user feedback (e.g., 'Update taking longer than expected', 'Retry', 'Device disconnected').",
+        "After 8 minutes at 99%, check if the update eventually completes or fails with an error.",
+        "If the update completes, verify the device firmware version is updated correctly in Settings \u2192 Device \u2192 Firmware Update.",
+        "If the update fails, verify the device is still functional (pairing, audio playback, call) and the app shows appropriate error messaging."
       ],
-      "expected": "The total language update completes within 2 minutes (120 seconds). The update does not stall at 99% for more than 10 seconds. The progress bar moves smoothly without extended pauses."
+      "expected": "The Language DFU update on Voyager 5200 Series should complete within the expected 1-2 minute total window. If the progress bar stalls at 99% for more than 2 minutes (exceeding the expected total update duration), the app should provide clear user feedback (e.g., a timeout warning, progress indication, or error message). The device must not enter an unrecoverable state \u2014 it should remain functional for pairing, audio playback, and calls regardless of whether the update eventually completes or fails."
     },
     {
-      "title": "TC-LANG-002: Verify language update progress bar does not stall at 99% for extended period",
+      "title": "Voyager 8200 UC \u2014 Language DFU progress bar stall at 99% with app lifecycle interruption",
       "steps": [
-        "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update.",
-        "4. Observe the progress bar throughout the update process.",
-        "5. When the progress bar reaches 99%, start a timer.",
-        "6. Continue monitoring the progress bar until it reaches 100% or the update completes.",
-        "7. Record the time spent at 99%."
+        "Launch Poly Studio Mobile app and connect to a Voyager 8200 UC device.",
+        "Navigate to Settings \u2192 Device \u2192 Firmware Update.",
+        "Initiate a Language Update (DFU) by tapping 'Update' on the available firmware.",
+        "Allow the update to progress normally through 0% \u2192 50% \u2192 90%.",
+        "When the progress bar reaches 99%, start a timer.",
+        "Immediately press the Android Home button to background the Poly Studio Mobile app.",
+        "Wait 30 seconds, then reopen the app from the recent apps list.",
+        "Observe whether the progress bar is still visible and at 99%, or if the app shows a different state (e.g., disconnected, update complete, error).",
+        "If the progress bar is still at 99%, leave the app in the foreground and continue monitoring for an additional 5 minutes.",
+        "After 5 minutes total at 99%, force-kill the app (Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Force Stop).",
+        "Re-launch the Poly Studio Mobile app and reconnect to the Voyager 8200 UC.",
+        "Navigate to Settings \u2192 Device \u2192 Firmware Update and check the current firmware version.",
+        "Verify the device is still functional: play audio, make a test call, check ANC/Transparency controls."
       ],
-      "expected": "The progress bar does not remain at 99% for more than 30 seconds. The update progresses from 99% to completion within a reasonable timeframe."
+      "expected": "The app should handle backgrounding and force-kill gracefully during a DFU stall at 99%. After re-launch, the app should either show the update as complete (with the new firmware version) or show a clear error state. The Voyager 8200 UC device must not be bricked \u2014 it should remain connectable, play audio, and respond to ANC/Transparency controls. No stale 'Updating...' progress UI should persist after app restart if the update has actually completed or failed."
     },
     {
-      "title": "TC-LANG-003: Verify language update does not exceed 10 minutes total duration on Morpheus devices",
+      "title": "Voyager 5200 Series \u2014 Language DFU at 99% with Bluetooth disconnect/reconnect cycle",
       "steps": [
-        "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update.",
-        "4. Start a timer at the moment the update begins.",
-        "5. Monitor the update progress continuously.",
-        "6. If the update reaches 10 minutes without completing, mark the test as failed.",
-        "7. Record the total time taken for the update to complete."
+        "Launch Poly Studio Mobile app and connect to a Voyager 5200 Series headset.",
+        "Navigate to Settings \u2192 Device \u2192 Firmware Update and start a Language Update (DFU).",
+        "Allow the update to reach 99% on the progress bar.",
+        "Once at 99%, manually disconnect the headset by turning off Bluetooth on the phone.",
+        "Wait 10 seconds, then re-enable Bluetooth on the phone.",
+        "Wait for the Voyager 5200 to automatically reconnect (or manually tap the device name to reconnect).",
+        "Observe the app UI: does the progress bar reappear at 99%, does it show an error, or does it show the update as complete?",
+        "Navigate to Settings \u2192 Device \u2192 Firmware Update and check the reported firmware version.",
+        "Verify the device is fully functional: test media playback, call audio, and ANC/Transparency mode toggling.",
+        "Repeat the test but this time disconnect by powering off the Voyager 5200 headset (slide power switch to OFF) while at 99%, wait 30 seconds, power back on, and reconnect."
       ],
-      "expected": "The language update completes in less than 10 minutes (600 seconds). The update does not get stuck indefinitely at any progress percentage."
+      "expected": "The app should handle Bluetooth disconnection during the 99% DFU stall gracefully. After reconnection, the app should either confirm the update completed successfully (showing the new firmware version) or display a clear error/retry state. The device must not be bricked \u2014 all core functions (pairing, audio, ANC/Transparency) must work after the interruption. The progress bar should not remain stuck at 99% indefinitely after reconnection without any user feedback."
     },
     {
-      "title": "TC-LANG-004: Verify language update progress tracking accuracy on Morpheus devices",
+      "title": "Voyager 8200 UC \u2014 Language DFU progress bar timing validation (90% to 99% phase duration)",
       "steps": [
-        "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update.",
-        "4. Observe and record the progress percentage at regular intervals (every 5 seconds).",
-        "5. Verify that the progress percentage increases monotonically (never decreases).",
-        "6. Verify that the progress percentage reaches 100% upon completion.",
-        "7. Verify that the progress bar visually matches the reported percentage."
+        "Launch Poly Studio Mobile app and connect to a Voyager 8200 UC device.",
+        "Navigate to Settings \u2192 Device \u2192 Firmware Update.",
+        "Initiate a Language Update (DFU) and start a timer as soon as the progress bar appears.",
+        "Record the timestamp when the progress bar reaches each of these milestones: 10%, 25%, 50%, 75%, 90%, 95%, 99%, and 100% (or failure).",
+        "If the progress bar reaches 99%, note the exact time spent from 90% to 99%.",
+        "Continue timing from 99% until either: (a) the update completes (100%), or (b) an error is shown, or (c) 15 minutes elapse.",
+        "If the update completes, record the total elapsed time from start to finish.",
+        "If the update stalls at 99% for more than 3 minutes (exceeding the expected ~1-2 minute total update), document the stall duration.",
+        "After the update resolves (completion or failure), verify the device firmware version in Settings \u2192 Device \u2192 Firmware Update.",
+        "Verify device functionality: play audio, test call, toggle ANC/Transparency, check EQ settings persistence.",
+        "Repeat the test 3 times on the same device to check for consistency of the 99% stall behavior."
       ],
-      "expected": "The progress percentage increases monotonically from 0% to 100%. The progress bar accurately reflects the reported percentage. No regression or stalling at intermediate values occurs."
+      "expected": "The total Language DFU update time should be approximately 1-2 minutes. The 90% to 99% phase (Verifying) should complete within seconds, not minutes. If the 99% stall occurs consistently across multiple runs, this is a reproducible bug. The app should provide accurate progress feedback \u2014 a stall at 99% for 8+ minutes with no user feedback is a UX defect. The device must remain functional after each test iteration regardless of update outcome."
     },
     {
-      "title": "TC-LANG-005: Verify language update behavior on multiple Morpheus device models",
+      "title": "Voyager 5200 Series \u2014 Language DFU at 99% with concurrent audio streaming",
       "steps": [
-        "1. Connect to a Morpheus device VOY5200.",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update and record total completion time.",
-        "4. Disconnect from VOY5200.",
-        "5. Connect to a Morpheus device VOY8200.",
-        "6. Navigate to the language update (LANG UPDATE) section.",
-        "7. Initiate a language update and record total completion time.",
-        "8. Compare the completion times between the two models."
+        "Launch Poly Studio Mobile app and connect to a Voyager 5200 Series headset.",
+        "Start playing music or a podcast on the connected phone (any media app).",
+        "Verify audio is streaming through the Voyager 5200 headset.",
+        "While audio is playing, navigate to Settings \u2192 Device \u2192 Firmware Update in the Poly Studio Mobile app.",
+        "Initiate a Language Update (DFU) \u2014 note that the app may pause audio during the update.",
+        "Allow the update to progress to 99%.",
+        "Once at 99%, attempt to resume or start media playback on the phone.",
+        "Observe whether audio plays through the headset, through the phone speaker, or not at all.",
+        "Monitor the progress bar: does it remain at 99%, advance to 100%, or show an error?",
+        "After 5 minutes at 99% with audio attempted, check if the update eventually completes.",
+        "After the update resolves, verify: (a) media playback works normally, (b) call audio works, (c) ANC/Transparency controls are responsive, (d) firmware version is correctly reported."
       ],
-      "expected": "Both VOY5200 and VOY8200 complete the language update within 2 minutes. Neither device exhibits stalling at 99% for more than 10 seconds. Performance is consistent across Morpheus device models."
+      "expected": "The DFU update should not be negatively impacted by concurrent audio streaming attempts. If the update is still in progress (at 99%), audio may be paused or unavailable \u2014 this is acceptable. However, the update should not stall indefinitely because of audio state. After the update completes or fails, all audio functions must be restored. The device must not enter a state where audio is permanently lost or distorted."
     },
     {
-      "title": "TC-LANG-006: Verify language update cancellation during 99% stall",
+      "title": "Voyager 8200 UC \u2014 Language DFU at 99% with low battery condition",
       "steps": [
-        "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update.",
-        "4. Monitor the progress bar until it reaches 99%.",
-        "5. Once at 99%, attempt to cancel the update using the available cancel/abort mechanism.",
-        "6. Verify the system response to the cancellation request.",
-        "7. Verify the device state after cancellation."
+        "Ensure the Voyager 8200 UC headset battery is at or below 15% charge (use the battery indicator in Poly Studio Mobile app to confirm).",
+        "Launch Poly Studio Mobile app and connect to the Voyager 8200 UC.",
+        "Navigate to Settings \u2192 Device \u2192 Firmware Update.",
+        "Initiate a Language Update (DFU) with the low battery condition.",
+        "Observe whether the app shows a low battery warning before allowing the update to proceed.",
+        "If the update proceeds, allow it to reach 99% on the progress bar.",
+        "Once at 99%, start a timer and monitor for any low battery popup, disconnect, or error.",
+        "If the headset powers off due to low battery during the 99% stall, note the behavior.",
+        "After the headset powers off, charge it for at least 20 minutes (per Voyager 5200 charging guidelines).",
+        "Reconnect the headset to the Poly Studio Mobile app.",
+        "Navigate to Settings \u2192 Device \u2192 Firmware Update and check the firmware version and update status.",
+        "Verify the device is fully functional after charging and reconnection."
       ],
-      "expected": "The system allows cancellation of the language update even when stalled at 99%. The device returns to a stable state after cancellation. No partial or corrupted language data remains on the device."
+      "expected": "The app should warn the user about low battery before starting a DFU update (ideally blocking the update if battery is critically low). If the update proceeds and stalls at 99%, and the headset powers off due to battery depletion, the device must not be bricked. After charging and reconnecting, the app should either show the update as complete or provide a clear path to retry the update. The headset must recover fully after charging."
     },
     {
-      "title": "TC-LANG-007: Verify language update retry after 99% stall timeout",
+      "title": "Voyager 5200 Series \u2014 Language DFU at 99% with rapid slider adjustments in background settings",
       "steps": [
-        "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update.",
-        "4. Monitor the progress bar until it reaches 99%.",
-        "5. Allow the update to remain at 99% for 10 minutes.",
-        "6. After 10 minutes, if the update has not progressed, restart the language update.",
-        "7. Monitor the second update attempt for completion time and progress behavior."
+        "Launch Poly Studio Mobile app and connect to a Voyager 5200 Series headset.",
+        "Navigate to Settings \u2192 Device \u2192 Firmware Update and start a Language Update (DFU).",
+        "Allow the update to reach 99% on the progress bar.",
+        "While the progress bar is stuck at 99%, navigate away from the Firmware Update screen (do not close the app).",
+        "Go to Audio Settings \u2192 Transparency Mode \u2192 Environment.",
+        "Rapidly adjust the Surround level slider from 0 to 100 and back to 0 three times.",
+        "Switch to the Speech tab and rapidly adjust the Free level slider from 0 to 100 and back to 0 three times.",
+        "Navigate to Audio Settings \u2192 EQ and switch between EQ presets (Bass Boost, Bright, Vocal, Flat) rapidly.",
+        "Navigate back to Settings \u2192 Device \u2192 Firmware Update and observe the progress bar state.",
+        "Check if the progress bar advanced, errored, or remained at 99%.",
+        "After the update resolves, verify that all audio settings (Surround level, Free level, EQ preset) persist correctly and are not reset to defaults."
       ],
-      "expected": "The second language update attempt completes successfully within 2 minutes. The retry does not exhibit the same 99% stalling behavior. The device handles the retry gracefully without requiring a reboot."
-    },
-    {
-      "title": "TC-LANG-008: Verify language update progress persists across device reboot at 99%",
-      "steps": [
-        "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update.",
-        "4. Monitor the progress bar until it reaches 99%.",
-        "5. While at 99%, perform a device reboot.",
-        "6. After reboot, navigate back to the language update (LANG UPDATE) section.",
-        "7. Check the current status of the language update.",
-        "8. Attempt to resume or restart the language update."
-      ],
-      "expected": "After reboot, the device reports the language update status accurately. The update can be restarted if not completed. No data corruption occurs due to the reboot during the stalled update."
-    },
-    {
-      "title": "TC-LANG-009: Verify language update does not affect other device functions during 99% stall",
-      "steps": [
-        "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update.",
-        "4. Monitor the progress bar until it reaches 99%.",
-        "5. While the update is stalled at 99%, attempt to perform other device operations (e.g., navigation, settings, media playback).",
-        "6. Verify that other device functions remain responsive and operational."
-      ],
-      "expected": "Other device functions remain fully operational during the language update stall at 99%. The device does not become unresponsive or crash. The stalled update does not block access to other features."
-    },
-    {
-      "title": "TC-LANG-010: Verify language update completion after 99% stall resolves",
-      "steps": [
-        "1. Connect to a Morpheus device (VOY5200 or VOY8200).",
-        "2. Navigate to the language update (LANG UPDATE) section.",
-        "3. Initiate a language update.",
-        "4. Monitor the progress bar until it reaches 99%.",
-        "5. Record the time when 99% is reached.",
-        "6. Continue monitoring until the update progresses beyond 99% and completes.",
-        "7. Record the total time spent at 99%.",
-        "8. Verify the device language settings are correctly updated after completion."
-      ],
-      "expected": "The update eventually progresses beyond 99% and completes successfully. The language settings are correctly applied after completion. The total time spent at 99% is documented for performance analysis."
+      "expected": "Rapid slider adjustments and EQ preset switching on other settings screens should not interfere with the ongoing DFU update. The progress bar should not regress or error due to UI interactions on other screens. After the update completes, all audio settings adjusted during the test should persist correctly (Surround level, Free level, EQ preset). The device should not exhibit any audio artifacts or setting resets."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-24T12:05:41.602893Z"
+  "processed_at": "2026-04-25T05:50:17.148030Z"
 }
