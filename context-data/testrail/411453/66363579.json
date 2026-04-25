@@ -4,28 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Home Screen - Both earbuds are disconnected",
-  "feature": "Home Screen",
-  "scenario": "Verify that when both earbuds are placed in the case, the app shows greyed-out battery fields and a disconnected status with red indicator.",
+  "feature": "Device Management",
+  "scenario": "Home Screen displays greyed out earbud fields with disconnected status when both earbuds are in the case",
   "steps": [
-    "1. Pair and connect Osprey device.",
-    "2. Open Lens App.",
-    "3. Put both earbuds in the case."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Ensure both earbuds are disconnected (not in case, not connected via Bluetooth).",
+    "Place both earbuds into the charging case.",
+    "Observe the Home screen UI elements.",
+    "Now remove both earbuds from the case and ensure they connect to the app.",
+    "Observe the Home screen UI elements again."
   ],
-  "expected": "After step 2: The Status Box shows \"Left\", \"Right\", and \"Case\" fields with battery level and green indicator, and a \"Status\" field showing \"connected\" with green indicator. The device image shows left and right earbuds. Note: Tern does not show case field.\\n\\nAfter step 3: \"Left\", \"Right\", and \"Case\" fields are greyed out showing only the % symbol (not exact percentage). \"Status\" field shows \"disconnected\" with red indicator. Image for both earbuds is greyed out.",
+  "expected": "When both earbuds are placed in the case: Left, Right, and Case fields are greyed out showing only the % symbol (not exact percentage), the Status field shows \"disconnected\" with a red indicator, and the earbud images are greyed out. When earbuds are connected and out of the case: Left, Right, and Case fields show battery levels with green indicators and the Status field shows \"connected\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "earbuds in case",
-    "greyed-out battery",
-    "disconnected status",
-    "red indicator",
-    "Lens App",
-    "Osprey device",
-    "battery fields"
+    "poly-studio-mobile",
+    "home-screen",
+    "earbud-fields",
+    "disconnected-status",
+    "charging-case",
+    "greyed-out-ui",
+    "bluetooth-connection",
+    "app-ui-state"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "9611247ccd39866963e5201584e8f345e2a78011c7877967ac46cd26499f1cb6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.352481Z",
+  "processed_at": "2026-04-25T05:37:16.985254Z",
   "status": "active"
 }
