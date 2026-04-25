@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Device Home Screen - Device Connected and up to date",
   "feature": "Device Management",
-  "scenario": "Device Home Screen fails to display all required elements: device name with info icon, green dot with Connected label, device image, quick settings, battery icons, and firmware version",
+  "scenario": "Device Home Screen fails to display device name with \"i\" icon for unencrypted/limited support devices, green dot with \"Connected\" label, device image, quick settings, battery icons, and firmware version X.Y.Z",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
     "Observe the device card area"
   ],
-  "expected": "Home screen displays: Device Name (with \"i\" icon for unencrypted devices or devices with limited support), green dot with \"Connected\" label, device image, quick settings (if enabled), \"...\" button, battery icons, and firmware version \"X.Y.Z\".",
+  "expected": "The Home screen displays: Device Name (with an \"i\" icon if the device is unencrypted or has limited support), a green dot with \"Connected\" label, device image, quick settings (if enabled), a \"...\" button, battery icons, and firmware version \"X.Y.Z\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "home-screen",
     "device-card",
-    "device-name",
+    "unencrypted-device",
+    "limited-support",
     "connected-label",
     "battery-icons",
-    "firmware-version",
-    "quick-settings"
+    "firmware-version"
   ],
   "source_last_updated": "1761663315",
   "source_hash": "2c04d08e719582a22c576691acafbd9e26ba1649a3269055a7783a7dc419b5b3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.799546Z",
+  "processed_at": "2026-04-25T08:21:30.917421Z",
   "status": "active"
 }
