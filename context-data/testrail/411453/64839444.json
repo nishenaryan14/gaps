@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - Full Support After Launch Date When LM Version Meets or Exceeds Required",
   "feature": "Device Management",
-  "scenario": "Device home screen shows full support (green connection status dot) when installed LM version meets or exceeds required version after device launch date",
+  "scenario": "Device home screen shows full support (green connection dot) when installed LM version meets or exceeds required version after device launch date",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Pair the headset with the app and ensure the headset is ON and properly connected.",
-    "3. Verify the connection status icon on the Home screen shows a green dot.",
-    "4. Confirm that the device's launch date has passed and the installed LM (Launch Manager) version meets or exceeds the required version as configured in the product catalogue.",
-    "5. Observe the Home screen to verify that full device support is displayed (e.g., all features and settings are available)."
+    "Launch the Poly Studio Mobile app.",
+    "Pair with the headset (ensure the headset is ON and properly connected).",
+    "Verify the Home screen displays full support for the device.",
+    "Confirm the Connection status icon shows a green dot."
   ],
-  "expected": "The Home screen shows full device support (all features and settings available) and the connection status icon displays a green dot.",
+  "expected": "The Home screen shows full support for the device, and the Connection status icon displays a green dot.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "home-screen",
-    "green-connection-status-dot",
-    "launch-manager-version",
-    "device-launch-date",
     "poly-studio-mobile",
-    "product-catalogue",
-    "full-device-support",
+    "home-screen",
+    "connection-status",
+    "green-dot",
+    "lm-version",
+    "device-support",
+    "firmware-compatibility",
     "bluetooth-pairing"
   ],
   "source_last_updated": "1764663042",
   "source_hash": "86bade47ff68390bec222842ebb9d28fadda0c7ecea40ecef18f81a043aede9c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.927667Z",
+  "processed_at": "2026-04-25T09:32:26.155188Z",
   "status": "active"
 }
