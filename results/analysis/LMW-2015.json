@@ -19,124 +19,107 @@
   ],
   "coverage_status": "partial",
   "gaps": [
-    "GAP 1: STALE STATE AFTER EXTENDED IDLE \u2014 No existing test covers the scenario where the app is left idle for hours (overnight) and then brought to foreground, resulting in stale device connection state. The closest tests (65868086, 65868084) only cover immediate power-on/power-off transitions while the app is actively open, not the idle-background-reawake scenario where the app fails to re-sync Bluetooth state.",
-    "GAP 2: DEVICE LIST STALE AFTER IDLE WITH MULTIPLE DEVICES \u2014 Test 65868078 covers 'multiple devices connected' but does not test the scenario where after extended idle, the app shows a stale device list (e.g., shows earbuds as connected when they are not, and fails to show the actually connected Voyager Surround 80 UC). This is a distinct lifecycle + multi-device state sync gap.",
-    "GAP 3: MISSING LIFECYCLE DIMENSION \u2014 App background/foreground after extended idle (hours) vs. immediate foregrounding. No test validates that the app re-queries Bluetooth service state when returning from long idle. The existing tests only check immediate state changes while the app is in focus.",
-    "GAP 4: DEVICE-SPECIFIC ASYMMETRY \u2014 The bug involves a Voyager Surround 80 UC (which has Touch Control \u2014 a unique feature) alongside TWS earbuds. No existing test validates that the Surround 80 UC specifically appears/disappears correctly from the device list after idle periods. The Surround 80 UC has unique touch control surface behavior that could interact with connection state reporting.",
-    "GAP 5: SETTINGS INTERACTION WITH STALE CONNECTION \u2014 Step 5-6 involve tapping on a stale earbud entry and toggling ANC/Transparency/EQ settings. No test validates what happens when the user attempts to change audio settings on a device that is no longer actually connected. This is a critical gap \u2014 the app might show UI changes but not actually apply them, or worse, crash or hang.",
-    "GAP 6: APP RESTART AS RECOVERY MECHANISM \u2014 Step 8 validates that force-closing and relaunching the app resolves the stale state. No existing test validates that app restart is the only recovery mechanism for stale device lists after extended idle. This is a UX reliability gap."
+    "Analysis returned empty result"
   ],
   "generated_testcases": [
     {
-      "title": "GAP 1: Stale Device State After Extended Idle \u2014 Overnight Background/Foreground Cycle",
+      "title": "TC-CONN-001: Verify earbud connection state accuracy after prolonged idle (30 min)",
       "steps": [
-        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC earbuds.",
-        "2. Verify the app shows both earbuds as connected (left + right) on the Device screen.",
-        "3. Tap the device name \u2192 Audio Settings \u2192 Transparency Mode \u2192 Environment. Set Surround level to 75.",
-        "4. Tap the back arrow to return to the Device screen.",
-        "5. Press the Home button to background the app.",
-        "6. Leave the app in the background for 4+ hours (simulate overnight idle).",
-        "7. During the idle period, power OFF the Poly Voyager Free 60+ UC earbuds and place them in the charge case.",
-        "8. After the idle period, bring the Poly Studio Mobile app back to the foreground by tapping its icon.",
-        "9. Observe the Device screen without interacting with any refresh or pull-to-refresh gesture.",
-        "10. Wait 30 seconds and observe if the device state updates automatically."
+        "Precondition: Left and right earbuds fully charged, connected via Bluetooth to phone.",
+        "Open Poly Studio Mobile app. Navigate to: Home \u2192 Connected Devices.",
+        "Verify both left and right earbuds show as 'Connected' in device list.",
+        "Set Surround level to 80 via: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround \u2192 Set slider to 80.",
+        "Press Home button to background the app. Do NOT kill the app.",
+        "Wait 30 minutes (idle period). Do not interact with phone or earbuds.",
+        "After 30 min, bring app to foreground (tap app icon).",
+        "Observe device list on Home screen.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround and read slider value."
       ],
-      "expected": "The app should automatically detect that the Poly Voyager Free 60+ UC earbuds are no longer connected and update the Device screen to show 'Disconnected' or 'Not Connected' state within 30 seconds of being brought to the foreground. The app should NOT show stale 'Connected' state for devices that are powered off. No app restart should be required to see the correct state."
+      "expected": "Expected: Both left and right earbuds show 'Connected'. Surround slider reads 80. Actual (If Bug): Left shows 'Connected', Right shows 'Disconnected' OR device list is empty/incorrect. Surround slider may show default (0 or 50) instead of 80."
     },
     {
-      "title": "GAP 2: Stale Device List After Idle \u2014 Earbuds Disconnected, Surround 80 UC Connected",
+      "title": "TC-CONN-002: Immediate state sync \u2014 change Surround level and force-kill app before navigation",
       "steps": [
-        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC earbuds.",
-        "2. Verify the Device screen shows the earbuds as connected.",
-        "3. Press the Home button to background the app.",
-        "4. Leave the app in the background for 2+ hours.",
-        "5. During the idle period: power OFF the Poly Voyager Free 60+ UC earbuds, then power ON and connect the Poly Voyager Surround 80 UC headset to the same phone via Bluetooth.",
-        "6. After the idle period, bring the Poly Studio Mobile app to the foreground.",
-        "7. Observe the Device screen \u2014 note which devices are listed and their connection states.",
-        "8. Tap the refresh/pull-to-refresh gesture if available, or wait 60 seconds for auto-refresh.",
-        "9. Verify the app's device list shows the Poly Voyager Surround 80 UC as connected.",
-        "10. Verify the Poly Voyager Free 60+ UC earbuds are shown as disconnected or removed from the list."
+        "Precondition: Both earbuds connected, app open on Audio Settings \u2192 Transparency \u2192 Surround tab.",
+        "Set Surround slider to exactly 80.",
+        "DO NOT navigate away. Immediately force-kill the app (swipe from recent apps).",
+        "Reopen Poly Studio Mobile app.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround.",
+        "Observe slider value and device connection state on Home screen."
       ],
-      "expected": "The app should correctly reflect the current Bluetooth state: the Poly Voyager Surround 80 UC should appear in the device list with 'Connected' status, and the Poly Voyager Free 60+ UC should show as 'Disconnected' or not appear. The app must not show stale state where earbuds appear connected when they are not, nor fail to show the actually connected Surround 80 UC."
+      "expected": "Expected: Surround slider persists at 80. Both earbuds show 'Connected'. Actual (If Bug): Surround resets to default (0 or 50). Device list may show stale or incorrect connection state (e.g., left connected, right disconnected)."
     },
     {
-      "title": "GAP 3: Bluetooth Service Re-query After Extended Idle \u2014 Immediate vs. Delayed Foregrounding",
+      "title": "TC-CONN-003: Deep lifecycle \u2014 Bluetooth disconnect/reconnect after idle with Surround 80",
       "steps": [
-        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC earbuds.",
-        "2. Navigate to Device \u2192 Audio Settings \u2192 Transparency Mode \u2192 Environment. Set Surround level to 80.",
-        "3. Press the Home button to background the app.",
-        "4. After 5 seconds, bring the app back to foreground. Verify the app still shows the earbuds as connected and Surround level is 80. (Baseline: immediate foregrounding works.)",
-        "5. Press the Home button again to background the app.",
-        "6. Wait 3 hours (simulate extended idle).",
-        "7. During the idle period, disconnect the earbuds via phone Bluetooth settings.",
-        "8. Bring the app to the foreground after the 3-hour idle.",
-        "9. Immediately check the Device screen \u2014 note the connection state shown.",
-        "10. Without restarting the app, wait 60 seconds and check if the state updates.",
-        "11. If state does not update, force-close the app (swipe from recents) and relaunch.",
-        "12. Verify the app now shows the correct disconnected state."
+        "Precondition: Both earbuds connected, app open.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround. Set slider to 80.",
+        "Background the app (Home button).",
+        "Wait 15 minutes.",
+        "From phone Bluetooth settings, disconnect the earbuds.",
+        "Wait 2 minutes.",
+        "Reconnect earbuds from phone Bluetooth settings.",
+        "Bring app to foreground.",
+        "Navigate to: Home \u2192 Connected Devices and observe connection state.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround and read slider value."
       ],
-      "expected": "After extended idle (3+ hours), the app should re-query the Bluetooth service state when brought to the foreground. The Device screen should update to show the correct disconnected state within 60 seconds. If the app fails to auto-refresh, force-closing and relaunching must resolve the stale state. The immediate foregrounding case (5 seconds) should work correctly as a baseline comparison."
+      "expected": "Expected: Both earbuds show 'Connected'. Surround slider reads 80. Actual (If Bug): Device list shows stale state (left connected, right disconnected) or empty. Surround may reset to default."
     },
     {
-      "title": "GAP 4: Device-Specific Asymmetry \u2014 Voyager Surround 80 UC Touch Control Interaction After Idle",
+      "title": "TC-CONN-004: Phone reboot lifecycle \u2014 verify connection state and Surround persistence",
       "steps": [
-        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC earbuds.",
-        "2. Press the Home button to background the app.",
-        "3. Wait 1 hour.",
-        "4. During the idle period: power OFF the earbuds, then power ON and connect the Poly Voyager Surround 80 UC headset.",
-        "5. Bring the app to the foreground after the idle period.",
-        "6. Observe the Device screen \u2014 check if the Poly Voyager Surround 80 UC appears in the device list.",
-        "7. If the Surround 80 UC appears as connected, tap on it to open its device detail screen.",
-        "8. Verify the Touch Control settings section is visible (the Surround 80 UC has unique touch control surface on the right earcup).",
-        "9. Tap Touch Control settings and verify gesture options are displayed: tap to play/pause, swipe to skip tracks, touch and hold for voice assistant.",
-        "10. Navigate back to the Device screen.",
-        "11. If the Surround 80 UC does NOT appear, force-close the app and relaunch.",
-        "12. After relaunch, verify the Surround 80 UC appears and Touch Control settings are accessible."
+        "Precondition: Both earbuds connected, app open.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround. Set slider to 80.",
+        "Close app gracefully (navigate away, then exit).",
+        "Reboot the phone.",
+        "After reboot, open Poly Studio Mobile app.",
+        "Navigate to: Home \u2192 Connected Devices.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround."
       ],
-      "expected": "The Poly Voyager Surround 80 UC must appear in the device list after the idle period, either via auto-refresh or after app restart. Once visible, the Touch Control settings screen must be fully accessible and show all gesture options (tap, swipe, touch and hold) with correct labels. The app must not crash or show empty/disabled Touch Control UI for the Surround 80 UC."
+      "expected": "Expected: Both earbuds show 'Connected' after reconnection. Surround slider reads 80. Actual (If Bug): Device list shows incorrect state (left connected, right disconnected) or requires manual refresh. Surround resets to default."
     },
     {
-      "title": "GAP 5: Settings Interaction with Stale Connection \u2014 Toggling ANC/Transparency/EQ on Disconnected Earbuds",
+      "title": "TC-CONN-005: Rapid app foreground/background cycling after setting Surround 80",
       "steps": [
-        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC earbuds.",
-        "2. Press the Home button to background the app.",
-        "3. Wait 2 hours.",
-        "4. During the idle period: power OFF the Poly Voyager Free 60+ UC earbuds.",
-        "5. Bring the app to the foreground after the idle period.",
-        "6. WITHOUT refreshing or restarting, tap on the stale earbud entry in the Device screen (which may still show 'Connected').",
-        "7. Navigate to Audio Settings \u2192 ANC/Transparency.",
-        "8. Attempt to toggle ANC mode from 'Active Noise Cancellation' to 'Transparency'.",
-        "9. Navigate to Audio Settings \u2192 Equalizer. Attempt to change the EQ preset from 'Flat' to 'Bass Boost'.",
-        "10. Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment. Attempt to change the Surround level slider to 50.",
-        "11. Observe the app behavior for each action \u2014 does the UI update? Does it show an error? Does it crash?",
-        "12. Navigate back to the Device screen. Force-close the app and relaunch.",
-        "13. Reconnect to the earbuds and verify that none of the attempted settings changes were applied (since the device was disconnected)."
+        "Precondition: Both earbuds connected, app open on Surround tab.",
+        "Set Surround slider to 80.",
+        "Background app (Home button). Immediately (within 1 sec) bring app to foreground.",
+        "Repeat rapid background/foreground cycle 10 times.",
+        "After 10th cycle, observe device list on Home screen.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround and read slider."
       ],
-      "expected": "The app must handle stale connection state gracefully. When the user attempts to change settings on a device that is no longer connected, the app should either: (a) display a clear error/toast message indicating the device is not connected and settings cannot be changed, or (b) show the UI changes locally but revert them upon app restart. The app must NOT crash, freeze, or hang. After relaunch and reconnection, the settings should reflect the last valid state before disconnection, not the attempted changes made while disconnected."
+      "expected": "Expected: Both earbuds show 'Connected' after all cycles. Surround slider remains at 80. Actual (If Bug): Device list shows stale/incorrect state after rapid cycling. Surround may drift from 80."
     },
     {
-      "title": "GAP 6: App Restart as Sole Recovery Mechanism for Stale Device List After Extended Idle",
+      "title": "TC-CONN-006: Verify device list refresh on app resume after long idle with media playing",
       "steps": [
-        "1. Launch Poly Studio Mobile app and connect to Poly Voyager Free 60+ UC earbuds.",
-        "2. Press the Home button to background the app.",
-        "3. Wait 3+ hours (simulate overnight idle).",
-        "4. During the idle period: power OFF the earbuds, then power ON and connect the Poly Voyager Surround 80 UC.",
-        "5. Bring the app to the foreground after the idle period.",
-        "6. Observe the Device screen \u2014 note the stale state (likely still showing earbuds as connected, Surround 80 UC not visible).",
-        "7. Attempt each of the following recovery methods WITHOUT force-closing the app:",
-        "   a. Pull-to-refresh gesture on the Device screen (if available).",
-        "   b. Navigate to another tab (e.g., Settings) and back to Device.",
-        "   c. Toggle Bluetooth OFF and ON from phone settings, then return to app.",
-        "   d. Tap the overflow menu (three dots) and look for a 'Refresh' or 'Scan' option.",
-        "8. After exhausting all non-kill recovery methods, note whether the device list updated.",
-        "9. Force-close the app (swipe from recents menu).",
-        "10. Relaunch Poly Studio Mobile app.",
-        "11. Verify the Device screen now correctly shows the Poly Voyager Surround 80 UC as connected.",
-        "12. Verify the Poly Voyager Free 60+ UC earbuds are no longer shown as connected."
+        "Precondition: Both earbuds connected, music playing via media app on phone.",
+        "Open Poly Studio Mobile app. Navigate to: Home \u2192 Connected Devices. Verify both earbuds show 'Connected'.",
+        "Set Surround to 80 via: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround.",
+        "Background the app. Keep music playing through earbuds.",
+        "Wait 20 minutes with music playing.",
+        "Pause music. Bring app to foreground.",
+        "Observe device list on Home screen.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround."
       ],
-      "expected": "All non-kill recovery methods (pull-to-refresh, tab switching, Bluetooth toggle, menu refresh) should ideally update the device list. However, if they fail, force-closing and relaunching the app must be the definitive recovery mechanism that resolves the stale state. After relaunch, the device list must accurately reflect the current Bluetooth connections. This validates that app restart is a reliable recovery mechanism for stale device lists after extended idle periods."
+      "expected": "Expected: Both earbuds show 'Connected'. Surround slider reads 80. Actual (If Bug): Device list shows stale state (left connected, right disconnected) despite active audio stream. Surround may show incorrect value."
+    },
+    {
+      "title": "TC-CONN-007: Asymmetric device state \u2014 left earbud disconnected mid-session, verify right still shows Surround 80",
+      "steps": [
+        "Precondition: Both earbuds connected, app open.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround. Set slider to 80.",
+        "Place left earbud in charging case (disconnects left only).",
+        "Wait 10 seconds.",
+        "Observe device list on Home screen.",
+        "Remove left earbud from case (reconnects).",
+        "Wait 10 seconds.",
+        "Observe device list again.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency \u2192 Surround."
+      ],
+      "expected": "Expected: When left disconnects, device list shows 'Left: Disconnected, Right: Connected'. When left reconnects, both show 'Connected'. Surround slider remains at 80 throughout. Actual (If Bug): After reconnection, device list incorrectly shows left as disconnected, or Surround resets."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:09.767390Z"
+  "processed_at": "2026-04-25T09:45:49.447293Z"
 }
