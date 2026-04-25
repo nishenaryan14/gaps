@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "EQ - Custom EQ, change values on the sliders",
-  "feature": "EQ (Equalizer)",
-  "scenario": "Verify that all sliders in Custom EQ can be adjusted.",
+  "feature": "Equalizer",
+  "scenario": "Custom EQ sliders can have their values changed successfully in the Poly Studio Mobile app",
   "steps": [
-    "Start the app on an EQ-supported device.",
-    "Navigate to Device Settings > EQ.",
-    "Open Custom EQ.",
-    "Change values on all sliders."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen and select the connected Poly audio device.",
+    "3. Go to Device Settings \u2192 Audio Settings \u2192 Equalizer.",
+    "4. Tap on 'Custom' EQ preset to enter the Custom EQ screen.",
+    "5. For each frequency band slider (e.g., 32Hz, 64Hz, 125Hz, 250Hz, 500Hz, 1kHz, 2kHz, 4kHz, 8kHz, 16kHz), drag the slider up and down to different positions.",
+    "6. Observe whether the slider moves smoothly and the value changes accordingly.",
+    "7. Repeat step 5 for all available sliders on the Custom EQ screen."
   ],
-  "expected": "All sliders should be adjustable.",
+  "expected": "All sliders in the Custom EQ screen can be adjusted smoothly, and their values change successfully without any sticking, lag, or unresponsiveness.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Custom EQ",
-    "sliders",
-    "adjust",
+    "poly-studio-mobile",
     "equalizer",
-    "EQ settings",
-    "audio settings",
-    "Device Settings"
+    "custom-eq",
+    "frequency-band-sliders",
+    "audio-settings",
+    "eq-preset",
+    "slider-adjustment"
   ],
   "source_last_updated": "1761144928",
   "source_hash": "3095c0165aa58e50309e0d35e046b0cad8b7e906c0c24f78e5878a236c3d123c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.249298Z",
+  "processed_at": "2026-04-25T05:37:16.836216Z",
   "status": "active"
 }
