@@ -5,34 +5,34 @@
   "project": "411453",
   "title": "EQ - Two devices on one phone, change EQ on one device has no effect on the second device",
   "feature": "Equalizer",
-  "scenario": "EQ preset changes on one Poly device do not affect EQ settings on a second connected Poly device; each device maintains independent EQ settings",
+  "scenario": "EQ preset changes on one Poly device do not affect EQ settings on a second connected Poly device",
   "steps": [
     "Open Poly Studio Mobile app on the Android phone.",
     "Connect the first Poly Bluetooth audio device (e.g., Poly Voyager 5200) to the phone.",
-    "Navigate to Poly Studio Mobile \u2192 [First Device Name] \u2192 Audio Settings \u2192 Equalizer.",
-    "Select a specific EQ preset (e.g., Bass Boost) for the first device.",
+    "Navigate to Home \u2192 [First Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "Select a custom EQ preset (e.g., 'Bass Boost') on the first device.",
     "Connect the second Poly Bluetooth audio device (e.g., Poly Voyager 4320) to the same phone.",
-    "Navigate to Poly Studio Mobile \u2192 [Second Device Name] \u2192 Audio Settings \u2192 Equalizer.",
-    "Observe the currently selected EQ preset on the second device.",
-    "Change the EQ preset on the second device to a different preset (e.g., Treble Boost).",
-    "Switch back to the first device's EQ settings and verify the preset remains unchanged."
+    "Navigate to Home \u2192 [Second Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "Observe the EQ preset currently selected on the second device.",
+    "Change the EQ preset on the first device to a different preset (e.g., 'Treble Boost').",
+    "Return to the second device's Equalizer screen and observe if the EQ preset has changed."
   ],
-  "expected": "Each device maintains independent EQ settings. Changing the EQ preset on one device does not affect the EQ settings on the second device.",
+  "expected": "Each device maintains independent EQ settings. Changing the EQ preset on the first device does not affect the EQ preset on the second device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "eq-preset",
-    "independent-eq-settings",
+    "equalizer",
     "poly-studio-mobile",
     "poly-voyager-5200",
     "poly-voyager-4320",
-    "equalizer",
     "audio-settings",
-    "multi-device"
+    "device-independence",
+    "bluetooth-multi-device"
   ],
   "source_last_updated": "1761211493",
   "source_hash": "fcf052e53c6bbe70d7e59f94b01d6d32824b0130ec56eeb0884cb1ea60557b65",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.933326Z",
+  "processed_at": "2026-04-25T08:21:31.005523Z",
   "status": "active"
 }
