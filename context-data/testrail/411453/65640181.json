@@ -4,30 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Find My Device Opened",
-  "feature": "Analytics",
-  "scenario": "Log \"findMyDevice_opened\" event when user opens the \"Find My Device\" screen and verify Firebase page displays all default elements with updated event counts after a few hours.",
+  "feature": "App Settings",
+  "scenario": "Firebase analytics logs default elements when user opens Find My Device screen in Poly Studio Mobile app",
   "steps": [
-    "Open the 'Find My Device' screen.",
-    "Check Firebase Analytics logs for the event 'findMyDevice_opened'.",
-    "Wait a few hours for event counts to update.",
-    "Navigate to the Firebase Analytics dashboard.",
-    "Verify the following default elements are displayed: graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment."
+    "1. Launch the Poly Studio Mobile app on the connected Android device.",
+    "2. From the Home screen, navigate to the Device Settings screen for the connected Poly Bluetooth audio device.",
+    "3. Locate and tap on the \"Find My Device\" option from the Device Settings menu.",
+    "4. Observe the \"Find My Device\" screen that loads."
   ],
-  "expected": "The event 'findMyDevice_opened' is logged when the user opens the 'Find My Device' screen. After a few hours, the Firebase page displays all default elements: graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, and App Environment.",
+  "expected": "The \"Find My Device\" screen displays correctly with all default elements: a graph showing device location history, events from the last 30 minutes, event count broken down by country and gender, events per session, and app metadata (app version, app build, app environment). The Firebase analytics event is properly logged when the screen is opened.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Find My Device",
-    "Firebase Analytics",
-    "event tracking",
-    "findMyDevice_opened",
-    "dashboard verification",
-    "event count",
-    "analytics logs"
+    "find-my-device",
+    "poly-studio-mobile",
+    "device-settings",
+    "firebase-analytics",
+    "android",
+    "bluetooth-audio-device",
+    "home-screen"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "feff8cfd6b10ff5a87df450547cb66e55759853bb0b0b9ba73c041f79568dfee",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.334131Z",
+  "processed_at": "2026-04-25T05:37:16.965946Z",
   "status": "active"
 }
