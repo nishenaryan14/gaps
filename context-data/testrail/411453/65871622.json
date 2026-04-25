@@ -7,15 +7,15 @@
   "feature": "App Settings",
   "scenario": "Tapping \"Supported Devices\" link on home screen shows \"Feature unavailable\" dialog when no device connected and internet is off",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Ensure no Bluetooth audio device is connected to the phone.",
-    "3. Turn off internet connectivity (Wi-Fi and mobile data) on the phone.",
-    "4. Observe the Home screen \u2014 it should display the no-device state.",
-    "5. Tap the 'Supported Devices' link on the Home screen.",
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Ensure no Poly Bluetooth audio device is connected to the phone.",
+    "3. Turn off internet connectivity (Wi-Fi and mobile data) on the Android device.",
+    "4. Observe the Home screen, which should display the no-device state.",
+    "5. Tap the \"Supported Devices\" link on the Home screen.",
     "6. Observe the dialog that appears.",
-    "7. Tap the 'Ok got it' button on the dialog."
+    "7. Tap the \"Ok got it\" button on the dialog."
   ],
-  "expected": "A dialog appears with the message: 'Feature unavailable. An internet connection is required to access this feature.' and an 'Ok got it' button. Tapping the button dismisses the dialog and returns to the no-device Home screen.",
+  "expected": "A dialog appears with the message: \"Feature unavailable. An internet connection is required to access this feature.\" and an \"Ok got it\" button. Tapping the button dismisses the dialog and returns to the no-device Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,11 +25,11 @@
     "no-device-state",
     "offline-behavior",
     "home-screen",
-    "bluetooth-disconnected"
+    "dialog"
   ],
   "source_last_updated": "1762181111",
   "source_hash": "48fcc4940d2f99e7cf0dcd7ca90e15851d7e0f45b2c7038a1f3113cea2aca099",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.914908Z",
+  "processed_at": "2026-04-25T09:32:26.134183Z",
   "status": "active"
 }
