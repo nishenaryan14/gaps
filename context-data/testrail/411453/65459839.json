@@ -5,23 +5,24 @@
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, enabled, master toggle is working",
   "feature": "Notifications",
-  "scenario": "Master Notification toggle in App Settings > General correctly controls sub-settings when re-enabled after OS-level \"Don't Allow\" during onboarding",
+  "scenario": "Master Notification toggle in App Settings > General correctly controls sub-settings after OS-level notifications are re-enabled following \"Don't Allow\" during onboarding",
   "steps": [],
   "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "master-notification-toggle",
-    "app-settings",
-    "general-settings",
-    "onboarding-permissions",
-    "os-dont-allow",
+    "app-settings-general",
+    "os-level-notifications",
+    "dont-allow-onboarding",
     "notification-sub-settings",
-    "poly-app"
+    "notification-persistence",
+    "poly-app-settings",
+    "notification-control"
   ],
   "source_last_updated": "1761228589",
   "source_hash": "81dca0a5c9ebcc3010dc29e12e55e7a2102e1a8e8b4e6cdaa8937027d7b65e11",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.050280Z",
+  "processed_at": "2026-04-25T09:32:26.316347Z",
   "status": "active"
 }
