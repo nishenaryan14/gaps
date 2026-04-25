@@ -4,24 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Settings - Settings description",
-  "feature": "Device Settings",
+  "feature": "Device Management",
   "scenario": "All settings descriptions display correctly when navigating Device Settings in Poly Studio Mobile app after headset pairing and connection",
-  "steps": [],
-  "expected": "",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Pair and connect a Poly Bluetooth headset to the Android device.",
+    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
+    "4. Navigate through each settings section: Audio Settings, ANC, Transparency Mode, Equalizer, Notifications, and Account.",
+    "5. For each settings section, observe the description text displayed below or beside each setting option.",
+    "6. Verify that all descriptions are fully visible, properly formatted, and contain no truncation, overlapping, or garbled characters."
+  ],
+  "expected": "All settings descriptions in Device Settings are displayed correctly \u2014 fully visible, properly formatted, with no truncation, overlapping, or garbled characters across all sections (Audio Settings, ANC, Transparency Mode, Equalizer, Notifications, Account).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-settings",
+    "anc",
+    "transparency-mode",
+    "equalizer",
     "settings-descriptions",
-    "headset-pairing",
-    "bluetooth-connection",
-    "ui-navigation",
-    "settings-display"
+    "bluetooth-pairing",
+    "audio-settings"
   ],
   "source_last_updated": "1762264858",
   "source_hash": "cf817da69c271543806b8eeb62f13a9dae9ac7dc2cd1ee6e8c0be0501e57ceb0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.863103Z",
+  "processed_at": "2026-04-25T08:21:30.965800Z",
   "status": "active"
 }
