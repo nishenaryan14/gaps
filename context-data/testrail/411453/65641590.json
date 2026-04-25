@@ -4,30 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "EQ - Custom EQ, all possible values",
-  "feature": "EQ (Equalizer)",
-  "scenario": "Verify that all possible custom EQ slider combinations can be set and saved in Device Settings.",
-  "steps": [
-    "Start the app on a device that supports EQ.",
-    "Go to Device Settings.",
-    "Tap on the EQ tab.",
-    "Move sliders around to set various combinations."
-  ],
-  "expected": "It is possible to set up all combinations and save the configuration.",
+  "feature": "Equalizer",
+  "scenario": "Custom EQ allows setting all possible slider values and saving the configuration in Device Settings",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "EQ slider",
-    "custom EQ",
-    "Device Settings",
-    "EQ tab",
-    "save EQ",
-    "EQ combinations",
-    "audio settings",
-    "equalizer"
+    "custom-eq",
+    "equalizer",
+    "slider-values",
+    "device-settings",
+    "audio-configuration",
+    "eq-preset",
+    "sound-profile"
   ],
   "source_last_updated": "1760956310",
   "source_hash": "5a70e2769916cdda1462c20eec859f5f90247734104200239ffced7c6ebfc7bd",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.261927Z",
+  "processed_at": "2026-04-25T05:37:16.841823Z",
   "status": "active"
 }
