@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "ANC - Both modes disabled, turn on Transparency, default value selected",
   "feature": "ANC",
-  "scenario": "Transparency Mode defaults to Environment sub-setting when enabled while ANC is disabled",
+  "scenario": "Transparency Mode defaults to Environment sub-setting when enabled after both ANC and Transparency are disabled",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Go to Audio Settings",
-    "Ensure ANC Mode is set to Off",
-    "Ensure Transparency Mode is set to Off",
-    "Turn on Transparency Mode",
-    "Observe the Transparency Mode sub-setting that is selected"
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the connected device name to open Device Settings.",
+    "Navigate to Audio Settings.",
+    "Ensure ANC Mode is set to Off / Disabled.",
+    "Ensure Transparency Mode is set to Off / Disabled.",
+    "Enable Transparency Mode.",
+    "Observe the Transparency Mode sub-setting that is selected."
   ],
-  "expected": "Transparency Mode turns on and defaults to the \"Environment\" sub-setting. ANC Mode remains disabled (Off).",
+  "expected": "When Transparency Mode is enabled, it defaults to the \"Environment\" sub-setting. ANC remains disabled.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "transparency-mode",
     "environment-sub-setting",
-    "anc-off",
+    "anc",
     "poly-studio-mobile",
     "audio-settings",
     "device-settings",
-    "transparency-default"
+    "anc-disabled"
   ],
   "source_last_updated": "1761047460",
   "source_hash": "713608431113117f7b51d7b7bc04c1b2837e94557a953db97f06ff290239379a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.905253Z",
+  "processed_at": "2026-04-25T08:21:30.988638Z",
   "status": "active"
 }
