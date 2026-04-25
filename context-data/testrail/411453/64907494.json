@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Support - Device page Go button",
   "feature": "App Settings",
-  "scenario": "\"Go\" button on Device Support page opens Poly Contact Support in browser after tapping a paired device",
+  "scenario": "\"Go\" button on Device page under Support does not open Poly Contact Support page in browser",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Tap the Menu icon (hamburger menu) to open the navigation drawer.",
-    "3. Tap Support to open the Support section.",
-    "4. Tap Device to view the list of paired Poly devices.",
-    "5. From the list of paired devices, tap on a specific device to view its details.",
-    "6. On the Device Details page, verify the following information is displayed: Device Name, Product ID, Serial Number, Software Version, Headset Revision, Last Connected.",
-    "7. Tap the Go button located on the Device Details page."
+    "1. Pair and connect a Poly Bluetooth headset to the mobile device.",
+    "2. Open the Poly Studio Mobile app.",
+    "3. Tap the Menu icon (hamburger menu) to open the navigation drawer.",
+    "4. Tap \"Support\" from the menu.",
+    "5. Tap \"Device\" under the Support section.",
+    "6. Select the connected device from the device list.",
+    "7. Tap the \"Go\" button."
   ],
-  "expected": "Tapping the \"Go\" button opens the Poly Contact Support page in the device's default web browser.",
+  "expected": "The Poly Contact Support page (https://support.hp.com/contact/product/poly-lens-mobile-app/...) opens in the device's default browser.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-support",
-    "device-details",
+    "support-page",
     "go-button",
+    "device-page",
     "contact-support",
-    "paired-devices",
-    "android-app"
+    "navigation-drawer",
+    "bluetooth-pairing",
+    "app-navigation"
   ],
   "source_last_updated": "1759752387",
   "source_hash": "3d741f06cb9532ec40f76144c5d0347f15699d8c59f83def18c52af73b5e357c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.842586Z",
+  "processed_at": "2026-04-25T08:21:30.948464Z",
   "status": "active"
 }
