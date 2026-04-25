@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Software Update - DFU is not available during a call",
   "feature": "Firmware Updates",
-  "scenario": "DFU is blocked with pop-up message when attempting to update firmware during an active call",
+  "scenario": "DFU is blocked with popup message when attempting to update firmware during an active call on Device Settings Software Update page",
   "steps": [
     "1. Launch Poly Studio Mobile app on Android.",
-    "2. Connect a Poly Bluetooth audio device.",
+    "2. Connect to a supported Poly Bluetooth audio device.",
     "3. Initiate or receive an active call on the device.",
-    "4. While the call is active, navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "5. Tap on 'Software Update' tab.",
-    "6. Tap the 'Update' button.",
-    "7. Observe the pop-up message displayed.",
-    "8. Tap 'OK' on the pop-up."
+    "4. While on the active call, navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "5. Tap on 'Software Update' (or 'Update') option in Device Settings.",
+    "6. Observe the popup message displayed on screen.",
+    "7. Tap 'OK' on the popup to dismiss it."
   ],
-  "expected": "A pop-up appears with the message 'Cannot update this device during a call'. Tapping OK dismisses the pop-up and returns the user to the Software Update tab without starting the DFU.",
+  "expected": "The DFU (Device Firmware Update) should not start. A popup should appear with the message \"Cannot update this device during a call\". Tapping OK dismisses the popup and returns the user to the Software Update tab without initiating the update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-blocked",
     "firmware-update",
     "active-call",
-    "pop-up-message",
-    "poly-studio-mobile",
     "software-update",
-    "call-management",
-    "update-blocked"
+    "device-settings",
+    "poly-studio-mobile",
+    "popup-message"
   ],
   "source_last_updated": "1763042058",
   "source_hash": "0b903097a6059f97cd827c270b88cbe303f20450d3504b9bc95e1bb59355efbc",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.878488Z",
+  "processed_at": "2026-04-25T07:55:31.953695Z",
   "status": "active"
 }
