@@ -5,22 +5,34 @@
   "project": "411453",
   "title": "Analytics - Product Support Opened",
   "feature": "App Settings",
-  "scenario": "Analytics event logged when navigating to Product Support page in Poly Studio Mobile app",
-  "steps": [],
-  "expected": "",
+  "scenario": "Analytics event count increments when Product Support page is opened via Support > Product Support in the Poly Studio Mobile app",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the mobile device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the Support option from the Home screen or menu.",
+    "4. Tap on Product Support to open the Product Support page.",
+    "5. Observe that the Product Support page loads and displays correctly.",
+    "6. Wait for a period of time (e.g., 30 seconds to 1 minute) to allow analytics events to be logged and transmitted.",
+    "7. Check the analytics backend or logging system to verify that an analytics event was logged for opening the Product Support page.",
+    "8. Verify that the event includes the following tracked parameters: event count, country, gender, sessions, app version, app build, and app environment.",
+    "9. Compare the event count before and after opening the Product Support page to confirm the count incremented."
+  ],
+  "expected": "The Product Support page opens correctly. An analytics event is logged with the correct parameters (event count, country, gender, sessions, app version, app build, app environment). The event count increments after the page is opened and some time passes.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "product-support",
     "analytics-event",
-    "in-app-navigation",
-    "support-page",
-    "mobile-app-analytics"
+    "product-support-page",
+    "support-menu",
+    "event-count",
+    "app-version",
+    "app-environment",
+    "mobile-app-navigation"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "62d22b29714c5195c2b1741ac4b90b3504e88719c57c7413f08d7cf311f3fe63",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.970831Z",
+  "processed_at": "2026-04-25T07:55:32.002770Z",
   "status": "active"
 }
