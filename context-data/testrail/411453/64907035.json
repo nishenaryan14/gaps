@@ -5,12 +5,12 @@
   "project": "411453",
   "title": "App Settings - General - Account - Log in",
   "feature": "App Settings",
-  "scenario": "User can log into their account via App Settings > General > Account and see Name and Email fields populated correctly with Share data option hidden",
+  "scenario": "User can log into their account via App Settings > General > Account and see Name and Email populated correctly with Share data option hidden",
   "steps": [
     "1. Open the Poly Studio Mobile app.",
     "2. Tap the menu icon (hamburger) or navigate to App Settings.",
     "3. Go to General \u2192 Account.",
-    "4. Tap \"Log in\".",
+    "4. Tap the \"Log in\" button.",
     "5. Enter valid user credentials (email and password) and authenticate.",
     "6. Observe the \"Your account\" screen that appears after successful login."
   ],
@@ -22,13 +22,13 @@
     "account-login",
     "app-settings",
     "user-authentication",
-    "account-details",
+    "account-screen",
     "share-data-option",
-    "name-email-fields"
+    "name-email-display"
   ],
   "source_last_updated": "1759324619",
   "source_hash": "0a71962d5991a869cef9f72462ef1b45c0c5af122c46fc7716de45cfa09a2305",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.749641Z",
+  "processed_at": "2026-04-25T07:55:31.810673Z",
   "status": "active"
 }
