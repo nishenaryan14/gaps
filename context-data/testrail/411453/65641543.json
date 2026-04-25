@@ -5,17 +5,19 @@
   "project": "411453",
   "title": "ANC - Change Transparency Mode value (Environment/Speech)",
   "feature": "ANC",
-  "scenario": "Transparency Mode Environment/Speech setting does not persist after closing and reopening the ANC tab in Device Settings",
+  "scenario": "Transparency Mode sub-setting (Environment/Speech) selection does not persist after closing and reopening the ANC tab",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and ensure an ANC-supported device is connected.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 ANC.",
-    "3. In the ANC tab, change the Transparency Mode value to \"Environment\".",
-    "4. Close the ANC tab by navigating back to Device Settings.",
-    "5. Reopen the ANC tab by going to Device Settings \u2192 ANC.",
-    "6. Observe the Transparency Mode value displayed.",
-    "7. Repeat steps 2\u20136, this time changing the Transparency Mode value to \"Speech\" in step 3."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen and tap on your connected Poly Bluetooth audio device.",
+    "3. Go to Device Settings \u2192 Audio Settings \u2192 ANC.",
+    "4. In the ANC settings, locate the Transparency Mode option.",
+    "5. Change the Transparency Mode value from the current setting to 'Environment'.",
+    "6. Close the ANC tab by navigating back to the Audio Settings screen.",
+    "7. Re-open the ANC tab by tapping on ANC again.",
+    "8. Observe the Transparency Mode value displayed.",
+    "9. Repeat steps 5\u20138, this time changing the Transparency Mode value to 'Speech' instead of 'Environment'."
   ],
-  "expected": "The Transparency Mode value (Environment or Speech) selected in step 3 is retained and displayed correctly after reopening the ANC tab in step 5, for both values tested.",
+  "expected": "The Transparency Mode value (Environment or Speech) selected in step 5 or step 9 persists and is displayed correctly when re-opening the ANC tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,14 +25,13 @@
     "environment-sub-setting",
     "speech-sub-setting",
     "anc",
-    "device-settings",
     "poly-studio-mobile",
     "setting-persistence",
-    "anc-tab"
+    "audio-settings"
   ],
   "source_last_updated": "1761055511",
   "source_hash": "7f491405d721713a3dcca0965365fcc13dc007735690d525df1cc01ec858785d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.821238Z",
+  "processed_at": "2026-04-25T07:55:31.910822Z",
   "status": "active"
 }
