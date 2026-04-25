@@ -5,16 +5,18 @@
   "project": "411453",
   "title": "Feedback - send a Other feedback with names/email",
   "feature": "App Settings",
-  "scenario": "\"Other\" feedback submitted from App Settings > Feedback does not include user's name and email",
+  "scenario": "\"Other\" feedback sent from App Settings > Feedback does not include user's name and email",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Home screen.",
-    "2. Navigate to App Settings.",
-    "3. Tap Feedback.",
-    "4. Select the \"Other\" option.",
-    "5. Enter text, name, and email into the respective fields.",
-    "6. Tap Send."
+    "Open the Poly Studio Mobile app on the Android device.",
+    "Tap the menu icon (hamburger or gear) to navigate to App Settings.",
+    "In App Settings, tap on Feedback.",
+    "On the Feedback screen, select the \"Other\" option.",
+    "Enter feedback text in the provided text field.",
+    "Enter the user's name in the Name field.",
+    "Enter the user's email address in the Email field.",
+    "Tap the Send button to submit the feedback."
   ],
-  "expected": "Feedback is sent with the user's name and email attached.",
+  "expected": "Feedback is sent successfully with the user's name and email attached.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +26,12 @@
     "other-feedback",
     "user-name",
     "user-email",
-    "feedback-submission",
-    "send-feedback"
+    "android",
+    "feedback-submission"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "cdea2c8bb57a3c3d280e248cb06fbc2bebd662b335eee34e22ab0fe7d7e40c40",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.963477Z",
+  "processed_at": "2026-04-25T09:32:26.194383Z",
   "status": "active"
 }
