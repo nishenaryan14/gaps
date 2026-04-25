@@ -5,36 +5,34 @@
   "project": "UNKNOWN",
   "summary": "iOS | Free20 | Repeat Notifications",
   "feature": "Notifications",
-  "scenario": "Duplicate charging notifications appear when one earbud is worn and the other is placed in the unplugged, open charging case",
-  "description_clean": "Repeat charging notifications appear when one earbud is worn and the other is placed in the unplugged, open charging case. Expected: only one charging notification since only one earbud is charging.",
+  "scenario": "Repeated charging notifications appear when one Voyager Free 20 earbud is worn and the other is placed in the open charging case",
+  "description_clean": "When using Poly Voyager Free 20 earbuds with one earbud worn and the other placed in the open, unplugged charging case, repeated charging notifications appear instead of a single notification for the earbud that is charging.",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Ensure both earbuds are connected to the app via Bluetooth.",
-    "3. Wear one earbud (e.g., the right earbud) in your ear.",
-    "4. Place the other earbud (e.g., the left earbud) into the charging case.",
-    "5. Ensure the charging case is unplugged (not connected to a power source).",
-    "6. Observe the charging notifications that appear on the Android device."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure the Poly Voyager Free 20 earbuds are connected to the app.",
+    "3. Wear one earbud (e.g., left) and leave the other earbud (e.g., right) out of your ear.",
+    "4. Place the unused earbud (right) into the open, unplugged charging case.",
+    "5. Observe the notification area on your Android device for charging status notifications from the Poly Studio Mobile app."
   ],
-  "expected": "Only one charging notification should appear, since only one earbud is placed in the charging case and is charging.",
-  "actual": "Repeat charging notifications appear continuously or multiple times, even though only one earbud is charging.",
+  "expected": "A single notification should appear indicating that the earbud placed in the charging case is charging.",
+  "actual": "Repeated charging notifications appear continuously instead of a single notification for the earbud that is charging.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "NeedsQAReview"
   ],
   "keywords": [
-    "duplicate-charging-notifications",
+    "voyager-free-20",
     "poly-studio-mobile",
-    "charging-case-unplugged",
-    "one-earbud-worn",
+    "charging-notifications",
+    "single-earbud",
     "open-charging-case",
-    "bluetooth-connection",
     "android-notifications",
-    "earbud-charging-state"
+    "battery-status"
   ],
   "source_last_updated": "2026-04-24T14:51:37.000+0000",
   "source_hash": "0ad2bad55b212cf0ee0f890368f2c1e8972c177a8d81920ca2d8eac47249c307",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.587049Z",
+  "processed_at": "2026-04-25T09:32:25.738457Z",
   "status": "active"
 }
