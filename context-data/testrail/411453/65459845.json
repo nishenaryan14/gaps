@@ -5,18 +5,16 @@
   "project": "411453",
   "title": "Notifications - Master Toggle OFF - Device disconnected",
   "feature": "Notifications",
-  "scenario": "\"Device has been disconnected\" notification appears despite Notifications master toggle being OFF in Poly Lens Menu",
+  "scenario": "\"Device has been disconnected\" notification appears despite Notifications master toggle being OFF in Poly Lens Menu > General > Notifications & Device Alerts",
   "steps": [
     "Open Poly Studio Mobile app",
-    "Go to Home screen",
-    "Tap Menu (hamburger icon)",
-    "Tap General",
-    "Tap Notifications & Device Alerts",
+    "Go to Poly Lens Menu \u2192 General \u2192 Notifications & Device Alerts",
     "Set the Notifications master toggle to OFF",
-    "Press the Power button on the headset to turn it off (disconnect the device)",
-    "Observe the notification area on the phone"
+    "Connect a Poly Bluetooth headset to the mobile device",
+    "Press the Power button on the connected headset to turn it off",
+    "Observe whether a 'Device has been disconnected' notification appears"
   ],
-  "expected": "The \"Device has been disconnected\" notification should NOT appear.",
+  "expected": "No \"Device has been disconnected\" notification should appear when the Notifications master toggle is OFF.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,12 +23,13 @@
     "device-disconnected-notification",
     "poly-lens-menu",
     "notifications-and-device-alerts",
-    "general-settings",
-    "voyager-free-60"
+    "bluetooth-headset",
+    "power-button",
+    "notification-persistence"
   ],
   "source_last_updated": "1761230695",
   "source_hash": "d8238b91deb58fded9462671caaa15b12af2bb8ccd717a2abd99a12e2a9d2450",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.941770Z",
+  "processed_at": "2026-04-25T07:55:31.971157Z",
   "status": "active"
 }
