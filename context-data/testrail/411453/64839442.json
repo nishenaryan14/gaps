@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Device Home Screen - Limited Support After Launch Date When LM Version Is Empty",
   "feature": "Device Management",
-  "scenario": "Unsupported device shows \"Device support coming soon\" popup when tapping info icon on device home screen after launch date with empty LM version",
+  "scenario": "Device Home Screen shows limited support and \"Device support coming soon\" pop-up when connected to a newly launched device with empty LM version info",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. On the Home screen, connect a newly released Bluetooth audio device that is not yet supported by the app (i.e., the device's Launch Date has passed but the app does not have LM version info for it).",
-    "3. On the Home screen, locate the connected device card.",
-    "4. Tap the info (i) icon on the device card.",
-    "5. Observe the popup that appears.",
-    "6. Tap outside the popup area to dismiss it."
+    "1. Launch the Poly Studio Mobile app on an Android device.",
+    "2. Connect a newly released Poly Bluetooth audio device (whose LM version info is empty in the product catalogue) to the app.",
+    "3. Ensure the current date is past the device's official launch date.",
+    "4. Observe the Device Home Screen \u2014 verify that it shows limited support indicators.",
+    "5. Tap the \"i\" (info) icon on the Device Home Screen.",
+    "6. Observe the pop-up message that appears.",
+    "7. Tap outside the pop-up to dismiss it."
   ],
-  "expected": "A popup is displayed with the message: \\\"Device support coming soon. In-app functionality may be limited.\\\" The popup can be dismissed by tapping outside of it.",
+  "expected": "The Device Home Screen shows limited support. Tapping the \\\"i\\\" icon displays a pop-up message: \\\"Device support coming soon. In-app functionality may be limited.\\\" Tapping outside the pop-up dismisses it.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-support-coming-soon",
-    "info-icon",
     "device-home-screen",
+    "limited-support",
+    "device-support-coming-soon",
     "lm-version",
-    "unsupported-device",
-    "launch-date",
-    "bluetooth-pairing"
+    "product-catalogue",
+    "info-icon-popup",
+    "newly-launched-device"
   ],
   "source_last_updated": "1764663027",
   "source_hash": "ccc29fb0fe0ec34f8c1561739828cf65e836ad6d31cf746651921df4034b9b05",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.810673Z",
+  "processed_at": "2026-04-25T08:21:30.925665Z",
   "status": "active"
 }
