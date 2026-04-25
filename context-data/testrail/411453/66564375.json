@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "PPIP - Share Data toggle can be changed to ON or OFF while on Guest account",
   "feature": "App Settings",
-  "scenario": "Share Data toggle in App Settings > General > Account is functional in both ON and OFF states for Guest accounts, reflecting the PPIP dialog choice from onboarding",
+  "scenario": "Share Data toggle in App Settings > General > Account is functional and reflects user choice from PPIP onboarding dialogue on Guest account",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. Navigate to App Settings \u2192 General \u2192 Account.",
-    "3. Ensure the app is using a Guest account (not a logged-in account).",
-    "4. Locate the 'Share Data' toggle on the Account screen.",
-    "5. Tap the 'Share Data' toggle to set it to ON.",
-    "6. Observe the toggle state.",
-    "7. Tap the 'Share Data' toggle to set it to OFF.",
-    "8. Observe the toggle state."
+    "2. If not already on the Home screen, navigate to the Home screen.",
+    "3. Tap the Account icon or navigate to App Settings (gear icon) \u2192 General \u2192 Account.",
+    "4. Observe the 'Share Data' toggle switch.",
+    "5. If currently ON, tap to toggle it OFF. If currently OFF, tap to toggle it ON.",
+    "6. Observe whether the toggle changes state and whether any confirmation or error dialog appears."
   ],
-  "expected": "The 'Share Data' toggle should be functional in both ON and OFF states while using a Guest account. The toggle should reflect the user's choice made during onboarding (PPIP dialog with 'Don't Share' and 'Share Data' options) and allow the user to change the setting freely.",
+  "expected": "The 'Share Data' toggle should be functional and change state (ON/OFF) when tapped. If the user is using a Guest account, the toggle should still be interactive and reflect the user's choice. The PPIP (Privacy/Data Sharing) dialogue shown during onboarding with options 'Don't Share' and 'Share Data' should be respected, and the toggle in settings should reflect that choice.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "share-data-toggle",
-    "guest-account",
     "app-settings",
-    "account-screen",
-    "ppip-dialog",
-    "onboarding",
-    "data-privacy"
+    "general-account",
+    "ppip-onboarding",
+    "guest-account",
+    "poly-studio-mobile",
+    "toggle-persistence",
+    "privacy-setting"
   ],
   "source_last_updated": "1762435234",
   "source_hash": "be1ee8a93470bccda4e92ecad80771ca31b31d44632fc12fc02e4d001454498c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.913901Z",
+  "processed_at": "2026-04-25T09:32:26.133665Z",
   "status": "active"
 }
