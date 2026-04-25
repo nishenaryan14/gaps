@@ -4,14 +4,14 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - No Device Connected",
-  "feature": "Device Management",
+  "feature": "App Settings",
   "scenario": "Home screen shows \"Let's Get Started!\" with Select Device and Phone Settings buttons when app is launched with no devices connected",
   "steps": [
-    "Launch the Poly Studio Mobile app on the Android device (not for the first time).",
-    "Ensure no Poly Bluetooth audio device is connected to the phone.",
-    "Observe the Home screen."
+    "Launch the Poly Studio Mobile app on an Android device.",
+    "Ensure no Poly Bluetooth audio device is connected or paired to the phone.",
+    "Observe the Home screen that appears."
   ],
-  "expected": "The Home screen displays: a title \"Let's Get Started!\", instructional text about selecting a device or using Bluetooth settings, and two buttons: \"Select Device\" and \"Phone Settings\".",
+  "expected": "The Home screen displays: a title \"Let's Get Started!\", instructional text guiding the user to select a device or use Bluetooth settings, and two buttons labeled \"Select Device\" and \"Phone Settings\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,11 +21,12 @@
     "select-device",
     "phone-settings",
     "no-device-connected",
-    "android"
+    "android",
+    "app-launch"
   ],
   "source_last_updated": "1774958368",
   "source_hash": "ea6af0c9e0be9f3ec9cf63b8f809750fb3dc50aad004495b2637d44091589f88",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.784581Z",
+  "processed_at": "2026-04-25T08:21:30.911869Z",
   "status": "active"
 }
