@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - Disconnected device",
   "feature": "Device Management",
-  "scenario": "Device Home Screen UI shows \"Not Connected\" status with greyed-out elements when paired headset is disconnected",
+  "scenario": "Device Home Screen shows greyed out UI elements and \"Not Connected\" label when paired headset is powered off",
   "steps": [
-    "1. Pair and connect a Poly Bluetooth headset to the mobile device.",
-    "2. Launch the Poly Studio Mobile app.",
-    "3. Navigate to the Device Home screen (Home \u2192 [Device Name]).",
-    "4. Turn off the headset (e.g., press and hold the Power button until the LED turns off).",
-    "5. Observe the Device Home screen UI."
+    "1. Launch the Poly Studio Mobile app on your Android device.",
+    "2. Ensure a Poly Bluetooth headset is already paired with the app.",
+    "3. On the Home screen, verify the paired device is listed and connected.",
+    "4. Turn off the paired Poly Bluetooth headset (e.g., press and hold the Power button until it powers off).",
+    "5. Observe the Device Home Screen for the paired device entry."
   ],
-  "expected": "The Device Home Screen displays: the device name (with an \"i\" icon if applicable), a crossed red dot with \"Not Connected\" label, a greyed-out device image, a \"...\" button, greyed-out battery icons, and the firmware version \"X.Y.Z\".",
+  "expected": "The Device Home Screen should display: Device Name (with an \\\"i\\\" info icon if applicable), a crossed red dot with \\\"Not Connected\\\" label, a greyed out device image, a \\\"...\\\" (more options) button, greyed out battery icons, and the firmware version \\\"X.Y.Z\\\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "not-connected-status",
-    "device-home-screen",
-    "greyed-out-elements",
     "poly-studio-mobile",
-    "bluetooth-disconnection",
-    "paired-headset",
-    "ui-state"
+    "device-home-screen",
+    "not-connected",
+    "greyed-out-ui",
+    "bluetooth-pairing",
+    "power-off",
+    "connection-state"
   ],
   "source_last_updated": "1775206608",
   "source_hash": "9b34d1f2b52081163ce4a2e0f815a9a3effca07e7a2113dcb379a4202c3b6846",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.736022Z",
+  "processed_at": "2026-04-25T07:55:31.801063Z",
   "status": "active"
 }
