@@ -5,23 +5,32 @@
   "project": "411453",
   "title": "Notifications - Device disconnected OFF",
   "feature": "Notifications",
-  "scenario": "No \"Device is disconnected\" notification appears when the notification toggle is disabled in Poly Lens Menu > General > Notifications & Device Alerts and the headset is turned off with the app in the background",
-  "steps": [],
-  "expected": "",
+  "scenario": "No \"Device is disconnected\" notification appears when the notification toggle is disabled in Poly Lens Menu > General > Notifications & Device Alerts",
+  "steps": [
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen.",
+    "3. Tap the Poly Lens Menu (hamburger menu or gear icon).",
+    "4. Go to General \u2192 Notifications & Device Alerts.",
+    "5. Locate the 'Device Disconnected' notification toggle and turn it OFF.",
+    "6. Ensure a Poly Bluetooth headset is currently connected to the mobile device.",
+    "7. Disconnect the headset (e.g., turn off the headset, move out of range, or disable Bluetooth on the phone).",
+    "8. Observe the device's notification shade for any 'Device is disconnected' notification."
+  ],
+  "expected": "No 'Device is disconnected' notification appears in the notification shade after the headset disconnects.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-lens-app",
-    "notifications-toggle",
-    "device-disconnected-alert",
-    "general-settings",
-    "background-app-behavior",
-    "headset-power-off",
-    "notification-persistence"
+    "poly-studio-mobile",
+    "device-disconnected-notification",
+    "notification-toggle",
+    "poly-lens-menu",
+    "notifications-and-device-alerts",
+    "bluetooth-disconnection",
+    "notification-shade"
   ],
   "source_last_updated": "1761226715",
   "source_hash": "ff0482c1a1713d14ce73586225b8ea9dec2d09db220674fd7a394c49ba8bb131",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.046571Z",
+  "processed_at": "2026-04-25T09:32:26.304707Z",
   "status": "active"
 }
