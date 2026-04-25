@@ -19,372 +19,191 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test covers Transparency Mode sub-setting persistence when switching between Environment and Speech tabs on Voyager Surround 85, Free 60, or Free 20 devices",
-    "No test covers the specific bug pattern of sub-setting values reverting to default (0 or mid-range) when toggling between Environment and Speech sub-settings",
-    "No test covers Transparency Mode Environment (Surround level slider) value persistence after switching to Speech sub-setting and back",
-    "No test covers Transparency Mode Speech (Free level slider) value persistence after switching to Environment sub-setting and back",
-    "No test covers this sub-setting switching persistence bug across any of the affected devices (Voyager Surround 85, Free 60, Free 20)",
-    "No test covers the known bug area LMW-2472 pattern for Transparency Mode sub-setting value retention during tab switching"
+    "No existing test case covers Transparency Mode sub-setting persistence at all \u2014 all 15 provided test cases are about onboarding, EULA, dark mode, and Find My Device location permissions.",
+    "The bug involves a specific LIFECYCLE DIMENSION gap: values reverting after app close/reopen (steps 6-7 and 11-12). No test validates that Transparency Mode sub-setting selection (Environment vs. Speech) persists across app kill/relaunch.",
+    "The bug involves a specific STATE TRIGGER gap: the value is lost when switching between Environment and Speech sub-settings after an app restart cycle. No test validates that the last-selected sub-setting tab is preserved when the app is killed and reopened.",
+    "DEVICE ASYMMETRY gap: The bug explicitly mentions Free 60 and Free 20. No test validates Transparency Mode behavior specifically on these TWS earbud models vs. over-ear models like Voyager Surround 80.",
+    "Missing scenario: Set Transparency Mode to Environment \u2192 close app \u2192 reopen \u2192 verify Environment is still selected \u2192 switch to Speech \u2192 close app \u2192 reopen \u2192 verify Speech is still selected. This exact lifecycle sequence is untested.",
+    "Missing scenario: Verify that the sub-setting tab selection (Environment vs. Speech) persists across: (a) navigating to another settings screen and back, (b) app background/foreground, (c) app kill/relaunch, (d) Bluetooth disconnect/reconnect."
   ],
   "generated_testcases": [
     {
-      "title": "[Voyager Surround 85] TC-001: Environment Surround Level Persists After Switching to Speech and Back",
+      "title": "[Free 60/Free 20] Transparency Mode \u2014 Sub-setting tab selection persists across app kill/relaunch (Environment \u2192 Speech cycle)",
       "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Surround 85] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 85.",
-        "Tap the Speech sub-setting tab.",
-        "Observe the Free level slider (do not change it).",
-        "Tap the Environment sub-setting tab again.",
-        "Observe the Surround level slider value."
+        "1. Connect Poly Voyager Free 60+ (or Free 20) to the phone via Bluetooth.",
+        "2. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "3. Verify the default sub-setting tab is selected (Environment or last-used).",
+        "4. Tap the 'Environment' sub-setting tab.",
+        "5. Set Surround level slider to 85.",
+        "6. Fully close the Poly Studio Mobile app (swipe from recents / force kill).",
+        "7. Reopen Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "8. Verify the 'Environment' sub-setting tab is still selected.",
+        "9. Verify the Surround level slider still shows 85.",
+        "10. Tap the 'Speech' sub-setting tab.",
+        "11. Set Free level slider to 60.",
+        "12. Fully close the Poly Studio Mobile app (swipe from recents / force kill).",
+        "13. Reopen Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "14. Verify the 'Speech' sub-setting tab is still selected.",
+        "15. Verify the Free level slider still shows 60."
       ],
-      "expected": "The Surround level slider should still display 85. The value must not revert to default (0 or mid-range)."
+      "expected": "The sub-setting tab selection (Environment \u2192 Speech) persists across app kill and relaunch. After reopening the app, the last-selected sub-setting tab is displayed, and its slider value is preserved at the previously set level (Surround=85, Free=60)."
     },
     {
-      "title": "[Voyager Surround 85] TC-002: Speech Free Level Persists After Switching to Environment and Back",
+      "title": "[Free 60/Free 20] Transparency Mode \u2014 Sub-setting values persist when switching between Environment and Speech tabs",
       "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Surround 85] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 60.",
-        "Tap the Environment sub-setting tab.",
-        "Observe the Surround level slider (do not change it).",
-        "Tap the Speech sub-setting tab again.",
-        "Observe the Free level slider value."
+        "1. Connect Poly Voyager Free 60+ (or Free 20) to the phone via Bluetooth.",
+        "2. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "3. Tap the 'Environment' sub-setting tab.",
+        "4. Set Surround level slider to 75.",
+        "5. Tap the 'Speech' sub-setting tab.",
+        "6. Set Free level slider to 40.",
+        "7. Tap back to the 'Environment' sub-setting tab.",
+        "8. Verify the Surround level slider still shows 75 (not reset to default).",
+        "9. Tap back to the 'Speech' sub-setting tab.",
+        "10. Verify the Free level slider still shows 40 (not reset to default).",
+        "11. Repeat steps 7-10 three more times to confirm consistent persistence."
       ],
-      "expected": "The Free level slider should still display 60. The value must not revert to default (0 or mid-range)."
+      "expected": "Switching between Environment and Speech sub-setting tabs does NOT reset the other sub-setting's value. Each sub-setting independently retains its last-set slider value (Surround=75, Free=40) regardless of how many times the user switches tabs."
     },
     {
-      "title": "[Voyager Surround 85] TC-003: Both Sub-Settings Retain Independent Values After Multiple Switches",
+      "title": "[Free 60/Free 20] Transparency Mode \u2014 Sub-setting tab and values persist after navigating to another settings screen and back",
       "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Surround 85] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 100.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 0.",
-        "Switch back to the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 100.",
-        "Switch back to the Speech sub-setting tab.",
-        "Verify the Free level slider shows 0.",
-        "Repeat steps 8-11 two more times."
+        "1. Connect Poly Voyager Free 60+ (or Free 20) to the phone via Bluetooth.",
+        "2. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "3. Tap the 'Speech' sub-setting tab.",
+        "4. Set Free level slider to 50.",
+        "5. Tap the back arrow to return to Audio Settings screen.",
+        "6. Navigate to a different settings screen (e.g., tap 'Equalizer' or 'Voice Alerts').",
+        "7. Tap back to Audio Settings \u2192 Transparency Mode.",
+        "8. Verify the 'Speech' sub-setting tab is still selected.",
+        "9. Verify the Free level slider still shows 50.",
+        "10. Tap the 'Environment' sub-setting tab.",
+        "11. Set Surround level slider to 90.",
+        "12. Tap back to Audio Settings, then navigate to Device Info screen.",
+        "13. Tap back to Audio Settings \u2192 Transparency Mode.",
+        "14. Verify the 'Environment' sub-setting tab is still selected.",
+        "15. Verify the Surround level slider still shows 90."
       ],
-      "expected": "Each sub-setting independently retains its last set value (Surround=100, Free=0) across all tab switches. Values must not cross-contaminate or revert to defaults."
+      "expected": "Navigating away from Transparency Mode to other settings screens and back preserves both the selected sub-setting tab and its slider value. The app does not reset to defaults when the user leaves and returns to the Transparency Mode screen."
     },
     {
-      "title": "[Voyager Surround 85] TC-004: Extreme Value Persistence \u2014 Surround=0 and Free=100 After Tab Switching",
+      "title": "[Free 60/Free 20] Transparency Mode \u2014 Sub-setting tab and values persist after app background/foreground cycle",
       "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Surround 85] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 0 (minimum).",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 100 (maximum).",
-        "Switch back to the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 0.",
-        "Switch back to the Speech sub-setting tab.",
-        "Verify the Free level slider shows 100."
+        "1. Connect Poly Voyager Free 60+ (or Free 20) to the phone via Bluetooth.",
+        "2. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "3. Tap the 'Speech' sub-setting tab.",
+        "4. Set Free level slider to 70.",
+        "5. Tap the 'Environment' sub-setting tab.",
+        "6. Set Surround level slider to 30.",
+        "7. Press the Home button to background the app (do not kill it).",
+        "8. Wait 10 seconds, then reopen the app from the app switcher or launcher.",
+        "9. Verify the app returns to the Transparency Mode screen (or navigate: tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode).",
+        "10. Verify the 'Environment' sub-setting tab is still selected.",
+        "11. Verify the Surround level slider still shows 30.",
+        "12. Tap the 'Speech' sub-setting tab.",
+        "13. Verify the Free level slider still shows 70."
       ],
-      "expected": "Both extreme values (Surround=0, Free=100) persist correctly after switching tabs. No reversion to defaults."
+      "expected": "Backgrounding and foregrounding the app preserves both the selected sub-setting tab and all slider values. Environment tab shows Surround=30, Speech tab shows Free=70 after the background/foreground cycle."
     },
     {
-      "title": "[Voyager Surround 85] TC-005: Rapid Tab Switching Does Not Corrupt Sub-Setting Values",
+      "title": "[Free 60/Free 20] Transparency Mode \u2014 Sub-setting tab and values persist after Bluetooth disconnect/reconnect",
       "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Surround 85] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 75.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 25.",
-        "Rapidly tap between Environment and Speech tabs 10 times (alternating each tap).",
-        "After the rapid switching, select the Environment tab.",
-        "Verify the Surround level slider shows 75.",
-        "Select the Speech tab.",
-        "Verify the Free level slider shows 25."
+        "1. Connect Poly Voyager Free 60+ (or Free 20) to the phone via Bluetooth.",
+        "2. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "3. Tap the 'Speech' sub-setting tab.",
+        "4. Set Free level slider to 55.",
+        "5. Tap the 'Environment' sub-setting tab.",
+        "6. Set Surround level slider to 80.",
+        "7. Disconnect Bluetooth (turn off Bluetooth on phone, or put earbuds in case and close lid).",
+        "8. Wait 5 seconds.",
+        "9. Reconnect Bluetooth (turn Bluetooth back on, or open case and wait for reconnection).",
+        "10. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "11. Verify the 'Environment' sub-setting tab is still selected.",
+        "12. Verify the Surround level slider still shows 80.",
+        "13. Tap the 'Speech' sub-setting tab.",
+        "14. Verify the Free level slider still shows 55."
       ],
-      "expected": "After rapid tab switching, both sub-setting values (Surround=75, Free=25) remain intact and unchanged."
+      "expected": "After a Bluetooth disconnect and reconnect cycle, the Transparency Mode sub-setting tab selection and all slider values are preserved. Environment tab shows Surround=80, Speech tab shows Free=55."
     },
     {
-      "title": "[Voyager Free 60+] TC-006: Environment Surround Level Persists After Switching to Speech and Back",
+      "title": "[Free 60/Free 20] Transparency Mode \u2014 Sub-setting values persist after device power off/on cycle",
       "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 60+] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 85.",
-        "Tap the Speech sub-setting tab.",
-        "Observe the Free level slider (do not change it).",
-        "Tap the Environment sub-setting tab again.",
-        "Observe the Surround level slider value."
+        "1. Connect Poly Voyager Free 60+ (or Free 20) to the phone via Bluetooth.",
+        "2. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "3. Tap the 'Environment' sub-setting tab.",
+        "4. Set Surround level slider to 100.",
+        "5. Tap the 'Speech' sub-setting tab.",
+        "6. Set Free level slider to 25.",
+        "7. Place earbuds in the charge case and close the lid (device powers off).",
+        "8. Wait 10 seconds.",
+        "9. Open the charge case lid (device powers on and reconnects).",
+        "10. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "11. Verify the 'Speech' sub-setting tab is still selected (last tab before power off).",
+        "12. Verify the Free level slider still shows 25.",
+        "13. Tap the 'Environment' sub-setting tab.",
+        "14. Verify the Surround level slider still shows 100."
       ],
-      "expected": "The Surround level slider should still display 85. The value must not revert to default (0 or mid-range)."
+      "expected": "After powering the earbuds off (in case) and back on, the Transparency Mode sub-setting tab selection and slider values persist. Environment tab shows Surround=100, Speech tab shows Free=25."
     },
     {
-      "title": "[Voyager Free 60+] TC-007: Speech Free Level Persists After Switching to Environment and Back",
+      "title": "[Free 60/Free 20] Transparency Mode \u2014 Sub-setting values persist after phone reboot",
       "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 60+] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 60.",
-        "Tap the Environment sub-setting tab.",
-        "Observe the Surround level slider (do not change it).",
-        "Tap the Speech sub-setting tab again.",
-        "Observe the Free level slider value."
+        "1. Connect Poly Voyager Free 60+ (or Free 20) to the phone via Bluetooth.",
+        "2. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "3. Tap the 'Environment' sub-setting tab.",
+        "4. Set Surround level slider to 65.",
+        "5. Tap the 'Speech' sub-setting tab.",
+        "6. Set Free level slider to 45.",
+        "7. Reboot the phone.",
+        "8. After phone restarts, ensure Bluetooth is enabled.",
+        "9. Wait for the earbuds to reconnect automatically (or manually reconnect via Bluetooth settings).",
+        "10. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "11. Verify the 'Speech' sub-setting tab is still selected.",
+        "12. Verify the Free level slider still shows 45.",
+        "13. Tap the 'Environment' sub-setting tab.",
+        "14. Verify the Surround level slider still shows 65."
       ],
-      "expected": "The Free level slider should still display 60. The value must not revert to default (0 or mid-range)."
+      "expected": "After a full phone reboot, the Transparency Mode sub-setting tab selection and slider values are preserved. Environment tab shows Surround=65, Speech tab shows Free=45."
     },
     {
-      "title": "[Voyager Free 60+] TC-008: Both Sub-Settings Retain Independent Values After Multiple Switches",
+      "title": "[Free 60/Free 20] Transparency Mode \u2014 Rapid switching between Environment and Speech does not cause value corruption",
       "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 60+] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 100.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 0.",
-        "Switch back to the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 100.",
-        "Switch back to the Speech sub-setting tab.",
-        "Verify the Free level slider shows 0.",
-        "Repeat steps 8-11 two more times."
+        "1. Connect Poly Voyager Free 60+ (or Free 20) to the phone via Bluetooth.",
+        "2. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "3. Tap the 'Environment' sub-setting tab.",
+        "4. Set Surround level slider to 95.",
+        "5. Tap the 'Speech' sub-setting tab.",
+        "6. Set Free level slider to 10.",
+        "7. Rapidly switch between Environment and Speech tabs 10 times (tap each tab alternately as fast as possible).",
+        "8. After the rapid switching, tap the 'Environment' sub-setting tab.",
+        "9. Verify the Surround level slider still shows 95.",
+        "10. Tap the 'Speech' sub-setting tab.",
+        "11. Verify the Free level slider still shows 10."
       ],
-      "expected": "Each sub-setting independently retains its last set value (Surround=100, Free=0) across all tab switches. Values must not cross-contaminate or revert to defaults."
+      "expected": "Rapid switching between Environment and Speech sub-setting tabs does not corrupt or reset slider values. Both sub-settings retain their independently set values (Surround=95, Free=10) after rapid tab toggling."
     },
     {
-      "title": "[Voyager Free 60+] TC-009: Extreme Value Persistence \u2014 Surround=0 and Free=100 After Tab Switching",
+      "title": "[Free 60/Free 20] Transparency Mode \u2014 Device asymmetry: TWS earbuds retain sub-setting values vs. over-ear headset baseline",
       "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 60+] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 0 (minimum).",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 100 (maximum).",
-        "Switch back to the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 0.",
-        "Switch back to the Speech sub-setting tab.",
-        "Verify the Free level slider shows 100."
+        "1. Connect Poly Voyager Free 60+ (or Free 20) to the phone via Bluetooth.",
+        "2. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "3. Tap the 'Environment' sub-setting tab.",
+        "4. Set Surround level slider to 70.",
+        "5. Tap the 'Speech' sub-setting tab.",
+        "6. Set Free level slider to 35.",
+        "7. Fully close the Poly Studio Mobile app (force kill).",
+        "8. Reopen Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "9. Verify the 'Speech' sub-setting tab is selected and Free level = 35.",
+        "10. Tap the 'Environment' sub-setting tab and verify Surround level = 70.",
+        "11. Disconnect the Free 60/Free 20 and connect a Voyager Surround 80 (over-ear headset).",
+        "12. Open Poly Studio Mobile app \u2192 tap [Voyager Surround 80] \u2192 Audio Settings \u2192 Transparency Mode.",
+        "13. Verify that Transparency Mode sub-settings (Environment/Speech) are present and functional on the over-ear device as well.",
+        "14. Set Environment Surround level to 50 and Speech Free level to 50 on the Surround 80.",
+        "15. Close and reopen the app, then verify values persist on the Surround 80."
       ],
-      "expected": "Both extreme values (Surround=0, Free=100) persist correctly after switching tabs. No reversion to defaults."
-    },
-    {
-      "title": "[Voyager Free 60+] TC-010: Rapid Tab Switching Does Not Corrupt Sub-Setting Values",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 60+] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 75.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 25.",
-        "Rapidly tap between Environment and Speech tabs 10 times (alternating each tap).",
-        "After the rapid switching, select the Environment tab.",
-        "Verify the Surround level slider shows 75.",
-        "Select the Speech tab.",
-        "Verify the Free level slider shows 25."
-      ],
-      "expected": "After rapid tab switching, both sub-setting values (Surround=75, Free=25) remain intact and unchanged."
-    },
-    {
-      "title": "[Voyager Free 20] TC-011: Environment Surround Level Persists After Switching to Speech and Back",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 20] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 85.",
-        "Tap the Speech sub-setting tab.",
-        "Observe the Free level slider (do not change it).",
-        "Tap the Environment sub-setting tab again.",
-        "Observe the Surround level slider value."
-      ],
-      "expected": "The Surround level slider should still display 85. The value must not revert to default (0 or mid-range)."
-    },
-    {
-      "title": "[Voyager Free 20] TC-012: Speech Free Level Persists After Switching to Environment and Back",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 20] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 60.",
-        "Tap the Environment sub-setting tab.",
-        "Observe the Surround level slider (do not change it).",
-        "Tap the Speech sub-setting tab again.",
-        "Observe the Free level slider value."
-      ],
-      "expected": "The Free level slider should still display 60. The value must not revert to default (0 or mid-range)."
-    },
-    {
-      "title": "[Voyager Free 20] TC-013: Both Sub-Settings Retain Independent Values After Multiple Switches",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 20] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 100.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 0.",
-        "Switch back to the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 100.",
-        "Switch back to the Speech sub-setting tab.",
-        "Verify the Free level slider shows 0.",
-        "Repeat steps 8-11 two more times."
-      ],
-      "expected": "Each sub-setting independently retains its last set value (Surround=100, Free=0) across all tab switches. Values must not cross-contaminate or revert to defaults."
-    },
-    {
-      "title": "[Voyager Free 20] TC-014: Extreme Value Persistence \u2014 Surround=0 and Free=100 After Tab Switching",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 20] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 0 (minimum).",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 100 (maximum).",
-        "Switch back to the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 0.",
-        "Switch back to the Speech sub-setting tab.",
-        "Verify the Free level slider shows 100."
-      ],
-      "expected": "Both extreme values (Surround=0, Free=100) persist correctly after switching tabs. No reversion to defaults."
-    },
-    {
-      "title": "[Voyager Free 20] TC-015: Rapid Tab Switching Does Not Corrupt Sub-Setting Values",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 20] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 75.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 25.",
-        "Rapidly tap between Environment and Speech tabs 10 times (alternating each tap).",
-        "After the rapid switching, select the Environment tab.",
-        "Verify the Surround level slider shows 75.",
-        "Select the Speech tab.",
-        "Verify the Free level slider shows 25."
-      ],
-      "expected": "After rapid tab switching, both sub-setting values (Surround=75, Free=25) remain intact and unchanged."
-    },
-    {
-      "title": "[Voyager Surround 85] TC-016: Sub-Setting Persistence After App Backgrounding and Foregrounding",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Surround 85] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 90.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 30.",
-        "Press the Home button to background the app.",
-        "Wait 5 seconds.",
-        "Reopen the Poly Studio Mobile app from the app switcher.",
-        "Select the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 90.",
-        "Select the Speech sub-setting tab.",
-        "Verify the Free level slider shows 30."
-      ],
-      "expected": "Both sub-setting values (Surround=90, Free=30) persist after the app is backgrounded and foregrounded. No values revert to defaults."
-    },
-    {
-      "title": "[Voyager Free 60+] TC-017: Sub-Setting Persistence After App Force-Kill and Relaunch",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 60+] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 80.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 40.",
-        "Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
-        "Reopen the Poly Studio Mobile app.",
-        "Wait for the app to connect to [Voyager Free 60+].",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 80.",
-        "Select the Speech sub-setting tab.",
-        "Verify the Free level slider shows 40."
-      ],
-      "expected": "Both sub-setting values (Surround=80, Free=40) persist after the app is force-killed and relaunched. The values are saved to the device and restored correctly."
-    },
-    {
-      "title": "[Voyager Free 20] TC-018: Sub-Setting Persistence After Bluetooth Disconnect and Reconnect",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 20] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 70.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 50.",
-        "Disconnect Bluetooth from the phone's Bluetooth settings.",
-        "Wait 3 seconds.",
-        "Reconnect Bluetooth to [Voyager Free 20].",
-        "Open Poly Studio Mobile app and wait for connection.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 70.",
-        "Select the Speech sub-setting tab.",
-        "Verify the Free level slider shows 50."
-      ],
-      "expected": "Both sub-setting values (Surround=70, Free=50) persist after Bluetooth disconnect and reconnect cycle. The values are stored on the device and restored upon reconnection."
-    },
-    {
-      "title": "[Voyager Surround 85] TC-019: Sub-Setting Persistence After Device Power Off and On",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Surround 85] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 95.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 15.",
-        "Power off the Voyager Surround 85 device.",
-        "Wait 5 seconds.",
-        "Power on the Voyager Surround 85 device.",
-        "Wait for the device to reconnect to the phone.",
-        "Open Poly Studio Mobile app and wait for connection.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 95.",
-        "Select the Speech sub-setting tab.",
-        "Verify the Free level slider shows 15."
-      ],
-      "expected": "Both sub-setting values (Surround=95, Free=15) persist after the device is powered off and on. The values are stored in device NVM and restored correctly."
-    },
-    {
-      "title": "[Voyager Free 60+] TC-020: Sub-Setting Persistence After Phone Reboot",
-      "steps": [
-        "Open Poly Studio Mobile app on the connected phone.",
-        "Tap [Voyager Free 60+] from the device list.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Set the Surround level slider to 45.",
-        "Select the Speech sub-setting tab.",
-        "Set the Free level slider to 55.",
-        "Reboot the phone.",
-        "After phone restarts, ensure Bluetooth is enabled.",
-        "Wait for [Voyager Free 60+] to reconnect automatically.",
-        "Open Poly Studio Mobile app and wait for connection.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Select the Environment sub-setting tab.",
-        "Verify the Surround level slider shows 45.",
-        "Select the Speech sub-setting tab.",
-        "Verify the Free level slider shows 55."
-      ],
-      "expected": "Both sub-setting values (Surround=45, Free=55) persist after a phone reboot. The values are stored on the device and restored when the app reconnects."
+      "expected": "Both TWS earbuds (Free 60/Free 20) and over-ear headsets (Surround 80) support Transparency Mode with Environment/Speech sub-settings. Values persist independently per device after app kill/relaunch. The bug is confirmed on Free 60/Free 20 specifically, but the feature should work consistently across device types."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T05:51:00.874242Z"
+  "processed_at": "2026-04-25T08:35:35.723312Z"
 }
