@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "Software Update - Headset and all other components are up to date - UI",
   "feature": "Firmware Updates",
-  "scenario": "Software Update tab in Device Settings correctly displays up-to-date status for all components (headset, charge stand, or charge case) with device image, name, and firmware version",
+  "scenario": "Software Update tab in Device Settings shows correct component entries and \"up to date\" status for headset, charge stand, and charge case",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
-    "Tap on a connected device to open Device Settings",
-    "Tap on the Software Update tab",
+    "Tap on a connected device (headset, earbuds, or headset with charge stand)",
+    "Go to Device Settings",
+    "Tap on Software Update tab",
     "Observe the list of components displayed"
   ],
-  "expected": "The Software Update tab displays each component with its device image, name, an \"up to date\" message, and the current firmware version. For single headsets, one entry is shown. For headsets with a charge stand, two entries (headset + stand) are shown. For earbuds with a charge case, two entries (earbuds + case) are shown.",
+  "expected": "The Software Update tab displays each component with its device image, name, an \"up to date\" message, and the current firmware version. For single headsets, one entry (headset) is shown. For headsets with a charge stand, two entries (headset + stand) are shown. For earbuds with a charge case, two entries (earbuds + case) are shown.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "software-update",
-    "firmware-version",
     "device-settings",
     "poly-studio-mobile",
+    "up-to-date",
+    "charge-stand",
+    "charge-case",
     "component-list",
-    "up-to-date-status",
-    "device-image"
+    "firmware-status"
   ],
   "source_last_updated": "1763377484",
   "source_hash": "e43741e93a8d6119aec4664fbd26e34174c72d67eeed746c7c0bfac1d80e0eb0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.023592Z",
+  "processed_at": "2026-04-25T09:32:26.281831Z",
   "status": "active"
 }
