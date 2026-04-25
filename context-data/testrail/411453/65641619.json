@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "Fit test - Onboarding flow - Test all Fit Test screens",
   "feature": "Device Management",
-  "scenario": "Fit Test onboarding flow fails when accessed through Device Settings > Onboarding on supported device",
-  "steps": [],
-  "expected": "",
+  "scenario": "Fit Test onboarding flow fails when accessed through Device Settings > Onboarding on supported Poly Bluetooth device",
+  "steps": [
+    "1. Launch Poly Studio Mobile app and connect a Bluetooth audio device that supports Fit Test.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "3. Tap Onboarding in Device Settings.",
+    "4. Proceed through the onboarding flow until reaching the Pairing 2 screen.",
+    "5. After Pairing 2 screen, verify the Fit Test screen is displayed.",
+    "6. Check that all UI elements on the Fit Test screen are properly rendered (text, graphics, buttons).",
+    "7. Tap the Test button on the Fit Test screen.",
+    "8. Complete the entire Fit Test flow (follow on-screen prompts to test fit/seal)."
+  ],
+  "expected": "All Fit Test screens display correctly during the onboarding flow. The Fit Test screen appears after Pairing 2, all UI elements render properly, the Test button is tappable, and the entire Fit Test flow completes without errors.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
     "onboarding-flow",
     "device-settings",
-    "onboarding-menu",
-    "poly-device",
-    "bluetooth-headset",
-    "fit-test-failure"
+    "poly-studio-mobile",
+    "pairing-2-screen",
+    "fit-test-ui",
+    "test-button",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "7217b4a8019f7d573d20fd8479566a4c7dcb4cbfaaac579a16174130fb27f4e7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.989644Z",
+  "processed_at": "2026-04-25T09:32:26.241262Z",
   "status": "active"
 }
