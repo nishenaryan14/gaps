@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Device images",
   "feature": "Device Management",
-  "scenario": "Device image fails to load or display properly on Device Home Screen when device is powered off",
+  "scenario": "Device images fail to load or display incorrectly on the Device Home Screen when device is turned off",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Home screen.",
-    "2. Pair a Bluetooth audio device with the app while the internet connection is ON.",
-    "3. Observe the device image displayed on the Home screen.",
-    "4. Turn the paired device OFF (e.g., press and hold the Power button until the device powers down).",
-    "5. Observe the device image on the Home screen again."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure internet connection is ON.",
+    "3. Pair a Poly Bluetooth audio device with the app.",
+    "4. Navigate to the Home screen.",
+    "5. Observe the device image displayed on the Home screen.",
+    "6. Turn the paired device OFF (e.g., press and hold the Power button).",
+    "7. Return to the Home screen and observe the device image again."
   ],
-  "expected": "1. When the device is paired and internet is ON, the device image loads and displays properly on the Home screen. 2. When the device is turned OFF, the device image remains displayed but is greyed out.",
+  "expected": "1. With internet ON, the device image loads properly and is fully displayed on the Home screen. 2. After turning the device OFF, the device image is still properly displayed but greyed out.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-home-screen",
-    "device-image",
+    "device-image-loading",
     "bluetooth-pairing",
-    "power-off",
-    "image-loading",
-    "device-display"
+    "power-off-state",
+    "android-app",
+    "image-display-failure"
   ],
   "source_last_updated": "1769425030",
   "source_hash": "6c9c6938d5ca431c41b8ba06d9659697e8dc7af57a914b8886fcbc1e397556cd",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.733507Z",
+  "processed_at": "2026-04-25T07:55:31.797354Z",
   "status": "active"
 }
