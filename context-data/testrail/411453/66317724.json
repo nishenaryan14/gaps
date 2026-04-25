@@ -5,23 +5,31 @@
   "project": "411453",
   "title": "Rename device - Rename",
   "feature": "Device Management",
-  "scenario": "Renaming a connected Poly Bluetooth audio device from Device Settings does not update the name on the Home screen",
-  "steps": [],
-  "expected": "",
+  "scenario": "Device name change via Device Settings > General is not reflected on the Home screen",
+  "steps": [
+    "Launch the Poly Studio Mobile app with a Bluetooth audio device connected.",
+    "On the Home screen, tap the device name or gear icon to navigate to Device Settings.",
+    "In Device Settings, tap General.",
+    "Tap on the device's official name field.",
+    "Enter new text for the device name.",
+    "Tap Done to confirm the name change.",
+    "Return to the Home screen."
+  ],
+  "expected": "The device's name is changed and the new name is reflected on the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "bluetooth-rename",
-    "device-settings",
+    "device-name-change",
     "home-screen",
-    "name-sync",
-    "poly-bluetooth-device",
-    "ui-refresh",
-    "device-name-persistence"
+    "device-settings",
+    "general-settings",
+    "poly-studio-mobile",
+    "name-persistence",
+    "ui-refresh"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "5f33e0901b673a2517789792fadfeafa33aa7ad681e080f89b70530cc0559fc6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.881790Z",
+  "processed_at": "2026-04-25T08:21:30.967321Z",
   "status": "active"
 }
