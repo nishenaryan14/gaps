@@ -5,35 +5,34 @@
   "project": "411453",
   "title": "Reset Device - Restore Defaults - Restore - Yes",
   "feature": "Device Management",
-  "scenario": "Reset Device restores all device settings to default values after confirmation in Poly Studio Mobile app",
+  "scenario": "Reset Device restores all device settings to default values via Device Settings > Reset Device in Poly Studio Mobile app",
   "steps": [
     "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Connect a Poly Bluetooth headset to the app via the Home screen.",
-    "3. Change all device settings (e.g., ANC, Transparency Mode, Equalizer, Notifications) to non-default values.",
-    "4. Navigate to Device Settings: Poly Studio Mobile \u2192 [Device Name] \u2192 Device Settings.",
-    "5. Tap \"Reset Device\" in the Device Settings screen.",
-    "6. Under \"Restore Defaults\", tap the \"Restore\" button.",
-    "7. On the confirmation popup, tap \"Yes\" to confirm the reset.",
-    "8. Observe the success message displayed on screen.",
-    "9. Tap \"OK\" on the success message popup.",
-    "10. Navigate through all device settings (Audio Settings, ANC, Transparency Mode, Equalizer, Notifications, etc.) and verify each setting has been restored to its default value as per UI specifications."
+    "2. Connect a Poly Bluetooth headset to the app.",
+    "3. Change all available device settings (e.g., ANC, Transparency Mode, Equalizer, Audio Settings) to non-default values.",
+    "4. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Reset Device.",
+    "5. Tap \"Restore\" under the \"Restore Defaults\" section.",
+    "6. Tap \"Yes\" on the confirmation popup to confirm the reset.",
+    "7. Observe the success message: \"Settings Restored! Remember to unplug and power off/on your headset\".",
+    "8. Tap \"OK\" to dismiss the success message.",
+    "9. Navigate through all device settings (e.g., Audio Settings, ANC, Transparency Mode, Equalizer) and verify each setting has been restored to its default value."
   ],
-  "expected": "A success message \"Settings Restored! Remember to unplug and power off/on your headset\" appears. After tapping \"OK\", all device settings (ANC, Transparency Mode, Equalizer, Notifications, etc.) are restored to their default values as per UI specifications.",
+  "expected": "All device settings are restored to their default values as per UI specifications. A success message \"Settings Restored! Remember to unplug and power off/on your headset\" is displayed after confirmation.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "reset-device",
     "restore-defaults",
-    "poly-studio-mobile",
     "device-settings",
+    "poly-studio-mobile",
     "anc",
     "transparency-mode",
     "equalizer",
-    "factory-reset"
+    "audio-settings"
   ],
   "source_last_updated": "1762260796",
   "source_hash": "0377b4768754081af663c26bddddfe1a7a1c025f2034167f65c5a4d68df33a56",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.878488Z",
+  "processed_at": "2026-04-25T07:55:31.953695Z",
   "status": "active"
 }
