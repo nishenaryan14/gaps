@@ -5,29 +5,37 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 FLAMINGO | FALCON | Language change does not update FW on Charge Case",
   "feature": "Firmware Updates",
-  "scenario": "Charge Case firmware not updated after language-triggered DFU on Voyager Legend 50 in Poly Studio Mobile app",
-  "description_clean": "When a language change triggers a firmware update on a Poly Voyager Legend 50 headset paired with the Poly Studio Mobile app, the Charge Case is not updated along with the headset. The Charge Case remains on outdated firmware after the DFU completes.",
-  "steps": [],
-  "expected": "",
-  "actual": "",
+  "scenario": "Language change triggers firmware update on headset but not on Charge Case for Poly Voyager Legend 50",
+  "description_clean": "When a language change triggers a firmware update on a Poly Voyager Legend 50, the Charge Case is not updated along with the headset. After the DFU completes, the Charge Case still shows outdated firmware. Expected behavior: Language change should trigger firmware updates on all components, including the Charge Case.",
+  "steps": [
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the Poly Voyager Legend 50 device to open Device Settings.",
+    "Navigate to Audio Settings.",
+    "Select Language and change the language setting.",
+    "Observe that a firmware update (DFU) is triggered for the headset.",
+    "Wait for the DFU process to complete on the headset.",
+    "After DFU completes, check the firmware version of the Charge Case in the Device Settings screen."
+  ],
+  "expected": "Language change should trigger firmware updates on all components, including the Charge Case. The Charge Case firmware should be updated to match the headset firmware version.",
+  "actual": "After the DFU completes, the Charge Case still shows outdated firmware. The Charge Case is not updated along with the headset.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "NeedsEngineeringReview"
   ],
   "keywords": [
-    "voyager-legend-50",
-    "charge-case",
+    "poly-voyager-legend-50",
     "firmware-update",
     "dfu",
+    "language-change",
+    "charge-case",
     "poly-studio-mobile",
-    "language-triggered",
-    "firmware-persistence",
-    "case-firmware"
+    "device-settings",
+    "audio-settings"
   ],
   "source_last_updated": "2026-04-20T14:21:25.000+0000",
   "source_hash": "b1e64b58afb44ae0f6be620dddf7eae9445a7c55ad23ce4267a0c8dea201bcce",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.739311Z",
+  "processed_at": "2026-04-25T09:32:26.001827Z",
   "status": "active"
 }
