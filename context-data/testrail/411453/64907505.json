@@ -5,24 +5,34 @@
   "project": "411453",
   "title": "Support - Verify that data is correct after moving from Account linked to Tenant to Account not linked to any Tenant",
   "feature": "App Settings",
-  "scenario": "Tenant name and Tenant ID are not cleared in Support > App section when switching from a tenant-linked account to a non-tenant account",
-  "steps": [],
-  "expected": "",
+  "scenario": "Support > App section does not clear Tenant name and Tenant ID when switching from a Tenant-linked account to a non-Tenant account",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the Home screen.",
+    "2. Log in with an account that is linked to Tenant A.",
+    "3. Navigate to Support \u2192 App section.",
+    "4. Verify that Tenant A information (Tenant name and Tenant ID) is displayed correctly.",
+    "5. Log out of the account.",
+    "6. Log in with an account that is not linked to any Tenant.",
+    "7. Navigate to Support \u2192 App section.",
+    "8. Verify that the account information is displayed.",
+    "9. Verify that the Tenant name and Tenant ID fields are not present."
+  ],
+  "expected": "After logging in with an account linked to Tenant A, Tenant A info (name and ID) is displayed in Support \u2192 App. After logging in with an account not linked to any Tenant, account information is displayed but Tenant name and Tenant ID are not present.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
+    "support-app-section",
     "tenant-name",
     "tenant-id",
-    "support-app-section",
     "account-switching",
     "tenant-linked-account",
     "non-tenant-account",
-    "ui-persistence",
-    "account-clearance"
+    "ui-persistence"
   ],
   "source_last_updated": "1759751999",
   "source_hash": "bf5e8e09e2de54b71c58cd3ab93478cc6547c5a2be0c26953024b941b14bd207",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.784670Z",
+  "processed_at": "2026-04-25T07:55:31.858358Z",
   "status": "active"
 }
