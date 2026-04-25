@@ -7,26 +7,25 @@
   "feature": "App Settings",
   "scenario": "Analytics event logged when user opens Help Guide page in Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. On the Home screen, tap the Menu icon (hamburger menu) in the top-left corner.",
-    "3. From the navigation menu, tap 'Help' or 'Help Guide' to open the Help Guide page.",
-    "4. Observe that the Help Guide page loads successfully."
+    "Open the Poly Studio Mobile app on the Home screen.",
+    "Tap the menu icon (hamburger menu) or profile icon to access the side navigation.",
+    "Select 'Help' or 'Help Guide' from the navigation menu.",
+    "Observe that the Help Guide page loads."
   ],
-  "expected": "An analytics event is logged when the Help Guide page is opened. The event tracks metrics including event count by country, gender, app version, app build, app environment, and events per session. Data updates are reflected after a few hours.",
+  "expected": "The app logs an analytics event in Firebase when the Help Guide page is opened. The event includes default analytics elements: event count graphs, event counts by country/gender, events per session, app version, app build, and app environment.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "help-guide",
     "analytics-event",
-    "android",
-    "navigation-menu",
-    "in-app-help",
-    "user-interface"
+    "in-app-navigation",
+    "user-interface",
+    "mobile-app"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "05736acc74e34394b265a53a80948d942c407992d2864bb41dcb3d8e5068c45d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.968985Z",
+  "processed_at": "2026-04-25T07:55:31.991497Z",
   "status": "active"
 }
