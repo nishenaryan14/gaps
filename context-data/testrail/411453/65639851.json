@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "1 step DFU - Houston screen during CC update (during Update all)",
-  "feature": "DFU (Device Firmware Update)",
-  "scenario": "During a 1-step DFU \"Update All\" process, when the charge case is being updated and both earbuds are placed into the charge case, the app shows a Houston screen instead of the expected behavior.",
+  "feature": "Firmware Update",
+  "scenario": "Placing earbuds in charging case during case firmware update via \"Update All\" triggers Houston error screen on Poly Studio Mobile app with Voyager Free 60+",
   "steps": [
-    "Start a 1-step DFU 'Update All' process",
-    "While the charge case is being updated, place both earbuds into the charge case",
-    "Observe the screen displayed in the app"
+    "Open Poly Studio Mobile app on your mobile device.",
+    "Ensure Voyager Free 60+ earbuds are connected and paired.",
+    "Navigate to Home screen and locate the device card for Voyager Free 60+.",
+    "Tap on 'Update All' to initiate a 1-step DFU (Device Firmware Update) process.",
+    "During the update, when the charging case firmware is being updated, place the earbuds back into the charging case.",
+    "Observe the app screen for any error or issue display."
   ],
-  "expected": "The app should show the appropriate DFU update progress screen",
+  "expected": "The DFU process should continue without interruption, or the app should gracefully handle the earbuds being placed in the case and show a clear, non-error message (e.g., 'Update paused' or 'Please keep earbuds out of case during update').",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "1-step DFU",
-    "Update All",
-    "charge case update",
-    "earbuds placed in case",
-    "Houston screen",
-    "app display issue",
-    "firmware update",
-    "unexpected behavior"
+    "voyager-free-60-plus",
+    "poly-studio-mobile-app",
+    "update-all",
+    "charging-case-firmware",
+    "dfu-device-firmware-update",
+    "houston-error-screen",
+    "earbuds-in-case-during-update"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "3041ba4ab2ec4e66a2208476a8be62297792c47b69e85f9028e6b3abf57b86cb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.298439Z",
+  "processed_at": "2026-04-25T05:37:16.941770Z",
   "status": "active"
 }
