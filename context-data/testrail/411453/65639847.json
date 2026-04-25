@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "1 step DFU - Content of Software Update tab with available update for Earbuds and Charge Case on FW 5038",
   "feature": "Firmware Update",
-  "scenario": "Software Update tab shows only Earbuds update when Charge Case is on firmware 5038 (unsupported for 1-step DFU) on Osprey EB",
+  "scenario": "Software Update tab shows only Earbuds update when Charge Case is on FW 5038 (no 1-step DFU support)",
   "steps": [
     "1. Launch the Poly Studio Mobile app with Osprey Earbuds connected on a lower firmware version (with an available update) and the Charge Case on firmware version 5038.",
     "2. Navigate to Device Settings \u2192 Software Update.",
-    "3. Observe the Software Update tab content."
+    "3. Observe the Software Update screen content."
   ],
-  "expected": "Only the Earbuds update is shown. The Charge Case update is not displayed because version 5038 does not support 1-step DFU. A case toast for the device is present with the same pattern as for Tern (after app restart, for a specific number of times, and after earbuds DFU).",
+  "expected": "Only the Earbuds update is shown. The Charge Case update is not displayed because version 5038 does not support 1-step DFU. Additionally, when the device is on version 5038, a case toast for the device is present with the same pattern as for Tern (after app restart, for a specific number of times, and after earbuds DFU).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "software-update",
     "firmware-5038",
     "charge-case",
-    "osprey-eb",
+    "osprey-earbuds",
     "poly-studio-mobile",
-    "one-step-dfu",
-    "earbuds-update",
-    "device-settings"
+    "dfu-support",
+    "device-settings",
+    "firmware-update"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "13b8fef265a9f9959e3650bdf48244f8d6fd4b4fd3aa7df192b1b04f8bb4cf5c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.042979Z",
+  "processed_at": "2026-04-25T09:32:26.295871Z",
   "status": "active"
 }
