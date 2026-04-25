@@ -5,26 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Welcome Screen",
   "feature": "App Settings",
-  "scenario": "Poly Studio splash screen adapts to phone's light/dark theme during app launch on Welcome Screen",
+  "scenario": "Poly Studio splash screen respects phone's light/dark theme setting during app launch",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. Observe the splash screen displayed while the app loads."
+    "2. Observe the splash screen displayed while the app loads.",
+    "3. Verify that the splash screen shows the 'Poly Studio' branding.",
+    "4. Check the phone's system theme setting (Light/Dark).",
+    "5. Toggle the phone's theme between Light and Dark mode.",
+    "6. Re-launch the app and observe the splash screen again."
   ],
-  "expected": "The splash screen displays \"Poly Studio\" branding and matches the phone's current light/dark theme.",
+  "expected": "The 'Poly Studio' splash screen is displayed while the app loads and correctly matches the phone's current light/dark theme setting.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "splash-screen",
     "light-dark-theme",
-    "welcome-screen",
+    "system-theme",
     "app-launch",
-    "theme-adaptation",
-    "ui-theme"
+    "branding",
+    "theme-persistence"
   ],
   "source_last_updated": "1761296896",
   "source_hash": "3219c22ff339dbd75b1255e7f0ce666d46a038baaafc7e9486a40bade5f0929c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.691400Z",
+  "processed_at": "2026-04-25T07:55:31.770340Z",
   "status": "active"
 }
