@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Fit test - 2nd screen UI",
   "feature": "Device Management",
-  "scenario": "Fit Test second screen UI does not match Figma design specifications when accessed via Device Settings > Fit Test > Start Test on Osprey/Tern and Emu variants",
+  "scenario": "Fit Test second screen UI does not match Figma design when starting test from Device Settings on Voyager Free 60+ or Voyager Free 20",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Scroll to and tap 'Fit Test'",
-    "Tap 'Start Test'",
-    "Observe the second screen UI that appears"
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Ensure a supported device (Voyager Free 60+ or Voyager Free 20) is connected via Bluetooth.",
+    "3. From the Home screen, tap on the connected device name to open Device Settings.",
+    "4. Scroll down and tap on 'Fit Test'.",
+    "5. On the Fit Test screen, tap the 'Start Test' button.",
+    "6. Observe the UI displayed after tapping 'Start Test'."
   ],
-  "expected": "The second screen UI of the Fit Test feature matches the Figma design specifications for both Osprey/Tern and Emu variants.",
+  "expected": "The Fit Test 2nd screen UI is displayed correctly, matching the Figma design specifications (e.g., proper layout, icons, text, and animations).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
     "device-settings",
     "ui-mismatch",
-    "osprey",
-    "tern",
-    "emu",
+    "voyager-free-60-plus",
+    "voyager-free-20",
     "poly-studio-mobile",
-    "start-test"
+    "start-test",
+    "figma-design"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "704d4698a62ce390485063bdf04fd44662c61982d3b590454aa08c5102219730",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.904112Z",
+  "processed_at": "2026-04-25T08:21:30.982034Z",
   "status": "active"
 }
