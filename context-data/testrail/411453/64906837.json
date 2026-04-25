@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - Default Quick Settings",
   "feature": "App Settings",
-  "scenario": "Device Home Screen displays three default quick settings tiles matching the first three options from Device Settings",
+  "scenario": "Device Home Screen quick settings do not match the first three options from Device Settings screen",
   "steps": [
     "Open the Poly Studio Mobile app.",
     "Navigate to the Home screen.",
-    "Observe the quick settings tiles displayed below the device image.",
-    "Open the Device Settings screen for the connected device.",
-    "Observe the order of the first three options listed in Device Settings."
+    "Observe the three quick settings displayed below the device image.",
+    "Tap on the device image or name to enter Device Settings.",
+    "Observe the order of options in the Device Settings screen.",
+    "Compare the first three options in Device Settings with the three quick settings shown on the Home screen."
   ],
-  "expected": "The three default quick settings tiles on the Home screen correspond to and match the first three options from the Device Settings screen.",
+  "expected": "The three quick settings displayed on the Home screen match the first three options from the Device Settings screen, in the same order.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "home-screen",
-    "quick-settings-tiles",
+    "quick-settings",
     "device-settings",
-    "default-tiles",
+    "settings-order",
     "ui-consistency",
-    "settings-order"
+    "device-image"
   ],
   "source_last_updated": "1764600389",
   "source_hash": "2e3d4581ca6c966baa703ae0f47c08abf7bdb57a712458d53145167b8dff10b4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.919579Z",
+  "processed_at": "2026-04-25T09:32:26.145021Z",
   "status": "active"
 }
