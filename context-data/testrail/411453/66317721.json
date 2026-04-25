@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Rename device - UI",
   "feature": "Device Management",
-  "scenario": "Device Name setting is displayed in Device Settings - General section of Poly Studio Mobile app when a device is attached, per Figma design",
+  "scenario": "Device Name setting is displayed in Device Settings > General when a device is attached, matching Figma design specification",
   "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Ensure a Poly Bluetooth audio device is connected.",
-    "Navigate to the Home screen.",
-    "Tap on the connected [Device Name] to open Device Settings.",
-    "Scroll to the General section within Device Settings.",
-    "Locate the 'Device Name' setting field."
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Ensure a Poly Bluetooth audio device is connected to the phone.",
+    "3. Navigate to the Home screen.",
+    "4. Tap on the connected [Device Name] to open Device Settings.",
+    "5. In Device Settings, locate and tap on the \"General\" option.",
+    "6. Observe the \"Device Name\" setting displayed in the General section."
   ],
-  "expected": "The 'Device Name' setting is present in the Device Settings - General section, matching the Figma design.",
+  "expected": "The \"Device Name\" setting is present in Device Settings > General and matches the Figma design specification (correct label, placement, and styling).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "device-name",
+    "general-settings",
     "device-settings",
-    "general-section",
+    "poly-studio-mobile",
+    "figma-design-specification",
     "bluetooth-audio-device",
-    "home-screen",
-    "figma-design"
+    "home-screen"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "29b6dea92f78684ea6ba70535b72ef995449be84c70fd2c83724b0073d0c11b5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.863754Z",
+  "processed_at": "2026-04-25T08:21:30.967321Z",
   "status": "active"
 }
