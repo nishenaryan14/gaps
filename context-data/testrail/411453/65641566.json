@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "EQ - EQ screen",
-  "feature": "EQ",
-  "scenario": "Verify the EQ screen displays correctly with the default Bass preset selected when opening the EQ tab from Settings.",
+  "feature": "Equalizer",
+  "scenario": "EQ screen displays correctly with default Bass preset selected when opening Settings > EQ tab",
   "steps": [
-    "Start the app with Emu.",
-    "Open the Settings screen.",
-    "Click the EQ tab.",
-    "Check the EQ screen."
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the connected device name to open Device Settings.",
+    "4. Tap on Audio Settings.",
+    "5. Tap on Equalizer (EQ).",
+    "6. Observe the EQ screen."
   ],
-  "expected": "The screen shows the selected EQ preset (Bass is default).",
+  "expected": "The EQ screen displays correctly with the default Bass preset selected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "EQ screen",
-    "default Bass preset",
-    "Settings",
-    "EQ tab",
-    "audio equalizer",
-    "preset selection",
-    "UI verification",
-    "Emu app"
+    "poly-studio-mobile",
+    "equalizer",
+    "eq-screen",
+    "bass-preset",
+    "audio-settings",
+    "device-settings",
+    "eq-tab"
   ],
   "source_last_updated": "1761142774",
   "source_hash": "8fae3b2d955be97ff6b6b3d3c8aa52f0f1eec7874e8a826e420ca6a266d744ca",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.240564Z",
+  "processed_at": "2026-04-25T05:37:16.823324Z",
   "status": "active"
 }
