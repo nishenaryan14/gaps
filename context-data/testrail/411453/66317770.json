@@ -7,32 +7,31 @@
   "feature": "App Settings",
   "scenario": "Language tab in Device Settings is greyed out and shows \"Feature unavailable\" dialog when internet is offline",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Ensure the device is connected to a Poly Bluetooth audio device.",
-    "3. Navigate to the Home screen.",
-    "4. Tap on the connected [Device Name] to open Device Settings.",
-    "5. Verify that the device's internet connection is turned OFF (e.g., Airplane Mode or Wi-Fi/Data disabled).",
-    "6. Observe the 'Language' tab under Device Settings \u2014 it should appear greyed out.",
-    "7. Tap on the greyed-out 'Language' tab.",
-    "8. Observe the dialog that appears.",
-    "9. Tap the 'Ok got it' button on the dialog."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Ensure the device has no internet connection (e.g., enable Airplane Mode or turn off Wi-Fi and mobile data).",
+    "3. Navigate to the Home screen and tap on the connected Poly audio device to enter Device Settings.",
+    "4. Locate the Language tab/section within Device Settings.",
+    "5. Observe that the Language tab appears greyed out.",
+    "6. Tap on the greyed-out Language tab.",
+    "7. Observe the dialog that appears.",
+    "8. Tap the 'Ok got it' button on the dialog."
   ],
-  "expected": "The 'Language' tab should be greyed out when there is no internet connection. Tapping it should show a dialog: 'Feature unavailable. An internet connection is required to access this feature.' with an 'Ok got it' button. Tapping the button should close the dialog and return to the greyed-out 'Language' tab state.",
+  "expected": "The Language tab should be accessible and functional regardless of internet connection, as language settings are a device-local feature.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "language-tab",
-    "device-settings",
     "feature-unavailable",
+    "device-settings",
     "offline-mode",
     "poly-studio-mobile",
     "greyed-out",
-    "internet-connection",
-    "dialog"
+    "dialog",
+    "internet-required"
   ],
   "source_last_updated": "1762252670",
   "source_hash": "5113a2fd808bae90f2dc0b8346bc60366cfa3d8220925b930592f326b49e1827",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.811755Z",
+  "processed_at": "2026-04-25T07:55:31.885153Z",
   "status": "active"
 }
