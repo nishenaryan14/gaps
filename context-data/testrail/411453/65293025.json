@@ -5,16 +5,16 @@
   "project": "411453",
   "title": "Onboarding - Eula page - License Agreement and Privacy Policy links when the internet is turned off",
   "feature": "App Settings",
-  "scenario": "Onboarding EULA page License Agreement and Privacy Policy links show \"Something went wrong\" screen when internet is off; Cancel returns to \"Well hello, first things first...\" screen",
+  "scenario": "Onboarding EULA page License Agreement and Privacy Policy links show \"Something went wrong\" screen when internet is turned off",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. On the onboarding 'Well hello, first things first...' screen, tap the 'License Agreement' link.",
-    "3. Turn off internet connectivity on the device.",
+    "1. Open the Poly Studio Mobile app.",
+    "2. On the onboarding 'Well hello, first things first...' screen, tap the License Agreement link.",
+    "3. Turn off internet connection on the device.",
     "4. Observe the screen that appears.",
-    "5. Tap the 'Cancel' button.",
+    "5. Tap the Cancel button.",
     "6. Observe the screen that appears."
   ],
-  "expected": "The License Agreement or Privacy Policy page should display the content of the agreement/policy, or a clear offline error message. Tapping Cancel should return to the onboarding 'Well hello, first things first...' screen.",
+  "expected": "The License Agreement or Privacy Policy page should display the content or a graceful offline message. Tapping Cancel should return to the 'Well hello, first things first...' onboarding screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +24,12 @@
     "license-agreement",
     "privacy-policy",
     "offline-error",
-    "cancel-navigation",
-    "something-went-wrong"
+    "something-went-wrong",
+    "internet-connection"
   ],
   "source_last_updated": "1760528315",
   "source_hash": "0eb2aa1ed38ea63c0fb8a78c84604e51fdcd7d6fcea6253bae5fc7e7f9352691",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.902154Z",
+  "processed_at": "2026-04-25T09:32:26.115933Z",
   "status": "active"
 }
