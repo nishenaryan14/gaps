@@ -6,15 +6,14 @@
   "summary": "iOS | Morpheus | Unable to track inCall status",
   "feature": "Call Management",
   "scenario": "iOS app fails to detect active call state on Voyager 4245 Office (Morpheus) devices, preventing call-aware alerts and blocking of DFU/ANC changes",
-  "description_clean": "The iOS app cannot reliably detect when a user is in an active call when connected to Morpheus (Voyager 4245 Office) devices. This prevents the app from showing appropriate alerts and blocking DFU (firmware updates) or ANC/transparency mode changes during calls. The root cause is that Morpheus devices don't support deckardId 0x0E35. The fix is to also use deckardId 0x0E22, which correctly reports call state for these devices. The Android team has already adopted this approach.",
+  "description_clean": "The iOS app cannot reliably detect when a user is in an active call when connected to Morpheus (Voyager 4245 Office) devices. This prevents the app from showing appropriate alerts and blocking DFU (firmware updates) or ANC/transparency mode changes during calls. The root cause is that Morpheus devices do not support deckardId 0x0E35. The fix is to also use deckardId 0x0E22, which correctly reports call state for these devices. The Android team has already adopted this approach.",
   "steps": [
     "1. Launch Poly Studio Mobile app on iOS.",
     "2. Connect to a Morpheus (Voyager 4245 Office) device via Bluetooth.",
-    "3. Place or receive an active phone call on the connected device.",
-    "4. Observe the Poly Studio Mobile app Home screen for any call-state indicators or alerts.",
-    "5. Attempt to trigger a DFU (firmware update) from the Device Settings screen.",
-    "6. Attempt to change ANC or Transparency Mode from the Audio Settings screen.",
-    "7. Note whether the app blocks these actions or shows appropriate warnings during the active call."
+    "3. Initiate or receive an active phone call on the iOS device.",
+    "4. While in the active call, observe the Poly Studio Mobile app Home screen.",
+    "5. Attempt to trigger a DFU (firmware update) from the app.",
+    "6. Attempt to change ANC or Transparency Mode settings from the app (e.g., Poly Studio Mobile \u2192 [Device Name] \u2192 Audio Settings \u2192 ANC / Transparency Mode)."
   ],
   "expected": "The app should detect the active call state, display appropriate call-related alerts, and block DFU updates and ANC/Transparency Mode changes during the call.",
   "actual": "The app does not reliably detect the active call state. It fails to show appropriate alerts and does not block DFU updates or ANC/Transparency Mode changes during the call.",
@@ -33,11 +32,11 @@
     "call-aware-alerts",
     "dfu-blocking",
     "anc-blocking",
-    "active-call"
+    "transparency-mode"
   ],
   "source_last_updated": "2026-04-22T06:49:29.000+0000",
   "source_hash": "e337b587d4b165194746a1aad623b2b8b64dc5d2f3ff0e55c426cdf26d4b9e71",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.678096Z",
+  "processed_at": "2026-04-25T08:21:30.780630Z",
   "status": "active"
 }
