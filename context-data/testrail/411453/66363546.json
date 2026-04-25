@@ -5,15 +5,16 @@
   "project": "411453",
   "title": "Onboarding - Translations",
   "feature": "App Settings",
-  "scenario": "Onboarding flow text is not properly translated or displayed for supported languages in Poly Studio Mobile app",
+  "scenario": "Onboarding flow displays properly translated text for all supported languages in Poly Studio Mobile app",
   "steps": [
-    "1. Open Poly Studio Mobile app on a fresh install (or clear app data).",
-    "2. Observe the Onboarding flow screens (Welcome, Permissions, Device Setup, etc.).",
-    "3. For each supported language: change the device system language to the target language, then re-launch the app and go through the entire Onboarding flow.",
-    "4. Check all text elements on each Onboarding screen (titles, descriptions, buttons, tooltips, error messages, etc.).",
-    "5. Verify that no text is truncated, overlapping, misaligned, or showing untranslated placeholders (e.g., English strings, \"[untranslated]\", or raw resource IDs)."
+    "1. Open the Poly Studio Mobile app.",
+    "2. If already logged in, log out or clear app data to trigger the Onboarding flow.",
+    "3. Observe the Onboarding screens (Welcome, Permissions, Device Setup, etc.).",
+    "4. Change the device system language to each supported language (e.g., English, French, German, Spanish, Japanese, Korean, Simplified Chinese, etc.).",
+    "5. Re-launch the Poly Studio Mobile app and navigate through the full Onboarding flow.",
+    "6. For each language, verify that all text elements (titles, descriptions, buttons, error messages, tooltips) are properly translated and displayed without truncation, placeholder text, or untranslated English strings."
   ],
-  "expected": "All text in the Onboarding flow is fully translated, properly displayed, and fits within UI elements without truncation or overlap for every supported language.",
+  "expected": "All Onboarding screens display properly translated text for each supported language, with no truncation, missing translations, or layout issues.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,14 +22,13 @@
     "onboarding-flow",
     "localization",
     "language-support",
-    "text-truncation",
-    "ui-alignment",
-    "untranslated-strings",
-    "fresh-install"
+    "translation-verification",
+    "ui-text-display",
+    "internationalization"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "5c17a5d91b39d0cb74b85c2415ba8cf183ef13799f42fa48e8e314ae90b6db96",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.275592Z",
   "status": "active"
 }
