@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "App Settings - General - Account - Log in",
   "feature": "App Settings",
-  "scenario": "User can log into their account via App Settings > General > Account and see Name and Email populated correctly with Share data option hidden",
+  "scenario": "User account login via App Settings > General > Account shows Name and Email fields populated and Share data hidden",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Tap the menu icon (hamburger) or navigate to App Settings.",
-    "3. Go to General \u2192 Account.",
-    "4. Tap the \"Log in\" button.",
-    "5. Enter valid user credentials (email and password) and authenticate.",
-    "6. Observe the \"Your account\" screen that appears after successful login."
+    "1. Launch the Poly Studio Mobile app as a guest user.",
+    "2. Tap the hamburger menu icon (\u2630) to open the navigation drawer.",
+    "3. Navigate to General \u2192 Account.",
+    "4. Tap 'Log in'.",
+    "5. Tap 'Continue' on the login prompt.",
+    "6. Enter valid user credentials and complete the login process."
   ],
-  "expected": "The \"Your account\" screen displays the user's Name and Email fields populated correctly. The \"Share data\" option is not visible.",
+  "expected": "\"Your account\" text is visible with Name and Email fields populated with the user's name and email address. Share data should not be visible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "account-login",
+    "user-credentials",
     "app-settings",
-    "user-authentication",
-    "account-screen",
-    "share-data-option",
-    "name-email-display"
+    "navigation-drawer",
+    "guest-user",
+    "login-prompt",
+    "account-details"
   ],
   "source_last_updated": "1759324619",
   "source_hash": "0a71962d5991a869cef9f72462ef1b45c0c5af122c46fc7716de45cfa09a2305",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.810673Z",
+  "processed_at": "2026-04-25T08:21:30.927667Z",
   "status": "active"
 }
