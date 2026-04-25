@@ -7,16 +7,13 @@
   "feature": "App Settings",
   "scenario": "Quick Guide translations are incorrect or missing across supported languages in the Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to Home \u2192 Account \u2192 App Settings \u2192 Language.",
-    "3. Select a supported language from the list.",
-    "4. Close and reopen the app.",
-    "5. On the Home screen, locate and tap the Quick Guide entry point (e.g., Help/Info icon or menu).",
-    "6. Swipe or tap through each screen of the Quick Guide.",
-    "7. Verify that all text elements (headings, body text, labels, buttons) are properly translated and displayed without truncation, placeholder text, or untranslated source strings.",
-    "8. Repeat steps 2\u20137 for every supported language available in the app."
+    "1. Open the Poly Studio Mobile app on the Home screen.",
+    "2. Navigate to Account \u2192 Settings \u2192 Language and select a supported language.",
+    "3. Restart the app if required, then go through the entire Quick Guide flow (from Home \u2192 Quick Guide or Account \u2192 Quick Guide).",
+    "4. Verify that all text elements (headings, body text, button labels, tooltips) are properly translated and displayed without truncation, placeholder text, or untranslated strings.",
+    "5. Repeat steps 2\u20134 for each supported language available in the app."
   ],
-  "expected": "All Quick Guide text is properly translated and displayed in the selected language, with no untranslated strings, truncation, or formatting issues.",
+  "expected": "All Quick Guide text is properly translated and displayed in the selected language, with no untranslated strings, placeholders, or formatting issues.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,12 +22,12 @@
     "localization",
     "language-settings",
     "translation-verification",
-    "app-settings",
-    "ui-text-validation"
+    "ui-text-integrity",
+    "app-navigation"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "b6eb58e1b68112efc878abf47f1a85e5b07d2bc8077db94638ba5dd96de32489",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.014257Z",
+  "processed_at": "2026-04-25T09:32:26.270513Z",
   "status": "active"
 }
