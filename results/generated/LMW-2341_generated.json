@@ -1,156 +1,125 @@
 [
   {
-    "title": "TC-UG-001: Verify User Guides section displays device list and loads images for first 6 devices",
+    "title": "TC-UG-001: User Guides \u2014 Image Load for First 6 Visible Devices (Baseline)",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Observe the device list displayed",
-      "Verify that at least 6 device entries are visible in the list",
-      "For each of the first 6 devices, verify that a device image/thumbnail is displayed next to the device name",
-      "Tap on one of the first 6 device entries",
-      "Verify that the corresponding user guide PDF or web page loads correctly"
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Observe the first 6 device entries visible on screen without scrolling.",
+      "For each of the 6 devices, verify the device image/thumbnail is rendered."
     ],
-    "expected": "User Guides section shows a scrollable list of devices. The first 6 devices each display a valid device image (not a placeholder/icon). Tapping a device entry loads the correct user guide."
+    "expected": "All first 6 device entries display their respective device images correctly. No placeholder icons, broken image indicators, or blank spaces. Images are fully loaded and distinguishable per device model."
   },
   {
-    "title": "TC-UG-002: Verify device images load correctly when scrolling beyond the first 6 devices in User Guides",
+    "title": "TC-UG-002: User Guides \u2014 Image Load Failure for Devices Beyond Scroll Threshold (Bug Reproduction)",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Observe the initial device list",
-      "Scroll down slowly through the entire device list until all devices are visible",
-      "For each device entry beyond the first 6 (e.g., 7th, 8th, 9th...), visually inspect the device image/thumbnail",
-      "Scroll back up to the top of the list",
-      "Verify that the first 6 device images are still displayed correctly"
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Scroll down slowly past the first 6 visible device entries to reveal devices 7, 8, 9, 10+.",
+      "Pause at each new row for 2 seconds to allow lazy-loading.",
+      "Visually inspect each device image for devices 7 through the end of the list."
     ],
-    "expected": "All device entries in the User Guides list, including those beyond the first 6, display valid device images. No placeholder icons, broken image symbols, or blank spaces appear for any device. Scrolling back up does not cause previously loaded images to disappear."
+    "expected": "Every device entry beyond position 6 must display its correct device image. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Expected \u2014 All images loaded. Actual (If Bug) \u2014 Devices at position 7+ show broken image icons, blank placeholders, or grey boxes where the image should be, while first 6 devices render correctly."
   },
   {
-    "title": "TC-UG-003: Verify placeholder/fallback UI appears when a device image fails to load in User Guides",
+    "title": "TC-UG-003: User Guides \u2014 Image Load After Scroll Up and Down (Lazy-Load Cache Validation)",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Scroll down to a device entry beyond the first 6 that may have a missing image",
-      "If a device image fails to load, observe the fallback UI displayed",
-      "Verify that a placeholder icon (e.g., generic headset/speakerphone icon or device silhouette) is shown instead of a broken image",
-      "Verify that the device name text is still displayed correctly next to the placeholder",
-      "Tap the device entry with the placeholder",
-      "Verify that the user guide still loads correctly despite the missing image"
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Scroll down rapidly to the bottom of the device list.",
+      "Wait 3 seconds for lazy-loading to complete.",
+      "Scroll back up to the top of the list.",
+      "Observe device images for devices at positions 1-6 (top) and positions 7-10 (mid-scroll)."
     ],
-    "expected": "When a device image fails to load, a placeholder/fallback icon is displayed instead of a broken image symbol. The device name remains visible and tappable. The user guide content loads correctly regardless of image load failure."
+    "expected": "All device images at all scroll positions are loaded and rendered correctly. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Expected \u2014 Images persist in cache and render on scroll-back. Actual (If Bug) \u2014 Images for devices beyond position 6 fail to load on initial scroll-down, and remain broken when scrolling back up, indicating lazy-load never triggered for those indices."
   },
   {
-    "title": "TC-UG-004: Verify User Guides device list population includes all compatible Poly devices",
+    "title": "TC-UG-004: User Guides \u2014 Image Load Under Slow Network (3G Throttle)",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Obtain the full list of device entries displayed",
-      "Cross-reference the displayed device list with the list of all Poly devices compatible with the Poly Studio Mobile app (e.g., Voyager Free 60+ UC, Voyager 5200, Voyager 4320, Voyager 4220, Voyager 6200, Voyager 8200, Voyager Focus 2, Blackwire 8225, Blackwire 7225, Savi 8220, Calisto 7200, Calisto 5300, Sync 20, Sync 40, Sync 60)",
-      "Verify that every compatible device model appears in the User Guides list",
-      "Verify that no duplicate entries exist",
-      "Verify that no non-Poly or unrelated devices appear in the list"
+      "Set device network to 'Throttle to 3G' via Developer Options or network conditioning tool.",
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Immediately scroll down past the first 6 devices to position 10.",
+      "Wait up to 15 seconds for images to load.",
+      "Scroll back to top and inspect all device images."
     ],
-    "expected": "The User Guides section displays a complete list of all Poly devices compatible with the app. No devices are missing from the list, no duplicates exist, and no unrelated devices are shown."
+    "expected": "All device images eventually load given sufficient time under slow network. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Expected \u2014 Images for devices 7+ load after network delay (may appear as placeholders temporarily but resolve). Actual (If Bug) \u2014 Images for devices 7+ remain permanently broken/placeholder even after 15s wait, while first 6 devices loaded immediately, indicating a lazy-load pagination bug that only triggers for non-initial batch items."
   },
   {
-    "title": "TC-UG-005: Verify device images load correctly after app restart and re-scroll in User Guides",
+    "title": "TC-UG-005: User Guides \u2014 Image Load Under Offline Mode",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Scroll down to the bottom of the device list to trigger lazy loading of all device images",
-      "Scroll back to the top and verify the first 6 device images are displayed",
-      "Press the Home button to background the app",
-      "Reopen Poly Studio Mobile app from the recent apps list",
-      "Navigate back to App Settings \u2192 User Guides",
-      "Scroll down to the bottom of the device list again",
-      "Scroll back up and verify all device images (including those beyond the first 6) are displayed correctly"
+      "Enable Airplane Mode on the device.",
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Scroll down past the first 6 devices to the bottom of the list.",
+      "Observe image rendering for all devices."
     ],
-    "expected": "After app backgrounding and return, all device images in the User Guides list load correctly. No images are replaced by placeholders or broken icons after the app lifecycle transition."
+    "expected": "All device images should display correctly from local cache/resources if previously loaded. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Expected \u2014 Images for all devices render from cache. Actual (If Bug) \u2014 First 6 devices show cached images correctly, but devices 7+ show broken images or blank spaces, indicating images beyond the initial batch were never cached/preloaded."
   },
   {
-    "title": "TC-UG-006: Verify device images load correctly after Bluetooth disconnect/reconnect cycle",
+    "title": "TC-UG-006: User Guides \u2014 Image Load After App Restart (Cache Persistence)",
     "steps": [
-      "Connect a Poly device (e.g., Voyager Free 60+ UC) to the phone via Bluetooth",
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Scroll through the device list and verify images load for all devices",
-      "Disconnect the Bluetooth connection from the phone's Bluetooth settings",
-      "Wait 5 seconds",
-      "Reconnect the Bluetooth device",
-      "Reopen Poly Studio Mobile app",
-      "Navigate to App Settings \u2192 User Guides",
-      "Scroll through the entire device list",
-      "Verify that all device images load correctly, including devices beyond the first 6"
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Scroll to the bottom of the device list.",
+      "Wait 5 seconds for all images to load.",
+      "Force-kill the app (swipe from Recent Apps).",
+      "Re-launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Scroll to the bottom of the device list.",
+      "Observe image rendering for all devices."
     ],
-    "expected": "Device images in the User Guides list load correctly after a Bluetooth disconnect/reconnect cycle. No images fail to load or show placeholders due to the Bluetooth state change."
+    "expected": "All device images at all positions load correctly after app restart. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Expected \u2014 Images for all devices render (from cache or re-fetched). Actual (If Bug) \u2014 Only first 6 devices show images; devices 7+ show broken images, confirming the lazy-load/resource-fetch logic is position-gated and not cache-reliant."
   },
   {
-    "title": "TC-UG-007: Verify device images load correctly under low memory/constrained conditions",
+    "title": "TC-UG-007: User Guides \u2014 Image Load After Orientation Change (Config Change)",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Scroll rapidly up and down the entire device list multiple times (at least 5 full scroll cycles)",
-      "While scrolling, observe if any device images fail to load or revert to placeholders",
-      "Open several other resource-intensive apps (e.g., Chrome, YouTube, Camera) to trigger memory pressure",
-      "Switch back to Poly Studio Mobile app",
-      "Navigate to App Settings \u2192 User Guides",
-      "Scroll through the device list again",
-      "Verify that all device images are displayed correctly, including those beyond the first 6"
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Scroll down to position 10 in the device list.",
+      "Rotate device to landscape orientation.",
+      "Wait 3 seconds.",
+      "Rotate device back to portrait orientation.",
+      "Observe image rendering for all visible devices, especially those beyond position 6."
     ],
-    "expected": "Under memory pressure and rapid scrolling, all device images in the User Guides list load correctly. No images show placeholders, broken icons, or fail to load due to resource constraints. The app does not crash or become unresponsive."
+    "expected": "All device images render correctly after orientation change. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Expected \u2014 Images persist and re-render after config change. Actual (If Bug) \u2014 After rotation, only first 6 devices show images; devices 7+ show broken images or blank spaces, indicating the RecyclerView/ListView adapter resets and fails to re-trigger image loading for scrolled positions."
   },
   {
-    "title": "TC-UG-008: Verify device images persist after orientation change while in User Guides",
+    "title": "TC-UG-008: User Guides \u2014 Image Load After Bluetooth Device Connect/Disconnect (App State Interruption)",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Scroll down to a position where devices beyond the first 6 are visible",
-      "Rotate the phone to landscape orientation",
-      "Verify that the device list and images re-render correctly in landscape",
-      "Scroll through the list and verify all device images are displayed",
-      "Rotate the phone back to portrait orientation",
-      "Verify that the device list and images re-render correctly in portrait",
-      "Verify that the scroll position is approximately maintained",
-      "Verify that all device images (including those beyond the first 6) are still displayed correctly"
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Scroll down to position 10 in the device list.",
+      "While staying on User Guides screen, connect a Poly Voyager Free 60+ UC via Bluetooth.",
+      "Wait 3 seconds.",
+      "Observe device images for all visible entries.",
+      "Disconnect the Bluetooth device.",
+      "Wait 3 seconds.",
+      "Observe device images again."
     ],
-    "expected": "After orientation changes, all device images in the User Guides list load and display correctly in both portrait and landscape orientations. The scroll position is maintained. No images show placeholders or fail to load after config change."
+    "expected": "All device images remain loaded and rendered correctly during and after Bluetooth state transitions. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Expected \u2014 Images unaffected by Bluetooth connection events. Actual (If Bug) \u2014 Images for devices 7+ revert to broken/placeholder after Bluetooth connect/disconnect, while first 6 remain intact, indicating the list adapter rebinds and fails to load images for non-visible-range items."
   },
   {
-    "title": "TC-UG-009: Verify User Guides section handles rapid tapping on multiple device entries",
+    "title": "TC-UG-009: User Guides \u2014 Image Load at Extreme Scroll Positions (Bottom of Very Long List)",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Rapidly tap on 3-4 different device entries in quick succession (within 2 seconds)",
-      "Observe the app behavior",
-      "Verify that the app does not crash",
-      "Verify that the last tapped device's user guide loads correctly",
-      "Navigate back to User Guides list",
-      "Verify that all device images in the list are still displayed correctly"
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Scroll rapidly to the very last device entry at the bottom of the list.",
+      "Wait 3 seconds.",
+      "Observe the last device's image.",
+      "Scroll up one screenful and observe images for devices near the bottom."
     ],
-    "expected": "Rapid tapping on multiple device entries does not crash the app. The last tapped device's user guide loads correctly. Returning to the list shows all device images intact."
+    "expected": "The last device entry and all devices near the bottom of the list display their correct device images. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Expected \u2014 All images loaded regardless of scroll depth. Actual (If Bug) \u2014 Only devices within the first screenful (positions 1-6) have images; all devices beyond that threshold show broken images, confirming a pagination/lazy-load index cap bug."
   },
   {
-    "title": "TC-UG-010: Verify device images load correctly when User Guides is accessed without any Poly device connected",
+    "title": "TC-UG-010: User Guides \u2014 Image Load While Scrolling Rapidly (Flings)",
     "steps": [
-      "Ensure no Poly Bluetooth device is connected to the phone",
-      "Open Poly Studio Mobile app",
-      "Tap App Settings (gear icon)",
-      "Scroll down and tap 'User Guides'",
-      "Observe the device list",
-      "Scroll through the entire list",
-      "Verify that all device entries display device images correctly (including beyond the first 6)",
-      "Tap on any device entry",
-      "Verify that the user guide loads correctly"
+      "Launch Poly Studio Mobile app.",
+      "Navigate to: App Settings \u2192 User Guides.",
+      "Perform a rapid fling scroll from the top to the bottom of the device list.",
+      "Immediately after the fling stops, observe images for devices at positions 7-10 and near the bottom.",
+      "Perform a rapid fling scroll from bottom back to top.",
+      "Observe images for devices at positions 1-6."
     ],
-    "expected": "The User Guides section displays the full device list with all images loading correctly even when no Poly device is connected. All device images load for devices beyond the first 6. User guides are accessible without a connected device."
+    "expected": "All device images eventually load after rapid fling scrolling completes. \ud83e\udde0 BUG SIGNATURE (Anti-Regression): Expected \u2014 Images load asynchronously after scroll settles. Actual (If Bug) \u2014 Devices 7+ show blank/placeholder images after rapid scrolling, indicating the image loading logic is not triggered for items that were skipped during fast scroll (missing onViewAttachedToWindow or similar callback handling)."
   }
 ]
