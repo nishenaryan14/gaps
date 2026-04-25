@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Support - App page Go button no wifi [New]",
   "feature": "App Settings",
-  "scenario": "Poly Studio Mobile app shows \"Something is wrong\" screen when tapping \"Go\" in Support > App section with Wi-Fi turned off",
+  "scenario": "Poly Studio Mobile app shows \"Something is wrong\" screen when accessing Support > App section without Wi-Fi connectivity",
   "steps": [
     "1. Pair and connect a Poly Bluetooth headset to the Android device.",
     "2. Turn off Wi-Fi on the Android device.",
@@ -20,15 +20,15 @@
     "poly-studio-mobile",
     "support-section",
     "app-section",
-    "go-button",
-    "wifi-off",
     "error-screen",
     "something-is-wrong",
+    "no-wi-fi",
+    "offline-error",
     "android"
   ],
   "source_last_updated": "1773312447",
   "source_hash": "f89e803a6a5e6a265937877bc733a0ec3a9e444fbfcea3fa4a1eac5128237bc6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.852077Z",
+  "processed_at": "2026-04-25T08:21:30.960426Z",
   "status": "active"
 }
