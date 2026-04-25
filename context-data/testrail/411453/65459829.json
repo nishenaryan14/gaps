@@ -5,31 +5,23 @@
   "project": "411453",
   "title": "Notifications - Device charging OFF",
   "feature": "Notifications",
-  "scenario": "Device Charging notification does not appear when disabled in Poly Lens Menu > Notifications & Device Alerts while app is in background and headset is connected to charger",
-  "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Home screen and tap on the connected [Device Name].",
-    "3. Go to Device Settings \u2192 Notifications & Device Alerts.",
-    "4. Locate the 'Device Charging' toggle and ensure it is turned OFF.",
-    "5. Press the Home button on the Android device to send the Poly Studio Mobile app to the background.",
-    "6. Connect the headset to a charger (e.g., via USB cable or charging cradle).",
-    "7. Observe the Android notification shade for any incoming notifications."
-  ],
-  "expected": "No \"Charging\" notification appears in the Android notification shade when the headset is connected to a charger while the app is in the background.",
+  "scenario": "Device Charging notification does not appear when setting is disabled in Poly Lens Menu > Notifications & Device Alerts and headset is connected to charger with app in background",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device-charging-notification",
+    "poly-lens-app",
     "notifications-and-device-alerts",
-    "poly-studio-mobile",
+    "charging-notification",
+    "device-charging",
     "background-app",
-    "charging-notification-disabled",
-    "android-notification-shade",
-    "device-settings"
+    "notification-settings",
+    "headset-charging"
   ],
   "source_last_updated": "1761226637",
   "source_hash": "d71bf242e5604cdb424f5d8c33f4aff28ea88590ec3cfb5c31943fab5bfb14db",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.942777Z",
+  "processed_at": "2026-04-25T07:55:31.973249Z",
   "status": "active"
 }
