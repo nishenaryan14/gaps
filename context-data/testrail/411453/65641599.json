@@ -5,16 +5,16 @@
   "project": "411453",
   "title": "CCL - Selecting AI Noise Block",
   "feature": "App Settings",
-  "scenario": "Verify AI Noise Block option is selectable in Device Settings > Advanced for CCL-supported devices on Poly Studio Mobile app",
+  "scenario": "AI Noise Block option can be selected in Device Settings > Advanced on Poly Studio Mobile app for Voyager Free 60+, Voyager Free 60, and Voyager Legend 50",
   "steps": [
     "Open the Poly Studio Mobile app on your Android device.",
-    "Navigate to the Home screen.",
+    "Ensure a supported device (Voyager Free 60+, Voyager Free 60, or Voyager Legend 50) is connected.",
     "Tap on the connected device name to open Device Settings.",
-    "Scroll down and tap on 'Advanced'.",
+    "Scroll down and tap on 'Advanced' in the Device Settings menu.",
     "Locate the 'AI Noise Block' option in the Advanced settings list.",
-    "Tap on the 'AI Noise Block' option to select it."
+    "Tap on the 'AI Noise Block' toggle or option to select/enable it."
   ],
-  "expected": "The 'AI Noise Block' option is successfully selected (e.g., toggled on or highlighted) in Device Settings > Advanced for devices that support CCL.",
+  "expected": "The 'AI Noise Block' option is selectable and can be enabled successfully in Device Settings > Advanced for supported devices.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,13 +22,13 @@
     "device-settings",
     "advanced-settings",
     "poly-studio-mobile",
-    "ccl-supported-devices",
-    "android-app",
-    "noise-management"
+    "voyager-free-60-plus",
+    "voyager-free-60",
+    "voyager-legend-50"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "b5de2eb106ec59a4897844c39e10d0aaeba523823b84ca7f4b20f5452b4a130c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.004012Z",
+  "processed_at": "2026-04-25T09:32:26.260748Z",
   "status": "active"
 }
