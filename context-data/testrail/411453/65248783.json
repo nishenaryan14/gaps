@@ -5,28 +5,29 @@
   "project": "411453",
   "title": "Find My Device - Allow location [Android]",
   "feature": "App Settings",
-  "scenario": "Find My Device feature requests location permission with Always allow, Allow while using app, and Don't allow options in Poly Studio Mobile app",
+  "scenario": "Find My Device feature requests location permission when accessed from Poly Studio Mobile App menu",
   "steps": [
-    "1. Launch the Poly Studio Mobile app with a Poly Bluetooth headset connected.",
-    "2. Navigate to the Home screen and open the App Menu.",
-    "3. Tap on 'Find My Device'.",
-    "4. Observe the pop-up that appears."
+    "1. Launch the Poly Studio Mobile app with a headset connected.",
+    "2. Navigate to the Home screen.",
+    "3. Tap the App Menu (hamburger icon or menu icon).",
+    "4. Tap on \"Find My Device\".",
+    "5. Observe the pop-up that appears."
   ],
-  "expected": "A pop-up window appears requesting location permission with the options: 'Always allow', 'Allow while using app', 'Don't allow'.",
+  "expected": "A pop-up window appears requesting location permission with options: \"Always allow\", \"Allow while using app\", or \"Don't allow\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "location-permission",
-    "poly-studio-mobile",
-    "always-allow",
-    "allow-while-using-app",
-    "dont-allow",
+    "poly-studio-mobile-app",
+    "app-menu",
+    "home-screen",
+    "pop-up",
     "bluetooth-headset"
   ],
   "source_last_updated": "1759926568",
   "source_hash": "117fb02ea1bc96bb887c66818623e795179af2eecb51bed1b2796e17cabc3118",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.930707Z",
+  "processed_at": "2026-04-25T09:32:26.168663Z",
   "status": "active"
 }
