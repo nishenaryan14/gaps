@@ -6,29 +6,22 @@
   "title": "Software Update - DFU - Houston... screen",
   "feature": "Firmware Update",
   "scenario": "DFU failure shows \"Houston\" screen with retry/cancel options when update interrupted during first 20% on Poly Studio Mobile app",
-  "steps": [
-    "1. Open Poly Studio Mobile app on the mobile device.",
-    "2. Ensure a Poly Bluetooth audio device is connected to the app.",
-    "3. Navigate to the Device Settings screen for the connected device.",
-    "4. Initiate a Device Firmware Update (DFU) by tapping on the software update option.",
-    "5. During the first 20% of the update, turn off the Bluetooth headset (or turn off internet connectivity on the mobile device before tapping Start Update).",
-    "6. Observe the screen displayed after the update failure."
-  ],
-  "expected": "The app displays a \"Houston\" screen with the message: \"We have a problem. The software update for 'DEVICE NAME' didn't successfully complete. Keep your Poly device and your mobile device nearby, connected to each other and the internet.\" Both Cancel and Retry buttons are visible and active (tappable).",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-failure",
     "houston-screen",
-    "retry-cancel-options",
+    "firmware-update",
     "poly-studio-mobile",
-    "firmware-update-interrupted",
-    "device-firmware-update",
-    "bluetooth-headset"
+    "update-interrupted",
+    "retry-cancel",
+    "dfu-progress"
   ],
   "source_last_updated": "1763129740",
   "source_hash": "5602ae120cdb2a66275c342829f11148cb58af5ccfb2a4ae0efaddf70c8a3326",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.881571Z",
+  "processed_at": "2026-04-25T07:55:31.957714Z",
   "status": "active"
 }
