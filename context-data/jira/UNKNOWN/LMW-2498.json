@@ -5,33 +5,34 @@
   "project": "UNKNOWN",
   "summary": "iOS | FOCUS 2 | Apps settings section is missing",
   "feature": "App Settings",
-  "scenario": "\"Apps\" settings section missing from Device settings after pairing Voyager Focus 2 with Poly Studio Mobile app on iOS",
-  "description_clean": "On iOS, after pairing a Voyager Focus 2 headset with the Poly Studio Mobile app, the \"Apps\" settings section is missing from Device settings. According to the Focus 2 UI specs, the Apps section should be present with Amazon Alexa and Tile options.",
+  "scenario": "\"Apps\" section with Amazon Alexa and Tile options missing from Device Settings for Voyager Focus 2 on iOS",
+  "description_clean": "On iOS, after pairing a Voyager Focus 2 headset and navigating to Device settings, the \"Apps\" section is missing. According to the Focus 2 UI specs, the Apps section should be present with Amazon Alexa and Tile options.",
   "steps": [
-    "1. Launch Poly Studio Mobile app on iOS device.",
-    "2. Pair a Voyager Focus 2 headset with the app.",
+    "1. Launch Poly Studio Mobile app on iOS.",
+    "2. Pair a Voyager Focus 2 headset to the iOS device.",
     "3. Navigate to Home screen.",
     "4. Tap on the paired Voyager Focus 2 device name to open Device Settings.",
-    "5. Scroll through the Device Settings screen.",
-    "6. Look for the \"Apps\" section in the settings list."
+    "5. Scroll down to view all available sections in Device Settings.",
+    "6. Look for the \"Apps\" section."
   ],
   "expected": "The \"Apps\" section should be present in Device Settings, containing Amazon Alexa and Tile options.",
-  "actual": "The \"Apps\" section is missing from Device Settings. No Amazon Alexa or Tile options are visible.",
+  "actual": "The \"Apps\" section is missing from Device Settings. No Amazon Alexa or Tile options are displayed.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "voyager-focus-2",
-    "poly-studio-mobile",
     "device-settings",
     "apps-section",
+    "amazon-alexa",
+    "tile",
+    "poly-studio-mobile",
     "ios",
-    "bluetooth-pairing",
-    "settings-missing"
+    "missing-feature"
   ],
   "source_last_updated": "2026-04-14T11:48:13.000+0000",
   "source_hash": "d13c99ba4e87e42cd3404a31450a5eace4691ade83174b86c5082c72cb5f4448",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.695534Z",
+  "processed_at": "2026-04-25T07:55:31.762260Z",
   "status": "active"
 }
