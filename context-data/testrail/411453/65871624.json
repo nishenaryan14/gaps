@@ -8,7 +8,7 @@
   "scenario": "\"Supported Devices\" link and \"Other devices\" button navigation from Device Home Screen with no device connected",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. Ensure no device is connected (Device Home screen shows 'No device connected').",
+    "2. On the Home screen, ensure no device is connected.",
     "3. Tap the 'Supported Devices' link.",
     "4. Observe the displayed text.",
     "5. Tap the 'Other devices' button.",
@@ -21,14 +21,14 @@
     "poly-studio-mobile",
     "device-home-screen",
     "no-device-connected",
-    "supported-devices",
-    "other-devices",
+    "supported-devices-link",
+    "other-devices-button",
     "app-navigation",
     "device-list"
   ],
   "source_last_updated": "1761657130",
   "source_hash": "58d47865c6e84c1cb4e89fcc28c86ffacaedcaaedf0d57fb0230beb4b977e3de",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.733507Z",
+  "processed_at": "2026-04-25T07:55:31.793843Z",
   "status": "active"
 }
