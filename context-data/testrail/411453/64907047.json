@@ -4,31 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "App Settings - General - Account - Account delete - dialog",
-  "feature": "App Settings - General - Account",
-  "scenario": "Verify the account delete dialog in App Settings > General > Account appears and matches the Figma design.",
+  "feature": "App Settings",
+  "scenario": "Account delete dialog appears and matches Figma design when tapping delete icon in General > Account tab in Poly Studio Mobile app",
   "steps": [
-    "Start the app and log in to a Lens tenant account on the Cloud.",
-    "Navigate to App Settings > General.",
-    "Open the Account tab.",
-    "Click the delete icon.",
-    "Check the dialog appears and matches the Figma design."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the Account tab.",
+    "4. Locate and tap the delete icon on the Account screen.",
+    "5. Observe the delete confirmation dialog that appears."
   ],
-  "expected": "The account delete dialog appears and matches the Figma design.",
+  "expected": "The Account delete dialog is displayed and matches the Figma design specifications (correct layout, text, buttons, and styling).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "account delete dialog",
-    "App Settings",
-    "General",
-    "Account tab",
-    "delete icon",
-    "Figma design",
-    "Lens tenant",
-    "Cloud"
+    "poly-studio-mobile",
+    "account-delete-dialog",
+    "delete-icon",
+    "account-tab",
+    "figma-design",
+    "ui-confirmation-dialog",
+    "android"
   ],
   "source_last_updated": "1759416338",
   "source_hash": "af28e7292ae4408418d0e6f91893b5f52168ed1d54279031feb4ce1cd89d4db4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.133242Z",
+  "processed_at": "2026-04-25T05:37:16.753830Z",
   "status": "active"
 }
