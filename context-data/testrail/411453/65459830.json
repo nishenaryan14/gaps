@@ -5,29 +5,24 @@
   "project": "411453",
   "title": "Notifications - Device disconnected OFF",
   "feature": "Notifications",
-  "scenario": "Verify that disabling \"Device Disconnected\" notification in Poly Lens settings suppresses the notification when the device disconnects after the app is backgrounded and the headset is turned off.",
-  "steps": [
-    "Open Poly Lens Menu",
-    "Navigate to General > Notifications & Device Alerts",
-    "Turn off the 'Device Disconnected' notification",
-    "Put the app in the background",
-    "Turn off the headset"
-  ],
-  "expected": "The \"Device is disconnected\" notification should not appear.",
+  "scenario": "No \"Device is disconnected\" notification appears when the notification toggle is disabled in Poly Lens Menu > General > Notifications & Device Alerts and the headset is turned off while the app is in the background",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Poly Lens",
-    "Device Disconnected notification",
-    "notification suppression",
-    "background app",
-    "headset disconnect",
-    "notification settings",
-    "device alerts"
+    "poly-lens",
+    "notifications",
+    "device-disconnected",
+    "notification-toggle",
+    "general-settings",
+    "background-app",
+    "device-alerts",
+    "headset-power-off"
   ],
   "source_last_updated": "1761226715",
   "source_hash": "ff0482c1a1713d14ce73586225b8ea9dec2d09db220674fd7a394c49ba8bb131",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.305513Z",
+  "processed_at": "2026-04-25T05:37:16.945328Z",
   "status": "active"
 }
