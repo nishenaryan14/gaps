@@ -4,29 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Settings - Settings screen for disconnected device",
-  "feature": "Device Settings",
-  "scenario": "Settings screen for a disconnected device shows appropriate tabs (Onboarding, User Guides, Quick Start Guide, Delete Device) when accessed via the \"...\" button.",
+  "feature": "Device Management",
+  "scenario": "Device Settings overflow menu does not display Onboarding, User Guides, and Delete Device options when headset is disconnected",
   "steps": [
-    "Start the app with a disconnected headset.",
-    "Navigate to Device Settings by tapping the '...' button.",
-    "Observe the tabs displayed in the settings section."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Ensure a Poly Bluetooth headset is currently connected to the app.",
+    "4. Disconnect the headset (e.g., turn off the headset or move out of range).",
+    "5. On the Home screen, tap the device name or icon to enter the Device Settings screen for the disconnected headset.",
+    "6. On the Device Settings screen, locate and tap the \"...\" (More options) button.",
+    "7. Observe the list of settings tabs that appear."
   ],
-  "expected": "The settings section should display tabs such as Onboarding, User Guides, Quick Start Guide, and Delete Device. (Tabs may slightly differ between devices.)",
+  "expected": "The \\\"...\\\" button displays settings tabs such as Onboarding, User Guides, Quick Start Guide, and Delete Device. The available tabs may vary slightly between different Poly devices.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "disconnected device",
-    "device settings",
-    "onboarding tab",
-    "user guides tab",
-    "quick start guide tab",
-    "delete device tab",
-    "settings screen",
-    "headset"
+    "poly-studio-mobile",
+    "device-settings",
+    "overflow-menu",
+    "more-options",
+    "onboarding",
+    "user-guides",
+    "delete-device",
+    "disconnected-headset"
   ],
   "source_last_updated": "1763028795",
   "source_hash": "cddd7b24e74aa35be36c281b3e98f4fb23d9dfe30d7b2e13f340a62547444f45",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.198552Z",
+  "processed_at": "2026-04-25T05:37:16.788272Z",
   "status": "active"
 }
