@@ -7,14 +7,15 @@
   "feature": "Notifications",
   "scenario": "Background firmware update notification redirects to Device Settings > Software Update tab when tapped on Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and pair/connect a Poly Bluetooth audio device.",
-    "2. Ensure the connected Poly device has firmware lower than the current version available on the server.",
-    "3. Press the Home button or switch to another app to send the Poly Studio Mobile app to the background.",
-    "4. Observe the device's notification shade for a firmware update notification from the Poly Studio Mobile app.",
-    "5. Tap the firmware update notification.",
-    "6. Observe the app behavior upon tapping the notification."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Pair a Poly Bluetooth audio device that has firmware lower than the current version available on the server.",
+    "3. Press the Home button on the Android device to send the Poly Studio Mobile app to the background.",
+    "4. Wait for the app to check for firmware updates in the background.",
+    "5. Observe the Android notification shade for a notification indicating a firmware update is available.",
+    "6. Tap the firmware update notification.",
+    "7. Observe the app behavior after tapping the notification."
   ],
-  "expected": "A notification appears in the notification shade indicating a firmware update is available. Tapping the notification brings the Poly Studio Mobile app to the foreground and redirects the user to Device Settings > Software Update tab.",
+  "expected": "A notification appears in the Android notification shade indicating a firmware update is available. Tapping the notification opens the Poly Studio Mobile app and redirects the user to Device Settings > Software Update tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,12 +24,13 @@
     "poly-studio-mobile",
     "software-update-tab",
     "device-settings",
+    "bluetooth-pairing",
     "notification-redirect",
-    "bluetooth-pairing"
+    "android"
   ],
   "source_last_updated": "1761219965",
   "source_hash": "bfbd3897c2e23cc2f97b9ac8aab802bb9bdaa29dfe2541ec61fe6d9603915fa9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.941770Z",
+  "processed_at": "2026-04-25T07:55:31.967112Z",
   "status": "active"
 }
