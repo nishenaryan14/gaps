@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Find My Device - Playing sound from 2 different devices",
   "feature": "Find My Device",
-  "scenario": "\"Find My Device\" tone fails with error on second paired headset when multiple devices are connected in Poly Studio Mobile app",
+  "scenario": "\"Find My Device\" tone fails with error on second headset when two headsets are paired and connected in Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Pair and connect two Bluetooth audio devices (e.g., Poly headsets) to the app.",
-    "3. From the Home screen, tap on the first connected device to enter Device Settings.",
-    "4. Navigate to the 'Find My Device' feature (e.g., under Device Settings or Notifications).",
-    "5. Tap 'Play Tone' on the first device and confirm the tone plays correctly.",
-    "6. Return to the Home screen and tap on the second connected device to enter its Device Settings.",
-    "7. Navigate to the 'Find My Device' feature for the second device.",
-    "8. Tap 'Play Tone' on the second device.",
-    "9. Observe the result."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Pair and connect Headset A to the app.",
+    "Pair and connect Headset B to the app (both headsets should be connected simultaneously).",
+    "Navigate to the Device Settings screen for Headset A.",
+    "Tap 'Find My Device' and play a tone on Headset A \u2014 verify the tone plays successfully.",
+    "Return to the Home screen and navigate to the Device Settings screen for Headset B.",
+    "Tap 'Find My Device' and attempt to play a tone on Headset B."
   ],
-  "expected": "The tone plays audibly on the second connected device.",
+  "expected": "A tone plays on Headset B.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "poly-studio-mobile",
-    "play-tone",
-    "multi-device-pairing",
+    "dual-headset-pairing",
     "device-settings",
-    "bluetooth-headset",
-    "error-on-second-device"
+    "tone-playback",
+    "multi-device-connection",
+    "headset-audio-error"
   ],
   "source_last_updated": "1759930181",
   "source_hash": "2207134fbd8939ffa5af4f8d4d848b218c2b858ad376876d622e29fdbd2f28b5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.837698Z",
+  "processed_at": "2026-04-25T08:21:30.946442Z",
   "status": "active"
 }
