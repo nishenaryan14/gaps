@@ -4,31 +4,34 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Back buttons",
-  "feature": "Firmware Update",
-  "scenario": "Back button during DFU flow returns user to the appropriate previous screen in Device Settings on Poly Studio Mobile app",
+  "feature": "Firmware Updates",
+  "scenario": "Back button navigation during DFU flow returns to correct previous screen from update screen and Continue screen on Poly Studio Mobile app",
   "steps": [
-    "1. Pair the headset and launch the Poly Studio Mobile app.",
-    "2. Navigate to Device Settings \u2192 Software Update.",
-    "3. Tap Update.",
-    "4. Press the back button (upper left corner).",
-    "5. Tap Update again, then tap Continue.",
-    "6. Press the back button (upper left corner)."
+    "1. Open Poly Studio Mobile app on Android.",
+    "2. Navigate to Home screen.",
+    "3. Tap on the desired Poly device to open Device Settings.",
+    "4. Locate and tap on the Software Update tab/section to initiate the DFU flow.",
+    "5. On the first DFU/Software Update screen (e.g., 'Continue' screen), tap the back button (upper left corner).",
+    "6. Observe the screen you are taken to.",
+    "7. Again, navigate to Device Settings \u2192 Software Update tab and proceed through the DFU flow to the actual update/DFU screen (where firmware download/install occurs).",
+    "8. On the update/DFU screen, tap the back button (upper left corner).",
+    "9. Observe the screen you are taken to."
   ],
-  "expected": "Step 4: User returns to the Device Settings screen with the Software Update tab expanded. Step 6: User returns to the first DFU screen (Software Update screen).",
+  "expected": "- From the first DFU/Software Update screen (Continue screen), pressing the back button returns the user to the previous screen (e.g., Device Settings with Software Update tab expanded).\\n- From the update/DFU screen (where firmware download/install occurs), pressing the back button returns the user to Device Settings with the Software Update tab expanded.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-settings",
-    "software-update",
     "dfu-flow",
-    "back-button",
+    "back-button-navigation",
+    "software-update",
     "firmware-update",
-    "ui-navigation"
+    "device-settings",
+    "android"
   ],
   "source_last_updated": "1763134292",
   "source_hash": "db7bea9451ea7f921f50c5f7b46c5821033e1d72e2a6279ec1fc84092c0b6b2d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.955200Z",
+  "processed_at": "2026-04-25T08:21:31.028174Z",
   "status": "active"
 }
