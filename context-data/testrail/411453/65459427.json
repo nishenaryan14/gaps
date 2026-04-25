@@ -7,11 +7,11 @@
   "feature": "Firmware Updates",
   "scenario": "Tapping Software Update button on Home Screen navigates to Software Update tab in Device Settings showing all device components",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. On the Home screen, locate and tap the \"Software Update\" button.",
-    "3. Observe the screen that opens."
+    "Open the Poly Studio Mobile app.",
+    "On the Home screen, locate and tap the \"Software Update\" button.",
+    "Observe the screen that opens."
   ],
-  "expected": "The Software Update tab within Device Settings opens, displaying all device components (e.g., Headset/Earbuds and Charge Case/Charge Stand if applicable).",
+  "expected": "The Software Update tab in Device Settings opens, displaying all device components (Headset/Earbuds and Charge Case/Stand if applicable).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -20,12 +20,12 @@
     "device-settings",
     "poly-studio-mobile",
     "firmware-update",
-    "navigation",
-    "android"
+    "device-components",
+    "navigation"
   ],
   "source_last_updated": "1763377500",
   "source_hash": "4ebe1d17e39f1204af8583d1a189d67ea9834144adbd142aab3abcff15c3d2a9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.871958Z",
+  "processed_at": "2026-04-25T07:55:31.949166Z",
   "status": "active"
 }
