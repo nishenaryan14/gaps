@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Onboarding - Translations",
-  "feature": "Onboarding",
-  "scenario": "Verify that all text in the Onboarding flow is properly translated and displayed for each supported language.",
+  "feature": "App Settings",
+  "scenario": "Onboarding flow in Poly Studio Mobile app displays properly translated text for all supported languages",
   "steps": [
-    "Start the app with a supported language.",
-    "Go through the entire Onboarding flow.",
-    "Check that all text is properly translated and displayed.",
-    "Repeat steps 1-3 for all supported languages."
+    "1. Change the device system language to one of the supported languages (e.g., French, German, Japanese, etc.).",
+    "2. Launch the Poly Studio Mobile app.",
+    "3. Observe the Onboarding flow screens (Welcome, Permissions, Feature Introduction, etc.).",
+    "4. Verify that all text elements (titles, descriptions, buttons, tooltips) on each Onboarding screen are displayed in the selected language.",
+    "5. Complete or dismiss the Onboarding flow.",
+    "6. Repeat steps 1\u20135 for each supported language."
   ],
-  "expected": "All text in the Onboarding flow is properly translated and displayed for each supported language.",
+  "expected": "All text in the Onboarding flow is fully translated and displayed correctly in the selected language, with no untranslated English strings, truncation, or encoding issues.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Onboarding flow",
-    "Translation verification",
-    "Localization",
-    "Supported languages",
-    "Text display",
-    "UI text validation",
-    "Internationalization"
+    "poly-studio-mobile",
+    "onboarding-flow",
+    "localization",
+    "language-support",
+    "ui-text-verification",
+    "welcome-screen",
+    "permissions-screen",
+    "feature-introduction"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "5c17a5d91b39d0cb74b85c2415ba8cf183ef13799f42fa48e8e314ae90b6db96",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.274087Z",
+  "processed_at": "2026-04-25T05:37:16.870392Z",
   "status": "active"
 }
