@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "1 step DFU - Update All button triggers DFU for earbuds and charge case",
   "feature": "Firmware Updates",
-  "scenario": "\"Update All\" button triggers a single DFU process with unified progress bar for both earbuds and charging case",
+  "scenario": "\"Update All\" button shows single unified DFU progress bar for both earbuds and charging case instead of separate device updates",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen",
-    "Ensure a Poly Bluetooth audio device (earbuds + charging case) is connected",
-    "Navigate to Device Settings \u2192 [Device Name]",
-    "Locate the Firmware Update section",
-    "Tap the 'Update All' button",
-    "Observe the DFU progress indicator on screen"
+    "Open Poly Studio Mobile app on Android",
+    "Navigate to Home screen",
+    "Connect a supported Poly Bluetooth audio device (earbuds + charging case)",
+    "Wait for the app to detect available firmware updates for both earbuds and charging case",
+    "Tap the 'Update All' button on the Home screen or Device Settings screen",
+    "Observe the firmware update progress UI"
   ],
-  "expected": "The \"Update All\" button triggers a single DFU process for both earbuds and charging case simultaneously, showing one unified progress bar from 0% to 99% for both devices.",
+  "expected": "The \"Update All\" button should trigger separate DFU processes for each device (left earbud, right earbud, charging case), each with its own progress bar showing individual update status from 0% to 100%.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "update-all",
-    "dfu-progress",
     "firmware-update",
+    "update-all",
+    "dfu-progress-bar",
     "poly-studio-mobile",
-    "charging-case",
-    "earbuds",
-    "unified-progress-bar",
-    "device-settings"
+    "unified-update",
+    "earbuds-charging-case",
+    "android-app"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "200d7ad2e8aa19775884230d5505ae5834aec600bb872b1cb18bc3c7b75c4b88",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.957714Z",
+  "processed_at": "2026-04-25T08:21:31.033241Z",
   "status": "active"
 }
