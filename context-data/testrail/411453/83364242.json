@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Software Update - DFU - Perform DFU with no internet [New]",
   "feature": "Firmware Update",
-  "scenario": "DFU with no internet connection shows \"Feature unavailable\" dialog in Device Settings > Software Update",
+  "scenario": "DFU shows \"Feature unavailable\" dialog when internet connection is lost during firmware update flow on Device Settings > Software Update",
   "steps": [
-    "1. Pair the headset with the mobile device and launch the Poly Studio Mobile app with Wi-Fi turned off.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software Update.",
-    "3. Tap the Update button.",
-    "4. Turn on Wi-Fi on the mobile device and tap the Update button again.",
-    "5. Observe the 3-step DFU screens appear.",
-    "6. Turn off Wi-Fi on the mobile device and tap Continue.",
-    "7. Observe the dialog that appears."
+    "1. Pair the headset with the mobile device and launch the Poly Studio Mobile app.",
+    "2. Turn off Wi-Fi on the mobile device.",
+    "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software Update.",
+    "4. Tap the Update button.",
+    "5. Turn on Wi-Fi on the mobile device.",
+    "6. Tap the Update button again.",
+    "7. Turn off Wi-Fi on the mobile device.",
+    "8. Tap the Continue button."
   ],
-  "expected": "1. With Wi-Fi off, tapping Update shows a \"Feature unavailable\" dialog. 2. With Wi-Fi on, tapping Update shows the 3-step DFU screens. 3. With Wi-Fi turned off again and tapping Continue, the \"Feature unavailable\" dialog appears again.",
+  "expected": "Step 4: A \"Feature unavailable\" dialog is displayed. Step 6: The 3-step DFU (Device Firmware Update) screens are shown. Step 8: A \"Feature unavailable\" dialog is displayed again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu",
-    "no-internet-connection",
+    "firmware-update",
     "feature-unavailable",
+    "internet-connection",
     "software-update",
-    "device-settings",
     "poly-studio-mobile",
-    "wifi-off"
+    "device-settings"
   ],
   "source_last_updated": "1772713947",
   "source_hash": "5edef2ae912351a8d7da2cfe19e8674f25969ac31ec1c62387369fff75cec3cf",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.941770Z",
+  "processed_at": "2026-04-25T07:55:31.967112Z",
   "status": "active"
 }
