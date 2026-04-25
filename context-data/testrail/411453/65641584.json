@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "EQ - Custom EQ, change the value on sliders, Save EQ",
-  "feature": "EQ (Equalizer)",
-  "scenario": "Save custom EQ after modifying slider values in Device Settings",
+  "feature": "Equalizer",
+  "scenario": "Custom EQ slider values fail to save when creating a new preset in Device Settings > EQ",
   "steps": [
-    "Start app with an EQ-supporting device",
-    "Go to Device Settings > EQ",
-    "Open Custom EQ",
-    "Modify slider values",
-    "Click Save EQ button"
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure a supported Poly Bluetooth audio device is connected.",
+    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
+    "4. Navigate to Audio Settings \u2192 Equalizer.",
+    "5. Select the 'Custom' EQ option.",
+    "6. Adjust one or more slider values (e.g., Bass, Mid, Treble) to desired levels.",
+    "7. Tap the 'Save EQ' button to save the custom preset."
   ],
-  "expected": "Custom EQ is saved successfully.",
+  "expected": "The custom EQ preset is saved successfully and appears in the list of available EQ presets.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "custom EQ",
-    "save EQ",
-    "EQ slider",
-    "Device Settings",
-    "EQ settings",
-    "modify equalizer",
-    "EQ preset"
+    "custom-eq",
+    "eq-preset-save",
+    "equalizer-sliders",
+    "poly-studio-mobile",
+    "device-settings",
+    "audio-settings",
+    "eq-persistence"
   ],
   "source_last_updated": "1761145090",
   "source_hash": "b924199adb58cb142d2a073b788ab32d74f6fd378f464aea92b7f3de3bf7dc5a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.255843Z",
+  "processed_at": "2026-04-25T05:37:16.841823Z",
   "status": "active"
 }
