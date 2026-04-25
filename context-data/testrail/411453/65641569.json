@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "EQ - X button, close the screen",
   "feature": "Equalizer",
-  "scenario": "EQ screen X close button returns to Device Settings screen on tap",
+  "scenario": "EQ screen X button in upper right corner closes EQ screen and returns to Device Settings screen",
   "steps": [
     "1. Open the Poly Studio Mobile app.",
     "2. Tap on a connected device to open the Device Settings screen.",
     "3. Tap on Audio Settings.",
     "4. Tap on Equalizer to open the EQ screen.",
-    "5. Observe the upper right corner of the EQ screen for an X (close) button.",
-    "6. Tap the X (close) button."
+    "5. Observe the upper right corner of the EQ screen for an X button.",
+    "6. Tap the X button."
   ],
-  "expected": "The EQ screen closes and the user is returned to the Device Settings screen.",
+  "expected": "The EQ screen closes and returns to the Device Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
+    "equalizer-screen",
     "eq-screen",
-    "equalizer",
-    "close-button",
+    "x-button",
     "device-settings",
     "audio-settings",
-    "poly-studio-mobile",
-    "ui-navigation"
+    "ui-navigation",
+    "screen-dismissal"
   ],
   "source_last_updated": "1761143574",
   "source_hash": "31829be8fc901a6378ddc994bbb9bff09ea3122a1500f6771a9945cf0ab91efe",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.991150Z",
+  "processed_at": "2026-04-25T09:32:26.250371Z",
   "status": "active"
 }
