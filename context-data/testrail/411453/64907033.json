@@ -4,32 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "App Settings - General - User stays logged in after restating the app",
-  "feature": "App Settings - General - Account",
-  "scenario": "User remains logged in after restarting the app and is prompted for passcode or Face ID upon returning to Account settings.",
+  "feature": "App Settings",
+  "scenario": "User remains logged in after restarting the Poly Studio Mobile app, but passcode or Face ID prompt is not shown upon reopening",
   "steps": [
-    "Open Lens app as a guest",
-    "Tap App settings icon",
-    "Go to General > Account",
-    "Tap Log in",
-    "Login with credentials",
-    "Restart the app",
-    "Navigate back to General > Account"
+    "Open the Poly Studio Mobile app.",
+    "Go to App Settings \u2192 General \u2192 Account.",
+    "Log in with valid credentials.",
+    "Restart the app (force close and reopen).",
+    "Navigate back to App Settings \u2192 General \u2192 Account."
   ],
-  "expected": "User should still be logged in, and a passcode or Face ID prompt should appear depending on phone settings.",
+  "expected": "User should remain logged in, and upon reopening the app a passcode or Face ID prompt should appear depending on phone settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "persistent login",
-    "passcode prompt",
-    "Face ID authentication",
-    "session persistence",
-    "app restart",
-    "account settings",
-    "re-authentication"
+    "poly-studio-mobile",
+    "app-settings",
+    "account-persistence",
+    "passcode-prompt",
+    "face-id",
+    "session-restart",
+    "authentication"
   ],
   "source_last_updated": "1759236683",
   "source_hash": "b6873a95b44831299e763cddb14e40527bc8e56e718fa6bbdd28baec77d8d7a1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.128693Z",
+  "processed_at": "2026-04-25T05:37:16.749134Z",
   "status": "active"
 }
