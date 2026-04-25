@@ -7,16 +7,16 @@
   "feature": "App Settings",
   "scenario": "Onboarding screens opened from App Settings > User Guides display correctly when navigating through all screens",
   "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Navigate to the Home screen.",
-    "Tap on the menu icon (hamburger) or the Account/Settings icon to open the side menu.",
-    "Select 'App Settings' from the menu.",
-    "In App Settings, scroll down and tap on 'User Guides'.",
-    "Tap on 'Onboarding' (or 'Onboarding screens') from the User Guides list.",
-    "Swipe left or tap the next arrow to navigate through all onboarding screens.",
-    "Continue navigating until the last onboarding screen is reached."
+    "Open Poly Studio Mobile app",
+    "Go to Home screen",
+    "Tap on Account (or Settings icon)",
+    "Navigate to App Settings",
+    "Locate and tap on User Guides",
+    "Tap on Onboarding screens",
+    "Swipe or tap through each onboarding screen to view all screens",
+    "Verify each onboarding screen displays correct content, images, and text"
   ],
-  "expected": "All onboarding screens open and display correctly. Each screen shows proper content, images, and text without any layout issues, truncation, or graphical glitches. Navigation between screens is smooth and responsive.",
+  "expected": "All onboarding screens open successfully from App Settings > User Guides, and each screen displays correctly with proper content, images, and text when navigating through them.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,13 +24,13 @@
     "onboarding-screens",
     "user-guides",
     "app-settings",
-    "side-menu",
-    "navigation",
+    "account-settings",
+    "ui-navigation",
     "screen-display"
   ],
   "source_last_updated": "1760352155",
   "source_hash": "546000005ad3f2c3a6a6dcd825ab38e25074cc2113390635bc15e951c351e98e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.946442Z",
+  "processed_at": "2026-04-25T09:32:26.175392Z",
   "status": "active"
 }
