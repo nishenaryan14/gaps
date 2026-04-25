@@ -4,27 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Support - Tenant info persists after updating the app",
-  "feature": "Support",
-  "scenario": "Tenant information persists after updating the mobile app",
+  "feature": "App Settings",
+  "scenario": "Tenant information persists in Poly Lens Menu > Support > App after updating the Poly Studio Mobile app",
   "steps": [
-    "Register a mobile user on a tenant and verify tenant info is present in Poly Lens Menu > Support > App.",
-    "Install a new version of the mobile app, launch it, and verify the tenant info is still present (same as before the update)."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to Home \u2192 Poly Lens Menu \u2192 Support \u2192 App.",
+    "3. Note the displayed tenant information.",
+    "4. Install a new version of the Poly Studio Mobile app (e.g., via the app store or sideload an updated APK).",
+    "5. Launch the updated Poly Studio Mobile app.",
+    "6. Navigate again to Home \u2192 Poly Lens Menu \u2192 Support \u2192 App.",
+    "7. Verify the tenant information displayed matches the information noted in step 3."
   ],
-  "expected": "Tenant information persists after updating the mobile app (same as before the update).",
+  "expected": "After updating the app, the tenant information should be cleared or reset to default, as tenant info should not persist across app updates.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "tenant information persistence",
-    "mobile app update",
-    "Poly Lens",
-    "app reinstallation",
-    "tenant data retention",
-    "support menu",
-    "mobile user registration"
+    "poly-studio-mobile",
+    "poly-lens-menu",
+    "tenant-information",
+    "support-app",
+    "app-update",
+    "data-persistence",
+    "firmware-update"
   ],
   "source_last_updated": "1759752032",
   "source_hash": "3ede487d871c29b92d8d4609f8c684a821c980ac12effd4a027cf7ef43502879",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.181414Z",
+  "processed_at": "2026-04-25T05:37:16.780120Z",
   "status": "active"
 }
