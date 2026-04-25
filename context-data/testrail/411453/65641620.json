@@ -5,34 +5,31 @@
   "project": "411453",
   "title": "Fit test - 2nd screen Fail and Retry",
   "feature": "Device Management",
-  "scenario": "Fit Test fails to retry properly from screen 2 after Cancel or failure on Voyager Free 60+",
+  "scenario": "Fit Test Retry button on second screen does not restart the test after Cancel or failure on Voyager Free 60+",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Scroll to and tap on Fit Test",
-    "On the first Fit Test screen, tap Start to begin the test",
-    "On the second Fit Test screen, tap Cancel (or allow the test to fail)",
-    "After returning to the Fit Test start screen, tap Retry",
-    "Perform the fit test again",
-    "Observe the result displayed after the retry"
+    "1. Launch the Poly Studio Mobile app with a device that supports Fit Test connected.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Fit Test.",
+    "3. Tap \"Start Test\" to begin the fit test.",
+    "4. On the second screen of the test, either tap \"Cancel\" or intentionally fail the test.",
+    "5. Observe the screen and tap the \"Retry\" button.",
+    "6. Check the result displayed after retrying."
   ],
-  "expected": "The fit test runs again from the beginning and the result (Pass or Fail) is displayed correctly after the retry.",
+  "expected": "The fit test is performed again and the result is displayed successfully.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "retry",
+    "retry-button",
     "voyager-free-60-plus",
-    "poly-studio-mobile",
+    "poly-studio-mobile-app",
     "device-settings",
-    "cancel",
-    "fit-test-failure",
-    "fit-test-screen"
+    "cancel-action",
+    "test-failure",
+    "fit-test-restart"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "26a6f63ff58bd0342c2d353726784333d8b1b422e0c10cd1503d8355d47d21e1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.906269Z",
+  "processed_at": "2026-04-25T08:21:30.984558Z",
   "status": "active"
 }
