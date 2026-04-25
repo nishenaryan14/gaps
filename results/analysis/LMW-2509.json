@@ -12,147 +12,126 @@
     "65459448",
     "65459456",
     "65459427",
-    "65459458",
     "65459457",
     "65459438",
-    "65459432"
+    "65459432",
+    "65459433"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case validates that the firmware version displayed on the Home screen or Device Settings page refreshes automatically after a DFU completes. All existing DFU-related tests focus on language change flows, update blocking during calls, or UI element presence \u2014 none verify post-DFU version string propagation.",
-    "Missing lifecycle persistence test: The bug specifically requires an app restart to see the updated version. No test covers the scenario where the app should refresh firmware version data from the device after reconnection post-DFU without requiring a full app kill/relaunch.",
-    "Missing state synchronization test: After DFU completes and the device reboots/reconnects, the app should sync the new firmware version via Bluetooth/GATT. No test validates that the app's cached firmware version is invalidated and refreshed upon device reconnection.",
-    "Missing cross-screen consistency test: No test verifies that the firmware version shown on the Home screen matches the version shown on Device Settings \u2192 [Device Name] after a DFU, both before and after app restart.",
-    "Missing device reconnection data refresh test: The DFU flow ends with device reboot and reconnection. No test validates that all device metadata (including firmware version) is re-fetched from the device upon reconnection, rather than served from a stale cache."
+    "No test case validates that the firmware version displayed on the Home screen or Device Settings page refreshes to the new version after a DFU completes. All existing DFU tests focus on the update flow itself, language-change triggers, blocking conditions, or UI elements appearing \u2014 but none check the post-update version display state.",
+    "No test case covers the app lifecycle dimension: the bug specifically requires an app restart (force close + relaunch) to see the correct version. None of the existing tests validate that the firmware version UI refreshes without an app restart, or that it persists correctly across app kill/relaunch.",
+    "No test case validates the Home screen firmware version display after DFU. Tests like 64839439 check for 'Software Update' and 'Release Notes' buttons appearing, but never verify the version number shown.",
+    "No test case validates the Device Settings \u2192 [Device Name] firmware version display after DFU. Tests like 65459456 check component entries and 'up to date' status, but never verify the actual version number string shown.",
+    "No test case covers the state synchronization gap between the app's in-memory cached firmware version and the actual device firmware version post-DFU. The bug is fundamentally about stale cached data not being refreshed until process restart \u2014 this is a lifecycle/data-sync gap not addressed by any existing test."
   ],
   "generated_testcases": [
     {
-      "title": "TC-DFU-VERSION-001: Verify firmware version auto-refreshes on Home screen after DFU completes (no app restart)",
+      "title": "TC-DFU-VER-001: Home Screen firmware version stale after DFU \u2014 no app restart",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Device Name].",
-        "Navigate to Home screen and note the current firmware version displayed (e.g., under device name or status section).",
-        "Navigate to Device \u2192 Software & Updates and check for available firmware update.",
-        "If update is available, tap the update banner or navigate to Software & Updates and tap 'Update Now'.",
-        "Confirm the update when prompted.",
-        "Do NOT use the device during the update. Do NOT disconnect Bluetooth. Do NOT stream media or place calls.",
-        "Wait for the DFU to complete. Observe the device reboot and automatic Bluetooth reconnection.",
-        "Once reconnected, remain on the Software & Updates screen. Observe the firmware version displayed.",
-        "Navigate back to the Home screen. Observe the firmware version displayed.",
-        "Compare the firmware version shown on the Home screen with the version shown on Software & Updates screen."
+        "Precondition: Device on firmware v1.0.0. App connected.",
+        "Trigger DFU to v2.0.0 via: Device \u2192 Software & Updates \u2192 Update banner.",
+        "Wait for DFU completion (device restarts, app shows reconnected state).",
+        "DO NOT restart the app. Observe Home screen firmware version string below device name.",
+        "Navigate to: Device \u2192 [Device Name] \u2192 observe firmware version at top of screen.",
+        "Return to Home screen. Observe firmware version again."
       ],
-      "expected": "After DFU completes and the device reconnects, the firmware version on the Home screen and Software & Updates screen should automatically update to the new version WITHOUT requiring an app restart. Both screens should show the same updated firmware version."
+      "expected": "Expected: Home screen shows v2.0.0. Device Settings page shows v2.0.0. Actual (If Bug): Home screen and Device Settings page both show stale v1.0.0. The version string does not update until app is force-killed and relaunched."
     },
     {
-      "title": "TC-DFU-VERSION-002: Verify firmware version auto-refreshes on Device Settings screen after DFU completes (no app restart)",
+      "title": "TC-DFU-VER-002: Home Screen firmware version correct after DFU + app restart",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Device Name].",
-        "Navigate to Device \u2192 [Device Name] (Device Settings page). Note the firmware version displayed.",
-        "Navigate to Device \u2192 Software & Updates and initiate a firmware update.",
-        "Confirm the update and wait for DFU to complete. Do NOT use the device during update.",
-        "After device reboots and reconnects automatically, observe the firmware version on the Software & Updates screen.",
-        "Navigate to Device \u2192 [Device Name] (Device Settings page). Observe the firmware version displayed.",
-        "Do NOT close or background the app at any point during this test.",
-        "Compare the firmware version on Device Settings page with the version on Software & Updates screen."
+        "Precondition: Device on firmware v1.0.0. App connected.",
+        "Trigger DFU to v2.0.0 via: Device \u2192 Software & Updates \u2192 Update banner.",
+        "Wait for DFU completion (device restarts, app shows reconnected state).",
+        "Force-kill the app (swipe from recents / app settings \u2192 Force Stop).",
+        "Relaunch the app. Wait for device reconnection.",
+        "Observe Home screen firmware version string below device name.",
+        "Navigate to: Device \u2192 [Device Name] \u2192 observe firmware version at top of screen."
       ],
-      "expected": "After DFU completes and the device reconnects, the firmware version on the Device Settings page ([Device Name]) should automatically update to the new version WITHOUT requiring an app restart. The version should match the version shown on the Software & Updates screen."
+      "expected": "Expected: Home screen shows v2.0.0. Device Settings page shows v2.0.0. The version string correctly reflects the post-DFU firmware after app restart."
     },
     {
-      "title": "TC-DFU-VERSION-003: Verify firmware version is stale after DFU if app is backgrounded and restored (cache invalidation test)",
+      "title": "TC-DFU-VER-003: Immediate state trigger \u2014 firmware version check before any navigation after DFU",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Device Name].",
-        "Note the current firmware version on the Home screen.",
-        "Navigate to Device \u2192 Software & Updates and initiate a firmware update.",
-        "After confirming the update, immediately press the Home button to background the app (do NOT kill the app).",
-        "Wait for the DFU to complete. The device will reboot and reconnect to the phone via Bluetooth.",
-        "After 2 minutes (to ensure reconnection is complete), reopen Poly Studio Mobile from the app switcher (do NOT force-kill).",
-        "Observe the firmware version displayed on the Home screen.",
-        "Navigate to Device \u2192 [Device Name] and observe the firmware version there.",
-        "Navigate to Device \u2192 Software & Updates and observe the firmware version there."
+        "Precondition: Device on firmware v1.0.0. App connected.",
+        "Trigger DFU to v2.0.0 via: Device \u2192 Software & Updates \u2192 Update banner.",
+        "Wait for DFU completion (device restarts, app shows reconnected state).",
+        "IMMEDIATELY (within 1 second of reconnection) observe Home screen firmware version. Do NOT navigate away or tap anything.",
+        "Force-kill the app without any further interaction.",
+        "Relaunch app. Observe Home screen firmware version."
       ],
-      "expected": "When the app is backgrounded during DFU and then restored after device reconnection, the firmware version on the Home screen and Device Settings page should refresh to the new version. The app should detect the device reconnection and invalidate the cached firmware version, fetching the updated value from the device via GATT."
+      "expected": "Expected (Immediate check): Home screen shows v2.0.0 immediately after DFU reconnection. Expected (After restart): Home screen shows v2.0.0. Actual (If Bug): Immediate check shows stale v1.0.0; only after restart does v2.0.0 appear. This confirms the in-memory cache is not invalidated on DFU completion event."
     },
     {
-      "title": "TC-DFU-VERSION-004: Verify firmware version cross-screen consistency after DFU \u2014 before and after app restart",
+      "title": "TC-DFU-VER-004: Deep lifecycle \u2014 firmware version after DFU + Bluetooth disconnect/reconnect cycle",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Device Name].",
-        "Record the firmware version displayed on the Home screen (Version_A_Home).",
-        "Navigate to Device \u2192 [Device Name] and record the firmware version (Version_A_Settings). Verify Version_A_Home == Version_A_Settings.",
-        "Navigate to Device \u2192 Software & Updates and initiate a firmware update.",
-        "Wait for DFU to complete and device to reconnect.",
-        "Without restarting the app, navigate to Home screen and record the firmware version (Version_B_Home).",
-        "Navigate to Device \u2192 [Device Name] and record the firmware version (Version_B_Settings).",
-        "Verify Version_B_Home == Version_B_Settings and both show the new firmware version.",
-        "Now, fully close (force-kill) the Poly Studio Mobile app.",
-        "Reopen the app and wait for device connection.",
-        "Navigate to Home screen and record the firmware version (Version_C_Home).",
-        "Navigate to Device \u2192 [Device Name] and record the firmware version (Version_C_Settings).",
-        "Verify Version_C_Home == Version_C_Settings and both match Version_B_Home."
+        "Precondition: Device on firmware v1.0.0. App connected.",
+        "Trigger DFU to v2.0.0 via: Device \u2192 Software & Updates \u2192 Update banner.",
+        "Wait for DFU completion (device restarts, app shows reconnected state).",
+        "Without restarting the app: disconnect Bluetooth from phone Settings.",
+        "Wait 10 seconds. Reconnect Bluetooth from phone Settings.",
+        "Wait for app to show reconnected state.",
+        "Observe Home screen firmware version.",
+        "Navigate to: Device \u2192 [Device Name] \u2192 observe firmware version.",
+        "Force-kill the app. Relaunch. Observe firmware version on Home screen and Device Settings."
       ],
-      "expected": "The firmware version should be consistent across all screens (Home, Device Settings) at all times: before DFU (Version_A), after DFU without restart (Version_B), and after DFU with app restart (Version_C). All three states should show the correct version for the respective firmware state, with Version_B and Version_C showing the new post-DFU firmware version."
+      "expected": "Expected (Before restart): Home screen and Device Settings show v2.0.0 after Bluetooth reconnect. Expected (After restart): v2.0.0 persists. Actual (If Bug): Before restart, stale v1.0.0 persists even through Bluetooth disconnect/reconnect \u2014 cache is only cleared on process restart."
     },
     {
-      "title": "TC-DFU-VERSION-005: Verify device metadata re-fetch on reconnection after DFU (GATT cache invalidation)",
+      "title": "TC-DFU-VER-005: Deep lifecycle \u2014 firmware version after DFU + phone reboot",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Device Name].",
-        "Enable Developer Options / Debug logging on the test phone to capture Bluetooth HCI snoop log or app debug logs.",
-        "Note the current firmware version on Home screen.",
-        "Navigate to Device \u2192 Software & Updates and initiate a firmware update.",
-        "Wait for DFU to complete. Observe the device reboot and Bluetooth reconnection.",
-        "Immediately after reconnection, check the app debug logs or Bluetooth HCI logs for GATT service discovery and characteristic read requests related to firmware version (e.g., reading the firmware version characteristic).",
-        "Observe the firmware version displayed on the Home screen without restarting the app.",
-        "Navigate to Device \u2192 [Device Name] and observe the firmware version.",
-        "Force-kill the app, reopen it, and again check logs for GATT reads of firmware version characteristic."
+        "Precondition: Device on firmware v1.0.0. App connected.",
+        "Trigger DFU to v2.0.0 via: Device \u2192 Software & Updates \u2192 Update banner.",
+        "Wait for DFU completion (device restarts, app shows reconnected state).",
+        "Without restarting the app: reboot the phone.",
+        "After phone boots: launch the app. Wait for device reconnection.",
+        "Observe Home screen firmware version.",
+        "Navigate to: Device \u2192 [Device Name] \u2192 observe firmware version."
       ],
-      "expected": "After DFU completes and the device reconnects, the app should perform a fresh GATT service discovery and read the firmware version characteristic from the device, rather than serving the version from a stale in-memory cache. The debug logs should show characteristic read requests for firmware version after reconnection. The displayed version should update automatically without requiring an app restart."
+      "expected": "Expected: Home screen and Device Settings show v2.0.0 after phone reboot + app launch. Actual (If Bug): Stale v1.0.0 appears because the app process was killed by reboot and restarted \u2014 but if the cached version is persisted to disk (SharedPreferences/DB) and not invalidated on DFU, even a phone reboot may show stale data. This test validates whether the cache is stored persistently or only in-memory."
     },
     {
-      "title": "TC-DFU-VERSION-006: Verify firmware version does NOT update if DFU fails or is interrupted mid-update",
+      "title": "TC-DFU-VER-006: Firmware version on Device Settings page \u2014 immediate check after DFU without navigating away",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Device Name].",
-        "Record the current firmware version on Home screen (Version_Original).",
-        "Navigate to Device \u2192 Software & Updates and initiate a firmware update.",
-        "During the update (e.g., at 30-50% progress), force a disconnection by turning off Bluetooth on the phone, or moving the device out of range.",
-        "Wait 5 minutes. Re-enable Bluetooth and allow the device to reconnect.",
-        "Observe the firmware version displayed on the Home screen.",
-        "Navigate to Device \u2192 [Device Name] and observe the firmware version.",
-        "Navigate to Device \u2192 Software & Updates and observe the update status."
+        "Precondition: Device on firmware v1.0.0. App connected.",
+        "Trigger DFU to v2.0.0 via: Device \u2192 Software & Updates \u2192 Update banner.",
+        "Wait for DFU completion (device restarts, app shows reconnected state).",
+        "IMMEDIATELY tap: Device \u2192 [Device Name]. Observe firmware version at top of screen.",
+        "Return to Home screen. Observe firmware version.",
+        "Force-kill app. Relaunch. Check both locations again."
       ],
-      "expected": "If the DFU is interrupted or fails, the firmware version should remain unchanged (matching Version_Original). The app should not display an updated version from a partial/incomplete update. The Software & Updates screen should indicate the update failed or was interrupted, and the firmware version across all screens should remain consistent with the original pre-update version."
+      "expected": "Expected (Immediate): Device Settings page shows v2.0.0, Home screen shows v2.0.0. Expected (After restart): Both show v2.0.0. Actual (If Bug): Device Settings page shows stale v1.0.0 immediately after DFU; Home screen also shows v1.0.0. After restart, both correctly show v2.0.0."
     },
     {
-      "title": "TC-DFU-VERSION-007: Verify firmware version refreshes after DFU when device reconnects to a different phone (multi-device pairing scenario)",
+      "title": "TC-DFU-VER-007: Firmware version persistence across app backgrounding (no kill) after DFU",
       "steps": [
-        "Pair [Device Name] with Phone A (test phone running Poly Studio Mobile).",
-        "On Phone A, open Poly Studio Mobile, connect to [Device Name], and note the firmware version on Home screen.",
-        "Initiate a firmware update from Phone A.",
-        "During the update, keep Phone A connected. Do NOT interrupt.",
-        "After DFU completes and device reboots, allow it to reconnect to Phone A automatically.",
-        "On Phone A, verify the firmware version updates on Home screen without restarting the app.",
-        "Now, unpair the device from Phone A and pair it with Phone B (a second phone with Poly Studio Mobile installed).",
-        "On Phone B, open Poly Studio Mobile and connect to [Device Name].",
-        "Observe the firmware version displayed on Home screen on Phone B.",
-        "Compare the firmware version shown on Phone B with the version shown on Phone A."
+        "Precondition: Device on firmware v1.0.0. App connected.",
+        "Trigger DFU to v2.0.0 via: Device \u2192 Software & Updates \u2192 Update banner.",
+        "Wait for DFU completion (device restarts, app shows reconnected state).",
+        "Press Home button to background the app.",
+        "Wait 30 seconds. Reopen app from recents (no swipe-kill).",
+        "Observe Home screen firmware version.",
+        "Navigate to: Device \u2192 [Device Name] \u2192 observe firmware version."
       ],
-      "expected": "After DFU, when the device connects to a different phone (Phone B), the firmware version should be correctly read from the device and displayed. Both Phone A and Phone B should show the same post-DFU firmware version. The app on Phone B should not show a stale or default version."
+      "expected": "Expected: Home screen and Device Settings show v2.0.0 after app is backgrounded and resumed. Actual (If Bug): Stale v1.0.0 persists because the in-memory cache survives backgrounding but was never refreshed from the device post-DFU."
     },
     {
-      "title": "TC-DFU-VERSION-008: Verify firmware version persistence across app lifecycle transitions during DFU (rotation, incoming call, notification drawer)",
+      "title": "TC-DFU-VER-008: Firmware version after DFU \u2014 app update notification banner dismissal and re-check",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Device Name].",
-        "Note the current firmware version on Home screen.",
-        "Navigate to Device \u2192 Software & Updates and initiate a firmware update.",
-        "During the update (at ~50% progress):",
-        "a. Rotate the phone from portrait to landscape and back.",
-        "b. Pull down the notification drawer and dismiss it.",
-        "c. Simulate an incoming call (do NOT answer \u2014 let it ring and dismiss).",
-        "Allow the DFU to complete. Device reboots and reconnects.",
-        "After reconnection, observe the firmware version on the Home screen.",
-        "Navigate to Device \u2192 [Device Name] and observe the firmware version.",
-        "Force-kill the app, reopen, and verify the firmware version again."
+        "Precondition: Device on firmware v1.0.0. App connected.",
+        "Trigger DFU to v2.0.0 via: Device \u2192 Software & Updates \u2192 Update banner.",
+        "Wait for DFU completion (device restarts, app shows reconnected state).",
+        "Observe the firmware update notification banner (if any) on Home screen.",
+        "Dismiss the banner if present.",
+        "Observe Home screen firmware version.",
+        "Navigate to: Device \u2192 [Device Name] \u2192 observe firmware version.",
+        "Navigate to: Device \u2192 Software & Updates \u2192 observe 'Current Version' field.",
+        "Force-kill app. Relaunch. Repeat all observations."
       ],
-      "expected": "The firmware version should correctly update to the new version after DFU regardless of app lifecycle events (rotation, notification drawer, incoming call) that occurred during the update. The version should be consistent across all screens and persist correctly after app restart."
+      "expected": "Expected (Before restart): Home screen shows v2.0.0, Device Settings shows v2.0.0, Software & Updates shows v2.0.0. Expected (After restart): All locations show v2.0.0. Actual (If Bug): Before restart, all locations show stale v1.0.0 despite DFU completion. The 'Current Version' field in Software & Updates may also show stale data. After restart, all correctly show v2.0.0."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:09.771563Z"
+  "processed_at": "2026-04-25T09:45:49.461892Z"
 }
