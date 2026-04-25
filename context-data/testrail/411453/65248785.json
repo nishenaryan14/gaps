@@ -7,30 +7,27 @@
   "feature": "Device Management",
   "scenario": "Find My Device list becomes scrollable with fade indicator when more than 4 headsets are paired",
   "steps": [
-    "Open Poly Studio Mobile app on Android",
-    "Go to Home screen",
-    "Pair more than 4 Poly Bluetooth headsets (e.g., 5 or more) to the device",
-    "Ensure some headsets are connected and some are disconnected",
-    "Navigate to the Find My Device feature on the Home screen",
-    "Tap to expand the Find My Device list",
-    "Scroll through the list of paired headsets"
+    "Open Poly Studio Mobile app on Android.",
+    "Navigate to the Home screen.",
+    "Pair more than 4 Poly Bluetooth audio devices (e.g., headsets) with the Android device. Devices can be connected or disconnected.",
+    "Tap on the Find My Device feature/list on the Home screen.",
+    "Observe the list behavior when more than 4 devices are paired."
   ],
-  "expected": "The Find My Device list expands to show all paired headsets (connected and disconnected). The list is scrollable, and a slight fade effect appears at the bottom of the list to indicate that more items are available to scroll to.",
+  "expected": "The Find My Device list expands to show all paired devices, is scrollable, and displays a slight fade at the bottom indicating scrolling ability.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "poly-studio-mobile",
     "bluetooth-pairing",
-    "scrollable-list",
+    "device-list-scrollable",
     "fade-indicator",
-    "headset-list",
     "home-screen",
-    "paired-devices"
+    "android"
   ],
   "source_last_updated": "1761208524",
   "source_hash": "ba0c4cc8a3ca0598ec36ff146bb806b84d0cd5a50d45b36418cf88798aa0364b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.762005Z",
+  "processed_at": "2026-04-25T07:55:31.821121Z",
   "status": "active"
 }
