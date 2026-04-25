@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Application - Update from previous app version while using cloud account (TBD)",
-  "feature": "Application",
-  "scenario": "Update from previous app version while using a cloud account",
+  "feature": "App Settings",
+  "scenario": "App update from previous version fails or causes issues when using a cloud account in Poly Studio Mobile",
   "steps": [
-    "Launch the app with a previous version installed.",
-    "Log in using a cloud account.",
-    "Update the app to the latest version.",
-    "Open the app after the update."
+    "1. Launch Poly Studio Mobile app on the Android device.",
+    "2. Ensure the user is logged in with a cloud account.",
+    "3. Navigate to the Account screen and verify the current app version.",
+    "4. Update the Poly Studio Mobile app to the latest version via the Google Play Store.",
+    "5. Open the Poly Studio Mobile app after the update completes.",
+    "6. Observe the app behavior and account state after the update."
   ],
-  "expected": "The app updates successfully and the cloud account remains logged in with all data intact.",
+  "expected": "The app updates successfully. The user remains logged into their cloud account. All account data, device pairings, and settings are preserved after the update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "app update",
-    "cloud account",
-    "version upgrade",
-    "login",
-    "previous version",
-    "latest version",
-    "app migration",
-    "update persistence"
+    "poly-studio-mobile",
+    "app-update",
+    "cloud-account",
+    "android",
+    "google-play-store",
+    "account-state",
+    "version-upgrade",
+    "login-persistence"
   ],
   "source_last_updated": "1762420689",
   "source_hash": "b026e7712943a6f194adb875237299e74859013e401cebba4975296344c0eb17",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.274616Z",
+  "processed_at": "2026-04-25T05:37:16.874486Z",
   "status": "active"
 }
