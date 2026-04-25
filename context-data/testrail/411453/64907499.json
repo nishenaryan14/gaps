@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Support - App, user not logged ever, no data",
   "feature": "App Settings",
-  "scenario": "Support section shows \"None\" for Tenant name, Tenant ID, and User ID, and \"Unknown\" for Last Connected when accessed as a Guest user after onboarding",
+  "scenario": "Guest onboarding shows None for Tenant name, Tenant ID, and User ID, and Unknown for Last Connected in Support section",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. On the onboarding screen, select \"Later\" or skip login to proceed as a Guest (not logged in).",
-    "3. Once on the Home screen, tap the hamburger menu (\u2630) in the top-left corner.",
-    "4. From the menu, tap \"Support\".",
-    "5. Observe the Support section details: App version, App ID, Tenant name, Tenant ID, User ID, and Last Connected."
+    "Launch Poly Studio Mobile app",
+    "Proceed through onboarding as a Guest (do not log in)",
+    "Navigate to Home screen",
+    "Tap on Account or Support section",
+    "Observe the displayed information fields: App version, App ID, Tenant name, Tenant ID, User ID, Last Connected"
   ],
-  "expected": "For a Guest user (not logged in), the Support section should display the App version and App ID correctly. Tenant name, Tenant ID, and User ID should show as \"N/A\" or be hidden/omitted since the user is not associated with any tenant. Last Connected should show \"N/A\" or a reasonable default value.",
+  "expected": "For a Guest user (not logged in), Tenant name, Tenant ID, and User ID should be hidden, show 'N/A', or display a message indicating the user is not logged in. Last Connected should show 'N/A' or a similar appropriate placeholder.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "guest-user",
-    "support-section",
+    "guest-onboarding",
     "tenant-name",
     "tenant-id",
     "user-id",
     "last-connected",
-    "onboarding-skip"
+    "support-section",
+    "account-section"
   ],
   "source_last_updated": "1759751902",
   "source_hash": "72c7b3767a2e86da7bdf6f480f4f57d7b07e838824a6aff9b3e0342989c642dc",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.783660Z",
+  "processed_at": "2026-04-25T07:55:31.844245Z",
   "status": "active"
 }
