@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Support - Device page Go button",
   "feature": "App Settings",
-  "scenario": "\"Go\" button on Device page under Support does not open Poly Contact Support page in browser",
+  "scenario": "\"Go\" button on Device page in Support section does not open the Poly Contact Support URL in browser",
   "steps": [
-    "1. Pair and connect a Poly Bluetooth headset to the mobile device.",
-    "2. Open the Poly Studio Mobile app.",
-    "3. Tap the Menu icon (hamburger menu) to open the navigation drawer.",
-    "4. Tap \"Support\" from the menu.",
-    "5. Tap \"Device\" under the Support section.",
-    "6. Select the connected device from the device list.",
-    "7. Tap the \"Go\" button."
+    "Open the Poly Studio Mobile app on the Android device.",
+    "Navigate to the Home screen.",
+    "Tap the menu icon (hamburger) or navigate to the Support section.",
+    "Tap on the Device page to view device details (name, product ID, serial number, software version, headset revision, last connected).",
+    "Locate and tap the 'Go' button on the Device page."
   ],
-  "expected": "The Poly Contact Support page (https://support.hp.com/contact/product/poly-lens-mobile-app/...) opens in the device's default browser.",
+  "expected": "The Poly Contact Support page opens in the device's default browser at the expected URL.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "support-page",
-    "go-button",
     "device-page",
-    "contact-support",
-    "navigation-drawer",
-    "bluetooth-pairing",
-    "app-navigation"
+    "support-section",
+    "go-button",
+    "contact-support-url",
+    "android",
+    "navigation-issue"
   ],
   "source_last_updated": "1759752387",
   "source_hash": "3d741f06cb9532ec40f76144c5d0347f15699d8c59f83def18c52af73b5e357c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.948464Z",
+  "processed_at": "2026-04-25T09:32:26.184464Z",
   "status": "active"
 }
