@@ -5,20 +5,20 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udfe5 FLAMINGO | FALCON | Language change does not update FW on Charge Case",
   "feature": "Firmware Updates",
-  "scenario": "Charge Case firmware not updated after language-triggered DFU on Voyager Legend 50 in Poly Studio Mobile app",
-  "description_clean": "When a language change triggers a firmware update on a Poly Voyager Legend 50 headset paired with the Poly Studio Mobile app, the Charge Case is not updated along with the headset. The Charge Case remains on outdated firmware even after the DFU completes.",
+  "scenario": "Charge Case firmware not updated after language-triggered DFU on Voyager Legend 50 via Poly Studio Mobile app",
+  "description_clean": "When a language change triggers a firmware update on a Poly Voyager Legend 50 headset paired with the Poly Studio Mobile app, the Charge Case is not updated along with the headset. The Charge Case remains on outdated firmware after the DFU process completes.",
   "steps": [
     "Open Poly Studio Mobile app on the Android device.",
     "Ensure a Poly Voyager Legend 50 headset is paired and connected.",
     "Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
     "Change the language setting on the headset (e.g., from English to French).",
-    "Observe that the app triggers a firmware update (DFU) for the headset.",
-    "Wait for the firmware update to complete on the headset.",
-    "After the DFU completes, check the firmware version of the Charge Case.",
-    "Compare the Charge Case firmware version against the headset firmware version."
+    "Observe that the app triggers a firmware update (DFU) process for the headset.",
+    "Wait for the DFU process to complete on the headset.",
+    "After completion, check the firmware version of the Charge Case via the app or device info.",
+    "Compare the Charge Case firmware version against the expected updated version."
   ],
-  "expected": "The Charge Case firmware should be updated to match the headset firmware version after the DFU completes.",
-  "actual": "The Charge Case remains on the outdated firmware version even after the headset firmware update completes.",
+  "expected": "The Charge Case firmware should be updated to match the headset firmware version after the DFU process completes.",
+  "actual": "The Charge Case remains on the outdated firmware version after the DFU process completes.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -31,11 +31,12 @@
     "poly-studio-mobile",
     "device-settings",
     "firmware-update",
-    "firmware-version-mismatch"
+    "language-setting-change",
+    "dfu-completion"
   ],
   "source_last_updated": "2026-04-20T14:21:25.000+0000",
   "source_hash": "b1e64b58afb44ae0f6be620dddf7eae9445a7c55ad23ce4267a0c8dea201bcce",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.293155Z",
+  "processed_at": "2026-04-25T07:55:31.306267Z",
   "status": "active"
 }
