@@ -5,30 +5,33 @@
   "project": "411453",
   "title": "Language change - Case Update Needed popup is not present after Language Change",
   "feature": "Firmware Updates",
-  "scenario": "\"Case Update Needed\" popup is not displayed after changing language in Device Settings on Poly Studio Mobile app",
+  "scenario": "\"Case Update Needed\" popup incorrectly triggers or fails to appear after changing app language in Device Settings on Poly Studio Mobile",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Tap on the device name to open Device Settings.",
-    "Navigate to Device Settings \u2192 Languages.",
-    "Select a different language from the list.",
-    "Confirm the language change and allow the update to complete.",
-    "Observe the screen after the update completes."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Home screen and ensure a Poly Bluetooth audio device (e.g., earbuds) is connected.",
+    "3. Go to Device Settings by tapping on the connected device name.",
+    "4. Tap on 'Languages' under Device Settings.",
+    "5. Change the app language to a different language (e.g., from English to Spanish).",
+    "6. Exit Device Settings and return to the Home screen.",
+    "7. Trigger a software/firmware update check by navigating to Settings > Software Update (or equivalent path).",
+    "8. Observe whether the 'Case Update Needed' popup or card is displayed."
   ],
-  "expected": "After the language change update completes, the \"Case Update Needed\" popup/card should be displayed, as it is expected to appear after any firmware update (including language change updates).",
+  "expected": "The 'Case Update Needed' popup/card should NOT appear after a language change alone. It should only appear after a firmware DFU (Device Firmware Update) for the earbuds is required or triggered via Settings > Software Update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "case-update-needed",
     "poly-studio-mobile",
     "device-settings",
-    "languages",
-    "case-update-needed",
-    "popup",
-    "language-change",
-    "app-ui"
+    "app-language-change",
+    "software-update",
+    "popup-trigger",
+    "bluetooth-audio-device",
+    "firmware-update-check"
   ],
   "source_last_updated": "1763382835",
   "source_hash": "2f7419fff0d1f7c9ff04fdab2ee49b38fbf130529d4db896bb6d3beb9be8e492",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.892227Z",
+  "processed_at": "2026-04-25T08:21:30.981019Z",
   "status": "active"
 }
