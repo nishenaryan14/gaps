@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "1 step DFU - new DFU screen from Settings for both updates",
   "feature": "Firmware Update",
-  "scenario": "New DFU screen design in Settings > SW update tab shows all available updates for earbuds and charging case simultaneously, replacing the old separate update sections",
+  "scenario": "New DFU screen design in Settings shows available updates for earbuds and charging case on Voyager Free 60+ and Voyager Legend 50",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. On the Home screen, tap the Update button.",
-    "3. Observe the app navigates to Settings > SW update tab.",
-    "4. Verify the new DFU screen design is displayed.",
-    "5. Check that all available firmware updates are listed for the user to choose from (e.g., Emu for EB, Flamingo for EB and CC).",
-    "6. Compare with the old design which showed separate update sections for EB, CC, and all, with individual update buttons, release notes, and device images."
+    "1. Open Poly Studio Mobile app on the Home screen.",
+    "2. Tap the Update button on the Home screen.",
+    "3. Observe the app navigates to the Settings screen with the SW update tab displayed.",
+    "4. Verify the new DFU screen design is shown, listing all available firmware updates for both the earbuds (EB) and charging case (CC).",
+    "5. Confirm the user can select which updates to apply (e.g., earbuds, charging case, or both)."
   ],
-  "expected": "The new DFU screen design is displayed under Settings > SW update tab, showing all available updates (e.g., Emu for EB, Flamingo for EB and CC) in a unified list for the user to choose from.",
+  "expected": "The Settings screen opens with the SW update tab showing the new DFU design, listing all available firmware updates for both earbuds and charging case, allowing the user to choose which to update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-screen",
-    "sw-update-tab",
     "firmware-update",
+    "voyager-free-60-plus",
+    "voyager-legend-50",
     "poly-studio-mobile",
-    "settings-ui",
-    "charging-case-update",
-    "earbuds-update",
-    "update-screen-design"
+    "settings-screen",
+    "sw-update-tab",
+    "charging-case-update"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "8aca5af79f628a800456b580c557ec6254c0716445f21770951f0a17d4d4e13c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.032728Z",
+  "processed_at": "2026-04-25T09:32:26.293363Z",
   "status": "active"
 }
