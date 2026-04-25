@@ -4,34 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Find My Device - Sending Tone - X button",
-  "feature": "Device Management",
-  "scenario": "Find My Device tone does not stop when tapping X button, user is not returned to map screen",
+  "feature": "App Settings",
+  "scenario": "Find My Device X button does not stop tone and return to map screen after replaying tone in Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app with a headset paired and connected.",
-    "2. Go to App Settings.",
-    "3. Tap Find My Device (allow GPS if prompted).",
-    "4. Tap the blue geo icon.",
-    "5. Tap the Play button to start the tone.",
-    "6. Tap \"ok got it\" on the prompt.",
-    "7. Tap Play again.",
-    "8. Tap the \"X\" button."
+    "1. Open Poly Studio Mobile app",
+    "2. Navigate to Home \u2192 Device Settings \u2192 [Device Name]",
+    "3. Tap on 'Find My Device'",
+    "4. Tap the Play button to play a tone",
+    "5. Tap 'OK, Got It' to dismiss the prompt",
+    "6. Tap the Play button again to replay the tone",
+    "7. While the tone is playing, tap the 'X' button"
   ],
-  "expected": "Sound should stop and user is returned to the Find My Device map screen.",
+  "expected": "The tone stops playing and the user is returned to the Find My Device map screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "poly-studio-mobile",
-    "tone-playback",
+    "tone-replay",
     "x-button",
     "map-screen",
-    "app-settings",
-    "gps-prompt",
-    "geo-icon"
+    "device-settings",
+    "tone-playback"
   ],
   "source_last_updated": "1769428234",
   "source_hash": "60d4318b9d9f9c415e79935736c6a0f6a6139b285a68f12472df355744fe620c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.834515Z",
+  "processed_at": "2026-04-25T08:21:30.944936Z",
   "status": "active"
 }
