@@ -4,30 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Support Device Opened",
-  "feature": "Analytics",
-  "scenario": "Support Device Opened event is logged when the Support > Device screen is opened, with event counts updating after a few hours and Firebase dashboard displaying default analytics elements.",
+  "feature": "App Settings",
+  "scenario": "Analytics event logged when Support > Device screen is opened in the Poly Studio Mobile app",
   "steps": [
-    "Open the app",
-    "Navigate to Support > Device screen",
-    "Check Firebase dashboard for the 'Support Device Opened' event",
-    "Verify that default elements are displayed: graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment"
+    "Open the Poly Studio Mobile app on the mobile device.",
+    "Navigate to the Home screen.",
+    "Tap on the Support option from the Home screen or menu.",
+    "Tap on the Device screen within the Support section.",
+    "Observe the analytics event being logged."
   ],
-  "expected": "'Support Device Opened' event is logged in Firebase when the Support > Device screen is opened. The Firebase dashboard displays default elements including a graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
+  "expected": "An analytics event is logged when the Support > Device screen is opened. The event tracks usage analytics including event count by country, gender, app version, app build, and app environment.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Support Device Opened",
-    "Firebase dashboard",
-    "event tracking",
-    "analytics",
-    "event count",
-    "default elements",
-    "app version",
-    "app environment"
+    "poly-studio-mobile",
+    "support-screen",
+    "device-screen",
+    "analytics-event",
+    "in-app-navigation",
+    "mobile-app-ui"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "a1d07777524c30f0b895829918a079de109eff8068fb6fc95db4cad58536ba0a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.337160Z",
+  "processed_at": "2026-04-25T05:37:16.965946Z",
   "status": "active"
 }
