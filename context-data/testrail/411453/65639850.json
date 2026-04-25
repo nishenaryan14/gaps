@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "1 step DFU - Houston screen during CC update (only CC update)",
-  "feature": "DFU (Device Firmware Update)",
-  "scenario": "During a 1-step DFU with an outdated Charge Case, placing both earbuds into the case when DFU is over 20% complete causes the app to show a Houston screen instead of expected behavior.",
+  "feature": "Firmware Update",
+  "scenario": "\"Houston\" screen is displayed when earbuds are placed in charging case during a Charge Case-only 1-step DFU update",
   "steps": [
-    "Start a 1-step DFU process with Osprey and an outdated Charge Case.",
-    "Wait until the DFU is over 20% complete.",
-    "Place both earbuds into the Charge Case.",
-    "Observe the app screen."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen and ensure the earbuds are connected.",
+    "3. Initiate a 1-step Device Firmware Update (DFU) for the Charge Case (CC) only.",
+    "4. Wait for the update progress to reach over 20%.",
+    "5. While the update is in progress (over 20%), place the earbuds into the charging case.",
+    "6. Observe the screen displayed on the app."
   ],
-  "expected": "The app should show the expected behavior (e.g., normal DFU progress or appropriate status).",
+  "expected": "The app displays the \\\"Houston\\\" screen (specific UI screen/animation indicating the update is ongoing) when the earbuds are placed into the charging case during a CC-only firmware update at over 20% progress.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "1-step DFU",
-    "outdated Charge Case",
-    "Osprey",
-    "Houston screen",
-    "earbuds placed in case",
-    "DFU progress 20%",
-    "app screen behavior",
-    "firmware update failure"
+    "poly-studio-mobile",
+    "dfu",
+    "charge-case",
+    "firmware-update",
+    "houston-screen",
+    "earbuds-in-case",
+    "1-step-dfu",
+    "charging-case"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "716c323320ccabbd9fbfd4a304d0825704ec2b65fe9803cdac6120370d6a5c83",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.302492Z",
+  "processed_at": "2026-04-25T05:37:16.903064Z",
   "status": "active"
 }
