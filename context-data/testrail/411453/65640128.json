@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "Policy: Create Policy while WiFi is turned off",
   "feature": "App Settings",
-  "scenario": "Cloud policy created while WiFi is off is applied to device within seconds after WiFi reconnection, locking affected settings",
+  "scenario": "Cloud policy created while WiFi is off is applied to device after WiFi connection is restored, locking affected settings",
   "steps": [
-    "1. Ensure the mobile device's WiFi is turned off.",
-    "2. On the Poly Cloud portal, create a new policy that disables and locks specific settings (e.g., ANC, Transparency Mode, Equalizer).",
-    "3. On the Poly Studio Mobile app, navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "4. Verify that the settings affected by the policy are currently enabled and unlocked (since WiFi is off).",
-    "5. Turn on the mobile device's WiFi and reconnect to the network.",
-    "6. Wait a few seconds for the policy to sync.",
-    "7. On the Poly Studio Mobile app, navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "8. Check the settings that were targeted by the policy (e.g., Audio Settings \u2192 ANC, Transparency Mode, Equalizer)."
+    "1. Ensure the Poly device is paired and connected to the Poly Studio Mobile app.",
+    "2. Turn off WiFi on the mobile device.",
+    "3. On the Poly Cloud portal, create or modify a Policy that disables and locks specific settings (e.g., ANC, Transparency Mode, Equalizer).",
+    "4. On the mobile device, turn WiFi back on and allow the device to reconnect to the network.",
+    "5. Open the Poly Studio Mobile app.",
+    "6. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings.",
+    "7. Observe the settings affected by the Policy (e.g., ANC, Transparency Mode, Equalizer)."
   ],
-  "expected": "The policy created on the Cloud is applied to the device within a few seconds after WiFi is reconnected. The settings affected by the policy become disabled and locked (grayed out) in the Poly Studio Mobile app.",
+  "expected": "The Policy created on the Cloud is applied to the device after WiFi connection is restored. Settings affected by the Policy are disabled and locked (grayed out or not adjustable) in the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "cloud-policy-sync",
-    "wifi-reconnection",
-    "policy-application",
-    "settings-lock",
+    "cloud-policy",
+    "wifi-connection-restored",
     "poly-studio-mobile",
     "anc",
     "transparency-mode",
-    "equalizer"
+    "equalizer",
+    "settings-lock",
+    "policy-application"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "66ae05895932f3c8a7deabb66e6476495dfa62c41db5351b3414892c8ed62bf3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.982391Z",
+  "processed_at": "2026-04-25T08:21:31.047099Z",
   "status": "active"
 }
