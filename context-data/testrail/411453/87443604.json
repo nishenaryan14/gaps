@@ -6,32 +6,22 @@
   "title": "Verify software update flow in guest mode",
   "feature": "Firmware Updates",
   "scenario": "Software update flow verification in guest mode shows \"No previously connected devices were found\" and help guide loads correctly",
-  "steps": [
-    "1. Launch the Poly Studio Mobile app in guest mode (no Poly headset connected).",
-    "2. Observe the Home screen and verify that the \"Supported Devices\" button is displayed.",
-    "3. Open the hamburger menu (three-line icon) from the top-left corner of the Home screen.",
-    "4. Change the device language to Spanish via the phone's system Settings (Settings \u2192 System \u2192 Languages & input \u2192 Languages \u2192 Add/select Espa\u00f1ol).",
-    "5. Return to the Poly Studio Mobile app and navigate to the hamburger menu \u2192 Support.",
-    "6. In the Support menu, tap the \"Device\" button.",
-    "7. Observe the message displayed on screen.",
-    "8. Tap the \"Help Guide\" option and verify that the help guide page loads correctly."
-  ],
-  "expected": "The \"Supported Devices\" button is visible on the Home screen. After changing the language to Spanish, the app UI reflects the new language. Tapping the Device button in Support shows the message \"No previously connected devices were found.\" The Help Guide page loads successfully without errors.",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "guest-mode",
     "software-update",
+    "firmware-update",
     "no-previously-connected-devices",
     "help-guide",
-    "supported-devices",
-    "language-change",
-    "support-menu"
+    "device-discovery",
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1775727607",
   "source_hash": "e0fe4dcdc158b9d209a91f9db5f7c52234ae4c09172196d3adfdef2772f34a41",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:32.254177Z",
+  "processed_at": "2026-04-25T09:32:27.108429Z",
   "status": "active"
 }
