@@ -4,35 +4,34 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS | Free20 | Repeat Notifications",
-  "feature": "iOS | Free20 | Notifications",
-  "scenario": "Repeated charging notifications appear when one Free20 earbud is worn and the other is placed in the open charging case on iOS",
-  "description_clean": "When using Free20 earbuds on iOS (builds 53/54), if one earbud is worn and the other is placed in the unplugged, open charging case, repeated charging notifications appear instead of a single notification. Expected behavior is one charging notification since only one earbud is charging.",
+  "feature": "Notifications",
+  "scenario": "Duplicate charging notifications when placing one earbud in unplugged open charging case while wearing the other earbud",
+  "description_clean": "Repeat charging notifications appear when one earbud is placed in the unplugged, open charging case while wearing the other earbud. Expected: only one charging notification, since only one earbud is charging.",
   "steps": [
-    "1. Ensure you have Free20 earbuds and an iOS device running build 53 or 54.",
-    "2. Wear one earbud (e.g., left) in your ear.",
-    "3. Place the other earbud (e.g., right) into the unplugged, open charging case.",
-    "4. Observe the charging notifications on the iOS device."
+    "1. Open the charging case (unplugged, no cable connected).",
+    "2. Remove one earbud from the charging case and wear it.",
+    "3. Place the other earbud back into the charging case (case remains open).",
+    "4. Observe the notifications on the Poly Studio Mobile app or phone notification shade."
   ],
-  "expected": "A single charging notification should appear, since only one earbud is charging.",
-  "actual": "Repeated charging notifications appear instead of a single notification.",
+  "expected": "Only one charging notification appears, since only one earbud is placed in the case and charging.",
+  "actual": "Repeat charging notifications appear continuously or multiple times while only one earbud is in the case.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "NeedsQAReview"
   ],
   "keywords": [
-    "Free20 earbuds",
-    "repeated charging notifications",
-    "iOS",
-    "open charging case",
-    "one earbud worn",
-    "build 53",
-    "build 54",
-    "false charging alerts"
+    "charging-notifications",
+    "poly-studio-mobile",
+    "earbud-placement",
+    "open-charging-case",
+    "unplugged-case",
+    "notification-duplication",
+    "battery-persistence"
   ],
-  "source_last_updated": "2026-04-24T11:46:03.000+0000",
+  "source_last_updated": "2026-04-24T14:51:37.000+0000",
   "source_hash": "0ad2bad55b212cf0ee0f890368f2c1e8972c177a8d81920ca2d8eac47249c307",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:52.778489Z",
+  "processed_at": "2026-04-25T05:37:15.661724Z",
   "status": "active"
 }
