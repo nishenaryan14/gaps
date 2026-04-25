@@ -6,30 +6,31 @@
   "summary": "ANDROID \ud83e\udd16 Falcon Charge Stand displays on User Guides screen but it shouldn't",
   "feature": "App Settings",
   "scenario": "Falcon Charge Stand incorrectly appears as a sub-device on the User Guides screen in the Poly Studio Mobile app",
-  "description_clean": "The Falcon Charge Stand is incorrectly displayed on the User Guides screen in the app. The charge stand should not appear as a sub-device in this screen.",
+  "description_clean": "The \"Falcon Charge Stand\" is incorrectly displayed on the User Guides screen in the app. It should not appear as a sub-device on that screen.",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
-    "Tap on the User Guides option",
-    "Observe the list of devices and accessories displayed"
+    "Tap on the [Device Name] to access Device Settings",
+    "Select User Guides from the menu"
   ],
-  "expected": "The Falcon Charge Stand should NOT appear as a sub-device on the User Guides screen.",
-  "actual": "The Falcon Charge Stand is incorrectly displayed as a sub-device on the User Guides screen.",
+  "expected": "The User Guides screen should only display relevant user guides for the connected device. The \"Falcon Charge Stand\" should NOT appear as a sub-device on this screen.",
+  "actual": "The \"Falcon Charge Stand\" is incorrectly displayed as a sub-device on the User Guides screen.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "poly-studio-mobile-app",
     "falcon-charge-stand",
+    "poly-studio-mobile",
     "user-guides-screen",
-    "sub-device-display",
-    "device-listing",
-    "accessories-listing",
-    "home-screen-navigation"
+    "sub-device",
+    "device-settings",
+    "home-screen",
+    "app-ui-bug",
+    "device-listing"
   ],
   "source_last_updated": "2026-04-23T13:05:07.000+0000",
   "source_hash": "3378544f9691cab9bd0547d0522de663be5e17be00fb7f8a7e5512b0d401c827",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:15.436647Z",
+  "processed_at": "2026-04-25T07:55:30.982568Z",
   "status": "active"
 }
