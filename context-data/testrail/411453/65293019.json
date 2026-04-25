@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "Onboarding - Eula page - App in the background",
   "feature": "App Settings",
-  "scenario": "EULA page animation and Continue button break after app is backgrounded for 1-2 minutes during onboarding",
+  "scenario": "EULA page animation stops working after app is sent to background and reopened during onboarding",
   "steps": [
     "1. Launch the Poly Studio Mobile app for the first time (fresh install or after clearing data).",
-    "2. Observe the EULA / Privacy Policy acceptance screen is displayed with the Continue button visible and the background animation playing.",
-    "3. Press the Home button or switch to another app to put the Poly Studio Mobile app into the background.",
-    "4. Wait for 1\u20132 minutes.",
-    "5. Tap the Poly Studio Mobile app icon or use the app switcher to bring the app back to the foreground."
+    "2. Complete any initial setup screens until reaching the EULA (End User License Agreement) page.",
+    "3. Observe the EULA page content: verify the agreement text, License Agreement link, Privacy Policy link, a blurred Continue button, and working animation are all displayed.",
+    "4. Press the Home button or switch to another app to send the Poly Studio Mobile app to the background.",
+    "5. Wait 1\u20132 minutes.",
+    "6. Reopen the Poly Studio Mobile app from the recent apps list or home screen.",
+    "7. Observe the app state and EULA page content."
   ],
-  "expected": "The app remains on the EULA / Privacy Policy acceptance screen. The background animation is still playing, and the Continue button is still visible and blurred.",
+  "expected": "The app remains on the same EULA page with all content intact (agreement text, License Agreement link, Privacy Policy link, blurred Continue button) and the animation still working.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "eula-screen",
-    "continue-button",
-    "background-foreground",
-    "onboarding-flow",
-    "animation-break",
-    "app-state-persistence"
+    "eula-page",
+    "onboarding",
+    "background-resume",
+    "animation",
+    "app-state-persistence",
+    "fresh-install"
   ],
   "source_last_updated": "1760528309",
   "source_hash": "3698b0f0e9c6d603f714fd19b41e4f5946e315e30ecabda61142923dfd6c7304",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.902154Z",
+  "processed_at": "2026-04-25T09:32:26.118954Z",
   "status": "active"
 }
