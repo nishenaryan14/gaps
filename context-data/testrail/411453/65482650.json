@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Application - Update from previous app version while using guest account (TBD)",
   "feature": "Firmware Update",
-  "scenario": "App update fails or causes unexpected behavior when performed while logged into a guest account",
+  "scenario": "App update from previous version fails or behaves unexpectedly when using a guest account in Poly Studio Mobile",
   "steps": [
     "1. Launch Poly Studio Mobile app on the Android device.",
-    "2. Ensure the app is currently signed in using a Guest account.",
+    "2. Ensure the app is currently logged in using a Guest account.",
     "3. Navigate to the Google Play Store and check for available updates for the Poly Studio Mobile app.",
-    "4. If an update is available, tap 'Update' to install the latest version of the app.",
-    "5. Wait for the update to complete and the app to re-launch or be manually opened.",
-    "6. Observe the app's state after the update."
+    "4. Install the available update for the Poly Studio Mobile app.",
+    "5. After the update completes, relaunch the Poly Studio Mobile app.",
+    "6. Observe the app state and account status after the update."
   ],
-  "expected": "The app should successfully update and launch. The Guest account session should be preserved, and the user should remain logged in as Guest without any data loss or forced sign-in prompt.",
+  "expected": "The app should successfully update and relaunch, retaining the Guest account session without data loss or errors.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "guest-account",
     "app-update",
-    "google-play-store",
     "android",
-    "update-failure",
-    "post-update-behavior"
+    "google-play-store",
+    "account-persistence",
+    "update-failure"
   ],
   "source_last_updated": "1762420656",
   "source_hash": "f329e9c6d47124891c943f07e6485c1b7ba9d606fa0a1344b6e4e971a3968b46",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.276590Z",
   "status": "active"
 }
