@@ -5,33 +5,30 @@
   "project": "411453",
   "title": "Software Update - DFU -  Houston...  Retry button",
   "feature": "Firmware Update",
-  "scenario": "DFU failure at 10% followed by Retry does not navigate back to the Software Update screen to restart the update process",
+  "scenario": "DFU failure during firmware update at 10% progress does not navigate user back to retry screen when headset is powered off",
   "steps": [
-    "1. Launch Poly Studio Mobile app on the Android device.",
-    "2. Pair the Poly Bluetooth headset with the Android device via the app's Home screen.",
-    "3. From the Home screen, tap on the paired [Device Name] to open Device Settings.",
-    "4. In Device Settings, tap 'Software Update'.",
-    "5. On the Software Update screen, tap 'Update'.",
-    "6. On the update prompt, tap 'Continue'.",
-    "7. On the next prompt, tap 'Start Update' to begin the DFU process.",
-    "8. When the update progress reaches approximately 10%, press and hold the Power button on the headset to turn it off, triggering a DFU failure.",
-    "9. On the failure screen, tap the 'Retry' button."
+    "1. Pair the headset with the phone and launch the Poly Studio Mobile app.",
+    "2. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
+    "3. In Device Settings, tap 'Software Update'.",
+    "4. Tap 'Update' \u2192 'Continue' \u2192 'Start Update' to begin the firmware update process.",
+    "5. During the update (e.g., at ~10% progress), turn off the headset by pressing and holding the Power button to trigger a DFU failure.",
+    "6. On the failure screen, tap the 'Retry' button."
   ],
-  "expected": "User is directed to the previous Software Update screen where the update process will attempt again.",
+  "expected": "User is directed to the previous screen (Software Update screen) where the update process will attempt again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-failure",
-    "retry",
-    "software-update-screen",
-    "navigation",
-    "poly-studio-mobile",
     "firmware-update",
-    "update-progress"
+    "poly-studio-mobile",
+    "retry-screen",
+    "software-update",
+    "device-settings",
+    "power-off"
   ],
   "source_last_updated": "1763131137",
   "source_hash": "e1ee67bf97df315d4e52fe802d35d2d0b838e4f52b7b29495a022b1ead131f78",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.881045Z",
+  "processed_at": "2026-04-25T07:55:31.957714Z",
   "status": "active"
 }
