@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "FMD - Both earbuds disconnected",
   "feature": "Bluetooth Pairing",
-  "scenario": "Find My Device map shows three devices (case, left earbud, right earbud) for Voyager Free 60 Series but only two earbuds (no case) for Voyager Free 20 when disconnected",
+  "scenario": "Find My Device feature in Lens app shows both earbuds and case as disconnected on Voyager Free 60 Series",
   "steps": [
-    "Open Poly Studio Mobile app on your phone.",
-    "Ensure the Voyager Free 60 Series (Osprey) device is paired but currently disconnected from the phone.",
-    "Navigate to the Home screen.",
-    "Tap on the Find My Device feature.",
-    "Observe the map view showing device locations."
+    "Open the Poly Lens app on the mobile device.",
+    "Navigate to the Find My Device feature from the Home screen.",
+    "Observe the device list displayed on the Find My Device screen.",
+    "Note the entries shown: Case, Left earbud, and Right earbud.",
+    "Check the connection status indicator for each entry."
   ],
-  "expected": "For Voyager Free 60 Series (Osprey): The map should display three devices \u2014 the charging case, left earbud, and right earbud \u2014 all shown in a disconnected state.",
+  "expected": "The Find My Device feature should show the Case, Left earbud, and Right earbud as connected when the earbuds are in use and within range. At minimum, the connected earbud(s) should show as connected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
-    "voyager-free-60-series",
-    "voyager-free-20",
-    "poly-studio-mobile",
-    "map-view",
-    "disconnected-state",
-    "case-tracking",
-    "earbud-tracking"
+    "poly-lens-app",
+    "voyager-free-60",
+    "connection-status",
+    "disconnected",
+    "earbuds-case",
+    "device-list"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "b20248c05211464ed3eeb5547d1180bb7602f20acc58acf22299aa647793ebea",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.383055Z",
+  "processed_at": "2026-04-25T09:32:26.344537Z",
   "status": "active"
 }
