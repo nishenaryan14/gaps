@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device Settings - List of supported settings vs UI headset spec",
   "feature": "Device Management",
-  "scenario": "Verify that headset settings displayed in the Poly Studio Mobile app match the headset UI specification for supported features",
+  "scenario": "Verify that supported headset settings in Poly Studio Mobile app match the headset UI specification",
   "steps": [
-    "1. Acquire the UI specification document for the tested Poly headset.",
-    "2. Open the Poly Studio Mobile app on the Home screen.",
-    "3. Tap on the connected [Device Name] to navigate to Device Settings.",
-    "4. Review the list of settings displayed under Device Settings (e.g., Audio Settings, ANC, Transparency Mode, Equalizer, Notifications).",
-    "5. Compare each setting listed in the app against the headset UI specification document.",
-    "6. Verify that all supported headset settings from the spec are present in the app."
+    "1. Acquire the headset UI specification document for the tested Poly Bluetooth headset.",
+    "2. Open the Poly Studio Mobile app on the connected Android device.",
+    "3. Navigate to the Home screen and tap on the connected [Device Name] to open Device Settings.",
+    "4. Review the full list of settings and features displayed in Device Settings (e.g., Audio Settings, ANC, Transparency Mode, Equalizer, Notifications).",
+    "5. Compare each setting/feature in the app against the headset UI specification document.",
+    "6. Verify that all supported headset settings listed in the spec are present in the app."
   ],
-  "expected": "All supported headset settings from the UI specification are present in the Poly Studio Mobile app under Device Settings.",
+  "expected": "All supported headset settings from the headset UI specification are present in the Poly Studio Mobile app's Device Settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile-app",
     "device-settings",
-    "ui-specification",
+    "headset-ui-specification",
     "anc",
     "transparency-mode",
     "equalizer",
-    "headset-settings",
+    "audio-settings",
     "feature-parity"
   ],
   "source_last_updated": "1762351152",
   "source_hash": "4bde86ea1b94796d4ea89b1643efa4a47fb020725f5c9709effbc47856d17e41",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.965800Z",
+  "processed_at": "2026-04-25T09:32:26.195378Z",
   "status": "active"
 }
