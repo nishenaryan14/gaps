@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - Connecting multiple headsets",
   "feature": "Device Management",
-  "scenario": "Device home screen fails to display all connected headsets when multiple devices are paired and connected",
+  "scenario": "Device home screen navigation dots do not accurately reflect multiple connected headsets when swiping between paired devices",
   "steps": [
-    "Open Poly Studio Mobile app on Android",
-    "Pair and connect two or more Poly Bluetooth headsets to the Android device",
-    "Navigate to the Home screen of the app",
-    "Observe the dots at the bottom of the Home screen indicating the number of connected devices",
-    "Swipe left or right on the Home screen to navigate between connected devices"
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure that multiple Poly Bluetooth headsets (e.g., Poly Voyager 5200 and Poly Voyager 4320) are paired and connected to the Android device via Bluetooth.",
+    "3. Navigate to the Home screen of the app.",
+    "4. Observe the dots at the bottom of the Home screen, which indicate the number of connected devices and which device is currently displayed.",
+    "5. Swipe left or right on the Home screen to navigate between the connected devices."
   ],
-  "expected": "The Home screen displays all connected devices properly. Dots at the bottom indicate the number of connected devices and which device is currently displayed. Swiping left or right navigates between each connected device smoothly.",
+  "expected": "All connected devices are displayed properly on the Home screen. The dots at the bottom correctly indicate the number of connected devices and highlight the currently displayed device. Swiping left or right smoothly navigates between connected devices.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "home-screen",
-    "connected-devices",
-    "multi-device-pairing",
-    "bluetooth-headsets",
-    "device-navigation",
-    "device-dots"
+    "navigation-dots",
+    "device-swiping",
+    "multi-device-connection",
+    "bluetooth-pairing",
+    "voyager-5200",
+    "voyager-4320"
   ],
   "source_last_updated": "1761749623",
   "source_hash": "5464078184de509e68e3afb507374ea512ba3582da474bb167200e349b07dfaa",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.917421Z",
+  "processed_at": "2026-04-25T09:32:26.143814Z",
   "status": "active"
 }
