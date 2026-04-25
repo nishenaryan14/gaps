@@ -5,31 +5,34 @@
   "project": "411453",
   "title": "Personal user - no tenant data in the mobile app",
   "feature": "App Settings",
-  "scenario": "Guest user without tenant sees \"None\" for Tenant name, Tenant ID, and User ID, and \"Unknown\" for Last connected in Poly Studio Mobile app Support screen",
+  "scenario": "Guest user sees \"None\" and \"Unknown\" values for Tenant/User fields in Poly Studio Mobile app Support screen",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Log in as a Guest (personal user with no tenant).",
-    "3. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
-    "4. Observe the Tenant name, Tenant ID, and User ID fields.",
-    "5. Observe the \"Last connected\" field.",
-    "6. Tap the \"Later\" button."
+    "Open Poly Studio Mobile app",
+    "Log in as Guest (personal user, no tenant)",
+    "Navigate to Poly Lens Menu",
+    "Tap Support",
+    "Tap App",
+    "Observe the Tenant name, Tenant ID, and User ID fields",
+    "Observe the Last connected field",
+    "Tap the 'Later' button",
+    "Re-observe the Tenant name, Tenant ID, User ID, and Last connected fields"
   ],
-  "expected": "For a personal user (no tenant), the Tenant name, Tenant ID, and User ID fields should display appropriate values (e.g., \"N/A\" or be hidden), and the \"Last connected\" field should show a valid timestamp or \"N/A\".",
+  "expected": "For a personal user (no tenant), the Tenant name, Tenant ID, and User ID fields should display appropriate values (e.g., user-specific info or \"N/A\") and the Last connected field should show a valid timestamp or \"N/A\". Tapping \"Later\" should dismiss the view or update the fields correctly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "guest-user",
-    "tenant-name",
-    "tenant-id",
-    "user-id",
-    "last-connected",
     "support-screen",
-    "app-info"
+    "tenant-field",
+    "user-id",
+    "none-unknown-values",
+    "poly-lens-menu",
+    "app-settings"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "f4730afc86fb3c114bca643218b3bb723eb5634dc57b14f5e7c5a507db72a70e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.060609Z",
+  "processed_at": "2026-04-25T09:32:26.317899Z",
   "status": "active"
 }
