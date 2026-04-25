@@ -4,32 +4,32 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "ANDROID | Low battery notification shown on app cold start despite full battery",
-  "feature": "Battery/Charging",
+  "feature": "Battery",
   "scenario": "Low battery notification incorrectly appears on app cold start despite connected device having full/high battery level",
   "description_clean": "Low battery notification incorrectly appears on app cold start (first launch) even when the connected device has a full/high battery level. Expected behavior: no low battery notification should be shown when the device battery level is high.",
   "steps": [
-    "1. Launch Poly Studio Mobile app (cold start / first launch after force close).",
-    "2. Connect a Poly Bluetooth audio device that has a full or high battery level.",
-    "3. Observe the Home screen for any notification or banner related to battery status."
+    "1. Launch Poly Studio Mobile app for the first time (cold start).",
+    "2. Ensure a Poly Bluetooth audio device is connected with a full or high battery level.",
+    "3. Observe the Home screen for any battery-related notifications."
   ],
-  "expected": "No low battery notification should be shown when the connected device battery level is high/full.",
+  "expected": "No low battery notification should be shown on the Home screen when the connected device battery level is high.",
   "actual": "A low battery notification incorrectly appears on the Home screen upon cold start, even though the connected device has a full/high battery level.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "poly-studio-mobile",
     "low-battery-notification",
-    "battery-persistence",
     "cold-start",
-    "home-screen",
+    "poly-studio-mobile",
     "battery-level",
+    "home-screen",
+    "battery-persistence",
     "bluetooth-connection",
     "false-battery-alert"
   ],
   "source_last_updated": "2026-04-22T12:01:07.000+0000",
   "source_hash": "42c6fcb4d71dfc5c9bbe168472448eb5c3e1b7301b12b3f91fa8804489a1ba06",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.379961Z",
+  "processed_at": "2026-04-25T09:32:24.938053Z",
   "status": "active"
 }
