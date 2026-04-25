@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "Mobile user changes the Lens tenant, the change in the mobile app",
   "feature": "App Settings",
-  "scenario": "Lens tenant change after accepting invite via external source is not reflected in Poly mobile app until restart",
-  "steps": [],
-  "expected": "",
+  "scenario": "Lens tenant switch via external invite is not reflected in Poly Studio Mobile app until restart",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the mobile device.",
+    "2. Ensure the user is currently registered on a Lens tenant (Tenant A).",
+    "3. Navigate to the Account screen and verify the current tenant information (tenant name, tenant ID, user ID, app ID) is displayed for Tenant A.",
+    "4. Accept an invite to another Lens tenant (Tenant B) via an external source (e.g., laptop).",
+    "5. Return to the Poly Studio Mobile app on the mobile device.",
+    "6. Observe whether the app automatically reflects the change to Tenant B without requiring a restart.",
+    "7. If the change is not automatically reflected, close and restart the Poly Studio Mobile app.",
+    "8. Navigate to the Account screen (or Poly Support/App page) and verify the displayed tenant information.",
+    "9. Confirm the displayed tenant name, tenant ID, user ID, and app ID now correspond to Tenant B."
+  ],
+  "expected": "When the invite is accepted via an external source (e.g., laptop), the mobile app does not automatically reflect the tenant change. After restarting the Poly Studio Mobile app, the Account screen (or Poly Support/App page) displays the new tenant information: tenant name, tenant ID, user ID, and app ID for the new Lens tenant (Tenant B).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-mobile-app",
-    "lens-tenant-change",
-    "invite-acceptance",
-    "external-source",
+    "poly-studio-mobile",
+    "lens-tenant-switch",
+    "tenant-invite",
+    "account-screen",
+    "tenant-information",
     "app-restart",
-    "tenant-refresh",
-    "account-switching"
+    "tenant-persistence"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "fccd2d78a86994e50e65bfa5b51ec9965469764b350af0bc40bf67b9dd08e3a4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.962109Z",
+  "processed_at": "2026-04-25T07:55:31.989464Z",
   "status": "active"
 }
