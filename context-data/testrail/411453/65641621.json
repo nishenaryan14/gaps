@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Fit test - 2nd screen Fail and Cancel",
   "feature": "Device Management",
-  "scenario": "Fit Test returns to Device Settings screen after failing or cancelling on the 2nd screen",
+  "scenario": "Fit Test does not return to Device Settings screen after canceling or failing on the second screen",
   "steps": [
-    "1. Launch the Poly Studio Mobile app with a device that supports Fit Test connected.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "3. Tap \"Fit Test\".",
-    "4. Tap \"Start Test\".",
-    "5. On the 2nd screen of the Fit Test, either fail the test or tap \"Cancel\".",
-    "6. Verify the Fit Test screen closes and the user returns to the Device Settings screen.",
-    "7. Tap \"Cancel\" again to confirm the behavior."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Scroll to and tap on 'Fit Test'",
+    "Tap 'Start Test' button",
+    "On the 2nd screen of the fit test, either cancel the test or let it fail"
   ],
-  "expected": "The Fit Test screen closes and the user returns to the Device Settings screen. Tapping Cancel again confirms consistent behavior.",
+  "expected": "The fit test screen closes and the user is returned to the Device Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
     "device-settings",
     "poly-studio-mobile",
-    "cancel-behavior",
-    "fit-test-cancellation",
+    "fit-test-cancel",
     "fit-test-failure",
-    "navigation-flow"
+    "navigation-issue",
+    "ui-screen-transition"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "862b09fd9404ce6a560e7e72ddb610ed30c57638e2917e5f83eb1487e2d3aa33",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.819730Z",
+  "processed_at": "2026-04-25T07:55:31.905253Z",
   "status": "active"
 }
