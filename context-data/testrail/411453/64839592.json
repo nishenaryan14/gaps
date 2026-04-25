@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Battery Charging Icon",
   "feature": "Battery/Charging",
-  "scenario": "Battery charging icon shows bolt instead of percentage when headset is connected to charger on Device Home Screen",
+  "scenario": "Device Home Screen battery icon changes from percentage to bolt when charging and reverts to percentage when charger is disconnected",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. From the Home screen, ensure a Poly headset or earbuds is paired and connected.",
-    "3. Observe the battery icon displayed on the Home screen for the connected device.",
-    "4. Connect the headset/earbuds to a charger (e.g., via USB cable).",
-    "5. Observe the battery icon on the Home screen again.",
-    "6. Disconnect the charger from the headset/earbuds.",
-    "7. Observe the battery icon on the Home screen once more."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen.",
+    "3. Observe the battery icon and percentage displayed for the connected device (headset/earbuds) when not connected to a charger.",
+    "4. Connect the headset/earbuds to a charger.",
+    "5. Observe the battery icon on the Home screen.",
+    "6. Disconnect the headset/earbuds from the charger.",
+    "7. Observe the battery icon on the Home screen."
   ],
-  "expected": "Step 3: The battery icon shows the current battery percentage value. Step 5: The battery icon changes to show a bolt (lightning) icon instead of the percentage value. Step 7: The bolt icon disappears and the battery percentage value is displayed again.",
+  "expected": "When the device is not charging, the Home screen shows a battery icon with a percentage value. When the device is connected to a charger, the battery icon changes to show a bolt icon instead of the percentage value. When the charger is disconnected, the bolt icon disappears and the percentage value returns.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "battery-icon",
     "charging-indicator",
-    "device-home-screen",
+    "home-screen",
+    "poly-studio-mobile",
     "battery-percentage",
-    "bolt-icon",
-    "bluetooth-pairing"
+    "charging-bolt",
+    "battery-persistence"
   ],
   "source_last_updated": "1759151666",
   "source_hash": "9d716e3a625947a65ea9af5fb4c2bb5bb3758e19385e20d3bc741154ca129723",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.922623Z",
+  "processed_at": "2026-04-25T09:32:26.149095Z",
   "status": "active"
 }
