@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Tern - no charge case screens (Onboarding, Supported devices list)",
   "feature": "Device Management",
-  "scenario": "Onboarding for Voyager Free 60 Charge Case shows no charge case screens when started from supported devices list",
+  "scenario": "Onboarding flow for Voyager Free 60 Charge Case lacks smart charge case screens when started from supported devices list",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. On the Home screen, ensure no Poly device is currently connected.",
-    "3. Tap the menu or option to open the supported devices list.",
-    "4. From the supported devices list, select \"Voyager Free 60 Charge Case\" (not the Free 60+ variant).",
-    "5. Tap to start the onboarding process for the selected device.",
-    "6. Observe the screens shown during the onboarding flow for the charge case."
+    "1. Launch the Poly Studio Mobile app on the mobile device.",
+    "2. Ensure no Poly Bluetooth audio device is currently connected.",
+    "3. On the Home screen, tap the 'Supported Devices' or 'Add Device' option to open the list of supported devices.",
+    "4. From the list, select 'Voyager Free 60 Charge Case' (not the Voyager Free 60+ variant).",
+    "5. Tap to start the onboarding flow for the selected device.",
+    "6. Observe the screens displayed during the onboarding process."
   ],
-  "expected": "The onboarding flow should display dedicated charge case screens for the Voyager Free 60 Charge Case, guiding the user through setup of the smart charge case.",
+  "expected": "The onboarding flow should include smart charge case screens that guide the user through setup and features specific to the Voyager Free 60 Charge Case.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "voyager-free-60-charge-case",
-    "poly-studio-mobile",
     "onboarding-flow",
+    "poly-studio-mobile-app",
     "supported-devices-list",
-    "charge-case-screens",
-    "android",
-    "device-connection"
+    "smart-charge-case-screens",
+    "add-device",
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "f3c528d9b5339a5fb7d30b97f043e1ef0611766a61841aa361e9c3c009eefcd6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.276590Z",
   "status": "active"
 }
