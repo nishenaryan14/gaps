@@ -5,32 +5,30 @@
   "project": "411453",
   "title": "Device Settings - Settings screen for connected device",
   "feature": "Device Management",
-  "scenario": "Device Settings screen displays correct tabs (Onboarding, User Guides, Fit Test, General, Language, etc.) when accessed via the \"...\" button in Poly Studio Mobile app",
+  "scenario": "Device Settings screen displays correct tabs (Onboarding, User Guides, Fit Test, General, Language, Ringtones & Volume, Sensor, Wireless, Advanced, Reset device, Software Update, Voice Prompts & Tones) for connected headset",
   "steps": [
     "1. Launch the Poly Studio Mobile app on your Android device.",
     "2. Ensure a Poly Bluetooth headset is connected to the phone.",
-    "3. On the Home screen, locate the connected device card.",
-    "4. Tap the '...' (more options) button on the device card.",
-    "5. Observe the Device Settings screen that appears.",
-    "6. Verify the list of tabs displayed on the Device Settings screen.",
-    "7. Confirm the presence of the following tabs (note: tabs may vary by device model): Onboarding, User Guides, Quick Start Guide, Fit Test, General, Language, Ringtones & Volume, Sensor, Wireless, Advanced, Reset device, Software Update, Voice Prompts & Tones."
+    "3. From the Home screen, tap on the connected device name to open Device Settings.",
+    "4. Observe the list of tabs/sections displayed on the Device Settings screen.",
+    "5. Verify that the following tabs are present (note: tabs may vary by device model): Onboarding, User Guides, Quick Start Guide, Fit Test, General, Language, Ringtones & Volume, Sensor, Wireless, Advanced, Reset device, Software Update, Voice Prompts & Tones."
   ],
-  "expected": "The Device Settings screen displays the correct set of tabs appropriate for the connected headset model, including (as applicable): Onboarding, User Guides, Quick Start Guide, Fit Test, General, Language, Ringtones & Volume, Sensor, Wireless, Advanced, Reset device, Software Update, Voice Prompts & Tones.",
+  "expected": "The Device Settings screen displays the correct set of tabs for the connected headset model, including (as applicable): Onboarding, User Guides, Quick Start Guide, Fit Test, General, Language, Ringtones & Volume, Sensor, Wireless, Advanced, Reset device, Software Update, Voice Prompts & Tones.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-settings-screen",
-    "device-card",
-    "more-options-button",
-    "onboarding-tab",
-    "user-guides-tab",
-    "fit-test-tab",
-    "settings-tabs"
+    "device-settings",
+    "settings-tabs",
+    "onboarding",
+    "software-update",
+    "voice-prompts-and-tones",
+    "bluetooth-headset",
+    "android-app"
   ],
   "source_last_updated": "1762261740",
   "source_hash": "61b0e3c8e4965205f72d0d3c67fdc6afa7b83155807a7be35c62f10ec4ac1d14",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.968827Z",
+  "processed_at": "2026-04-25T09:32:26.203985Z",
   "status": "active"
 }
