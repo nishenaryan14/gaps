@@ -8,10 +8,10 @@
   "scenario": "Poly Lens app Account section shows mobile device correctly linked and appearing in lens server inventory list after login",
   "steps": [
     "1. Launch the Poly Lens app on the mobile device.",
-    "2. Log in using valid credentials (email and password).",
-    "3. Navigate to the General menu.",
-    "4. Tap on the Account section.",
-    "5. Verify that the mobile app appears in the Lens server inventory list.",
+    "2. Log in using valid credentials.",
+    "3. Navigate to General \u2192 Account.",
+    "4. Open the Lens server inventory list.",
+    "5. Verify that the mobile app appears in the inventory list.",
     "6. Confirm that the mobile app is correctly linked to the proper device (Android or iPhone)."
   ],
   "expected": "The mobile app appears in the Lens server inventory list and is correctly linked to the proper device (Android or iPhone).",
@@ -25,11 +25,11 @@
     "device-inventory-list",
     "android",
     "iphone",
-    "app-login"
+    "login-authentication"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "4d95180654c90e9e14f199976f16c358cf7f985cf25fe64f806d1a3e5264be1d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.060609Z",
+  "processed_at": "2026-04-25T09:32:26.319406Z",
   "status": "active"
 }
