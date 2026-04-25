@@ -7,14 +7,15 @@
   "feature": "App Settings",
   "scenario": "Find My Device - Tapping X (Cancel) on disconnected device details window does not dismiss the window and return to the map with connected devices list",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Go to Home screen",
-    "Tap Find My Device",
-    "Disconnect or move the Bluetooth audio device out of range",
-    "Observe the device details window appears on the Find My Device map",
-    "Tap the X (Cancel) button on the device details window"
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the Find My Device feature to open the map view.",
+    "4. Ensure a Poly Bluetooth audio device is connected and in range.",
+    "5. Disconnect the device or move it out of Bluetooth range so that the device becomes disconnected.",
+    "6. Observe that a device details window appears on the screen indicating the disconnected/lost device.",
+    "7. Tap the X (Cancel) button on the device details window."
   ],
-  "expected": "The device details window is dismissed and the user is returned to the Find My Device map showing the list of connected devices.",
+  "expected": "The device details window is dismissed, and the user is returned to the Find My Device map view showing the list of connected devices.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,14 +23,13 @@
     "poly-studio-mobile",
     "device-details-window",
     "cancel-button",
-    "bluetooth-disconnection",
+    "disconnected-device",
     "map-view",
-    "connected-devices-list",
-    "ui-dismissal"
+    "bluetooth-disconnect"
   ],
   "source_last_updated": "1759928213",
   "source_hash": "ab4e7ae7b7767f9e39040ca2b4a903865b9da00df89e81968ecf16974aa1f2e7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.831264Z",
+  "processed_at": "2026-04-25T08:21:30.943927Z",
   "status": "active"
 }
