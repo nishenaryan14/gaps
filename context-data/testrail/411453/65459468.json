@@ -4,30 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Application - Uninstall mobile application",
-  "feature": "Application - Uninstall",
-  "scenario": "Verify successful uninstallation of the mobile application from the home screen",
+  "feature": "App Settings",
+  "scenario": "Poly Studio Mobile app can be successfully uninstalled from the device via long-press and remove",
   "steps": [
-    "Ensure the app is installed and present on the home screen.",
-    "Long-press the app icon.",
-    "Select the Remove option from the dialog.",
-    "Confirm the action.",
-    "Check the phone."
+    "1. Ensure the Poly Studio Mobile app is installed and visible on the device home screen.",
+    "2. Long-press the Poly Studio Mobile app icon.",
+    "3. Select \"Remove\" from the dialog that appears.",
+    "4. Confirm the uninstall action when prompted.",
+    "5. Verify the Poly Studio Mobile app icon is no longer present on the device home screen."
   ],
-  "expected": "The Lens mobile app is uninstalled successfully.",
+  "expected": "The Poly Studio Mobile app is uninstalled successfully and no longer appears on the device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "uninstall",
-    "mobile application",
-    "home screen",
-    "app icon",
-    "remove",
-    "confirm",
-    "verification"
+    "poly-studio-mobile",
+    "app-uninstall",
+    "long-press-remove",
+    "app-removal",
+    "android-uninstall",
+    "app-icon-removal"
   ],
   "source_last_updated": "1760534160",
   "source_hash": "0f4afd19c5155accbe131fedba2778ad47cd837814d66136b0b5732165b8a971",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.274616Z",
+  "processed_at": "2026-04-25T05:37:16.877487Z",
   "status": "active"
 }
