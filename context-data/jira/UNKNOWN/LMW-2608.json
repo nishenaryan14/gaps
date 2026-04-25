@@ -6,14 +6,14 @@
   "summary": "ANDROID \ud83d\udfe5 CLOUD Unable to remove policies for VFRee 60 + device",
   "feature": "Device Management",
   "scenario": "Poly Voyager Free 60+ not listed in Manage > Policies > Individual Device list on lens.poly.com, preventing policy removal",
-  "description_clean": "When logged into a tenant on lens.poly.com, the Poly Voyager Free 60+ device is not shown in the Manage -> Policies -> Individual Device list, so the user cannot set or remove policies for this device. The device appears in the Inventory, but from there the user can only set policies, not remove them. Expected behavior: the device should appear in the Individual Device policy list, allowing both setting and removal of policies.",
+  "description_clean": "When logged into a tenant on lens.poly.com, the Poly Voyager Free 60+ device is not shown in the Manage -> Policies -> Individual Device list, so the user cannot set or remove policies for that device. The device appears in the Inventory, but from there the user can only set policies, not remove them. Expected behavior: the device should appear in the Individual Device policy list, allowing both setting and removal of policies.",
   "steps": [
     "1. Log into lens.poly.com with tenant credentials.",
     "2. Navigate to Manage \u2192 Policies \u2192 Individual Device.",
     "3. Observe the list of devices displayed.",
-    "4. Verify whether the Poly Voyager Free 60+ appears in the list.",
-    "5. Navigate to Manage \u2192 Inventory and locate the Poly Voyager Free 60+ device.",
-    "6. Observe the available actions for the device in Inventory (e.g., set policies)."
+    "4. Verify whether the Poly Voyager Free 60+ device appears in the list.",
+    "5. If the device is not listed, navigate to Manage \u2192 Inventory and locate the Poly Voyager Free 60+ device.",
+    "6. From the Inventory, attempt to set a policy on the device (note: removal is not available from this screen)."
   ],
   "expected": "The Poly Voyager Free 60+ device should appear in the Manage \u2192 Policies \u2192 Individual Device list, allowing the user to both set and remove policies.",
   "actual": "The Poly Voyager Free 60+ device is not shown in the Manage \u2192 Policies \u2192 Individual Device list. It only appears in the Inventory, where the user can set policies but cannot remove them.",
@@ -27,11 +27,11 @@
     "individual-device-list",
     "policy-removal",
     "device-inventory",
-    "device-not-listed"
+    "policy-management"
   ],
   "source_last_updated": "2026-04-23T07:51:57.000+0000",
   "source_hash": "8d37cd2a1fd284eb861904309b7ca1c853d4481c94b555978e56641d4c9f157c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.250881Z",
+  "processed_at": "2026-04-25T07:55:31.304759Z",
   "status": "active"
 }
