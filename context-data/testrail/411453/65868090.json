@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - Unsupported device",
-  "feature": "Device Home Screen",
-  "scenario": "Unsupported devices should not appear in the home screen device list after being paired and connected.",
+  "feature": "Device Management",
+  "scenario": "Unsupported paired devices (e.g., BB Fit, Sync 60) incorrectly appear in the device list on the Poly Studio Mobile app home screen",
   "steps": [
-    "Pair an unsupported device (e.g., BB Fit, Sync60) with the mobile app.",
-    "Ensure the device is connected.",
-    "Open the home screen of the mobile app.",
-    "Check the device list displayed on the home screen."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Pair an unsupported Bluetooth audio device (e.g., BB Fit, Sync 60) with the Android device via system Bluetooth settings.",
+    "3. Ensure the unsupported device is connected to the Android device.",
+    "4. Return to the Poly Studio Mobile app Home screen.",
+    "5. Observe the device list on the Home screen."
   ],
-  "expected": "The unsupported device should not appear in the device list on the home screen.",
+  "expected": "The unsupported device (e.g., BB Fit, Sync 60) should NOT appear in the device list on the app's Home screen, since it is not supported by the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "unsupported devices",
-    "home screen",
-    "device list",
-    "paired",
-    "connected",
-    "mobile app",
-    "BB Fit",
-    "Sync60"
+    "poly-studio-mobile-app",
+    "device-list",
+    "unsupported-devices",
+    "bluetooth-pairing",
+    "home-screen",
+    "bb-fit",
+    "sync-60",
+    "device-filtering"
   ],
   "source_last_updated": "1761837100",
   "source_hash": "a72aa3be5070c15755d5c5bcda9d936e6d0390612062963581fda73f3be52fc3",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.114408Z",
+  "processed_at": "2026-04-25T05:37:16.734514Z",
   "status": "active"
 }
