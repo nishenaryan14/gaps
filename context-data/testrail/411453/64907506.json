@@ -7,29 +7,34 @@
   "feature": "App Settings",
   "scenario": "Support > App data shows correct Tenant and User info when switching from Guest to unlinked account",
   "steps": [
-    "1. Install the Poly Studio Mobile app and use it as a Guest user.",
+    "1. Launch Poly Studio Mobile app as a Guest user.",
     "2. Navigate to: Home \u2192 Support \u2192 App info.",
-    "3. Observe the displayed App version, Tenant name/ID, User ID, and Last connected fields.",
-    "4. Log in to the app using an account that is not linked to any Tenant.",
-    "5. Navigate to: Home \u2192 Support \u2192 App info.",
-    "6. Observe the displayed Account information, Tenant name, and Tenant ID fields."
+    "3. Verify the displayed App version is correct.",
+    "4. Verify Tenant name and Tenant ID fields show 'None'.",
+    "5. Verify User ID field shows 'None'.",
+    "6. Verify Last connected field shows 'Unknown'.",
+    "7. Log out of the Guest session.",
+    "8. Log in with an account that is not linked to any Tenant.",
+    "9. Navigate to: Home \u2192 Support \u2192 App info.",
+    "10. Verify Account information (e.g., email/username) is displayed.",
+    "11. Verify Tenant name and Tenant ID fields are not present or empty."
   ],
-  "expected": "Step 3: App version is correct, Tenant name/ID and User ID are None, Last connected: unknown. Step 6: Account information is displayed, but Tenant name and Tenant ID are not present.",
+  "expected": "When using the app as Guest: App version is correct, Tenant name/ID and User ID are 'None', Last connected is 'Unknown'. After logging in with an account not linked to any Tenant: Account information is displayed, but Tenant name and Tenant ID are not present.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "app-info",
+    "guest-user",
     "tenant-info",
     "user-id",
-    "guest-account",
+    "account-switching",
     "unlinked-account",
-    "support-screen",
-    "account-switching"
+    "support-screen"
   ],
   "source_last_updated": "1759752024",
   "source_hash": "0be81932ae13260aa3863f80b38932aef673da93d7496c00e93f1962fcab76e5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.852734Z",
+  "processed_at": "2026-04-25T08:21:30.955174Z",
   "status": "active"
 }
