@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "ANC - 8.-User starts the app and opens Settings>ANC while being in active call",
   "feature": "ANC",
-  "scenario": "ANC turns ON and Transparency Mode becomes greyed out and inaccessible during an active call in Poly Studio Mobile app",
+  "scenario": "ANC remains ON and Transparency Mode is greyed out during active call, then restores correctly after call ends on Poly Studio Mobile app",
   "steps": [],
   "expected": "",
   "coverage": [],
@@ -15,13 +15,13 @@
     "transparency-mode",
     "active-call",
     "poly-studio-mobile",
-    "greyed-out",
     "call-management",
-    "audio-mode"
+    "anc-persistence",
+    "mode-restoration"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "1339e97239cd0625a452073449729c1222b08299336ed8ef0448a95535e41231",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.999427Z",
+  "processed_at": "2026-04-25T09:32:26.254043Z",
   "status": "active"
 }
