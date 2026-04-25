@@ -5,13 +5,14 @@
   "project": "411453",
   "title": "Device Home Screen - Unsupported device",
   "feature": "Device Management",
-  "scenario": "Unsupported device (e.g., BB Fit, Sync 60) appears in the Poly Studio Mobile app home screen device list despite not being manageable by the app",
+  "scenario": "Unsupported device (e.g., BB Fit, Sync 60) appears in the Poly Studio Mobile app home screen device list after pairing",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Pair and connect an unsupported device (e.g., BB Fit, Sync 60) via Bluetooth.",
-    "Observe the device list on the Home screen."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Pair and connect an unsupported device (e.g., BB Fit, Sync 60) via Bluetooth.",
+    "3. Observe the Home screen of the Poly Studio Mobile app.",
+    "4. Check the device list displayed on the Home screen."
   ],
-  "expected": "The unsupported device (e.g., BB Fit, Sync 60) should NOT appear in the device list on the Home screen, as the app does not support managing that device.",
+  "expected": "The unsupported device (e.g., BB Fit, Sync 60) should NOT appear in the device list on the app's Home screen, as the app does not support managing that device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,11 +23,11 @@
     "bluetooth-pairing",
     "bb-fit",
     "sync-60",
-    "device-management"
+    "device-filtering"
   ],
   "source_last_updated": "1761837100",
   "source_hash": "a72aa3be5070c15755d5c5bcda9d936e6d0390612062963581fda73f3be52fc3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.797354Z",
+  "processed_at": "2026-04-25T08:21:30.915908Z",
   "status": "active"
 }
