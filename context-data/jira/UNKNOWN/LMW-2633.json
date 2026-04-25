@@ -5,21 +5,21 @@
   "project": "UNKNOWN",
   "summary": "ANDROID | Falcon Grey | EQ settings not saved for Custom",
   "feature": "Equalizer",
-  "scenario": "Custom EQ settings are not persisted after saving and reopening the EQ settings page on Poly Studio Mobile app",
-  "description_clean": "Custom EQ settings are not saved after clicking Save and reopening the EQ settings page. Steps: Connect a Poly device, go to EQ settings, make changes and click Save, then reopen EQ settings to verify. Observed: Settings are not saved. Expected: Settings are saved.",
+  "scenario": "Custom EQ settings are not persisted after saving and reopening the EQ settings screen in Poly Studio Mobile app",
+  "description_clean": "Custom EQ settings are not saved after clicking Save. When reopening the EQ settings, the previously saved custom adjustments are lost.",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Ensure a Poly Bluetooth audio device is connected (e.g., Poly Voyager Focus 2).",
-    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
-    "4. Navigate to Audio Settings \u2192 Equalizer.",
-    "5. Make custom adjustments to the EQ bands (e.g., boost bass, reduce treble).",
-    "6. Tap the Save button to save the custom EQ settings.",
-    "7. Exit the Equalizer screen by tapping the back arrow or navigating away.",
-    "8. Reopen the Equalizer by going back to Audio Settings \u2192 Equalizer.",
-    "9. Observe the EQ band positions and the active preset."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Select Audio Settings",
+    "Tap on Equalizer",
+    "Adjust any frequency band sliders (e.g., Bass, Mid, Treble)",
+    "Tap the Save button to save the custom EQ preset",
+    "Navigate back to Home screen",
+    "Re-open the Equalizer settings via Device Settings \u2192 Audio Settings \u2192 Equalizer"
   ],
-  "expected": "The custom EQ settings (band adjustments) are retained and displayed as previously saved. The custom preset is shown as active.",
-  "actual": "The custom EQ settings are not retained. The EQ bands reset to default/flat positions, and the custom preset is no longer active.",
+  "expected": "The previously saved custom EQ adjustments should be displayed and applied.",
+  "actual": "The previously saved custom EQ adjustments are lost and the Equalizer shows default/flat settings.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -28,15 +28,15 @@
   "keywords": [
     "poly-studio-mobile",
     "equalizer",
-    "custom-eq",
+    "custom-eq-preset",
     "eq-persistence",
     "audio-settings",
-    "eq-preset-save",
-    "voyager-focus-2"
+    "device-settings",
+    "eq-save"
   ],
   "source_last_updated": "2026-04-23T07:54:54.000+0000",
   "source_hash": "3bb3a0a0fb141045a6fb07af45a2038d0c1ad94d044a642c004cb21f39ad88f1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.138411Z",
+  "processed_at": "2026-04-25T08:21:30.254038Z",
   "status": "active"
 }
