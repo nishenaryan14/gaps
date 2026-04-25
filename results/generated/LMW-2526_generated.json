@@ -1,64 +1,120 @@
 [
   {
-    "title": "Custom Button Settings: Verify available provider options update when headset is disconnected",
+    "title": "CUSTOM_BUTTON_001: Verify Custom Button provider refreshes after headset disconnects from PC while app is open",
     "steps": [
-      "1. Launch the application with the headset connected to the PC.",
-      "2. Navigate to Custom Button settings page.",
-      "3. Observe and record the list of available provider options (e.g., MS Teams, Zoom, etc.).",
-      "4. Disconnect the headset from the PC.",
-      "5. Return to the Custom Button settings page without restarting the app.",
-      "6. Observe the list of available provider options again."
+      "1. Open Poly Studio Mobile app and connect to the headset (e.g., Voyager 4220).",
+      "2. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "3. Verify the Custom Button screen shows the current provider status (e.g., 'No provider connected' or 'MS Teams connected' if PC is connected).",
+      "4. While the app remains open and the headset is connected to the Android device via Bluetooth, disconnect the headset from the PC (unplug the USB dongle or disconnect the USB cable from the PC).",
+      "5. Wait 10 seconds for the headset to process the source change.",
+      "6. Without closing or restarting the app, navigate back to: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "7. Observe the provider status displayed on the Custom Button screen."
     ],
-    "expected": "The list of available provider options in Custom Button settings should update to reflect the disconnected state. Options that depend on the headset connection (e.g., MS Teams) should be removed, grayed out, or show a 'disconnected' status. The user should NOT need to restart the app to see the updated options."
+    "expected": "The Custom Button screen should update to show 'No provider connected' or equivalent status reflecting that the headset is no longer connected to a PC. The app should NOT still display 'MS Teams connected' or any stale provider information. No app restart should be required to see the updated state."
   },
   {
-    "title": "Custom Button Settings: Verify provider options restore when headset is reconnected",
+    "title": "CUSTOM_BUTTON_002: Verify Custom Button provider refreshes after headset connects to PC while app is open",
     "steps": [
-      "1. Launch the application with the headset disconnected from the PC.",
-      "2. Navigate to Custom Button settings page.",
-      "3. Observe and record the list of available provider options (e.g., MS Teams should be missing or grayed out).",
-      "4. Reconnect the headset to the PC.",
-      "5. Return to the Custom Button settings page without restarting the app.",
-      "6. Observe the list of available provider options again."
+      "1. Open Poly Studio Mobile app and connect to the headset (e.g., Voyager 4220) via Bluetooth, with the headset NOT connected to any PC.",
+      "2. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "3. Verify the Custom Button screen shows 'No provider connected' or equivalent.",
+      "4. While the app remains open, connect the headset to a PC via USB cable or USB dongle.",
+      "5. Launch MS Teams on the PC and ensure it detects the headset.",
+      "6. Wait 15 seconds for the headset to establish the PC connection.",
+      "7. Without closing or restarting the app, navigate back to: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "8. Observe the provider status displayed on the Custom Button screen."
     ],
-    "expected": "The list of available provider options in Custom Button settings should update to reflect the reconnected state. Options that were previously unavailable (e.g., MS Teams) should now appear or become selectable. The user should NOT need to restart the app to see the restored options."
+    "expected": "The Custom Button screen should update to show 'MS Teams connected' or the appropriate provider status reflecting that the headset is now connected to a PC with MS Teams. The app should reflect the current active connection state without requiring an app restart."
   },
   {
-    "title": "Custom Button Settings: Verify no stale/cached options remain after headset disconnection",
+    "title": "CUSTOM_BUTTON_003: Verify Custom Button provider does not show stale MS Teams data after PC disconnect and reconnect cycle",
     "steps": [
-      "1. Launch the application with the headset connected to the PC.",
-      "2. Navigate to Custom Button settings and assign a custom action to a button using MS Teams as the provider.",
-      "3. Disconnect the headset from the PC.",
-      "4. Navigate back to Custom Button settings without restarting the app.",
-      "5. Check if the previously assigned MS Teams action is still listed as an available option or if it has been properly removed/disabled.",
-      "6. Attempt to modify the custom button assignment."
+      "1. Open Poly Studio Mobile app and connect to the headset (e.g., Voyager 4220) via Bluetooth.",
+      "2. Ensure the headset is also connected to a PC with MS Teams running.",
+      "3. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button. Confirm it shows 'MS Teams connected'.",
+      "4. While the app remains open, disconnect the headset from the PC (unplug USB/dongle).",
+      "5. Wait 10 seconds, then navigate away from Custom Button to the main device screen.",
+      "6. Navigate back: tap [Device Name] \u2192 Settings \u2192 Custom Button. Verify it shows 'No provider connected'.",
+      "7. Reconnect the headset to the PC (plug USB/dongle back in) and wait 15 seconds.",
+      "8. Navigate away from Custom Button and back again: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "9. Observe the provider status."
     ],
-    "expected": "After disconnecting the headset, the MS Teams provider option should no longer be available or should be clearly marked as disconnected. The previously assigned action should not remain as a selectable/active option if the provider is unavailable. The UI should reflect the current connection state accurately without stale cached data."
+    "expected": "After step 6, the Custom Button screen should show 'No provider connected' (not stale 'MS Teams connected'). After step 8, the Custom Button screen should update to show 'MS Teams connected' again. The app should correctly reflect each state change without requiring an app restart at any point."
   },
   {
-    "title": "Custom Button Settings: Verify app restart is NOT required to reflect headset disconnection",
+    "title": "CUSTOM_BUTTON_004: Verify Custom Button provider updates when switching between PC and mobile as active audio source",
     "steps": [
-      "1. Launch the application with the headset connected to the PC.",
-      "2. Navigate to Custom Button settings and note the available providers.",
-      "3. Disconnect the headset from the PC.",
-      "4. Immediately navigate back to Custom Button settings (do NOT restart the app).",
-      "5. Observe the available provider options.",
-      "6. Restart the application.",
-      "7. Navigate to Custom Button settings again and observe the available provider options."
+      "1. Open Poly Studio Mobile app and connect to the headset (e.g., Voyager 4220) via Bluetooth.",
+      "2. Connect the headset to a PC with MS Teams running. Wait 15 seconds.",
+      "3. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button. Confirm it shows 'MS Teams connected'.",
+      "4. While the app remains open, press the headset's Bluetooth button to switch the active audio source from PC to the mobile device (Android).",
+      "5. Wait 10 seconds for the source switch to complete.",
+      "6. Navigate away from Custom Button and back: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "7. Observe the provider status.",
+      "8. Press the headset's Bluetooth button again to switch the active source back to PC.",
+      "9. Wait 10 seconds, then navigate away and back: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "10. Observe the provider status."
     ],
-    "expected": "The available provider options observed in step 4 (without restart) should match the options observed in step 7 (after restart). No restart should be required to see the correct disconnected state. If the options differ, this confirms the bug that a restart is incorrectly needed."
+    "expected": "After step 6, the Custom Button screen should show 'No provider connected' (since the active source is now mobile, not PC). After step 9, the Custom Button screen should update to show 'MS Teams connected' again. The app should correctly reflect the active source's provider status after each source switch without requiring an app restart."
   },
   {
-    "title": "Custom Button Settings: Verify UI state synchronization when headset is disconnected during settings interaction",
+    "title": "CUSTOM_BUTTON_005: Verify Custom Button provider state after Bluetooth disconnect/reconnect while headset remains connected to PC",
     "steps": [
-      "1. Launch the application with the headset connected to the PC.",
-      "2. Navigate to Custom Button settings page.",
-      "3. While on the Custom Button settings page, disconnect the headset from the PC.",
-      "4. Wait for 2-3 seconds for any UI refresh/update mechanism to trigger.",
-      "5. Observe the available provider options on the current page without navigating away.",
-      "6. Navigate away from and back to the Custom Button settings page.",
-      "7. Observe the available provider options again."
+      "1. Open Poly Studio Mobile app and connect to the headset (e.g., Voyager 4220) via Bluetooth.",
+      "2. Connect the headset to a PC with MS Teams running. Wait 15 seconds.",
+      "3. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button. Confirm it shows 'MS Teams connected'.",
+      "4. From the Android device, go to Bluetooth settings and disconnect/unpair the headset (or turn off Bluetooth on the phone).",
+      "5. Wait 10 seconds. The app should show the device as disconnected.",
+      "6. Reconnect the headset to the Android device via Bluetooth (re-pair if needed).",
+      "7. Open Poly Studio Mobile app (if it was closed) or return to it. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "8. Observe the provider status."
     ],
-    "expected": "The available provider options should update dynamically when the headset is disconnected, even if the user is currently on the Custom Button settings page. If the options do not update in real-time (step 5), they should at least update when the user navigates away and back (step 7). In no case should the user be required to restart the app to see the correct state."
+    "expected": "After reconnecting Bluetooth (step 7), the Custom Button screen should show 'MS Teams connected' because the headset is still connected to the PC. The app should correctly reflect the headset's current provider state after a Bluetooth disconnect/reconnect cycle, without showing stale data or requiring an additional app restart."
+  },
+  {
+    "title": "CUSTOM_BUTTON_006: Verify Custom Button provider state after app is backgrounded and restored during PC disconnect",
+    "steps": [
+      "1. Open Poly Studio Mobile app and connect to the headset (e.g., Voyager 4220) via Bluetooth.",
+      "2. Ensure the headset is connected to a PC with MS Teams running.",
+      "3. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button. Confirm it shows 'MS Teams connected'.",
+      "4. While the app remains open, press the Home button to background the app (do not close it).",
+      "5. While the app is backgrounded, disconnect the headset from the PC (unplug USB/dongle).",
+      "6. Wait 15 seconds.",
+      "7. Restore the app from the recent apps list (bring it to foreground).",
+      "8. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "9. Observe the provider status."
+    ],
+    "expected": "The Custom Button screen should update to show 'No provider connected' reflecting that the headset is no longer connected to the PC. The app should refresh its state upon being brought to the foreground and should not display stale 'MS Teams connected' data."
+  },
+  {
+    "title": "CUSTOM_BUTTON_007: Verify Custom Button provider state after app force-kill and restart following PC disconnect",
+    "steps": [
+      "1. Open Poly Studio Mobile app and connect to the headset (e.g., Voyager 4220) via Bluetooth.",
+      "2. Ensure the headset is connected to a PC with MS Teams running.",
+      "3. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button. Confirm it shows 'MS Teams connected'.",
+      "4. While the app remains open, disconnect the headset from the PC (unplug USB/dongle).",
+      "5. Wait 10 seconds.",
+      "6. Without navigating away, force-kill the Poly Studio Mobile app (swipe it away from recent apps).",
+      "7. Reopen the Poly Studio Mobile app and reconnect to the headset.",
+      "8. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "9. Observe the provider status."
+    ],
+    "expected": "After force-kill and restart (step 8), the Custom Button screen should correctly show 'No provider connected' reflecting the current state. The app should NOT show stale 'MS Teams connected' data. This confirms that a restart resolves the stale data issue, but the test also validates that the app correctly fetches the current state on startup."
+  },
+  {
+    "title": "CUSTOM_BUTTON_008: Verify Custom Button provider state when headset is connected to PC via EHS cable (desk phone setup)",
+    "steps": [
+      "1. Set up the Voyager 4220 headset system with a desk phone using EHS cable (Setup A: Desk phone with dedicated headset port + EHS cable).",
+      "2. Open Poly Studio Mobile app and connect to the headset via Bluetooth.",
+      "3. Navigate to: tap [Device Name] \u2192 Settings \u2192 Custom Button. Verify initial provider status.",
+      "4. While the app remains open, connect the headset base to a PC via USB (in addition to the desk phone connection).",
+      "5. Launch MS Teams on the PC and ensure it detects the headset. Wait 15 seconds.",
+      "6. Navigate away from Custom Button and back: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "7. Observe the provider status.",
+      "8. Disconnect the USB cable from the PC while keeping the desk phone connection active.",
+      "9. Wait 10 seconds, then navigate away and back: tap [Device Name] \u2192 Settings \u2192 Custom Button.",
+      "10. Observe the provider status."
+    ],
+    "expected": "After step 6, the Custom Button screen should show 'MS Teams connected' (or appropriate provider). After step 9, the Custom Button screen should update to show 'No provider connected' or the desk phone provider status. The app should correctly reflect the current connection state without requiring an app restart, even in a mixed desk phone + PC setup."
   }
 ]
