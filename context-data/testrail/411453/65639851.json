@@ -5,30 +5,23 @@
   "project": "411453",
   "title": "1 step DFU - Houston screen during CC update (during Update all)",
   "feature": "Firmware Update",
-  "scenario": "\"Update All\" DFU on Voyager Free 60+ shows Houston error screen when earbuds are placed in charging case during case firmware update",
-  "steps": [
-    "Open Poly Studio Mobile app on your mobile device.",
-    "Ensure Voyager Free 60+ earbuds are connected to the app.",
-    "Navigate to the Home screen and verify the earbuds and charging case are detected.",
-    "Initiate a Device Firmware Update (DFU) by tapping 'Update All' (1-step DFU process).",
-    "While the charging case firmware update is in progress, place the earbuds back into the charging case.",
-    "Observe the app screen during and after placing the earbuds in the case."
-  ],
-  "expected": "The firmware update should continue normally or pause gracefully without displaying an error screen.",
+  "scenario": "1-step DFU Update All fails with Houston screen when earbuds are placed in charge case during charge case firmware update on Voyager Free 60+",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "voyager-free-60-plus",
-    "update-all",
-    "dfu",
-    "charging-case-firmware",
-    "houston-error-screen",
-    "poly-studio-mobile-app",
-    "earbuds-in-case-during-update"
+    "dfu-update-all",
+    "firmware-update",
+    "charge-case",
+    "houston-screen",
+    "earbuds",
+    "firmware-failure"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "3041ba4ab2ec4e66a2208476a8be62297792c47b69e85f9028e6b3abf57b86cb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.041425Z",
+  "processed_at": "2026-04-25T09:32:26.295871Z",
   "status": "active"
 }
