@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Analytics - Events are not gathered if user is logged out and has not opted into data-sharing",
   "feature": "App Settings",
-  "scenario": "Analytics events are not gathered when user is logged out and has not opted into data-sharing",
+  "scenario": "Firebase analytics events are still gathered when user is logged out and has not opted into data-sharing",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
+    "1. Launch the Poly Studio Mobile app on the Android device.",
     "2. Ensure the user is logged out of their account.",
-    "3. Ensure the user has NOT opted into data-sharing (Analytics consent is off).",
-    "4. Trigger an analytics event, e.g., pair or connect a Poly Bluetooth audio device to trigger the device_added event (which gathers the device's serial number).",
-    "5. Open Firebase Console and navigate to the Analytics events dashboard.",
-    "6. Check the event count for the device_added event filtered by the connected device's serial number."
+    "3. Verify that the user has NOT opted into data-sharing (analytics consent is disabled).",
+    "4. Trigger a Firebase analytics event, such as 'device_added' (e.g., by pairing or connecting a new Poly Bluetooth audio device).",
+    "5. Check Firebase Analytics console for the event count associated with the device's serial number."
   ],
-  "expected": "The event count for the device's serial number should NOT increase, confirming that no analytics events are gathered when the user is logged out and has not opted into data-sharing.",
+  "expected": "The event count for the device's serial number should NOT increase in Firebase Analytics.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "analytics-events",
+    "firebase-analytics",
     "data-sharing-consent",
-    "logged-out",
     "poly-studio-mobile",
+    "analytics-privacy",
     "device-added-event",
-    "firebase-console",
     "bluetooth-pairing",
-    "serial-number"
+    "logged-out-state",
+    "telemetry-opt-out"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "30ba6b8f2fee002cd1d8777870bcb6c661b10588a435e42418a3913239cad78d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.063734Z",
+  "processed_at": "2026-04-25T09:32:26.322443Z",
   "status": "active"
 }
