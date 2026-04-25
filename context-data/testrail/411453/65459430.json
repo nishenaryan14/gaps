@@ -5,32 +5,23 @@
   "project": "411453",
   "title": "Software Update - DFU - Incoming softphone call during update",
   "feature": "Firmware Update",
-  "scenario": "DFU continues and completes successfully when an incoming softphone call is received and answered during the firmware update process",
-  "steps": [
-    "1. Open Poly Studio Mobile app on the Android device.",
-    "2. Navigate to Home screen and ensure a Poly Bluetooth audio device is connected.",
-    "3. Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
-    "4. Initiate a Device Firmware Update (DFU) by tapping 'Check for Update' or 'Update Now'.",
-    "5. While the DFU is in progress, receive an incoming softphone call (e.g., MS Teams, Skype) on the Android device.",
-    "6. Answer the incoming softphone call during the DFU process.",
-    "7. Monitor the DFU progress in the Poly Studio Mobile app after answering the call.",
-    "8. Wait for the DFU to either continue progressing or complete."
-  ],
-  "expected": "The DFU continues running or completes successfully without interruption. The firmware update progress bar continues to advance, and the update finishes with a success message. The softphone call remains active and audio works normally.",
+  "scenario": "Device Firmware Update (DFU) continues or completes successfully when incoming softphone call is received and answered during the update process",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu",
     "firmware-update",
-    "poly-studio-mobile",
-    "softphone-call",
+    "dfu",
     "call-management",
-    "bluetooth-audio-device",
-    "android"
+    "softphone-call",
+    "call-interruption",
+    "update-persistence",
+    "poly-bluetooth-device"
   ],
   "source_last_updated": "1763371041",
   "source_hash": "5a84b8b54ddf7021c7f3b95dfbacb0ad6e520236472e7767a1897b971bb1cea6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.030690Z",
+  "processed_at": "2026-04-25T09:32:26.287367Z",
   "status": "active"
 }
