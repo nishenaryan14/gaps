@@ -4,28 +4,28 @@
   "type": "testcase",
   "project": "411453",
   "title": "Trouble screen, User Guide",
-  "feature": "Onboarding",
-  "scenario": "On the \"Having trouble\" screen (sixth screen of onboarding), clicking the User Guide button opens the device's user guide web page.",
+  "feature": "App Settings",
+  "scenario": "\"Having trouble\" onboarding screen's User Guide button fails to open the device user guide web page",
   "steps": [
-    "Navigate to the 'Having trouble' screen (sixth screen of onboarding).",
-    "Click the 'User Guide' button."
+    "Open the Poly Studio Mobile app.",
+    "Proceed through the Onboarding flow until reaching the sixth screen titled \"Having trouble\".",
+    "On the \"Having trouble\" screen, locate and tap the \"User Guide\" button."
   ],
-  "expected": "The device's user guide web page should open.",
+  "expected": "The user guide web page for the connected Poly device opens in the device's default web browser.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Having trouble screen",
-    "onboarding",
-    "User Guide button",
-    "user guide web page",
-    "sixth screen",
-    "device user guide",
-    "onboarding flow",
-    "help screen"
+    "poly-studio-mobile",
+    "onboarding-flow",
+    "having-trouble-screen",
+    "user-guide-button",
+    "user-guide-web-page",
+    "app-navigation",
+    "link-failure"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "7d7eb5553a17801ca940445d662503566f4c6740bd97c1fa2e9568c4be7f20ad",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.271805Z",
+  "processed_at": "2026-04-25T05:37:16.868858Z",
   "status": "active"
 }
