@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Settings Custom Swipe Sensor",
   "feature": "Device Management",
-  "scenario": "Custom Swipe Sensor settings section is present and matches design spec in Device Settings for Poly Voyager Free 60, 60+, and 20",
+  "scenario": "Custom Swipe Sensor settings section is present and displays expected configuration on Voyager Free 60+ and Voyager Free 20 device settings",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. From the Home screen, tap on the connected Poly Voyager Free device (VF60, VF60+, or VF20).",
-    "3. In Device Settings, scroll down to locate the 'Custom Swipe Sensor' settings section.",
-    "4. Verify that the 'Custom Swipe Sensor' section is present and visible.",
-    "5. Tap on the 'Custom Swipe Sensor' section to expand/view its options.",
-    "6. Verify that all settings and available values match the design specification (e.g., swipe gestures for volume, track control, ANC/Transparency, etc.)."
+    "2. From the Home screen, tap on the connected device (e.g., Voyager Free 60+ or Voyager Free 20).",
+    "3. Navigate to Device Settings.",
+    "4. Scroll down to locate the \"Custom Swipe Sensor\" settings section.",
+    "5. Verify that the \"Custom Swipe Sensor\" section is present and visible.",
+    "6. Compare each displayed setting and its value against the expected configuration defined in the product documentation."
   ],
-  "expected": "The 'Custom Swipe Sensor' settings section is present in Device Settings for supported Poly Voyager Free devices (VF60, VF60+, VF20), and all settings and values match the design specification.",
+  "expected": "The Custom Swipe Sensor settings section is present in Device Settings for supported Poly devices (Voyager Free 60+, Voyager Free 20), and all displayed settings and values match the expected configuration defined in the product documentation.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "custom-swipe-sensor",
-    "poly-voyager-free-60",
-    "poly-voyager-free-60-plus",
-    "poly-voyager-free-20",
+    "voyager-free-60-plus",
+    "voyager-free-20",
     "poly-studio-mobile",
     "device-settings",
-    "swipe-gestures",
-    "anc-transparency"
+    "swipe-sensor-configuration",
+    "android"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "9db5d8e5759b91aeccf1e24133a79412c3cabc44269cd5ae8a0d0df47dc669cf",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.015047Z",
+  "processed_at": "2026-04-25T08:21:31.091233Z",
   "status": "active"
 }
