@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "User Guides - Onboarding > Fit test for a device that is not currently connected",
   "feature": "App Settings",
-  "scenario": "Fit Test page is accessible for a device that is not currently connected to the Poly Studio Mobile app",
+  "scenario": "Fit Test page is accessible for a device that is not currently connected in the onboarding user guides",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen.",
-    "3. Tap on the device name to access Device Settings.",
-    "4. Ensure no Poly Bluetooth audio device is actively connected to the app.",
-    "5. Go to the onboarding section or user guides within the app.",
-    "6. Locate and open the Fit Test page.",
-    "7. Observe whether the Fit Test option is displayed and available to start."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on a device that is NOT currently connected",
+    "Tap on Device Settings",
+    "Locate and tap on Fit Test option"
   ],
-  "expected": "The Fit Test page should not be displayed or should be grayed out/unavailable when no device is actively connected to the app.",
+  "expected": "Fit Test should not be accessible or displayed for a device that is not actively connected to the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
     "poly-studio-mobile",
     "device-settings",
-    "bluetooth-connection",
     "onboarding",
-    "user-guides",
+    "device-not-connected",
     "home-screen",
-    "android"
+    "user-guides"
   ],
   "source_last_updated": "1760532159",
   "source_hash": "a583eaf4f66a06cd3774cf44e24f905e260725fa51b143953df23e7ffcab94a8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.944936Z",
+  "processed_at": "2026-04-25T09:32:26.175392Z",
   "status": "active"
 }
