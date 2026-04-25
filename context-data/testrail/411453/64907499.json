@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "Support - App, user not logged ever, no data",
   "feature": "App Settings",
-  "scenario": "Guest onboarding shows \"None\" for Tenant name, Tenant ID, and User ID, and \"Unknown\" for Last Connected in Support section after tapping App and Later buttons",
+  "scenario": "Support section shows \"None\" for Tenant name, Tenant ID, and User ID when accessed as a Guest user after onboarding",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Complete the onboarding flow as a Guest (do not log in).",
-    "3. From the Home screen, tap the Support section (or navigate to Account \u2192 Support).",
-    "4. Tap the App button within the Support section.",
-    "5. Tap the Later button when prompted.",
+    "1. Launch Poly Studio Mobile app.",
+    "2. On the Welcome screen, tap 'Continue as Guest' (do not log in).",
+    "3. Complete the onboarding flow.",
+    "4. On the Home screen, tap the hamburger menu (\u2630) in the top-left corner.",
+    "5. Tap 'Support' from the menu.",
     "6. Observe the displayed information under the Support section."
   ],
-  "expected": "The Support section should display: App version (correct), App ID (correct), Tenant name (should show appropriate value or N/A), Tenant ID (should show appropriate value or N/A), User ID (should show appropriate value or N/A), and Last Connected (should show a valid timestamp or N/A).",
+  "expected": "Support section should show accurate data: App version and App ID are correct. Tenant name, Tenant ID, and User ID should be hidden, blank, or show 'N/A' (since the user is not logged in). Last Connected should show 'N/A' or a reasonable default.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "guest-onboarding",
+    "guest-user",
     "support-section",
     "tenant-name",
     "tenant-id",
     "user-id",
-    "last-connected",
-    "app-button",
-    "later-button"
+    "onboarding",
+    "hamburger-menu"
   ],
   "source_last_updated": "1759751902",
   "source_hash": "72c7b3767a2e86da7bdf6f480f4f57d7b07e838824a6aff9b3e0342989c642dc",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.953179Z",
+  "processed_at": "2026-04-25T09:32:26.185971Z",
   "status": "active"
 }
