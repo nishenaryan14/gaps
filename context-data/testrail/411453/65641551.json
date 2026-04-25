@@ -5,22 +5,31 @@
   "project": "411453",
   "title": "ANC - changes are present after putting the app in the background",
   "feature": "ANC",
-  "scenario": "ANC setting persists after putting the Poly Studio Mobile app in the background and bringing it back to the foreground",
-  "steps": [],
-  "expected": "",
+  "scenario": "ANC settings persist when Poly Studio Mobile app is backgrounded and then brought to the foreground",
+  "steps": [
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the connected Poly device name to open Device Settings.",
+    "Navigate to Audio Settings \u2192 ANC.",
+    "Set ANC to a specific mode (e.g., High ANC, Low ANC, or Adaptive).",
+    "Press the Home button or recent apps button to put the Poly Studio Mobile app in the background.",
+    "Wait a few seconds, then bring the app back to the foreground by tapping the app icon or selecting it from recent apps.",
+    "Navigate back to Audio Settings \u2192 ANC and observe the current ANC setting."
+  ],
+  "expected": "The ANC setting should remain unchanged (same mode as set in step 4) after bringing the app back to the foreground.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "anc",
+    "anc-mode-persistence",
     "poly-studio-mobile",
-    "setting-persistence",
+    "device-settings",
+    "audio-settings",
     "background-foreground",
-    "anc-persistence",
-    "app-state-management"
+    "anc-mode"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "6795768c98e55837dae731f4f6f28a46ab65e96d5f4ea9e9e7ece8b4eddc0b18",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.823324Z",
+  "processed_at": "2026-04-25T07:55:31.912339Z",
   "status": "active"
 }
