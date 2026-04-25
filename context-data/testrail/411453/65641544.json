@@ -5,30 +5,34 @@
   "project": "411453",
   "title": "ANC - Switch from Transparency Mode to ANC Mode",
   "feature": "ANC",
-  "scenario": "Transparency Mode switches OFF and its sub-setting is greyed out when ANC Mode is turned ON, with ANC retaining its previously selected value",
+  "scenario": "Transparency Mode correctly switches OFF and is greyed out when toggling to ANC Mode with previously selected ANC value",
   "steps": [
-    "Open Poly Studio Mobile app on the Android device.",
-    "Navigate to the Home screen and tap on the connected Poly audio device.",
-    "Go to Audio Settings \u2192 ANC / Transparency Mode.",
-    "Ensure Transparency Mode is currently ON and set to a previously selected value (e.g., Environment or Speech).",
-    "Tap the ANC toggle to turn ANC ON.",
-    "Observe the Transparency Mode toggle and its selected value after ANC is turned ON."
+    "1. Open Poly Studio Mobile app on the Home screen.",
+    "2. Tap on the connected device name to open Device Settings.",
+    "3. Navigate to Audio Settings.",
+    "4. Tap on Transparency Mode to enable it.",
+    "5. If available, tap on Environment or Speech sub-settings under Transparency Mode and select a value.",
+    "6. Return to Audio Settings.",
+    "7. Tap on ANC to switch from Transparency Mode to ANC Mode.",
+    "8. Observe the ANC toggle state and value.",
+    "9. Observe the Transparency Mode toggle state and sub-settings."
   ],
-  "expected": "Transparency Mode switches OFF automatically. The previously selected Transparency Mode value (Environment or Speech) is greyed out/disabled. ANC is set to ON with its previously selected value.",
+  "expected": "ANC is ON with the previously selected ANC value (e.g., High, Low, Adaptive). Transparency Mode is switched OFF and its Environment/Speech sub-settings are greyed out/disabled.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "transparency-mode",
-    "anc",
-    "environment-sub-setting",
+    "anc-mode",
     "poly-studio-mobile",
     "audio-settings",
-    "anc-transparency-interaction",
-    "toggle-behavior"
+    "environment-sub-setting",
+    "speech-sub-setting",
+    "anc-toggle",
+    "device-settings"
   ],
   "source_last_updated": "1761046159",
   "source_hash": "cb1dc4ed876eef5ba1d486f94ac5ed21b9024707c3f05d13d6ce88451cf9426d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.989644Z",
+  "processed_at": "2026-04-25T09:32:26.242777Z",
   "status": "active"
 }
