@@ -5,24 +5,25 @@
   "project": "411453",
   "title": "EQ - Custom EQ, change the value on the slider, Reset EQ",
   "feature": "Equalizer",
-  "scenario": "Custom EQ slider positions do not reset to default center after using Reset EQ button in Poly Studio Mobile app",
+  "scenario": "Custom EQ slider circles do not return to default middle position after using Reset EQ button",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to Home screen and tap on the connected device name to open Device Settings.",
-    "3. Tap on Audio Settings.",
-    "4. Tap on Equalizer.",
-    "5. Adjust one or more EQ slider values (e.g., move sliders up or down from the default center position).",
-    "6. Tap the Reset EQ button.",
-    "7. Observe the position of the EQ slider circles."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Tap on Audio Settings",
+    "Tap on Equalizer",
+    "Adjust one or more EQ slider values (e.g., 100Hz, 1kHz, 10kHz) to non-default positions",
+    "Tap the Reset EQ button",
+    "Observe the position of all EQ slider circles"
   ],
   "expected": "After tapping Reset EQ, all EQ slider circles return to the default center (middle) position.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "equalizer",
-    "eq-slider",
     "reset-eq",
+    "eq-slider",
+    "poly-studio-mobile",
     "audio-settings",
     "device-settings",
     "eq-persistence"
@@ -30,6 +31,6 @@
   "source_last_updated": "1761145016",
   "source_hash": "e69df1ada9bd233fbdd39f609ddd816ea5f2761becbedc64e3f59f3af40ffbed",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.925826Z",
+  "processed_at": "2026-04-25T08:21:31.003014Z",
   "status": "active"
 }
