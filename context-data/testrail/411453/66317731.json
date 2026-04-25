@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Rename device - Rename, non English language",
   "feature": "Device Management",
-  "scenario": "Renaming a device with non-English characters does not display correctly across Home screen, Device Settings, Find My Device, and Support screens",
+  "scenario": "Device name with non-English characters does not display correctly across Home screen, Device Settings, Find My Device, and Support pages",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. On the Home screen, tap the device name displayed above the device settings area.",
-    "3. In the device name input field, clear the existing name and enter a new name using non-English characters (e.g., Chinese, Japanese, Korean, Arabic, Cyrillic, etc.).",
-    "4. Tap Save or confirm the new name.",
-    "5. Verify the new name with non-English characters is displayed correctly in the input field.",
-    "6. Navigate to the Home screen and verify the new name appears correctly above the device settings.",
-    "7. Go to App Settings \u2192 Find My Device and verify the new name is displayed correctly.",
-    "8. Go to App Settings \u2192 Support \u2192 Device and verify the new name is displayed correctly."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the device name displayed above the device settings area.",
+    "In the rename input field, enter a device name containing non-English characters (e.g., Chinese, Japanese, Arabic, Cyrillic, or accented Latin characters).",
+    "Confirm/save the new device name.",
+    "Observe the input field to verify the non-English characters are displayed correctly.",
+    "Navigate back to the Home screen and check that the new name appears correctly above the device settings.",
+    "Go to App Settings \u2192 Find My Device and verify the new name is displayed correctly.",
+    "Go to Support \u2192 Device page and verify the new name is displayed correctly."
   ],
-  "expected": "The device name with non-English characters is displayed correctly in all locations: the input field, above device settings on the Home screen, in App Settings > Find My Device, and in App Settings > Support > Device.",
+  "expected": "The device name with non-English characters is displayed correctly in all locations: the rename input field, above device settings on the Home screen, in App Settings > Find My Device, and on the Support > Device page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-rename",
+    "device-name",
     "non-english-characters",
-    "unicode-display",
+    "unicode-support",
     "home-screen",
+    "device-settings",
     "find-my-device",
-    "support-screen",
-    "device-settings"
+    "support-page"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "6b6a2ce7c2a654e65908798274a080d5bfa16f9f0413a68d4c949f9360b6563e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.971844Z",
+  "processed_at": "2026-04-25T09:32:26.224426Z",
   "status": "active"
 }
