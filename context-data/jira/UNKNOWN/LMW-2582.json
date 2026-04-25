@@ -6,15 +6,14 @@
   "summary": "ANDROID \ud83d\udfe5 DFU issues with Morpheus devices(VOY5200,VOY8200)",
   "feature": "Firmware Updates",
   "scenario": "Language update stuck at 99% for 8 minutes before completing on Voyager 5200 and Voyager 8200",
-  "description_clean": "Three DFU issues with Voyager 5200 and Voyager 8200 (Morpheus devices):\n\nIssue 1: Language update gets stuck at 99% for almost 8 minutes before completing. Language updates previously took 1-2 minutes but now take 10 minutes or more.\n\nIssue 2: After a successful device firmware update, the app still shows an available update for the Voyager 5200 headset, instead of showing the device as up to date.\n\nIssue 3: When a phone call is active and a device firmware update is initiated, the DFU process gets stuck at 26%. Expected behavior is a pop-up message saying \"Cannot update this device during a call\".",
+  "description_clean": "Three DFU issues with Voyager 5200 and Voyager 8200 devices:\n\nIssue 1: Language update gets stuck at 99% for almost 8 minutes before completing. Language changes that previously took 1-2 minutes now take 10 minutes or more.\n\nIssue 2: After a successful device firmware update, the app still shows an available update for the headset, instead of showing the device as up to date.\n\nIssue 3: When a device firmware update is initiated during an active phone call, the DFU process gets stuck at 26%. Expected behavior is a pop-up message saying \"Cannot update this device during a call\".",
   "steps": [
     "Open Poly Studio Mobile app on Android",
     "Navigate to Home screen",
-    "Connect to a Voyager 5200 or Voyager 8200 (Morpheus device)",
+    "Connect to a Voyager 5200 or Voyager 8200 device",
     "Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update",
-    "Initiate a language pack update",
-    "Observe the progress bar during the language update",
-    "Wait for the update to complete"
+    "Initiate a language update for the connected device",
+    "Observe the progress bar during the language update"
   ],
   "expected": "Language update completes within 1-2 minutes.",
   "actual": "Language update gets stuck at 99% for almost 8 minutes before completing, taking 10 minutes or more total.",
@@ -28,12 +27,12 @@
     "voyager-5200",
     "voyager-8200",
     "poly-studio-mobile",
-    "morpheus-device",
+    "device-settings",
     "update-stuck"
   ],
   "source_last_updated": "2026-04-24T16:46:45.000+0000",
   "source_hash": "de442524ce7db5ad63de3f22174830688c5c4dda06bf6ace7f24d66bd298458a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.739311Z",
+  "processed_at": "2026-04-25T09:32:26.001827Z",
   "status": "active"
 }
