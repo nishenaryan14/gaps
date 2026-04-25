@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "1 step DFU - new DFU screen from Settings for both updates",
   "feature": "Firmware Update",
-  "scenario": "New DFU screen design in Settings shows simultaneous earbud and charging case updates on Voyager Free 60+ and Voyager Legend 50",
+  "scenario": "New DFU screen design in Settings shows available updates for earbuds and charging case on Voyager Free 60+ and Voyager Legend 50",
   "steps": [
-    "1. Open Poly Studio Mobile app on the Home screen.",
-    "2. Tap the Update button on the Home screen.",
-    "3. Observe the app navigates to the Settings screen.",
-    "4. Verify the SW update tab is displayed with the new DFU screen design.",
-    "5. Confirm that all available firmware updates (for both earbud and charging case) are presented for the user to choose from.",
-    "6. Repeat steps 1\u20135 with a Voyager Free 60+ device connected.",
-    "7. Repeat steps 1\u20135 with a Voyager Legend 50 device connected."
+    "Open Poly Studio Mobile app on Home screen.",
+    "Tap the Update button on the Home screen.",
+    "Observe the Settings screen opens with the SW update tab displayed.",
+    "Verify the new DFU screen design is shown, listing all available firmware updates for both the earbuds (EB) and charging case (CC).",
+    "Select an available update (e.g., for Voyager Free 60+ or Voyager Legend 50).",
+    "Tap the update/install button to proceed."
   ],
-  "expected": "The app navigates from Home to the Settings screen with the SW update tab showing the new DFU design. All available updates for the earbud and charging case are listed and selectable by the user.",
+  "expected": "The Settings screen opens with the SW update tab showing a new DFU design. All available firmware updates for both earbuds and charging case are presented clearly for the user to choose from.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu-screen",
+    "dfu-screen-design",
     "firmware-update",
     "voyager-free-60-plus",
     "voyager-legend-50",
     "poly-studio-mobile",
     "settings-screen",
-    "charging-case-update",
-    "sw-update-tab"
+    "sw-update-tab",
+    "charging-case-update"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "8aca5af79f628a800456b580c557ec6254c0716445f21770951f0a17d4d4e13c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.904071Z",
+  "processed_at": "2026-04-25T07:55:31.960746Z",
   "status": "active"
 }
