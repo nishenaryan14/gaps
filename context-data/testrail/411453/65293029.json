@@ -8,27 +8,28 @@
   "scenario": "First-time app launch shows license agreement, login options (Microsoft/Apple/Google/username-password), and navigates to Home Screen on successful login",
   "steps": [
     "1. Launch the Poly Studio Mobile app for the first time.",
-    "2. Observe the License Agreement screen. Tap 'Accept' to proceed.",
-    "3. On the login screen, observe the available options: 'Log in' or 'Sign up'.",
-    "4. Tap 'Log in' and choose one of the following methods:\n   - Microsoft\n   - Apple\n   - Google\n   - Username/Password",
-    "5. Complete the authentication flow for the selected method.",
-    "6. After successful authentication, observe the app navigation."
+    "2. On the License Agreement screen, tap \"Accept\" to proceed.",
+    "3. On the Login screen, observe the available options: Log in or Sign up via Microsoft, Apple, Google, or use Username/Password.",
+    "4. (Optional) Tap \"Skip\" to bypass login and proceed to the Home Screen.",
+    "5. Select a login method (e.g., Microsoft, Apple, Google, or Username/Password) and complete the authentication flow.",
+    "6. After successful authentication, verify the app navigates to the Home Screen."
   ],
-  "expected": "User is navigated to the Home Screen of the Poly Studio Mobile app.",
+  "expected": "User completes onboarding, accepts license agreement, and after successful login (or skip) is taken to the Home Screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "first-launch",
     "license-agreement",
-    "login-options",
+    "login-screen",
     "authentication-flow",
-    "home-screen-navigation",
-    "app-onboarding"
+    "home-screen",
+    "skip-login",
+    "sso-providers"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "2dca91b312a00ccef138b289545814ad87eb7402c75b97bbeef3cc1bfec43304",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.902154Z",
+  "processed_at": "2026-04-25T09:32:26.121520Z",
   "status": "active"
 }
