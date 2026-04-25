@@ -4,29 +4,28 @@
   "type": "testcase",
   "project": "411453",
   "title": "Fit test - 1st screen Start Test button",
-  "feature": "Fit Test",
-  "scenario": "Tapping 'Start Test' on the Fit Test first screen should navigate to the second screen as per Figma design.",
+  "feature": "Device Management",
+  "scenario": "Fit Test \"Start Test\" button does not navigate to the second screen as per Figma design on Poly Studio Mobile app",
   "steps": [
-    "Start the app with a supported device connected.",
-    "Open Device Settings.",
-    "Navigate to Fit Test.",
-    "Tap the 'Start Test' button."
+    "1. Launch the Poly Studio Mobile app with a device that supports Fit Test connected.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Fit Test.",
+    "3. On the Fit Test screen, tap the \"Start Test\" button."
   ],
-  "expected": "The 'Start Test' button on the first screen of the Fit Test feature should open the second screen as shown in the Figma design.",
+  "expected": "The second screen (Fit Test in-progress screen) opens as shown in the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Fit Test",
-    "Start Test",
-    "navigation",
-    "screen transition",
-    "Figma design",
-    "device settings",
-    "button tap"
+    "fit-test",
+    "start-test-button",
+    "poly-studio-mobile",
+    "device-settings",
+    "ui-navigation",
+    "figma-design",
+    "screen-transition"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "24895d4b587e5b1e25bcc65aa5c5b3cb2d324e753aaf1b49fa89ad05d080f9d1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.226428Z",
+  "processed_at": "2026-04-25T05:37:16.807948Z",
   "status": "active"
 }
