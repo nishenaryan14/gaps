@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Mobile user registered on Lens tenant, mobile app data correct",
   "feature": "App Settings",
-  "scenario": "Lens tenant data (tenant name, tenant ID, user ID, app ID, last connection date) displays correctly in Poly Studio Mobile app under Poly Support/App check for registered user",
+  "scenario": "Verify Lens tenant data (app version, tenant name, tenant ID, user ID, app ID, last connection date) displays correctly in Poly Studio Mobile app under Poly Support/App for registered users",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the mobile device.",
     "2. Navigate to the Home screen.",
     "3. Tap the menu icon (hamburger menu) or profile icon to access the side menu.",
     "4. Select \"Poly Support\" from the menu.",
-    "5. Tap on \"App Check\" or \"App Info\" within the Poly Support section.",
-    "6. Verify the displayed information on the App Check screen."
+    "5. Tap on \"App\" within the Poly Support section.",
+    "6. Verify the displayed tenant data fields: App Version, Tenant Name, Tenant ID, User ID, App ID, and Last Connection Date.",
+    "7. Cross-reference the displayed values with the expected tenant data registered on the Lens tenant."
   ],
-  "expected": "The App Check screen displays all of the following fields with correct data matching the Lens tenant registration: app version, tenant name, tenant ID, user ID, app ID, and last connection date.",
+  "expected": "All tenant data fields (App Version, Tenant Name, Tenant ID, User ID, App ID, Last Connection Date) display accurate values matching the Lens tenant registration.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "poly-support",
-    "app-check",
-    "tenant-data",
     "lens-tenant",
-    "registered-user",
-    "app-info"
+    "tenant-data",
+    "app-version",
+    "tenant-id",
+    "user-id"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "4f7ea0c4661fe018dd4173272903999fd68264d0b904202fb8b66b30e08f9eb2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.062127Z",
+  "processed_at": "2026-04-25T09:32:26.320412Z",
   "status": "active"
 }
