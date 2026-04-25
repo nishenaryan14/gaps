@@ -13,7 +13,7 @@
     "4. If prompted, grant location permission to the app.",
     "5. Observe the Find My Device screen."
   ],
-  "expected": "The Find My Device screen displays a map, a warning sign, the message \"No devices were found. Connect your Poly device using Bluetooth and try again.\", and a \"Not seeing your device?\" button.",
+  "expected": "The Find My Device screen should display a map, a warning sign, the message \"No devices were found. Connect your Poly device using Bluetooth and try again.\", and a \"Not seeing your device?\" button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,11 +23,11 @@
     "no-devices-connected",
     "location-permission",
     "hamburger-menu",
-    "device-discovery"
+    "device-location"
   ],
   "source_last_updated": "1762437205",
   "source_hash": "84243257d6679e5a76506d27552ab66fc719bd4467b40b1a2282ea748abc43ce",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.947960Z",
+  "processed_at": "2026-04-25T09:32:26.178393Z",
   "status": "active"
 }
