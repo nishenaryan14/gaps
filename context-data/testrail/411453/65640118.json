@@ -5,18 +5,18 @@
   "project": "411453",
   "title": "Mobile user registered on Lens tenant, mobile app data correct",
   "feature": "App Settings",
-  "scenario": "Poly Studio Mobile app displays correct Lens tenant data (app version, tenant name, tenant ID, user ID, app ID, last connection date) under Poly Support/App check for registered users",
+  "scenario": "Lens tenant data (tenant name, ID, user ID, app ID, last connection date) displays correctly in Poly Studio Mobile app under Poly Support/App check for registered users",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the mobile device.",
-    "2. Log in with a user account registered on a Lens tenant.",
-    "3. Navigate to the Home screen.",
-    "4. Tap the menu icon (hamburger menu) or the Account/profile icon to open the side navigation menu.",
-    "5. Select \"Poly Support\" from the menu.",
-    "6. Tap on \"App check\" or the relevant diagnostic/support section.",
-    "7. Observe the displayed tenant data fields: App version, Tenant name, Tenant ID, User ID, App ID, Last connection date.",
-    "8. Compare each field against the known correct values from the Lens tenant registration."
+    "2. Navigate to the Home screen.",
+    "3. Tap the menu icon (hamburger menu) or profile icon to access the side menu.",
+    "4. Select \"Poly Support\" from the menu.",
+    "5. Tap on \"App Check\" or \"App Info\" within the Poly Support section.",
+    "6. Verify that the user is registered on a Lens tenant (check that tenant information is displayed).",
+    "7. Review the following fields displayed on the screen:\n   - App version\n   - Tenant name\n   - Tenant ID\n   - User ID\n   - App ID\n   - Last connection date",
+    "8. Cross-reference each field with the expected tenant data from the Lens backend/admin portal."
   ],
-  "expected": "All tenant data fields (App version, Tenant name, Tenant ID, User ID, App ID, Last connection date) display accurate values matching the user's Lens tenant registration.",
+  "expected": "All tenant data fields (app version, tenant name, tenant ID, user ID, app ID, last connection date) displayed in Poly Studio Mobile \u2192 Poly Support \u2192 App Check match the correct Lens tenant registration data.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,13 +25,12 @@
     "poly-support",
     "app-check",
     "tenant-data",
-    "app-version",
-    "user-id",
-    "app-id"
+    "registered-user",
+    "app-info"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "4f7ea0c4661fe018dd4173272903999fd68264d0b904202fb8b66b30e08f9eb2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.956010Z",
+  "processed_at": "2026-04-25T07:55:31.986989Z",
   "status": "active"
 }
