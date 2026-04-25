@@ -5,16 +5,16 @@
   "project": "411453",
   "title": "CCL - Selecting UC Noise Block",
   "feature": "App Settings",
-  "scenario": "UC Noise Block option can be selected in Device Settings > Advanced on the Poly Studio Mobile app when connected to a supported device",
+  "scenario": "UC Noise Block option can be selected in Device Settings > Advanced on Poly Studio Mobile app when connected to Voyager Free 60+, Voyager Free 60, or Voyager Legend 50",
   "steps": [
-    "Open the Poly Studio Mobile app on your Android device.",
-    "Ensure a supported Poly Bluetooth audio device is connected.",
+    "Open the Poly Studio Mobile app on your mobile device.",
+    "Ensure the app is connected to a supported device (Voyager Free 60+, Voyager Free 60, or Voyager Legend 50).",
     "Tap on the connected device name to open Device Settings.",
     "Scroll down and tap on \"Advanced\" in the Device Settings menu.",
     "Locate the \"UC Noise Block\" option in the Advanced settings.",
     "Tap on the \"UC Noise Block\" option to select it."
   ],
-  "expected": "The \"UC Noise Block\" option is selectable (tappable) and becomes enabled/active in the Advanced settings.",
+  "expected": "The \"UC Noise Block\" option is selectable and becomes enabled/highlighted in the Advanced settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,13 +22,13 @@
     "poly-studio-mobile",
     "device-settings",
     "advanced-settings",
-    "android",
-    "bluetooth-audio-device",
-    "noise-management"
+    "voyager-free-60-plus",
+    "voyager-free-60",
+    "voyager-legend-50"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "ca4eb0fbc294d0213978011e60ec0b636496984d6bbde81dfab20d0e1765e246",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.841823Z",
+  "processed_at": "2026-04-25T07:55:31.934844Z",
   "status": "active"
 }
