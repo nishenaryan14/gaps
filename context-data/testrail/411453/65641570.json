@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "EQ - Button to change preset is present",
   "feature": "Equalizer",
-  "scenario": "EQ tab in Device Settings displays preset buttons (Bass, Flat, Bright, Custom EQ) with Bass set as default on supported devices",
+  "scenario": "EQ tab in Device Settings displays preset buttons (Bass, Flat, Bright, Custom EQ) with Bass selected by default",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
-    "Tap on a supported connected device to open Device Settings",
+    "Tap on a connected device to open Device Settings",
     "Locate the Audio Settings section",
-    "Tap on Equalizer (EQ)",
+    "Tap on Equalizer (EQ) tab",
     "Observe the preset buttons displayed below the headline"
   ],
-  "expected": "The EQ tab in Device Settings displays preset buttons (Bass, Flat, Bright, Custom EQ) below the headline, with Bass set as the default preset.",
+  "expected": "The EQ tab in Device Settings displays preset buttons (Bass, Flat, Bright, Custom EQ) below the headline, with Bass selected by default.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "eq",
+    "poly-studio-mobile",
+    "device-settings",
     "equalizer",
-    "preset-buttons",
-    "bass-preset",
-    "flat-preset",
-    "bright-preset",
-    "custom-eq",
-    "poly-studio-mobile"
+    "eq-presets",
+    "bass",
+    "flat",
+    "bright",
+    "custom-eq"
   ],
   "source_last_updated": "1761143862",
   "source_hash": "fefc43d6317b673dfc30661d599b352c9ebb95b71e5a0e90b396ecc2a3c2149b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.994674Z",
+  "processed_at": "2026-04-25T09:32:26.250371Z",
   "status": "active"
 }
