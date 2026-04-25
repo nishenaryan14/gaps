@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Verify software update flow in guest mode",
   "feature": "Firmware Updates",
-  "scenario": "Software update flow displays correctly in guest mode with no headset connected, including language change to Spanish and Help Guide page loading",
+  "scenario": "Software update flow verification in guest mode shows \"No previously connected devices were found\" and help guide loads correctly",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. On the welcome screen, select \"Continue as guest\" (no Poly headset connected).",
-    "3. Tap the hamburger menu (\u2630) in the top-left corner.",
-    "4. Change the phone system language to Spanish via device Settings \u2192 System \u2192 Languages & input \u2192 Languages \u2192 Add/select Spanish.",
+    "1. Launch the Poly Studio Mobile app in guest mode (no Poly headset connected).",
+    "2. Observe the Home screen and verify that the \"Supported Devices\" button is displayed.",
+    "3. Open the hamburger menu (three-line icon) from the top-left corner of the Home screen.",
+    "4. Change the device language to Spanish via the phone's system Settings (Settings \u2192 System \u2192 Languages & input \u2192 Languages \u2192 Add/select Espa\u00f1ol).",
     "5. Return to the Poly Studio Mobile app and navigate to the hamburger menu \u2192 Support.",
     "6. In the Support menu, tap the \"Device\" button.",
     "7. Observe the message displayed on screen.",
-    "8. Tap the \"Help Guide\" option and verify the page loads."
+    "8. Tap the \"Help Guide\" option and verify that the help guide page loads correctly."
   ],
-  "expected": "The app displays \\\"No previously connected devices were found\\\" message when tapping the Device button, and the Help Guide page loads successfully in Spanish (or in the selected language).",
+  "expected": "The \"Supported Devices\" button is visible on the Home screen. After changing the language to Spanish, the app UI reflects the new language. Tapping the Device button in Support shows the message \"No previously connected devices were found.\" The Help Guide page loads successfully without errors.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "guest-mode",
-    "software-update-flow",
-    "language-change-spanish",
-    "help-guide",
     "poly-studio-mobile",
-    "support-menu",
-    "no-headset-connected",
-    "hamburger-menu"
+    "guest-mode",
+    "software-update",
+    "no-previously-connected-devices",
+    "help-guide",
+    "supported-devices",
+    "language-change",
+    "support-menu"
   ],
   "source_last_updated": "1775727607",
   "source_hash": "e0fe4dcdc158b9d209a91f9db5f7c52234ae4c09172196d3adfdef2772f34a41",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.748100Z",
+  "processed_at": "2026-04-25T08:21:32.254177Z",
   "status": "active"
 }
