@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Software Update - Release Notes link",
   "feature": "Firmware Updates",
-  "scenario": "Release Notes popup does not display when tapping firmware version link in Device Settings > Software Update",
+  "scenario": "Release Notes popup displays correctly when accessed via Device Settings > Software Update link during firmware update",
   "steps": [
-    "1. Ensure the headset is not on the latest firmware (a firmware update is available).",
-    "2. Open the Poly Studio Mobile app on the Android device.",
-    "3. On the Home screen, tap the desired device to navigate to Device Settings.",
-    "4. In Device Settings, tap Software Update.",
-    "5. Locate the blue firmware version text next to \"Update Available\" (this is the Release Notes link).",
-    "6. Tap the Release Notes link.",
-    "7. Observe the popup that appears."
+    "1. Launch Poly Studio Mobile app on Android.",
+    "2. Navigate to Home screen and ensure a Poly Bluetooth headset is connected.",
+    "3. Confirm the headset is NOT on the latest firmware (i.e., a firmware update is available).",
+    "4. Tap the connected device name to open Device Settings.",
+    "5. Scroll to and tap 'Software Update'.",
+    "6. Locate the blue firmware version text next to 'Update Available'.",
+    "7. Tap that blue firmware version link (Release Notes link).",
+    "8. Observe the popup that appears."
   ],
-  "expected": "A popup is displayed showing the release notes for the available firmware update.",
+  "expected": "A popup is displayed showing the release notes for the available firmware update, similar to the release notes link behavior on the device home page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "release-notes-popup",
-    "firmware-version-link",
-    "device-settings",
+    "release-notes",
     "software-update",
-    "poly-studio-mobile",
     "firmware-update",
-    "update-available"
+    "device-settings",
+    "poly-studio-mobile",
+    "android",
+    "popup-display"
   ],
   "source_last_updated": "1763039673",
   "source_hash": "cd49981281d85a1b519a7c8fa8fbe4cdb309339023e2130e4738b9e175a1a656",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.021423Z",
+  "processed_at": "2026-04-25T09:32:26.280245Z",
   "status": "active"
 }
