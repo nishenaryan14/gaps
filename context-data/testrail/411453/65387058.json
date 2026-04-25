@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Feedback - new tab in Menu list",
   "feature": "App Settings",
-  "scenario": "Poly Studio Mobile app menu does not include a Feedback tab when hamburger icon is tapped",
+  "scenario": "Poly Studio Mobile app menu does not display the Feedback tab when hamburger icon is tapped",
   "steps": [
     "1. Open the Poly Studio Mobile app.",
     "2. Tap the hamburger icon (top left corner) to open the side menu.",
@@ -19,13 +19,13 @@
     "hamburger-menu",
     "side-menu",
     "feedback-tab",
-    "menu-navigation",
-    "app-ui",
-    "menu-items"
+    "menu-display",
+    "app-navigation",
+    "ui-missing-element"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "c9836ea683033352538ab02f3c7be74e1f85e2198134dddda2f9593e8f4071b2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.959364Z",
+  "processed_at": "2026-04-25T09:32:26.188517Z",
   "status": "active"
 }
