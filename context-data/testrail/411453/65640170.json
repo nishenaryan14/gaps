@@ -4,30 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Logout Initiated",
-  "feature": "Analytics",
-  "scenario": "Verify that after a user logs out, the Firebase dashboard for the Logout Initiated event displays default elements and updates event counts after a few hours.",
+  "feature": "App Settings",
+  "scenario": "Firebase analytics logs logout event when user signs out of Poly account in the Poly Studio Mobile app",
   "steps": [
-    "Open the Logout Initiated Firebase page \u2013 verify the page opens properly and contains default elements: graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment, screen name, user type, and action.",
-    "Log out of your account on mobile.",
-    "Wait for a few hours for event counts to update.",
-    "Check the Firebase dashboard page for the Logout Initiated event \u2013 verify that the event count for related elements has increased."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Account screen.",
+    "3. Tap on the 'Log Out' or 'Sign Out' option.",
+    "4. Confirm the logout action if prompted.",
+    "5. Observe the Firebase analytics event that is triggered upon logout."
   ],
-  "expected": "The Logout Initiated Firebase page displays all default elements (graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment, screen name, user type, and action). After logging out and waiting a few hours, the event count for related elements increases.",
+  "expected": "A Firebase analytics event is logged when the user logs out. The event includes default event data such as event count by country, gender, app version, app build, and app environment.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Firebase dashboard",
-    "Logout Initiated event",
-    "event count",
-    "logout",
-    "mobile logout",
-    "analytics",
-    "event tracking",
-    "dashboard elements"
+    "poly-studio-mobile",
+    "firebase-analytics",
+    "logout-event",
+    "account-screen",
+    "sign-out",
+    "android",
+    "poly-account"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "cd2636a2ad732cc814c85f4e6c9b9dacc4dd6a5972ccb161744941094de5914f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.335141Z",
+  "processed_at": "2026-04-25T05:37:16.960577Z",
   "status": "active"
 }
