@@ -4,33 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Onboarding - Continue as guest",
-  "feature": "Onboarding",
-  "scenario": "Continue as guest flow during onboarding shows Poly Product Improvement Program popup before directing user to home screen on both Android and iOS",
+  "feature": "App Settings",
+  "scenario": "Onboarding 'Continue as guest' flow skips location permission and passcode prompts on Android compared to iOS",
   "steps": [
-    "1. Launch the app and reach the onboarding screen",
-    "2. Tap \"Continue as guest\"",
-    "3. Handle the notification permission popup: tap \"Allow\" or \"Don't Allow\"",
-    "4. (iOS only) Handle the location permission popup: respond accordingly",
-    "5. (iOS only) Enter iPhone passcode when prompted",
-    "6. Observe the Poly Product Improvement Program popup appearing",
-    "7. User is directed to the home screen"
+    "1. Launch the Poly Studio Mobile app on an Android device.",
+    "2. On the onboarding screen, tap 'Continue as guest'.",
+    "3. When prompted, select either 'Allow' or 'Don't Allow' for the relevant permission.",
+    "4. Observe the next screen that appears."
   ],
-  "expected": "User completes the guest onboarding flow and is directed to the home screen.",
+  "expected": "After tapping 'Continue as guest' and selecting 'Allow' or 'Don't Allow', the Poly Product Improvement Program popup appears, and the user is directed to the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "guest flow",
-    "onboarding",
-    "Poly Product Improvement Program popup",
-    "home screen",
-    "Android",
-    "iOS",
-    "notification permission",
-    "location permission"
+    "poly-studio-mobile",
+    "onboarding-flow",
+    "continue-as-guest",
+    "location-permission",
+    "passcode-prompt",
+    "android-vs-ios",
+    "permission-handling"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "38eb4a276c4a6eff4181ee3b84ba470c4aff89443a0a94f6fa07fabedf945a39",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.087343Z",
+  "processed_at": "2026-04-25T05:37:16.704093Z",
   "status": "active"
 }
