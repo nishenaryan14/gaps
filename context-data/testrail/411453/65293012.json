@@ -7,28 +7,29 @@
   "feature": "App Settings",
   "scenario": "Location permission granted during onboarding does not persist for FindMyDevice feature on Poly Lens app",
   "steps": [
-    "Launch the Poly Studio Mobile app for the first time",
-    "Accept the License Agreement and Privacy Policy",
-    "Tap Continue",
-    "Navigate to the \"Organized\" screen",
-    "Tap \"Enable now\"",
-    "In the pop-up window, tap \"Allow\" to grant location tracking permission"
+    "Launch the Poly Studio Mobile app for the first time.",
+    "Accept the License Agreement and Privacy Policy.",
+    "Tap Continue.",
+    "Navigate to the \"Organized\" screen.",
+    "Tap \"Enable now\" on the location tracking prompt.",
+    "Tap \"Allow\" in the Android system permissions pop-up."
   ],
-  "expected": "Location tracking is allowed for the Poly Lens app. The user proceeds to further onboarding steps. When the user later accesses the FindMyDevice menu, the app should not prompt for location permissions again.",
+  "expected": "Location tracking permission is granted for the Poly Lens app. The user proceeds to further onboarding steps. When accessing the Find My Device menu later, the app should not prompt for location permissions again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-lens-app",
+    "poly-studio-mobile",
     "find-my-device",
     "location-permission",
     "onboarding",
     "permission-persistence",
-    "poly-studio-mobile",
-    "organized-screen"
+    "android-permissions",
+    "organized-screen",
+    "poly-lens-app"
   ],
   "source_last_updated": "1760528507",
   "source_hash": "e7cd4a243280184d2bd20f5bd21198920fefee42561396602d0c4121c6e0bfdd",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.700581Z",
+  "processed_at": "2026-04-25T07:55:31.772474Z",
   "status": "active"
 }
