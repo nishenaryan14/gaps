@@ -7,13 +7,13 @@
   "feature": "App Settings",
   "scenario": "App remains stable and responsive after prolonged idle soak test on Home Screen with paired headset",
   "steps": [
-    "1. Install and launch the Poly Studio Mobile Android app.",
-    "2. Pair a supported Poly Bluetooth headset to the phone via the app.",
+    "1. Install and launch the Poly Studio Mobile app.",
+    "2. Pair a Poly Bluetooth headset with the phone via the app.",
     "3. Navigate to the app Home screen.",
-    "4. Leave the phone idle with the app in the foreground for multiple hours (e.g., 4+ hours).",
-    "5. Periodically check the app for any signs of unresponsiveness, crashes, or memory-related issues."
+    "4. Leave the phone idle with the Poly Studio Mobile app in the foreground for multiple hours.",
+    "5. After the soak period, check that the app is still running, responsive, and not crashed."
   ],
-  "expected": "The app remains stable, running, and responsive throughout the soak test period with no crashes, freezes, or memory leaks.",
+  "expected": "The app remains stable, running, and responsive after prolonged idle time with no crashes or memory leaks.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,12 +22,12 @@
     "idle-soak-test",
     "app-stability",
     "bluetooth-pairing",
-    "memory-management",
-    "crash-detection"
+    "crash-recovery",
+    "foreground-persistence"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "01663ad7e8e92873e6ed292fa777d8a2e040fda3a444ef56bc09a8ff451c29ef",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.001762Z",
+  "processed_at": "2026-04-25T08:21:31.072432Z",
   "status": "active"
 }
