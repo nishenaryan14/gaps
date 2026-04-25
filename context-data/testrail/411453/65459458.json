@@ -4,28 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - \"1\" or \"2\" tag on the tab if any component is outdated",
-  "feature": "Software Update",
-  "scenario": "Software Update tab shows a numeric tag indicating the count of outdated components",
+  "feature": "Firmware Updates",
+  "scenario": "Software Update tab does not display numbered tag indicating how many components have available updates",
   "steps": [
-    "Ensure one or more components are outdated.",
-    "Navigate to the Software Update tab.",
-    "Observe the tab for a numeric tag."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Locate the Software Update tab",
+    "Observe the numbered tag on the Software Update tab"
   ],
-  "expected": "The Software Update tab displays a numeric tag (e.g., \"1\" or \"2\") indicating the number of outdated components.",
+  "expected": "The Software Update tab displays a numbered tag (e.g., \"1\" or \"2\") indicating how many components (headset, stand, charge case) have an available update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Software Update tab",
-    "numeric tag",
-    "outdated components",
-    "update count",
-    "component version",
-    "update notification",
-    "software version indicator"
+    "poly-studio-mobile",
+    "software-update",
+    "numbered-tag",
+    "update-notification",
+    "firmware-update",
+    "home-screen",
+    "update-availability"
   ],
   "source_last_updated": "1763046713",
   "source_hash": "98c254a4a2818dfbc0b03cdf19a68fb4d53ee4106dcd8fa6f62643ecf8b75221",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.274616Z",
+  "processed_at": "2026-04-25T05:37:16.874486Z",
   "status": "active"
 }
