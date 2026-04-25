@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Feedback - Mopinion form is opened",
   "feature": "App Settings",
-  "scenario": "Mopinion feedback form in App Settings displays empty fields and options (Bug, Suggestion, Compliment, Other) with Your Feedback, Name, Last name, email fields and Send button",
+  "scenario": "Mopinion feedback form in App Settings displays empty fields and options incorrectly on Poly Studio Mobile app",
   "steps": [
     "Open Poly Studio Mobile app",
     "Go to App Settings",
     "Tap on 'Feedback' or 'Send Feedback' option",
-    "Observe the Mopinion feedback form"
+    "Observe the Mopinion feedback form that loads"
   ],
-  "expected": "The Mopinion feedback form displays correctly with all options (Bug, Suggestion, Compliment, Other), all fields (Your Feedback, Name, Last name, email), and a Send button visible and functional.",
+  "expected": "The Mopinion feedback form displays correctly with empty fields and options: options (Bug, Suggestion, Compliment, Other), fields (Your Feedback, Name, Last name, email), and a Send button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "app-settings",
-    "mopinion-feedback-form",
-    "feedback-fields",
-    "send-feedback",
+    "mopinion-feedback",
+    "feedback-form",
     "ui-display-issue",
-    "empty-fields"
+    "empty-fields",
+    "settings-menu"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "d2aec0986eb39f4cb29960a5b820141089b6a0573dcc1c94a8d2e469e98b7c13",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.784670Z",
+  "processed_at": "2026-04-25T07:55:31.859411Z",
   "status": "active"
 }
