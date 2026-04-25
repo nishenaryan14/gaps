@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "Find My Device - Screen with No Devices Connected",
   "feature": "App Settings",
-  "scenario": "Find My Device screen shows empty state with map, warning sign, and guidance message when no Poly devices are connected",
+  "scenario": "Find My Device screen shows \"No devices were found\" message and map when no Poly device is connected",
   "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Go to the Home screen.",
-    "Tap the menu icon (hamburger) or gear icon to open App Settings.",
-    "Select 'Find My Device' from the App Settings menu.",
-    "Observe the screen when no Poly devices are connected via Bluetooth."
+    "1. Open the Poly Studio Mobile app on the Home screen with 'No Devices Connected' displayed.",
+    "2. Tap the hamburger menu icon (three horizontal lines) to open the side navigation menu.",
+    "3. Tap 'Find My Device' from the menu.",
+    "4. If prompted, grant location permission to the app.",
+    "5. Observe the Find My Device screen."
   ],
-  "expected": "The Find My Device screen displays a map, a warning sign, and the message: \"No devices were found. Connect your Poly device using Bluetooth and try again.\" along with a \"Not seeing your device?\" button.",
+  "expected": "The Find My Device screen displays a map, a warning sign, the message \"No devices were found. Connect your Poly device using Bluetooth and try again.\", and a \"Not seeing your device?\" button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
-    "empty-state",
+    "no-devices-found",
     "poly-studio-mobile",
-    "app-settings",
-    "bluetooth-connection",
-    "no-device-connected",
-    "map-view",
-    "guidance-message"
+    "no-devices-connected",
+    "location-permission",
+    "hamburger-menu",
+    "device-discovery"
   ],
   "source_last_updated": "1762437205",
   "source_hash": "84243257d6679e5a76506d27552ab66fc719bd4467b40b1a2282ea748abc43ce",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.835055Z",
+  "processed_at": "2026-04-25T08:21:30.947960Z",
   "status": "active"
 }
