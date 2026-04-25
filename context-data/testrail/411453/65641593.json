@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "EQ - Saved Custom EQ, reset defaults - returns to Bass, but leaves custom not saved",
   "feature": "Equalizer",
-  "scenario": "Custom EQ settings are lost and sliders reset to default after performing Reset Defaults from Device Settings, with display incorrectly showing Bass preset",
+  "scenario": "Custom EQ settings are lost and sliders reset to default after performing Reset Defaults from Device Settings on Poly Studio Mobile app",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
@@ -14,13 +14,13 @@
     "Tap on Equalizer",
     "Adjust slider values to create a custom EQ profile",
     "Tap Save to save the custom EQ preset",
-    "Navigate back to Device Settings",
+    "Go back to Device Settings",
     "Tap Reset Defaults",
     "Confirm the reset when prompted",
-    "Navigate back to Audio Settings",
-    "Tap on Equalizer"
+    "Navigate back to Audio Settings \u2192 Equalizer",
+    "Observe the displayed EQ preset name and slider positions"
   ],
-  "expected": "After Reset Defaults, the EQ display should show the custom EQ preset that was saved, with the slider values retaining the custom settings.",
+  "expected": "After Reset Defaults, the EQ should display the previously saved custom EQ preset with the slider values retained at the custom positions.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -29,13 +29,13 @@
     "custom-eq-preset",
     "reset-defaults",
     "device-settings",
-    "audio-settings",
     "eq-sliders",
-    "bass-preset"
+    "audio-settings",
+    "eq-persistence"
   ],
   "source_last_updated": "1761211957",
   "source_hash": "9dc50958a2a43adc1721551a9e78e7b9af4e3d5d2eca324b95848db456bb7f9c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.929732Z",
+  "processed_at": "2026-04-25T08:21:31.004012Z",
   "status": "active"
 }
