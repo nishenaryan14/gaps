@@ -5,31 +5,23 @@
   "project": "411453",
   "title": "Swipe right, next screen",
   "feature": "App Settings",
-  "scenario": "Onboarding screen navigation: swiping right from Continue button advances through screens with dot indicators, all screens must match Figma design",
-  "steps": [
-    "Open Poly Studio Mobile app for the first time (or after clearing app data) to land on the Onboarding screen.",
-    "On the first onboarding screen, locate the 'Continue' button.",
-    "Swipe right from the 'Continue' button to advance to the next onboarding screen.",
-    "Observe the dot indicators at the bottom of the screen to confirm progression.",
-    "Repeat swiping right from the 'Continue' button through the third, fourth, fifth, and sixth onboarding screens.",
-    "On each screen, visually compare the layout, text, images, and UI elements against the Figma design specifications."
-  ],
-  "expected": "Swiping right from the Continue button advances through all onboarding screens (third, fourth, fifth, sixth) with dot indicators updating correctly. Each screen matches the Figma design in layout, text, images, and UI elements.",
+  "scenario": "Swiping right from Continue button advances through onboarding screens with dot indicators updating per Figma design",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "onboarding-screen",
-    "continue-button",
+    "onboarding",
     "swipe-navigation",
+    "continue-button",
     "dot-indicators",
-    "figma-design-validation",
-    "ui-layout",
-    "screen-progression"
+    "figma-design",
+    "screen-advancement",
+    "ui-flow"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "51007c4a673aca191dd68a7ee7076fb11bf76c7d6528347a7677350afcc6320d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.273585Z",
   "status": "active"
 }
