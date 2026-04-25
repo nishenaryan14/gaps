@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Device(headset) inventory details",
   "feature": "Device Management",
-  "scenario": "Poly Lens app inventory section displays correct headset device details (model, serial number, last detected, software version) after login",
+  "scenario": "Poly Lens app displays correct headset device details (model, serial number, last detected, software version) under General > Account after login",
   "steps": [
     "1. Launch the Poly Lens app on the mobile device.",
-    "2. Log in to the Poly Lens app with valid credentials.",
-    "3. Navigate to the Inventory section from the Home screen or main menu.",
-    "4. Locate the connected headset device in the inventory list.",
-    "5. Tap on the connected headset device to view its details.",
-    "6. Observe the displayed device details: device model, serial number, last detected date/time, and software version."
+    "2. Log in to the Poly Lens account with valid credentials.",
+    "3. Navigate to the Account screen (General > Account).",
+    "4. Locate the device inventory section on the Account screen.",
+    "5. Identify the connected headset device in the inventory list.",
+    "6. Tap on the connected headset device to view its details.",
+    "7. Verify the following device details are displayed:\n   - Model name/number\n   - Serial number\n   - Last detected date/time\n   - Software/firmware version"
   ],
-  "expected": "The device details screen displays the correct device model, serial number, last detected timestamp, and software version for the connected headset, matching the actual device information.",
+  "expected": "The connected headset device details (model, serial number, last detected, and software version) are displayed correctly and match the actual device information.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-lens-app",
-    "inventory-section",
+    "account-screen",
     "device-details",
+    "device-inventory",
     "serial-number",
     "software-version",
     "last-detected",
-    "headset-model",
-    "device-inventory"
+    "headset-model"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "1c142f0ab98cab07692d0d63277556aba8099d13fd6d98cb89a5b35ed0b163f4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.062127Z",
+  "processed_at": "2026-04-25T09:32:26.322443Z",
   "status": "active"
 }
