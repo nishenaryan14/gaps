@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Flamingo - Software update for just headset",
   "feature": "Firmware Updates",
-  "scenario": "Selective DFU for headset only completes successfully when both headset and charge case firmware updates are available on the Software Update tab",
+  "scenario": "Selective DFU for headset only completes successfully when both headset and charge case firmware updates are available",
   "steps": [
-    "1. Open the Poly Studio Mobile app and navigate to the Home screen.",
-    "2. Locate your connected device and tap the Update button on the device card.",
-    "3. Verify the Software Update tab displays an \"Update All\" button, as well as separate \"Update\" buttons for the headset and the charge case.",
-    "4. Tap the \"Update\" button next to the headset (not the charge case).",
-    "5. Follow the on-screen prompts to complete the DFU (Device Firmware Update) process for the headset only."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. On the Home screen, locate your connected headset device.",
+    "3. Tap the Update button on the device card to open Device Settings.",
+    "4. Verify that the Software Update tab is expanded, showing an \"Update All\" button at the top and separate \"Update\" buttons for the headset and charge case.",
+    "5. Tap the \"Update\" button next to the headset (not the charge case).",
+    "6. Follow the on-screen prompts to complete the DFU (Device Firmware Update) process for the headset."
   ],
-  "expected": "The DFU process completes successfully for the headset only. After the update, only the headset is on the latest firmware version; the charge case firmware remains unchanged.",
+  "expected": "The DFU process for just the headset completes successfully. Only the headset is updated to the latest firmware; the charge case firmware remains unchanged.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "selective-dfu",
     "headset-firmware-update",
     "charge-case-firmware-update",
-    "software-update-tab",
     "poly-studio-mobile",
     "update-all",
-    "device-firmware-update"
+    "device-firmware-update",
+    "software-update-tab"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "30516a67565edd28e9f246e7244c7e3b3c803db1d8926106ba6e06b86dd4ad32",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.083197Z",
+  "processed_at": "2026-04-25T09:32:26.340947Z",
   "status": "active"
 }
