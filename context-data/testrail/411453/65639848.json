@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "1 step DFU - Content of Software Update tab with Earbuds on latest FW and Charge Case on FW 5038",
-  "feature": "Software Update / DFU",
-  "scenario": "Verify Software Update tab shows \"Up to date\" when Earbuds are on latest firmware and Charge Case is on FW 5038 (which does not support 1-step DFU).",
+  "feature": "Firmware Update",
+  "scenario": "Software Update tab shows \"Up to date\" when earbuds are on latest firmware and charge case is on non-1-step-DFU firmware 5038",
   "steps": [
-    "Ensure Earbuds are on the latest firmware.",
-    "Ensure Charge Case is on FW 5038.",
-    "Navigate to the Software Update tab.",
-    "Observe the update status displayed."
+    "Open Poly Studio Mobile app on the Android device.",
+    "Ensure the earbuds are connected and on the latest firmware.",
+    "Ensure the charge case is on firmware 5038 (which does not support 1-step DFU).",
+    "Navigate to the Home screen.",
+    "Locate and tap the Software Update tab.",
+    "Observe the status displayed on the Software Update tab."
   ],
-  "expected": "No update is shown (status \"Up to date\") because Charge Case FW 5038 does not support 1-step DFU.",
+  "expected": "The Software Update tab shows \"Up to date\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Software Update tab",
-    "Up to date",
-    "Earbuds latest firmware",
-    "Charge Case FW 5038",
-    "1-step DFU unsupported",
-    "firmware version",
-    "update status"
+    "software-update-tab",
+    "up-to-date",
+    "firmware-5038",
+    "non-1-step-dfu",
+    "poly-studio-mobile",
+    "charge-case-firmware",
+    "earbuds-firmware"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "ac6025826f16abae5cc21ae4c8c5e57523ffd4dce6b5b15f6d1fd6c95c4a7657",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.298439Z",
+  "processed_at": "2026-04-25T05:37:16.896428Z",
   "status": "active"
 }
