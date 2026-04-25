@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Device Home Screen - Device Onboarding Screens",
   "feature": "Device Management",
-  "scenario": "Onboarding flow with welcome popup, swipeable screens, fit test, and \"Having Trouble?\" screen is not displayed when connecting a supported Poly Voyager Free 60+/60/20 device for the first time",
+  "scenario": "Onboarding screens (welcome popup, fit test, \"Having Trouble?\" screen) fail to display when connecting a supported Poly Voyager Free 60+/60/20 device for the first time",
   "steps": [],
   "expected": "",
   "coverage": [],
@@ -14,14 +14,15 @@
     "poly-voyager-free-60-plus",
     "poly-voyager-free-60",
     "poly-voyager-free-20",
-    "onboarding-flow",
+    "onboarding-screens",
     "welcome-popup",
     "fit-test",
+    "having-trouble-screen",
     "first-time-connection"
   ],
   "source_last_updated": "1759158377",
   "source_hash": "589fd75bad621f84e5d612cf208afb087e12b3776b8318975285d417a9f8a1e3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.813377Z",
+  "processed_at": "2026-04-25T08:21:30.930707Z",
   "status": "active"
 }
