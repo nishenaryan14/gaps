@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Software Update - DFU - Incoming SMS during update",
   "feature": "Firmware Update",
-  "scenario": "Incoming SMS does not interrupt or fail Device Firmware Update (DFU) process on Poly Studio Mobile app",
+  "scenario": "Incoming SMS does not interrupt or break Device Firmware Update (DFU) process on Poly Studio Mobile app",
   "steps": [
     "1. Launch Poly Studio Mobile app on the Android device.",
     "2. Navigate to Home screen and ensure a Poly Bluetooth audio device is connected.",
     "3. Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
-    "4. Initiate a Device Firmware Update (DFU) on the connected Poly device.",
-    "5. While the DFU is in progress, have a new SMS message sent to the Android device.",
-    "6. Observe the Poly Studio Mobile app and the connected device during and after the SMS notification.",
+    "4. Start a Device Firmware Update (DFU) on the connected Poly device.",
+    "5. While the DFU is in progress, have an SMS message sent to the Android device.",
+    "6. Observe the Poly Studio Mobile app and the connected Poly device during and after the SMS is received.",
     "7. Wait for the DFU to complete."
   ],
-  "expected": "The Device Firmware Update (DFU) continues running without interruption and completes successfully. The incoming SMS does not cause the update to pause, fail, or abort.",
+  "expected": "The DFU continues running without interruption and completes successfully. The incoming SMS does not break, pause, or cancel the firmware update process.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device-firmware-update",
-    "dfu-interruption",
     "poly-studio-mobile",
-    "sms-notification",
-    "firmware-update-persistence",
+    "device-firmware-update",
+    "dfu",
+    "sms-interruption",
     "android",
-    "bluetooth-audio-device"
+    "bluetooth-audio-device",
+    "firmware-update-persistence",
+    "poly-bluetooth"
   ],
   "source_last_updated": "1763371022",
   "source_hash": "6ae97ca0037d2b56834ca6b5c59b59b5a40e8102cd03e5a9b28a5af593b213eb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.030184Z",
+  "processed_at": "2026-04-25T09:32:26.289573Z",
   "status": "active"
 }
