@@ -1,162 +1,145 @@
 {
   "bug_id": "LMW-2247",
   "matched_testcases": [
-    "65871629",
-    "65868076",
-    "65868082",
-    "65868088",
-    "65868080",
-    "65640177",
-    "66363517",
-    "66363523",
-    "66363526",
-    "66363528",
-    "66363589",
-    "65458387",
-    "65293009",
-    "65293034",
-    "65293028"
+    "65871614",
+    "65871618",
+    "66363536",
+    "67331720",
+    "67516770",
+    "65868074",
+    "65868078",
+    "65868090",
+    "65868084",
+    "64839438",
+    "65871626",
+    "65868086",
+    "65868092",
+    "65868094",
+    "64839433"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case covers the specific scenario of placing an earbud back into the charge case, closing the lid, and verifying the app's Home screen status updates correctly (e.g., that the primary earbud does not remain showing as connected with a charging icon).",
-    "No test validates the state transition when only ONE earbud is returned to the case while the other remains out \u2014 the bug specifically involves asymmetric earbud placement (left returned, right still out) and then lid closure.",
-    "No test covers the lifecycle of earbud connection state after lid-close events: the bug involves the app failing to update the UI when the lid is closed after partial earbud return. This is a state synchronization gap between hardware (case lid sensor, earbud docking) and app UI.",
-    "No test validates the 'charging icon' display logic on the Home screen \u2014 specifically whether an earbud can incorrectly show a charging indicator while simultaneously showing as 'connected'.",
-    "No test covers the sequence: remove both earbuds \u2192 place one back \u2192 close lid \u2192 observe app status. This specific multi-step state transition is untested.",
-    "No test validates the Home screen device status widget behavior for Voyager Free 60+ when the charge case lid is closed with earbuds in non-standard configurations (one in, one out, then lid closed)."
+    "No test covers the specific scenario of an earbud remaining in a 'connected with charging icon' state after being placed in the charging case and the lid closed on Voyager Free 60+.",
+    "No test validates the earbud state machine transition from 'in-ear/connected' to 'in-case/charging/disconnected' when the lid is closed on the Voyager Free 60+ charge case.",
+    "No test covers the specific earbud removal order (left first, right second) and its impact on primary/secondary earbud role assignment and subsequent disconnection behavior.",
+    "No test validates the charging icon state in the app UI when an earbud is physically in the case with lid closed \u2014 specifically whether the icon incorrectly shows 'charging' while also showing 'connected'.",
+    "No lifecycle test covers the scenario where the lid is closed (triggering case sleep/charge mode) but the app still shows the earbud as connected \u2014 this is a Bluetooth state transition gap (Connected -> Disconnected on lid close).",
+    "No test validates the Voyager Free 60+ touchscreen charge case interaction with the app \u2014 specifically whether closing the lid triggers a proper disconnect signal from the case to the phone.",
+    "No test covers the asymmetric behavior between left (primary) and right (secondary) earbuds when placed back in the case \u2014 the bug specifically involves the primary earbud remaining connected, suggesting a role-specific failure."
   ],
   "generated_testcases": [
     {
-      "title": "TC-VF60-001: Verify Home screen status when both earbuds are placed in case and lid closed",
+      "title": "Voyager Free 60+ \u2014 Primary Earbud State Machine: In-Ear Connected \u2192 In-Case Lid-Closed Disconnected (Left Primary)",
       "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 ensure Home screen is displayed.",
-        "Remove both earbuds from the charge case and wear them. Verify Home screen shows both earbuds as 'Connected' with no charging icon.",
-        "Place both earbuds back into the charge case correctly (left into left slot, right into right slot).",
+        "Precondition: Voyager Free 60+ connected to Poly Studio Mobile app. Both earbuds in ears. App showing Device screen.",
+        "Note the current primary earbud (left by default). Verify Device screen shows both earbuds as 'Connected' with no charging icon.",
+        "Remove LEFT earbud (primary) first and place it into the charge case. Do NOT close lid yet.",
+        "Observe app Device screen: verify LEFT earbud shows 'In Case' or 'Charging' icon and transitions to 'Disconnected' state within 5 seconds.",
+        "Verify RIGHT earbud (secondary) remains 'Connected' and takes over as primary (audio routing switches).",
+        "Now place RIGHT earbud into the charge case. Do NOT close lid yet.",
+        "Observe app Device screen: verify RIGHT earbud shows 'In Case' or 'Charging' icon and transitions to 'Disconnected' state within 5 seconds.",
+        "Verify both earbuds now show 'Disconnected' / 'In Case' state.",
         "Close the charge case lid.",
-        "Observe the Home screen device status widget for at least 10 seconds.",
-        "Wait for any pending UI refresh (do not manually refresh or navigate away)."
+        "Verify app Device screen shows both earbuds as 'Disconnected' with charging indicators. Verify neither earbud shows a 'Connected' badge."
       ],
-      "expected": "Within 5 seconds of lid closure, the Home screen should update to show both earbuds as 'Disconnected' or 'In Case'. Neither earbud should display a 'Connected' status. No charging icon should appear next to either earbud on the Home screen. The device status widget should reflect that the earbuds are in the case with lid closed."
+      "expected": "Expected: LEFT earbud (primary) transitions from 'Connected' \u2192 'In Case/Charging' \u2192 'Disconnected' within 5s of being placed in case. RIGHT earbud takes over as primary. After both in case + lid closed, both show 'Disconnected' with charging icon. Actual (If Bug): LEFT earbud remains 'Connected' with a charging icon overlay after lid close \u2014 incorrect dual-state (Connected + Charging). Regression boundary: Primary earbud must fully disconnect; secondary must assume primary role."
     },
     {
-      "title": "TC-VF60-002: Verify Home screen status when left earbud is returned to case, right remains out, then lid closed",
+      "title": "Voyager Free 60+ \u2014 Primary Earbud State Machine: In-Ear Connected \u2192 In-Case Lid-Closed Disconnected (Right Primary via Role Swap)",
       "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 ensure Home screen is displayed.",
-        "Remove both earbuds from the charge case and wear them. Verify Home screen shows both earbuds as 'Connected'.",
-        "Remove the left earbud from your ear and place it into the left slot of the charge case. Keep the right earbud in your ear.",
-        "Close the charge case lid while the right earbud remains out and in use.",
-        "Observe the Home screen device status widget for at least 15 seconds.",
-        "Do not navigate away from the Home screen during this observation period."
-      ],
-      "expected": "The Home screen should correctly show the left earbud as 'In Case' or 'Disconnected' with no charging icon. The right earbud should remain shown as 'Connected' and actively in use. The left earbud must NOT display as 'Connected' with a charging icon simultaneously. The app should reflect the asymmetric state: one earbud in case (lid closed), one earbud active."
-    },
-    {
-      "title": "TC-VF60-003: Verify Home screen status when right earbud is returned to case, left remains out, then lid closed",
-      "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 ensure Home screen is displayed.",
-        "Remove both earbuds from the charge case and wear them. Verify Home screen shows both earbuds as 'Connected'.",
-        "Remove the right earbud from your ear and place it into the right slot of the charge case. Keep the left earbud in your ear.",
-        "Close the charge case lid while the left earbud remains out and in use.",
-        "Observe the Home screen device status widget for at least 15 seconds.",
-        "Do not navigate away from the Home screen during this observation period."
-      ],
-      "expected": "The Home screen should correctly show the right earbud as 'In Case' or 'Disconnected' with no charging icon. The left earbud should remain shown as 'Connected' and actively in use. The right earbud must NOT display as 'Connected' with a charging icon simultaneously. The app should reflect the asymmetric state: one earbud in case (lid closed), one earbud active."
-    },
-    {
-      "title": "TC-VF60-004: Verify charging icon does not appear on Home screen for a 'Connected' earbud after lid closure",
-      "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 navigate to Home screen.",
-        "Remove both earbuds from the charge case and wear them. Confirm Home screen shows both as 'Connected' with no charging icon.",
-        "Place the left earbud back into the charge case slot. Keep the right earbud in your ear.",
+        "Precondition: Voyager Free 60+ connected to Poly Studio Mobile app. Both earbuds in ears.",
+        "Force primary role to RIGHT earbud: remove LEFT earbud from ear, wait for RIGHT to become primary, then reinsert LEFT.",
+        "Verify app Device screen shows RIGHT earbud as primary (audio routing indicator on right).",
+        "Remove RIGHT earbud (primary) first and place it into the charge case. Do NOT close lid.",
+        "Observe app Device screen: verify RIGHT earbud shows 'In Case' or 'Charging' icon and transitions to 'Disconnected' within 5 seconds.",
+        "Verify LEFT earbud (now secondary) remains 'Connected' and takes over as primary.",
+        "Place LEFT earbud into charge case. Do NOT close lid.",
+        "Verify LEFT earbud shows 'In Case' / 'Charging' and transitions to 'Disconnected' within 5 seconds.",
         "Close the charge case lid.",
-        "Observe the Home screen device status widget. Check if the left earbud shows a charging icon (e.g., battery icon with lightning bolt) while also showing as 'Connected'.",
-        "Open the charge case lid, remove the left earbud, place both earbuds back, close lid, and repeat the observation."
+        "Verify app Device screen shows both earbuds as 'Disconnected' with charging indicators. Verify neither shows 'Connected'."
       ],
-      "expected": "At no point should any earbud display a charging icon (lightning bolt on battery indicator) while simultaneously showing a 'Connected' status on the Home screen. An earbud placed in the case with lid closed should show as 'In Case' or 'Disconnected' \u2014 not 'Connected'. The charging icon should only appear in the correct context (e.g., earbuds in case with lid open, or in the charge case settings screen)."
+      "expected": "Expected: RIGHT earbud (primary) transitions 'Connected' \u2192 'In Case/Charging' \u2192 'Disconnected' within 5s. LEFT takes over as primary. After both in case + lid closed, both show 'Disconnected'. Actual (If Bug): RIGHT earbud remains 'Connected' with charging icon \u2014 same asymmetric failure as left-primary bug but on the right side. Regression boundary: Role-swapped primary must also fully disconnect on case insertion + lid close."
     },
     {
-      "title": "TC-VF60-005: Verify Home screen status after full cycle: remove both \u2192 place one back \u2192 close lid \u2192 observe",
+      "title": "Voyager Free 60+ \u2014 Lid-Close Bluetooth Disconnect Signal Validation (Case-to-Phone)",
       "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 ensure Home screen is displayed.",
-        "Remove both earbuds from the charge case and wear them. Verify Home screen shows both as 'Connected'.",
-        "Play audio media (music or test tone) on the connected phone to confirm active audio streaming.",
-        "Remove the right earbud from your ear and place it into the right slot of the charge case.",
-        "Close the charge case lid while the left earbud remains in your ear with audio playing.",
-        "Observe the Home screen device status widget for 20 seconds. Note any changes to the right earbud status.",
-        "While still observing, open the charge case lid. Note any status changes.",
-        "Remove the right earbud from the case and place it back in your ear. Observe status changes."
+        "Precondition: Voyager Free 60+ connected to Poly Studio Mobile app. Both earbuds in charge case, lid OPEN. App shows both earbuds as 'In Case' / 'Charging' and 'Disconnected'.",
+        "Remove both earbuds from case, insert in ears. Close case lid (empty case).",
+        "Verify app shows both earbuds as 'Connected' within 5 seconds.",
+        "Remove both earbuds from ears and place them into the charge case. Leave lid OPEN.",
+        "Verify app shows both earbuds transition to 'In Case' / 'Charging' and 'Disconnected' within 5 seconds.",
+        "Close the charge case lid.",
+        "Verify app Device screen shows both earbuds as 'Disconnected' with charging indicators. Verify Bluetooth icon on phone shows no active BT connection to the earbuds (or shows 'Not Connected').",
+        "Open the charge case lid.",
+        "Verify app does NOT automatically reconnect earbuds (they should remain disconnected until physically removed from case).",
+        "Remove LEFT earbud from case. Verify it reconnects and shows 'Connected' in app."
       ],
-      "expected": "Step 5-6: After lid closure, the right earbud should update to 'In Case' or 'Disconnected' within 5 seconds. The left earbud should remain 'Connected'. Audio should continue playing through the left earbud. The right earbud must NOT show as 'Connected' with a charging icon. Step 7: When lid is opened, the right earbud status should update to reflect it is in the case with lid open (e.g., 'In Case' with charging icon if applicable). Step 8: When the right earbud is removed and worn, both earbuds should show as 'Connected' and audio should resume in both."
+      "expected": "Expected: Closing the lid with earbuds inside triggers a clean BT disconnect signal from case to phone. App shows 'Disconnected' + charging icon. Opening lid does NOT auto-reconnect \u2014 earbuds stay disconnected until removed from case. Actual (If Bug): App continues showing 'Connected' after lid close, or shows stale 'Connected' state with charging icon overlay \u2014 indicating the case failed to send (or phone failed to process) the lid-close disconnect signal. Regression boundary: Lid-close must trigger definitive disconnect; lid-open must not auto-reconnect."
     },
     {
-      "title": "TC-VF60-006: Verify Home screen device status widget after lid close with one earbud partially docked",
+      "title": "Voyager Free 60+ \u2014 Immediate State Trigger: Place Primary Earbud in Case + Close Lid, Kill App, Reopen",
       "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 ensure Home screen is displayed.",
-        "Remove both earbuds from the charge case and wear them.",
-        "Remove the left earbud and place it into the left slot of the charge case, but do NOT fully seat it (leave it slightly raised so charging contacts may not engage).",
-        "Close the charge case lid gently (the partially seated earbud may prevent full lid closure or may close with pressure).",
-        "Observe the Home screen device status widget for 15 seconds.",
-        "Open the lid, fully seat the left earbud, close the lid again, and observe status changes."
-      ],
-      "expected": "Step 4-5: The app should reflect the actual hardware state. If the earbud is not fully docked, the app should not show a charging icon for that earbud. The status should be consistent with the hardware detection (e.g., 'Disconnected' or 'In Case' without charging). The app must not show a 'Connected' status with a charging icon for the partially docked earbud. Step 6: When fully seated and lid closed, the earbud should correctly show as 'In Case' with appropriate status."
-    },
-    {
-      "title": "TC-VF60-007: Verify state synchronization after app backgrounding and foregrounding during lid-close event",
-      "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 ensure Home screen is displayed.",
-        "Remove both earbuds from the charge case and wear them. Verify both show as 'Connected'.",
-        "Remove the left earbud and place it into the left slot of the charge case.",
-        "Press the Home button to background the Poly Studio Mobile app (app goes to background).",
-        "Close the charge case lid while the app is in the background.",
-        "Wait 10 seconds, then reopen the Poly Studio Mobile app by tapping its icon (not from recent apps).",
-        "Observe the Home screen device status widget immediately upon app foregrounding.",
-        "Wait an additional 10 seconds and observe if any delayed UI update occurs."
-      ],
-      "expected": "Upon foregrounding the app, the Home screen should correctly reflect the current state: left earbud shown as 'In Case' or 'Disconnected', right earbud shown as 'Connected'. The left earbud must NOT show as 'Connected' with a charging icon. The app should synchronize its state with the hardware upon returning to foreground, even if the lid-close event occurred while the app was backgrounded."
-    },
-    {
-      "title": "TC-VF60-008: Verify state synchronization after app force-kill and relaunch during lid-close event",
-      "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 ensure Home screen is displayed.",
-        "Remove both earbuds from the charge case and wear them. Verify both show as 'Connected'.",
-        "Remove the right earbud and place it into the right slot of the charge case.",
-        "Force-kill the Poly Studio Mobile app (swipe away from recent apps or force stop via Settings \u2192 Apps).",
-        "Close the charge case lid while the app is not running.",
+        "Precondition: Voyager Free 60+ connected to Poly Studio Mobile app. Both earbuds in ears. App in foreground on Device screen.",
+        "Remove LEFT earbud (primary) and place it into the charge case. IMMEDIATELY close the lid (within 2 seconds). Do NOT wait for app UI to update.",
+        "IMMEDIATELY force-kill the Poly Studio Mobile app (swipe from recents).",
         "Wait 10 seconds.",
-        "Reopen the Poly Studio Mobile app. Navigate to the Home screen for [Voyager Free 60+].",
-        "Observe the Home screen device status widget for 15 seconds."
+        "Reopen Poly Studio Mobile app.",
+        "Navigate to: Device screen.",
+        "Observe the state of both earbuds.",
+        "Open the charge case lid. Remove LEFT earbud. Observe reconnection behavior."
       ],
-      "expected": "Upon relaunch, the app should correctly synchronize with the current hardware state. The right earbud should be shown as 'In Case' or 'Disconnected'. The left earbud should be shown as 'Connected'. The right earbud must NOT show as 'Connected' with a charging icon. The app should correctly read the current state from the earbuds/case upon connection, not rely on stale cached state."
+      "expected": "Expected: After app reopen, both earbuds show 'Disconnected' with charging indicators. LEFT earbud does NOT show 'Connected' state. When LEFT earbud is removed from case, it reconnects normally. Actual (If Bug): LEFT earbud shows 'Connected' with charging icon overlay \u2014 the app cached a stale 'Connected' state before the lid-close disconnect signal was processed, and the force-kill prevented the disconnect callback from being handled. Regression boundary: App must reconcile earbud state on relaunch by querying current BT connection status, not relying on pre-kill cached state."
     },
     {
-      "title": "TC-VF60-009: Verify Bluetooth disconnect/reconnect cycle after lid-close with one earbud in case",
+      "title": "Voyager Free 60+ \u2014 Deep Lifecycle: Lid Close \u2192 BT Disconnect \u2192 Phone Reboot \u2192 App Relaunch",
       "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 ensure Home screen is displayed.",
-        "Remove both earbuds from the charge case and wear them. Verify both show as 'Connected'.",
-        "Remove the left earbud and place it into the left slot of the charge case.",
+        "Precondition: Voyager Free 60+ connected to Poly Studio Mobile app. Both earbuds in ears.",
+        "Remove both earbuds and place into charge case. Close lid.",
+        "Verify app shows both earbuds as 'Disconnected' with charging indicators.",
+        "Reboot the phone.",
+        "After phone reboots, open Poly Studio Mobile app.",
+        "Navigate to: Device screen.",
+        "Verify both earbuds show as 'Disconnected' (no stale 'Connected' state).",
+        "Open charge case lid. Remove LEFT earbud. Verify it connects and shows 'Connected' in app.",
+        "Remove RIGHT earbud. Verify both show 'Connected'."
+      ],
+      "expected": "Expected: After phone reboot + app relaunch, both earbuds show 'Disconnected' with no stale connection state. Earbuds connect normally when removed from case. Actual (If Bug): App shows one or both earbuds as 'Connected' after reboot \u2014 indicates the app or BT stack cached a connection state that survived reboot, or the case's lid-close disconnect was not properly persisted. Regression boundary: Phone reboot must clear any stale BT connection cache; app must show true disconnected state."
+    },
+    {
+      "title": "Voyager Free 60+ \u2014 Touchscreen Case Interaction: Lid Close While App is on Transparency Mode Settings Screen",
+      "steps": [
+        "Precondition: Voyager Free 60+ connected to Poly Studio Mobile app. Both earbuds in ears.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency Mode.",
+        "Set Environment Surround level to 75. Set Speech Free level to 60.",
+        "Switch to Speech sub-setting tab. Verify Speech shows 60.",
+        "Remove both earbuds and place into charge case. Close lid while remaining on the Transparency Mode screen.",
+        "Observe app UI: does it show any error, loading state, or stale connection indicators?",
+        "Wait 10 seconds. Navigate back to Device screen.",
+        "Verify both earbuds show 'Disconnected' with charging indicators.",
+        "Open case lid. Remove LEFT earbud. Wait for connection.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency Mode.",
+        "Switch to Environment sub-setting. Verify Surround level is still 75.",
+        "Switch to Speech sub-setting. Verify Free level is still 60."
+      ],
+      "expected": "Expected: Closing lid while on Transparency Mode screen does not crash the app or show stale 'Connected' state. After lid close, navigating to Device screen shows both earbuds as 'Disconnected'. After reconnect, Transparency Mode values persist (Surround=75, Speech=60). Actual (If Bug): App shows earbuds as 'Connected' on Device screen even after lid close, or Transparency Mode values reset to defaults after the disconnect/reconnect cycle. Regression boundary: Lid-close disconnect must not corrupt in-flight UI state or pending settings persistence."
+    },
+    {
+      "title": "Voyager Free 60+ \u2014 Asymmetric Disconnect: Remove Secondary First, Then Primary, Close Lid",
+      "steps": [
+        "Precondition: Voyager Free 60+ connected to Poly Studio Mobile app. Both earbuds in ears.",
+        "Remove RIGHT earbud (secondary) first and place into charge case. Do NOT close lid.",
+        "Verify app shows RIGHT as 'In Case' / 'Charging' / 'Disconnected'. Verify LEFT (primary) remains 'Connected'.",
+        "Remove LEFT earbud (primary) and place into charge case. Do NOT close lid.",
+        "Verify app shows LEFT as 'In Case' / 'Charging' / 'Disconnected' within 5 seconds.",
+        "Verify both earbuds show 'Disconnected' state.",
         "Close the charge case lid.",
-        "From the phone's Bluetooth settings, disconnect the Voyager Free 60+ device.",
-        "Wait 5 seconds, then reconnect from Bluetooth settings.",
-        "Open the Poly Studio Mobile app and observe the Home screen device status widget.",
-        "Open the charge case lid, remove the left earbud, wear it, and observe status updates."
+        "Verify app Device screen shows both earbuds as 'Disconnected' with charging indicators. Verify no 'Connected' badge on either earbud.",
+        "Open lid. Remove LEFT earbud. Verify it reconnects as primary.",
+        "Remove RIGHT earbud. Verify both connected."
       ],
-      "expected": "Step 5-7: After Bluetooth disconnect and reconnect, the app should correctly show the left earbud as 'In Case' or 'Disconnected' and the right earbud as 'Connected'. The state should persist across the Bluetooth cycle. Step 8: When the left earbud is removed and worn, both earbuds should show as 'Connected'."
-    },
-    {
-      "title": "TC-VF60-010: Verify Home screen status when both earbuds are in case, lid closed, then one earbud removed without opening lid",
-      "steps": [
-        "Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 ensure Home screen is displayed.",
-        "Remove both earbuds from the charge case and wear them. Verify both show as 'Connected'.",
-        "Place both earbuds back into the charge case and close the lid.",
-        "Verify Home screen shows both earbuds as 'In Case' or 'Disconnected'.",
-        "Open the charge case lid, remove ONLY the right earbud, and close the lid again (left earbud remains in case with lid closed).",
-        "Observe the Home screen device status widget for 15 seconds.",
-        "Open the lid, place the right earbud back, close lid, and repeat with the left earbud."
-      ],
-      "expected": "Step 4: Both earbuds should show as 'In Case' or 'Disconnected'. Step 5-6: After removing only the right earbud and closing the lid, the right earbud should show as 'Connected' and the left earbud should show as 'In Case' or 'Disconnected'. Neither earbud should show a 'Connected' status with a charging icon. The app should correctly handle the asymmetric state where one earbud is removed from a closed case."
+      "expected": "Expected: Both earbuds transition to 'Disconnected' regardless of removal order. Secondary removal first does not interfere with primary's subsequent disconnect. After lid close, both show 'Disconnected' + charging. Actual (If Bug): LEFT (primary) remains 'Connected' after being placed in case and lid closed \u2014 the bug manifests specifically when primary is placed in case after secondary, suggesting a race condition in the primary role handoff. Regression boundary: Removal order must not affect primary earbud's ability to disconnect when placed in case with lid closed."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:09.772568Z"
+  "processed_at": "2026-04-25T09:45:52.102952Z"
 }
