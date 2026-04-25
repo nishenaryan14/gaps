@@ -7,13 +7,13 @@
   "feature": "App Settings",
   "scenario": "Cancel (X) button on Device Details modal closes modal and returns to Support page with paired devices list",
   "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Navigate to the Home screen.",
-    "Tap the Support option to open the Support page.",
-    "On the Support page, tap a paired device to open the device details modal.",
-    "On the device details modal, tap the Cancel (X) button."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the Support option to open the Support page.",
+    "4. On the Support page, tap on a paired device to open the device details modal.",
+    "5. Tap the Cancel (X) button on the device details modal."
   ],
-  "expected": "The device details modal closes and the user is returned to the Support page showing the list of paired devices.",
+  "expected": "The device details modal closes, and the user is returned to the Support page showing the list of paired devices.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,11 +23,11 @@
     "support-page",
     "paired-devices-list",
     "modal-dismissal",
-    "ui-navigation"
+    "android-app"
   ],
   "source_last_updated": "1759761737",
   "source_hash": "b100068ac6a8eaa513a6ae20fdedde0fc6962ad076f3d07815807fac79dffabb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.946442Z",
+  "processed_at": "2026-04-25T09:32:26.180914Z",
   "status": "active"
 }
