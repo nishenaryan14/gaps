@@ -11,9 +11,11 @@
     "2. Observe the Home screen with no device connected.",
     "3. Tap the 'Supported Devices' link displayed on the Home screen.",
     "4. Observe the list of supported devices with images and an 'Other devices' button.",
-    "5. Tap the back arrow ('<') to return to the previous screen."
+    "5. Tap the 'Other devices' button and verify it links to Poly support.",
+    "6. Navigate back using the back arrow ('<') button.",
+    "7. Observe that the user returns to the Home screen."
   ],
-  "expected": "The user is returned to the Home screen after tapping the back arrow.",
+  "expected": "Tapping the 'Supported Devices' link shows a list of supported devices with images and an 'Other devices' button linking to Poly support. Tapping the back arrow returns the user to the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,13 +23,14 @@
     "home-screen",
     "supported-devices",
     "device-list",
+    "other-devices",
     "back-arrow",
     "navigation",
-    "other-devices"
+    "poly-support"
   ],
   "source_last_updated": "1762436335",
   "source_hash": "b9c8be2ecc217c37cd7afb9958b79123249fbbb82a0b9e5befd1ffe2b4567564",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.913901Z",
+  "processed_at": "2026-04-25T09:32:26.138529Z",
   "status": "active"
 }
