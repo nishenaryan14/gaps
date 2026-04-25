@@ -5,19 +5,17 @@
   "project": "411453",
   "title": "Onboarding - Navigating through onboarding screens",
   "feature": "App Settings",
-  "scenario": "User can swipe left/right or tap Continue to navigate through the three onboarding screens (Organized, Up-to-Date, Personal)",
+  "scenario": "User can navigate through onboarding screens (Organized, Up-to-Date, Personal) by swiping left/right or tapping Continue button",
   "steps": [
-    "1. Launch the Poly Studio Mobile Android app.",
+    "1. Launch the Poly Studio Mobile app.",
     "2. Observe the onboarding flow that appears on first launch (or after clearing app data).",
-    "3. On the first onboarding screen (\"Organized\"), attempt to swipe left to navigate to the next screen.",
-    "4. Alternatively, tap the \"Continue\" button on the \"Organized\" screen.",
-    "5. Observe the second onboarding screen (\"Up-to-Date\").",
-    "6. Swipe left again or tap the \"Continue\" button to navigate to the third screen.",
-    "7. Observe the third onboarding screen (\"Personal\").",
-    "8. Swipe right on the \"Personal\" screen to navigate back to the \"Up-to-Date\" screen.",
-    "9. Continue swiping right to return to the \"Organized\" screen."
+    "3. On the first onboarding screen titled \"Organized\", attempt to swipe left to navigate to the next screen.",
+    "4. Alternatively, tap the \"Continue\" button to progress.",
+    "5. On the second onboarding screen titled \"Up-to-Date\", swipe left or tap \"Continue\" to move forward.",
+    "6. On the third onboarding screen titled \"Personal\", swipe left or tap \"Continue\" to proceed.",
+    "7. Attempt to swipe right on any screen to navigate back to the previous onboarding screen."
   ],
-  "expected": "User can smoothly scroll left and right through all three onboarding screens (\"Organized\", \"Up-to-Date\", \"Personal\") by swiping left/right or tapping the \"Continue\" button. Navigation is bidirectional and responsive.",
+  "expected": "User can smoothly scroll left and right through all three onboarding screens (\"Organized\", \"Up-to-Date\", \"Personal\") by swiping left/right or tapping the \"Continue\" button. Navigation is responsive and screens transition correctly in both directions.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -28,11 +26,11 @@
     "organized-screen",
     "up-to-date-screen",
     "personal-screen",
-    "android-app"
+    "first-launch-experience"
   ],
   "source_last_updated": "1768389408",
   "source_hash": "626cfa41c05df9196da4056eb758b97b136e61afff8d1172e1d14b1e7dfde3ee",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.905319Z",
+  "processed_at": "2026-04-25T09:32:26.125604Z",
   "status": "active"
 }
