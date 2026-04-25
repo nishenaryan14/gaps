@@ -5,21 +5,19 @@
   "project": "UNKNOWN",
   "summary": "iOS | FALCON | Custom Button setting is not properly refreshed after disconnecting headset from PC",
   "feature": "Device Management",
-  "scenario": "Custom Button settings not refreshed after disconnecting headset from PC; still shows MS Teams as connected until app restart",
-  "description_clean": "Custom Button setting is not properly refreshed after disconnecting the headset from a PC. After plugging the headset into a PC with Teams, the custom button settings lock to Teams. When unplugging, the settings are not refreshed to reflect the change in available options; they still show MS Teams as connected. Only restarting the app restores the ability to change the custom button to other providers.",
+  "scenario": "Custom Button setting not refreshed after disconnecting headset from PC; still shows MS Teams as connected until app restart",
+  "description_clean": "Custom Button setting is not properly refreshed after disconnecting the headset from a PC. After plugging the headset into a PC with Teams, the custom button settings are locked to Teams. When the headset is unplugged, the setting is not refreshed to reflect the change in available options \u2014 it still shows MS Teams as connected. Only restarting the app restores the ability to change the custom button to other providers.",
   "steps": [
-    "1. Open Poly Studio Mobile app on Android.",
-    "2. Connect the headset to the Android device via Bluetooth.",
-    "3. Navigate to Poly Studio Mobile \u2192 [Device Name] \u2192 Device Settings.",
-    "4. Verify that the Custom Button setting shows options for all available providers (e.g., Teams, Zoom, etc.).",
-    "5. Disconnect the headset from the Android device.",
-    "6. Plug the headset into a PC that has Microsoft Teams running.",
-    "7. While the headset is connected to the PC, observe the Custom Button setting in the Poly Studio Mobile app (the app should still be open on Android).",
-    "8. Unplug the headset from the PC.",
-    "9. Observe the Custom Button setting in the Poly Studio Mobile app again without restarting the app."
+    "1. Open Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "3. Verify the Custom Button setting shows available options (e.g., Teams, Zoom, etc.).",
+    "4. Connect the headset to a PC running Microsoft Teams via USB or Bluetooth.",
+    "5. Observe the Custom Button setting in the app \u2014 it should now show as locked to Teams.",
+    "6. Disconnect the headset from the PC (unplug USB or disconnect Bluetooth).",
+    "7. Return to the Poly Studio Mobile app and check the Custom Button setting again."
   ],
-  "expected": "After unplugging the headset from the PC, the Custom Button setting should refresh to show all available provider options (not locked to MS Teams).",
-  "actual": "After unplugging the headset from the PC, the Custom Button setting remains locked to MS Teams and still shows 'MS Teams as connected'. Only restarting the app restores the ability to change the custom button to other providers.",
+  "expected": "After disconnecting the headset from the PC, the Custom Button setting should refresh to show all available provider options (e.g., Teams, Zoom, etc.) and allow the user to change the assignment.",
+  "actual": "After disconnecting the headset from the PC, the Custom Button setting remains locked to Teams and still shows 'MS Teams as connected'. The setting is not refreshed to reflect the change in available options. Only restarting the app restores the ability to change the custom button to other providers.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -29,15 +27,15 @@
     "custom-button",
     "poly-studio-mobile",
     "device-settings",
-    "provider-refresh",
+    "microsoft-teams",
     "bluetooth-disconnect",
-    "ms-teams",
+    "ui-refresh",
     "app-restart",
-    "state-persistence"
+    "headset-pc-connection"
   ],
   "source_last_updated": "2026-04-15T08:56:37.000+0000",
   "source_hash": "cc652422d252219379f2f64e310de01aed7ec949a4973067a7310f73ade4db5e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.693524Z",
+  "processed_at": "2026-04-25T07:55:31.761754Z",
   "status": "active"
 }
