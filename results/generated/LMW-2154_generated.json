@@ -1,100 +1,124 @@
 [
   {
-    "title": "TC_FW_CC_001: Verify no update button for Charge Case on outdated firmware when paired with Legend 50 headset",
+    "title": "TC-DFU-LEG50-001: Verify 'can't be updated' message displayed for Voyager Legend 50 Charge Case on outdated firmware",
     "steps": [
-      "1. Launch the mobile app and ensure no device is currently paired.",
-      "2. Put the Legend 50 headset into pairing mode.",
-      "3. Pair the Legend 50 headset with the mobile app via Bluetooth.",
-      "4. Confirm the Legend 50 headset appears as connected in the app.",
-      "5. Navigate to Device Settings > Software.",
-      "6. Observe the UI elements related to the Charge Case firmware status.",
-      "7. Check if any 'Update' or 'Update Firmware' button is displayed for the Charge Case."
+      "Precondition: Voyager Legend 50 headset is connected to the phone via Bluetooth. The charge case has outdated firmware (e.g., version 1.0.0 where 1.2.0 is available).",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the connected Voyager Legend 50 device name on the home screen.",
+      "3. Navigate to Device Settings \u2192 Software.",
+      "4. Observe the Software screen for the charge case component.",
+      "5. Verify the charge case firmware version is displayed as outdated (e.g., '1.0.0').",
+      "6. Verify the text 'can't be updated' message is displayed adjacent to or below the charge case firmware version.",
+      "7. Verify there is NO update button, 'Update' text button, or any actionable UI element next to the charge case component.",
+      "8. Verify the headset component (if shown) still displays its own firmware version and any applicable update button (if outdated)."
     ],
-    "expected": "No 'Update' or 'Update Firmware' button is displayed for the Charge Case in Device Settings > Software when the Charge Case is on outdated firmware and paired with a Legend 50 headset."
+    "expected": "The Software screen displays the charge case firmware version with a 'can't be updated' message and no update button. The headset component's UI remains unaffected."
   },
   {
-    "title": "TC_FW_CC_002: Verify messaging directs user to desktop app for Charge Case firmware update",
+    "title": "TC-DFU-LEG50-002: Verify 'can't be updated' message persists after app restart for Legend 50 Charge Case",
     "steps": [
-      "1. Launch the mobile app and pair a Legend 50 headset (Charge Case on outdated firmware).",
-      "2. Confirm the Legend 50 headset is connected.",
-      "3. Navigate to Device Settings > Software.",
-      "4. Locate the Charge Case firmware section.",
-      "5. Observe the message or text displayed in place of an update button.",
-      "6. Verify the content of the displayed message."
+      "Precondition: Voyager Legend 50 headset is connected. Charge case has outdated firmware.",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "3. Confirm the charge case shows 'can't be updated' message with no update button.",
+      "4. Press the Home button to background the app.",
+      "5. Swipe the app away from the recent apps list to force-kill Poly Studio Mobile.",
+      "6. Reopen Poly Studio Mobile app.",
+      "7. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "8. Observe the charge case component on the Software screen."
     ],
-    "expected": "A message is displayed directing the user to use the desktop app to update the Charge Case firmware (e.g., 'Please use the desktop app to update your Charge Case firmware.')."
+    "expected": "After app restart, the charge case still displays the 'can't be updated' message with no update button. The error state persists across app lifecycle events."
   },
   {
-    "title": "TC_FW_CC_003: Verify Charge Case firmware version is displayed but no update action available on mobile",
+    "title": "TC-DFU-LEG50-003: Verify 'can't be updated' message persists after Bluetooth disconnect/reconnect for Legend 50 Charge Case",
     "steps": [
-      "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
-      "2. Navigate to Device Settings > Software.",
-      "3. Locate the Charge Case firmware version information.",
-      "4. Verify the current firmware version is displayed.",
-      "5. Verify there is no interactive update button or link for the Charge Case.",
-      "6. Verify the presence of the desktop app redirect message."
+      "Precondition: Voyager Legend 50 headset is connected. Charge case has outdated firmware.",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "3. Confirm the charge case shows 'can't be updated' message with no update button.",
+      "4. Press the Bluetooth button on the Voyager Legend 50 headset for 2 seconds to disconnect.",
+      "5. Wait 5 seconds.",
+      "6. Press the Bluetooth button on the Voyager Legend 50 headset for 2 seconds to reconnect.",
+      "7. Wait for the device to appear as connected in Poly Studio Mobile (check home screen).",
+      "8. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "9. Observe the charge case component on the Software screen."
     ],
-    "expected": "The Charge Case firmware version is displayed correctly. No update button is available. A message directs the user to use the desktop app for the firmware update."
+    "expected": "After Bluetooth disconnect and reconnect, the charge case still displays the 'can't be updated' message with no update button. The error state persists across Bluetooth state transitions."
   },
   {
-    "title": "TC_FW_CC_004: Verify Charge Case on latest firmware shows no update button and no redirect message",
+    "title": "TC-DFU-LEG50-004: Verify headset update button remains functional when charge case shows 'can't be updated' on Legend 50",
     "steps": [
-      "1. Ensure the Charge Case is on the latest firmware version.",
-      "2. Launch the mobile app and pair the Legend 50 headset with the Charge Case.",
-      "3. Navigate to Device Settings > Software.",
-      "4. Observe the Charge Case firmware section.",
-      "5. Check for the presence of an update button.",
-      "6. Check for the presence of the desktop app redirect message."
+      "Precondition: Voyager Legend 50 headset is connected. Both headset AND charge case have outdated firmware.",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "3. Verify the charge case component shows 'can't be updated' message with no update button.",
+      "4. Verify the headset component shows its outdated firmware version (e.g., '2.0.0' where '2.2.0' is available).",
+      "5. Verify an 'Update' button is present next to the headset component.",
+      "6. Tap the 'Update' button for the headset.",
+      "7. Observe the behavior."
     ],
-    "expected": "No update button is displayed for the Charge Case. No desktop app redirect message is displayed. The Charge Case firmware is shown as up-to-date."
+    "expected": "The headset update initiates successfully despite the charge case showing 'can't be updated'. The charge case error state does not block the headset firmware update flow."
   },
   {
-    "title": "TC_FW_CC_005: Verify Legend 50 headset firmware update button remains available when Charge Case shows redirect message",
+    "title": "TC-DFU-LEG50-005: Verify Software screen UI layout when charge case shows 'can't be updated' on Legend 50",
     "steps": [
-      "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
-      "2. Navigate to Device Settings > Software.",
-      "3. Observe the Legend 50 headset firmware section.",
-      "4. Verify an update button is present for the Legend 50 headset (if an update is available).",
-      "5. Observe the Charge Case firmware section.",
-      "6. Verify the desktop app redirect message is displayed for the Charge Case.",
-      "7. Verify no update button is present for the Charge Case."
+      "Precondition: Voyager Legend 50 headset is connected. Charge case has outdated firmware.",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "3. Observe the full Software screen layout.",
+      "4. Verify the screen title reads 'Software' or 'Firmware Update'.",
+      "5. Verify the charge case component is displayed with: a) Component name (e.g., 'Charge Case'), b) Current firmware version number, c) 'can't be updated' message in readable text, d) No update button, icon, or tap target.",
+      "6. Verify the headset component (if shown) is displayed with its own firmware version and any applicable update UI.",
+      "7. Verify no error popup, dialog, or crash occurs when viewing the screen.",
+      "8. Verify the back button or navigation bar is functional and returns to the previous screen."
     ],
-    "expected": "The Legend 50 headset firmware update button is displayed and functional (if applicable). The Charge Case section shows the desktop app redirect message and no update button, confirming the mobile app only blocks Charge Case updates while allowing headset updates."
+    "expected": "The Software screen renders correctly with all UI elements visible. The charge case shows the 'can't be updated' message cleanly without any popup errors or crashes. Navigation remains functional."
   },
   {
-    "title": "TC_FW_CC_006: Verify behavior after unpairing and re-pairing Legend 50 headset with outdated Charge Case",
+    "title": "TC-DFU-LEG50-006: Verify 'can't be updated' message persists after phone reboot for Legend 50 Charge Case",
     "steps": [
-      "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
-      "2. Navigate to Device Settings > Software and confirm the desktop app redirect message is shown for the Charge Case.",
-      "3. Unpair the Legend 50 headset from the mobile app.",
-      "4. Re-pair the same Legend 50 headset with the Charge Case.",
-      "5. Navigate again to Device Settings > Software.",
-      "6. Verify the Charge Case firmware section still shows the desktop app redirect message and no update button."
+      "Precondition: Voyager Legend 50 headset is connected. Charge case has outdated firmware.",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "3. Confirm the charge case shows 'can't be updated' message with no update button.",
+      "4. Close Poly Studio Mobile app.",
+      "5. Reboot the phone.",
+      "6. After phone restarts, enable Bluetooth.",
+      "7. Wait for Voyager Legend 50 to reconnect automatically (or manually pair if needed).",
+      "8. Open Poly Studio Mobile app.",
+      "9. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "10. Observe the charge case component on the Software screen."
     ],
-    "expected": "After unpairing and re-pairing, the Charge Case firmware section consistently shows the desktop app redirect message and no update button, confirming the behavior is persistent across reconnections."
+    "expected": "After phone reboot, the charge case still displays the 'can't be updated' message with no update button. The error state persists across phone reboot."
   },
   {
-    "title": "TC_FW_CC_007: Verify Charge Case firmware update button does not appear after app restart",
+    "title": "TC-DFU-LEG50-007: Verify charge case firmware version is correctly reported when 'can't be updated' is shown on Legend 50",
     "steps": [
-      "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
-      "2. Navigate to Device Settings > Software and confirm the desktop app redirect message is shown.",
-      "3. Force close the mobile app completely.",
-      "4. Re-launch the mobile app.",
-      "5. Confirm the Legend 50 headset reconnects automatically (or manually reconnect).",
-      "6. Navigate to Device Settings > Software.",
-      "7. Verify the Charge Case firmware section still shows the desktop app redirect message and no update button."
+      "Precondition: Voyager Legend 50 headset is connected. Charge case has outdated firmware version 1.0.0 (latest is 1.2.0).",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "3. Locate the charge case component on the Software screen.",
+      "4. Note the firmware version number displayed for the charge case.",
+      "5. Verify the displayed version number matches the actual charge case firmware (e.g., '1.0.0').",
+      "6. Verify the 'can't be updated' message is displayed.",
+      "7. Verify no 'Up to date' or 'Update available' text is shown \u2014 only the error message."
     ],
-    "expected": "After restarting the mobile app, the Charge Case firmware section continues to show the desktop app redirect message and no update button, confirming the behavior is persistent across app restarts."
+    "expected": "The charge case firmware version is accurately reported. The 'can't be updated' message correctly indicates the error state rather than falsely showing 'Up to date' or providing an update button."
   },
   {
-    "title": "TC_FW_CC_008: Verify desktop app redirect message contains correct instructions",
+    "title": "TC-DFU-LEG50-008: Verify no partial update UI elements appear for Legend 50 Charge Case in 'can't be updated' state",
     "steps": [
-      "1. Launch the mobile app and pair a Legend 50 headset with a Charge Case on outdated firmware.",
-      "2. Navigate to Device Settings > Software.",
-      "3. Locate the desktop app redirect message for the Charge Case.",
-      "4. Read the full text of the message.",
-      "5. Verify the message includes clear instructions on how to update (e.g., 'download the desktop app', 'visit our website', etc.)."
+      "Precondition: Voyager Legend 50 headset is connected. Charge case has outdated firmware.",
+      "1. Open Poly Studio Mobile app.",
+      "2. Tap the connected Voyager Legend 50 device name \u2192 Device Settings \u2192 Software.",
+      "3. Observe the charge case component area carefully.",
+      "4. Verify there is no grayed-out or disabled 'Update' button.",
+      "5. Verify there is no 'Update' text that is non-tappable.",
+      "6. Verify there is no progress bar, spinner, or loading indicator.",
+      "7. Verify there is no 'Retry' button or link.",
+      "8. Verify there is no 'Check for updates' button next to the charge case.",
+      "9. Verify the only UI element related to the charge case update state is the firmware version number and the 'can't be updated' text message."
     ],
-    "expected": "The desktop app redirect message contains clear, actionable instructions guiding the user to obtain and use the desktop application to perform the Charge Case firmware update."
+    "expected": "No partial, disabled, or non-functional update UI elements are present. The charge case component cleanly shows only the version number and the 'can't be updated' message without misleading the user with non-functional controls."
   }
 ]
