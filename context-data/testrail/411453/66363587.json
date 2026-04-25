@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "FMD - Both earbuds connected",
   "feature": "App Settings",
-  "scenario": "Find My Device correctly shows Voyager Free 60+ as a single device on the map in Poly Studio Mobile app",
+  "scenario": "Find My Device correctly shows Voyager Free 60/60+ or Voyager Free 20 as a single device on the map when both earbuds are connected",
   "steps": [
-    "Open the Poly Studio Mobile app on your mobile device.",
-    "Ensure a Voyager Free 60+ (Osprey) device is connected via Bluetooth.",
-    "Navigate to the Home screen.",
-    "Tap on the Find My Device feature.",
-    "Observe the map view showing the device location."
+    "1. Open the Poly Studio Mobile app on your mobile device.",
+    "2. Ensure both earbuds (Voyager Free 60/60+ or Voyager Free 20) are connected to the app.",
+    "3. Navigate to the Home screen.",
+    "4. Locate and tap on the 'Find My Device' feature.",
+    "5. Observe the map view that appears.",
+    "6. Check the location marker shown on the map."
   ],
-  "expected": "The Voyager Free 60+ (Osprey) device appears as a single unit on the map, not as two separate earbuds.",
+  "expected": "The device is correctly recognized on the map as a single device marker.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
+    "voyager-free-60",
     "voyager-free-60-plus",
+    "voyager-free-20",
     "poly-studio-mobile",
     "map-view",
-    "device-location",
-    "bluetooth-connection",
-    "osprey"
+    "location-marker",
+    "dual-earbud-connection"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "701b3f0353a91854193e87ec8d885c0b87d3842de349878ee56287a407779423",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.980757Z",
+  "processed_at": "2026-04-25T07:55:32.010355Z",
   "status": "active"
 }
