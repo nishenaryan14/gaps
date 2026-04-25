@@ -5,17 +5,18 @@
   "project": "411453",
   "title": "ANC - changes are present after putting the app in the background",
   "feature": "ANC",
-  "scenario": "ANC settings persist when Poly Studio Mobile app is backgrounded and then brought to foreground",
+  "scenario": "ANC settings persist after backgrounding and foregrounding the Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen and tap on the connected Poly device.",
-    "3. Go to Device Settings \u2192 Audio Settings \u2192 ANC.",
-    "4. Set ANC to a specific mode (e.g., High, Low, or Adaptive).",
-    "5. Press the Home button or recent apps button to put the Poly Studio Mobile app in the background.",
-    "6. Wait a few seconds, then bring the app back to the foreground by tapping the app icon or selecting it from the recent apps list.",
-    "7. Navigate back to Device Settings \u2192 Audio Settings \u2192 ANC."
+    "Open Poly Studio Mobile app on the Android device.",
+    "Navigate to Home screen and tap on the connected [Device Name].",
+    "Go to Audio Settings \u2192 ANC.",
+    "Set ANC to a specific mode (e.g., Active Noise Canceling High).",
+    "Press the Home button or recent apps button to put the Poly Studio Mobile app in the background.",
+    "Wait a few seconds, then reopen the Poly Studio Mobile app by tapping its icon or selecting it from recent apps.",
+    "Navigate back to Audio Settings \u2192 ANC.",
+    "Observe the ANC setting displayed."
   ],
-  "expected": "The ANC setting should remain unchanged and display the same mode that was selected before putting the app in the background.",
+  "expected": "The ANC setting should remain unchanged (e.g., still showing Active Noise Canceling High) after bringing the app back to the foreground.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +25,13 @@
     "poly-studio-mobile",
     "audio-settings",
     "background-foreground",
-    "anc-mode",
-    "device-settings"
+    "active-noise-canceling-high",
+    "android",
+    "setting-persistence"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "6795768c98e55837dae731f4f6f28a46ab65e96d5f4ea9e9e7ece8b4eddc0b18",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.991150Z",
+  "processed_at": "2026-04-25T09:32:26.248827Z",
   "status": "active"
 }
