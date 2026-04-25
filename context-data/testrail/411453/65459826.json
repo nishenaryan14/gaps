@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "Notifications - Device charging",
   "feature": "Notifications",
-  "scenario": "Charging notification does not appear when headset is plugged in while Poly Lens app is in the background",
+  "scenario": "Charging notification with headset name and \"Charging\" text appears when headset is plugged in while Poly Studio Mobile app is in background, and tapping notification redirects to Poly Lens app Home screen",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and connect a Bluetooth headset that is not fully charged.",
+    "1. Launch the Poly Studio Mobile app and pair/connect a headset that is not fully charged.",
     "2. Press the Home button or switch to another app to send the Poly Studio Mobile app to the background.",
-    "3. Plug the connected headset into its charger.",
-    "4. Observe the notification area (status bar / notification shade) on the device.",
-    "5. Tap the notification that appears."
+    "3. Plug the headset into a power source (e.g., USB charger).",
+    "4. Observe the notification area for a charging notification.",
+    "5. Verify the notification displays the headset name and the text \"Charging\".",
+    "6. Tap the notification.",
+    "7. Observe the app that opens."
   ],
-  "expected": "A notification appears showing the headset name and \"Charging\" text. Tapping the notification redirects the user to the Poly Lens app's Home screen for the device.",
+  "expected": "A charging notification appears showing the headset name and \"Charging\" text. Tapping the notification redirects the user to the Poly Lens app's Home screen for the device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "charging-notification",
     "poly-studio-mobile",
+    "poly-lens-app",
+    "headset-name",
+    "notification-redirect",
     "background-app",
-    "bluetooth-headset",
-    "notification-area",
-    "status-bar",
-    "battery-charging",
-    "notification-shade"
+    "usb-charging",
+    "app-switching"
   ],
   "source_last_updated": "1761224568",
   "source_hash": "e36f313df11dc952517a1ff1ed647627680f8436be479c07041e7d4f84e319aa",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.041425Z",
+  "processed_at": "2026-04-25T09:32:26.295871Z",
   "status": "active"
 }
