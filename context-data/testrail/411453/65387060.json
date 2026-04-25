@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Feedback - send a Bug feedback without names/email",
   "feature": "App Settings",
-  "scenario": "Bug feedback sent from App Settings > Feedback includes user's personal data (names, email) instead of being anonymized",
+  "scenario": "Bug feedback sent from App Settings > Feedback tab includes user's personal data (names, email) instead of being anonymized",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Home screen.",
     "2. Tap on App Settings (gear icon).",
     "3. Tap on the Feedback tab.",
     "4. Tap on the \"Bug\" option.",
-    "5. Enter some text for the feedback description.",
-    "6. Tap the Send button."
+    "5. Enter text for the feedback.",
+    "6. Tap Send."
   ],
-  "expected": "The feedback is sent without including the user's personal data (names, email).",
+  "expected": "Feedback is sent without including the user's personal data (names, email).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "app-settings",
-    "feedback",
+    "feedback-tab",
     "bug-report",
-    "privacy",
-    "data-anonymization",
+    "data-privacy",
+    "anonymization",
     "personal-data-leak",
     "send-feedback"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "862878cb3433d0056cc86aac68fbd6b22f32158dfd75ceaee2bf9dcfc996b6f4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.960426Z",
+  "processed_at": "2026-04-25T09:32:26.194383Z",
   "status": "active"
 }
