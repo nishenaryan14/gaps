@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "EQ - Custom EQ, save a custom EQ, change some values, Reset EQ",
   "feature": "Equalizer",
-  "scenario": "Custom EQ preset values are not cleared after Reset EQ button is used in Poly Studio Mobile app",
+  "scenario": "Custom EQ preset values are not cleared after pressing Reset EQ button in Poly Studio Mobile app",
   "steps": [
     "Open Poly Studio Mobile app on the Home screen.",
-    "Tap on the connected Poly device name to open Device Settings.",
+    "Tap on the connected device name to open Device Settings.",
     "Navigate to Audio Settings \u2192 Equalizer.",
-    "Tap on the 'Custom' preset option.",
-    "Adjust some EQ sliders (e.g., move Bass slider up to +6 dB and Treble slider down to -4 dB).",
-    "Tap 'Save' or 'Save Preset' and name the preset (e.g., 'My Custom EQ').",
-    "Verify the custom preset appears in the preset list.",
+    "Adjust some frequency sliders (e.g., Bass, Mid, Treble) to non-default positions.",
+    "Tap 'Save' and name the custom EQ preset (e.g., 'My Custom EQ').",
+    "Confirm the preset is saved.",
+    "Modify some slider values again (e.g., move Bass up, Treble down).",
     "Tap the 'Reset EQ' button.",
-    "Observe the EQ slider positions after reset."
+    "Observe the slider positions."
   ],
-  "expected": "All EQ sliders return to the default (middle/0 dB) positions. The previously saved custom preset ('My Custom EQ') is removed from the preset list.",
+  "expected": "All EQ frequency sliders return to their default (center/middle) positions. The previously saved custom EQ preset ('My Custom EQ') is removed from the saved presets list.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "custom-eq-preset",
-    "reset-eq",
     "poly-studio-mobile",
     "equalizer",
-    "eq-sliders",
-    "preset-persistence",
-    "audio-settings"
+    "reset-eq",
+    "custom-eq-preset",
+    "audio-settings",
+    "frequency-sliders",
+    "eq-persistence"
   ],
   "source_last_updated": "1761210804",
   "source_hash": "1da04c541c42994569d324dcb9d8887f18d5ad3b8422bd665da02dad455e7a36",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.006054Z",
+  "processed_at": "2026-04-25T09:32:26.257629Z",
   "status": "active"
 }
