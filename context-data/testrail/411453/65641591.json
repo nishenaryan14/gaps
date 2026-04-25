@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "EQ - Change propagation, use two mobile phones",
-  "feature": "EQ (Equalizer)",
-  "scenario": "Verify EQ changes made on one phone are propagated to a second phone when both are paired with the same device.",
+  "feature": "Equalizer",
+  "scenario": "EQ settings (Bass, Flat, Bright, Custom) made on one phone are not propagated to the second phone when both are connected to the same Poly device via Poly Studio Mobile app",
   "steps": [
-    "Pair an EQ-supporting device with two different phones.",
-    "Open the app on both phones.",
-    "Navigate to Device Settings and tap EQ on both phones.",
-    "On the first phone, select Bass, Flat, Bright, or Custom.",
-    "Check that the EQ change is reflected on the second phone."
+    "Open Poly Studio Mobile app on Phone 1 and connect to the Poly Bluetooth audio device.",
+    "Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "Select an EQ preset (e.g., Bass, Flat, Bright) or create a Custom EQ setting.",
+    "Verify the EQ change is applied and audible on Phone 1.",
+    "Without disconnecting Phone 1, open Poly Studio Mobile app on Phone 2 and connect to the same Poly device.",
+    "Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer on Phone 2.",
+    "Observe the EQ settings displayed on Phone 2."
   ],
-  "expected": "EQ changes made on the first phone are propagated and reflected on the second phone.",
+  "expected": "The EQ preset or custom settings made on Phone 1 are reflected and displayed on Phone 2's Equalizer screen in the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "EQ changes",
-    "propagation",
-    "paired phones",
-    "device settings",
-    "equalizer sync",
-    "multi-phone pairing",
-    "audio settings"
+    "equalizer",
+    "eq-presets",
+    "poly-studio-mobile",
+    "multi-device-connection",
+    "audio-settings",
+    "eq-synchronization",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1761211347",
   "source_hash": "0b9c11b4814bc42541f04df174790d41318392f6588598085526727901d2050e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.263445Z",
+  "processed_at": "2026-04-25T05:37:16.842823Z",
   "status": "active"
 }
