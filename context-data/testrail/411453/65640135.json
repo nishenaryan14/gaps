@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Mobile app inventory details",
   "feature": "App Settings",
-  "scenario": "Mobile app inventory details are not displayed correctly in Poly Lens app under Account > Lens server inventory",
+  "scenario": "Mobile app inventory details are not displayed when navigating to Lens server inventory in the Poly Lens app",
   "steps": [
     "Open the Poly Lens app.",
-    "Navigate to Menu > General > Account.",
+    "Go to Menu \u2192 General \u2192 Account.",
     "Log in with valid credentials.",
-    "Go to Lens server inventory.",
+    "Navigate to Lens server inventory.",
     "Click on Mobile app to view details."
   ],
-  "expected": "Mobile app inventory details are displayed correctly.",
+  "expected": "Mobile app details are displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-lens-app",
     "lens-server-inventory",
     "mobile-app-inventory",
-    "account-settings",
-    "inventory-display",
-    "app-credentials-login",
-    "poly-lens-account"
+    "account-login",
+    "inventory-details",
+    "menu-navigation",
+    "app-display-issue"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "e61c51e63ca96c42cbac9ded76159d1e683132681d18ab1dd1b97e898c0ae4e2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.062127Z",
+  "processed_at": "2026-04-25T09:32:26.321436Z",
   "status": "active"
 }
