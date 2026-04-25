@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "EQ - Reset EQ and Save EQ becomes active only after moving slider",
-  "feature": "EQ (Equalizer)",
-  "scenario": "Reset EQ and Save EQ buttons remain disabled until a slider is moved, instead of becoming active immediately upon interacting with any EQ slider in Custom EQ mode.",
+  "feature": "Equalizer",
+  "scenario": "Reset EQ and Save EQ buttons remain disabled until a slider is moved in Custom EQ settings on Poly Studio Mobile app",
   "steps": [
-    "Open the Custom EQ mode.",
-    "Observe the state of the 'Reset EQ' and 'Save EQ' buttons.",
-    "Move any EQ slider.",
-    "Observe the state of the 'Reset EQ' and 'Save EQ' buttons after moving the slider."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Tap on Audio Settings",
+    "Tap on Equalizer",
+    "Select the 'Custom' EQ preset",
+    "Observe the 'Reset EQ' and 'Save EQ' buttons"
   ],
-  "expected": "The 'Reset EQ' and 'Save EQ' buttons should become active (not greyed out) immediately when the user interacts with any EQ slider in Custom EQ mode.",
+  "expected": "'Reset EQ' and 'Save EQ' buttons should be disabled (greyed out) until the user moves any slider in the Custom EQ settings. After moving a slider, both buttons should become enabled (active).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Reset EQ button disabled",
-    "Save EQ button disabled",
-    "Custom EQ mode",
-    "EQ slider interaction",
-    "button state update",
-    "EQ slider movement",
-    "button enable condition",
-    "audio equalizer UI"
+    "poly-studio-mobile",
+    "equalizer",
+    "custom-eq-preset",
+    "reset-eq",
+    "save-eq",
+    "audio-settings",
+    "device-settings"
   ],
   "source_last_updated": "1761143529",
   "source_hash": "35c0881bc14ca3afc3f26ea9e183d54061b83ae147e4f2e9f24e0007e7a87e16",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.248292Z",
+  "processed_at": "2026-04-25T05:37:16.831011Z",
   "status": "active"
 }
