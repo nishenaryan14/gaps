@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Onboarding - Login - Cancel",
   "feature": "App Settings",
-  "scenario": "Cancel button on Poly Lens login dialog returns user to POLY LENS Login screen during onboarding",
+  "scenario": "Tapping Cancel on the Poly Lens Login dialog returns user to the Login screen during onboarding",
   "steps": [
     "1. Launch the Poly Studio Mobile app for the first time.",
     "2. Accept the license agreement when prompted.",
@@ -19,17 +19,17 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-lens-login",
-    "cancel-button",
-    "onboarding",
     "poly-studio-mobile",
+    "poly-lens-login",
+    "onboarding",
     "login-dialog",
-    "continue-as-guest",
-    "license-agreement"
+    "cancel-button",
+    "login-screen",
+    "continue-as-guest"
   ],
   "source_last_updated": "1768388700",
   "source_hash": "86d4a1c8cd86e86ea3c5553611e06d405c6a97252bc85cf0f7d3ebf453b6c3ad",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.905319Z",
+  "processed_at": "2026-04-25T09:32:26.118954Z",
   "status": "active"
 }
