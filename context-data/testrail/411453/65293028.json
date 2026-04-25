@@ -5,14 +5,14 @@
   "project": "411453",
   "title": "Onboarding - Eula page - License Agreement link",
   "feature": "App Settings",
-  "scenario": "Onboarding EULA page License Agreement link directs user to latest HP Software License Agreement page",
+  "scenario": "Onboarding EULA page License Agreement link directs user to the latest license agreement page (https://www.hp.com/go/sweula)",
   "steps": [
-    "1. Launch the Poly Studio Mobile app for the first time (fresh install or after clearing app data).",
-    "2. On the Welcome / Onboarding screen, proceed to the EULA (End User License Agreement) page.",
-    "3. Locate and tap the 'License Agreement' link displayed on the EULA page.",
+    "1. Launch the Poly Studio Mobile app.",
+    "2. On the onboarding screen, locate the EULA (End User License Agreement) page.",
+    "3. Tap the 'License Agreement' link displayed on the EULA page.",
     "4. Observe the browser or in-app web view that opens."
   ],
-  "expected": "The user is directed to the latest HP Software License Agreement page at https://www.hp.com/go/sweula.",
+  "expected": "The user is directed to the latest license agreement page at https://www.hp.com/go/sweula.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,12 +21,12 @@
     "license-agreement",
     "onboarding",
     "end-user-license-agreement",
-    "hp-software-license-agreement",
+    "sweula",
     "in-app-web-view"
   ],
   "source_last_updated": "1760528300",
   "source_hash": "6f6e5af6400b178e8b00c257ceec74315458761a45cb21bd5152d2e3d810a489",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.899647Z",
+  "processed_at": "2026-04-25T09:32:26.054636Z",
   "status": "active"
 }
