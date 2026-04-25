@@ -14,7 +14,7 @@
     "4. Observe the connection status of both earbuds in the app (Home screen or Device Settings)."
   ],
   "expected": "Only the earbud placed in the charging case should disconnect. The other earbud should remain connected and continue functioning normally.",
-  "actual": "Both earbuds disconnect when only one is placed in the charging case.",
+  "actual": "Both earbuds disconnect when only one earbud is placed in the charging case.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -27,12 +27,11 @@
     "connection-status",
     "device-settings",
     "android-app",
-    "bluetooth-disconnect",
-    "single-earbud-insertion"
+    "bluetooth-pairing"
   ],
   "source_last_updated": "2026-04-15T08:48:09.000+0000",
   "source_hash": "c403860808412266c56c33ce58aa595bc4c620be1accad9250ba4c4ae5aee290",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.787854Z",
+  "processed_at": "2026-04-25T09:32:26.052638Z",
   "status": "active"
 }
