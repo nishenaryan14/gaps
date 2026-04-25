@@ -5,34 +5,34 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 DSDK DFU for sub devices doesnt work",
   "feature": "Firmware Updates",
-  "scenario": "Poly Studio Mobile app crashes when starting CC or CS device firmware update (DFU) for sub-devices",
+  "scenario": "Poly Studio Mobile app crashes when starting CC or CS sub-device firmware update (DFU)",
   "description_clean": "App crashes whenever CC or CS DFU (Device Firmware Update for sub-devices) is started.",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Connect a Poly Bluetooth audio device (e.g., Voyager Focus 2 or similar CC/CS device).",
-    "Navigate to Device Settings \u2192 [Device Name].",
-    "Scroll to and select 'Firmware Update' or 'Device Firmware Update'.",
-    "Initiate a DFU (Device Firmware Update) for a sub-device (CC or CS).",
-    "Observe the app behavior during the DFU process."
+    "Open Poly Studio Mobile app on Android",
+    "Navigate to Home screen",
+    "Connect a Poly CC or CS Bluetooth audio device",
+    "Go to Device Settings for the connected device",
+    "Locate and start a Device Firmware Update (DFU) for the sub-device (CC or CS)",
+    "Observe the app behavior during the DFU process"
   ],
-  "expected": "The DFU process should start normally, showing a progress indicator, and the app should remain responsive throughout the update.",
-  "actual": "The app crashes immediately or shortly after the CC/CS DFU is started.",
+  "expected": "The app should remain stable and display the DFU progress (e.g., downloading/installing firmware) without crashing.",
+  "actual": "The Poly Studio Mobile app crashes (closes unexpectedly) as soon as the CC or CS sub-device DFU is started.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-firmware-update",
+    "firmware-update",
     "dfu",
     "sub-device",
     "cc-device",
     "cs-device",
-    "voyager-focus-2",
-    "app-crash"
+    "app-crash",
+    "android"
   ],
   "source_last_updated": "2026-04-16T07:56:34.000+0000",
   "source_hash": "ea5710a9052cd1573bccb43f5f21f4eff59160a8bfa3950c3d197308aa268016",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.685335Z",
+  "processed_at": "2026-04-25T07:55:31.300238Z",
   "status": "active"
 }
