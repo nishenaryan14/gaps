@@ -5,23 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Eula page - App in the background",
   "feature": "App Settings",
-  "scenario": "EULA page animation stops working after app is sent to background and reopened during onboarding",
-  "steps": [],
-  "expected": "",
+  "scenario": "EULA page animation stops working when app is sent to background and reopened during onboarding",
+  "steps": [
+    "1. Launch Poly Studio Mobile app for the first time (fresh install or after clearing data).",
+    "2. Proceed through the initial setup screens until reaching the EULA (End User License Agreement) page.",
+    "3. Observe the EULA page: verify the license agreement text is displayed, Privacy Policy and License Agreement links are clickable, the Continue button is blurred (disabled), and the background animation is working.",
+    "4. Press the Home button or switch to another app to send Poly Studio Mobile to the background.",
+    "5. Wait 1-2 minutes.",
+    "6. Reopen Poly Studio Mobile app from the recent apps list or home screen."
+  ],
+  "expected": "The app remains on the same EULA page with the license agreement text, clickable Privacy Policy and License Agreement links, blurred Continue button, and the animation still working.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "eula-page",
+    "background-animation",
     "onboarding",
-    "background-app",
-    "app-reopen",
-    "animation-stop",
-    "poly-app",
-    "ui-persistence"
+    "app-background-resume",
+    "eula-acceptance",
+    "fresh-install"
   ],
   "source_last_updated": "1760528309",
   "source_hash": "3698b0f0e9c6d603f714fd19b41e4f5946e315e30ecabda61142923dfd6c7304",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.703096Z",
+  "processed_at": "2026-04-25T07:55:31.772474Z",
   "status": "active"
 }
