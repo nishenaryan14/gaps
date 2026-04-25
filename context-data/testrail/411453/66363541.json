@@ -5,31 +5,22 @@
   "project": "411453",
   "title": "All screens, Close button",
   "feature": "App Settings",
-  "scenario": "Close (X) button on each onboarding screen exits the flow and returns to Supported Devices or Home screen",
-  "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. If not already on the Home screen, navigate to the Home screen.",
-    "3. Tap the menu icon (hamburger) or navigate to the Supported Devices screen.",
-    "4. Tap on a device to initiate the onboarding flow (if not already triggered).",
-    "5. On the first onboarding screen, tap the Close (X) button.",
-    "6. Observe the screen that is displayed after closing.",
-    "7. Repeat steps 4\u20136 for each subsequent onboarding screen (if multiple screens exist in the flow)."
-  ],
-  "expected": "After tapping the Close (X) button on any onboarding screen, the onboarding flow is dismissed and the user is returned to the original screen they were on before onboarding started (either the Supported Devices screen or the Home screen).",
+  "scenario": "Onboarding flow exits and returns to original screen when Close (X) button is tapped on any screen",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "onboarding-flow",
     "close-button",
-    "supported-devices",
-    "home-screen",
-    "exit-behavior",
-    "ui-navigation"
+    "ui-navigation",
+    "screen-transition",
+    "user-exit",
+    "poly-app"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "85659ab78f6a0aa333f32aba5078e5f4dd3a0a87656f5dcd8f7d2a448be80eef",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.947058Z",
+  "processed_at": "2026-04-25T08:21:31.019282Z",
   "status": "active"
 }
