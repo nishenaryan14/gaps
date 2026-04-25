@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "[IOS] Location Sharing Dialogue - Don't Allow - Enable Now - Allow While Using App",
   "feature": "App Settings",
-  "scenario": "Find My Device screen fails to update after granting location permission via \"Enable Now\" when \"Don't Allow\" was selected during onboarding",
+  "scenario": "Find My Device location permission dialog does not dismiss after granting \"While Using the App\" permission via phone settings",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and complete the onboarding flow, selecting \"Don't Allow\" when prompted for location permission.",
-    "2. Navigate to App Settings \u2192 Find My Device.",
-    "3. Tap \"Enable Now\" on the Find My Device screen.",
-    "4. When the system location permission dialog appears, select \"While Using the App\".",
-    "5. Return to the Poly Studio Mobile app."
+    "1. Launch Poly Studio Mobile app and complete onboarding, selecting \"Don't Allow\" when prompted for location permission.",
+    "2. From the Home screen, navigate to App Settings.",
+    "3. Tap \"Find My Device\".",
+    "4. Observe the location permission dialog that appears with \"Cancel\" and \"Enable Now\" options.",
+    "5. Tap \"Enable Now\".",
+    "6. In the phone system settings, grant the \"While Using the App\" location permission.",
+    "7. Return to the Poly Studio Mobile app."
   ],
-  "expected": "The location permission dialog is dismissed and the Find My Device screen is displayed.",
+  "expected": "The Find My Device screen is displayed and the location permission dialog is dismissed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "location-permission",
-    "enable-now",
+    "while-using-the-app",
+    "permission-dialog",
     "poly-studio-mobile",
-    "onboarding",
     "app-settings",
-    "permission-granting",
-    "ui-update-failure"
+    "permission-persistence"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "70dd6e57d57b180a7975da950ca006e1daf01a559f527302ca9f0f25341f53ec",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.912375Z",
+  "processed_at": "2026-04-25T09:32:26.134183Z",
   "status": "active"
 }
