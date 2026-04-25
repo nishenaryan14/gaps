@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "Fit test - Onboarding flow - Skip Fit Test",
   "feature": "Device Management",
-  "scenario": "Fit test onboarding screen is skipped but next onboarding screen does not appear when Skip button is clicked",
+  "scenario": "Fit test onboarding screen is skipped but next onboarding screen does not appear after tapping Skip on Device Settings > Onboarding flow",
   "steps": [
-    "1. Connect a supported Poly Bluetooth audio device to the Poly Studio Mobile Android app.",
-    "2. Open the Poly Studio Mobile app on the Android device.",
-    "3. Navigate to the Home screen.",
-    "4. Tap on the connected [Device Name] to open Device Settings.",
-    "5. In Device Settings, locate and tap on 'Onboarding'.",
-    "6. Proceed through the onboarding flow until reaching the Pairing 2 screen.",
-    "7. After the Pairing 2 screen, the Fit test screen should appear.",
-    "8. On the Fit test screen, tap the 'Skip' button."
+    "1. Connect a Poly Bluetooth audio device that supports fit test to the Poly Studio Mobile app.",
+    "2. Open the Poly Studio Mobile app on the Home screen.",
+    "3. Tap on the connected [Device Name] to open Device Settings.",
+    "4. Navigate to Device Settings \u2192 Onboarding.",
+    "5. Proceed through the onboarding flow until reaching the Pairing 2 screen.",
+    "6. Continue to the Fit test screen.",
+    "7. Tap the Skip button on the Fit test screen."
   ],
-  "expected": "The next onboarding screen is displayed after tapping Skip.",
+  "expected": "The next onboarding screen after the Fit test screen is displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
     "onboarding-flow",
     "skip-button",
+    "device-settings",
     "poly-studio-mobile",
     "pairing-screen",
-    "device-settings",
-    "android-app",
-    "ui-navigation"
+    "navigation-bug",
+    "bluetooth-audio"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "1f4e373063d1b835f979757a82cda8f7d92ac7e16629aa53e503a3a490ef6a4c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.984558Z",
+  "processed_at": "2026-04-25T09:32:26.236157Z",
   "status": "active"
 }
