@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "Device Home Screen - Quick Settings modal",
   "feature": "App Settings",
-  "scenario": "Quick Settings modal opens with all related options when tapping any Quick Setting on the Device Home Screen, and settings can be changed via the modal for each Quick Setting selection",
-  "steps": [],
-  "expected": "",
+  "scenario": "Quick Settings modal fails to open or display options when tapping a Quick Setting on the Device Home Screen",
+  "steps": [
+    "1. Pair a Poly Bluetooth headset with the Poly Studio Mobile Android app.",
+    "2. Navigate to the Device Home Screen.",
+    "3. Tap on any of the Quick Settings tiles displayed on the Device Home Screen.",
+    "4. Observe the modal that opens.",
+    "5. Verify that the modal displays all options related to the selected setting.",
+    "6. Change a setting via the modal.",
+    "7. Repeat steps 3\u20136 for every available Quick Setting.",
+    "8. Go to Device Settings \u2192 Quick Settings Selection and change the selection of Quick Settings.",
+    "9. Return to the Device Home Screen and repeat steps 3\u20137 for the newly selected Quick Settings."
+  ],
+  "expected": "A modal opens with all options related to the selected setting, and the user can successfully change settings via this modal. This behavior is consistent for every available Quick Setting, including after changing the Quick Settings selection in Device Settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "quick-settings-modal",
     "device-home-screen",
-    "quick-setting-tap",
-    "settings-modal",
-    "poly-bluetooth-audio",
-    "ui-navigation",
-    "setting-change"
+    "poly-studio-mobile",
+    "quick-settings-selection",
+    "bluetooth-pairing",
+    "setting-change",
+    "modal-display"
   ],
   "source_last_updated": "1769425796",
   "source_hash": "8789a14c184357fe1c45def2277d192b633417ee92c6998999c22052329285a4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.744595Z",
+  "processed_at": "2026-04-25T07:55:31.803351Z",
   "status": "active"
 }
