@@ -19,123 +19,119 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case covers the User Guides screen or the list of sub-devices displayed on it.",
-    "No test validates that only legitimate Poly devices (headsets, speakerphones) appear as sub-devices on the User Guides screen, and that accessories like the Falcon Charge Stand are excluded.",
-    "No test covers the data source or API/backend logic that populates the device list on the User Guides screen.",
-    "No test covers filtering logic for what constitutes a 'device' vs. an 'accessory/charge stand' in the User Guides screen.",
-    "No lifecycle or state-based testing exists for the User Guides screen (e.g., what happens when the list is refreshed, app backgrounded, or device connection state changes)."
+    "No existing test case covers the User Guides screen at all. All 15 provided test cases focus on: splash screen theming (65293009), onboarding/EULA screens (65293010-65293034), location permission flows (65293012-65293022), and Find My Device scenarios. None test the User Guides screen content, device listing, or sub-device filtering logic.",
+    "Missing test: User Guides screen should only display devices that are actually connected/paired to the app, not phantom sub-devices like 'Charge Stand' which is not a standalone audio device but an accessory.",
+    "Missing test: User Guides screen device list filtering logic \u2014 verifying that only valid Poly audio products (headsets, speakerphones, earbuds) appear and accessories/chargers are excluded.",
+    "Missing test: User Guides screen data source validation \u2014 confirming the device list is populated from the correct source (connected devices list vs. a static/hardcoded list that may contain stale entries).",
+    "Missing test: User Guides screen refresh behavior when devices connect/disconnect \u2014 does the list update dynamically or retain stale sub-devices?"
   ],
   "generated_testcases": [
     {
-      "title": "User Guides Screen: Verify Falcon Charge Stand is NOT listed as a sub-device",
+      "title": "TC-UG-001: User Guides Screen \u2014 Only Connected Devices Displayed (No Phantom Sub-Devices)",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the Menu icon (hamburger menu) in the top-left corner.",
-        "Tap 'User Guides' from the navigation menu.",
-        "Observe the list of sub-devices displayed on the User Guides screen.",
-        "Verify that 'Falcon Charge Stand' does NOT appear anywhere in the device list.",
-        "Verify that only legitimate Poly devices (e.g., headsets, speakerphones) are listed."
+        "Precondition: Pair and connect exactly one valid Poly audio device (e.g., Voyager Free 60+ earbuds). Ensure no 'Charge Stand' or other accessory is connected.",
+        "Navigate to: App \u2192 Settings \u2192 User Guides",
+        "Observe the list of devices shown on the User Guides screen.",
+        "Note: The connected device (e.g., Voyager Free 60+) MUST appear.",
+        "Verify that NO entry for 'Charge Stand' or any non-audio accessory appears in the list."
       ],
-      "expected": "The Falcon Charge Stand is NOT displayed on the User Guides screen. Only legitimate Poly devices (headsets, speakerphones) appear in the list."
+      "expected": "User Guides screen displays only the connected Poly audio device (e.g., Voyager Free 60+). 'Charge Stand' is NOT listed. Actual (If Bug): 'Charge Stand' or other phantom sub-device incorrectly appears as a selectable entry, indicating stale/hardcoded data source."
     },
     {
-      "title": "User Guides Screen: Verify legitimate Poly Voyager Free 60+ UC appears as a sub-device",
+      "title": "TC-UG-002: User Guides Screen \u2014 No Devices Connected Shows Empty or Appropriate State",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Tap the Menu icon (hamburger menu) in the top-left corner.",
-        "Tap 'User Guides' from the navigation menu.",
-        "Observe the list of sub-devices displayed on the User Guides screen.",
-        "Verify that 'Poly Voyager Free 60+ UC' appears in the device list.",
-        "Tap on the 'Poly Voyager Free 60+ UC' entry to open its user guide."
+        "Precondition: Ensure no Poly device is paired/connected to the phone. Bluetooth may be ON but no device bonded.",
+        "Navigate to: App \u2192 Settings \u2192 User Guides",
+        "Observe the User Guides screen content."
       ],
-      "expected": "Poly Voyager Free 60+ UC is listed as a sub-device on the User Guides screen. Tapping it opens the corresponding user guide document."
+      "expected": "User Guides screen shows an empty state message (e.g., 'No connected devices' or 'Connect a device to view guides'). No device entries are listed. Actual (If Bug): A stale device or phantom sub-device like 'Charge Stand' appears despite no device being connected."
     },
     {
-      "title": "User Guides Screen: App backgrounding and return \u2014 device list remains correct",
+      "title": "TC-UG-003: User Guides Screen \u2014 Dynamic Refresh When Device Connects (From Empty State)",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Navigate to Menu \u2192 User Guides.",
-        "Verify the User Guides screen loads with a list of devices.",
-        "Press the Home button to background the app.",
-        "Wait 10 seconds.",
-        "Reopen the Poly Studio Mobile app from the recent apps list.",
-        "Observe the User Guides screen.",
-        "Verify that 'Falcon Charge Stand' is NOT present in the list.",
-        "Verify that legitimate Poly devices (e.g., headsets, speakerphones) are still listed."
+        "Precondition: No Poly device connected. User Guides screen is open showing empty state.",
+        "Pair and connect a valid Poly audio device (e.g., Voyager Free 60+).",
+        "Observe the User Guides screen without navigating away."
       ],
-      "expected": "After backgrounding and returning to the app, the User Guides screen still correctly excludes the Falcon Charge Stand and shows only legitimate Poly devices."
+      "expected": "User Guides screen dynamically updates to show the newly connected device (e.g., Voyager Free 60+) within 5 seconds. No manual refresh or navigation away is required. Actual (If Bug): Screen remains empty or shows stale data until user navigates away and back."
     },
     {
-      "title": "User Guides Screen: App force-kill and relaunch \u2014 device list persists correctly",
+      "title": "TC-UG-004: User Guides Screen \u2014 Dynamic Refresh When Device Disconnects",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Navigate to Menu \u2192 User Guides.",
-        "Verify the User Guides screen loads with a list of devices.",
-        "Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
-        "Reopen the Poly Studio Mobile app.",
-        "Navigate to Menu \u2192 User Guides.",
-        "Observe the device list.",
-        "Verify that 'Falcon Charge Stand' is NOT present in the list.",
-        "Verify that legitimate Poly devices (e.g., headsets, speakerphones) are still listed."
+        "Precondition: One valid Poly audio device (e.g., Voyager Free 60+) is connected. User Guides screen is open showing that device.",
+        "Disconnect the device (turn off device Bluetooth or put it out of range).",
+        "Observe the User Guides screen without navigating away."
       ],
-      "expected": "After force-kill and relaunch, the User Guides screen correctly excludes the Falcon Charge Stand and shows only legitimate Poly devices."
+      "expected": "User Guides screen dynamically removes the disconnected device entry within 10 seconds, transitioning to empty state if no other devices remain. Actual (If Bug): Disconnected device entry persists on screen, indicating stale list not tied to live connection state."
     },
     {
-      "title": "User Guides Screen: Bluetooth disconnect and reconnect \u2014 device list remains correct",
+      "title": "TC-UG-005: User Guides Screen \u2014 Multiple Connected Devices All Displayed Correctly",
       "steps": [
-        "Connect a Poly Voyager Free 60+ UC to the phone via Bluetooth.",
-        "Open Poly Studio Mobile app.",
-        "Navigate to Menu \u2192 User Guides.",
-        "Verify the device list is displayed.",
-        "Disconnect Bluetooth (turn off Bluetooth on the phone or disconnect the device).",
-        "Wait 5 seconds.",
-        "Reconnect Bluetooth (turn on Bluetooth and reconnect the device).",
-        "Return to the Poly Studio Mobile app.",
-        "Navigate to Menu \u2192 User Guides.",
-        "Verify that 'Falcon Charge Stand' is NOT present in the list.",
-        "Verify that legitimate Poly devices (e.g., headsets, speakerphones) are still listed."
+        "Precondition: Pair and connect two valid Poly audio devices simultaneously (e.g., Voyager Free 60+ earbuds and a Poly speakerphone). Ensure no accessory/charger is connected.",
+        "Navigate to: App \u2192 Settings \u2192 User Guides",
+        "Observe the list of devices."
       ],
-      "expected": "After Bluetooth disconnect and reconnect, the User Guides screen correctly excludes the Falcon Charge Stand and shows only legitimate Poly devices."
+      "expected": "Both connected Poly audio devices appear in the User Guides list. No phantom entries (e.g., 'Charge Stand') appear. Each entry corresponds to a valid, connected audio product. Actual (If Bug): Only one device appears, or an accessory/charger appears as a third entry."
     },
     {
-      "title": "User Guides Screen: Refresh behavior \u2014 pull-to-refresh or screen re-entry",
+      "title": "TC-UG-006: User Guides Screen \u2014 App Force-Kill and Re-Launch Retains Correct Device List",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Navigate to Menu \u2192 User Guides.",
-        "Observe the initial device list.",
-        "Note the devices displayed.",
-        "Navigate back to the main screen (tap back arrow or device name).",
-        "Re-navigate to Menu \u2192 User Guides.",
-        "Observe the device list after re-entry.",
-        "Verify that 'Falcon Charge Stand' is NOT present in the list on either the initial load or the re-entry.",
-        "Verify that the device list is consistent between the two views."
+        "Precondition: One valid Poly audio device (e.g., Voyager Free 60+) is connected.",
+        "Navigate to: App \u2192 Settings \u2192 User Guides",
+        "Verify the connected device appears.",
+        "Force-kill the app (swipe from recents).",
+        "Re-launch the app.",
+        "Navigate to: App \u2192 Settings \u2192 User Guides"
       ],
-      "expected": "On both initial load and re-entry to the User Guides screen, the Falcon Charge Stand is excluded. The device list is consistent across screen refreshes."
+      "expected": "User Guides screen displays the same connected device (Voyager Free 60+). No phantom sub-devices appear. Actual (If Bug): Device list is empty after relaunch, or stale/phantom entries reappear from a cached/hardcoded source."
     },
     {
-      "title": "User Guides Screen: No device connected \u2014 verify empty/fallback state",
+      "title": "TC-UG-007: User Guides Screen \u2014 Device Disconnect Then Reconnect (State Transition)",
       "steps": [
-        "Ensure no Poly device is connected to the phone via Bluetooth.",
-        "Open Poly Studio Mobile app.",
-        "Navigate to Menu \u2192 User Guides.",
-        "Observe the User Guides screen.",
-        "Verify that 'Falcon Charge Stand' is NOT present in any list or section.",
-        "Verify that the screen displays appropriate content (e.g., a list of all supported Poly devices, or a message indicating no device is connected but guides are available)."
+        "Precondition: One valid Poly audio device (e.g., Voyager Free 60+) is connected.",
+        "Navigate to: App \u2192 Settings \u2192 User Guides",
+        "Verify the device appears.",
+        "Disconnect the device (turn off Bluetooth).",
+        "Verify User Guides transitions to empty state (no devices).",
+        "Reconnect the device (turn on Bluetooth, wait for auto-reconnect).",
+        "Observe User Guides screen."
       ],
-      "expected": "When no device is connected, the User Guides screen does not show the Falcon Charge Stand. The screen displays appropriate fallback content (e.g., full list of supported devices or informational message)."
+      "expected": "After disconnect: User Guides shows empty state. After reconnect: User Guides dynamically shows the device again within 10 seconds. No phantom entries appear at any point. Actual (If Bug): Device entry persists during disconnect, or fails to reappear after reconnect."
     },
     {
-      "title": "User Guides Screen: Verify data source integrity \u2014 no accessory/charge stand devices listed",
+      "title": "TC-UG-008: User Guides Screen \u2014 Data Source Validation (Connected Devices API vs. Static List)",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Navigate to Menu \u2192 User Guides.",
-        "Capture the full list of sub-devices displayed on the screen.",
-        "For each device in the list, verify it is a legitimate Poly headset or speakerphone model (e.g., Poly Voyager Free 60+ UC, Poly Voyager 5200, Poly Sync 20, etc.).",
-        "Verify that no accessory-only items appear (e.g., 'Falcon Charge Stand', 'Charging Case', 'USB Adapter', 'Charging Stand')."
+        "Precondition: Connect a valid Poly audio device (e.g., Voyager Free 60+).",
+        "Navigate to: App \u2192 Settings \u2192 User Guides",
+        "Note the device name displayed.",
+        "Navigate to: App \u2192 Device screen and verify the same device name is shown there.",
+        "Compare the device name in User Guides with the device name in the main Device screen."
       ],
-      "expected": "All items in the User Guides device list are legitimate Poly headsets or speakerphones. No accessory-only items (charge stands, cases, adapters) are present."
+      "expected": "The device name in User Guides exactly matches the device name shown in the main Device screen (same source of truth). Actual (If Bug): User Guides shows a different name, a generic name, or a hardcoded entry that does not match the connected device's actual name."
+    },
+    {
+      "title": "TC-UG-009: User Guides Screen \u2014 Bluetooth OFF State",
+      "steps": [
+        "Precondition: Bluetooth is turned OFF on the phone. No device connected.",
+        "Navigate to: App \u2192 Settings \u2192 User Guides",
+        "Observe the screen."
+      ],
+      "expected": "User Guides screen shows appropriate empty/offline state (e.g., 'Enable Bluetooth and connect a device'). No device entries, phantom or otherwise, are displayed. Actual (If Bug): A stale device or 'Charge Stand' appears despite Bluetooth being OFF."
+    },
+    {
+      "title": "TC-UG-010: User Guides Screen \u2014 App Backgrounding During Device List Display",
+      "steps": [
+        "Precondition: One valid Poly audio device (e.g., Voyager Free 60+) is connected.",
+        "Navigate to: App \u2192 Settings \u2192 User Guides",
+        "Verify the device appears.",
+        "Press Home button to background the app.",
+        "Wait 30 seconds.",
+        "Reopen the app from recents.",
+        "Observe User Guides screen."
+      ],
+      "expected": "User Guides screen still displays the connected device correctly after app is backgrounded and resumed. No phantom entries appear. Actual (If Bug): Screen goes blank, shows stale data, or phantom sub-devices appear after resume."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:09.755536Z"
+  "processed_at": "2026-04-25T09:45:49.439340Z"
 }
