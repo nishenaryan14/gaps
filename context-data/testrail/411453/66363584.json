@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Language Change - Checking pop up if at least one component is at low battery",
   "feature": "Firmware Update",
-  "scenario": "Language change firmware update blocked with low battery pop-up on headset, earbud, or smart case",
+  "scenario": "Language update blocked with low battery pop-up when any connected component has less than 5% battery",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen and select your connected Poly audio device.",
-    "3. Go to Device Settings \u2192 Audio Settings \u2192 Language.",
-    "4. Attempt to change the language setting, which triggers a firmware update.",
-    "5. Observe the pop-up message that appears when any component (headset, earbud, or smart case) has a low battery."
+    "2. Ensure a Poly Bluetooth audio device (single headset, earbuds, or earbuds with smart case) is connected.",
+    "3. Verify that at least one component (headset, earbud, or smart case) has a battery level below 5%.",
+    "4. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
+    "5. Locate and tap the Language option within Device Settings.",
+    "6. Attempt to change the language by selecting a new language from the list."
   ],
-  "expected": "The firmware update should proceed normally if all components have sufficient battery. If any component has low battery, a pop-up should appear: \\\"Update currently not available, please try back later\\\".",
+  "expected": "The app displays a pop-up message: \"Update currently not available, please try back later\" and prevents the language update from proceeding.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "firmware-update",
-    "low-battery",
-    "language-change",
+    "language-update",
+    "low-battery-pop-up",
     "poly-studio-mobile",
-    "pop-up-message",
-    "battery-persistence",
     "device-settings",
-    "audio-settings"
+    "battery-threshold",
+    "firmware-language",
+    "bluetooth-audio-device",
+    "smart-case"
   ],
   "source_last_updated": "1763383741",
   "source_hash": "c0d89590446522d37af0026886eccdd4e85134cd065141155b2eee7acbf40370",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.980005Z",
+  "processed_at": "2026-04-25T09:32:26.234649Z",
   "status": "active"
 }
