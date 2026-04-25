@@ -9,14 +9,16 @@
   "steps": [
     "1. Pair and connect a Poly Bluetooth headset to the mobile device.",
     "2. Open the Poly Studio Mobile app.",
-    "3. Verify the headset is shown as connected on the Home screen.",
+    "3. Verify the headset appears as connected on the Home screen.",
     "4. Turn off Bluetooth from the mobile device's system settings.",
-    "5. Return to the Poly Studio Mobile app and observe the Home screen.",
-    "6. Turn Bluetooth back on from the mobile device's system settings.",
-    "7. Reconnect the headset via the mobile device's Bluetooth settings.",
-    "8. Return to the Poly Studio Mobile app and observe the Home screen."
+    "5. Return to the Poly Studio Mobile app.",
+    "6. Observe the device list on the Home screen.",
+    "7. Turn Bluetooth back on from the mobile device's system settings.",
+    "8. Reconnect the headset from the mobile device's Bluetooth settings.",
+    "9. Return to the Poly Studio Mobile app.",
+    "10. Observe the device list on the Home screen."
   ],
-  "expected": "Step 5: The headset is shown as disconnected in the device list on the Home screen. Step 8: The headset is shown as connected in the device list on the Home screen.",
+  "expected": "Step 6: The headset is shown as disconnected in the device list on the Home screen. Step 10: The headset is shown as connected in the device list on the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,13 +26,13 @@
     "home-screen",
     "connection-status",
     "bluetooth-toggle",
+    "device-list",
     "headset-reconnection",
-    "bluetooth-pairing",
-    "connectivity-ui"
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1769425929",
   "source_hash": "9dbfe87c1831b6af079dfa540dbc4ac2b8da656ee0d91082b0722fe27247c145",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.744595Z",
+  "processed_at": "2026-04-25T07:55:31.811334Z",
   "status": "active"
 }
