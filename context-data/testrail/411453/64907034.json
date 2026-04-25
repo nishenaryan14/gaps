@@ -5,14 +5,14 @@
   "project": "411453",
   "title": "[IOS]App Settings - General - Account - Log in - Cancel",
   "feature": "App Settings",
-  "scenario": "Cancel button on Login dialog returns user to Account screen with Login and Share Data buttons still visible in Poly Studio Mobile app",
+  "scenario": "Cancel button on Login dialog returns user to Account screen with Login and Share Data buttons still visible",
   "steps": [
     "1. Launch the Poly Studio Mobile app as a guest user.",
-    "2. Tap the hamburger menu (App Settings icon) to open the side navigation.",
+    "2. Tap the hamburger icon (App Settings) to open the side menu.",
     "3. Tap General.",
     "4. Tap Account.",
     "5. Tap Log in.",
-    "6. Tap Cancel on the login dialog."
+    "6. Tap Cancel."
   ],
   "expected": "Login dialog closes, user returns to the Account screen, and the Log in and Share Data buttons remain visible.",
   "coverage": [],
@@ -23,13 +23,12 @@
     "cancel-button",
     "account-screen",
     "guest-user",
-    "login-button",
-    "share-data-button",
+    "app-settings",
     "ui-navigation"
   ],
   "source_last_updated": "1764319819",
   "source_hash": "b51e91048a8b888dfefd143e3916000ee13ced165071da00ac4c9236e153f505",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.749134Z",
+  "processed_at": "2026-04-25T07:55:31.812369Z",
   "status": "active"
 }
