@@ -1,110 +1,113 @@
 [
   {
-    "title": "TC-DFU-001: Verify DFU flow starts correctly on Software Update page",
+    "title": "DFU Flow: Device disconnected before tapping Continue on Software Update page \u2014 headset power off",
     "steps": [
-      "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
-      "2. Navigate to the Software Update page.",
-      "3. Ensure a paired headset is connected and has a firmware update available.",
-      "4. Tap the 'Update' or 'Start DFU' button to begin the firmware update.",
-      "5. Observe the progress indicator or status message on the Software Update page."
+      "Open Poly Studio Mobile app",
+      "Tap on a connected headset device (e.g., Poly Voyager 5200)",
+      "Navigate to Settings \u2192 Software Update",
+      "Verify the Software Update page is displayed with device info and 'Continue' button",
+      "Press and hold the Call button on the headset for 5 seconds to power off the device",
+      "Wait 3 seconds",
+      "Tap the 'Continue' button on the Software Update page",
+      "Observe the app response"
     ],
-    "expected": "The DFU process starts successfully. The Software Update page displays a progress bar or status message indicating the update is in progress. The user remains on the Software Update page."
+    "expected": "The app MUST NOT proceed to the 'Three Easy Steps' page. Instead, the app should display an appropriate error message such as 'Device disconnected' or 'Connection lost' and block the DFU flow. The user should remain on the Software Update page or be returned to the device list."
   },
   {
-    "title": "TC-DFU-002: Verify error message is displayed when headset disconnects mid-DFU",
+    "title": "DFU Flow: Device disconnected before tapping Continue on Software Update page \u2014 earbud placed in charging case",
     "steps": [
-      "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
-      "2. Navigate to the Software Update page.",
-      "3. Ensure a paired headset is connected and has a firmware update available.",
-      "4. Tap the 'Update' or 'Start DFU' button to begin the firmware update.",
-      "5. While the DFU is in progress, disconnect the headset (e.g., turn off Bluetooth, move out of range, or manually disconnect via system settings).",
-      "6. Observe the screen behavior and any messages displayed."
+      "Open Poly Studio Mobile app",
+      "Tap on a connected earbud device (e.g., Poly Voyager Free 20)",
+      "Navigate to Settings \u2192 Software Update",
+      "Verify the Software Update page is displayed with device info and 'Continue' button",
+      "Place both earbuds into the charging case and close the lid",
+      "Wait 5 seconds for the device to disconnect",
+      "Tap the 'Continue' button on the Software Update page",
+      "Observe the app response"
     ],
-    "expected": "An error message is displayed on the Software Update page indicating that the headset has disconnected and the update has failed or paused. The user is NOT navigated away from the Software Update page to the 'Three Easy Steps' page or any other onboarding screen."
+    "expected": "The app MUST NOT proceed to the 'Three Easy Steps' page. Instead, the app should display an appropriate error message such as 'Device disconnected' or 'Connection lost' and block the DFU flow. The user should remain on the Software Update page or be returned to the device list."
   },
   {
-    "title": "TC-DFU-003: Verify user is NOT redirected to Three Easy Steps page on headset disconnection during DFU",
+    "title": "DFU Flow: Device disconnected before tapping Continue on Software Update page \u2014 Bluetooth turned off on phone",
     "steps": [
-      "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
-      "2. Navigate to the Software Update page.",
-      "3. Ensure a paired headset is connected and has a firmware update available.",
-      "4. Tap the 'Update' or 'Start DFU' button to begin the firmware update.",
-      "5. While the DFU is in progress, disconnect the headset (e.g., turn off Bluetooth, move out of range, or manually disconnect via system settings).",
-      "6. Check the current screen/page displayed in the application."
+      "Open Poly Studio Mobile app",
+      "Tap on a connected device (e.g., Poly Sync 40)",
+      "Navigate to Settings \u2192 Software Update",
+      "Verify the Software Update page is displayed with device info and 'Continue' button",
+      "Open phone Settings \u2192 Bluetooth \u2192 Toggle Bluetooth OFF",
+      "Return to Poly Studio Mobile app",
+      "Wait 3 seconds",
+      "Tap the 'Continue' button on the Software Update page",
+      "Observe the app response"
     ],
-    "expected": "The application remains on the Software Update page. The 'Three Easy Steps' page is NOT displayed. The user sees an appropriate error or reconnection prompt on the Software Update page."
+    "expected": "The app MUST NOT proceed to the 'Three Easy Steps' page. Instead, the app should display an appropriate error message such as 'Device disconnected' or 'Bluetooth turned off' and block the DFU flow. The user should remain on the Software Update page or be returned to the device list."
   },
   {
-    "title": "TC-DFU-004: Verify error message content and retry option on headset disconnection during DFU",
+    "title": "DFU Flow: Device disconnected before tapping Continue \u2014 then reconnected before tapping Continue",
     "steps": [
-      "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
-      "2. Navigate to the Software Update page.",
-      "3. Ensure a paired headset is connected and has a firmware update available.",
-      "4. Tap the 'Update' or 'Start DFU' button to begin the firmware update.",
-      "5. While the DFU is in progress, disconnect the headset (e.g., turn off Bluetooth, move out of range, or manually disconnect via system settings).",
-      "6. Observe the error message text and available UI elements.",
-      "7. Reconnect the headset and check if a 'Retry' or 'Resume' option is available.",
-      "8. Tap the 'Retry' or 'Resume' button if present."
+      "Open Poly Studio Mobile app",
+      "Tap on a connected headset device (e.g., Poly Voyager 5200)",
+      "Navigate to Settings \u2192 Software Update",
+      "Verify the Software Update page is displayed with device info and 'Continue' button",
+      "Press and hold the Call button on the headset for 5 seconds to power off the device",
+      "Wait 3 seconds",
+      "Power on the headset by pressing and holding the Call button for 3 seconds",
+      "Wait for the device to reconnect (verify Bluetooth icon in app shows connected state)",
+      "Tap the 'Continue' button on the Software Update page",
+      "Observe the app response"
     ],
-    "expected": "A clear error message is displayed (e.g., 'Headset disconnected. Update failed.' or 'Connection lost. Please reconnect your headset.'). A 'Retry' or 'Resume' button is available after reconnection. Tapping it restarts or resumes the DFU process on the Software Update page."
+    "expected": "After reconnection, tapping 'Continue' should proceed normally to the 'Three Easy Steps' page, as the device is now connected. The app should correctly detect the reconnected state and allow the DFU flow to continue."
   },
   {
-    "title": "TC-DFU-005: Verify DFU error handling when headset disconnects at different stages of the update",
+    "title": "DFU Flow: Device disconnected during Software Update page \u2014 app backgrounded and restored",
     "steps": [
-      "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
-      "2. Navigate to the Software Update page.",
-      "3. Ensure a paired headset is connected and has a firmware update available.",
-      "4. Tap the 'Update' or 'Start DFU' button to begin the firmware update.",
-      "5. Disconnect the headset at the beginning of the DFU process (0-10% progress).",
-      "6. Observe the error handling behavior.",
-      "7. Reconnect the headset and restart the DFU process.",
-      "8. Disconnect the headset in the middle of the DFU process (40-60% progress).",
-      "9. Observe the error handling behavior.",
-      "10. Reconnect the headset and restart the DFU process.",
-      "11. Disconnect the headset near the end of the DFU process (80-99% progress).",
-      "12. Observe the error handling behavior."
+      "Open Poly Studio Mobile app",
+      "Tap on a connected device (e.g., Poly Voyager 5200)",
+      "Navigate to Settings \u2192 Software Update",
+      "Verify the Software Update page is displayed with device info and 'Continue' button",
+      "Press the Home button to background the app",
+      "While app is backgrounded, press and hold the Call button on the headset for 5 seconds to power off the device",
+      "Wait 5 seconds",
+      "Reopen Poly Studio Mobile app from the app switcher",
+      "Verify the current screen shown",
+      "Tap the 'Continue' button on the Software Update page",
+      "Observe the app response"
     ],
-    "expected": "At all stages of the DFU process (beginning, middle, near end), the application displays an appropriate error message on the Software Update page. The user is never redirected to the 'Three Easy Steps' page. The error handling is consistent regardless of when the disconnection occurs."
+    "expected": "When the app is restored, it should detect the disconnected state. The 'Continue' button should either be disabled or tapping it should show an error message. The app MUST NOT proceed to the 'Three Easy Steps' page."
   },
   {
-    "title": "TC-DFU-006: Verify DFU flow with headset reconnection after disconnection error",
+    "title": "DFU Flow: Device disconnected during Software Update page \u2014 app force-killed and relaunched",
     "steps": [
-      "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
-      "2. Navigate to the Software Update page.",
-      "3. Ensure a paired headset is connected and has a firmware update available.",
-      "4. Tap the 'Update' or 'Start DFU' button to begin the firmware update.",
-      "5. While the DFU is in progress, disconnect the headset.",
-      "6. Verify the error message is displayed on the Software Update page.",
-      "7. Reconnect the headset (e.g., turn Bluetooth back on, bring headset back in range).",
-      "8. Wait for the application to detect the reconnection.",
-      "9. Observe the UI state on the Software Update page."
+      "Open Poly Studio Mobile app",
+      "Tap on a connected device (e.g., Poly Voyager 5200)",
+      "Navigate to Settings \u2192 Software Update",
+      "Verify the Software Update page is displayed with device info and 'Continue' button",
+      "Press and hold the Call button on the headset for 5 seconds to power off the device",
+      "Wait 3 seconds",
+      "Force-kill the Poly Studio Mobile app (swipe away from recent apps)",
+      "Reopen Poly Studio Mobile app",
+      "Observe the initial screen shown after relaunch",
+      "If the device is still shown in the device list, tap on it and navigate to Settings \u2192 Software Update",
+      "Observe the Software Update page behavior"
     ],
-    "expected": "After reconnection, the application detects the headset and updates the UI accordingly. The user sees a 'Retry' or 'Resume' option on the Software Update page. The user is NOT navigated to the 'Three Easy Steps' page or any onboarding screen."
+    "expected": "After force-kill and relaunch, the app should show the device list. If the device is disconnected, it should show as 'Not Connected' or similar. Navigating to Software Update should either be blocked or show a 'Device not connected' message. The 'Three Easy Steps' page must NOT be shown for a disconnected device."
   },
   {
-    "title": "TC-DFU-007: Verify DFU error when headset battery dies during update",
+    "title": "DFU Flow: Verify 'Three Easy Steps' page is never shown for disconnected device \u2014 multiple disconnection methods",
     "steps": [
-      "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
-      "2. Navigate to the Software Update page.",
-      "3. Ensure a paired headset is connected and has a firmware update available.",
-      "4. Tap the 'Update' or 'Start DFU' button to begin the firmware update.",
-      "5. Simulate the headset battery dying (e.g., let battery drain to 0% or simulate low battery shutdown).",
-      "6. Observe the screen behavior and any messages displayed."
+      "Open Poly Studio Mobile app",
+      "Tap on a connected device",
+      "Navigate to Settings \u2192 Software Update",
+      "Verify the Software Update page is displayed",
+      "Disconnect the device using one of the following methods: a) Power off the device, b) Place earbuds in charging case, c) Turn off phone Bluetooth, d) Move device out of Bluetooth range (>30 meters)",
+      "Wait 5 seconds",
+      "Tap the 'Continue' button",
+      "Verify the app does NOT navigate to the 'Three Easy Steps' page",
+      "If the app shows an error, dismiss it",
+      "Reconnect the device",
+      "Navigate back to Settings \u2192 Software Update",
+      "Repeat steps 4-8 for each disconnection method (a, b, c, d) listed in step 5"
     ],
-    "expected": "An error message is displayed on the Software Update page indicating that the headset has disconnected due to low battery or power loss. The user is NOT navigated to the 'Three Easy Steps' page. The user remains on the Software Update page with an appropriate error message."
-  },
-  {
-    "title": "TC-DFU-008: Verify DFU error when Bluetooth is turned off during update",
-    "steps": [
-      "1. Launch the application and complete onboarding (EULA, splash screen, location permissions).",
-      "2. Navigate to the Software Update page.",
-      "3. Ensure a paired headset is connected and has a firmware update available.",
-      "4. Tap the 'Update' or 'Start DFU' button to begin the firmware update.",
-      "5. While the DFU is in progress, turn off Bluetooth from the device's system settings.",
-      "6. Observe the screen behavior and any messages displayed.",
-      "7. Turn Bluetooth back on and wait for reconnection.",
-      "8. Observe the UI state on the Software Update page."
-    ],
-    "expected": "An error message is displayed on the Software Update page indicating that the connection was lost (e.g., 'Bluetooth turned off. Update failed.'). The user is NOT navigated to the 'Three Easy Steps' page. After Bluetooth is turned back on and the headset reconnects, a 'Retry' option appears on the Software Update page."
+    "expected": "For ALL disconnection methods, the app MUST NOT navigate to the 'Three Easy Steps' page. The app should consistently detect the disconnected state and block the DFU flow with an appropriate error message or disabled button."
   }
 ]
