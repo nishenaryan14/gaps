@@ -5,15 +5,15 @@
   "project": "411453",
   "title": "Onboarding - Translations",
   "feature": "App Settings",
-  "scenario": "Onboarding flow displays properly translated text for all supported languages in Poly Studio Mobile app",
+  "scenario": "Onboarding flow text is not properly translated or displayed for supported languages in Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app on a fresh install (or clear app data).",
+    "1. Open Poly Studio Mobile app on a fresh install (or clear app data).",
     "2. Observe the Onboarding flow screens (Welcome, Permissions, Device Setup, etc.).",
-    "3. Change the device system language to each supported language (e.g., English, French, German, Spanish, Italian, Japanese, Korean, Simplified Chinese, etc.).",
-    "4. Re-launch the Poly Studio Mobile app.",
-    "5. For each language, verify that all text elements on every Onboarding screen are displayed in the correct translated language (no untranslated English strings, no truncated or garbled text, no placeholder text)."
+    "3. For each supported language: change the device system language to the target language, then re-launch the app and go through the entire Onboarding flow.",
+    "4. Check all text elements on each Onboarding screen (titles, descriptions, buttons, tooltips, error messages, etc.).",
+    "5. Verify that no text is truncated, overlapping, misaligned, or showing untranslated placeholders (e.g., English strings, \"[untranslated]\", or raw resource IDs)."
   ],
-  "expected": "All Onboarding screens display properly translated text for each supported language, with no untranslated strings, truncation, or formatting issues.",
+  "expected": "All text in the Onboarding flow is fully translated, properly displayed, and fits within UI elements without truncation or overlap for every supported language.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,13 +21,14 @@
     "onboarding-flow",
     "localization",
     "language-support",
-    "translated-text",
-    "ui-verification",
-    "multi-language"
+    "text-truncation",
+    "ui-alignment",
+    "untranslated-strings",
+    "fresh-install"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "5c17a5d91b39d0cb74b85c2415ba8cf183ef13799f42fa48e8e314ae90b6db96",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.944007Z",
+  "processed_at": "2026-04-25T08:21:31.019282Z",
   "status": "active"
 }
