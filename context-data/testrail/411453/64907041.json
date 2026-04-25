@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "App Settings - General - About - UI",
-  "feature": "App Settings - General - About",
-  "scenario": "Verify the About tab is displayed under App Settings > General.",
+  "feature": "App Settings",
+  "scenario": "'About' tab is present under General in App Settings as per Figma design",
   "steps": [
-    "Start the app",
-    "Tap the hamburger icon",
-    "Tap General",
-    "Check for the About tab"
+    "Open the Poly Studio Mobile app.",
+    "Tap the Account icon or navigate to the Home screen.",
+    "Tap the Settings gear icon or navigate to App Settings.",
+    "Scroll down to the General section.",
+    "Verify that the 'About' tab is present under General.",
+    "Compare the appearance and placement of the 'About' tab against the Figma design specification."
   ],
-  "expected": "The About tab is displayed as per Figma design.",
+  "expected": "The 'About' tab is present under General in App Settings, matching the Figma design in terms of placement, label, and styling.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "About tab",
-    "App Settings",
-    "General",
-    "Hamburger icon",
-    "Settings navigation",
-    "Tab verification",
-    "Mobile app testing"
+    "poly-studio-mobile",
+    "app-settings",
+    "general-section",
+    "about-tab",
+    "figma-design",
+    "ui-verification",
+    "settings-screen"
   ],
   "source_last_updated": "1759416397",
   "source_hash": "89e782a1fa8e5b85294bc1603c23400c9e298f98f4d1d9dc56b94a538d1dcc8c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.131215Z",
+  "processed_at": "2026-04-25T05:37:16.751645Z",
   "status": "active"
 }
