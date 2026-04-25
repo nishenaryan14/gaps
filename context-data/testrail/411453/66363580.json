@@ -5,35 +5,29 @@
   "project": "411453",
   "title": "Home Screen - Update Available - Both earbuds are connected",
   "feature": "Firmware Updates",
-  "scenario": "Home screen Status Box correctly displays battery levels, green connected indicator, current software version with red indicator, and available update version when both earbuds are connected and firmware update is available; tapping Status Box hides Software and Available fields",
+  "scenario": "Home Screen hides Software and Available update fields after tapping Status Box when update is available on Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Ensure both earbuds are connected to the app (Left and Right).",
-    "3. Confirm that a firmware update is available for the connected device.",
-    "4. Observe the Home screen Status Box.",
-    "5. Verify the battery levels for Left, Right, and Case are displayed in the Status Box.",
-    "6. Verify a green \"connected\" status indicator is shown in the Status Box.",
-    "7. Verify the current software version is displayed with a red indicator in the Status Box.",
-    "8. Verify the available update version is displayed in the Status Box.",
-    "9. Tap the Status Box.",
-    "10. Observe the Status Box after tapping."
+    "1. Ensure both earbuds are powered on and paired/connected to the phone.",
+    "2. Open the Poly Studio Mobile app.",
+    "3. Observe the Home screen Status Box.",
+    "4. Tap on the Status Box."
   ],
-  "expected": "The Home screen Status Box displays battery levels for Left, Right, and Case, a green \"connected\" status indicator, the current software version with a red indicator, and the available update version. After tapping the Status Box, the Software and Available fields are hidden.",
+  "expected": "Step 3: Status Box shows \"Left\", \"Right\", and \"Case\" battery levels, a \"Status\" field with \"connected\" status and green indicator, a \"Software\" field showing current version with red indicator, and an \"Available\" field showing the available update version. The device image shows left and right earbuds. Step 4: \"Software\" and \"Available\" fields are no longer visible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
+    "home-screen",
     "status-box",
-    "battery-levels",
+    "software-update",
+    "available-update",
     "firmware-update",
-    "connected-indicator",
-    "software-version",
-    "available-update-version",
-    "home-screen"
+    "ui-hide-fields",
+    "earbuds"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "fa494266b8f3136e2bb8c09a90f96c57e06282d2f084542fa2d84c86270526d7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.086239Z",
+  "processed_at": "2026-04-25T09:32:26.347042Z",
   "status": "active"
 }
