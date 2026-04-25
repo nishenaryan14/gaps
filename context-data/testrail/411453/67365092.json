@@ -5,28 +5,33 @@
   "project": "411453",
   "title": "Device Settings - All settings can be changed",
   "feature": "Device Settings",
-  "scenario": "Verify that all non-toggle device settings options can be changed via picker and updates are reflected correctly on the Device Settings screen.",
+  "scenario": "All non-toggle settings in Device Settings can be changed and display correctly after value selection",
   "steps": [
-    "Pair the headset and launch the app, go to Device Settings, tap on any non-toggle option.",
-    "Select any value.",
-    "Repeat for every available option for that device."
+    "1. Pair the headset with the phone and launch the Poly Studio Mobile app.",
+    "2. From the Home screen, tap the connected [Device Name] to open Device Settings.",
+    "3. Tap any non-toggle option (e.g., Language, Sidetone, or similar picker-based setting).",
+    "4. Verify that a picker dialog displays listing all available values for that option.",
+    "5. Select any value from the picker.",
+    "6. Confirm that the picker closes and the selected option updates to show the new value on the Device Settings screen.",
+    "7. Repeat steps 3\u20136 for every non-toggle option available for that device.",
+    "8. After changing all options, verify that all updated values display correctly on the Device Settings screen."
   ],
-  "expected": "1. Picker is displayed with list of all available values for that option. 2. Picker is closed and option on Device Settings screen is updated with new value. 3. Changes for all options are properly displayed on Device Settings screen.",
+  "expected": "All non-toggle settings can be changed via a picker. The picker displays all available values, closes upon selection, and the Device Settings screen correctly reflects each new value.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Device Settings",
-    "non-toggle options",
-    "picker",
-    "value selection",
-    "settings update",
-    "headset pairing",
-    "settings verification",
-    "option change"
+    "device-settings",
+    "poly-studio-mobile",
+    "picker-dialog",
+    "value-selection",
+    "sidetone",
+    "language-setting",
+    "settings-persistence",
+    "ui-update"
   ],
   "source_last_updated": "1763549465",
   "source_hash": "ee74d23177e7a7ccb717e31fe60c88ac8327cbd8b3e898bba062b3f3da394cfb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.213672Z",
+  "processed_at": "2026-04-25T05:37:16.800387Z",
   "status": "active"
 }
