@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - No device connected - Closing Supported devices list",
   "feature": "Device Management",
-  "scenario": "Navigating from Home screen \"Supported Devices\" link to device list and back via back arrow returns user to Home screen",
+  "scenario": "Home screen \"Supported Devices\" link navigates to device list and back arrow returns to Home screen",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
     "2. Observe the Home screen with no device connected.",
     "3. Tap the 'Supported Devices' link displayed on the Home screen.",
-    "4. Observe the list of supported devices with images.",
-    "5. Tap the 'Other devices' button.",
-    "6. Verify it links to Poly support.",
-    "7. Navigate back using the back arrow ('<') button."
+    "4. Observe the list of supported devices with images and an 'Other devices' button.",
+    "5. Tap the back arrow ('<') to return to the previous screen."
   ],
-  "expected": "Tapping the 'Supported Devices' link displays a list of supported devices with images and an 'Other devices' button linking to Poly support. Tapping the back arrow ('<') returns the user to the Home screen.",
+  "expected": "The user is returned to the Home screen after tapping the back arrow.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "supported-devices",
     "home-screen",
+    "supported-devices",
     "device-list",
     "back-arrow",
     "navigation",
-    "other-devices",
-    "poly-support"
+    "other-devices"
   ],
   "source_last_updated": "1762436335",
   "source_hash": "b9c8be2ecc217c37cd7afb9958b79123249fbbb82a0b9e5befd1ffe2b4567564",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.793843Z",
+  "processed_at": "2026-04-25T08:21:30.913901Z",
   "status": "active"
 }
