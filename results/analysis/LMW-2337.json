@@ -19,151 +19,232 @@
   ],
   "coverage_status": "partial",
   "gaps": [
-    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Post-deletion state persistence not tested: No existing test verifies that after deleting Device B, the remaining Device A's settings screen can be opened and retains its correct name, connection status, and all previously configured settings (ANC, Transparency, EQ, Volume). The bug involves a UI corruption on the remaining device \u2014 this requires testing screen navigation to Device A's settings AFTER Device B is deleted.",
-    "\ud83e\udde0 STATE TRIGGER \u2014 Deletion timing vs. device power state not tested: The bug triggers when Device B is powered OFF before deletion. No existing test covers the sequence: power off a device \u2192 navigate to its settings \u2192 delete it \u2192 then verify the OTHER device's state. This is a specific state trigger (deleting a disconnected device's entry) that existing tests don't model.",
-    "\ud83e\udde0 DEVICE ASYMMETRY \u2014 No test covers asymmetric device behavior: The bug involves two devices where one is powered off and the other is on. Existing test 65868094 only verifies the device list removes the deleted device and preserves state of remaining devices \u2014 but does NOT verify that the remaining device's settings page can be opened or that its name/connection status renders correctly. This is a deeper UI rendering gap.",
-    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 No app lifecycle recovery test after deletion: Missing test for: delete a device \u2192 navigate to remaining device's settings \u2192 background the app \u2192 foreground \u2192 verify settings still render correctly. Also missing: delete a device \u2192 kill app \u2192 relaunch \u2192 verify remaining device shows correct name/status and settings are accessible.",
-    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 No Bluetooth reconnect test after deletion: Missing test for: delete Device B \u2192 reconnect Device B (it was only powered off, not unpaired from phone) \u2192 verify the app correctly re-adds it or handles the re-pairing without corrupting Device A's state.",
-    "\ud83e\udde0 EDGE CASE \u2014 Rapid deletion sequence not tested: Missing test for: pair 3+ devices \u2192 delete one \u2192 immediately tap another device's settings \u2192 verify no UI corruption. The bug pattern suggests a race condition or stale state reference that could be triggered by rapid navigation after deletion."
+    "\ud83e\udde0 LIFECYCLE DIMENSIONS \u2014 Persistence of remaining device state after deletion: No test verifies that after deleting Device A, the remaining Device B retains its correct device name and connection status across app lifecycle events (screen exit/reopen, app background/foreground, app kill/relaunch). The bug involves incorrect name/status for the remaining device \u2014 this could be a stale cache issue that only manifests after certain lifecycle transitions.",
+    "\ud83e\udde0 STATE TRIGGERS \u2014 Timing of state save on deletion: The bug involves the remaining device showing incorrect name/status. No test validates exactly WHEN the app syncs/refreshes the remaining device's state after a deletion operation. Is the state refreshed immediately upon deletion, or only on next screen load? The existing test 65868094 only checks that the device list 'correctly updates' but doesn't specify the mechanism or timing of that update.",
+    "\ud83e\udde0 DEVICE ASYMMETRY \u2014 No test covers the scenario where the DELETED device was disconnected (turned off) at the time of deletion vs. connected. The bug steps specify turning off Device A before deleting it. This matters because the app may handle deletion differently when the device is offline vs. online \u2014 e.g., cached name data may be stale for an offline device and could corrupt the remaining device's display.",
+    "\ud83e\udde0 CONNECTION STATUS CORRUPTION \u2014 No test validates that the remaining device's connection status indicator (green/red) remains accurate after the other device is deleted. The bug explicitly mentions 'incorrect connection status' for the remaining device. Existing tests check connection status indicators (65871626) but not in the context of a sibling device being deleted.",
+    "\ud83e\udde0 SETTINGS ACCESS BLOCKED \u2014 The bug states deletion blocks access to settings for the remaining device. No existing test verifies that after deleting one of multiple paired devices, the remaining device's settings screen remains accessible and functional. This is a critical functional gap.",
+    "\ud83e\udde0 MULTI-DEVICE LIST CORRUPTION \u2014 No test validates the device list pagination/dots (from 65868078) specifically after a deletion operation. If the navigation dots or swipe behavior is corrupted by removing a device from a multi-device list, the remaining device could show wrong name/status due to index mismatch."
   ],
   "generated_testcases": [
     {
-      "title": "TC-DEL-001: Verify remaining device settings page opens correctly after deleting a powered-off paired device",
+      "title": "LIFECYCLE: Remaining device name persists after deletion across app exit/reopen",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Pair Device A (e.g., Poly Sync 20) and Device B (e.g., Poly Voyager 5200) to the phone.",
-        "Ensure Device A is powered ON and connected.",
-        "Power OFF Device B.",
-        "Navigate to Device Settings \u2192 tap Device B's entry.",
-        "Tap 'Delete Device' or 'Forget' to remove Device B from the paired list.",
-        "Confirm deletion when prompted.",
-        "Observe the device list \u2014 verify Device A is still listed.",
-        "Tap on Device A's entry to open its settings screen.",
-        "Verify Device A's name is displayed correctly (not showing Device B's name or garbled text).",
-        "Verify Device A's connection status shows 'Connected'.",
-        "Verify Device A's Audio Settings page is accessible and all settings (ANC, Transparency Mode, EQ, Volume) are displayed and interactive."
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A (physically power off).",
+        "Delete Device A from the app (Settings \u2192 Remove Device \u2192 Confirm).",
+        "Verify Device B is now the only device shown.",
+        "Note Device B's displayed name (e.g., 'Sync 20').",
+        "Tap Back to exit Device List screen.",
+        "Reopen Device List screen.",
+        "Verify Device B's name still matches the noted name."
       ],
-      "expected": "After deleting powered-off Device B, Device A remains in the list with its correct name and 'Connected' status. Tapping Device A opens its full settings page with all audio settings (ANC, Transparency, EQ, Volume) accessible and functional \u2014 no UI corruption, blank screens, or incorrect device name displayed."
+      "expected": "Expected: Device B name remains 'Sync 20' (or whatever was noted). Actual (If Bug): Device B name incorrectly shows 'Voyager 5200' or a blank/garbled name due to stale cache not refreshed on screen re-entry."
     },
     {
-      "title": "TC-DEL-002: Verify remaining device settings survive app background/foreground after deletion of a powered-off device",
+      "title": "LIFECYCLE: Remaining device name persists after deletion across app background/foreground",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Pair Device A and Device B to the phone.",
-        "Ensure Device A is powered ON and connected.",
-        "Power OFF Device B.",
-        "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
-        "Tap Device A to open its settings screen.",
-        "Verify Device A's name, connection status, and settings are correct.",
-        "Press the Home button to background the app.",
-        "Wait 10 seconds, then reopen Poly Studio Mobile from the app switcher.",
-        "Verify the app still shows Device A's settings screen (or navigates back to it).",
-        "Verify Device A's name is still correct and connection status shows 'Connected'.",
-        "Verify ANC, Transparency, EQ, and Volume sliders are still functional and show expected values."
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "Verify Device B is the only device shown. Note its name.",
+        "Press Home button to background the app.",
+        "Wait 10 seconds.",
+        "Reopen app from recent apps.",
+        "Verify Device B's name still matches the noted name."
       ],
-      "expected": "After backgrounding and foregrounding the app post-deletion, Device A's settings screen remains intact with correct name, 'Connected' status, and all audio settings functional \u2014 no UI corruption or data loss."
+      "expected": "Expected: Device B name remains correct after app background/foreground. Actual (If Bug): Device B name shows stale/corrupted data from Device A's cache entry."
     },
     {
-      "title": "TC-DEL-003: Verify remaining device settings survive app force-kill and relaunch after deletion of a powered-off device",
+      "title": "LIFECYCLE: Remaining device name persists after deletion across app kill/relaunch",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Pair Device A and Device B to the phone.",
-        "Configure Device A with specific settings: ANC level 70, Transparency Mode set to Speech with Free level 40, EQ set to Bass Boost, Volume at 60.",
-        "Ensure Device A is powered ON and connected.",
-        "Power OFF Device B.",
-        "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
-        "Tap Device A to open its settings screen.",
-        "Verify Device A's name, connection status, and configured settings are displayed correctly.",
-        "Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
-        "Reopen Poly Studio Mobile app.",
-        "Verify the app shows Device A in the device list with correct name and 'Connected' status.",
-        "Tap Device A to open its settings.",
-        "Verify ANC level is still 70.",
-        "Verify Transparency Mode is still set to Speech with Free level 40.",
-        "Verify EQ is still set to Bass Boost.",
-        "Verify Volume is still 60."
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "Verify Device B is the only device shown. Note its name.",
+        "Force-kill the app (swipe from recent apps).",
+        "Relaunch the app.",
+        "Navigate to: Device List.",
+        "Verify Device B's name still matches the noted name."
       ],
-      "expected": "After force-kill and relaunch, Device A retains its correct name, 'Connected' status, and all previously configured settings (ANC 70, Transparency Speech/Free 40, EQ Bass Boost, Volume 60) \u2014 no data loss or UI corruption from the deletion of Device B."
+      "expected": "Expected: Device B name remains correct after full app kill/relaunch. Actual (If Bug): Device B name defaults to generic name or shows Device A's name due to persistent cache corruption."
     },
     {
-      "title": "TC-DEL-004: Verify Bluetooth disconnect/reconnect cycle after deleting a powered-off device does not corrupt remaining device",
+      "title": "STATE TRIGGER: Immediate state sync after deletion \u2014 verify remaining device name without navigating away",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Pair Device A and Device B to the phone.",
-        "Ensure Device A is powered ON and connected.",
-        "Power OFF Device B.",
-        "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
-        "Tap Device A to open its settings \u2014 verify correct name, status, and settings.",
-        "Power ON Device B (it was only powered off, not unpaired from phone Bluetooth).",
-        "Wait for Device B to reconnect to the phone.",
-        "Observe the Poly Studio Mobile app \u2014 verify how Device B is handled (re-added to list or shown as available for pairing).",
-        "Tap Device A's entry in the device list.",
-        "Verify Device A's name is still correct and connection status shows 'Connected'.",
-        "Verify ANC, Transparency, EQ, and Volume settings are still accessible and functional."
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "IMMEDIATELY (without any navigation) observe Device B's name and connection status on the device list screen.",
+        "Note the displayed name and connection indicator color."
       ],
-      "expected": "When Device B is powered back on after deletion, the app handles the reconnection gracefully without corrupting Device A's state. Device A retains correct name, 'Connected' status, and all audio settings remain accessible and functional."
+      "expected": "Expected: Device B immediately shows correct name 'Sync 20' and correct connection status (green if connected, red if disconnected). Actual (If Bug): Device B shows Device A's name or incorrect connection status due to delayed/lazy cache refresh."
     },
     {
-      "title": "TC-DEL-005: Verify rapid deletion of one device followed by immediate navigation to another device's settings causes no UI corruption",
+      "title": "STATE TRIGGER: Immediate state sync after deletion \u2014 kill app before navigating away",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Pair three devices: Device A (Poly Sync 20), Device B (Poly Voyager 5200), Device C (Poly Studio P15) to the phone.",
-        "Ensure Device A is powered ON and connected.",
-        "Power OFF Device B.",
-        "Power OFF Device C.",
-        "Navigate to Device Settings.",
-        "Tap Device B \u2192 Delete Device \u2192 confirm deletion.",
-        "Immediately (within 1 second) tap Device A's entry to open its settings.",
-        "Verify Device A's name is displayed correctly.",
-        "Verify Device A's connection status shows 'Connected'.",
-        "Verify the Audio Settings page loads fully with ANC, Transparency, EQ, and Volume controls visible and interactive.",
-        "Navigate back to the device list.",
-        "Verify Device B is removed from the list.",
-        "Verify Device C is still listed (if it was previously paired).",
-        "Tap Device C's entry \u2014 verify its settings page opens correctly without corruption."
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "IMMEDIATELY (within 1 second, before any UI transition completes) force-kill the app.",
+        "Relaunch the app.",
+        "Navigate to: Device List.",
+        "Verify Device B's name and connection status."
       ],
-      "expected": "Rapid navigation to Device A's settings immediately after deleting Device B does not cause UI corruption. Device A shows correct name, 'Connected' status, and all audio settings load fully. Device B is removed from the list. Device C remains listed and its settings are accessible without corruption."
+      "expected": "Expected: Device B shows correct name 'Sync 20' and correct connection status. Actual (If Bug): Device B shows Device A's name or incorrect status, indicating the deletion state was not persisted before app termination."
     },
     {
-      "title": "TC-DEL-006: Verify sub-setting values (Transparency Environment/Speech) persist on remaining device after deleting a powered-off device",
+      "title": "DEVICE ASYMMETRY: Delete connected Device A while Device B is disconnected (offline)",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Pair Device A and Device B to the phone.",
-        "Ensure Device A is powered ON and connected.",
-        "Navigate to Device A \u2192 Audio Settings \u2192 Transparency Mode.",
-        "Set Transparency Mode to 'Environment' and set Surround level to 85.",
-        "Switch to 'Speech' sub-tab and set Free level to 60.",
-        "Navigate back to the device list.",
-        "Power OFF Device B.",
-        "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
-        "Tap Device A to open its settings.",
-        "Navigate to Audio Settings \u2192 Transparency Mode.",
-        "Verify the active mode is still 'Environment' with Surround level at 85.",
-        "Switch to the 'Speech' sub-tab.",
-        "Verify Free level is still 60.",
-        "Switch back to 'Environment' sub-tab \u2014 verify Surround level is still 85."
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app. Both connected.",
+        "Navigate to: Device List \u2192 Swipe to Device B.",
+        "Turn OFF Device B (physically power off).",
+        "Swipe to Device A (still connected).",
+        "Delete Device A (Settings \u2192 Remove Device \u2192 Confirm).",
+        "Verify Device B is now the only device shown.",
+        "Verify Device B's name is 'Sync 20' (not blank/garbled).",
+        "Verify Device B's connection status shows disconnected (red/grey indicator).",
+        "Tap on Device B to access settings."
       ],
-      "expected": "After deleting Device B, Device A's Transparency Mode sub-settings persist correctly: Environment mode with Surround level 85 and Speech mode with Free level 60. Switching between sub-tabs does not reset or corrupt values."
+      "expected": "Expected: Device B shows correct name 'Sync 20' and disconnected status. Settings screen for Device B opens and is functional. Actual (If Bug): Device B shows Device A's name or garbled text, connection status shows connected (green) incorrectly, or tapping Device B fails to open settings."
     },
     {
-      "title": "TC-DEL-007: Verify deleting a powered-off device while remaining device is in a call does not corrupt UI",
+      "title": "DEVICE ASYMMETRY: Delete disconnected (offline) Device A while Device B is connected",
       "steps": [
-        "Open Poly Studio Mobile app.",
-        "Pair Device A and Device B to the phone.",
-        "Ensure Device A is powered ON and connected.",
-        "Place a call using Device A (or receive an incoming call on Device A).",
-        "While the call is active on Device A, power OFF Device B.",
-        "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
-        "While still on the call, tap Device A's entry to open its settings.",
-        "Verify Device A's name is displayed correctly.",
-        "Verify Device A's connection status shows 'In Call' or 'Connected' as appropriate.",
-        "Verify the Audio Settings page loads with ANC, Transparency, EQ, and Volume controls visible.",
-        "End the call.",
-        "Verify Device A returns to 'Connected' status and settings remain accessible."
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app. Both connected.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A (physically power off).",
+        "While Device A is offline, delete Device A.",
+        "Verify Device B is now the only device shown.",
+        "Verify Device B's name is 'Sync 20'.",
+        "Verify Device B's connection status shows connected (green indicator).",
+        "Tap on Device B to access settings."
       ],
-      "expected": "Deleting a powered-off device while the remaining device is in an active call does not corrupt the UI. Device A shows correct name, appropriate call/connection status, and all audio settings remain accessible during and after the call."
+      "expected": "Expected: Device B shows correct name 'Sync 20' and connected status. Settings screen opens and is fully functional. Actual (If Bug): Device B shows incorrect name/status or settings access is blocked/blank."
+    },
+    {
+      "title": "CONNECTION STATUS: Remaining device connection indicator remains accurate after sibling deletion",
+      "steps": [
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app. Both connected.",
+        "Navigate to: Device List \u2192 Note Device B's connection indicator is green.",
+        "Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "Observe Device B's connection indicator.",
+        "Disconnect Device B (turn off Bluetooth on phone or power off Device B).",
+        "Reopen Device List.",
+        "Observe Device B's connection indicator again."
+      ],
+      "expected": "Expected: Device B's connection indicator shows green (connected) immediately after deletion, then changes to red/grey after disconnection. Actual (If Bug): Device B's indicator shows incorrect state (e.g., red when still connected, or stuck on green after disconnection) due to corruption from deletion operation."
+    },
+    {
+      "title": "SETTINGS ACCESS: Remaining device settings remain fully accessible after sibling deletion",
+      "steps": [
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "Verify Device B is the only device shown.",
+        "Tap on Device B to open its settings.",
+        "Verify all settings tabs are visible and tappable (Audio, Controls, etc.).",
+        "Navigate to: Audio Settings \u2192 Verify EQ sliders respond to touch.",
+        "Navigate to: Device Info \u2192 Verify firmware version is displayed.",
+        "Tap Back to return to Device List.",
+        "Reopen Device B settings again."
+      ],
+      "expected": "Expected: Device B settings screen opens fully, all tabs functional, EQ responds, firmware version shown. Settings remain accessible on subsequent opens. Actual (If Bug): Settings screen shows blank/loading state, or tapping Device B does nothing, or settings show Device A's configuration."
+    },
+    {
+      "title": "SETTINGS ACCESS: Remaining device settings after deletion + app restart",
+      "steps": [
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "Force-kill the app.",
+        "Relaunch the app.",
+        "Navigate to: Device List.",
+        "Tap on Device B.",
+        "Verify settings screen loads correctly.",
+        "Navigate to: Audio Settings \u2192 Transparency Mode.",
+        "Verify all Transparency sub-settings are functional."
+      ],
+      "expected": "Expected: Device B settings load correctly after app restart. Transparency Mode and all sub-settings functional. Actual (If Bug): Settings fail to load, show error, or display Device A's settings data due to stale cache."
+    },
+    {
+      "title": "MULTI-DEVICE LIST: Device list pagination/dots correct after deletion of one device",
+      "steps": [
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List.",
+        "Verify pagination dots show 2 devices (2 dots).",
+        "Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "Observe pagination dots immediately after deletion.",
+        "Swipe left/right on the device list.",
+        "Verify only Device B is shown and no empty/blank pages exist."
+      ],
+      "expected": "Expected: Pagination dots update to show 1 dot (or no dots for single device). Swiping does not reveal blank pages or Device A's ghost entry. Actual (If Bug): Pagination still shows 2 dots, or swiping reveals a blank page, or Device B appears on wrong index causing name/status mismatch."
+    },
+    {
+      "title": "MULTI-DEVICE LIST: Three-device list \u2014 delete middle device, verify remaining devices",
+      "steps": [
+        "Precondition: Pair Device A (Voyager 5200), Device B (Sync 20), and Device C (Poly Studio P5) to the app.",
+        "Navigate to: Device List.",
+        "Verify pagination shows 3 dots.",
+        "Swipe to Device B (middle device).",
+        "Turn OFF Device B.",
+        "Delete Device B.",
+        "Verify pagination now shows 2 dots.",
+        "Swipe to verify Device A and Device C are present and correctly named.",
+        "Verify Device A's connection status is correct.",
+        "Verify Device C's connection status is correct.",
+        "Tap on Device A \u2192 verify settings accessible.",
+        "Tap on Device C \u2192 verify settings accessible."
+      ],
+      "expected": "Expected: After deleting middle device B, pagination shows 2 dots. Device A and Device C retain correct names and connection statuses. Both devices' settings are accessible. Actual (If Bug): Pagination shows wrong count, device names are swapped, or one device shows incorrect connection status due to index corruption."
+    },
+    {
+      "title": "LIFECYCLE: Remaining device state after deletion + Bluetooth reconnect cycle",
+      "steps": [
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "Verify Device B is shown with correct name and connected status.",
+        "Disconnect Device B (turn off Bluetooth on phone).",
+        "Wait 5 seconds.",
+        "Reconnect Device B (turn Bluetooth back on).",
+        "Navigate to: Device List.",
+        "Verify Device B's name and connection status are correct.",
+        "Tap Device B \u2192 verify settings accessible."
+      ],
+      "expected": "Expected: Device B survives Bluetooth disconnect/reconnect cycle with correct name and status. Settings remain accessible. Actual (If Bug): Device B shows incorrect name/status after reconnect, or settings fail to load, indicating deletion corrupted Device B's state in persistent storage."
+    },
+    {
+      "title": "LIFECYCLE: Remaining device state after deletion + phone reboot",
+      "steps": [
+        "Precondition: Pair Device A (Voyager 5200) and Device B (Sync 20) to the app.",
+        "Navigate to: Device List \u2192 Swipe to Device A.",
+        "Turn OFF Device A.",
+        "Delete Device A.",
+        "Verify Device B is shown with correct name and connected status.",
+        "Reboot the phone.",
+        "Open the Poly Studio Mobile app.",
+        "Navigate to: Device List.",
+        "Verify Device B is the only device shown.",
+        "Verify Device B's name is correct.",
+        "Verify Device B's connection status is correct.",
+        "Tap Device B \u2192 verify settings accessible."
+      ],
+      "expected": "Expected: After phone reboot, Device B remains correctly displayed with proper name and connection status. Settings accessible. Actual (If Bug): Device A reappears in the list, Device B shows wrong name, or Device B is missing entirely due to cache corruption surviving reboot."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:09.771563Z"
+  "processed_at": "2026-04-25T09:45:57.231864Z"
 }
