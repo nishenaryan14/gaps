@@ -6,33 +6,22 @@
   "title": "CCL - Turn off/on the device",
   "feature": "App Settings",
   "scenario": "CCL (Customizable Controls Level) setting does not persist after power cycling the device",
-  "steps": [
-    "1. Open the Poly Studio Mobile app on your mobile device.",
-    "2. Ensure a CCL-supported Poly Bluetooth audio device is connected.",
-    "3. From the Home screen, tap on the connected [Device Name] to enter Device Settings.",
-    "4. Navigate to Device Settings \u2192 Advanced.",
-    "5. Set a Customizable Controls Level (CCL) value (e.g., Low, Medium, or High).",
-    "6. Power cycle the device: Press and hold the Power button to turn it off, then press and hold again to turn it back on.",
-    "7. Wait for the device to reconnect to the app.",
-    "8. From the Home screen, tap on the connected [Device Name] again.",
-    "9. Navigate to Device Settings \u2192 Advanced.",
-    "10. Observe the CCL setting displayed."
-  ],
-  "expected": "The app shows the previously selected CCL setting (the value set in step 5).",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "ccl",
     "customizable-controls-level",
-    "power-cycle",
-    "setting-persistence",
-    "poly-studio-mobile",
-    "device-settings",
-    "advanced-settings"
+    "power-cycling",
+    "settings-persistence",
+    "device-reboot",
+    "configuration-retention",
+    "non-volatile-memory"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "bdc6f6017a27c6f96920932db5be9ebeb43a4baaa1f3a930ab44cf2ba0bd81cd",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.009092Z",
+  "processed_at": "2026-04-25T09:32:26.263275Z",
   "status": "active"
 }
