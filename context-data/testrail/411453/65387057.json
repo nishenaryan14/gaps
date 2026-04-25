@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "User Guides - Onboarding > Fit test for a device that is not currently connected",
   "feature": "App Settings",
-  "scenario": "Fit Test page is displayed when accessing Onboarding for a non-connected device in User Guides > App Settings",
+  "scenario": "Fit Test page is accessible for a device that is not currently connected during onboarding user guides",
   "steps": [
     "Open Poly Studio Mobile app",
-    "Tap App Settings (gear icon)",
-    "Navigate to User Guides > Onboarding",
-    "Tap on a device that is NOT currently connected (e.g., Voyager Free 60 while a different device is connected)"
+    "Navigate to Home screen",
+    "Tap on a device that is NOT currently connected to the app",
+    "Observe the device details or settings page",
+    "Look for the Fit Test option or page",
+    "Tap on Fit Test"
   ],
-  "expected": "The Fit Test page should NOT be shown or should not be startable for a device that is not currently connected. The app should either skip the Fit Test step or display a message indicating the device is not connected.",
+  "expected": "The Fit Test page should NOT be accessible or should be grayed out/disabled for a device that is not actively connected to the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "onboarding",
-    "user-guides",
-    "app-settings",
+    "onboarding-user-guides",
     "poly-studio-mobile",
-    "voyager-free-60",
-    "non-connected-device",
-    "device-selection"
+    "device-not-connected",
+    "device-details-page",
+    "settings-page",
+    "home-screen"
   ],
   "source_last_updated": "1760532159",
   "source_hash": "a583eaf4f66a06cd3774cf44e24f905e260725fa51b143953df23e7ffcab94a8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.771026Z",
+  "processed_at": "2026-04-25T07:55:31.836660Z",
   "status": "active"
 }
