@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "Policy: Restore Defaults with Policy applied",
   "feature": "App Settings",
-  "scenario": "Restore Defaults in Settings > Reset Device does not unlock or change policy-locked settings on Poly Bluetooth audio devices",
+  "scenario": "Restore Defaults action does not unlock or revert policy-locked settings on Poly device",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Home screen and tap on the connected Poly device name to open Device Settings.",
-    "3. Apply a device policy that locks/enforces specific settings (e.g., ANC, Transparency Mode, Equalizer).",
-    "4. Go to Device Settings \u2192 Audio Settings and verify that the policy-affected settings are locked and display the policy-defined values.",
-    "5. Navigate to Device Settings \u2192 Reset Device.",
-    "6. Tap on \"Restore Defaults\" and confirm the action when prompted.",
-    "7. After the device resets and reconnects, navigate back to Device Settings \u2192 Audio Settings.",
-    "8. Check each setting that was previously locked/enforced by the policy."
+    "2. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
+    "3. Apply a device policy that locks specific settings (e.g., ANC, Transparency Mode, Equalizer, or Notifications).",
+    "4. Verify that the policy-locked settings are grayed out or otherwise indicated as locked in the app UI.",
+    "5. Go to Settings \u2192 Reset Device \u2192 Restore Defaults.",
+    "6. Tap \"Restore Defaults\" to confirm the action.",
+    "7. After the device resets and reconnects, navigate back to the policy-affected settings (e.g., Audio Settings \u2192 ANC, Transparency Mode, Equalizer, etc.)."
   ],
-  "expected": "All settings locked/enforced by the policy remain locked and retain their policy-defined values after \"Restore Defaults\" is performed. The \"Restore Defaults\" action does not unlock or change any policy-affected settings.",
+  "expected": "All settings locked by the policy remain locked and retain their policy-defined values. The \"Restore Defaults\" action does not unlock or change any policy-affected settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "restore-defaults",
-    "reset-device",
     "policy-locked-settings",
     "device-policy",
-    "poly-studio-mobile",
     "anc",
     "transparency-mode",
-    "equalizer"
+    "equalizer",
+    "poly-studio-mobile",
+    "reset-device"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "76951c27bc0808de79ffadd081caea6e584def39cb74fa15a2c668c10535bd06",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.948871Z",
+  "processed_at": "2026-04-25T07:55:31.978765Z",
   "status": "active"
 }
