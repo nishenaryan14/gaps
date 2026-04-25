@@ -8,29 +8,27 @@
   "scenario": "Suggestion feedback can be sent via App Settings > Feedback without providing name or email",
   "steps": [
     "Open the Poly Studio Mobile app.",
-    "Tap the menu icon (hamburger) or navigate to the Home screen.",
-    "Tap on App Settings (gear icon or settings option).",
-    "Scroll to and tap Feedback.",
-    "Tap on Suggestion.",
-    "Enter text in the feedback text field (leave Name and Email fields blank).",
-    "Tap Send."
+    "Tap the menu icon (hamburger) or profile icon to access App Settings.",
+    "Navigate to App Settings \u2192 Feedback.",
+    "Select 'Suggestion' as the feedback type.",
+    "Enter text in the feedback body field (leave Name and Email fields blank).",
+    "Tap the Send button."
   ],
-  "expected": "Feedback is sent successfully without requiring a name or email address.",
+  "expected": "The feedback is sent successfully without requiring the user's name or email.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "app-settings",
     "feedback",
-    "suggestion",
+    "suggestion-feedback",
     "name-field",
     "email-field",
-    "send-feedback",
-    "anonymous-feedback"
+    "send-button"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "0301a1538e0bd8d1927ac08ecfe27e6bc1aee7f3ee6373b5a5d09ab057c2dd32",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.959891Z",
+  "processed_at": "2026-04-25T09:32:26.191524Z",
   "status": "active"
 }
