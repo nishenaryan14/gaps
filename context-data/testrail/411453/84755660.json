@@ -8,8 +8,8 @@
   "scenario": "\"Something is wrong\" screen appears when navigating to Product Support in Lens app with Wi-Fi turned off",
   "steps": [
     "1. Turn off Wi-Fi on the device.",
-    "2. Open the Lens app.",
-    "3. Navigate to App Settings > Support > Product Support.",
+    "2. Open the Poly Lens app.",
+    "3. Navigate to App Settings \u2192 Support \u2192 Product Support.",
     "4. Observe the \"Something is wrong\" screen displayed.",
     "5. Tap the Cancel (X) button."
   ],
@@ -17,18 +17,17 @@
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "lens-app",
+    "poly-lens-app",
     "product-support",
-    "something-is-wrong-screen",
+    "something-is-wrong",
     "wifi-offline",
     "app-settings",
     "error-screen",
-    "cancel-button",
-    "poly-lens"
+    "cancel-button"
   ],
   "source_last_updated": "1773311911",
   "source_hash": "c7e173840fe96bb63edccf1668a4a6e9b4b317d7b18a46580bf7190a0dc6103a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.849472Z",
+  "processed_at": "2026-04-25T08:21:30.959891Z",
   "status": "active"
 }
