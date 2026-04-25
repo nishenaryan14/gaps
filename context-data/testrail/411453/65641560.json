@@ -5,31 +5,23 @@
   "project": "411453",
   "title": "ANC - 6.-ANC is OFF and Transparency is OFF, both without selected values",
   "feature": "ANC",
-  "scenario": "ANC and Transparency modes remain OFF and Transparency is greyed out during a call when both modes were previously disabled, with a popup indicating Transparency is unavailable during call",
-  "steps": [
-    "1. Open Poly Studio Mobile app on the Android device.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings.",
-    "3. Ensure ANC Mode is set to OFF (no value selected).",
-    "4. Ensure Transparency Mode is set to OFF (no value selected).",
-    "5. Start or join a call (e.g., Zoom, Teams, or Mobile call).",
-    "6. During the call, observe the ANC and Transparency controls in Audio Settings.",
-    "7. Tap the Transparency toggle."
-  ],
-  "expected": "During a call, when ANC is OFF and Transparency is OFF, Transparency should remain greyed out/inaccessible. Tapping the Transparency toggle should show a popup stating the option is unavailable during a call. After ending the call, both ANC and Transparency should remain OFF, and the user should be able to toggle between them normally.",
+  "scenario": "ANC and Transparency modes remain OFF during a call when both were disabled beforehand, with Transparency toggle showing unavailable popup, and both return to normal toggling after call ends",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "anc-off",
+    "anc",
     "transparency-mode",
-    "transparency-greyed-out",
-    "transparency-unavailable-during-call",
-    "poly-studio-mobile",
-    "audio-settings",
-    "call-management"
+    "call-management",
+    "mode-persistence",
+    "ui-popup",
+    "toggle-state",
+    "poly-bluetooth"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "6f555f1e25ce94bde093faebe620a2af3ec59798f723425396c0a97a18654fd9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.916453Z",
+  "processed_at": "2026-04-25T08:21:30.998328Z",
   "status": "active"
 }
