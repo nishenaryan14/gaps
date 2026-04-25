@@ -4,30 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - Zoom out the application to verify that it remains the same",
-  "feature": "Device Home Screen",
-  "scenario": "Verify that zooming out via app switcher and returning to full screen keeps the app on the same screen (home or settings) as before.",
+  "feature": "App Settings",
+  "scenario": "App home screen and Device Settings screen state is preserved after switching away via app switcher and returning to full screen",
   "steps": [
-    "Open the app with a connected device and open app switcher \u2014 preview should show the app on the home screen unchanged.",
-    "Tap the app for full screen \u2014 app is properly selected and remains on the same screen.",
-    "Open Device Settings via \"...\" button and open app switcher \u2014 preview should show the app on the settings screen unchanged.",
-    "Tap the app for full screen \u2014 app is properly selected and remains on the same screen."
+    "1. Open the Poly Studio Mobile app with a connected Poly Bluetooth audio device.",
+    "2. Ensure the app is on the Home screen.",
+    "3. Open the device app switcher (multitasking) and verify the preview shows the Home screen correctly.",
+    "4. Tap to return to full screen and verify the app is still on the Home screen with no changes.",
+    "5. Tap the \"...\" (More) button on the Home screen to open Device Settings.",
+    "6. Open the device app switcher (multitasking) and verify the preview shows the Device Settings screen correctly.",
+    "7. Tap to return to full screen and verify the app is still on the Device Settings screen with no changes."
   ],
-  "expected": "Zooming out the application (via app switcher) and returning to full screen keeps the app on the same screen as before.",
+  "expected": "The app remains on the same screen (Home or Device Settings) after switching away via the app switcher and returning to full screen. The preview in the app switcher correctly shows the current screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "app switcher",
-    "zoom out",
-    "full screen",
-    "home screen",
-    "settings screen",
-    "screen persistence",
-    "app preview",
-    "device settings"
+    "app-switcher",
+    "state-persistence",
+    "home-screen",
+    "device-settings",
+    "poly-studio-mobile",
+    "multitasking",
+    "screen-preservation"
   ],
   "source_last_updated": "1769425374",
   "source_hash": "8999eb834ab093ac34f03e78bd8337a2a5f08f2b04ac7c20eb698ae4661a3adb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.126143Z",
+  "processed_at": "2026-04-25T05:37:16.744595Z",
   "status": "active"
 }
