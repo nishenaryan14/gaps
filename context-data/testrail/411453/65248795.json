@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Find My Device - Sending Tone - back button",
   "feature": "App Settings",
-  "scenario": "Find My Device tone does not stop when tapping back arrow to return to App Settings page",
+  "scenario": "Find My Device tone continues playing after tapping back arrow instead of stopping and returning to App Settings",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Scroll to and tap on 'Find My Device'",
-    "Tap 'Play Tone' or equivalent to start playing a tone",
-    "While the tone is playing, tap the back arrow (\u2190) in the top left corner of the screen"
+    "Tap on the device name to open Device Settings",
+    "Select Find My Device",
+    "Tap Play Tone to start playing a tone on the device",
+    "While the tone is playing, tap the Back arrow (top left corner)"
   ],
-  "expected": "The tone stops playing immediately and the user is returned to the Device Settings page.",
+  "expected": "The tone stops playing immediately, and the user is returned to the Device Settings page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
+    "play-tone",
+    "back-arrow",
     "poly-studio-mobile",
     "device-settings",
-    "tone-playback",
-    "back-arrow",
-    "app-settings-page",
-    "tone-stopping"
+    "tone-persistence",
+    "app-navigation"
   ],
   "source_last_updated": "1759930862",
   "source_hash": "0563118ac914e15957756b8f5ebd64aab10211f96dc150c00559baae6d5d548c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.944936Z",
+  "processed_at": "2026-04-25T09:32:26.173399Z",
   "status": "active"
 }
