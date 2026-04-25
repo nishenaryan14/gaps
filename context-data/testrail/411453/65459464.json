@@ -5,23 +5,23 @@
   "project": "411453",
   "title": "Software Update - DFU -  Houston...  Retry button",
   "feature": "Firmware Update",
-  "scenario": "DFU failure recovery: Retry button returns user to Software Update screen after headset is powered off during firmware update at 10%",
+  "scenario": "DFU failure at 10% by powering off headset does not properly redirect to retry update from previous screen in Device Settings > Software Update",
   "steps": [],
   "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu-failure-recovery",
+    "dfu-failure",
     "firmware-update",
-    "retry-button",
-    "software-update-screen",
-    "power-off-during-update",
-    "update-interruption",
-    "headset-power-off"
+    "device-settings",
+    "software-update",
+    "retry-update",
+    "power-off",
+    "update-progress"
   ],
   "source_last_updated": "1763131137",
   "source_hash": "e1ee67bf97df315d4e52fe802d35d2d0b838e4f52b7b29495a022b1ead131f78",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.024595Z",
+  "processed_at": "2026-04-25T09:32:26.285132Z",
   "status": "active"
 }
