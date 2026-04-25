@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Screens UI",
   "feature": "App Settings",
-  "scenario": "Onboarding flow screens do not match Figma design specifications",
+  "scenario": "Onboarding flow screens do not match Figma UI design specifications",
   "steps": [
     "Launch the Poly Studio Mobile app for the first time (or clear app data to reset onboarding).",
-    "Observe the first onboarding screen (Welcome / Get Started screen).",
-    "Tap 'Next' or swipe left to advance through each onboarding screen.",
-    "For each screen in the flow, compare the UI elements (title text, body text, illustrations, buttons, progress indicators) against the approved Figma design.",
-    "Continue until the final onboarding screen (e.g., 'Let's Go' or 'Finish' screen) is displayed.",
-    "Tap the final action button to exit onboarding and reach the Home screen."
+    "Observe the first Onboarding screen (Welcome / Get Started).",
+    "Swipe or tap 'Next' to advance through each Onboarding screen in sequence.",
+    "For each screen, compare the following against the Figma UI design:\n  - Layout and element positioning\n  - Typography (font, size, weight)\n  - Colors and icons\n  - Button labels and behavior\n  - Illustrations and imagery\n  - Text copy",
+    "Continue until the final Onboarding screen (e.g., 'Let's Go' or 'Finish').",
+    "Tap the final CTA button to exit onboarding and enter the Home screen."
   ],
-  "expected": "Every screen in the Onboarding flow matches the Figma design exactly \u2014 including layout, typography, colors, iconography, button styles, and spacing.",
+  "expected": "Every Onboarding screen matches the Figma UI design exactly in layout, typography, colors, icons, illustrations, and text copy.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-flow",
-    "figma-design-specifications",
-    "ui-mismatch",
+    "figma-ui-specifications",
+    "ui-design-mismatch",
     "welcome-screen",
     "home-screen",
-    "progress-indicators",
-    "app-launch"
+    "visual-regression",
+    "cta-button-behavior"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "1bc0fe03499b9a42a167e75e056b42bc8df3c86c9c0c0c85d4321804055d93f7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.277591Z",
   "status": "active"
 }
