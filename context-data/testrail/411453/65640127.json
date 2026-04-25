@@ -4,28 +4,34 @@
   "type": "testcase",
   "project": "411453",
   "title": "Policy: Remove all settings from Policy - Settings Unlocked",
-  "feature": "Policy",
-  "scenario": "Verify that removing all settings from a Lens Cloud policy unlocks previously locked settings on the connected device.",
+  "feature": "App Settings",
+  "scenario": "Policy-affected settings remain locked in Poly Studio Mobile app after policy is removed via \"Remove all\" on Lens Cloud policy page",
   "steps": [
-    "On Lens Cloud policy page, click \"Remove all\" to delete the policy and apply changes.",
-    "Navigate to device settings in the app and tap on any setting previously affected by the policy."
+    "1. Open the Poly Studio Mobile app on the connected Android device.",
+    "2. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
+    "3. Verify that certain settings (e.g., ANC, Transparency Mode, Equalizer) are locked/greyed out due to an active Lens Cloud policy.",
+    "4. On the Lens Cloud admin portal, navigate to the policy page and tap \"Remove all\" to remove the active policy.",
+    "5. Return to the Poly Studio Mobile app on the Android device.",
+    "6. Go to Device Settings \u2192 Audio Settings and tap on a previously locked setting (e.g., ANC, Transparency Mode, Equalizer).",
+    "7. Attempt to change the setting (e.g., toggle ANC on/off, adjust Equalizer preset).",
+    "8. Repeat step 6-7 for all other settings that were previously locked by the policy."
   ],
-  "expected": "Previously locked settings become unlocked and user can change them.",
+  "expected": "All previously locked settings become unlocked and editable. The user can freely tap and change any setting (ANC, Transparency Mode, Equalizer, etc.) without restriction.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Lens Cloud policy",
-    "Remove all",
-    "delete policy",
-    "unlock settings",
-    "device settings",
-    "locked settings",
-    "apply changes",
-    "policy removal"
+    "poly-studio-mobile",
+    "lens-cloud-policy",
+    "policy-removal",
+    "anc",
+    "transparency-mode",
+    "equalizer",
+    "settings-locked",
+    "android"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "53c115aee1f7f6973b3058d4e36c0576011bfdb968fb1612b542ee5f6a873d2e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.314655Z",
+  "processed_at": "2026-04-25T05:37:16.951887Z",
   "status": "active"
 }
