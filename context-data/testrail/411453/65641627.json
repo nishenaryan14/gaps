@@ -7,30 +7,31 @@
   "feature": "App Settings",
   "scenario": "Fit Test does not properly handle earbud disconnection during test on Poly Bluetooth earbuds",
   "steps": [
-    "1. Open the Poly Studio Mobile app with earbuds connected.",
-    "2. Navigate to App Settings \u2192 Onboarding / User Guides \u2192 Fit Test.",
-    "3. Start the Fit Test.",
-    "4. During the test, disconnect one earbud by placing it in the charging case (close the lid for applicable models).",
-    "5. Observe the Fit Test screen.",
-    "6. Tap Retry to restart the Fit Test.",
-    "7. During the test, disconnect both earbuds by placing them in the charging case.",
-    "8. Observe the Fit Test screen."
+    "Open the Poly Studio Mobile app with earbuds connected.",
+    "Navigate to App Settings \u2192 Onboarding / User Guides \u2192 Fit Test.",
+    "Tap to start the Fit Test.",
+    "During the test, disconnect one earbud by placing it in the charging case and closing the lid (for applicable models).",
+    "Observe the Fit Test results screen.",
+    "Turn on both earbuds and tap Retry.",
+    "During the second Fit Test, disconnect both earbuds by placing them in the charging case.",
+    "Observe the Fit Test results screen."
   ],
-  "expected": "Step 5: The disconnected earbud becomes greyed out with a yellow icon and \"Fail\" tag; the connected earbud shows proper icon and tag based on test results; text \"The {right/left} earbud was disconnected during the fit test\" is displayed.\\nStep 8: Both earbuds are greyed out with yellow icon and \"Fail\" tag; text \"The earbuds were disconnected during the fit test\" is displayed.",
+  "expected": "1) Disconnected earbud becomes greyed out with a yellow icon and \\\"Fail\\\" tag; connected earbud shows proper icon and tag based on test results; text \\\"The {right/left} earbud was disconnected during the fit test\\\" is displayed. 2) Both earbuds become greyed out with yellow icon and \\\"Fail\\\" tag; text \\\"The earbuds were disconnected during the fit test\\\" is displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "earbud-disconnection",
     "poly-studio-mobile",
+    "earbud-disconnection",
     "charging-case",
     "bluetooth-earbuds",
     "retry",
-    "onboarding"
+    "onboarding",
+    "user-guides"
   ],
   "source_last_updated": "1760963365",
   "source_hash": "2863c19bd3b13e0b0e39a1d65138fd8907727a7b436d1ef0a80e20b46497d7f1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.830002Z",
+  "processed_at": "2026-04-25T07:55:31.914920Z",
   "status": "active"
 }
