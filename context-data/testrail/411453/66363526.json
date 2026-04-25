@@ -5,34 +5,24 @@
   "project": "411453",
   "title": "[Cloud] Flamingo - Connect headset already paired with charge case",
   "feature": "Bluetooth Pairing",
-  "scenario": "Voyager Legend 50 paired with Charge Case displays correctly in Poly Studio Mobile app and Cloud web page with separate earpiece and charge case entries in Component section",
-  "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Pair the Voyager Legend 50 headset with the app via Bluetooth. Ensure the headset is docked in its Charge Case during pairing.",
-    "3. Verify the headset appears in the app's Home screen under paired devices.",
-    "4. Open a web browser and navigate to the Poly Cloud web page (e.g., https://cloud.poly.com).",
-    "5. Log in with your Poly Cloud account credentials.",
-    "6. Locate the paired Voyager Legend 50 device in the device list on the Cloud web page.",
-    "7. Confirm the device is displayed as \"Voyager Legend 50 UC\".",
-    "8. Click on the device name to open its detailed view.",
-    "9. In the details view, verify the following are present:\n   - Earpiece information\n   - Charge case information\n   - An image of both the earpiece and charge case\n   - A \"Component\" section with separate entries for the earpiece and the charge case."
-  ],
-  "expected": "The Voyager Legend 50 headset appears correctly in the Poly Studio Mobile app's Home screen. On the Poly Cloud web page, the device displays as \"Voyager Legend 50 UC\". The device details page shows earpiece and charge case information, an image of both, and a Component section with separate entries for the earpiece and charge case.",
+  "scenario": "Verify Voyager Legend 50 paired with Charge Case appears correctly in Poly Studio Mobile app and Cloud web page with earpiece and case details",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "voyager-legend-50",
     "charge-case",
-    "poly-studio-mobile",
+    "poly-studio-mobile-app",
     "poly-cloud",
-    "component-section",
-    "earpiece",
     "device-pairing",
-    "device-details-view"
+    "earpiece-details",
+    "case-details",
+    "device-appearance"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "69458d429675ffeae82eb97b83164f03b28bfbcae07e6defa287a6fcf13e6030",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.010355Z",
+  "processed_at": "2026-04-25T08:21:31.085240Z",
   "status": "active"
 }
