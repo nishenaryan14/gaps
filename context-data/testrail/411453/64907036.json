@@ -5,34 +5,34 @@
   "project": "411453",
   "title": "[IOS]App Settings - General - Account - Log in - Log out - Cancel",
   "feature": "App Settings",
-  "scenario": "Account login/logout flow: Cancel option in logout dialog keeps user logged in on Poly Studio Mobile app",
+  "scenario": "Account login/logout flow in Poly Studio Mobile App Settings > General shows correct behavior when logging in and cancelling logout",
   "steps": [
-    "1. Launch the Poly Studio Mobile app as a guest user.",
+    "1. Launch Poly Studio Mobile app as a guest user.",
     "2. Tap the hamburger icon (\u2630) to open App Settings.",
     "3. Navigate to General \u2192 Account.",
-    "4. Tap Log in and enter valid credentials.",
-    "5. Observe the Account screen after successful login.",
-    "6. Tap Log out.",
-    "7. Observe the login confirmation dialog.",
-    "8. Tap Cancel on the confirmation dialog.",
-    "9. Observe the Account screen."
+    "4. Tap 'Log in'.",
+    "5. Tap 'Continue' and enter valid credentials to log in.",
+    "6. Observe the Account screen.",
+    "7. Tap 'Log out'.",
+    "8. Observe the login dialog.",
+    "9. Tap 'Cancel' on the login dialog."
   ],
-  "expected": "1. After step 5: \\\"Your account\\\" text is visible with Name and Email fields populated.<br>2. After step 6: A login confirmation dialog opens with Cancel and Continue options.<br>3. After step 8: The dialog disappears and the user remains logged in (Name and Email fields still populated).",
+  "expected": "Step 6: 'Your account' text is visible with Name and Email fields populated. Step 8: Login dialog opens with 'Cancel' and 'Continue' options. Step 9: Dialog disappears and user remains logged in.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "account-login",
     "account-logout",
-    "logout-dialog",
-    "cancel-option",
-    "login-persistence",
     "app-settings",
-    "user-session"
+    "general-settings",
+    "guest-user",
+    "login-dialog",
+    "cancel-logout"
   ],
   "source_last_updated": "1764319833",
   "source_hash": "f207772853feee11205ea923e80eb7baefc3d14d44246d5bd6eac636521c064d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.758969Z",
+  "processed_at": "2026-04-25T07:55:31.819083Z",
   "status": "active"
 }
