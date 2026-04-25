@@ -7,30 +7,29 @@
   "feature": "App Settings",
   "scenario": "General > About section in App Settings displays correct \"Up to date\" status, version number, and release notes link matching Figma design",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on Account or Settings icon",
-    "Go to App Settings",
-    "Select General",
-    "Tap on About",
-    "Observe the displayed information"
+    "Open the Poly Studio Mobile app.",
+    "Tap the menu icon (hamburger) or your profile avatar to access the side navigation.",
+    "Select 'Settings' or 'App Settings'.",
+    "Scroll down and tap 'General'.",
+    "Tap 'About'.",
+    "Observe the displayed information."
   ],
-  "expected": "The About section displays: \\\"Up to date\\\" status, the correct version number, and a release notes link, all matching the Figma design.",
+  "expected": "The About section displays: \"Up to date\" status, the correct version number (e.g., 1.2.3), and a tappable \"Release Notes\" link, all matching the Figma design specifications.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "app-settings",
-    "general-about",
+    "general-section",
+    "about-section",
     "up-to-date-status",
     "version-number",
     "release-notes",
-    "figma-design",
-    "about-section"
+    "figma-design"
   ],
   "source_last_updated": "1759416401",
   "source_hash": "0e8f2a7d61bde327bef31aaf9fd7ea6846964227d05ed564f2b8949735b2dd83",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.814515Z",
+  "processed_at": "2026-04-25T08:21:30.929175Z",
   "status": "active"
 }
