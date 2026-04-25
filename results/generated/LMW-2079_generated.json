@@ -1,133 +1,121 @@
 [
   {
-    "title": "TC-FMD-001: Find My Device dialog reappears after dismissing via Back button when location was denied during onboarding",
+    "title": "TC-FMD-001: Find My Device dialog does NOT re-appear in main settings after denying location during onboarding (single visit)",
     "steps": [
-      "Launch Poly Studio Mobile app on a fresh install (or clear app data).",
-      "Complete onboarding flow but DENY location permission when prompted (tap 'Deny' or 'Don't Allow').",
-      "Once on the Home screen, tap the Settings (gear) icon in the top-right corner.",
-      "Tap 'Find My Device' from the Settings menu.",
-      "Observe the Find My Device location permission dialog appears.",
-      "Tap the Back button (or swipe back) to dismiss the dialog without granting permission.",
-      "Navigate back to Home by tapping the back arrow or Home button.",
-      "Repeat Step 3: Tap the Settings (gear) icon again.",
-      "Repeat Step 4: Tap 'Find My Device' again.",
-      "Verify the Find My Device location permission dialog appears again (dialog is NOT permanently suppressed).",
-      "Repeat steps 6-10 for a total of 3 consecutive attempts.",
-      "Verify the dialog appears every single time without fail."
+      "1. Fresh install Poly Studio Mobile app (or clear app data).",
+      "2. Launch the app and proceed through onboarding.",
+      "3. When the location permission prompt appears during onboarding, tap 'Deny' or 'While Using the App' \u2192 select 'Deny'.",
+      "4. Complete the rest of the onboarding flow.",
+      "5. Once on the main Device screen (main settings), observe the screen for 5 seconds.",
+      "6. Navigate away: tap a different tab (e.g., 'Organized' or 'Settings' tab).",
+      "7. Navigate back to the main Device screen (tap the device name or home tab).",
+      "8. Observe the screen for 5 seconds."
     ],
-    "expected": "The Find My Device location permission dialog reappears each time the user navigates to the Find My Device screen after dismissing it via Back, regardless of how many times it has been dismissed previously."
+    "expected": "The Find My Device dialog does NOT appear at any point on the main settings screen \u2014 neither on first visit after onboarding (step 5) nor on return visit (step 7). The main settings screen displays normally without any unsolicited overlay."
   },
   {
-    "title": "TC-FMD-002: Find My Device dialog reappears after tapping outside dialog when location was denied during onboarding",
+    "title": "TC-FMD-002: Find My Device dialog suppressed after app backgrounding/foregrounding with location denied during onboarding",
     "steps": [
-      "Launch Poly Studio Mobile app on a fresh install (or clear app data).",
-      "Complete onboarding flow but DENY location permission when prompted (tap 'Deny' or 'Don't Allow').",
-      "Once on the Home screen, tap the Settings (gear) icon in the top-right corner.",
-      "Tap 'Find My Device' from the Settings menu.",
-      "Observe the Find My Device location permission dialog appears.",
-      "Tap outside the dialog (on the dimmed background area) to dismiss it.",
-      "Navigate back to Home by tapping the back arrow or Home button.",
-      "Repeat Step 3: Tap the Settings (gear) icon again.",
-      "Repeat Step 4: Tap 'Find My Device' again.",
-      "Verify the Find My Device location permission dialog appears again.",
-      "Repeat steps 6-10 for a total of 3 consecutive attempts.",
-      "Verify the dialog appears every single time without fail."
+      "1. Fresh install Poly Studio Mobile app (or clear app data).",
+      "2. Launch the app and proceed through onboarding.",
+      "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
+      "4. Complete onboarding and land on the main Device screen.",
+      "5. Verify no Find My Device dialog is visible.",
+      "6. Press the Home button to background the app.",
+      "7. Wait 10 seconds.",
+      "8. Re-open the app from the recent apps list (foreground the app).",
+      "9. Observe the main Device screen for 5 seconds.",
+      "10. Navigate to another tab (e.g., 'Organized'), then return to the main Device screen.",
+      "11. Observe the screen for 5 seconds."
     ],
-    "expected": "The Find My Device location permission dialog reappears each time the user navigates to the Find My Device screen after dismissing it by tapping outside, regardless of how many times it has been dismissed previously."
+    "expected": "The Find My Device dialog does NOT appear after foregrounding the app (step 9) nor after navigating back to the main Device screen (step 11). The denial state persists correctly across the app backgrounding lifecycle event."
   },
   {
-    "title": "TC-FMD-003: Find My Device dialog reappears after app restart when location was denied during onboarding",
+    "title": "TC-FMD-003: Find My Device dialog suppressed after app force-kill and relaunch with location denied during onboarding",
     "steps": [
-      "Launch Poly Studio Mobile app on a fresh install (or clear app data).",
-      "Complete onboarding flow but DENY location permission when prompted (tap 'Deny' or 'Don't Allow').",
-      "Once on the Home screen, tap the Settings (gear) icon in the top-right corner.",
-      "Tap 'Find My Device' from the Settings menu.",
-      "Observe the Find My Device location permission dialog appears.",
-      "Tap the Back button to dismiss the dialog.",
-      "Press the Home button to background the app, then force-kill the app (swipe it away from Recents).",
-      "Re-launch Poly Studio Mobile app.",
-      "Navigate: Home \u2192 Settings (gear icon) \u2192 Find My Device.",
-      "Verify the Find My Device location permission dialog appears again."
+      "1. Fresh install Poly Studio Mobile app (or clear app data).",
+      "2. Launch the app and proceed through onboarding.",
+      "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
+      "4. Complete onboarding and land on the main Device screen.",
+      "5. Verify no Find My Device dialog is visible.",
+      "6. Force-kill the app (swipe away from recent apps or use 'Force Stop' in device Settings \u2192 Apps).",
+      "7. Wait 5 seconds.",
+      "8. Relaunch the app.",
+      "9. Observe the main Device screen for 5 seconds.",
+      "10. Navigate to another tab (e.g., 'Organized'), then return to the main Device screen.",
+      "11. Observe the screen for 5 seconds."
     ],
-    "expected": "The Find My Device location permission dialog reappears after the app is force-killed and relaunched, confirming the dialog state is not permanently stored when dismissed without granting permission."
+    "expected": "The Find My Device dialog does NOT appear after relaunching the app (step 9) nor after navigating back to the main Device screen (step 11). The denial state is persisted to disk and correctly restored on app restart."
   },
   {
-    "title": "TC-FMD-004: Grant 'Allow only while using the app' location permission resolves the Find My Device dialog loop",
+    "title": "TC-FMD-004: Find My Device dialog suppressed after Bluetooth disconnect/reconnect with location denied during onboarding",
     "steps": [
-      "Launch Poly Studio Mobile app on a fresh install (or clear app data).",
-      "Complete onboarding flow but DENY location permission when prompted (tap 'Deny' or 'Don't Allow').",
-      "Once on the Home screen, tap the Settings (gear) icon in the top-right corner.",
-      "Tap 'Find My Device' from the Settings menu.",
-      "Observe the Find My Device location permission dialog appears.",
-      "Tap the Back button to dismiss the dialog.",
-      "Navigate to Android System Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions.",
-      "Tap 'Location' and select 'Allow only while using the app'.",
-      "Return to the Poly Studio Mobile app.",
-      "Navigate: Home \u2192 Settings (gear icon) \u2192 Find My Device.",
-      "Verify the Find My Device location permission dialog does NOT appear.",
-      "Verify the Find My Device screen loads successfully with its content (e.g., device location map or status).",
-      "Navigate away to Home, then return to Settings \u2192 Find My Device two more times.",
-      "Verify the dialog never reappears."
+      "1. Fresh install Poly Studio Mobile app (or clear app data).",
+      "2. Launch the app and proceed through onboarding.",
+      "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
+      "4. Complete onboarding and land on the main Device screen.",
+      "5. Verify no Find My Device dialog is visible.",
+      "6. Disconnect the Bluetooth headset (turn off headset or disable Bluetooth from phone quick settings).",
+      "7. Wait 5 seconds.",
+      "8. Reconnect the Bluetooth headset (turn on headset or re-enable Bluetooth).",
+      "9. Wait for the app to re-establish connection (observe the device name appears in the app).",
+      "10. Observe the main Device screen for 5 seconds.",
+      "11. Navigate to another tab and back to the main Device screen.",
+      "12. Observe the screen for 5 seconds."
     ],
-    "expected": "After granting 'Allow only while using the app' location permission via Android Settings, the Find My Device dialog no longer appears on any subsequent visit to the Find My Device screen."
+    "expected": "The Find My Device dialog does NOT appear after Bluetooth reconnection (step 10) nor after navigating back to the main Device screen (step 12). The denial state is preserved across Bluetooth state transitions."
   },
   {
-    "title": "TC-FMD-005: Grant 'Allow all the time' location permission resolves the Find My Device dialog loop",
+    "title": "TC-FMD-005: Repeated denial of location permission does NOT cause infinite dialog loop in main settings",
     "steps": [
-      "Launch Poly Studio Mobile app on a fresh install (or clear app data).",
-      "Complete onboarding flow but DENY location permission when prompted (tap 'Deny' or 'Don't Allow').",
-      "Once on the Home screen, tap the Settings (gear) icon in the top-right corner.",
-      "Tap 'Find My Device' from the Settings menu.",
-      "Observe the Find My Device location permission dialog appears.",
-      "Tap the Back button to dismiss the dialog.",
-      "Navigate to Android System Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions.",
-      "Tap 'Location' and select 'Allow all the time'.",
-      "Return to the Poly Studio Mobile app.",
-      "Navigate: Home \u2192 Settings (gear icon) \u2192 Find My Device.",
-      "Verify the Find My Device location permission dialog does NOT appear.",
-      "Verify the Find My Device screen loads successfully with its content.",
-      "Navigate away to Home, then return to Settings \u2192 Find My Device two more times.",
-      "Verify the dialog never reappears."
+      "1. Fresh install Poly Studio Mobile app (or clear app data).",
+      "2. Launch the app and proceed through onboarding.",
+      "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
+      "4. Complete onboarding and land on the main Device screen.",
+      "5. Verify no Find My Device dialog is visible.",
+      "6. Navigate to the 'Organized' tab.",
+      "7. Tap 'Enable now' (or similar CTA that triggers Find My Device setup).",
+      "8. When the Find My Device dialog appears, tap 'Deny' or 'Cancel'.",
+      "9. Navigate back to the main Device screen (tap device name or home tab).",
+      "10. Observe the screen for 5 seconds \u2014 the Find My Device dialog should NOT appear.",
+      "11. Repeat steps 6-10 for a total of 3 iterations.",
+      "12. On the 3rd return to the main Device screen, observe for 10 seconds."
     ],
-    "expected": "After granting 'Allow all the time' location permission via Android Settings, the Find My Device dialog no longer appears on any subsequent visit to the Find My Device screen."
+    "expected": "The Find My Device dialog does NOT appear unsolicited on the main Device screen at any iteration (steps 10, 12). The dialog only appears when explicitly triggered from the Organized screen (step 8), and denying it there does not cause it to re-trigger automatically upon returning to main settings. No infinite loop occurs."
   },
   {
-    "title": "TC-FMD-006: Find My Device dialog loop persists after granting then revoking location permission",
+    "title": "TC-FMD-006: Find My Device dialog does NOT re-appear in main settings after phone reboot with location denied during onboarding",
     "steps": [
-      "Launch Poly Studio Mobile app on a fresh install (or clear app data).",
-      "Complete onboarding flow but DENY location permission when prompted.",
-      "Navigate to Android System Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions.",
-      "Tap 'Location' and select 'Allow only while using the app'.",
-      "Return to the app and navigate: Home \u2192 Settings (gear icon) \u2192 Find My Device.",
-      "Verify the dialog does NOT appear (permission is granted).",
-      "Navigate away to Home.",
-      "Go to Android System Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions.",
-      "Tap 'Location' and select 'Deny'.",
-      "Return to the Poly Studio Mobile app.",
-      "Navigate: Home \u2192 Settings (gear icon) \u2192 Find My Device.",
-      "Verify the Find My Device location permission dialog appears again (the loop resumes after permission is revoked).",
-      "Dismiss the dialog via Back button.",
-      "Navigate away and return to Find My Device two more times.",
-      "Verify the dialog appears each time."
+      "1. Fresh install Poly Studio Mobile app (or clear app data).",
+      "2. Launch the app and proceed through onboarding.",
+      "3. When the location permission prompt appears during onboarding, tap 'Deny'.",
+      "4. Complete onboarding and land on the main Device screen.",
+      "5. Verify no Find My Device dialog is visible.",
+      "6. Reboot the phone.",
+      "7. After phone restarts, launch the Poly Studio Mobile app.",
+      "8. Observe the main Device screen for 5 seconds.",
+      "9. Navigate to another tab and back to the main Device screen.",
+      "10. Observe the screen for 5 seconds."
     ],
-    "expected": "After location permission is granted and then revoked again, the Find My Device dialog loop resumes \u2014 the dialog reappears on every visit to the Find My Device screen and is not permanently suppressed."
+    "expected": "The Find My Device dialog does NOT appear after phone reboot (step 8) nor after navigating back to the main Device screen (step 10). The location denial state is persisted across device reboots."
   },
   {
-    "title": "TC-FMD-007: Find My Device dialog appears via all navigation paths when location is denied",
+    "title": "TC-FMD-007: Find My Device dialog does NOT re-appear in main settings when location permission is set to 'Deny' from phone Settings app after onboarding",
     "steps": [
-      "Launch Poly Studio Mobile app on a fresh install (or clear app data).",
-      "Complete onboarding flow but DENY location permission when prompted.",
-      "Test Navigation Path 1: Home \u2192 Settings (gear icon) \u2192 Find My Device.",
-      "Verify the Find My Device location permission dialog appears.",
-      "Dismiss via Back button.",
-      "Test Navigation Path 2: Home \u2192 tap [Device Name] \u2192 Device Settings \u2192 scroll to Find My Device \u2192 tap.",
-      "Verify the Find My Device location permission dialog appears.",
-      "Dismiss via Back button.",
-      "Test Navigation Path 3: Home \u2192 hamburger menu (3 lines) \u2192 Find My Device (if available in drawer).",
-      "Verify the Find My Device location permission dialog appears (if this path exists).",
-      "Dismiss via Back button.",
-      "Verify that all navigation paths trigger the dialog consistently."
+      "1. Fresh install Poly Studio Mobile app (or clear app data).",
+      "2. Launch the app and proceed through onboarding.",
+      "3. When the location permission prompt appears during onboarding, tap 'Allow While Using App'.",
+      "4. Complete onboarding and land on the main Device screen.",
+      "5. Verify no Find My Device dialog is visible.",
+      "6. Navigate to phone Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions \u2192 Location.",
+      "7. Set Location permission to 'Deny'.",
+      "8. Return to the Poly Studio Mobile app.",
+      "9. Observe the main Device screen for 5 seconds.",
+      "10. Navigate to another tab and back to the main Device screen.",
+      "11. Observe the screen for 5 seconds.",
+      "12. Force-kill the app and relaunch.",
+      "13. Observe the main Device screen for 5 seconds."
     ],
-    "expected": "The Find My Device location permission dialog appears regardless of which navigation path the user takes to reach the Find My Device screen, when location permission was denied during onboarding."
+    "expected": "The Find My Device dialog does NOT appear on the main Device screen after changing location to 'Deny' from phone settings (step 9), after navigating back (step 11), or after app restart (step 13). The app correctly detects the denied state and suppresses the dialog."
   }
 ]
