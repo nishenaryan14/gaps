@@ -5,15 +5,17 @@
   "project": "411453",
   "title": "Reset Device - Restore Defaults - Restore - No",
   "feature": "Device Management",
-  "scenario": "Tapping \"No\" on the Restore Defaults confirmation popup closes the popup without resetting and keeps user on Device Settings screen",
+  "scenario": "Tapping \"No\" on the Restore Defaults confirmation popup closes the popup without resetting and keeps user on the Device Settings screen",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
     "Tap on the connected device name to open Device Settings",
-    "Scroll down and tap 'Reset Device' option",
-    "Tap 'Restore Defaults' or 'Restore' button",
+    "Scroll down and tap 'Reset Device' or 'Restore Defaults' option",
+    "Tap the 'Restore' button",
     "Observe the confirmation popup that appears",
-    "Tap 'No' button on the confirmation popup"
+    "Verify popup displays message: 'Are you sure you want to restore to default settings?'",
+    "Verify popup displays two buttons: 'No' and 'Yes'",
+    "Tap the 'No' button"
   ],
   "expected": "The confirmation popup closes, the device is NOT reset to default settings, and the user remains on the same Device Settings screen.",
   "coverage": [],
@@ -22,15 +24,14 @@
     "restore-defaults",
     "confirmation-popup",
     "device-settings",
-    "reset-device",
     "poly-studio-mobile",
+    "reset-device",
     "no-button",
-    "cancel-reset",
-    "ui-persistence"
+    "ui-cancellation"
   ],
   "source_last_updated": "1762260719",
   "source_hash": "cddf6bb9546eafb2156bbc28dbeb0dc40bd3a10ee78e2238d3ab3dd49cbf845d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.874486Z",
+  "processed_at": "2026-04-25T07:55:31.949166Z",
   "status": "active"
 }
