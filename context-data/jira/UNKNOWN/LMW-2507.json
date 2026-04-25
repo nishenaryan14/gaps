@@ -8,15 +8,15 @@
   "scenario": "Poly Studio Mobile app crashes when starting CC or CS sub-device firmware update (DFU)",
   "description_clean": "App crashes whenever CC or CS DFU (Device Firmware Update for sub-devices) is started.",
   "steps": [
-    "Open Poly Studio Mobile app on Android",
-    "Navigate to Home screen",
-    "Connect a Poly CC or CS Bluetooth audio device",
-    "Go to Device Settings for the connected device",
-    "Locate and start a Device Firmware Update (DFU) for the sub-device (CC or CS)",
-    "Observe the app behavior during the DFU process"
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Connect a Poly Bluetooth audio device (e.g., Voyager Focus 2 or similar CC/CS device).",
+    "Navigate to Device Settings \u2192 [Device Name].",
+    "Scroll to and tap 'Firmware Update' or 'Device Firmware Update'.",
+    "If prompted, select the sub-device (CC or CS) to update.",
+    "Tap 'Start Update' or 'Begin DFU' to initiate the firmware update process."
   ],
-  "expected": "The app should remain stable and display the DFU progress (e.g., downloading/installing firmware) without crashing.",
-  "actual": "The Poly Studio Mobile app crashes (closes unexpectedly) as soon as the CC or CS sub-device DFU is started.",
+  "expected": "The firmware update process starts normally; the app shows a progress indicator and does not crash.",
+  "actual": "The app crashes immediately when the CC or CS DFU process is started.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
@@ -25,14 +25,14 @@
     "firmware-update",
     "dfu",
     "sub-device",
-    "cc-device",
-    "cs-device",
+    "cc-cs",
+    "voyager-focus-2",
     "app-crash",
-    "android"
+    "device-firmware-update"
   ],
   "source_last_updated": "2026-04-16T07:56:34.000+0000",
   "source_hash": "ea5710a9052cd1573bccb43f5f21f4eff59160a8bfa3950c3d197308aa268016",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.300238Z",
+  "processed_at": "2026-04-25T08:21:30.755522Z",
   "status": "active"
 }
