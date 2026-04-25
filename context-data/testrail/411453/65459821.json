@@ -5,34 +5,23 @@
   "project": "411453",
   "title": "Notifications  - Update failed",
   "feature": "Firmware Update",
-  "scenario": "Firmware update failure notification \"Device didn't update\" redirects to Poly Lens app software update failure screen when DFU interrupted within first 20%",
-  "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "3. Ensure the connected Poly audio device has a pending firmware update available.",
-    "4. Initiate the firmware update (DFU) process from the app.",
-    "5. During the first 20% of the update process, turn off the Bluetooth audio device (e.g., press and hold the Power button to power off).",
-    "6. Wait for the update process to fail and observe the app behavior.",
-    "7. Check for a notification on the Android device stating \"Device didn't update\".",
-    "8. Tap the \"Device didn't update\" notification.",
-    "9. Observe the screen that opens after tapping the notification."
-  ],
-  "expected": "A notification \"Device didn't update\" is displayed. Tapping the notification redirects the user to the Poly Lens app's software update failure screen.",
+  "scenario": "Firmware update failure notification \"Device didn't update\" redirects to Poly Lens app software update failure screen when device is turned off during DFU",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "firmware-update",
-    "dfu-interrupted",
+    "dfu-failure",
     "device-didnt-update",
-    "poly-studio-mobile",
-    "software-update-failure",
-    "bluetooth-disconnect",
-    "notification-redirect",
-    "poly-lens-app"
+    "poly-lens-app",
+    "software-update-screen",
+    "power-off-during-update",
+    "update-failure-notification"
   ],
   "source_last_updated": "1761223129",
   "source_hash": "5474bac5a6b5c9f31687cd374edab459b4b006998feb2df1a5421c873cf40d6e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.044053Z",
+  "processed_at": "2026-04-25T09:32:26.300520Z",
   "status": "active"
 }
