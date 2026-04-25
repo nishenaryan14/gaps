@@ -5,34 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - Multiple devices - Deleting devices",
   "feature": "Device Management",
-  "scenario": "Device list correctly removes deleted device while preserving connected/disconnected state of remaining paired devices",
+  "scenario": "Device list correctly updates connected/disconnected state and allows deletion of remaining devices after removing one of multiple paired devices",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Home screen.",
-    "2. Pair and connect at least 3 Poly Bluetooth audio devices to the app.",
+    "1. Pair and connect at least 3 Bluetooth audio devices to the phone via the Poly Studio Mobile app.",
+    "2. Launch the Poly Studio Mobile app and navigate to the Home screen.",
     "3. Power off 2 of the 3 connected devices.",
-    "4. On the Home screen, locate the device list.",
-    "5. Delete one device from the device list (e.g., swipe to delete or use the delete/remove option).",
-    "6. Verify the deleted device is no longer visible in the device list.",
-    "7. Verify the remaining devices are still present in the list with correct connected/disconnected status indicators.",
-    "8. Repeat the delete action for each remaining device in the list.",
-    "9. Verify that each remaining device can be successfully deleted from the list."
+    "4. On the Home screen, locate the device list and delete one of the devices (e.g., tap the device and select Remove/Delete).",
+    "5. Observe the remaining devices in the list.",
+    "6. Attempt to delete each of the remaining devices one by one from the device list."
   ],
-  "expected": "The deleted device is properly removed from the device list. Remaining devices are still present with correct connected/disconnected state indicators. All remaining devices can be successfully deleted from the list.",
+  "expected": "The deleted device is properly removed from the device list. The remaining devices are still displayed with correct connected/disconnected state (e.g., the powered-off devices show as disconnected, the powered-on device shows as connected). All remaining devices can be successfully deleted from the list without errors.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-list",
-    "device-deletion",
-    "connected-state",
-    "disconnected-state",
-    "paired-devices",
     "bluetooth-pairing",
-    "device-management"
+    "device-removal",
+    "connected-disconnected-state",
+    "home-screen",
+    "paired-devices"
   ],
   "source_last_updated": "1762178343",
   "source_hash": "eb5958e7130069b7217f1493235b79a22c603434e7cae8553ad5b048040b4d37",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.922623Z",
+  "processed_at": "2026-04-25T09:32:26.149095Z",
   "status": "active"
 }
