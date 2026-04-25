@@ -4,29 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "Headset settings are changed",
-  "feature": "Headset Settings Sync",
-  "scenario": "Verify that headset settings changed on the mobile app are correctly reflected on the Lens tenant after refreshing the page.",
-  "steps": [
-    "A mobile user registers a headset to a Lens tenant.",
-    "On the Lens tenant, navigate to the device (Inventory or Device user profile) and check the headset's settings values \u2014 they should match the mobile app.",
-    "Change a setting value on the mobile app, refresh the Lens tenant page, and verify the new values are now present on the Lens tenant."
-  ],
-  "expected": "Headset settings changed on the mobile app are correctly reflected on the Lens tenant after refreshing the page.",
+  "feature": "Device Management",
+  "scenario": "Headset settings changed in Poly Studio Mobile app are not reflected correctly on the Lens tenant device inventory or user profile",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "headset settings",
-    "mobile app",
-    "Lens tenant",
-    "settings synchronization",
-    "device inventory",
-    "device user profile",
-    "page refresh",
-    "settings verification"
+    "poly-studio-mobile",
+    "lens-tenant",
+    "device-inventory",
+    "user-profile",
+    "settings-sync",
+    "headset-configuration",
+    "cloud-management"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "9008db5bcac2b2c964a1708e4767df9acf82cd83ff5ab9e13576eaff86a390f8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.321465Z",
+  "processed_at": "2026-04-25T05:37:16.960577Z",
   "status": "active"
 }
