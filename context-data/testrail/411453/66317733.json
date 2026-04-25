@@ -6,32 +6,22 @@
   "title": "Rename device - old FW no rename, new FW rename present",
   "feature": "Device Management",
   "scenario": "Device Name setting hidden in Device Settings > General on old firmware, appears after firmware update on supported Poly devices",
-  "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen and ensure a supported device (e.g., Poly Voyager Free 60+ UC, Poly Voyager Free 60, Poly Voyager Free 20, Poly Sync 20, Poly Sync 20M, or Poly Sync 40) is connected.",
-    "3. Tap on the connected device name to enter Device Settings.",
-    "4. In Device Settings, tap on 'General'.",
-    "5. Verify that the 'Device Name' setting is NOT displayed in the General menu.",
-    "6. Update the connected device's firmware to the latest version via the app (if not already on the latest).",
-    "7. After the firmware update completes and the device reconnects, navigate back to Device Settings > General.",
-    "8. Verify that the 'Device Name' setting now appears in the General menu."
-  ],
-  "expected": "On old firmware, the 'Device Name' setting is not shown in Device Settings > General. After updating to new firmware, the 'Device Name' setting appears in Device Settings > General.",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device-name-setting",
     "firmware-update",
-    "poly-studio-mobile",
-    "general-menu",
     "device-settings",
-    "voyager-free-60",
-    "poly-sync-20",
-    "feature-visibility"
+    "general-settings",
+    "device-name",
+    "setting-visibility",
+    "poly-devices",
+    "post-update-behavior"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "a653f67b88e0a20b9e69ff9a358b75608776bbe76b00e9603063e64daec62a7f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.802904Z",
+  "processed_at": "2026-04-25T07:55:31.883385Z",
   "status": "active"
 }
