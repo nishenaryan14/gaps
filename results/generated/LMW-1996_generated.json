@@ -1,179 +1,163 @@
 [
   {
-    "title": "TC-VPT-001: Voice Prompts language change on PC propagates to Poly Studio Mobile app on Free20",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate to Android app on reconnection",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC via Bluetooth (using Poly Lens desktop app).",
-      "3. Pair and connect the same Free20 to an Android device running Poly Studio Mobile app.",
-      "4. On the PC, open Poly Lens desktop app \u2192 navigate to Device Settings \u2192 Voice Prompts & Tones.",
-      "5. Change Voice Prompts language from default (e.g., English) to a different language (e.g., French or German).",
-      "6. Apply/save the setting on the PC.",
-      "7. Disconnect and reconnect the Free20 from the Android device (toggle Bluetooth off/on on the phone).",
-      "8. Open Poly Studio Mobile app on Android \u2192 tap [Free20 Device Name] \u2192 Audio Settings.",
-      "9. Navigate to Voice Prompts & Tones section.",
-      "10. Observe the displayed Voice Prompts language setting."
+      "1. Connect Poly device (e.g., Sync 20, Voyager 4320) to both PC (via BT700/BT600 dongle or USB) and Android phone (via Bluetooth).",
+      "2. Open Poly Lens Desktop on PC \u2192 navigate to Device Settings \u2192 Voice Prompts & Tones.",
+      "3. Change the following settings on PC: Set 'Calls' to 'Disabled', Set 'Hold Reminder' to 'Disabled', Set 'Incoming Call' tone to 'Ring 2', Set 'Active Audio Tone' to 'Tone 2', Set 'Answering Call' to 'Disabled', Set 'Answer/Ignore' to 'Disabled'.",
+      "4. On Android, open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "5. Observe all six settings values displayed in the app.",
+      "6. Disconnect Bluetooth from Android (Settings \u2192 Bluetooth \u2192 tap device \u2192 Forget, or turn off Bluetooth).",
+      "7. Reconnect Android to the Poly device via Bluetooth.",
+      "8. Open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "9. Observe all six settings values again."
     ],
-    "expected": "The Voice Prompts language setting in the Poly Studio Mobile app on Android reflects the language changed on the PC (e.g., shows French/German instead of English). The setting is synchronized from PC to mobile."
+    "expected": "After Bluetooth reconnection, all six Voice Prompts & Tones settings in the Android Poly Studio Mobile app match the values set on PC (Calls=Disabled, Hold Reminder=Disabled, Incoming Call=Ring 2, Active Audio Tone=Tone 2, Answering Call=Disabled, Answer/Ignore=Disabled). The app does not show stale cached values."
   },
   {
-    "title": "TC-VPT-002: Voice Prompts language change on PC persists after app restart on Android",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after Android app force-kill and relaunch",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC (Poly Lens) and an Android device (Poly Studio Mobile) simultaneously.",
-      "3. On PC \u2192 Poly Lens \u2192 Device Settings \u2192 Voice Prompts & Tones \u2192 change Voice Prompts language to Spanish.",
-      "4. Apply and save on PC.",
-      "5. On Android, fully close (force-stop) the Poly Studio Mobile app.",
-      "6. Reopen Poly Studio Mobile app \u2192 tap [Free20 Device Name] \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "7. Observe the Voice Prompts language setting.",
-      "8. Navigate away to the Home screen, then back to Audio Settings \u2192 Voice Prompts & Tones.",
-      "9. Observe the Voice Prompts language setting again."
+      "1. Connect Poly device (e.g., Sync 20, Voyager 4320) to both PC and Android phone.",
+      "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "3. Change settings on PC: Set 'Calls' to 'Tones Only', Set 'Hold Reminder' to 'Enabled', Set 'Incoming Call' to 'Ring 1', Set 'Active Audio Tone' to 'Tone 1', Set 'Answering Call' to 'Enabled', Set 'Answer/Ignore' to 'Enabled'.",
+      "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Note the current values.",
+      "5. Press the Android Recents button and swipe Poly Studio Mobile away to force-kill the app.",
+      "6. Wait 10 seconds.",
+      "7. Reopen Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "8. Observe all six settings values."
     ],
-    "expected": "The Voice Prompts language shows Spanish (the PC-set value) after app restart and after navigating away and back. The setting persists across app lifecycle events."
+    "expected": "After force-kill and relaunch of the Android app, all six Voice Prompts & Tones settings match the values set on PC. The app reads fresh settings from the device rather than showing cached pre-change values."
   },
   {
-    "title": "TC-VPT-003: Tones (e.g., Call Alert Tone) changed on PC propagates to Poly Studio Mobile app on Free20",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after Android app background/foreground cycle",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC (Poly Lens) and an Android device (Poly Studio Mobile).",
-      "3. On PC \u2192 Poly Lens \u2192 Device Settings \u2192 Voice Prompts & Tones \u2192 Tones section.",
-      "4. Change the Call Alert Tone from default to a different tone (e.g., from 'Tone 1' to 'Tone 3').",
-      "5. Apply/save on PC.",
-      "6. On Android, open Poly Studio Mobile app \u2192 tap [Free20 Device Name] \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "7. Observe the Tones section and the selected Call Alert Tone.",
-      "8. Trigger an incoming call on the Android device to verify the tone plays correctly."
+      "1. Connect Poly device to both PC and Android phone.",
+      "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "3. Set 'Calls' to 'Tones Only', 'Hold Reminder' to 'Enabled', 'Incoming Call' to 'Ring 3', 'Active Audio Tone' to 'Tone 3', 'Answering Call' to 'Enabled', 'Answer/Ignore' to 'Enabled'.",
+      "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify initial values.",
+      "5. On PC, change settings: Set 'Calls' to 'Disabled', 'Hold Reminder' to 'Disabled', 'Incoming Call' to 'Ring 2', 'Active Audio Tone' to 'Tone 2', 'Answering Call' to 'Disabled', 'Answer/Ignore' to 'Disabled'.",
+      "6. On Android, press the Home button to background the Poly Studio Mobile app.",
+      "7. Wait 15 seconds.",
+      "8. Tap the Poly Studio Mobile icon to bring the app back to foreground.",
+      "9. Navigate to Device Settings \u2192 Voice Prompts & Tones.",
+      "10. Observe all six settings values."
     ],
-    "expected": "The Call Alert Tone setting in Poly Studio Mobile app shows the tone selected on PC (Tone 3). When an incoming call arrives, the headset plays the new tone (Tone 3), confirming the setting is synchronized and functional."
+    "expected": "After backgrounding and foregrounding the Android app, all six Voice Prompts & Tones settings reflect the values changed on PC in step 5. The app re-reads settings from the device on foreground, not showing stale cached values."
   },
   {
-    "title": "TC-VPT-004: Voice Prompts & Tones settings changed on PC propagate after Bluetooth reconnection cycle on Free20",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after navigating away and back to Device Settings",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC (Poly Lens) and an Android device (Poly Studio Mobile).",
-      "3. On PC \u2192 Poly Lens \u2192 Device Settings \u2192 Voice Prompts & Tones \u2192 set Voice Prompts to 'Off' (disabled).",
-      "4. Apply/save on PC.",
-      "5. On Android, disconnect Bluetooth from the Free20 (Settings \u2192 Bluetooth \u2192 tap Forget/Disconnect).",
-      "6. Wait 10 seconds, then reconnect the Free20 to the Android device.",
-      "7. Open Poly Studio Mobile app \u2192 tap [Free20 Device Name] \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "8. Observe the Voice Prompts toggle/status.",
-      "9. On PC \u2192 Poly Lens \u2192 change Voice Prompts back to 'On' and set language to Italian.",
-      "10. Apply/save on PC.",
-      "11. On Android, disconnect and reconnect Bluetooth again.",
-      "12. Open Poly Studio Mobile app \u2192 Audio Settings \u2192 Voice Prompts & Tones and observe the setting."
+      "1. Connect Poly device to both PC and Android phone.",
+      "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "3. Set baseline values on PC: 'Calls'='Tones Only', 'Hold Reminder'='Enabled', 'Incoming Call'='Ring 1', 'Active Audio Tone'='Tone 1', 'Answering Call'='Enabled', 'Answer/Ignore'='Enabled'.",
+      "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify baseline.",
+      "5. On PC, change settings: 'Calls'='Disabled', 'Hold Reminder'='Disabled', 'Incoming Call'='Ring 3', 'Active Audio Tone'='Tone 3', 'Answering Call'='Disabled', 'Answer/Ignore'='Disabled'.",
+      "6. On Android, tap the back arrow to navigate from Device Settings to the main device screen.",
+      "7. Wait 5 seconds.",
+      "8. Tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "9. Observe all six settings values."
     ],
-    "expected": "After each Bluetooth reconnection cycle, the Poly Studio Mobile app reflects the Voice Prompts & Tones settings last saved on the PC. Step 8 shows Voice Prompts 'Off'. Step 12 shows Voice Prompts 'On' with language Italian."
+    "expected": "After navigating away from Device Settings and back, all six Voice Prompts & Tones settings in the Android app match the values changed on PC in step 5. The app refreshes settings upon re-entering the Device Settings screen."
   },
   {
-    "title": "TC-VPT-005: Voice Prompts & Tones settings changed on PC propagate after Android app force-kill and relaunch on Free20",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after Bluetooth disconnect/reconnect cycle (Sync 20 with Secure Connection)",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC (Poly Lens) and an Android device (Poly Studio Mobile).",
-      "3. On PC \u2192 Poly Lens \u2192 Device Settings \u2192 Voice Prompts & Tones \u2192 set 'Voice Prompts' to 'On' and language to 'Portuguese'.",
-      "4. Apply/save on PC.",
-      "5. On Android, force-stop the Poly Studio Mobile app (App Info \u2192 Force Stop).",
-      "6. Reopen Poly Studio Mobile app \u2192 tap [Free20 Device Name] \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "7. Observe the Voice Prompts language.",
-      "8. On PC \u2192 Poly Lens \u2192 change Voice Prompts language to 'Dutch'.",
-      "9. Apply/save on PC.",
-      "10. On Android, force-stop the Poly Studio Mobile app again.",
-      "11. Reopen Poly Studio Mobile app \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "12. Observe the Voice Prompts language setting."
+      "1. Connect Sync 20/Sync 20+ to both PC (via BT700/BT600 dongle) and Android phone.",
+      "2. On Android, open Poly Studio Mobile \u2192 tap Sync 20 \u2192 Device Settings \u2192 Voice Prompts & Tones. Note baseline values.",
+      "3. On PC, open Poly Lens Desktop \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "4. Change settings on PC: Set 'Calls' to 'Disabled', 'Hold Reminder' to 'Disabled', 'Incoming Call' to 'Ring 2', 'Active Audio Tone' to 'Tone 2', 'Answering Call' to 'Disabled', 'Answer/Ignore' to 'Disabled'.",
+      "5. On Android, go to Settings \u2192 Bluetooth \u2192 tap Sync 20 \u2192 select 'Forget' to disconnect.",
+      "6. Wait 10 seconds.",
+      "7. Re-pair Android phone with Sync 20 via Bluetooth.",
+      "8. Open Poly Studio Mobile \u2192 tap Sync 20 \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "9. Observe all six settings values.",
+      "10. Make a mobile call from the Android phone through the Sync 20.",
+      "11. End the call. (Note: Sync 20 with Secure Connection enabled will disconnect Bluetooth after the call.)",
+      "12. Wait for Bluetooth to automatically reconnect (or manually reconnect if needed).",
+      "13. Open Poly Studio Mobile \u2192 tap Sync 20 \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "14. Observe all six settings values again."
     ],
-    "expected": "After each force-stop and relaunch, the Poly Studio Mobile app displays the Voice Prompts language last set on the PC (Step 7: Portuguese, Step 12: Dutch). The app correctly reads the device-stored setting on each launch."
+    "expected": "After Bluetooth reconnection (step 8-9), all six Voice Prompts & Tones settings match the PC-changed values. After the call ends and Secure Connection triggers a disconnect/reconnect cycle (step 12-14), the settings still match the PC-changed values and are not reset to defaults or lost."
   },
   {
-    "title": "TC-VPT-006: Voice Prompts & Tones settings changed on PC propagate to Android when Free20 is connected to PC first, then Android",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after device power cycle",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC (Poly Lens) ONLY \u2014 do not connect to Android yet.",
-      "3. On PC \u2192 Poly Lens \u2192 Device Settings \u2192 Voice Prompts & Tones \u2192 set Voice Prompts to 'Off'.",
-      "4. Apply/save on PC.",
-      "5. Disconnect Free20 from PC (turn off Bluetooth on PC or disconnect the device).",
-      "6. Pair and connect Free20 to an Android device.",
-      "7. Open Poly Studio Mobile app \u2192 tap [Free20 Device Name] \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "8. Observe the Voice Prompts toggle/status.",
-      "9. On PC \u2192 reconnect Free20 \u2192 Poly Lens \u2192 change Voice Prompts to 'On' with language 'Japanese'.",
-      "10. Apply/save on PC.",
-      "11. Disconnect Free20 from PC.",
-      "12. On Android, disconnect and reconnect Bluetooth to Free20.",
-      "13. Open Poly Studio Mobile app \u2192 Audio Settings \u2192 Voice Prompts & Tones and observe the setting."
+      "1. Connect Poly device (e.g., Voyager 4320) to both PC and Android phone.",
+      "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "3. Change settings on PC: Set 'Calls' to 'Tones Only', 'Hold Reminder' to 'Enabled', 'Incoming Call' to 'Ring 1', 'Active Audio Tone' to 'Tone 1', 'Answering Call' to 'Enabled', 'Answer/Ignore' to 'Enabled'.",
+      "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify baseline.",
+      "5. On PC, change settings: Set 'Calls' to 'Disabled', 'Hold Reminder' to 'Disabled', 'Incoming Call' to 'Ring 3', 'Active Audio Tone' to 'Tone 3', 'Answering Call' to 'Disabled', 'Answer/Ignore' to 'Disabled'.",
+      "6. Power off the Poly device by pressing and holding the Power button for 2 seconds (or until power off).",
+      "7. Wait 10 seconds.",
+      "8. Power on the Poly device by pressing and holding the Power button for 2 seconds.",
+      "9. Wait for the device to reconnect to both PC and Android automatically.",
+      "10. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "11. Observe all six settings values."
     ],
-    "expected": "Step 8: Voice Prompts shows 'Off' (set on PC before first Android connection). Step 13: Voice Prompts shows 'On' with language 'Japanese'. Settings propagate from PC to device and are read correctly by the Android app."
+    "expected": "After the device power cycle and reconnection, all six Voice Prompts & Tones settings in the Android app match the values changed on PC in step 5. The device persists the PC-side settings through a power cycle and the Android app reads the updated values upon reconnection."
   },
   {
-    "title": "TC-VPT-007: Multiple Voice Prompts & Tones settings changed on PC all propagate to Android app on Free20",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify partial change propagation (single setting change on PC)",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC (Poly Lens) and an Android device (Poly Studio Mobile).",
-      "3. On PC \u2192 Poly Lens \u2192 Device Settings \u2192 Voice Prompts & Tones, make the following changes:",
-      "   a. Set Voice Prompts to 'On'",
-      "   b. Set Voice Prompts Language to 'Korean'",
-      "   c. Set Call Alert Tone to 'Tone 2'",
-      "   d. Set Low Battery Alert to 'Off'",
-      "   e. Set Connection Tone to 'Off'",
-      "4. Apply/save all settings on PC.",
-      "5. On Android, open Poly Studio Mobile app \u2192 tap [Free20 Device Name] \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "6. Observe and record each setting value displayed.",
-      "7. Navigate away from the app (Home button), then return to the same screen.",
-      "8. Observe and record each setting value again."
+      "1. Connect Poly device to both PC and Android phone.",
+      "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "3. Set all six settings to known baseline values on PC: 'Calls'='Tones Only', 'Hold Reminder'='Enabled', 'Incoming Call'='Ring 1', 'Active Audio Tone'='Tone 1', 'Answering Call'='Enabled', 'Answer/Ignore'='Enabled'.",
+      "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify all six match baseline.",
+      "5. On PC, change ONLY ONE setting: Set 'Incoming Call' from 'Ring 1' to 'Ring 3'. Leave all other five settings unchanged.",
+      "6. Disconnect Bluetooth from Android (Settings \u2192 Bluetooth \u2192 tap device \u2192 Forget).",
+      "7. Reconnect Android to the Poly device.",
+      "8. Open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "9. Observe all six settings values."
     ],
-    "expected": "All five Voice Prompts & Tones settings changed on PC (Voice Prompts On, Language Korean, Call Alert Tone 2, Low Battery Alert Off, Connection Tone Off) are correctly displayed in the Poly Studio Mobile app on Android. Values persist after navigating away and back."
+    "expected": "Only the 'Incoming Call' setting shows the PC-changed value ('Ring 3'). The other five settings ('Calls', 'Hold Reminder', 'Active Audio Tone', 'Answering Call', 'Answer/Ignore') remain at their baseline values. A single-setting change on PC does not corrupt or reset other Voice Prompts & Tones settings."
   },
   {
-    "title": "TC-VPT-008: Voice Prompts & Tones settings changed on PC propagate to Android after phone reboot on Free20",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify Active Audio Tone selection syncs correctly (dropdown/selection, not toggle)",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC (Poly Lens) and an Android device (Poly Studio Mobile).",
-      "3. On PC \u2192 Poly Lens \u2192 Device Settings \u2192 Voice Prompts & Tones \u2192 set Voice Prompts language to 'Russian'.",
-      "4. Apply/save on PC.",
-      "5. On Android, reboot the phone completely.",
-      "6. After phone restarts, ensure Bluetooth is enabled.",
-      "7. Wait for Free20 to auto-reconnect to the Android device (or manually pair if needed).",
-      "8. Open Poly Studio Mobile app \u2192 tap [Free20 Device Name] \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "9. Observe the Voice Prompts language setting.",
-      "10. On PC \u2192 Poly Lens \u2192 change Voice Prompts language to 'Swedish'.",
-      "11. Apply/save on PC.",
-      "12. On Android, reboot the phone again.",
-      "13. After restart, reconnect Free20, open Poly Studio Mobile app \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "14. Observe the Voice Prompts language setting."
+      "1. Connect Poly device to both PC and Android phone.",
+      "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "3. Set 'Active Audio Tone' to 'Tone 1' on PC.",
+      "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify 'Active Audio Tone' shows 'Tone 1'.",
+      "5. On PC, change 'Active Audio Tone' to 'Tone 3'.",
+      "6. Disconnect Bluetooth from Android and reconnect.",
+      "7. Open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "8. Observe the 'Active Audio Tone' value.",
+      "9. On PC, change 'Active Audio Tone' to 'Off'.",
+      "10. Disconnect Bluetooth from Android and reconnect.",
+      "11. Open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "12. Observe the 'Active Audio Tone' value."
     ],
-    "expected": "After each phone reboot, the Poly Studio Mobile app displays the Voice Prompts language last set on the PC (Step 9: Russian, Step 14: Swedish). The setting survives phone reboot and is read from the device."
+    "expected": "The 'Active Audio Tone' setting (a selection-type setting, not a simple toggle) correctly syncs from PC to Android for all valid values: 'Tone 1', 'Tone 3', and 'Off'. The Android app displays the exact selection made on PC without truncation or fallback to default."
   },
   {
-    "title": "TC-VPT-009: Voice Prompts & Tones settings changed on PC propagate to Android when Free20 is connected to both devices simultaneously (multi-point)",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify sync when Android app is already open on Device Settings screen during PC change",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC (Poly Lens) \u2014 keep connected.",
-      "3. Pair and connect the same Free20 to an Android device (Poly Studio Mobile) \u2014 both connected simultaneously (multi-point).",
-      "4. On PC \u2192 Poly Lens \u2192 Device Settings \u2192 Voice Prompts & Tones \u2192 set Voice Prompts to 'Off'.",
-      "5. Apply/save on PC while Free20 is still connected to both devices.",
-      "6. Without disconnecting anything, open Poly Studio Mobile app on Android \u2192 tap [Free20 Device Name] \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
-      "7. Observe the Voice Prompts setting.",
-      "8. On PC \u2192 Poly Lens \u2192 change Voice Prompts back to 'On' with language 'Chinese (Simplified)'.",
-      "9. Apply/save on PC while both connections are active.",
-      "10. On Android, navigate away from Voice Prompts screen and back, then observe the setting again.",
-      "11. Close Poly Studio Mobile app, reopen, and observe the setting."
+      "1. Connect Poly device to both PC and Android phone.",
+      "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "3. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "4. While the Android app is actively displaying the Voice Prompts & Tones screen, change settings on PC: Set 'Calls' to 'Disabled', 'Hold Reminder' to 'Disabled', 'Incoming Call' to 'Ring 2', 'Active Audio Tone' to 'Tone 2', 'Answering Call' to 'Disabled', 'Answer/Ignore' to 'Disabled'.",
+      "5. Observe the Android app screen for 30 seconds without navigating away.",
+      "6. Tap the back arrow to leave Device Settings, then tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones again.",
+      "7. Observe all six settings values."
     ],
-    "expected": "While Free20 is connected to both PC and Android simultaneously, Voice Prompts & Tones settings changed on PC propagate to the device and are reflected in the Poly Studio Mobile app. Step 7 shows 'Off'. Steps 10-11 show 'On' with language 'Chinese (Simplified)'."
+    "expected": "The Android app may or may not update in real-time while on the screen (step 5). However, after navigating away and back (step 6-7), all six Voice Prompts & Tones settings match the values changed on PC. The app does not require a Bluetooth disconnect/reconnect to pick up PC-side changes \u2014 re-entering the settings screen is sufficient."
   },
   {
-    "title": "TC-VPT-010: Voice Prompts & Tones settings changed on PC propagate to Android after factory reset of Free20",
+    "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify sync with Voyager series headset (device asymmetry check)",
     "steps": [
-      "1. Factory reset the Poly Free20 headset.",
-      "2. Pair and connect Free20 to a Windows PC (Poly Lens).",
-      "3. On PC \u2192 Poly Lens \u2192 Device Settings \u2192 Voice Prompts & Tones \u2192 set Voice Prompts to 'On', language to 'French', Call Alert Tone to 'Tone 3'.",
-      "4. Apply/save on PC.",
-      "5. Disconnect Free20 from PC.",
-      "6. Pair and connect Free20 to an Android device.",
-      "7. Open Poly Studio Mobile app \u2192 Audio Settings \u2192 Voice Prompts & Tones \u2192 verify settings show French, Tone 3.",
-      "8. Factory reset the Free20 headset again (while still paired to Android).",
-      "9. On Android, disconnect and reconnect Bluetooth to Free20.",
-      "10. Open Poly Studio Mobile app \u2192 Audio Settings \u2192 Voice Prompts & Tones \u2192 observe the settings (should be factory defaults).",
-      "11. Pair and connect Free20 to PC again.",
-      "12. On PC \u2192 Poly Lens \u2192 set Voice Prompts to 'On', language to 'German', Call Alert Tone to 'Tone 1'.",
-      "13. Apply/save on PC.",
-      "14. Disconnect Free20 from PC, reconnect to Android.",
-      "15. Open Poly Studio Mobile app \u2192 Audio Settings \u2192 Voice Prompts & Tones \u2192 observe the settings."
+      "1. Connect Voyager 4320 (or other Voyager series headset) to both PC (via BT700 dongle) and Android phone.",
+      "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "3. Set baseline on PC: 'Calls'='Tones Only', 'Hold Reminder'='Enabled', 'Incoming Call'='Ring 1', 'Active Audio Tone'='Tone 1', 'Answering Call'='Enabled', 'Answer/Ignore'='Enabled'.",
+      "4. On Android, open Poly Studio Mobile \u2192 tap Voyager 4320 \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify baseline.",
+      "5. On PC, change settings: 'Calls'='Disabled', 'Hold Reminder'='Disabled', 'Incoming Call'='Ring 3', 'Active Audio Tone'='Tone 3', 'Answering Call'='Disabled', 'Answer/Ignore'='Disabled'.",
+      "6. Disconnect Bluetooth from Android and reconnect.",
+      "7. Open Poly Studio Mobile \u2192 tap Voyager 4320 \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "8. Observe all six settings values.",
+      "9. Power cycle the Voyager headset (power off, wait 10s, power on).",
+      "10. Reconnect to Android.",
+      "11. Open Poly Studio Mobile \u2192 tap Voyager 4320 \u2192 Device Settings \u2192 Voice Prompts & Tones.",
+      "12. Observe all six settings values again."
     ],
-    "expected": "Step 7: Settings show French/Tone 3 (propagated from PC). Step 10: Settings show factory defaults after reset. Step 15: Settings show German/Tone 1 (re-propagated from PC after factory reset). The propagation works correctly even after a factory reset cycle."
+    "expected": "The Voyager series headset behaves consistently with Sync 20: all six Voice Prompts & Tones settings changed on PC propagate to the Android app after Bluetooth reconnection (step 7-8) and persist through a device power cycle (step 11-12). No device-specific divergence in sync behavior is observed."
   }
 ]
