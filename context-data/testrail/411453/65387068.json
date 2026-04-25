@@ -4,28 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Feedback - the thank you card after sending the feedback",
-  "feature": "Feedback",
-  "scenario": "After sending feedback, a thank you note should appear and either disappear after 5 seconds or be dismissible via a back button.",
+  "feature": "App Settings",
+  "scenario": "\"Thank You\" feedback confirmation card does not auto-dismiss after 5 seconds or respond to back button in Poly Studio Mobile app",
   "steps": [
-    "Send feedback via the feedback form/button.",
-    "Observe the screen after submission."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the Account icon or menu option.",
+    "4. Scroll down and select 'Send Feedback' or 'Feedback'.",
+    "5. Fill in the feedback form with relevant details (optional).",
+    "6. Tap the 'Submit' or 'Send' button to submit the feedback.",
+    "7. Observe the 'Thank You' card/note that appears on the screen after submission."
   ],
-  "expected": "A thank you card/note should appear. It should either disappear automatically after 5 seconds, or the user should be able to click a back button to dismiss it immediately.",
+  "expected": "A \"Thank You\" card/note is displayed on the screen. The note should remain visible for approximately 5 seconds and then automatically disappear. Alternatively, the user can dismiss the note immediately by pressing the back button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "feedback form",
-    "thank you note",
-    "submission confirmation",
+    "poly-studio-mobile",
+    "feedback-submission",
+    "thank-you-card",
     "auto-dismiss",
-    "back button",
-    "dismissible notification",
-    "post-submit screen",
-    "feedback submission"
+    "back-button",
+    "android",
+    "ui-persistence"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "ebddf3609192ccd2159281ae9e42721ed4d29e996f80c8db840d0f153f6bf8ea",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.199565Z",
+  "processed_at": "2026-04-25T05:37:16.788272Z",
   "status": "active"
 }
