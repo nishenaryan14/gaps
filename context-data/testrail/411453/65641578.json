@@ -5,23 +5,31 @@
   "project": "411453",
   "title": "EQ - Select a value, disconnect/connect device - the selected value persists",
   "feature": "Equalizer",
-  "scenario": "EQ preset persists after Bluetooth disconnect and reconnect on Device Settings > EQ screen",
-  "steps": [],
-  "expected": "",
+  "scenario": "EQ setting (Bass, Flat, Bright, Custom) does not persist after Bluetooth disconnect and reconnect",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the Home screen with a connected device that supports EQ.",
+    "2. Navigate to Device Settings \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "3. Select an EQ value (e.g., Bass, Flat, Bright, or a Custom EQ preset).",
+    "4. Disconnect the device from the phone (e.g., turn off Bluetooth or use the device's Power button).",
+    "5. Reconnect the device to the phone (e.g., turn on Bluetooth or press the device's Bluetooth button).",
+    "6. Open the Poly Studio Mobile app and navigate to Device Settings \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "7. Observe the currently selected EQ value."
+  ],
+  "expected": "The selected EQ value (Bass, Flat, Bright, or Custom EQ) persists after disconnecting and reconnecting the device. This should hold true for all possible EQ values.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "eq-preset",
-    "bluetooth-disconnect",
-    "bluetooth-reconnect",
-    "device-settings",
-    "eq-screen",
-    "persistence",
-    "poly-bluetooth-device"
+    "eq-persistence",
+    "equalizer-settings",
+    "bluetooth-disconnect-reconnect",
+    "poly-studio-mobile",
+    "audio-settings",
+    "bass-flat-bright-custom",
+    "device-settings"
   ],
   "source_last_updated": "1761144541",
   "source_hash": "7c6e062373f8438c2c0cbb732cb752e7a201dd2ae93b429185bd13cb63c35592",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.000484Z",
+  "processed_at": "2026-04-25T09:32:26.259221Z",
   "status": "active"
 }
