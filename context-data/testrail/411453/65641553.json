@@ -5,30 +5,33 @@
   "project": "411453",
   "title": "ANC - Transparency mode behavior during the call",
   "feature": "ANC",
-  "scenario": "Transparency Mode in Device Settings ANC tab is not greyed out and can be selected during a call on ANC-supported devices",
+  "scenario": "Transparency Mode in Device Settings > ANC tab is not greyed out and remains selectable during an active call on ANC-supported devices",
   "steps": [
-    "1. Launch Poly Studio Mobile app on Android.",
-    "2. Navigate to Home screen and ensure an ANC-supported Poly Bluetooth audio device is connected.",
-    "3. Make or receive a call using the connected device.",
-    "4. While on the call, go to Device Settings \u2192 [Device Name] \u2192 Audio Settings \u2192 ANC tab.",
-    "5. Observe the Transparency Mode option in the ANC tab.",
-    "6. Attempt to select/tap the Transparency Mode option."
+    "1. Launch the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen and tap on the connected ANC-supported device name to open Device Settings.",
+    "3. Tap on the ANC tab within Device Settings.",
+    "4. Verify that the Transparency Mode option is displayed.",
+    "5. Place an active call using the connected device (e.g., dial a number or receive an incoming call).",
+    "6. While on the active call, return to the Poly Studio Mobile app and navigate to Device Settings \u2192 ANC tab.",
+    "7. Observe the Transparency Mode option.",
+    "8. Attempt to tap/select the Transparency Mode option."
   ],
-  "expected": "The Transparency Mode option should be greyed out and non-selectable. If the user taps it, a pop-up dialog should appear with the message \"This settings cannot be adjusted while on a call\" and an \"Ok\" button. Tapping \"Ok\" closes the dialog.",
+  "expected": "The Transparency Mode option should be greyed out and non-selectable while on a call. If the user taps it, a pop-up dialog should appear stating \\\"This settings cannot be adjusted while on a call\\\" with an \\\"Ok\\\" button. Tapping Ok dismisses the dialog.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "transparency-mode",
     "anc-tab",
     "device-settings",
+    "active-call",
     "poly-studio-mobile",
-    "call-management",
     "anc-supported-devices",
-    "audio-settings"
+    "call-management",
+    "ui-greyed-out"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "f49d3079b3e31938fdc247ad36d398d61b3e520fd19203bae7abb06418a253ab",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.914920Z",
+  "processed_at": "2026-04-25T08:21:30.994674Z",
   "status": "active"
 }
