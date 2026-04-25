@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "1 step DFU - Houston screen during CC update (during Update all)",
   "feature": "Firmware Update",
-  "scenario": "Placing earbuds in charging case during case firmware update via \"Update All\" triggers Houston error screen on Poly Studio Mobile app with Voyager Free 60+",
+  "scenario": "\"Update All\" 1-step DFU shows Houston screen when Charge Case is updating and both earbuds are placed in the case on Voyager Free 60+",
   "steps": [
-    "Open Poly Studio Mobile app on your mobile device.",
-    "Ensure Voyager Free 60+ earbuds are connected and paired.",
-    "Navigate to Home screen and locate the device card for Voyager Free 60+.",
-    "Tap on 'Update All' to initiate a 1-step DFU (Device Firmware Update) process.",
-    "During the update, when the charging case firmware is being updated, place the earbuds back into the charging case.",
-    "Observe the app screen for any error or issue display."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure Osprey (Voyager Free 60+) earbuds are connected to the app.",
+    "3. Place both earbuds into the Charge Case (CC).",
+    "4. Navigate to the Home screen and locate the 'Update All' option for a 1-step Device Firmware Update (DFU).",
+    "5. Tap 'Update All' to initiate the firmware update process.",
+    "6. Observe the app screen while the Charge Case (CC) firmware is being updated."
   ],
-  "expected": "The DFU process should continue without interruption, or the app should gracefully handle the earbuds being placed in the case and show a clear, non-error message (e.g., 'Update paused' or 'Please keep earbuds out of case during update').",
+  "expected": "The app should display the normal firmware update progress screen (e.g., progress bar, status text) while the Charge Case is being updated.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "voyager-free-60-plus",
-    "poly-studio-mobile-app",
     "update-all",
-    "charging-case-firmware",
-    "dfu-device-firmware-update",
-    "houston-error-screen",
-    "earbuds-in-case-during-update"
+    "one-step-dfu",
+    "charge-case",
+    "firmware-update",
+    "houston-screen",
+    "poly-studio-mobile",
+    "osprey"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "3041ba4ab2ec4e66a2208476a8be62297792c47b69e85f9028e6b3abf57b86cb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.941770Z",
+  "processed_at": "2026-04-25T07:55:31.967112Z",
   "status": "active"
 }
