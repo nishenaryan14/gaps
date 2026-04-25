@@ -13,21 +13,21 @@
     "4. Navigate to the Lens tenant web portal \u2192 Manage \u2192 Device Users page.",
     "5. Observe the status of the user who uninstalled the app."
   ],
-  "expected": "The user's status on the Lens tenant (Manage/Device Users page) should remain 'Active' or reflect the actual device connection state, not change solely due to app uninstallation.",
+  "expected": "The user's status on the Lens tenant (Manage/Device Users page) should remain unchanged (e.g., remain 'Active') or reflect the actual device connection state, not change solely due to app uninstallation.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "lens-tenant",
-    "device-users",
     "app-uninstall",
+    "lens-tenant",
+    "device-users-page",
     "user-status",
     "active-to-inactive",
-    "device-management"
+    "manage-page"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "e5736a65aa66932c5957ae56eabe8aadc954c269397852d75ae1151453b2431e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.985915Z",
+  "processed_at": "2026-04-25T08:21:31.060609Z",
   "status": "active"
 }
