@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Notifications - Master Toggle OFF - Update failed",
   "feature": "Notifications",
-  "scenario": "No firmware update failure notification appears when Notifications master toggle is disabled in App Settings > General > Notifications & Device Alerts",
+  "scenario": "No notification shown on firmware update failure when Notifications master toggle is disabled in App Settings > General > Notifications & Device Alerts",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
     "2. Navigate to App Settings \u2192 General \u2192 Notifications & Device Alerts.",
     "3. Set the Notifications master toggle to OFF.",
     "4. Ensure a Poly Bluetooth audio device is connected to the app.",
     "5. Initiate a firmware update (DFU) on the connected device.",
-    "6. During the firmware update, turn off the Bluetooth audio device (e.g., press and hold the Power button to power it off) to cause the update to fail.",
-    "7. Observe the app for any notification regarding the firmware update failure."
+    "6. During the firmware update, turn off the Poly Bluetooth audio device (e.g., press and hold the Power button to power it off) to cause the update to fail.",
+    "7. Observe the app and device for any notification pop-up indicating the firmware update failure."
   ],
-  "expected": "No notification about the firmware update failure is displayed in the app or Android notification tray when the Notifications master toggle is OFF.",
+  "expected": "No notification pop-up is shown upon firmware update failure when the Notifications master toggle is disabled.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "notifications-master-toggle",
-    "firmware-update-failure-notification",
-    "app-settings-general",
-    "notifications-device-alerts",
+    "firmware-update-failure",
+    "app-settings",
+    "notifications-and-device-alerts",
     "poly-studio-mobile",
-    "dfu-failure",
-    "bluetooth-disconnect-during-update"
+    "dfu",
+    "notification-popup"
   ],
   "source_last_updated": "1761230695",
   "source_hash": "a04197a0a28650073363035e7a00b3c31b2b4b2a98feab525486b90bb9c461b9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.977765Z",
+  "processed_at": "2026-04-25T08:21:31.047099Z",
   "status": "active"
 }
