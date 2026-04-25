@@ -1,87 +1,139 @@
 {
   "bug_id": "LMW-2511",
   "matched_testcases": [
-    "65458387",
-    "65293009",
-    "65293034",
-    "65293028",
-    "65293010",
-    "65293019",
-    "65293025",
-    "65293011",
-    "65293016",
-    "65293012",
-    "65293013",
-    "65293014",
-    "65293015",
-    "65293021",
-    "65293022"
+    "64839439",
+    "64839422",
+    "66363556",
+    "66363557",
+    "66363558",
+    "66363559",
+    "66363583",
+    "66363596",
+    "65459448",
+    "65459456",
+    "65459427",
+    "65459458",
+    "65459457",
+    "65459438",
+    "65459432"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test case covers the Charge Case update popup behavior for Free 60+ after app launch.",
-    "No test case verifies that the Charge Case update popup should NOT appear when the case can be updated via the app.",
-    "No test case covers the scenario of pairing Free 60+ with outdated Charge Case firmware and restarting the app.",
-    "No test case validates the conditional logic for suppressing the update popup when in-app update is available."
+    "No test covers the scenario where a 'Brief Charge Case firmware update popup' appears momentarily on the Home screen immediately after app launch on Voyager Free 60+, when the Charge Case has outdated firmware but updates are expected to be handled via the Software Update tab in Device Settings.",
+    "No test verifies that no unsolicited/transient popups related to Charge Case firmware updates appear on the Home screen upon app launch, separate from the intentional DFU flow triggered via Device Settings > Software Update or Language Change.",
+    "No test covers the Home screen initial state behavior for Charge Case firmware update notifications on Voyager Free 60+ \u2014 existing tests focus on Language Change DFU flows (66363556-66363596) or Software Update tab navigation (65459427-65459457), not on transient popups appearing at app launch.",
+    "No test validates that the Charge Case firmware update flow is exclusively accessible via the Software Update tab (not via a Home screen popup) on Voyager Free 60+."
   ],
   "generated_testcases": [
     {
-      "title": "Charge Case update popup should NOT appear for Free 60+ when case can be updated via app",
+      "title": "TC-VF60-DFU-001: Verify no unsolicited Charge Case firmware update popup appears on Home screen at app launch (up-to-date firmware)",
       "steps": [
-        "Launch the app with Free 60+ earbuds already paired.",
-        "Ensure the connected Free 60+ Charge Case has outdated firmware that supports in-app update.",
-        "Observe the app home screen after launch completes.",
-        "Check if the Charge Case update popup appears.",
-        "Verify that the Charge Case update option is available within the app settings/device menu."
+        "Precondition: Voyager Free 60+ is connected to the phone. Both earbuds and Charge Case have the latest firmware installed.",
+        "1. Fully close (force-kill) the Poly Studio Mobile app.",
+        "2. Reopen Poly Studio Mobile app.",
+        "3. Observe the Home screen (main device screen showing battery levels for Left Earbud, Right Earbud, and Charge Case).",
+        "4. Wait 10 seconds on the Home screen without tapping anything.",
+        "5. Check for any popup, toast, or banner message related to 'Charge Case firmware update' or 'firmware update available'."
       ],
-      "expected": "The Charge Case update popup does NOT appear on app launch. The user can navigate to the device settings and find the Charge Case firmware update option available in-app."
+      "expected": "No popup, toast, banner, or modal dialog related to Charge Case firmware update appears on the Home screen at any point during the 10-second observation window. The Home screen displays only the standard device information and battery levels."
     },
     {
-      "title": "Free 60+ Charge Case update popup suppressed when in-app update path exists",
+      "title": "TC-VF60-DFU-002: Verify no unsolicited Charge Case firmware update popup appears on Home screen at app launch (outdated Charge Case firmware)",
       "steps": [
-        "Pair Free 60+ earbuds with the mobile app.",
-        "Ensure the Charge Case firmware version is outdated and can be updated via the app.",
-        "Close and restart the app completely.",
-        "Monitor the UI for any popup or modal related to Charge Case firmware update during the splash/loading screen.",
-        "After app fully loads, navigate to the device details or firmware update section."
+        "Precondition: Voyager Free 60+ is connected to the phone. The Charge Case has outdated firmware (e.g., version 1.0.0 when 1.2.0 is available). Earbuds may be on any firmware version.",
+        "1. Fully close (force-kill) the Poly Studio Mobile app.",
+        "2. Reopen Poly Studio Mobile app.",
+        "3. Observe the Home screen (main device screen showing battery levels for Left Earbud, Right Earbud, and Charge Case).",
+        "4. Wait 15 seconds on the Home screen without tapping anything.",
+        "5. Check for any popup, toast, banner, or modal dialog related to 'Charge Case firmware update' or 'firmware update available'.",
+        "6. If a popup appears, note its content and dismiss it if possible.",
+        "7. Navigate to Device Settings \u2192 Software Update and verify the update status there."
       ],
-      "expected": "No Charge Case update popup is displayed during or after app launch. The firmware update option is accessible within the app's device settings, confirming the popup was correctly suppressed."
+      "expected": "No unsolicited popup, toast, banner, or modal dialog related to Charge Case firmware update appears on the Home screen. The Charge Case firmware update availability is ONLY indicated within the Device Settings \u2192 Software Update screen, not via a transient Home screen popup."
     },
     {
-      "title": "Free 60+ with outdated Charge Case firmware: app restart does not trigger update popup",
+      "title": "TC-VF60-DFU-003: Verify Charge Case firmware update is exclusively accessible via Software Update tab, not via Home screen popup",
       "steps": [
-        "Connect Free 60+ earbuds with a Charge Case running outdated firmware.",
-        "Open the app and verify the Charge Case can be updated in-app (do not update yet).",
-        "Force close the app.",
-        "Re-launch the app.",
-        "Observe the screen for any popup prompting Charge Case update."
+        "Precondition: Voyager Free 60+ is connected to the phone. Charge Case has outdated firmware (e.g., version 1.0.0 when 1.2.0 is available).",
+        "1. Open Poly Studio Mobile app and wait for Home screen to fully load.",
+        "2. Verify no popup appears on Home screen (if any appears, dismiss and report as bug).",
+        "3. Tap the menu icon (hamburger or gear icon) to access Device Settings.",
+        "4. Tap 'Software Update' from the Device Settings list.",
+        "5. Verify the Software Update screen displays the Charge Case firmware update availability (e.g., 'Charge Case firmware update available' or similar text).",
+        "6. Tap 'Update' or 'Update All' to initiate the Charge Case firmware update.",
+        "7. Verify the update progress is shown and completes successfully."
       ],
-      "expected": "The Charge Case update popup does not appear after app restart. The in-app update option remains available in the device settings."
+      "expected": "The Charge Case firmware update is ONLY accessible via Device Settings \u2192 Software Update. No popup or prompt appears on the Home screen. The Software Update screen correctly shows the available Charge Case firmware update and allows the user to initiate it."
     },
     {
-      "title": "Conditional logic validation: Charge Case update popup hidden when in-app update is available",
+      "title": "TC-VF60-DFU-004: Verify no transient 'Brief Charge Case firmware update' popup appears during app launch sequence",
       "steps": [
-        "Set up Free 60+ with a Charge Case that has an available firmware update via the app.",
-        "Launch the app and verify the in-app update option is present in the device menu.",
-        "Restart the app and capture the sequence of UI elements during initialization.",
-        "Assert that no popup or dialog related to Charge Case update is shown.",
-        "Confirm the in-app update option is still accessible after the restart."
+        "Precondition: Voyager Free 60+ is connected to the phone. Charge Case has outdated firmware.",
+        "1. Fully close (force-kill) the Poly Studio Mobile app.",
+        "2. Reopen Poly Studio Mobile app and immediately observe the screen during the launch/loading sequence.",
+        "3. Pay close attention to any brief popup that may appear and disappear quickly (within 1-3 seconds) during the transition from splash screen to Home screen.",
+        "4. Record the screen (screen recording) for the first 10 seconds after app launch.",
+        "5. Review the recording frame-by-frame to detect any transient popup related to 'Charge Case firmware update' or 'Brief Charge Case firmware update'.",
+        "6. If a transient popup is detected, note its exact text, duration on screen, and whether it auto-dismisses."
       ],
-      "expected": "The app correctly suppresses the Charge Case update popup when the firmware can be updated directly through the app. The popup is not shown on launch, and the update path remains available in-app."
+      "expected": "No transient popup, even one that appears and disappears quickly, related to 'Charge Case firmware update' or 'Brief Charge Case firmware update' is observed during the app launch sequence. The Home screen transitions cleanly from splash screen to the main device view without any intermediate popups."
     },
     {
-      "title": "Regression: Free 60+ Charge Case update popup absent after app cold start with updatable firmware",
+      "title": "TC-VF60-DFU-005: Verify Charge Case firmware update popup does not appear after app restart following completed update",
       "steps": [
-        "Ensure Free 60+ earbuds are paired and the Charge Case has a pending firmware update available via the app.",
-        "Kill the app process completely (cold start).",
-        "Launch the app from scratch.",
-        "Wait for the app to fully initialize and display the home screen.",
-        "Check for any popup, dialog, or toast message about Charge Case firmware update.",
-        "Navigate to device settings to verify the update option is present."
+        "Precondition: Voyager Free 60+ is connected to the phone. Charge Case firmware update was previously completed successfully via Device Settings \u2192 Software Update.",
+        "1. Verify the Charge Case is on the latest firmware version (check in Device Settings \u2192 Software Update \u2192 Version Info).",
+        "2. Fully close (force-kill) the Poly Studio Mobile app.",
+        "3. Reopen Poly Studio Mobile app.",
+        "4. Observe the Home screen for 10 seconds.",
+        "5. Check for any popup, toast, or banner related to Charge Case firmware update.",
+        "6. Navigate to Device Settings \u2192 Software Update and confirm the status shows 'Up to date' for Charge Case."
       ],
-      "expected": "No Charge Case update popup appears on cold start. The firmware update option is available within the app's device settings, confirming the popup suppression logic works correctly."
+      "expected": "No popup related to Charge Case firmware update appears on the Home screen after app restart when the Charge Case firmware is already up to date. The Software Update screen confirms 'Up to date' status for the Charge Case."
+    },
+    {
+      "title": "TC-VF60-DFU-006: Verify Charge Case firmware update popup does not appear after Bluetooth disconnect/reconnect cycle",
+      "steps": [
+        "Precondition: Voyager Free 60+ is connected to the phone. Charge Case has outdated firmware.",
+        "1. Open Poly Studio Mobile app and verify Home screen shows no popup.",
+        "2. Disconnect the Voyager Free 60+ via phone Bluetooth settings (tap 'Disconnect' or 'Forget').",
+        "3. Wait 5 seconds.",
+        "4. Reconnect the Voyager Free 60+ by placing earbuds in the Charge Case, closing the lid, then opening the lid.",
+        "5. Open Poly Studio Mobile app (if not auto-launched).",
+        "6. Observe the Home screen for 10 seconds for any popup related to Charge Case firmware update.",
+        "7. Navigate to Device Settings \u2192 Software Update and verify the update is listed there."
+      ],
+      "expected": "No popup related to Charge Case firmware update appears on the Home screen after Bluetooth disconnect/reconnect. The update availability is only shown in Device Settings \u2192 Software Update."
+    },
+    {
+      "title": "TC-VF60-DFU-007: Verify Charge Case firmware update popup does not appear after phone reboot",
+      "steps": [
+        "Precondition: Voyager Free 60+ is connected to the phone. Charge Case has outdated firmware.",
+        "1. Open Poly Studio Mobile app and verify Home screen shows no popup.",
+        "2. Close the Poly Studio Mobile app.",
+        "3. Reboot the phone.",
+        "4. After phone restarts, ensure Bluetooth is enabled.",
+        "5. Wait for Voyager Free 60+ to auto-reconnect (or manually reconnect via Bluetooth settings).",
+        "6. Open Poly Studio Mobile app.",
+        "7. Observe the Home screen for 10 seconds for any popup related to Charge Case firmware update.",
+        "8. Navigate to Device Settings \u2192 Software Update and verify the update is listed there."
+      ],
+      "expected": "No popup related to Charge Case firmware update appears on the Home screen after phone reboot. The update availability is only shown in Device Settings \u2192 Software Update."
+    },
+    {
+      "title": "TC-VF60-DFU-008: Verify Charge Case firmware update popup does not appear when switching from another app back to Poly Studio Mobile",
+      "steps": [
+        "Precondition: Voyager Free 60+ is connected to the phone. Charge Case has outdated firmware.",
+        "1. Open Poly Studio Mobile app and verify Home screen shows no popup.",
+        "2. Press the Home button to background the Poly Studio Mobile app.",
+        "3. Open another app (e.g., Settings, Chrome, or Phone) and use it for 10 seconds.",
+        "4. Switch back to Poly Studio Mobile app via the app switcher or recent apps.",
+        "5. Observe the Home screen for 10 seconds for any popup related to Charge Case firmware update.",
+        "6. Navigate to Device Settings \u2192 Software Update and verify the update is listed there."
+      ],
+      "expected": "No popup related to Charge Case firmware update appears on the Home screen when returning to the app from background. The update availability is only shown in Device Settings \u2192 Software Update."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-24T12:05:43.492178Z"
+  "processed_at": "2026-04-25T05:50:32.305236Z"
 }
