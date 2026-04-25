@@ -12,144 +12,146 @@
     "65459448",
     "65459456",
     "65459427",
-    "65459458",
     "65459457",
     "65459438",
-    "65459432"
+    "65459432",
+    "65459433"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test case covers the 'Free 60 artwork/theme' display on Home Screen or Device Settings screen after firmware update. The bug involves artwork being missing post-update, which is a visual/UI asset loading issue not addressed by any existing test.",
-    "No test case covers firmware update specifically from version v231.591.0.5046 (MR1.5) \u2014 a specific baseline version that may have unique behaviors or failure modes during the update process.",
-    "No test case validates firmware update behavior on iOS specifically. All existing DFU tests appear to be Android-focused (Poly Studio Mobile app context) or platform-agnostic, missing iOS-specific failure modes.",
-    "No test case covers firmware update failure on PTT (Push-to-Talk) devices or while PTT functionality is active. This is a distinct state not covered by existing tests (which only cover 'active call' blocking).",
-    "No test case validates post-update UI state verification \u2014 specifically checking that device artwork/themes render correctly after a firmware update completes. This is a visual regression gap.",
-    "No test case covers the combination of firmware update + artwork asset loading. The bug suggests the update process may corrupt or fail to load device-specific UI assets (Free 60 artwork), which is a cross-functional gap between DFU and UI rendering."
+    "MISSING: Device Artwork Verification on Home Screen \u2014 No existing test case validates that the device artwork (product image) for Poly Voyager Free 60+ is correctly displayed on the Home screen. This is a visual/UI rendering gap.",
+    "MISSING: Firmware Update from Specific Baseline Version (v231.591.0.5046 MR1.5) \u2014 No test case covers a DFU attempt starting from this specific legacy firmware version. All existing DFU tests start from generic 'outdated' or 'language change' contexts, not from a known problematic baseline.",
+    "MISSING: Firmware Update Failure Path on iOS \u2014 No test case validates the behavior when a firmware update fails (error handling, error messaging, rollback state, retry mechanism). All existing DFU tests assume success or cover pre-condition blocks (active call, low battery), not mid-update failure.",
+    "MISSING: Combined Failure Scenario \u2014 No test case covers the scenario where device artwork fails to render AND a firmware update subsequently fails. This could indicate a deeper device identification/communication issue where the app cannot properly identify the device model, leading to both missing artwork and failed DFU.",
+    "MISSING: iOS-Specific DFU Validation \u2014 All existing DFU tests appear to be platform-agnostic or Android-focused. No test explicitly validates DFU behavior on iOS for Voyager Free 60+.",
+    "MISSING: Device Artwork as a Health Indicator \u2014 No test validates that missing device artwork correlates with or precedes functional failures (like DFU failure). This is a missed integration-level test between UI rendering and device communication stack."
   ],
   "generated_testcases": [
     {
-      "title": "[Free 60] Verify device artwork displays on Home Screen after firmware update from MR1.5 baseline",
+      "title": "TC-DFU-001: Voyager Free 60+ Device Artwork Rendering on Home Screen (iOS)",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ UC earbuds on firmware v231.591.0.5046 (MR1.5)",
-        "Open Poly Studio Mobile app on Android",
-        "Tap [Device Name] \u2192 Device Settings \u2192 scroll to Firmware Update",
-        "Verify current firmware version is displayed as v231.591.0.5046 (MR1.5)",
-        "Tap 'Check for Updates' and follow prompts to update to latest available firmware",
-        "Wait for firmware update to complete (do not interrupt)",
-        "After update completes, navigate to Home Screen (tap back arrow or Home tab)",
-        "Observe the device card/artwork displayed for Poly Voyager Free 60+ UC",
-        "Navigate to Device Settings screen and observe the device illustration/artwork at the top"
+        "Precondition: Poly Voyager Free 60+ is paired and connected to iOS device.",
+        "Launch Poly Studio Mobile app.",
+        "Observe the Home screen device artwork area.",
+        "Navigate to: Device \u2192 Device Info \u2192 verify model name displayed.",
+        "Return to Home screen.",
+        "Force-kill the app (swipe up from app switcher).",
+        "Reopen app and observe Home screen device artwork again."
       ],
-      "expected": "Poly Voyager Free 60+ UC device artwork is displayed correctly on both the Home Screen device card and the Device Settings screen header. Artwork is not blank, missing, or showing a generic placeholder. The earbuds and charge case illustration render with correct colors and details."
+      "expected": "Device artwork (product image) for Poly Voyager Free 60+ is displayed on the Home screen. Model name reads 'Poly Voyager Free 60+ UC' or 'Poly Voyager Free 60+'. Artwork persists after app restart. Actual (If Bug): Artwork area shows a generic placeholder icon or blank space, indicating the app failed to load the device-specific asset."
     },
     {
-      "title": "[Free 60] Verify device artwork displays on Home Screen after firmware update from MR1.5 baseline (iOS)",
+      "title": "TC-DFU-002: Firmware Update from v231.591.0.5046 (MR1.5) to Latest \u2014 Success Path (iOS)",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ UC earbuds on firmware v231.591.0.5046 (MR1.5), paired to an iOS device",
-        "Open Poly Studio Mobile app on iOS",
-        "Tap [Device Name] \u2192 Device Settings \u2192 scroll to Firmware Update",
-        "Verify current firmware version is displayed as v231.591.0.5046 (MR1.5)",
-        "Tap 'Check for Updates' and follow prompts to update to latest available firmware",
-        "Wait for firmware update to complete (do not interrupt)",
-        "After update completes, navigate to Home Screen",
-        "Observe the device card/artwork displayed for Poly Voyager Free 60+ UC",
-        "Navigate to Device Settings screen and observe the device illustration/artwork at the top"
+        "Precondition: Poly Voyager Free 60+ connected to iOS device. Current firmware version confirmed as v231.591.0.5046 (MR1.5) via Device \u2192 Device Info.",
+        "Ensure battery > 50% on both earbuds and charge case.",
+        "Ensure no active call or media streaming.",
+        "Navigate to: Device \u2192 Firmware Update.",
+        "Tap 'Check for Update'.",
+        "If update is available, tap 'Download & Install'.",
+        "Observe progress bar during download phase.",
+        "Observe progress bar during installation phase.",
+        "Wait for completion message.",
+        "Navigate to: Device \u2192 Device Info and verify new firmware version."
       ],
-      "expected": "Poly Voyager Free 60+ UC device artwork is displayed correctly on both the Home Screen device card and the Device Settings screen header on iOS. Artwork is not blank, missing, or showing a generic placeholder."
+      "expected": "App detects latest firmware. Download completes to 100%. Installation completes to 100%. Device reboots successfully. Device Info shows updated firmware version > v231.591.0.5046. Actual (If Bug): Update fails at any stage (download stalls, installation fails at X%, device enters recovery mode, or app shows generic 'Update Failed' without actionable error message.)"
     },
     {
-      "title": "[Free 60] Verify device artwork persists after app restart following firmware update from MR1.5",
+      "title": "TC-DFU-003: Firmware Update Failure from v231.591.0.5046 (MR1.5) \u2014 Error Handling & Rollback Verification (iOS)",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ UC earbuds on firmware v231.591.0.5046 (MR1.5)",
-        "Open Poly Studio Mobile app on Android",
-        "Update firmware from v231.591.0.5046 (MR1.5) to latest via Device Settings \u2192 Firmware Update",
-        "After update completes, verify artwork is visible on Home Screen",
-        "Fully close the Poly Studio Mobile app (swipe from Recents or force-stop)",
-        "Reopen Poly Studio Mobile app",
-        "Observe the Home Screen device card/artwork for Poly Voyager Free 60+ UC",
-        "Tap [Device Name] \u2192 Device Settings and observe the device illustration"
+        "Precondition: Poly Voyager Free 60+ on v231.591.0.5046 (MR1.5) connected to iOS.",
+        "Navigate to: Device \u2192 Firmware Update \u2192 Check for Update \u2192 Start Download & Install.",
+        "During installation phase, simulate a failure condition: place the earbuds back in the charge case and close the lid mid-installation.",
+        "Wait 60 seconds.",
+        "Open charge case lid and observe app state.",
+        "Check the error message displayed.",
+        "Tap any available retry/dismiss button.",
+        "Navigate to: Device \u2192 Device Info and verify firmware version.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Transparency Mode \u2192 verify Environment (Surround) and Speech (Free) sliders are functional and persist."
       ],
-      "expected": "Device artwork for Poly Voyager Free 60+ UC is still displayed correctly after app restart. No blank/placeholder images. Artwork loads consistently across app sessions post-update."
+      "expected": "App detects installation interruption and displays a clear error message (e.g., 'Update interrupted. Please try again.' or 'Installation failed. Device is in recovery mode.'). Device does not enter an unrecoverable bricked state. Firmware version either remains at v231.591.0.5046 (rollback) or shows a partial version if recovery mode is active. Audio settings remain accessible and functional. Actual (If Bug): App shows generic 'Something went wrong' with no retry path, device becomes unresponsive, or settings are wiped/reset after failure."
     },
     {
-      "title": "[Free 60] Firmware update from MR1.5 baseline fails gracefully on iOS \u2014 verify no UI corruption",
+      "title": "TC-DFU-004: Combined Failure \u2014 Missing Device Artwork Precedes DFU Failure (iOS)",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ UC earbuds on firmware v231.591.0.5046 (MR1.5), paired to iOS device",
-        "Open Poly Studio Mobile app on iOS",
-        "Navigate to Device Settings \u2192 Firmware Update",
-        "Initiate firmware update to latest version",
-        "If update fails (as per known bug): observe the error dialog/message displayed",
-        "Dismiss the error dialog",
-        "Navigate to Home Screen and observe device artwork",
-        "Navigate to Device Settings and observe device artwork",
-        "Check that all other UI elements (battery levels, connection status, audio settings) are still functional and rendering correctly"
+        "Precondition: Poly Voyager Free 60+ connected to iOS device.",
+        "Launch app and observe Home screen device artwork.",
+        "If artwork is missing (placeholder/blank), document this as a pre-condition failure indicator.",
+        "Without fixing the artwork issue, navigate to: Device \u2192 Firmware Update.",
+        "Tap 'Check for Update' and proceed with available update.",
+        "Observe the entire DFU flow.",
+        "If DFU fails, note the error message and device state.",
+        "Force-kill app, reopen, and check if artwork now renders.",
+        "Navigate to: Device \u2192 Device Info and verify model identification string."
       ],
-      "expected": "If firmware update fails on iOS, the error is handled gracefully with a clear error message. Device artwork on Home Screen and Device Settings remains intact and is not replaced by a blank/placeholder image. All other UI elements remain functional. No visual corruption occurs as a result of the failed update."
+      "expected": "If artwork is missing on Home screen, the DFU flow is expected to either: (a) fail with a specific error indicating device identification failure, or (b) succeed but with degraded UX. If DFU fails, the error message should be specific (e.g., 'Unable to identify device model. Update cannot proceed.') rather than generic. After app restart, artwork may render correctly if the issue was a transient loading failure. Actual (If Bug): Missing artwork + DFU fails with generic error, indicating a deeper device communication stack issue where the app cannot properly identify the Voyager Free 60+ model, affecting both UI rendering and firmware update capability."
     },
     {
-      "title": "[Free 60] Firmware update from MR1.5 while PTT (Push-to-Talk) is active \u2014 verify update blocked and artwork intact",
+      "title": "TC-DFU-005: Device Artwork as Health Indicator \u2014 Immediate State Trigger on App Launch (iOS)",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ UC earbuds on firmware v231.591.0.5046 (MR1.5), paired to Android device with PTT-capable app configured",
-        "Open Poly Studio Mobile app on Android",
-        "Navigate to Device Settings \u2192 Firmware Update",
-        "Verify current firmware is v231.591.0.5046 (MR1.5)",
-        "Activate PTT functionality on the paired device (e.g., via Microsoft Teams or other PTT app)",
-        "While PTT is active, tap 'Check for Updates' or 'Update' in the Firmware Update screen",
-        "Observe the app behavior \u2014 does it block the update, show a warning, or proceed?",
-        "Deactivate PTT",
-        "Navigate to Home Screen and observe device artwork",
-        "Navigate to Device Settings and observe device artwork"
+        "Precondition: Poly Voyager Free 60+ connected to iOS device. App is fully closed (not backgrounded).",
+        "Enable Airplane Mode on iOS device.",
+        "Launch Poly Studio Mobile app.",
+        "Observe Home screen device artwork area.",
+        "Disable Airplane Mode and wait for Bluetooth reconnection.",
+        "Observe artwork area again after reconnection.",
+        "Navigate to: Device \u2192 Firmware Update and verify update availability check behavior.",
+        "Force-kill app, reopen with Bluetooth already connected, observe artwork."
       ],
-      "expected": "The firmware update is blocked or a clear warning is displayed indicating that firmware update cannot proceed while PTT is active. After deactivating PTT, the device artwork on Home Screen and Device Settings remains correctly displayed (no blank/placeholder images)."
+      "expected": "With Airplane Mode ON (no Bluetooth): Home screen shows 'No device connected' or similar state; artwork area is empty/placeholder. After Bluetooth reconnects: artwork loads within 5 seconds, confirming the device communication stack is healthy. Firmware update check returns available updates. After app restart with connected device: artwork renders immediately on launch. Actual (If Bug): Artwork remains blank/placeholder even after Bluetooth reconnects, indicating the app's device identification pipeline failed to resolve the model \u2014 this is a health indicator that DFU will likely also fail."
     },
     {
-      "title": "[Free 60] Firmware update from MR1.5 baseline \u2014 verify artwork loads correctly after update completes on PTT device",
+      "title": "TC-DFU-006: Firmware Update from v231.591.0.5046 (MR1.5) \u2014 Deep Lifecycle Resilience (iOS)",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ UC earbuds on firmware v231.591.0.5046 (MR1.5), paired to Android device",
-        "Open Poly Studio Mobile app on Android",
-        "Navigate to Device Settings \u2192 Firmware Update",
-        "Ensure no PTT session is active",
-        "Update firmware from v231.591.0.5046 (MR1.5) to latest",
-        "Wait for update to complete successfully",
-        "After update completes, navigate to Home Screen",
-        "Verify device artwork for Free 60+ UC is displayed correctly",
-        "Navigate to Device Settings \u2192 Audio Settings \u2192 Transparency Mode \u2192 Environment",
-        "Verify Surround level slider is functional and UI renders correctly",
-        "Switch to Speech sub-setting and verify Free level slider is functional",
-        "Return to Home Screen and verify artwork is still displayed"
+        "Precondition: Poly Voyager Free 60+ on v231.591.0.5046 (MR1.5) connected to iOS.",
+        "Navigate to: Device \u2192 Firmware Update \u2192 Start Download.",
+        "During download phase (at ~30%), press Home button to background the app.",
+        "Wait 30 seconds.",
+        "Reopen app from app switcher.",
+        "Observe download progress state.",
+        "During installation phase (at ~50%), press Home button to background the app.",
+        "Wait 30 seconds.",
+        "Reopen app from app switcher.",
+        "Observe installation progress state.",
+        "Wait for completion.",
+        "Verify final firmware version in Device Info.",
+        "Verify audio settings persistence: Navigate to Transparency Mode \u2192 set Environment Surround to 75 and Speech Free to 40 \u2192 switch between tabs \u2192 confirm values persist."
       ],
-      "expected": "After successful firmware update from MR1.5 baseline, the Free 60+ UC device artwork renders correctly on Home Screen and Device Settings. All audio settings UI (Transparency Mode sub-settings) remain functional and render correctly. No visual regression occurs post-update."
+      "expected": "Download and installation progress persists correctly after app backgrounding and foregrounding. Progress bar resumes from where it left off (not reset to 0). Installation completes successfully. Final firmware version is updated. Transparency Mode sub-setting values (Surround=75, Speech=40) persist after switching between Environment and Speech tabs. Actual (If Bug): Progress resets to 0 after foregrounding, installation fails silently, or sub-setting values are lost after the DFU lifecycle."
     },
     {
-      "title": "[Free 60] Verify artwork asset loading after firmware update + app force-kill + Bluetooth reconnect cycle",
+      "title": "TC-DFU-007: Firmware Update Failure Recovery \u2014 Retry Mechanism Validation (iOS)",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ UC earbuds on firmware v231.591.0.5046 (MR1.5)",
-        "Open Poly Studio Mobile app on Android",
-        "Update firmware from v231.591.0.5046 (MR1.5) to latest",
-        "After update completes, verify artwork is visible on Home Screen",
-        "Force-kill the Poly Studio Mobile app (Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Force Stop)",
-        "Disconnect Bluetooth from the phone (turn off Bluetooth or unpair)",
-        "Re-enable Bluetooth and reconnect to the Poly Voyager Free 60+ UC",
-        "Open Poly Studio Mobile app",
-        "Observe the Home Screen device card/artwork",
-        "Tap [Device Name] \u2192 Device Settings and observe the device illustration"
+        "Precondition: Poly Voyager Free 60+ on v231.591.0.5046 (MR1.5) connected to iOS.",
+        "Navigate to: Device \u2192 Firmware Update \u2192 Start Download & Install.",
+        "Force a failure by disconnecting Bluetooth from iOS Control Center during installation phase.",
+        "Wait for error state to appear.",
+        "Observe error message content and available actions.",
+        "Tap 'Retry' or equivalent button.",
+        "Observe if DFU restarts from beginning or resumes.",
+        "Reconnect Bluetooth when prompted.",
+        "Complete the update successfully.",
+        "Verify device artwork on Home screen post-update.",
+        "Verify Transparency Mode sub-setting values persist post-update."
       ],
-      "expected": "After the full lifecycle cycle (update \u2192 force-kill \u2192 Bluetooth disconnect/reconnect \u2192 relaunch), the Poly Voyager Free 60+ UC artwork loads correctly on both Home Screen and Device Settings. No blank/placeholder images or generic device icons are shown."
+      "expected": "Error message clearly states 'Bluetooth disconnected. Update interrupted.' Retry button is available. Tapping Retry restarts the DFU process from the download phase (not installation). After reconnecting Bluetooth, the update completes successfully. Device artwork renders correctly post-update. Transparency Mode sub-settings retain default or previously set values. Actual (If Bug): No retry button, app shows unrecoverable error, device enters recovery mode with no exit path, or artwork is missing after recovery."
     },
     {
-      "title": "[Free 20] Verify device artwork displays correctly after firmware update (regression check \u2014 non-Free 60 device)",
+      "title": "TC-DFU-008: Device Artwork & DFU Combined \u2014 iOS-Specific Memory Pressure Test",
       "steps": [
-        "Precondition: Poly Voyager Free 20 earbuds paired to Android device",
-        "Open Poly Studio Mobile app on Android",
-        "Navigate to Device Settings \u2192 Firmware Update",
-        "Update firmware to latest available version",
-        "After update completes, navigate to Home Screen",
-        "Observe the device card/artwork for Poly Voyager Free 20",
-        "Navigate to Device Settings and observe the device illustration"
+        "Precondition: Poly Voyager Free 60+ connected to iOS device on v231.591.0.5046 (MR1.5).",
+        "Launch Poly Studio Mobile app and verify artwork renders on Home screen.",
+        "Open Safari and load 10+ heavy media tabs to induce iOS memory pressure.",
+        "Switch back to Poly Studio Mobile app.",
+        "Observe if artwork is still rendered or has been replaced by placeholder.",
+        "Without closing Safari tabs, navigate to: Device \u2192 Firmware Update \u2192 Start DFU.",
+        "Observe DFU behavior under memory pressure.",
+        "Complete or fail the update.",
+        "Force-kill all apps, reopen Poly Studio Mobile, verify artwork and device state."
       ],
-      "expected": "Poly Voyager Free 20 device artwork is displayed correctly on both Home Screen and Device Settings after firmware update. This confirms the artwork loading issue is specific to Free 60+ UC and not a general regression affecting all device models."
+      "expected": "Under iOS memory pressure, the app may reload. Upon returning to the app, artwork should re-render within 5 seconds (not remain blank). DFU should either complete successfully or show a clear error if memory was insufficient. After full app restart, artwork renders correctly and device is in a known good state. Actual (If Bug): Artwork fails to re-render after memory pressure (stays blank), DFU fails silently or crashes the app, or device enters an unknown state requiring manual repair."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:17.438259Z"
+  "processed_at": "2026-04-25T09:46:05.547203Z"
 }
