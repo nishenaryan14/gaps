@@ -7,29 +7,32 @@
   "feature": "Notifications",
   "scenario": "Notifications UI does not update after enabling notifications via OS settings from the Poly Studio Mobile app's General settings",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and complete onboarding, selecting \"Don't Allow\" when prompted for notification permissions.",
-    "2. Navigate to App Settings > General > Notifications.",
-    "3. Toggle the Notifications switch ON.",
-    "4. Tap \"Go to Settings\" to navigate to the OS notification settings for the app.",
-    "5. Enable notifications for the Poly Studio Mobile app in the OS settings.",
-    "6. Return to the Poly Studio Mobile app.",
-    "7. Observe the Notifications screen in the app."
+    "1. Launch the Poly Studio Mobile app and begin onboarding.",
+    "2. When prompted for notification permissions, select \"Don't Allow\".",
+    "3. Complete onboarding and land on the Home screen.",
+    "4. Navigate to App Settings \u2192 General \u2192 Notifications.",
+    "5. Tap the Notifications toggle switch to turn it ON.",
+    "6. Tap \"Go to Settings\" to navigate to the OS notification settings for the app.",
+    "7. Enable notifications for Poly Studio Mobile in the OS settings.",
+    "8. Return to the Poly Studio Mobile app.",
+    "9. Observe the Notifications screen in App Settings \u2192 General \u2192 Notifications."
   ],
-  "expected": "The app UI updates to show all notification settings unlocked and set to ON, allowing the user to change them.",
+  "expected": "All notification settings should be unlocked and set to ON, and the user should be able to change individual notification settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "notifications-ui",
-    "notification-permissions",
     "os-settings",
     "general-settings",
-    "ui-refresh",
-    "app-settings"
+    "notification-permissions",
+    "toggle-switch",
+    "settings-persistence",
+    "ui-refresh"
   ],
   "source_last_updated": "1761229691",
   "source_hash": "e78b9f5cac27b0efaaf139d38d91588c7ca16f6af0d93d5e6f1f3c55fcb80725",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.047099Z",
+  "processed_at": "2026-04-25T09:32:26.312500Z",
   "status": "active"
 }
