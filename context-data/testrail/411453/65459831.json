@@ -5,34 +5,23 @@
   "project": "411453",
   "title": "Notifications -  Low Battery OFF",
   "feature": "Notifications",
-  "scenario": "Low Battery notification does not appear after power cycling when disabled in Poly Lens Menu > General > Notifications & Device Alerts",
-  "steps": [
-    "1. Open the Poly Studio Mobile app on the paired mobile device.",
-    "2. Navigate to the Home screen.",
-    "3. Tap the Menu icon (hamburger menu) in the top-left corner.",
-    "4. Select 'General' from the menu.",
-    "5. Tap 'Notifications & Device Alerts'.",
-    "6. Locate the 'Low Battery' notification toggle and turn it OFF.",
-    "7. Ensure the paired Poly Bluetooth audio device has a battery level below 5%.",
-    "8. Power cycle the paired device (turn it OFF, then ON again).",
-    "9. Observe the mobile device for any notification."
-  ],
-  "expected": "The 'Device has a low battery' notification does NOT appear on the mobile device after power cycling.",
+  "scenario": "Low Battery notification suppressed in Poly Lens Menu does not reappear after power cycling a device with battery below 5%",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "low-battery-notification",
-    "poly-studio-mobile",
-    "notifications-device-alerts",
-    "power-cycle",
-    "battery-persistence",
     "poly-lens-menu",
-    "general-settings",
-    "bluetooth-pairing"
+    "power-cycling",
+    "battery-persistence",
+    "battery-below-5-percent",
+    "notification-suppression",
+    "device-reboot"
   ],
   "source_last_updated": "1761226813",
   "source_hash": "2a25554afd6231a94fc7930de92bab91faf0238d1ccd0219b5405508a1e0f254",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.973249Z",
+  "processed_at": "2026-04-25T08:21:31.047099Z",
   "status": "active"
 }
