@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "DFU - Emu/Tern - Charge Case update needed popup after earbud DFU",
-  "feature": "DFU / Firmware Update",
-  "scenario": "After completing a DFU for earbuds, verify that a \"Case Update Needed\" popup appears on the Device Home Screen instructing the user to use the Poly Lens Desktop app for case updates.",
+  "feature": "Firmware Update",
+  "scenario": "\"Case Update Needed\" popup appears on Device Home Screen after earbud DFU, requiring charging case firmware update via Poly Lens Desktop app on Voyager Free 60+ or Voyager Free 20",
   "steps": [
-    "Ensure the charge case and earbuds are on outdated firmware.",
-    "Perform a Device Firmware Update (DFU) for the earbuds.",
-    "Observe the Device Home Screen after the DFU completes."
+    "Open Poly Studio Mobile app on Android",
+    "Navigate to Home screen",
+    "Connect Voyager Free 60+ or Voyager Free 20 earbuds",
+    "Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update",
+    "Complete the Device Firmware Update (DFU) for the earbuds",
+    "Observe the popup on the Device Home screen after DFU completes"
   ],
-  "expected": "A popup appears on the Device Home Screen stating \"Case Update Needed\" with a message that earbuds have been updated but case updates must be made using the Poly Lens Desktop app.",
+  "expected": "After DFU completes, no popup should appear, or the app should provide a clear in-app path to update the charging case firmware directly within Poly Studio Mobile.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU",
-    "Device Firmware Update",
-    "Case Update Needed",
-    "popup",
-    "Device Home Screen",
-    "Poly Lens Desktop",
-    "earbuds",
-    "charge case"
+    "case-update-needed",
+    "charging-case-firmware",
+    "poly-lens-desktop",
+    "voyager-free-60-plus",
+    "voyager-free-20",
+    "device-firmware-update-dfu",
+    "poly-studio-mobile-app",
+    "device-home-screen-popup"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "a4c24963db074d8790b9c7300aed625f773a899faad801748db4da62a4fe52c6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.526317Z",
+  "processed_at": "2026-04-25T05:37:17.103339Z",
   "status": "active"
 }
