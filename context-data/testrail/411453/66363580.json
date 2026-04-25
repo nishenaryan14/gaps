@@ -5,23 +5,35 @@
   "project": "411453",
   "title": "Home Screen - Update Available - Both earbuds are connected",
   "feature": "Firmware Updates",
-  "scenario": "Home screen Status Box correctly shows battery levels, connected status, and firmware update info when both earbuds are connected and an update is available",
-  "steps": [],
-  "expected": "",
+  "scenario": "Home screen Status Box correctly displays battery levels, green connected indicator, current software version with red indicator, and available update version when both earbuds are connected and firmware update is available; tapping Status Box hides Software and Available fields",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure both earbuds are connected to the app (Left and Right).",
+    "3. Confirm that a firmware update is available for the connected device.",
+    "4. Observe the Home screen Status Box.",
+    "5. Verify the battery levels for Left, Right, and Case are displayed in the Status Box.",
+    "6. Verify a green \"connected\" status indicator is shown in the Status Box.",
+    "7. Verify the current software version is displayed with a red indicator in the Status Box.",
+    "8. Verify the available update version is displayed in the Status Box.",
+    "9. Tap the Status Box.",
+    "10. Observe the Status Box after tapping."
+  ],
+  "expected": "The Home screen Status Box displays battery levels for Left, Right, and Case, a green \"connected\" status indicator, the current software version with a red indicator, and the available update version. After tapping the Status Box, the Software and Available fields are hidden.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "home-screen",
+    "poly-studio-mobile",
     "status-box",
     "battery-levels",
-    "connected-status",
     "firmware-update",
-    "earbuds-connected",
-    "update-available"
+    "connected-indicator",
+    "software-version",
+    "available-update-version",
+    "home-screen"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "fa494266b8f3136e2bb8c09a90f96c57e06282d2f084542fa2d84c86270526d7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.011871Z",
+  "processed_at": "2026-04-25T08:21:31.086239Z",
   "status": "active"
 }
