@@ -5,18 +5,18 @@
   "project": "411453",
   "title": "Device  Home Screen - Starting app without internet connection",
   "feature": "App Settings",
-  "scenario": "Poly Studio Mobile app home screen fails to load images and data when opened without internet, but recovers after reconnection",
+  "scenario": "Poly Studio Mobile app home screen fails to load images and data when opened without internet connection, but recovers after reconnecting",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the mobile device.",
-    "2. Ensure the app is connected to the internet (Wi-Fi or cellular) and a Poly Bluetooth audio device is paired and visible on the Home screen.",
-    "3. Close or background the app.",
-    "4. Turn off all internet connections on the mobile device (disable Wi-Fi and cellular data).",
-    "5. Reopen the Poly Studio Mobile app.",
-    "6. Observe the Home screen for the paired device and any internet-dependent content (e.g., images, banners, or promotional graphics).",
-    "7. Reconnect the mobile device to the internet (enable Wi-Fi or cellular data).",
-    "8. Observe the Home screen again for the loading and display of all previously missing data and images."
+    "1. Turn off Wi-Fi and cellular data on the mobile device (no internet connection).",
+    "2. Open the Poly Studio Mobile app.",
+    "3. Observe the Home screen.",
+    "4. Verify that the paired Poly audio device is still displayed on the Home screen.",
+    "5. Note that features requiring internet (e.g., images on the Home page) are missing or not loaded.",
+    "6. Reconnect the mobile device to the internet (turn on Wi-Fi or cellular data).",
+    "7. Observe the Home screen again.",
+    "8. Verify that all data and images load and display properly."
   ],
-  "expected": "When the app is opened without an internet connection, the paired device should still be displayed on the Home screen, but internet-dependent features (e.g., images) may be missing. After reconnecting to the internet, all data and images should load and display properly.",
+  "expected": "After reconnecting to the internet, all data and images on the Home screen load and display properly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,14 +24,14 @@
     "home-screen",
     "offline-mode",
     "image-loading",
-    "internet-reconnection",
     "data-recovery",
-    "bluetooth-pairing",
-    "app-behavior"
+    "internet-connectivity",
+    "app-resilience",
+    "network-reconnection"
   ],
   "source_last_updated": "1761837735",
   "source_hash": "804d39e90d36b8909a435313b070366d438613f18094783d4b0a6db6e19b443f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.919579Z",
+  "processed_at": "2026-04-25T09:32:26.146531Z",
   "status": "active"
 }
