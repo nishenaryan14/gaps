@@ -5,23 +5,20 @@
   "project": "411453",
   "title": "Device Settings - All toggles OFF - Persist after closing tab, settings page or app",
   "feature": "Device Settings",
-  "scenario": "Toggle button states in Device Settings do not persist as OFF after closing and reopening tabs, returning to Device Home Screen, or restarting the app",
+  "scenario": "Toggle button OFF state does not persist in Device Settings after closing/reopening tabs, returning to Device Home Screen, or restarting the Poly Studio Mobile app",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
     "Tap on the connected [Device Name] to open Device Settings",
     "Set all toggle buttons (e.g., ANC, Transparency Mode, Equalizer, etc.) to OFF",
     "Close the Device Settings tab",
-    "Reopen the Device Settings tab",
-    "Verify all toggle buttons remain OFF",
+    "Reopen Device Settings tab",
     "Return to the Device Home Screen",
     "Navigate back to Device Settings",
-    "Verify all toggle buttons remain OFF",
-    "Restart the Poly Studio Mobile app",
-    "Navigate to Home \u2192 [Device Name] \u2192 Device Settings",
-    "Verify all toggle buttons remain OFF"
+    "Force close and restart the Poly Studio Mobile app",
+    "Navigate to Home \u2192 [Device Name] \u2192 Device Settings"
   ],
-  "expected": "All toggle buttons in Device Settings persist as OFF after closing and reopening tabs, returning to the Device Home Screen, and restarting the app.",
+  "expected": "All toggle buttons remain OFF after closing/reopening tabs, returning to the Home screen, and restarting the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -31,12 +28,12 @@
     "anc",
     "transparency-mode",
     "equalizer",
-    "state-retention",
-    "settings-persistence"
+    "state-persistence",
+    "settings-revert"
   ],
   "source_last_updated": "1762432129",
   "source_hash": "b561e3468cffd436cb0b5286f0e8007257e44e966795222cb3d7a9e958c25762",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.793822Z",
+  "processed_at": "2026-04-25T07:55:31.866426Z",
   "status": "active"
 }
