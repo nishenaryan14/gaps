@@ -1,83 +1,205 @@
 [
   {
-    "title": "Custom EQ settings persist after saving and reopening on Falcon Grey (Android)",
+    "title": "Custom EQ Save Persistence \u2014 Navigate Away and Back Within Same Session",
     "steps": [
-      "1. Launch the app on Falcon Grey (Android) device.",
-      "2. Navigate to Settings > Audio > Equalizer (EQ).",
-      "3. Verify the EQ settings page is displayed.",
-      "4. Set a custom EQ profile by adjusting at least 3 different frequency bands to non-default values (e.g., increase bass, reduce mids, boost treble).",
-      "5. Tap 'Save' or 'Apply' to save the custom EQ settings.",
-      "6. Navigate away from the EQ settings page (e.g., go back to Settings or Audio menu).",
-      "7. Reopen the EQ settings page (Settings > Audio > Equalizer).",
-      "8. Observe the EQ band values displayed."
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name (e.g., 'Voyager Free 60+').",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Verify the current EQ preset is displayed (e.g., 'Neutral').",
+      "Tap the 'Custom' preset tab to enter custom EQ mode.",
+      "Adjust any one slider to a non-default value (e.g., set 125 Hz band to +6 dB).",
+      "Tap the 'Save' button.",
+      "Observe the confirmation that the custom EQ profile was saved (e.g., 'Custom EQ saved' toast or the preset label shows 'Custom').",
+      "Tap the back arrow (<-) to return to Audio Settings screen.",
+      "Tap 'Equalizer' again to reopen the EQ settings page.",
+      "Verify that the 125 Hz slider is still at +6 dB (the saved custom value).",
+      "Verify that the preset label still shows 'Custom'."
     ],
-    "expected": "All custom EQ band adjustments made in step 4 are retained and displayed correctly after reopening the EQ settings page. The values should match exactly what was saved."
+    "expected": "After saving a custom EQ profile, navigating away from the EQ page and back, the custom slider positions are retained exactly as saved, and the preset label shows 'Custom'."
   },
   {
-    "title": "Custom EQ settings persist after app restart on Falcon Grey (Android)",
+    "title": "Custom EQ Save Persistence \u2014 App Background and Foreground",
     "steps": [
-      "1. Launch the app on Falcon Grey (Android) device.",
-      "2. Navigate to Settings > Audio > Equalizer (EQ).",
-      "3. Set a custom EQ profile by adjusting frequency bands to distinct non-default values.",
-      "4. Save the custom EQ settings.",
-      "5. Fully close the app (swipe from recent apps or force stop).",
-      "6. Relaunch the app.",
-      "7. Navigate to Settings > Audio > Equalizer (EQ).",
-      "8. Check the EQ band values."
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Adjust multiple sliders to distinct values (e.g., set 250 Hz to +3 dB, 1 kHz to -2 dB, 4 kHz to +5 dB).",
+      "Tap the 'Save' button.",
+      "Press the Home button to background the app.",
+      "Wait 5 seconds.",
+      "Reopen the Poly Studio Mobile app from the app switcher or home screen.",
+      "Navigate back to Audio Settings \u2192 Equalizer.",
+      "Verify that the 250 Hz slider shows +3 dB, the 1 kHz slider shows -2 dB, and the 4 kHz slider shows +5 dB.",
+      "Verify the preset label shows 'Custom'."
     ],
-    "expected": "All custom EQ band adjustments are retained after a full app restart. The EQ settings page displays the previously saved custom values."
+    "expected": "After saving a custom EQ profile, backgrounding and foregrounding the app retains all custom slider positions exactly as saved."
   },
   {
-    "title": "Custom EQ settings persist after switching audio output device on Falcon Grey (Android)",
+    "title": "Custom EQ Save Persistence \u2014 App Force-Kill and Relaunch",
     "steps": [
-      "1. Launch the app on Falcon Grey (Android) device.",
-      "2. Navigate to Settings > Audio > Equalizer (EQ).",
-      "3. Set a custom EQ profile with specific band adjustments.",
-      "4. Save the custom EQ settings.",
-      "5. Switch audio output from speaker to Bluetooth headphones (pair a Bluetooth device).",
-      "6. Play audio through Bluetooth headphones.",
-      "7. Navigate back to Settings > Audio > Equalizer (EQ).",
-      "8. Observe the EQ band values."
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Adjust sliders to specific values (e.g., set 63 Hz to +2 dB, 500 Hz to -1 dB, 8 kHz to +4 dB, 16 kHz to +3 dB).",
+      "Tap the 'Save' button.",
+      "Fully close (force-kill) the Poly Studio Mobile app from the recent apps list or OS settings.",
+      "Wait 3 seconds.",
+      "Relaunch the Poly Studio Mobile app.",
+      "Wait for the app to connect to the device automatically.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Verify that the 63 Hz slider shows +2 dB, the 500 Hz slider shows -1 dB, the 8 kHz slider shows +4 dB, and the 16 kHz slider shows +3 dB.",
+      "Verify the preset label shows 'Custom'."
     ],
-    "expected": "Custom EQ settings persist and are displayed correctly after switching the audio output device. The saved EQ profile remains unchanged."
+    "expected": "After saving a custom EQ profile, force-killing and relaunching the app retains all custom slider positions exactly as saved."
   },
   {
-    "title": "Custom EQ settings persist after switching between EQ presets and back to custom on Falcon Grey (Android)",
+    "title": "Custom EQ Save Persistence \u2014 Bluetooth Disconnect and Reconnect",
     "steps": [
-      "1. Launch the app on Falcon Grey (Android) device.",
-      "2. Navigate to Settings > Audio > Equalizer (EQ).",
-      "3. Set a custom EQ profile with specific band adjustments.",
-      "4. Save the custom EQ settings.",
-      "5. Select a different EQ preset (e.g., 'Rock', 'Jazz', or 'Classical').",
-      "6. Save or apply the preset.",
-      "7. Switch back to the 'Custom' EQ option.",
-      "8. Observe the EQ band values."
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Adjust sliders to specific values (e.g., set 125 Hz to +5 dB, 2 kHz to -3 dB, 8 kHz to +6 dB).",
+      "Tap the 'Save' button.",
+      "Disconnect the Bluetooth device (e.g., turn off the device or disable Bluetooth on the phone).",
+      "Wait 5 seconds.",
+      "Reconnect the Bluetooth device (e.g., turn on the device or re-enable Bluetooth).",
+      "Wait for the app to reconnect and show the device as connected.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Verify that the 125 Hz slider shows +5 dB, the 2 kHz slider shows -3 dB, and the 8 kHz slider shows +6 dB.",
+      "Verify the preset label shows 'Custom'."
     ],
-    "expected": "When switching back to the 'Custom' EQ option, the previously saved custom EQ band values are restored and displayed correctly."
+    "expected": "After saving a custom EQ profile, disconnecting and reconnecting Bluetooth retains all custom slider positions exactly as saved."
   },
   {
-    "title": "EQ settings page loads with default values on first visit on Falcon Grey (Android)",
+    "title": "Custom EQ Save Persistence \u2014 Device Power Off and On",
     "steps": [
-      "1. Ensure the app is freshly installed or EQ settings have been reset to defaults on Falcon Grey (Android).",
-      "2. Launch the app.",
-      "3. Navigate to Settings > Audio > Equalizer (EQ).",
-      "4. Observe the EQ band values without making any changes.",
-      "5. Note the default values for each frequency band."
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Adjust sliders to specific values (e.g., set 250 Hz to +4 dB, 1 kHz to 0 dB, 4 kHz to +7 dB).",
+      "Tap the 'Save' button.",
+      "Power off the Bluetooth device (e.g., press and hold the power button until the device turns off).",
+      "Wait 5 seconds.",
+      "Power on the Bluetooth device.",
+      "Wait for the device to reconnect to the phone automatically.",
+      "Open the Poly Studio Mobile app and tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Verify that the 250 Hz slider shows +4 dB, the 1 kHz slider shows 0 dB, and the 4 kHz slider shows +7 dB.",
+      "Verify the preset label shows 'Custom'."
     ],
-    "expected": "The EQ settings page loads with manufacturer/app default values. All frequency bands are set to neutral (0 dB) or the defined default levels."
+    "expected": "After saving a custom EQ profile, powering the device off and on retains all custom slider positions exactly as saved on the device."
   },
   {
-    "title": "EQ settings persist after device rotation on Falcon Grey (Android)",
+    "title": "Custom EQ Save \u2014 Rapid Save and Reopen Cycle (Stress Test)",
     "steps": [
-      "1. Launch the app on Falcon Grey (Android) device.",
-      "2. Navigate to Settings > Audio > Equalizer (EQ).",
-      "3. Set a custom EQ profile with specific band adjustments.",
-      "4. Save the custom EQ settings.",
-      "5. Rotate the device from portrait to landscape.",
-      "6. Observe the EQ band values on the rotated screen.",
-      "7. Rotate the device back to portrait.",
-      "8. Observe the EQ band values again."
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Set 125 Hz slider to +8 dB.",
+      "Tap the 'Save' button.",
+      "Immediately tap the back arrow (<-) to go to Audio Settings.",
+      "Immediately tap 'Equalizer' to reopen the EQ page.",
+      "Verify the 125 Hz slider shows +8 dB.",
+      "Set 250 Hz slider to -4 dB.",
+      "Tap the 'Save' button.",
+      "Immediately tap the back arrow (<-).",
+      "Immediately tap 'Equalizer' to reopen.",
+      "Verify the 125 Hz slider still shows +8 dB and the 250 Hz slider shows -4 dB.",
+      "Repeat steps 11-14 two more times with different slider values (e.g., 1 kHz to +3 dB, then 4 kHz to -2 dB).",
+      "After the final reopen, verify all previously set slider values are retained correctly."
     ],
-    "expected": "Custom EQ settings persist and are displayed correctly after device rotation in both orientations. No values are reset or lost."
+    "expected": "Rapidly saving custom EQ values and immediately reopening the EQ page retains all saved custom slider positions without data loss or corruption."
+  },
+  {
+    "title": "Custom EQ Save \u2014 Switching Between Custom and Presets Then Back to Custom",
+    "steps": [
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Adjust sliders to specific values (e.g., set 63 Hz to +3 dB, 500 Hz to +2 dB, 4 kHz to -1 dB).",
+      "Tap the 'Save' button.",
+      "Tap a different preset (e.g., 'Bass Boost').",
+      "Verify the sliders change to the Bass Boost preset values.",
+      "Tap the 'Custom' preset tab again.",
+      "Verify that the sliders return to the previously saved custom values (63 Hz: +3 dB, 500 Hz: +2 dB, 4 kHz: -1 dB).",
+      "Verify the preset label shows 'Custom'."
+    ],
+    "expected": "Switching from a saved Custom EQ profile to a preset and back to Custom restores the exact saved custom slider positions."
+  },
+  {
+    "title": "Custom EQ Save \u2014 Modify Saved Custom Values and Re-Save",
+    "steps": [
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Set 125 Hz to +4 dB, 1 kHz to -2 dB, 8 kHz to +5 dB.",
+      "Tap the 'Save' button.",
+      "Navigate away (tap back arrow) and reopen Equalizer to confirm values are saved.",
+      "Modify the values: change 125 Hz from +4 dB to +7 dB, change 1 kHz from -2 dB to +1 dB.",
+      "Tap the 'Save' button again.",
+      "Navigate away (tap back arrow) and reopen Equalizer.",
+      "Verify that 125 Hz shows +7 dB (updated value), 1 kHz shows +1 dB (updated value), and 8 kHz shows +5 dB (unchanged value)."
+    ],
+    "expected": "Modifying previously saved custom EQ values and re-saving correctly updates only the changed sliders while retaining unchanged values."
+  },
+  {
+    "title": "Custom EQ Save \u2014 All Sliders at Minimum Values",
+    "steps": [
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Set ALL EQ sliders (63 Hz, 125 Hz, 250 Hz, 500 Hz, 1 kHz, 2 kHz, 4 kHz, 8 kHz, 16 kHz) to their minimum value (e.g., -10 dB or the lowest available setting).",
+      "Tap the 'Save' button.",
+      "Tap the back arrow (<-) to return to Audio Settings.",
+      "Tap 'Equalizer' to reopen the EQ page.",
+      "Verify that ALL sliders are still at their minimum values.",
+      "Verify the preset label shows 'Custom'."
+    ],
+    "expected": "Saving a custom EQ profile with all sliders at minimum values persists correctly, and reopening the EQ page shows all sliders at the saved minimum positions."
+  },
+  {
+    "title": "Custom EQ Save \u2014 All Sliders at Maximum Values",
+    "steps": [
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Set ALL EQ sliders (63 Hz, 125 Hz, 250 Hz, 500 Hz, 1 kHz, 2 kHz, 4 kHz, 8 kHz, 16 kHz) to their maximum value (e.g., +10 dB or the highest available setting).",
+      "Tap the 'Save' button.",
+      "Tap the back arrow (<-) to return to Audio Settings.",
+      "Tap 'Equalizer' to reopen the EQ page.",
+      "Verify that ALL sliders are still at their maximum values.",
+      "Verify the preset label shows 'Custom'."
+    ],
+    "expected": "Saving a custom EQ profile with all sliders at maximum values persists correctly, and reopening the EQ page shows all sliders at the saved maximum positions."
+  },
+  {
+    "title": "Custom EQ Save \u2014 Phone Rotation During Save Operation",
+    "steps": [
+      "Open Poly Studio Mobile app.",
+      "Tap on the connected device name.",
+      "Navigate to Audio Settings \u2192 Equalizer.",
+      "Tap the 'Custom' preset tab.",
+      "Adjust sliders to specific values (e.g., set 250 Hz to +5 dB, 2 kHz to -3 dB).",
+      "Tap the 'Save' button.",
+      "Immediately after tapping Save, rotate the phone from portrait to landscape (or vice versa).",
+      "Wait for the screen to redraw in the new orientation.",
+      "Verify the EQ page is displayed correctly.",
+      "Verify the 250 Hz slider shows +5 dB and the 2 kHz slider shows -3 dB.",
+      "Verify the preset label shows 'Custom'.",
+      "Rotate the phone back to the original orientation.",
+      "Verify the slider values are still retained."
+    ],
+    "expected": "Rotating the phone immediately after saving a custom EQ profile does not corrupt the saved values; slider positions and preset label are retained across orientation changes."
   }
 ]
