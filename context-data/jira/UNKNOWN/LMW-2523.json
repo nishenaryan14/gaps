@@ -4,36 +4,37 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udc40 | 5200 | 4320 | DFU is NOT blocked during the call",
-  "feature": "iOS App - DFU / Software Update",
-  "scenario": "DFU is not blocked during an active softphone call; user can trigger DFU from Software Update screen without a warning popup.",
-  "description_clean": "DFU is not blocked during an active call. When a user is on a softphone call (e.g., Zoom) and navigates to Device Settings > Software to tap Update, they are taken to the Software Update screen and can trigger DFU. Expected behavior: a popup message should inform the user that DFU is not available during a call.",
+  "feature": "Firmware Updates",
+  "scenario": "DFU firmware update is not blocked during an active call on Device Settings > Software screen",
+  "description_clean": "DFU (firmware update) is not blocked during an active call. When a user is on a call and navigates to Device Settings > Software to tap Update, they are taken to the Software Update screen and allowed to trigger DFU. Expected behavior: a popup message should inform the user that DFU is not available during a call.",
   "steps": [
-    "1. Start or join a softphone call (e.g., Zoom).",
-    "2. While the call is active, navigate to Device Settings > Software.",
-    "3. Tap the 'Update' button.",
-    "4. Observe the Software Update screen.",
-    "5. Attempt to trigger DFU (Device Firmware Update)."
+    "1. Launch Poly Studio Mobile app on the Android device.",
+    "2. Connect to a Poly Bluetooth audio device.",
+    "3. Make or receive an active call using the connected device.",
+    "4. While on the active call, navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "5. Tap on 'Software' in the Device Settings menu.",
+    "6. Observe that the Software Update screen is displayed.",
+    "7. Tap the 'Update' button to trigger DFU (firmware update)."
   ],
-  "expected": "A popup message should inform the user that DFU is not available during a call.",
-  "actual": "The user is taken to the Software Update screen and can trigger DFU without any warning or block.",
+  "expected": "A popup message should be displayed informing the user that DFU (firmware update) is not available during an active call, and the update should be blocked.",
+  "actual": "No popup is shown. The user is taken to the Software Update screen and allowed to trigger DFU while still on the active call.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "ReadyForPlanning"
   ],
   "keywords": [
-    "DFU",
-    "Device Firmware Update",
-    "softphone call",
-    "Software Update screen",
-    "warning popup",
-    "active call",
-    "firmware update",
-    "update blocking"
+    "dfu-firmware-update",
+    "active-call-blocking",
+    "device-settings-software",
+    "poly-studio-mobile",
+    "firmware-update-during-call",
+    "software-update-screen",
+    "update-button"
   ],
   "source_last_updated": "2026-04-16T08:14:02.000+0000",
   "source_hash": "614f60f952732d5fc152a61bfe2ab0d4bdc59bd2ef3b8130c66382cfecbf1738",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.074693Z",
+  "processed_at": "2026-04-25T05:37:16.686848Z",
   "status": "active"
 }
