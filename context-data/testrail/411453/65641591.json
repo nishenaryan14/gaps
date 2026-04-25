@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "EQ - Change propagation, use two mobile phones",
   "feature": "Equalizer",
-  "scenario": "EQ settings (Bass, Flat, Bright, Custom) made on one phone are not propagated to the second phone when both are connected to the same Poly device via Poly Studio Mobile app",
+  "scenario": "EQ settings (Bass, Flat, Bright, or Custom) applied on one phone are not reflected on the second phone when the same Poly device is paired to both phones simultaneously via the Poly Studio Mobile app",
   "steps": [
-    "Open Poly Studio Mobile app on Phone 1 and connect to the Poly Bluetooth audio device.",
+    "Open Poly Studio Mobile app on Phone A and ensure the Poly device is connected.",
     "Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
-    "Select an EQ preset (e.g., Bass, Flat, Bright) or create a Custom EQ setting.",
-    "Verify the EQ change is applied and audible on Phone 1.",
-    "Without disconnecting Phone 1, open Poly Studio Mobile app on Phone 2 and connect to the same Poly device.",
-    "Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer on Phone 2.",
-    "Observe the EQ settings displayed on Phone 2."
+    "Select an EQ preset (e.g., Bass, Flat, Bright, or Custom) and apply it.",
+    "On Phone B, open Poly Studio Mobile app and pair/connect to the same Poly device (device should already be paired to both phones).",
+    "Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer on Phone B.",
+    "Observe the currently selected EQ preset on Phone B."
   ],
-  "expected": "The EQ preset or custom settings made on Phone 1 are reflected and displayed on Phone 2's Equalizer screen in the Poly Studio Mobile app.",
+  "expected": "The EQ preset selected on Phone A (e.g., Bass, Flat, Bright, or Custom) is reflected and shown as active on Phone B's Equalizer screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "equalizer",
-    "eq-presets",
+    "eq-settings",
+    "equalizer-preset",
     "poly-studio-mobile",
-    "multi-device-connection",
-    "audio-settings",
-    "eq-synchronization",
-    "bluetooth-audio-device"
+    "multi-device-pairing",
+    "audio-settings-sync",
+    "bass-flat-bright-custom",
+    "dual-phone-connection"
   ],
   "source_last_updated": "1761211347",
   "source_hash": "0b9c11b4814bc42541f04df174790d41318392f6588598085526727901d2050e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.842823Z",
+  "processed_at": "2026-04-25T07:55:31.934844Z",
   "status": "active"
 }
