@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Internet is off - User Guide",
   "feature": "App Settings",
-  "scenario": "User Guide shows \"Something went wrong\" instead of \"Feature unavailable\" dialog when offline and accessed from Device Settings 3-dot menu on newly connected device",
+  "scenario": "User Guide shows \"Something went wrong\" error when opened from Device Settings with no internet and a newly connected Bluetooth device",
   "steps": [
-    "1. Ensure the device has no internet connection (e.g., Airplane Mode or Wi-Fi/cellular data off).",
-    "2. Pair and connect a new Poly Bluetooth audio device to the Android device via system Bluetooth settings.",
+    "1. Ensure the device has no internet connection (airplane mode or Wi-Fi/Bluetooth off).",
+    "2. Pair and connect a new Poly Bluetooth audio device via the device's Bluetooth settings.",
     "3. Open the Poly Studio Mobile app.",
-    "4. Navigate to the Home screen and tap on the connected [Device Name] to enter Device Settings.",
-    "5. Tap the 3-dot menu (overflow menu) in the top-right corner of the Device Settings page.",
-    "6. Select \"User Guide\" from the menu.",
-    "7. Observe the screen that appears.",
-    "8. Tap the \"X\" button to close the error screen."
+    "4. Navigate to the Home screen.",
+    "5. Tap on the connected [Device Name] to enter Device Settings.",
+    "6. Tap on \"User Guide\" in the Device Settings page.",
+    "7. Observe the screen that appears."
   ],
-  "expected": "The User Guide should load and display correctly, or if offline, a \"Feature unavailable\" dialog should appear informing the user that the feature requires an internet connection.",
+  "expected": "The User Guide should load and display properly, or if no internet, a clear offline message should be shown with a way to retry or dismiss.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "user-guide",
-    "feature-unavailable",
-    "something-went-wrong",
     "device-settings",
-    "3-dot-menu",
+    "error-message",
     "poly-studio-mobile",
-    "offline-error",
-    "bluetooth-pairing"
+    "bluetooth-connection",
+    "offline-mode",
+    "no-internet"
   ],
   "source_last_updated": "1769426297",
   "source_hash": "81750f5a19091883bcf991507d7396e553f0f692215d872fd30edb1c0cf91cec",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.818092Z",
+  "processed_at": "2026-04-25T08:21:30.927667Z",
   "status": "active"
 }
