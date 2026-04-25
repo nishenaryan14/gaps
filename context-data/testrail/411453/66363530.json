@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Falcon  - Custom Button - Teams Detected",
   "feature": "App Settings",
-  "scenario": "Custom Button Device Settings shows \"Microsoft Teams\" selected by default and \"Other Providers\" greyed out when Teams is detected by Poly Studio Mobile app",
+  "scenario": "Custom Button \"Other Providers\" option is greyed out and inaccessible when Microsoft Teams is detected in Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen and ensure a Poly Bluetooth audio device is connected.",
-    "3. Open Device Settings by tapping on the connected [Device Name].",
-    "4. Locate and tap on the Custom Button option in the Device Settings menu.",
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen and ensure your Poly Bluetooth audio device is connected.",
+    "3. Tap on the connected device name to open Device Settings.",
+    "4. Scroll down and tap on \"Custom Button\".",
     "5. Observe the two options displayed: \"Microsoft Teams\" and \"Other Providers\".",
-    "6. Verify that \"Microsoft Teams\" is selected by default.",
-    "7. Verify that \"Other Providers\" is greyed out and not tappable.",
-    "8. Check for the informational message indicating that Microsoft Teams is connected and Other Providers is not available."
+    "6. Note that \"Microsoft Teams\" is selected by default and \"Other Providers\" is greyed out.",
+    "7. Read the message displayed: \"Microsoft Teams is connected. Other Providers is not available when Microsoft Teams is connected.\"",
+    "8. Attempt to tap on the \"Other Providers\" option."
   ],
-  "expected": "The Custom Button UI shows two options: \"Microsoft Teams\" (selected by default) and \"Other Providers\" (greyed out). A message indicates that Microsoft Teams is connected and Other Providers is not available. Tapping \"Other Providers\" does nothing.",
+  "expected": "The \"Other Providers\" option should be selectable and functional, allowing the user to configure the custom button for non-Microsoft Teams providers even when Microsoft Teams is detected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "custom-button",
-    "device-settings",
-    "microsoft-teams",
     "other-providers",
-    "bluetooth-audio-device",
-    "android-app"
+    "microsoft-teams",
+    "poly-studio-mobile",
+    "device-settings",
+    "greyed-out",
+    "bluetooth-audio"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "ad25be3e0b32a8733a83c3afc8acce40b989c275cc8a7130384b10077a87500c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.083197Z",
+  "processed_at": "2026-04-25T09:32:26.339337Z",
   "status": "active"
 }
