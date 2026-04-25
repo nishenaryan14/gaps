@@ -5,19 +5,19 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Allow Once option is selected",
   "feature": "App Settings",
-  "scenario": "Location sharing dialog reappears on Home Screen after app restart when 'Allow Once' is selected during onboarding in Poly Studio Mobile app",
+  "scenario": "Location sharing dialog reappears after app restart when 'Allow Once' is selected during first-time onboarding in Poly Studio Mobile app",
   "steps": [
     "1. Launch the Poly Studio Mobile app for the first time.",
     "2. Complete the onboarding flow.",
     "3. Observe the location sharing dialog that appears with options 'Allow Once', 'Allow While Using App', and 'Don't Allow'.",
     "4. Select 'Allow Once'.",
-    "5. Verify the Home screen is displayed.",
+    "5. Verify that the Home Screen is displayed.",
     "6. Navigate to App Settings \u2192 Find My Device.",
-    "7. Confirm the location sharing dialog does not reappear during this session.",
+    "7. Confirm that the location sharing dialog does not reappear during this session.",
     "8. Close and restart the Poly Studio Mobile app.",
-    "9. Observe the Home screen after restart."
+    "9. Observe the Home Screen after relaunch."
   ],
-  "expected": "After restarting the app, the location sharing dialog is shown again on the Home Screen, as expected for the 'Allow Once' permission behavior.",
+  "expected": "The location sharing dialog is shown again on the Home Screen after restarting the app, as expected for the 'Allow Once' permission behavior.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,14 +25,14 @@
     "location-sharing-dialog",
     "allow-once",
     "onboarding-flow",
-    "home-screen",
     "find-my-device",
     "app-restart",
-    "permission-persistence"
+    "permission-persistence",
+    "home-screen"
   ],
   "source_last_updated": "1759149575",
   "source_hash": "75cf0171aea815d2a3a261bdfa08a972f4e02283926cdfa73f2e644499004f87",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.915908Z",
+  "processed_at": "2026-04-25T09:32:26.138018Z",
   "status": "active"
 }
