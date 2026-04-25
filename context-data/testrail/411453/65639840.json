@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "1 step DFU - Content of the Software Update tab when there is update available only for Earbuds",
   "feature": "Firmware Updates",
-  "scenario": "Software Update tab shows earbud firmware update details and marks charging case as up to date when only earbud update is available",
+  "scenario": "Software Update tab shows earbud firmware update details and marks charging case as up to date when update is available only for earbuds",
   "steps": [
     "Open Poly Studio Mobile app on the Home screen.",
-    "Ensure a Poly Bluetooth audio device (earbuds + charging case) is connected.",
+    "Ensure a Poly Bluetooth earbud device (e.g., Poly Voyager Free 20) is connected.",
     "Navigate to Device Settings \u2192 [Device Name] \u2192 Software Update.",
     "Observe the Software Update tab content when a firmware update is available only for the earbuds (not the charging case)."
   ],
-  "expected": "The Software Update tab displays the current and available earbud firmware versions, release notes for the earbud update, and an Update button. The charging case is marked as 'Up to date'.",
+  "expected": "The Software Update tab displays: current earbud firmware version, available earbud firmware version, release notes for the earbud update, and an Update button. The charging case is shown as 'Up to date' with no update available.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "software-update",
     "firmware-update",
-    "earbud-update",
-    "charging-case",
+    "software-update-tab",
     "poly-studio-mobile",
-    "device-settings",
-    "up-to-date-status"
+    "poly-voyager-free-20",
+    "charging-case",
+    "earbud-firmware",
+    "device-settings"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "55779b747527aa18c83f5ce7e314c8d6eea23e5dd75f4414bcd7eb83f4191fb6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.883603Z",
+  "processed_at": "2026-04-25T07:55:31.960746Z",
   "status": "active"
 }
