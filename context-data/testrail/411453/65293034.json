@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Eula page - check page UI",
   "feature": "App Settings",
-  "scenario": "EULA page header, description, and instructions text display correctly during first-time app launch onboarding",
+  "scenario": "EULA page header, description, and instructions text display correctly on first app launch in Poly Studio Mobile onboarding flow",
   "steps": [
-    "1. Launch the Poly Studio Mobile app for the first time after installation.",
+    "1. Launch the Poly Studio Mobile app for the first time.",
     "2. Observe the Onboarding screen that appears.",
-    "3. Verify the EULA (End User License Agreement) page is displayed.",
-    "4. Check the header text on the EULA page.",
-    "5. Check the description text on the EULA page.",
-    "6. Check the instructions text on the EULA page."
+    "3. Locate the EULA (End User License Agreement) page within the onboarding flow.",
+    "4. Verify the header text is displayed correctly on the EULA page.",
+    "5. Verify the description text is displayed correctly on the EULA page.",
+    "6. Verify the instructions text is displayed correctly on the EULA page."
   ],
-  "expected": "The EULA page displays correctly with a proper header (e.g., \"End User License Agreement\"), a clear description of the agreement terms, and instructions for the user (e.g., scroll to read, accept/decline options). All text is readable, properly formatted, and free of truncation or alignment issues.",
+  "expected": "The EULA page displays the correct header, description, and instructions text as per the design specifications.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "eula",
     "end-user-license-agreement",
-    "onboarding",
-    "first-time-launch",
-    "poly-studio-mobile",
-    "app-launch",
-    "license-agreement-display"
+    "onboarding-flow",
+    "first-launch",
+    "ui-text-display",
+    "app-initialization"
   ],
   "source_last_updated": "1760528295",
   "source_hash": "3881ed5e765d0bbce31a25dd3604bee9809378c982bf458bd0e5c6bbe17fdee3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.768807Z",
+  "processed_at": "2026-04-25T08:21:30.899141Z",
   "status": "active"
 }
