@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Tern - no charge case screens (Onboarding, Tutorial screen)",
   "feature": "Device Management",
-  "scenario": "Smart charge case screens missing during Onboarding when starting Tutorial with Voyager Free 60+ attached in Poly Studio Mobile app",
+  "scenario": "Onboarding tutorial in Poly Studio Mobile app does not show smart charge case screens for Voyager Free 60+",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the mobile device.",
-    "2. Ensure a Voyager Free 60+ (Tern) headset is connected to the device via Bluetooth.",
-    "3. On the Home screen, locate and tap the Tutorial option to open the Tutorial screen.",
-    "4. On the Tutorial screen, tap the Start Onboarding button to begin the onboarding process.",
-    "5. Observe the screens displayed during the onboarding flow."
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Ensure a Voyager Free 60+ (Tern) device is connected.",
+    "3. From the Home screen, open the Tutorial screen.",
+    "4. Start the Onboarding process.",
+    "5. Proceed through all onboarding/tutorial screens."
   ],
-  "expected": "Smart charge case screens should appear during the onboarding flow, showing relevant information about the charging case.",
+  "expected": "The onboarding/tutorial screens should include screens showing the smart charge case for the Voyager Free 60+ (Tern).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "voyager-free-60-plus",
     "poly-studio-mobile",
-    "onboarding",
-    "tutorial",
+    "voyager-free-60-plus",
+    "onboarding-tutorial",
     "smart-charge-case",
-    "bluetooth-pairing",
-    "home-screen"
+    "device-connection",
+    "tutorial-screens",
+    "tern"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "d526f46716211c0f4f356bc986c08a34c7a9bed0b37d8f2330b8d3f5a2811ad5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.871958Z",
+  "processed_at": "2026-04-25T07:55:31.945520Z",
   "status": "active"
 }
