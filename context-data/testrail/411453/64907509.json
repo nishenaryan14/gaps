@@ -5,16 +5,15 @@
   "project": "411453",
   "title": "Support  - App",
   "feature": "App Settings",
-  "scenario": "Poly Studio Mobile app Support > App section displays App Version, Tenant Name, Tenant ID, User ID, App ID, and Last Connected info with a Go button for support troubleshooting",
+  "scenario": "Poly Studio Mobile app Support > App section displays App Version, Tenant Name, Tenant ID, User ID, App ID, and Last Connected info with a \"Go\" button",
   "steps": [
-    "Open the Poly Studio Mobile app on your Android device.",
-    "Navigate to the Home screen.",
-    "Tap on the menu icon (hamburger menu) or navigate to the Support section.",
-    "Select 'Support' from the menu.",
-    "Tap on the 'App' section within Support.",
-    "Observe the displayed support details."
+    "1. Open the Poly Studio Mobile app on the mobile device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the menu icon or navigate to the Support section.",
+    "4. Tap on the 'App' subsection under Support.",
+    "5. Observe the displayed support details on the screen."
   ],
-  "expected": "The Support > App section displays the following details: App Version, Tenant Name, Tenant ID, User ID, App ID, and Last Connected info. A \"Go\" button is visible to proceed with sending this information to support.",
+  "expected": "The Support > App section displays the following details: App Version, Tenant Name, Tenant ID, User ID, App ID, and Last Connected info. A \"Go\" button is visible and tappable to proceed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,11 +24,11 @@
     "user-id",
     "app-id",
     "last-connected",
-    "troubleshooting"
+    "app-details"
   ],
   "source_last_updated": "1759762027",
   "source_hash": "759df3b41a5f108cae5c102a8df4476fc7fbdfbc9577c45bbbfeb8dc5bb9a0f7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.845844Z",
+  "processed_at": "2026-04-25T08:21:30.949470Z",
   "status": "active"
 }
