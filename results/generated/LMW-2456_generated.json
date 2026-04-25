@@ -1,63 +1,145 @@
 [
   {
-    "title": "Verify proper product name is displayed on onboarding screen after pairing a Falcon device",
+    "title": "TC-ONBOARD-001: Verify Product Name Displays Correctly on Onboarding Screen for Sync 20",
     "steps": [
-      "1. Pair a Falcon device (code name) with the system.",
-      "2. Navigate to Device Settings.",
-      "3. Select the paired Falcon device from the device list.",
-      "4. Click on 'Onboarding' from the device settings menu.",
-      "5. Observe the device name displayed on the onboarding screen."
+      "Factory reset the Poly Sync 20 speakerphone (press and hold Power + Bluetooth buttons for 5 seconds until LCD flashes red).",
+      "Open Poly Studio Mobile app on Android.",
+      "Ensure Bluetooth is enabled on the phone.",
+      "Press the Bluetooth button on the Sync 20 for 2 seconds until you hear 'pairing' and LCD flashes blue.",
+      "In the app, tap 'Add Device' or wait for the device discovery prompt.",
+      "When the Sync 20 appears in the discovered devices list, tap it to initiate pairing.",
+      "Observe the onboarding screen that appears after successful pairing (e.g., 'Device Connected' or 'Set Up Your Device' screen).",
+      "Note the product name displayed in the header/title of the onboarding screen."
     ],
-    "expected": "The onboarding screen displays the proper product name (e.g., 'Poly Studio' or the official marketing name) for the Falcon device, not the code name 'Falcon'."
+    "expected": "The onboarding screen displays the proper product name 'Poly Sync 20' (or 'Poly Sync 20+'). The internal code name 'Falcon' is NOT shown anywhere on the onboarding screen."
   },
   {
-    "title": "Verify device code name is not shown on onboarding screen after pairing a Falcon device",
+    "title": "TC-ONBOARD-002: Verify Product Name Displays Correctly on Onboarding Screen for Sync 20+",
     "steps": [
-      "1. Pair a Falcon device (code name) with the system.",
-      "2. Navigate to Device Settings.",
-      "3. Select the paired Falcon device from the device list.",
-      "4. Click on 'Onboarding' from the device settings menu.",
-      "5. Check the device name displayed on the onboarding screen for any occurrence of the code name 'Falcon'."
+      "Factory reset the Poly Sync 20+ speakerphone (press and hold Power + Bluetooth buttons for 5 seconds until LCD flashes red).",
+      "Open Poly Studio Mobile app on Android.",
+      "Ensure Bluetooth is enabled on the phone.",
+      "Press the Bluetooth button on the Sync 20+ for 2 seconds until you hear 'pairing' and LCD flashes blue.",
+      "In the app, tap 'Add Device' or wait for the device discovery prompt.",
+      "When the Sync 20+ appears in the discovered devices list, tap it to initiate pairing.",
+      "Observe the onboarding screen that appears after successful pairing.",
+      "Note the product name displayed in the header/title of the onboarding screen."
     ],
-    "expected": "The onboarding screen does NOT display the code name 'Falcon'. Only the proper product name (e.g., 'Poly Studio' or official marketing name) is shown."
+    "expected": "The onboarding screen displays the proper product name 'Poly Sync 20+'. The internal code name 'Falcon' is NOT shown anywhere on the onboarding screen."
   },
   {
-    "title": "Verify onboarding screen displays correct product name after navigating from Device Settings for a paired Falcon device",
+    "title": "TC-DEVSETTINGS-001: Verify Product Name in Device Settings Header for Sync 20",
     "steps": [
-      "1. Pair a Falcon device (code name) with the system.",
-      "2. Navigate to Device Settings.",
-      "3. Locate the paired Falcon device in the device list and select it.",
-      "4. Navigate to the 'Onboarding' option within the device settings.",
-      "5. Capture the device name displayed on the onboarding screen.",
-      "6. Compare the captured name against the expected proper product name (e.g., 'Poly Studio')."
+      "Pair and connect a Poly Sync 20 speakerphone to the Poly Studio Mobile app.",
+      "Open Poly Studio Mobile app.",
+      "Tap the connected Sync 20 device card or name to open Device Settings.",
+      "Observe the header/title area at the top of the Device Settings screen (e.g., the device name displayed next to the device icon or in the top bar).",
+      "Note the exact text displayed."
     ],
-    "expected": "The device name displayed on the onboarding screen matches the proper product name (e.g., 'Poly Studio') and does not contain the code name 'Falcon'."
+    "expected": "The Device Settings screen header displays the proper product name 'Poly Sync 20'. The internal code name 'Falcon' is NOT shown in the header, title, or any user-facing label on this screen."
   },
   {
-    "title": "Verify onboarding screen product name consistency across multiple Falcon device pairings",
+    "title": "TC-DEVSETTINGS-002: Verify Product Name in Device Settings Header for Sync 20+",
     "steps": [
-      "1. Pair a first Falcon device (code name) with the system.",
-      "2. Navigate to Device Settings > select the device > Onboarding.",
-      "3. Record the displayed device name.",
-      "4. Unpair the first Falcon device.",
-      "5. Pair a second Falcon device (code name) with the system.",
-      "6. Navigate to Device Settings > select the device > Onboarding.",
-      "7. Record the displayed device name.",
-      "8. Compare the recorded names from both devices."
+      "Pair and connect a Poly Sync 20+ speakerphone to the Poly Studio Mobile app.",
+      "Open Poly Studio Mobile app.",
+      "Tap the connected Sync 20+ device card or name to open Device Settings.",
+      "Observe the header/title area at the top of the Device Settings screen.",
+      "Note the exact text displayed."
     ],
-    "expected": "Both Falcon devices display the same proper product name (e.g., 'Poly Studio' or official marketing name) on their respective onboarding screens, and neither shows the code name 'Falcon'."
+    "expected": "The Device Settings screen header displays the proper product name 'Poly Sync 20+'. The internal code name 'Falcon' is NOT shown in the header, title, or any user-facing label on this screen."
   },
   {
-    "title": "Verify onboarding screen product name persists after device reconnection for a Falcon device",
+    "title": "TC-DEVSETTINGS-003: Verify Product Name Persists After App Restart",
     "steps": [
-      "1. Pair a Falcon device (code name) with the system.",
-      "2. Navigate to Device Settings > select the device > Onboarding.",
-      "3. Verify the proper product name is displayed.",
-      "4. Disconnect the Falcon device.",
-      "5. Reconnect the Falcon device.",
-      "6. Navigate to Device Settings > select the device > Onboarding.",
-      "7. Observe the device name displayed on the onboarding screen."
+      "Pair and connect a Poly Sync 20 speakerphone to the Poly Studio Mobile app.",
+      "Open Device Settings and verify the header shows 'Poly Sync 20'.",
+      "Press the Home button to background the app.",
+      "Fully close (swipe away) the Poly Studio Mobile app from the recent apps list.",
+      "Reopen Poly Studio Mobile app.",
+      "Wait for the app to reconnect to the Sync 20 automatically.",
+      "Tap the device card to open Device Settings.",
+      "Observe the header/title area."
     ],
-    "expected": "After reconnection, the onboarding screen still displays the proper product name (e.g., 'Poly Studio' or official marketing name) and not the code name 'Falcon'."
+    "expected": "After app restart and reconnection, the Device Settings header still displays 'Poly Sync 20' (not 'Falcon')."
+  },
+  {
+    "title": "TC-DEVSETTINGS-004: Verify Product Name Persists After Bluetooth Disconnect/Reconnect",
+    "steps": [
+      "Pair and connect a Poly Sync 20 speakerphone to the Poly Studio Mobile app.",
+      "Open Device Settings and verify the header shows 'Poly Sync 20'.",
+      "On the phone, go to Bluetooth settings and tap 'Forget' or 'Unpair' the Sync 20.",
+      "Wait 5 seconds.",
+      "Re-pair the Sync 20 by pressing the Bluetooth button for 2 seconds and selecting it in phone Bluetooth settings.",
+      "Open Poly Studio Mobile app.",
+      "Tap the reconnected Sync 20 device card to open Device Settings.",
+      "Observe the header/title area."
+    ],
+    "expected": "After Bluetooth disconnect and re-pairing, the Device Settings header displays 'Poly Sync 20' (not 'Falcon')."
+  },
+  {
+    "title": "TC-DEVSETTINGS-005: Verify Product Name Persists After Device Power Cycle",
+    "steps": [
+      "Pair and connect a Poly Sync 20 speakerphone to the Poly Studio Mobile app.",
+      "Open Device Settings and verify the header shows 'Poly Sync 20'.",
+      "Press the Power button on the Sync 20 for 2 seconds to power it off (LCD turns off).",
+      "Wait 10 seconds.",
+      "Press the Power button on the Sync 20 for 2 seconds to power it back on.",
+      "Wait for the app to automatically reconnect (up to 30 seconds).",
+      "Tap the device card to open Device Settings.",
+      "Observe the header/title area."
+    ],
+    "expected": "After device power off/on cycle and reconnection, the Device Settings header displays 'Poly Sync 20' (not 'Falcon')."
+  },
+  {
+    "title": "TC-ONBOARD-003: Verify Product Name on Onboarding After App Force-Kill",
+    "steps": [
+      "Factory reset the Poly Sync 20 speakerphone.",
+      "Open Poly Studio Mobile app and begin the pairing process.",
+      "When the Sync 20 appears in discovered devices, tap it to start pairing.",
+      "During the onboarding screen display (before completing setup), press the Home button.",
+      "Fully close (swipe away) the Poly Studio Mobile app from recent apps.",
+      "Reopen Poly Studio Mobile app.",
+      "Observe the screen that appears (may show the device as connected or prompt to finish setup).",
+      "If the device is shown, tap it to view details or complete onboarding.",
+      "Note the product name displayed."
+    ],
+    "expected": "After app force-kill during onboarding and relaunch, the product name displayed is 'Poly Sync 20' (not 'Falcon')."
+  },
+  {
+    "title": "TC-DEVSETTINGS-006: Verify Product Name in Audio Settings Sub-Screen",
+    "steps": [
+      "Pair and connect a Poly Sync 20 speakerphone to the Poly Studio Mobile app.",
+      "Open Device Settings by tapping the device card.",
+      "Tap 'Audio Settings' or the audio settings option.",
+      "Observe the title/header at the top of the Audio Settings screen.",
+      "Navigate to sub-screens: tap 'Transparency Mode', then 'Environment', then 'Speech'.",
+      "At each sub-screen, observe the header/title area."
+    ],
+    "expected": "The Audio Settings screen and all sub-screens (Transparency Mode, Environment, Speech) display 'Poly Sync 20' in the header/title area. The code name 'Falcon' is not shown on any of these screens."
+  },
+  {
+    "title": "TC-DEVSETTINGS-007: Verify Product Name for Multiple Paired Devices (Sync 20 and Sync 20+)",
+    "steps": [
+      "Pair and connect a Poly Sync 20 speakerphone to the Poly Studio Mobile app.",
+      "Pair and connect a Poly Sync 20+ speakerphone to the same phone (the app should show both devices).",
+      "Open Poly Studio Mobile app.",
+      "In the device list, observe the name displayed for each device.",
+      "Tap the Sync 20 device card to open its Device Settings and note the header.",
+      "Go back to the device list.",
+      "Tap the Sync 20+ device card to open its Device Settings and note the header."
+    ],
+    "expected": "The Sync 20 device shows 'Poly Sync 20' and the Sync 20+ device shows 'Poly Sync 20+' in both the device list and Device Settings headers. Neither shows 'Falcon'."
+  },
+  {
+    "title": "TC-ONBOARD-004: Verify Product Name on Onboarding Screen for All Supported Device Types",
+    "steps": [
+      "Identify all Poly devices supported by the Poly Studio Mobile app (e.g., Sync 20, Sync 20+, Sync 40, Sync 60, Voyager series, etc.).",
+      "For each device type, perform a factory reset.",
+      "Open Poly Studio Mobile app and initiate pairing.",
+      "Complete the pairing process and observe the onboarding screen.",
+      "Note the product name displayed for each device."
+    ],
+    "expected": "Each device displays its proper commercial product name on the onboarding screen (e.g., 'Poly Sync 20', 'Poly Sync 20+', 'Poly Sync 40', etc.). No device shows its internal code name in any user-facing UI element."
   }
 ]
