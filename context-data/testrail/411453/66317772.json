@@ -5,23 +5,31 @@
   "project": "411453",
   "title": "Device Settings - List of supported settings vs UI headset spec",
   "feature": "Device Management",
-  "scenario": "Verify that headset settings listed in Poly Studio Mobile app match the headset UI specification for supported devices",
-  "steps": [],
-  "expected": "",
+  "scenario": "Verify that headset settings displayed in the Poly Studio Mobile app match the headset UI specification for supported features",
+  "steps": [
+    "1. Acquire the UI specification document for the tested Poly headset.",
+    "2. Open the Poly Studio Mobile app on the Home screen.",
+    "3. Tap on the connected [Device Name] to navigate to Device Settings.",
+    "4. Review the list of settings displayed under Device Settings (e.g., Audio Settings, ANC, Transparency Mode, Equalizer, Notifications).",
+    "5. Compare each setting listed in the app against the headset UI specification document.",
+    "6. Verify that all supported headset settings from the spec are present in the app."
+  ],
+  "expected": "All supported headset settings from the UI specification are present in the Poly Studio Mobile app under Device Settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "headset-settings",
+    "poly-studio-mobile-app",
+    "device-settings",
     "ui-specification",
-    "settings-matching",
-    "device-support",
-    "app-ui-verification",
-    "headset-configuration"
+    "anc",
+    "transparency-mode",
+    "equalizer",
+    "headset-settings",
+    "feature-parity"
   ],
   "source_last_updated": "1762351152",
   "source_hash": "4bde86ea1b94796d4ea89b1643efa4a47fb020725f5c9709effbc47856d17e41",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.864847Z",
+  "processed_at": "2026-04-25T08:21:30.965800Z",
   "status": "active"
 }
