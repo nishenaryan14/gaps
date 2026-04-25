@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "App Settings - Navigation",
   "feature": "App Settings",
-  "scenario": "Verify navigation within Poly Studio Mobile app settings menu using back icon and swipe gestures across all settings tabs",
+  "scenario": "Verify navigation within Poly Studio Mobile app settings menu using back icon and swipe gestures across all tabs",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Home screen.",
     "2. Tap the hamburger icon (\u2630) to open the Poly Studio Menu (App Settings).",
-    "3. Tap on any settings tab (e.g., Device Settings, Audio Settings, Notifications, Account) to display the corresponding settings screen.",
+    "3. Tap any settings tab (e.g., Device Settings, Audio Settings, Notifications, Account) to display the corresponding screen.",
     "4. Tap the back icon (\"<\") to return to the main menu.",
     "5. Tap the same settings tab again to open it.",
     "6. Swipe right from the left edge of the screen to return to the main menu.",
     "7. Repeat steps 3\u20136 for all available settings tabs (Device Settings, Audio Settings, Notifications, Account, etc.)."
   ],
-  "expected": "User can access every settings tab and successfully navigate back to the main Home screen using both the back icon and the swipe-right gesture, for all available tabs.",
+  "expected": "User can access every settings tab and successfully navigate back to the main Home screen using both the back icon and the swipe-right gesture.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "app-settings",
-    "navigation",
+    "poly-studio-mobile-app",
+    "app-settings-menu",
+    "navigation-gestures",
     "back-icon",
     "swipe-gesture",
     "settings-tabs",
-    "hamburger-menu",
-    "ui-navigation"
+    "hamburger-menu"
   ],
   "source_last_updated": "1770284166",
   "source_hash": "b26583497bb7b905a21a910531ffac0de6ac280e00b61ee45181b3a9dc1fe37e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.814515Z",
+  "processed_at": "2026-04-25T08:21:30.927667Z",
   "status": "active"
 }
