@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "App Settings - General - Account - Share Data section is not visible for logged User",
   "feature": "App Settings",
-  "scenario": "\"Share Data\" section missing from App Settings > General > Account after logging into the Poly Studio Mobile app",
+  "scenario": "Share Data section missing from Account settings for logged-in user in Poly Studio Mobile app",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Log in with valid credentials",
-    "Navigate to App Settings (gear icon)",
-    "Select General",
-    "Select Account"
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Log in with valid user credentials.",
+    "3. Navigate to App Settings \u2192 General \u2192 Account.",
+    "4. Observe the Account screen."
   ],
-  "expected": "The Account screen should display both the \"Your Account\" section (with user name, email, and Log Out button) and the \"Share Data\" section below it.",
+  "expected": "The Account screen should display the user's name and email, a \"Log out\" button, and the \"Share Data\" section should be visible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "app-settings",
-    "general",
-    "account",
+    "account-settings",
     "share-data",
-    "login",
-    "settings-missing"
+    "app-settings",
+    "general-settings",
+    "user-account",
+    "data-privacy"
   ],
   "source_last_updated": "1759324625",
   "source_hash": "431c5e06611dbe970fb4184788b371b40004f36908b26e1e0b8ee0191d3b0f9f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.805856Z",
+  "processed_at": "2026-04-25T08:21:30.927667Z",
   "status": "active"
 }
