@@ -11,13 +11,15 @@
     "2. Tap the hamburger icon (\u2630) to open App Settings.",
     "3. Navigate to General \u2192 Account.",
     "4. Tap 'Log in'.",
-    "5. Tap 'Continue' and enter valid credentials to log in.",
-    "6. Observe the Account screen.",
-    "7. Tap 'Log out'.",
-    "8. Observe the login dialog.",
-    "9. Tap 'Cancel' on the login dialog."
+    "5. Tap 'Continue' on the login dialog.",
+    "6. Enter valid credentials and complete the login flow.",
+    "7. Observe the Account screen.",
+    "8. Tap 'Log out'.",
+    "9. Observe the login dialog that appears.",
+    "10. Tap 'Cancel' on the login dialog.",
+    "11. Observe the Account screen."
   ],
-  "expected": "Step 6: 'Your account' text is visible with Name and Email fields populated. Step 8: Login dialog opens with 'Cancel' and 'Continue' options. Step 9: Dialog disappears and user remains logged in.",
+  "expected": "Step 7: 'Your account' text is visible with Name and Email fields populated. Step 9: Login dialog opens with 'Cancel' and 'Continue' options. Step 11: Dialog disappears and user remains logged in (still sees 'Your account' with Name and Email).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,7 +27,6 @@
     "account-login",
     "account-logout",
     "app-settings",
-    "general-settings",
     "guest-user",
     "login-dialog",
     "cancel-logout"
@@ -33,6 +34,6 @@
   "source_last_updated": "1764319833",
   "source_hash": "f207772853feee11205ea923e80eb7baefc3d14d44246d5bd6eac636521c064d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.819083Z",
+  "processed_at": "2026-04-25T08:21:30.930707Z",
   "status": "active"
 }
