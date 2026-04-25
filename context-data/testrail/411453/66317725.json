@@ -5,31 +5,33 @@
   "project": "411453",
   "title": "Rename device - Renamed, Home screen",
   "feature": "Device Management",
-  "scenario": "Renamed device name is not reflected on the Home screen after updating via Device Settings > General",
+  "scenario": "Device name change via Device Settings > General is not reflected on the Home screen after navigating back",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to the Home screen and note the current device name displayed.",
-    "3. Tap on the device name or the gear icon to open Device Settings.",
-    "4. In Device Settings, tap on General.",
-    "5. Tap on the device name field and rename the device to a new name.",
-    "6. Confirm or save the new name.",
-    "7. Navigate back to the Home screen."
+    "Open Poly Studio Mobile app \u2192 Home screen",
+    "Tap on the target Poly device to open Device Settings",
+    "Tap General",
+    "Tap on the device's official name field",
+    "Enter a new name for the device",
+    "Tap Done to confirm the rename",
+    "Navigate back to the Home screen",
+    "Observe the device name displayed on the Home screen"
   ],
-  "expected": "The Home screen should display the updated (new) device name.",
+  "expected": "The device's name on the Home screen is updated to the new name entered.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "device-name",
+    "device-name-change",
     "home-screen",
     "device-settings",
     "general-settings",
-    "name-persistence",
-    "ui-refresh"
+    "poly-studio-mobile",
+    "rename-persistence",
+    "ui-refresh",
+    "name-field"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "aa25820d95bd3199dcc1229d2bb4339e6651a188a7ebc80c9639734ebb0c2094",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.794828Z",
+  "processed_at": "2026-04-25T07:55:31.871747Z",
   "status": "active"
 }
