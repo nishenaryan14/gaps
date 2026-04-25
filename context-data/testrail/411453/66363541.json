@@ -5,22 +5,30 @@
   "project": "411453",
   "title": "All screens, Close button",
   "feature": "App Settings",
-  "scenario": "Onboarding flow exits and returns to original screen when Close (X) button is tapped on any screen",
-  "steps": [],
-  "expected": "",
+  "scenario": "Onboarding screens do not close and return to original screen when Close (X) button is tapped",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app.",
+    "2. If not already on the Home screen, navigate to the Home screen.",
+    "3. Tap on a device to enter Device Settings.",
+    "4. Navigate to an onboarding screen (e.g., first-time setup for ANC, Transparency Mode, or Equalizer).",
+    "5. Tap the Close (X) button on the onboarding screen."
+  ],
+  "expected": "The onboarding screen closes and the user is returned to the original screen (Supported Devices or Home screen).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "onboarding-flow",
+    "poly-studio-mobile",
+    "onboarding-screen",
     "close-button",
-    "ui-navigation",
-    "screen-transition",
-    "user-exit",
-    "poly-app"
+    "device-settings",
+    "anc-setup",
+    "transparency-mode-setup",
+    "equalizer-setup",
+    "ui-navigation"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "85659ab78f6a0aa333f32aba5078e5f4dd3a0a87656f5dcd8f7d2a448be80eef",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.271548Z",
   "status": "active"
 }
