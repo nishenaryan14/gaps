@@ -5,16 +5,16 @@
   "project": "411453",
   "title": "Fit Test - Tab is present and accessible in Device Settings",
   "feature": "Device Settings",
-  "scenario": "Fit Test tab is present and accessible in Device Settings on Voyager Free 60+ and Voyager Free 20",
+  "scenario": "Fit Test tab is present and accessible in Device Settings for Voyager Free 60+ and Voyager Free 20",
   "steps": [
-    "1. Connect a supported device (Voyager Free 60+ or Voyager Free 20) to the Poly Studio Mobile app.",
+    "1. Connect a supported device (e.g., Voyager Free 60+ or Voyager Free 20) to the Poly Studio Mobile app.",
     "2. Open the Poly Studio Mobile app and navigate to the Home screen.",
     "3. Tap on the connected device name to open Device Settings.",
     "4. In Device Settings, locate the Fit Test tab.",
     "5. Tap the Fit Test tab.",
-    "6. Observe the screen that opens."
+    "6. Confirm that the Fit Test screen opens and is fully accessible."
   ],
-  "expected": "The Fit Test tab is present in Device Settings. Tapping it opens the fit test screen, allowing the user to perform a fit test.",
+  "expected": "The Fit Test tab is present in Device Settings for supported devices. Tapping it opens the Fit Test screen successfully.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,11 +24,11 @@
     "voyager-free-20",
     "poly-studio-mobile",
     "fit-test-tab",
-    "ear-fit-test"
+    "fit-test-screen"
   ],
   "source_last_updated": "1760957096",
   "source_hash": "39e370c36900d4dcd1d1465d34ff62f5888cf4e953c5521abe7401a941047f5d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.981019Z",
+  "processed_at": "2026-04-25T09:32:26.236157Z",
   "status": "active"
 }
