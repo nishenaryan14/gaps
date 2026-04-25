@@ -7,29 +7,30 @@
   "feature": "Bluetooth Pairing",
   "scenario": "Headset pairing and connection via Poly Studio Mobile app succeeds when phone has no internet access (WiFi and cellular off)",
   "steps": [
-    "1. Turn off WiFi and cellular data on the phone (enable Airplane Mode).",
-    "2. Open the Poly Studio Mobile app.",
-    "3. On the Home screen, tap the '+' icon or 'Add Device' to start pairing.",
-    "4. Put the headset into pairing mode (press and hold the Bluetooth button until the LED flashes red/blue).",
-    "5. Wait for the headset to appear in the available devices list on the Home screen.",
-    "6. Tap the headset name to pair and connect.",
+    "1. Turn off WiFi and cellular data on the phone (no internet access).",
+    "2. Open the Poly Studio Mobile app on the Home screen.",
+    "3. Put the headset into pairing mode (press and hold the Bluetooth button until the LED flashes red/blue).",
+    "4. In the app, tap \"Add Device\" or the \"+\" icon on the Home screen to start scanning.",
+    "5. Wait for the headset to appear in the list of available devices.",
+    "6. Tap the headset name to initiate pairing and connection.",
     "7. Observe the device list on the Home screen after pairing completes."
   ],
-  "expected": "The headset appears as 'Connected' in the device list on the Home screen of the Poly Studio Mobile app, even without internet access.",
+  "expected": "The headset appears as \\\"Connected\\\" in the device list on the Home screen of the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile-app",
     "bluetooth-pairing",
-    "airplane-mode",
-    "offline-connection",
-    "no-internet",
-    "device-discovery",
-    "home-screen"
+    "offline-mode",
+    "no-internet-connection",
+    "device-scanning",
+    "add-device",
+    "headset-connection",
+    "pairing-mode"
   ],
   "source_last_updated": "1761749943",
   "source_hash": "c60317bfbad46efdee75f0c9b776e0617dacf7bf7521c1056adbb48b882b4f25",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.798360Z",
+  "processed_at": "2026-04-25T08:21:30.918930Z",
   "status": "active"
 }
