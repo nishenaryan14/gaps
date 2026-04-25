@@ -5,37 +5,36 @@
   "project": "UNKNOWN",
   "summary": "iOS \ud83d\udc40 | 5200 | 4320 | DFU is NOT blocked during the call",
   "feature": "Firmware Updates",
-  "scenario": "DFU firmware update is not blocked during an active softphone call on Poly Studio Mobile app",
-  "description_clean": "DFU (firmware update) is not blocked during an active call. When a user is on a softphone call (e.g., Zoom) and navigates to Device Settings > Software to tap Update, they are taken to the Software Update screen and allowed to trigger DFU. Expected behavior: a popup message should appear informing the user that DFU is not available during a call.",
+  "scenario": "DFU firmware update is not blocked during an active softphone call on Voyager 5200",
+  "description_clean": "DFU (firmware update) is not blocked during an active call. When a user is on a softphone call (e.g., Zoom) with a Voyager 5200 headset and navigates to Device Settings > Software to tap Update, they are taken to the Software Update screen and allowed to trigger DFU. Expected behavior: a popup message should inform the user that DFU is not available during a call.",
   "steps": [
-    "1. Launch Poly Studio Mobile app on the Android device.",
-    "2. Connect to a supported Poly Bluetooth audio device.",
-    "3. Initiate an active softphone call (e.g., Zoom, Teams, etc.) using the connected Poly device.",
-    "4. While the call is active, navigate to the Home screen in the Poly Studio Mobile app.",
-    "5. Tap on the connected [Device Name] to open Device Settings.",
+    "1. Launch Poly Studio Mobile app on Android.",
+    "2. Connect a Voyager 5200 headset to the device.",
+    "3. Place an active call using a softphone app (e.g., Zoom) via the headset.",
+    "4. While on the active call, navigate to the Home screen in the Poly Studio Mobile app.",
+    "5. Tap on the connected Voyager 5200 device name to open Device Settings.",
     "6. Scroll to and tap 'Software' under Device Settings.",
-    "7. Tap 'Update' on the Software Update screen.",
-    "8. Observe whether the DFU (firmware update) process is allowed to proceed."
+    "7. Tap the 'Update' button on the Software screen."
   ],
-  "expected": "A popup message should appear informing the user that DFU is not available during an active call, and the firmware update should be blocked.",
-  "actual": "No popup is shown; the user is taken to the Software Update screen and allowed to trigger DFU even while on an active call.",
+  "expected": "A popup message should appear informing the user that DFU (firmware update) is not available during an active call, and the update should not proceed.",
+  "actual": "The user is taken to the Software Update screen and allowed to trigger DFU (firmware update) without any blocking popup or message.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "ReadyForPlanning"
   ],
   "keywords": [
+    "voyager-5200",
     "dfu-firmware-update",
+    "active-call-block",
     "poly-studio-mobile",
     "softphone-call",
-    "call-management",
-    "firmware-update-blocked",
     "device-settings",
     "software-update"
   ],
   "source_last_updated": "2026-04-16T08:14:02.000+0000",
   "source_hash": "614f60f952732d5fc152a61bfe2ab0d4bdc59bd2ef3b8130c66382cfecbf1738",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.787854Z",
+  "processed_at": "2026-04-25T09:32:26.050118Z",
   "status": "active"
 }
