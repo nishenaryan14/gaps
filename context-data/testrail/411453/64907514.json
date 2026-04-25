@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Support  - Poly Product Support screen color in light mode",
   "feature": "App Settings",
-  "scenario": "Product Support link screen top box color mismatch with main body in light mode on Poly Studio Mobile app",
+  "scenario": "Product Support screen top box color does not match main body color in Light mode on Poly Lens Menu",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the device.",
-    "2. Ensure the app is in Light Mode (not Dark Mode).",
-    "3. From the Home screen, tap the Poly Lens Menu (hamburger menu icon).",
-    "4. Tap Support.",
-    "5. Tap Product Support link.",
-    "6. Observe the top box on the Product Support screen."
+    "Launch Poly Studio Mobile app",
+    "Ensure the app is in Light Mode (not Dark Mode)",
+    "Tap the Poly Lens Menu (hamburger menu or menu icon)",
+    "Tap Support",
+    "Tap Product Support link",
+    "Observe the top box color on the Product Support screen"
   ],
-  "expected": "The top box on the Product Support screen should match the background color of the main body of the screen.",
+  "expected": "The top box color on the Product Support screen matches the main body color of the screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "product-support-screen",
     "light-mode",
-    "ui-color-mismatch",
-    "top-box",
+    "product-support-screen",
     "poly-lens-menu",
-    "hamburger-menu"
+    "ui-color-mismatch",
+    "top-box-color",
+    "support-screen-ui"
   ],
   "source_last_updated": "1759752624",
   "source_hash": "21771027176d87452737e889a37041278e668e8e05f7899e6a2369f4c7b60c22",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.847955Z",
+  "processed_at": "2026-04-25T08:21:30.950988Z",
   "status": "active"
 }
