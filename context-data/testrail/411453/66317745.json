@@ -7,18 +7,17 @@
   "feature": "Device Management",
   "scenario": "Custom device name does not persist after power cycling the device",
   "steps": [
-    "Open the Poly Studio Mobile app on the Home screen with the device connected.",
-    "Tap the device name or gear icon to navigate to Device Settings.",
-    "Tap General.",
-    "Tap the device's official name field.",
-    "Enter a new custom device name.",
-    "Tap Done to save the new name.",
-    "Power off the device by pressing and holding the Power button.",
-    "Power on the device by pressing the Power button again.",
-    "Re-open the Poly Studio Mobile app and observe the device name on the Home screen.",
-    "Navigate to Device Settings and observe the device name."
+    "1. Open the Poly Studio Mobile app with the device connected.",
+    "2. Go to Device Settings \u2192 General.",
+    "3. Tap the device's official name.",
+    "4. Enter a new custom name.",
+    "5. Tap Done.",
+    "6. Turn the device off (press and hold the Power button until it powers down).",
+    "7. Turn the device back on (press and hold the Power button until it powers on).",
+    "8. Open the Poly Studio Mobile app and check the device name on the Home screen.",
+    "9. Navigate to Device Settings and verify the device name displayed there."
   ],
-  "expected": "The custom device name is still displayed on the Home screen and in Device Settings after power cycling.",
+  "expected": "The custom device name is still displayed on both the Home screen and the Device Settings screen after power cycling.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -28,12 +27,11 @@
     "poly-studio-mobile",
     "device-settings",
     "general-settings",
-    "name-retention",
-    "bluetooth-pairing"
+    "device-name-retention"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "bad31d081bb09fcfa58be70020394f99d17f0edeec631c79d5bdbcc1c5266452",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.803903Z",
+  "processed_at": "2026-04-25T07:55:31.890612Z",
   "status": "active"
 }
