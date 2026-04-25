@@ -5,24 +5,23 @@
   "project": "411453",
   "title": "Home Screen - Update Available - Both earbuds are connected",
   "feature": "Firmware Updates",
-  "scenario": "Home screen Status Box displays battery levels, connected status, and firmware update info; tapping hides Software and Available fields on Poly Studio Mobile app",
+  "scenario": "Home screen Status Box correctly shows battery levels, connected status, and firmware update info when both earbuds are connected and an update is available",
   "steps": [],
   "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "home-screen",
     "status-box",
     "battery-levels",
     "connected-status",
     "firmware-update",
-    "ui-behavior",
-    "software-fields"
+    "earbuds-connected",
+    "update-available"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "fa494266b8f3136e2bb8c09a90f96c57e06282d2f084542fa2d84c86270526d7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.985254Z",
+  "processed_at": "2026-04-25T07:55:32.011871Z",
   "status": "active"
 }
