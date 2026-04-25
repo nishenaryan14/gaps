@@ -5,31 +5,29 @@
   "project": "411453",
   "title": "Reset Device - Clear Trusted Devices - Clear - No",
   "feature": "Device Management",
-  "scenario": "\"Clear Trusted Devices\" confirmation popup \"No\" button dismisses popup without clearing list or disconnecting headset in Device Settings Reset tab",
+  "scenario": "\"Clear Trusted Devices\" confirmation popup \"No\" button closes popup without clearing devices and headset remains connected",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Go to the Reset Device tab",
-    "Tap 'Clear' under 'Clear Trusted Devices'",
-    "Observe the confirmation popup that appears",
-    "Tap 'No' on the confirmation popup"
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Home \u2192 Device Settings \u2192 Reset Device.",
+    "3. Tap \"Clear\" under \"Clear Trusted Devices\".",
+    "4. Observe the confirmation popup that appears, warning that device power off is required and activity/calls may be interrupted.",
+    "5. Tap \"No\" on the confirmation popup."
   ],
-  "expected": "The confirmation popup closes, the trusted devices list is NOT cleared, and the headset remains connected.",
+  "expected": "The confirmation popup closes without clearing trusted devices, and the headset remains connected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "clear-trusted-devices",
     "confirmation-popup",
-    "device-settings",
-    "reset-tab",
     "poly-studio-mobile",
-    "no-button",
-    "dismiss-popup"
+    "reset-device",
+    "device-settings",
+    "android-app",
+    "no-button"
   ],
   "source_last_updated": "1762260877",
   "source_hash": "cdc2b36dd2f3e7e097fe1c19c05317c763616a53133440f77f54050e77ee6b4f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.951685Z",
+  "processed_at": "2026-04-25T08:21:31.021423Z",
   "status": "active"
 }
