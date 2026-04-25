@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue is visible on the Home Screen",
   "feature": "App Settings",
-  "scenario": "Location permission dialog appears on Home Screen after first launch setup flow in Poly Lens app",
+  "scenario": "Location permission dialog appears on Home Screen after first-time onboarding in Poly Lens app",
   "steps": [
-    "Launch Poly Lens app for the first time",
-    "Accept the license agreement and privacy policy",
-    "Tap Continue",
-    "Tap Skip",
-    "Observe the Home Screen",
-    "Observe the location permission dialog that appears"
+    "1. Launch the Poly Lens app for the first time.",
+    "2. Accept the license agreement and privacy policy.",
+    "3. Skip the onboarding flow.",
+    "4. Continue as Guest or Login.",
+    "5. Observe the Home screen."
   ],
-  "expected": "The user lands on the Home Screen without any location permission dialog appearing, or the location permission dialog is presented before the Home Screen is shown, not after.",
+  "expected": "The user lands on the Home screen without any location sharing dialogue being displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-lens-app",
     "home-screen",
-    "first-launch-setup",
+    "onboarding-flow",
     "location-permission",
+    "guest-login",
     "license-agreement",
     "privacy-policy",
-    "permission-dialog",
-    "app-onboarding"
+    "permission-dialog"
   ],
   "source_last_updated": "1759149897",
   "source_hash": "e1e5aed335f52b0d6a720088bef740cd9a1f5df5471fdd19e4479f6f39ac4fe7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.723390Z",
+  "processed_at": "2026-04-25T07:55:31.784581Z",
   "status": "active"
 }
