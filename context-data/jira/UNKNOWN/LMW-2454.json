@@ -5,18 +5,18 @@
   "project": "UNKNOWN",
   "summary": "ANDROID | Language is not translated to Spanish for welcome screen",
   "feature": "App Settings",
-  "scenario": "Welcome screen displays Portuguese instead of Spanish when app language is changed to Spanish in Device Settings",
-  "description_clean": "When the app language is changed to Spanish in Device Settings, the welcome screen displays Portuguese instead of Spanish.",
+  "scenario": "Welcome screen displays Portuguese text instead of Spanish when app language is changed to Spanish in Device Settings",
+  "description_clean": "When the app language is changed to Spanish in Device Settings, the welcome screen displays Portuguese text instead of Spanish.",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
     "2. Navigate to the Home screen.",
-    "3. Tap on the menu icon (hamburger menu) or profile icon to access Account/Settings.",
+    "3. Tap the menu icon (hamburger menu) or profile icon to access Account or Settings.",
     "4. Go to Account \u2192 App Language (or Settings \u2192 Language).",
     "5. Change the app language to Spanish (Espa\u00f1ol).",
     "6. Close and reopen the Poly Studio Mobile app.",
-    "7. Observe the welcome screen that appears upon launch."
+    "7. Observe the welcome screen text displayed upon launch."
   ],
-  "expected": "The welcome screen should display text in Spanish (Espa\u00f1ol).",
+  "expected": "The welcome screen should display text in Spanish (Espa\u00f1ol) after changing the app language to Spanish.",
   "actual": "The welcome screen displays text in Portuguese instead of Spanish.",
   "priority": "P1: High",
   "severity": "",
@@ -26,13 +26,13 @@
     "app-language",
     "spanish-localization",
     "welcome-screen",
-    "device-settings",
-    "language-persistence",
-    "android"
+    "language-display-issue",
+    "android",
+    "device-settings"
   ],
   "source_last_updated": "2026-04-18T13:05:26.000+0000",
   "source_hash": "8d7a9bb40c9c61eb2bcf28e8c44be48214d0916ac28b931cba33e050a42b19d4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.745344Z",
+  "processed_at": "2026-04-25T09:32:25.542728Z",
   "status": "active"
 }
