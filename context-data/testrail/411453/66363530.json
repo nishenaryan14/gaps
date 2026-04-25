@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Falcon  - Custom Button - Teams Detected",
   "feature": "App Settings",
-  "scenario": "Custom Button page shows \"Other Providers\" greyed out with message when Microsoft Teams is connected via Poly Studio Mobile app",
+  "scenario": "Custom Button screen shows \"Other Providers\" greyed out with message when Microsoft Teams is connected via Poly Studio Mobile app",
   "steps": [
     "1. Launch the Poly Studio Mobile app on your Android device.",
     "2. Ensure a Poly Bluetooth audio device is paired and connected.",
-    "3. Open the Microsoft Teams app and establish a connection (sign in and connect audio).",
+    "3. Open the Microsoft Teams app and establish a connection (sign in and connect to a meeting or enable Teams integration).",
     "4. Return to the Poly Studio Mobile app.",
     "5. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "6. Tap on 'Custom Button'.",
-    "7. Observe the available options on the Custom Button page."
+    "6. Tap on 'Custom Button' in the Device Settings menu.",
+    "7. Observe the options displayed on the Custom Button screen."
   ],
-  "expected": "The Custom Button page displays two options: 'Microsoft Teams' (selected by default) and 'Other Providers' (greyed out and inaccessible). A message is shown: 'Microsoft Teams is connected. Other Providers is not available when Microsoft Teams is connected.'",
+  "expected": "The Custom Button screen shows two options: \"Microsoft Teams\" (selected by default) and \"Other Providers\" (greyed out and inaccessible). A message is displayed: \"Microsoft Teams is connected. Other Providers is not available when Microsoft Teams is connected.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "custom-button",
     "other-providers",
-    "greyed-out",
-    "microsoft-teams",
     "poly-studio-mobile",
+    "microsoft-teams",
     "device-settings",
-    "bluetooth-audio"
+    "greyed-out",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "ad25be3e0b32a8733a83c3afc8acce40b989c275cc8a7130384b10077a87500c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.980757Z",
+  "processed_at": "2026-04-25T07:55:32.006789Z",
   "status": "active"
 }
