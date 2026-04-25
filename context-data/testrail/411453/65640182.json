@@ -4,30 +4,34 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Find My Device Sound Played",
-  "feature": "App Settings",
-  "scenario": "Analytics event logged when sound is played from the Find My Device screen in Poly Studio Mobile app",
+  "feature": "Device Management",
+  "scenario": "Find My Device sound playback event is not logged in Firebase after triggering from the Poly Studio Mobile app",
   "steps": [
-    "Open the Poly Studio Mobile app on the Android device.",
-    "Navigate to the Home screen.",
-    "Tap on the Find My Device option.",
-    "On the Find My Device screen, trigger a sound to play on the connected Poly Bluetooth audio device.",
-    "Observe the analytics logging behavior."
+    "1. Open the Find My Device Firebase page and verify it contains default elements and the Device PID.",
+    "2. Open the Poly Studio Mobile app on the mobile device.",
+    "3. Navigate to the Home screen.",
+    "4. Tap on the connected device to open Device Settings.",
+    "5. Go to the Find My Device tab.",
+    "6. Select the connected device from the list.",
+    "7. Tap the button to trigger the sound on the device.",
+    "8. Wait for some time (usually a few hours) for event logging to propagate.",
+    "9. Return to the Find My Device Firebase page and check the event count for related elements."
   ],
-  "expected": "The app logs analytics events when sound is played from the Find My Device screen. The logged data includes event count by country, gender, events per session, app version, app build, and app environment.",
+  "expected": "The event count for related elements on the Find My Device Firebase page should increase after triggering the sound on the device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "find-my-device",
-    "analytics-event",
-    "bluetooth-audio",
-    "android-app",
+    "poly-studio-mobile",
+    "firebase-event-logging",
+    "device-settings",
     "sound-playback",
-    "device-locator"
+    "event-propagation",
+    "device-pid"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "68cb614e6a2f781db7f4c3f10005482677a15d43c408a6d2471b7428cb18d666",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.991497Z",
+  "processed_at": "2026-04-25T08:21:31.069857Z",
   "status": "active"
 }
