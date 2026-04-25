@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "Mobile user uninstalls the mobile app",
   "feature": "App Settings",
-  "scenario": "Poly Studio Mobile app uninstall changes user status from active to inactive on Lens tenant Device Users page",
+  "scenario": "User status on Lens tenant Manage/Device Users page does not change to inactive after uninstalling Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the mobile device.",
-    "2. Ensure the device is connected and the user's status is shown as 'Active' on the Lens tenant (Manage \u2192 Device Users page).",
-    "3. Uninstall the Poly Studio Mobile app from the mobile device.",
-    "4. Navigate to the Lens tenant web portal \u2192 Manage \u2192 Device Users page.",
-    "5. Observe the status of the user who uninstalled the app."
+    "1. Ensure the user is registered on the Lens tenant with an active status on the Manage/Device Users page.",
+    "2. On the mobile device, uninstall the Poly Studio Mobile app.",
+    "3. Open a web browser and navigate to the Lens tenant's Manage/Device Users page.",
+    "4. Locate the user's entry in the device users list."
   ],
-  "expected": "The user's status on the Lens tenant (Manage/Device Users page) should remain unchanged (e.g., remain 'Active') or reflect the actual device connection state, not change solely due to app uninstallation.",
+  "expected": "The mobile user's status on the Lens tenant Manage/Device Users page changes to \"Inactive\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "app-uninstall",
     "lens-tenant",
-    "device-users-page",
+    "manage-device-users",
     "user-status",
-    "active-to-inactive",
-    "manage-page"
+    "inactive-status",
+    "app-uninstallation",
+    "device-registration"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "e5736a65aa66932c5957ae56eabe8aadc954c269397852d75ae1151453b2431e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.060609Z",
+  "processed_at": "2026-04-25T09:32:26.319406Z",
   "status": "active"
 }
