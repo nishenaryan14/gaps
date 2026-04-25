@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Charge case inside screen/forth screen, left zoom in/out",
   "feature": "App Settings",
-  "scenario": "Zoom toggle on charge case inside screen in QSG when tapping left circle button on fourth screen",
+  "scenario": "Zoom toggle on charge case illustration in Quick Start Guide does not return to original screen when tapping circle button again",
   "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Navigate to the Home screen.",
-    "Tap on the Quick Start Guide (QSG) option.",
-    "Swipe to the fourth screen showing the charge case inside view.",
+    "Open the Quick Start Guide (QSG) in the Poly Studio Mobile app.",
+    "Swipe to the fourth screen of the QSG.",
     "Tap the left circle button on the screen.",
-    "Observe the zoom-in effect and new text appearing.",
+    "Observe the zoom behavior and any new text displayed.",
     "Tap the same left circle button again."
   ],
-  "expected": "Tapping the left circle button zooms in with new text appearing. Tapping it again zooms out to the original screen showing the charge case inside.",
+  "expected": "Tapping the left circle button zooms in and displays new text. Tapping it again zooms out to the original screen showing the charge case inside.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "quick-start-guide",
-    "qsg",
-    "charge-case-inside-screen",
-    "left-circle-button",
+    "poly-studio-mobile",
     "zoom-toggle",
-    "zoom-in-effect",
-    "fourth-screen"
+    "charge-case-illustration",
+    "circle-button",
+    "ui-navigation",
+    "user-interface"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "e326035733a5a7b83a8639362a4525fbdda738fef3b1f3ffe2dd39ca9fecb45f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.854018Z",
+  "processed_at": "2026-04-25T07:55:31.937961Z",
   "status": "active"
 }
