@@ -1,277 +1,124 @@
 [
   {
-    "title": "Fit Test \u2014 Primary Earbud Button Press During Test Shows 'Device Disconnected' Error",
+    "title": "TC-FT-001: Fit Test \u2014 Normal execution completes successfully (baseline)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the hardware button on the PRIMARY earbud (left/right as designated by the device).",
-      "Observe the on-screen message and state of the Fit Test screen."
+      "Precondition: Earbuds (Emu/Tern/Osprey) connected to Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Fit Test.",
+      "Tap 'Start Fit Test'.",
+      "Wait for audio playback to complete (~10-15 sec).",
+      "Observe result screen."
     ],
-    "expected": "The app displays the error message 'Device disconnected' on the Fit Test screen. The fit test audio stops. The test is marked as failed/interrupted."
+    "expected": "Fit Test completes without interruption. Result screen displays seal quality (e.g., Good/Poor) with per-ear indication. No error dialogs. 'Done' or 'Retry' button is visible and tappable."
   },
   {
-    "title": "Fit Test \u2014 Non-Primary Earbud Button Press During Test Shows 'Cannot Complete Test' Error",
+    "title": "TC-FT-002: Fit Test \u2014 Primary earbud button press DURING audio playback (Emu/Tern/Osprey)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the hardware button on the NON-PRIMARY earbud (the opposite earbud from the primary).",
-      "Observe the on-screen message and state of the Fit Test screen."
+      "Precondition: Earbuds connected, app open on Fit Test screen.",
+      "Tap 'Start Fit Test'.",
+      "While audio playback is active (within first 5 seconds), press the button on the PRIMARY earbud (left/right as defined by device).",
+      "Observe Fit Test UI immediately after button press.",
+      "Observe Fit Test result screen after audio stops.",
+      "Navigate away (Device \u2192 Audio Settings) and return to Fit Test."
     ],
-    "expected": "The app displays the error message 'Cannot complete test' on the Fit Test screen. The fit test audio stops. The test is marked as failed/interrupted."
+    "expected": "Fit Test does NOT freeze or crash. Result is either: (a) displayed correctly if button press did not corrupt measurement, OR (b) shows 'Incomplete' / 'Interrupted' state. \ud83e\udde0 BUG SIGNATURE VALIDATION: Actual (If Bug): Fit Test result shows incorrect seal value (e.g., Good when seal was broken by button press motion) OR app hangs on 'Running...' indefinitely. App must NOT remain stuck in 'Running' state. After navigating away and back, Fit Test must show idle/ready state (not 'Running')."
   },
   {
-    "title": "Fit Test \u2014 Primary Earbud Double-Press During Test Shows 'Device Disconnected' Error",
+    "title": "TC-FT-003: Fit Test \u2014 Secondary earbud button press DURING audio playback (Emu/Tern/Osprey)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, double-press the hardware button on the PRIMARY earbud.",
-      "Observe the on-screen message and state of the Fit Test screen."
+      "Precondition: Earbuds connected, app open on Fit Test screen.",
+      "Tap 'Start Fit Test'.",
+      "While audio playback is active, press the button on the SECONDARY earbud (the non-primary side).",
+      "Observe Fit Test UI immediately.",
+      "Observe Fit Test result screen.",
+      "Attempt to restart Fit Test immediately after."
     ],
-    "expected": "The app displays the error message 'Device disconnected' on the Fit Test screen. The fit test audio stops. The test is marked as failed/interrupted."
+    "expected": "\ud83e\udde0 DEVICE ASYMMETRY: Behavior may differ from primary earbud press. Expected: Fit Test either completes with valid result OR shows 'Interrupted'. \ud83e\udde0 BUG SIGNATURE VALIDATION: Actual (If Bug): Secondary button press causes asymmetric failure \u2014 e.g., primary press works but secondary press corrupts state, or vice versa. Restarting Fit Test must be possible without app restart."
   },
   {
-    "title": "Fit Test \u2014 Non-Primary Earbud Double-Press During Test Shows 'Cannot Complete Test' Error",
+    "title": "TC-FT-004: Fit Test \u2014 Double/triple button press DURING audio playback (Emu/Tern/Osprey)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, double-press the hardware button on the NON-PRIMARY earbud.",
-      "Observe the on-screen message and state of the Fit Test screen."
+      "Precondition: Earbuds connected, app open on Fit Test screen.",
+      "Tap 'Start Fit Test'.",
+      "While audio playback is active, rapidly press the earbud button 2-3 times.",
+      "Observe UI behavior during rapid presses.",
+      "Observe final Fit Test result.",
+      "Check app state: navigate to Home, then back to Device \u2192 Fit Test."
     ],
-    "expected": "The app displays the error message 'Cannot complete test' on the Fit Test screen. The fit test audio stops. The test is marked as failed/interrupted."
+    "expected": "\ud83e\udde0 IMMEDIATE STATE TRIGGER: Rapid button presses during Fit Test must not cause app crash or ANR. Expected: Fit Test either completes, shows 'Interrupted', or ignores the button events. \ud83e\udde0 BUG SIGNATURE VALIDATION: Actual (If Bug): Rapid presses cause inconsistent result capture (sometimes recorded, sometimes not) or leave Fit Test in a zombie state where 'Start' button is disabled but test is not running. After navigation round-trip, Fit Test must return to ready state."
   },
   {
-    "title": "Fit Test \u2014 Primary Earbud Long-Press During Test Shows 'Device Disconnected' Error",
+    "title": "TC-FT-005: Fit Test \u2014 Button press at EXACT moment of audio completion (Emu/Tern/Osprey)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, long-press the hardware button on the PRIMARY earbud (hold for 2+ seconds).",
-      "Observe the on-screen message and state of the Fit Test screen."
+      "Precondition: Earbuds connected, app open on Fit Test screen.",
+      "Tap 'Start Fit Test'.",
+      "Wait until the final ~1 second of Fit Test audio playback.",
+      "Press the earbud button at the exact moment audio ends.",
+      "Observe result screen.",
+      "Check if result is saved by navigating away and back."
     ],
-    "expected": "The app displays the error message 'Device disconnected' on the Fit Test screen. The fit test audio stops. The test is marked as failed/interrupted."
+    "expected": "\ud83e\udde0 STATE TRIGGER (edge timing): Fit Test must handle concurrent button press at state transition boundary. Expected: Result screen appears normally OR shows 'Interrupted'. \ud83e\udde0 BUG SIGNATURE VALIDATION: Actual (If Bug): Button press at audio completion causes result to be lost (no result shown, stuck on blank screen) OR result is shown but navigating away and back loses it (persistence failure)."
   },
   {
-    "title": "Fit Test \u2014 Non-Primary Earbud Long-Press During Test Shows 'Cannot Complete Test' Error",
+    "title": "TC-FT-006: Fit Test \u2014 Button press \u2192 immediate app backgrounding (Emu/Tern/Osprey)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, long-press the hardware button on the NON-PRIMARY earbud (hold for 2+ seconds).",
-      "Observe the on-screen message and state of the Fit Test screen."
+      "Precondition: Earbuds connected, app open on Fit Test screen.",
+      "Tap 'Start Fit Test'.",
+      "While audio playback is active, press the earbud button.",
+      "IMMEDIATELY press Home button to background the app (within 1 second of button press).",
+      "Wait 5 seconds, then reopen the app from recent apps.",
+      "Observe Fit Test state.",
+      "Navigate to Device \u2192 Fit Test."
     ],
-    "expected": "The app displays the error message 'Cannot complete test' on the Fit Test screen. The fit test audio stops. The test is marked as failed/interrupted."
+    "expected": "\ud83e\udde0 DEEP LIFECYCLE: App must recover gracefully from concurrent button press + backgrounding during Fit Test. Expected: Fit Test shows either completed result, 'Interrupted' state, or idle/ready state. \ud83e\udde0 BUG SIGNATURE VALIDATION: Actual (If Bug): App shows Fit Test stuck in 'Running' state after reopening, or UI is frozen, or app crashes on resume. Must be able to start a new Fit Test without force-killing the app."
   },
   {
-    "title": "Fit Test \u2014 Clean Restart After Primary Earbud Button Interrupt ('Device Disconnected')",
+    "title": "TC-FT-007: Fit Test \u2014 Button press \u2192 immediate app force-kill (Emu/Tern/Osprey)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "Press the hardware button on the PRIMARY earbud to trigger the 'Device disconnected' error.",
-      "Verify the error message is displayed and the test is stopped.",
-      "Tap 'Start Fit Test' again to restart the fit test.",
-      "Allow the fit test to complete without interruption."
+      "Precondition: Earbuds connected, app open on Fit Test screen.",
+      "Tap 'Start Fit Test'.",
+      "While audio playback is active, press the earbud button.",
+      "IMMEDIATELY force-kill the app (swipe from recent apps or Settings \u2192 Force Stop).",
+      "Reopen the app and reconnect to earbuds.",
+      "Navigate to: Device \u2192 Fit Test."
     ],
-    "expected": "The fit test restarts cleanly from the beginning. The fit test audio plays normally. The test completes successfully with a fit test result displayed (e.g., 'Good fit' or 'Adjust earbuds'). No residual error state from the previous failed attempt."
+    "expected": "\ud83e\udde0 IMMEDIATE STATE TRIGGER + DEEP LIFECYCLE: App must not crash on relaunch. Expected: Fit Test shows idle/ready state (not 'Running'). \ud83e\udde0 BUG SIGNATURE VALIDATION: Actual (If Bug): App crashes on launch, or Fit Test remains in 'Running' state permanently, or the app cannot reconnect to earbuds after force-kill during active Fit Test + button press."
   },
   {
-    "title": "Fit Test \u2014 Clean Restart After Non-Primary Earbud Button Interrupt ('Cannot Complete Test')",
+    "title": "TC-FT-008: Fit Test \u2014 Button press during Fit Test on Emu vs. Tern vs. Osprey (cross-device comparison)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "Press the hardware button on the NON-PRIMARY earbud to trigger the 'Cannot complete test' error.",
-      "Verify the error message is displayed and the test is stopped.",
-      "Tap 'Start Fit Test' again to restart the fit test.",
-      "Allow the fit test to complete without interruption."
+      "Precondition: Run this test on EACH device: Emu, Tern, Osprey (separate sessions).",
+      "For each device: Connect earbuds, navigate to Device \u2192 Fit Test.",
+      "Tap 'Start Fit Test'.",
+      "While audio playback is active, press the primary earbud button.",
+      "Record result for each device: (a) Did Fit Test complete? (b) Was result correct? (c) Any crash/freeze?",
+      "Compare results across all three devices."
     ],
-    "expected": "The fit test restarts cleanly from the beginning. The fit test audio plays normally. The test completes successfully with a fit test result displayed (e.g., 'Good fit' or 'Adjust earbuds'). No residual error state from the previous failed attempt."
+    "expected": "\ud83e\udde0 DEVICE ASYMMETRY: All three devices (Emu, Tern, Osprey) must exhibit consistent behavior during button-press interruption of Fit Test. \ud83e\udde0 BUG SIGNATURE VALIDATION: Actual (If Bug): One device shows different behavior (e.g., Emu crashes, Tern shows wrong result, Osprey works correctly). All must either complete successfully or show 'Interrupted' \u2014 no crashes, no incorrect seal values, no stuck states."
   },
   {
-    "title": "Fit Test \u2014 Sequential Button Interrupts (Primary Then Non-Primary) During Test",
+    "title": "TC-FT-009: Fit Test \u2014 Consecutive runs with button press on first run (Emu/Tern/Osprey)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "Press the hardware button on the PRIMARY earbud \u2014 verify 'Device disconnected' error appears.",
-      "Tap 'Start Fit Test' to restart.",
-      "While fit test audio is playing again, press the hardware button on the NON-PRIMARY earbud \u2014 verify 'Cannot complete test' error appears.",
-      "Tap 'Start Fit Test' to restart again.",
-      "Allow the fit test to complete without interruption."
+      "Precondition: Earbuds connected, app open on Fit Test screen.",
+      "Run 1: Tap 'Start Fit Test', press earbud button during audio, observe result (interrupted or completed).",
+      "Run 2: Immediately tap 'Start Fit Test' again WITHOUT navigating away.",
+      "Do NOT press any buttons during Run 2.",
+      "Observe Run 2 result.",
+      "Run 3: Tap 'Start Fit Test' again, press earbud button during audio.",
+      "Observe Run 3 result."
     ],
-    "expected": "Each button press produces the correct error message for the respective earbud. The test can be cleanly restarted after each interrupt. The final test completes successfully."
+    "expected": "\ud83e\udde0 PERSISTENCE CHECK: After a button-press interruption, the Fit Test must be restartable cleanly. Expected: Run 2 (no interruption) completes normally with valid result. Run 3 (with interruption) behaves same as Run 1. \ud83e\udde0 BUG SIGNATURE VALIDATION: Actual (If Bug): After interrupted Run 1, Run 2 fails to start (button grayed out) or shows incorrect result, or Run 3 causes crash. Each run must be independent and not corrupt subsequent runs."
   },
   {
-    "title": "Fit Test \u2014 App Backgrounded During Fit Test Audio Playback (Lifecycle Handling)",
+    "title": "TC-FT-010: Fit Test \u2014 Button press during Fit Test while media is playing in background (Emu/Tern/Osprey)",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the Home button to background the app.",
-      "Wait 5 seconds.",
-      "Reopen the Poly Studio Mobile app from the recent apps list.",
-      "Observe the Fit Test screen state and audio state."
+      "Precondition: Earbuds connected, media app (e.g., Spotify/YouTube) playing audio in background.",
+      "Navigate to: Device \u2192 Fit Test.",
+      "Tap 'Start Fit Test'.",
+      "While Fit Test audio is playing (overlapping with background media), press the earbud button.",
+      "Observe Fit Test result.",
+      "Check media playback state after Fit Test completes/interrupts.",
+      "Navigate away and back to Fit Test."
     ],
-    "expected": "The fit test audio stops when the app is backgrounded. Upon returning to the app, the Fit Test screen shows the test as interrupted/failed. The user can tap 'Start Fit Test' to begin a new test."
-  },
-  {
-    "title": "Fit Test \u2014 Incoming Call During Fit Test Audio Playback (Lifecycle Handling)",
-    "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, trigger an incoming call on the connected phone (use a second device to call the test phone).",
-      "Observe the Fit Test screen state and audio behavior.",
-      "Reject or end the call.",
-      "Return to the Poly Studio Mobile app and observe the Fit Test screen."
-    ],
-    "expected": "The fit test audio is interrupted by the incoming call. The Fit Test screen shows the test as failed/interrupted. After the call ends and the app is reopened, the user can tap 'Start Fit Test' to begin a new test."
-  },
-  {
-    "title": "Fit Test \u2014 App Force-Killed During Fit Test Audio Playback (Lifecycle Handling)",
-    "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, force-kill the Poly Studio Mobile app (swipe away from recent apps or use OS settings).",
-      "Reopen the Poly Studio Mobile app.",
-      "Navigate to [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Observe the Fit Test screen state."
-    ],
-    "expected": "The fit test audio stops when the app is killed. Upon reopening the app and navigating to Fit Test, the screen shows the default state (no active test). The user can tap 'Start Fit Test' to begin a new test. No crash or stuck state occurs."
-  },
-  {
-    "title": "Fit Test \u2014 Device-Specific: Poly Voyager Free 60+ UC (Emu) Primary Earbud Button Press",
-    "steps": [
-      "Connect Poly Voyager Free 60+ UC earbuds to the phone.",
-      "Open Poly Studio Mobile app.",
-      "Tap 'Poly Voyager Free 60+ UC' \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the hardware button on the PRIMARY earbud (as designated by the device).",
-      "Observe the on-screen message."
-    ],
-    "expected": "The app displays the error message 'Device disconnected' on the Fit Test screen. The fit test audio stops. This confirms the Emu device exhibits the primary earbud bug behavior."
-  },
-  {
-    "title": "Fit Test \u2014 Device-Specific: Poly Voyager Free 60+ UC (Emu) Non-Primary Earbud Button Press",
-    "steps": [
-      "Connect Poly Voyager Free 60+ UC earbuds to the phone.",
-      "Open Poly Studio Mobile app.",
-      "Tap 'Poly Voyager Free 60+ UC' \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the hardware button on the NON-PRIMARY earbud (the opposite earbud from the primary).",
-      "Observe the on-screen message."
-    ],
-    "expected": "The app displays the error message 'Cannot complete test' on the Fit Test screen. The fit test audio stops. This confirms the Emu device exhibits the non-primary earbud bug behavior."
-  },
-  {
-    "title": "Fit Test \u2014 Device-Specific: Poly Voyager Free 60+ (Tern) Primary Earbud Button Press",
-    "steps": [
-      "Connect Poly Voyager Free 60+ (Tern) earbuds to the phone.",
-      "Open Poly Studio Mobile app.",
-      "Tap 'Poly Voyager Free 60+' \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the hardware button on the PRIMARY earbud (as designated by the device).",
-      "Observe the on-screen message."
-    ],
-    "expected": "The app displays the error message 'Device disconnected' on the Fit Test screen. The fit test audio stops. This confirms the Tern device exhibits the primary earbud bug behavior."
-  },
-  {
-    "title": "Fit Test \u2014 Device-Specific: Poly Voyager Free 60+ (Tern) Non-Primary Earbud Button Press",
-    "steps": [
-      "Connect Poly Voyager Free 60+ (Tern) earbuds to the phone.",
-      "Open Poly Studio Mobile app.",
-      "Tap 'Poly Voyager Free 60+' \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the hardware button on the NON-PRIMARY earbud (the opposite earbud from the primary).",
-      "Observe the on-screen message."
-    ],
-    "expected": "The app displays the error message 'Cannot complete test' on the Fit Test screen. The fit test audio stops. This confirms the Tern device exhibits the non-primary earbud bug behavior."
-  },
-  {
-    "title": "Fit Test \u2014 Device-Specific: Osprey Earbuds Primary Earbud Button Press",
-    "steps": [
-      "Connect Osprey earbuds to the phone.",
-      "Open Poly Studio Mobile app.",
-      "Tap device name (Osprey) \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the hardware button on the PRIMARY earbud (as designated by the device).",
-      "Observe the on-screen message."
-    ],
-    "expected": "The app displays the error message 'Device disconnected' on the Fit Test screen. The fit test audio stops. This confirms the Osprey device exhibits the primary earbud bug behavior."
-  },
-  {
-    "title": "Fit Test \u2014 Device-Specific: Osprey Earbuds Non-Primary Earbud Button Press",
-    "steps": [
-      "Connect Osprey earbuds to the phone.",
-      "Open Poly Studio Mobile app.",
-      "Tap device name (Osprey) \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the hardware button on the NON-PRIMARY earbud (the opposite earbud from the primary).",
-      "Observe the on-screen message."
-    ],
-    "expected": "The app displays the error message 'Cannot complete test' on the Fit Test screen. The fit test audio stops. This confirms the Osprey device exhibits the non-primary earbud bug behavior."
-  },
-  {
-    "title": "Fit Test \u2014 Normal Completion After Successful Fit Test (No Button Interrupt)",
-    "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "Do NOT press any earbud buttons during the test.",
-      "Allow the fit test audio to play to completion.",
-      "Observe the fit test result."
-    ],
-    "expected": "The fit test completes successfully. A result message is displayed (e.g., 'Good fit' or 'Adjust earbuds for better fit'). No error messages appear. The test is marked as completed."
-  },
-  {
-    "title": "Fit Test \u2014 Rapid Consecutive Button Presses on Primary Earbud During Test",
-    "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, rapidly press the PRIMARY earbud button 5 times in quick succession.",
-      "Observe the on-screen message and state of the Fit Test screen."
-    ],
-    "expected": "The app displays the error message 'Device disconnected' on the Fit Test screen. The fit test audio stops. The app does not crash or enter an unstable state. The user can tap 'Start Fit Test' to restart."
-  },
-  {
-    "title": "Fit Test \u2014 Rapid Consecutive Button Presses on Non-Primary Earbud During Test",
-    "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, rapidly press the NON-PRIMARY earbud button 5 times in quick succession.",
-      "Observe the on-screen message and state of the Fit Test screen."
-    ],
-    "expected": "The app displays the error message 'Cannot complete test' on the Fit Test screen. The fit test audio stops. The app does not crash or enter an unstable state. The user can tap 'Start Fit Test' to restart."
-  },
-  {
-    "title": "Fit Test \u2014 Simultaneous Both Earbud Button Press During Test",
-    "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, press the hardware buttons on BOTH earbuds simultaneously.",
-      "Observe the on-screen message and state of the Fit Test screen."
-    ],
-    "expected": "The app displays an error message (either 'Device disconnected' or 'Cannot complete test' \u2014 whichever is triggered first). The fit test audio stops. The app does not crash or show conflicting/duplicate error messages."
-  },
-  {
-    "title": "Fit Test \u2014 Bluetooth Disconnect During Fit Test Audio Playback",
-    "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap [Device Name] \u2192 Audio Settings \u2192 Fit Test.",
-      "Tap 'Start Fit Test' to begin the fit test audio playback.",
-      "While fit test audio is playing, disconnect the earbuds via phone Bluetooth settings or by powering off the earbuds.",
-      "Observe the on-screen message and state of the Fit Test screen.",
-      "Reconnect the earbuds.",
-      "Navigate back to Fit Test and attempt to start a new test."
-    ],
-    "expected": "The app displays a 'Device disconnected' or connection lost error message. The fit test audio stops. After reconnecting, the user can tap 'Start Fit Test' to begin a new test cleanly."
+    "expected": "\ud83e\udde0 CONCURRENT OPERATIONS: Fit Test must handle button press while both Fit Test audio AND background media are active. Expected: Fit Test completes or shows 'Interrupted'. Media playback should resume normally after Fit Test ends. \ud83e\udde0 BUG SIGNATURE VALIDATION: Actual (If Bug): Media playback stops permanently, or audio routing gets confused (no sound from either source), or Fit Test result is lost. After navigation round-trip, Fit Test must be in ready state."
   }
 ]
