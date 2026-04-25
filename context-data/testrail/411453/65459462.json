@@ -5,31 +5,24 @@
   "project": "411453",
   "title": "Software Update - DFU - Houston... screen",
   "feature": "Firmware Update",
-  "scenario": "DFU failure does not display \"Houston\" screen with Cancel and Retry buttons when update is interrupted",
-  "steps": [
-    "1. Launch Poly Studio Mobile app on Android.",
-    "2. Navigate to Home screen and ensure a Poly Bluetooth audio device is connected.",
-    "3. Go to Device Settings \u2192 [Device Name] \u2192 Software Update.",
-    "4. Initiate a Device Firmware Update (DFU) by tapping 'Start Update'.",
-    "5. During the first 10-20% of the update, turn off the headset (e.g., press and hold the Power button to power off).",
-    "6. Observe the app screen after the update fails.",
-    "7. Alternatively, turn off internet connectivity on the mobile device before tapping 'Start Update', then tap 'Start Update' and observe the app screen."
-  ],
-  "expected": "The app displays a \"Houston\" screen with the message: \"We have a problem. The software update for 'DEVICE NAME' didn't successfully complete. Keep your Poly device and your mobile device nearby, connected to each other and the internet.\" Both Cancel and Retry buttons are visible and tappable.",
+  "scenario": "Poly Studio Mobile app fails to display \"Houston\" error screen with Cancel and Retry buttons after firmware update failure due to headset power-off or internet disconnection",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu-failure",
-    "houston-screen",
-    "cancel-retry-buttons",
-    "firmware-update-interrupted",
     "poly-studio-mobile",
-    "software-update-screen",
-    "update-failure-ui"
+    "firmware-update-failure",
+    "houston-error-screen",
+    "cancel-retry-buttons",
+    "headset-power-off",
+    "internet-disconnection",
+    "error-display",
+    "update-recovery"
   ],
   "source_last_updated": "1763129740",
   "source_hash": "5602ae120cdb2a66275c342829f11148cb58af5ccfb2a4ae0efaddf70c8a3326",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.030184Z",
+  "processed_at": "2026-04-25T09:32:26.289573Z",
   "status": "active"
 }
