@@ -5,34 +5,24 @@
   "project": "411453",
   "title": "EB and CC have updates - Update button, Release notes and Poly Lens links are available",
   "feature": "Firmware Updates",
-  "scenario": "Firmware update flow for both earbuds and charge case shows correct Update buttons, tags, and links on Device Settings Software Update tab",
-  "steps": [
-    "1. Launch Poly Studio Mobile app and navigate to the Home screen.",
-    "2. Ensure both the earbuds and the charge case have firmware updates available.",
-    "3. Observe the Home screen \u2014 verify that an 'Update' button is displayed.",
-    "4. Tap the 'Update' button.",
-    "5. Verify that the app navigates to Device Settings with the Software Update tab expanded.",
-    "6. On the Device Settings screen, observe the earbuds section \u2014 verify an 'Update' button with a '1' tag is shown on the settings tab.",
-    "7. On the Device Settings screen, observe the charge case section \u2014 verify 'Update Available' is displayed with info about needing Poly Lens Desktop.",
-    "8. Tap the release notes link for the earbuds \u2014 verify it is functional and opens the correct content.",
-    "9. Tap the Poly Lens App link for the charge case \u2014 verify it is functional and opens the correct content."
-  ],
-  "expected": "Home screen shows an 'Update' button. Tapping it navigates to Device Settings with the Software Update tab expanded. Earbuds show an 'Update' button with a '1' tag. Charge case shows 'Update Available' with info about needing Poly Lens Desktop. Both the release notes link (earbuds) and Poly Lens App link (charge case) are present and functional.",
+  "scenario": "Firmware update flow for both earbuds and charge case shows Update button, Release Notes, and Poly Lens App links on Device Settings Software Update tab",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "firmware-update",
-    "poly-studio-mobile",
     "device-settings",
     "software-update-tab",
+    "release-notes",
+    "poly-lens-app",
     "update-button",
     "charge-case",
-    "earbuds",
-    "poly-lens-desktop"
+    "earbuds"
   ],
   "source_last_updated": "1762331320",
   "source_hash": "feee47cee2d0cf2f9146c8c4a8b30b4ac369a2873d3ad10b9dbb755c6016a71d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.985254Z",
+  "processed_at": "2026-04-25T07:55:32.011871Z",
   "status": "active"
 }
