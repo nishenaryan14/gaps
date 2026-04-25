@@ -19,63 +19,100 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case covers the User Guides screen or the display of sub-devices on it.",
-    "No test case verifies that the Falcon Charge Stand (or any sub-device) should NOT appear on the User Guides screen.",
-    "All existing test cases focus on onboarding, EULA, splash screen, and location permissions \u2014 none relate to the User Guides screen functionality."
+    "No test covers the User Guides screen functionality at all \u2014 none of the existing test cases verify which devices or accessories are listed on the User Guides screen.",
+    "No test verifies that only valid/connected devices should appear as sub-devices on the User Guides screen, and that accessories like the Falcon Charge Stand should not be incorrectly listed.",
+    "No test covers the data source or filtering logic for the User Guides device list \u2014 e.g., ensuring only actual headset/speakerphone products appear, not charging accessories.",
+    "No test validates the User Guides screen content after navigating from the Home screen, which is the exact flow in this bug scenario."
   ],
   "generated_testcases": [
     {
-      "title": "Verify Falcon Charge Stand does NOT appear as sub-device on User Guides screen",
+      "title": "User Guides Screen \u2014 Verify Falcon Charge Stand is NOT listed as a sub-device",
       "steps": [
-        "1. Launch the application and complete onboarding flow (EULA, splash screen, location permissions).",
-        "2. Navigate to the User Guides screen from the main menu/settings.",
-        "3. Observe the list of devices displayed on the User Guides screen.",
-        "4. Check if any sub-devices (e.g., Falcon Charge Stand) are listed under any main device."
+        "Open Poly Studio Mobile app on Android.",
+        "Tap the Home tab (bottom navigation).",
+        "Verify the Falcon Charge Stand is NOT listed as a connected device on the Home screen.",
+        "Tap the Menu icon (three horizontal lines) in the top-left corner.",
+        "Tap 'User Guides' from the navigation drawer menu.",
+        "Observe the list of devices displayed on the User Guides screen.",
+        "Verify that 'Falcon Charge Stand' does NOT appear anywhere in the device list.",
+        "Verify that only valid headset or speakerphone products are listed (e.g., Poly Voyager Free 60+ UC, Poly Voyager 5200, etc.)."
       ],
-      "expected": "The Falcon Charge Stand (or any other sub-device/accessory) should NOT appear on the User Guides screen. Only main devices should be listed, and no sub-devices should be visible."
+      "expected": "The Falcon Charge Stand is NOT displayed on the User Guides screen. Only valid headset/speakerphone products appear in the device list."
     },
     {
-      "title": "Verify only main devices are displayed on User Guides screen",
+      "title": "User Guides Screen \u2014 Verify device list matches only connected/pairing-capable devices",
       "steps": [
-        "1. Launch the application and complete onboarding flow.",
-        "2. Navigate to the User Guides screen.",
-        "3. Examine the list of devices shown on the screen.",
-        "4. Verify that each entry corresponds to a main device (e.g., Falcon, Falcon+, etc.) and not an accessory or sub-device."
+        "Open Poly Studio Mobile app on Android.",
+        "Navigate to Home screen and confirm a Poly headset (e.g., Poly Voyager Free 60+ UC) is connected.",
+        "Tap Menu icon \u2192 'User Guides'.",
+        "Take note of all device names listed on the User Guides screen.",
+        "Disconnect the current headset via Bluetooth settings on the phone.",
+        "Return to the Poly Studio Mobile app and navigate to Home screen.",
+        "Tap Menu icon \u2192 'User Guides' again.",
+        "Observe the device list."
       ],
-      "expected": "The User Guides screen displays only main devices. No sub-devices, accessories, or add-ons (such as Falcon Charge Stand) are shown in the list."
+      "expected": "The User Guides screen lists only actual headset/speakerphone products. Charging accessories like Falcon Charge Stand are never listed. When no device is connected, the list may show supported products but never charging accessories."
     },
     {
-      "title": "Verify User Guides screen does not show any sub-devices after navigating from device details",
+      "title": "User Guides Screen \u2014 Verify content after navigating from Home screen with Falcon Charge Stand connected",
       "steps": [
-        "1. Launch the application and complete onboarding flow.",
-        "2. Navigate to the main device list or dashboard.",
-        "3. Select a main device (e.g., Falcon) and view its details.",
-        "4. From the device details screen, navigate to the User Guides screen.",
-        "5. Observe the list of devices/guides displayed."
+        "Open Poly Studio Mobile app on Android.",
+        "Connect a Poly Voyager Free 60+ UC headset to the phone via Bluetooth.",
+        "Place the earbuds in the Falcon Charge Stand (charge case) and ensure the charge case is powered on.",
+        "On the Home screen, verify the connected device shows as 'Poly Voyager Free 60+ UC' (not the charge stand).",
+        "Tap Menu icon \u2192 'User Guides'.",
+        "Observe the full list of devices/guides shown.",
+        "Verify that 'Falcon Charge Stand' or 'Charge Stand' or any variant does NOT appear.",
+        "Verify that 'Poly Voyager Free 60+ UC' IS listed as a device with a user guide."
       ],
-      "expected": "The User Guides screen should only show main devices. No sub-devices or accessories (including Falcon Charge Stand) should appear, regardless of how the user navigated to the screen."
+      "expected": "The User Guides screen correctly shows 'Poly Voyager Free 60+ UC' as a device with a user guide. The Falcon Charge Stand is NOT listed as a sub-device or separate entry."
     },
     {
-      "title": "Verify User Guides screen content after pairing a Falcon Charge Stand",
+      "title": "User Guides Screen \u2014 Verify no charging accessories appear after app restart",
       "steps": [
-        "1. Launch the application and complete onboarding flow.",
-        "2. Pair a Falcon Charge Stand with the application.",
-        "3. Navigate to the User Guides screen.",
-        "4. Observe the list of devices and guides displayed."
+        "Open Poly Studio Mobile app on Android.",
+        "Connect a Poly Voyager Free 60+ UC headset.",
+        "Place earbuds in the Falcon Charge Stand (charge case) and ensure it is charging.",
+        "Navigate to Menu \u2192 User Guides and verify the list.",
+        "Force-close the Poly Studio Mobile app (swipe from recent apps).",
+        "Reopen the Poly Studio Mobile app.",
+        "Navigate to Home screen and confirm the device is still connected.",
+        "Tap Menu icon \u2192 'User Guides'.",
+        "Observe the device list."
       ],
-      "expected": "Even after pairing a Falcon Charge Stand, it should NOT appear as a separate entry or sub-device on the User Guides screen. The screen should only list main devices."
+      "expected": "After app restart, the User Guides screen still correctly lists only the Poly Voyager Free 60+ UC headset. The Falcon Charge Stand is NOT listed as a sub-device or separate entry."
     },
     {
-      "title": "Verify User Guides screen does not list accessories when no main devices are paired",
+      "title": "User Guides Screen \u2014 Verify filtering logic excludes accessories when multiple Poly devices are connected",
       "steps": [
-        "1. Launch the application and complete onboarding flow without pairing any main device.",
-        "2. Pair only a Falcon Charge Stand (accessory) with the application.",
-        "3. Navigate to the User Guides screen.",
-        "4. Observe the content displayed on the screen."
+        "Open Poly Studio Mobile app on Android.",
+        "Connect a Poly Voyager Free 60+ UC headset via Bluetooth.",
+        "Connect a second Poly device (e.g., Poly Voyager 5200) via Bluetooth.",
+        "Place the Voyager Free 60+ UC earbuds in the Falcon Charge Stand.",
+        "Navigate to Home screen and verify both headsets appear as connected devices.",
+        "Tap Menu icon \u2192 'User Guides'.",
+        "Observe the list of devices shown.",
+        "Verify that both 'Poly Voyager Free 60+ UC' and 'Poly Voyager 5200' are listed.",
+        "Verify that 'Falcon Charge Stand' is NOT listed."
       ],
-      "expected": "The User Guides screen should not display the Falcon Charge Stand or any other accessory. If no main devices are paired, the screen may show an empty state or a message indicating no guides are available, but no sub-devices should be listed."
+      "expected": "Both connected headsets appear on the User Guides screen. The Falcon Charge Stand is correctly excluded from the device list despite being physically connected to the earbuds."
+    },
+    {
+      "title": "User Guides Screen \u2014 Verify no stale/phantom entries for accessories after device disconnection",
+      "steps": [
+        "Open Poly Studio Mobile app on Android.",
+        "Connect a Poly Voyager Free 60+ UC headset.",
+        "Place earbuds in Falcon Charge Stand.",
+        "Navigate to Menu \u2192 User Guides and verify only the headset is listed.",
+        "Disconnect the Poly Voyager Free 60+ UC from Bluetooth settings.",
+        "Return to Poly Studio Mobile app.",
+        "Navigate to Home screen \u2014 verify no device is shown as connected.",
+        "Tap Menu icon \u2192 'User Guides'.",
+        "Observe the device list."
+      ],
+      "expected": "After disconnecting the headset, the User Guides screen does NOT show any stale entries for the Falcon Charge Stand or any other accessory. The list either shows no devices or only supported products without the charge stand."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-24T12:05:41.588119Z"
+  "processed_at": "2026-04-25T05:50:17.137378Z"
 }
