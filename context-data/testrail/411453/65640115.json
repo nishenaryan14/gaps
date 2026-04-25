@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Mobile user uninstalls the mobile app",
-  "feature": "Mobile App / User Management",
-  "scenario": "Registered mobile user's status changes to inactive on Lens tenant after uninstalling the mobile app",
+  "feature": "App Settings",
+  "scenario": "Poly Studio Mobile app uninstall changes user status from active to inactive on Lens tenant Device Users page",
   "steps": [
-    "1. Ensure a registered mobile user exists on the Lens tenant (Manage/Device Users page).",
-    "2. Have the user uninstall the mobile app from their device.",
-    "3. Navigate to the Manage/Device Users page on the Lens tenant.",
-    "4. Check the status of the user."
+    "1. Open the Poly Studio Mobile app on the mobile device.",
+    "2. Ensure the device is connected and paired to the Poly Bluetooth audio device.",
+    "3. Navigate to the Home screen and verify the device status is active.",
+    "4. On the Lens tenant web portal, go to Manage \u2192 Device Users page and confirm the user's status shows as 'Active'.",
+    "5. Uninstall the Poly Studio Mobile app from the mobile device.",
+    "6. Return to the Lens tenant web portal, Manage \u2192 Device Users page, and observe the user's status."
   ],
-  "expected": "The user's status on the Lens tenant (Manage/Device Users page) should change to \"inactive\".",
+  "expected": "The user's status on the Lens tenant (Manage/Device Users page) should remain 'Active' after uninstalling the Poly Studio Mobile app, as uninstalling the app should not affect the user's account status on the tenant.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "mobile user inactive",
-    "Lens tenant",
-    "uninstall mobile app",
-    "device user status",
-    "Manage Device Users",
-    "registered user inactive",
-    "app uninstallation"
+    "poly-studio-mobile",
+    "lens-tenant",
+    "device-users-page",
+    "user-status",
+    "active-to-inactive",
+    "app-uninstall",
+    "bluetooth-pairing",
+    "device-management"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "e5736a65aa66932c5957ae56eabe8aadc954c269397852d75ae1151453b2431e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.321465Z",
+  "processed_at": "2026-04-25T05:37:16.951887Z",
   "status": "active"
 }
