@@ -4,27 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Fit test - 1st screen UI",
-  "feature": "Fit Test",
-  "scenario": "Verify the first screen UI of the Fit Test feature matches the Figma design",
+  "feature": "App Settings",
+  "scenario": "Fit Test initial screen UI does not match Figma design when accessed from Device Settings",
   "steps": [
-    "Start the app with a device that supports fit test connected.",
-    "Open Device Settings > Fit Test."
+    "1. Launch the Poly Studio Mobile app with a supported device (e.g., Poly Voyager Focus 2) connected via Bluetooth.",
+    "2. From the Home screen, tap on the connected device name to open Device Settings.",
+    "3. In Device Settings, locate and tap Fit Test.",
+    "4. Observe the Fit Test first screen UI."
   ],
-  "expected": "The UI and the text match the Figma design.",
+  "expected": "The Fit Test first screen UI and text match the Figma design specifications.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Fit Test",
-    "first screen UI",
-    "Figma design",
-    "Device Settings",
-    "fit test feature",
-    "UI verification",
-    "device connected"
+    "fit-test",
+    "device-settings",
+    "poly-studio-mobile",
+    "poly-voyager-focus-2",
+    "ui-mismatch",
+    "figma-design",
+    "initial-screen"
   ],
   "source_last_updated": "1760958980",
   "source_hash": "999ec6a3308ff76db3e5f1bfd1e4a92c1ce4a458d71a7ab474a3d408754322e0",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.222303Z",
+  "processed_at": "2026-04-25T05:37:16.803903Z",
   "status": "active"
 }
