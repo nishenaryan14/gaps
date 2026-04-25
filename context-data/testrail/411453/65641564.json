@@ -5,34 +5,23 @@
   "project": "411453",
   "title": "ANC - 10.-ANC is OFF without selected values and the User does not toggle it ON during a call when Transparency is ON before a call",
   "feature": "ANC",
-  "scenario": "Transparency Mode is disabled and greyed out during a call when ANC is OFF, and does not restore to the previous state after the call ends",
-  "steps": [
-    "1. Launch Poly Studio Mobile app on Android.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings.",
-    "3. Ensure ANC is set to OFF with no value selected.",
-    "4. Ensure Transparency Mode is set to ON and select either 'Environment' or 'Speech' mode.",
-    "5. Make or receive a call using the connected Poly Bluetooth device.",
-    "6. During the call, observe the ANC and Transparency Mode settings in Audio Settings.",
-    "7. Tap the Transparency Mode toggle during the call.",
-    "8. End the call.",
-    "9. After the call ends, observe the ANC and Transparency Mode settings."
-  ],
-  "expected": "After the call ends, ANC remains OFF with no value selected, and Transparency Mode returns to ON with the previously selected value (Environment or Speech). The user can then toggle between ANC and Transparency modes normally.",
+  "scenario": "Transparency Mode is disabled and greyed out during a call when ANC is OFF, but restores to previous setting after call ends",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "transparency-mode",
     "anc-off",
     "call-management",
-    "audio-settings",
-    "poly-studio-mobile",
-    "transparency-greyed-out",
-    "state-persistence",
-    "environment-speech-mode"
+    "setting-persistence",
+    "greyed-out",
+    "call-behavior",
+    "audio-mode"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "53a9095d9bbe5780cfeed5e5bed2153081f75bbc5203d07d8b5e3c4e0cf256b5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.921430Z",
+  "processed_at": "2026-04-25T08:21:30.994674Z",
   "status": "active"
 }
