@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "Find My Device - Playing sound from 2 different devices",
   "feature": "Find My Device",
-  "scenario": "Find My Device tone fails with error on second connected headset when two devices are paired in Poly Lens",
+  "scenario": "\"Find My Device\" tone fails with error on second paired headset when multiple devices are connected in Poly Studio Mobile app",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. From the Home screen, tap the Poly Lens menu icon.",
-    "3. Ensure two Poly Bluetooth headsets are paired and connected to the app.",
-    "4. Tap on the first connected headset to select it.",
-    "5. Tap the 'Find My Device' feature and play a tone \u2014 observe that the tone plays correctly.",
-    "6. Return to the Poly Lens menu and tap on the second connected headset to select it.",
-    "7. Tap the 'Find My Device' feature and attempt to play a tone.",
-    "8. Observe the pop-up error message displayed on screen."
+    "2. Pair and connect two Bluetooth audio devices (e.g., Poly headsets) to the app.",
+    "3. From the Home screen, tap on the first connected device to enter Device Settings.",
+    "4. Navigate to the 'Find My Device' feature (e.g., under Device Settings or Notifications).",
+    "5. Tap 'Play Tone' on the first device and confirm the tone plays correctly.",
+    "6. Return to the Home screen and tap on the second connected device to enter its Device Settings.",
+    "7. Navigate to the 'Find My Device' feature for the second device.",
+    "8. Tap 'Play Tone' on the second device.",
+    "9. Observe the result."
   ],
-  "expected": "The tone should play on the second connected headset without any errors.",
+  "expected": "The tone plays audibly on the second connected device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "poly-studio-mobile",
-    "poly-lens",
-    "dual-headset-pairing",
-    "tone-playback-error",
+    "play-tone",
+    "multi-device-pairing",
+    "device-settings",
     "bluetooth-headset",
-    "error-message"
+    "error-on-second-device"
   ],
   "source_last_updated": "1759930181",
   "source_hash": "2207134fbd8939ffa5af4f8d4d848b218c2b858ad376876d622e29fdbd2f28b5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.770006Z",
+  "processed_at": "2026-04-25T07:55:31.837698Z",
   "status": "active"
 }
