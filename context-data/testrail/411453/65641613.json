@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Fit test - 2nd screen \"Cancel\" during test",
   "feature": "Device Management",
-  "scenario": "Fit Test cancellation during active test does not show Cancel/Retry options at bottom of screen",
+  "scenario": "Fit Test cancellation on second screen displays Cancel/Retry options on Voyager Free 60/60+ and Voyager Free 20",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Scroll to and tap 'Fit Test'",
-    "Tap 'Start Test' button to begin the fit test",
-    "While the fit test is running, tap 'Cancel' button"
+    "1. Open Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Home screen and ensure a Voyager Free 60/60+ or Voyager Free 20 device is connected.",
+    "3. Tap on the connected device name to open Device Settings.",
+    "4. Navigate to Audio Settings \u2192 Fit Test.",
+    "5. Start the Fit Test by tapping the appropriate start button.",
+    "6. On the second screen of the Fit Test (where the test is in progress), tap the \"Cancel\" button.",
+    "7. Observe the options displayed at the bottom of the screen."
   ],
-  "expected": "The fit test is interrupted. A Cancel/Retry option appears at the bottom of the screen.",
+  "expected": "Tapping \"Cancel\" on the second screen during a Fit Test interrupts the test and displays \"Cancel\" and \"Retry\" options at the bottom of the screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "cancel-button",
+    "cancel-options",
+    "retry-options",
+    "voyager-free-60",
+    "voyager-free-60-plus",
+    "voyager-free-20",
     "poly-studio-mobile",
-    "device-settings",
-    "fit-test-cancellation",
-    "retry-option",
-    "ui-bug",
-    "fit-test-active"
+    "audio-settings"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "f6de53635e03492f97f5eeab9a071c34686230e05bf6dba95a770573ad773ce1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.904112Z",
+  "processed_at": "2026-04-25T08:21:30.983549Z",
   "status": "active"
 }
