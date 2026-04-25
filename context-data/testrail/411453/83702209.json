@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "App Settings - General - About - Up to date, release notes no wifi [New]",
   "feature": "App Settings",
-  "scenario": "Release Notes link in App Settings > General About section shows offline error dialog when clicked without internet connection",
+  "scenario": "Release Notes link in App Settings > General About section shows \"Information about this update isn't available at the moment\" dialog even when app is up to date",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Tap the menu icon (hamburger) or navigate to App Settings.",
-    "3. Go to General \u2192 About.",
-    "4. Tap the Release Notes link.",
-    "5. Observe the dialog that appears."
+    "Open Poly Studio Mobile app",
+    "Go to App Settings (gear icon)",
+    "Tap General",
+    "Tap About",
+    "Tap Release Notes link"
   ],
-  "expected": "The app should display the release notes content or gracefully handle the offline state, e.g., by showing a cached version or a more informative message.",
+  "expected": "The Release Notes dialog should display the release notes for the current app version, or a message indicating no updates are available.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "release-notes",
     "app-settings",
     "general-about",
-    "offline-error-dialog",
-    "no-internet-connection",
-    "poly-studio-mobile",
-    "link-handling"
+    "firmware-update",
+    "about-section",
+    "app-update"
   ],
   "source_last_updated": "1773153616",
   "source_hash": "43aed825c499572a9ebef43b8a39d661943b5ef7917cb685f3b12b8481f1b5df",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.755335Z",
+  "processed_at": "2026-04-25T07:55:31.821121Z",
   "status": "active"
 }
