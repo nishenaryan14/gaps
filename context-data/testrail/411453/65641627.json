@@ -16,7 +16,7 @@
     "7. During the second Fit Test, disconnect both earbuds by placing them in the charging case.",
     "8. Observe the Fit Test screen."
   ],
-  "expected": "1) When one earbud is disconnected: The disconnected earbud becomes greyed out with a yellow icon and \"Fail\" tag; the connected earbud shows proper icon and tag; text \"The {right/left} earbud was disconnected during the fit test\" is displayed. 2) When both earbuds are disconnected: Both earbuds are greyed out with yellow icon and \"Fail\" tag; text \"The earbuds were disconnected during the fit test\" is displayed.",
+  "expected": "1. After disconnecting one earbud: The disconnected earbud is greyed out with a yellow icon and a \"Fail\" tag; the connected earbud shows the proper icon and tag; text \"The {right/left} earbud was disconnected during the fit test\" is displayed.\\n2. After disconnecting both earbuds: Both earbuds are greyed out with a yellow icon and a \"Fail\" tag; text \"The earbuds were disconnected during the fit test\" is displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,14 +24,13 @@
     "poly-studio-mobile",
     "earbud-disconnection",
     "charging-case",
-    "retry",
-    "onboarding",
-    "user-guides",
-    "app-settings"
+    "fit-test-retry",
+    "app-settings",
+    "onboarding-user-guides"
   ],
   "source_last_updated": "1760963365",
   "source_hash": "2863c19bd3b13e0b0e39a1d65138fd8907727a7b436d1ef0a80e20b46497d7f1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.989644Z",
+  "processed_at": "2026-04-25T09:32:26.249358Z",
   "status": "active"
 }
