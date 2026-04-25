@@ -4,24 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "1 step DFU - Language update when only CC has update",
-  "feature": "Firmware Update",
-  "scenario": "Language change via 1-step DFU succeeds when only Charge Case has a firmware update on Poly Voyager Free 60+",
+  "feature": "Firmware Updates",
+  "scenario": "Language change via 1-step DFU succeeds when only the Charge Case has a pending update on Voyager Free 60+",
   "steps": [],
   "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-voyager-free-60-plus",
+    "voyager-free-60-plus",
     "dfu",
     "firmware-update",
     "charge-case",
     "language-change",
     "1-step-dfu",
-    "device-firmware-update"
+    "pending-update"
   ],
   "source_last_updated": "1763381953",
   "source_hash": "3c220543e85a39edb83089113a4d5c45d7a7c5aba1466f412054ff4439d7221b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.966106Z",
+  "processed_at": "2026-04-25T08:21:31.039426Z",
   "status": "active"
 }
