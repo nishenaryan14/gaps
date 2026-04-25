@@ -5,29 +5,34 @@
   "project": "411453",
   "title": "Find My Device - User location on the map",
   "feature": "App Settings",
-  "scenario": "Find My Device map shows inconsistent location indicator between Android (blue circle with dot) and iOS (white circle) when zoomed in",
+  "scenario": "Find My Device map shows blue dot location indicator that changes appearance between zoom levels on Android",
   "steps": [
-    "1. Launch the Poly Studio Mobile app with a headset either connected or disconnected.",
-    "2. Navigate to the App Menu (hamburger menu or menu icon).",
-    "3. Tap on 'Find My Device'.",
-    "4. If prompted, grant GPS location access permission.",
-    "5. Observe the map view showing the user's current location."
+    "1. Open the Poly Studio Mobile app on an Android device.",
+    "2. Ensure GPS location permission is granted to the app.",
+    "3. Navigate to the App Menu.",
+    "4. Tap on \"Find My Device\".",
+    "5. Observe the map display showing the user's current location.",
+    "6. Zoom out on the map.",
+    "7. Observe the location indicator.",
+    "8. Zoom in on the map.",
+    "9. Observe the location indicator again."
   ],
-  "expected": "On Android: A full blue dot is shown when zoomed out, and a blue circle with a full blue dot in the middle is shown when zoomed in. On iOS: A full blue dot is shown when zoomed out, and a white circle is shown when zoomed in.",
+  "expected": "When zoomed out, the user's current location is displayed as a full blue dot on the map. When zoomed in, the location is shown as a blue circle with a full blue dot in the center.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
-    "location-indicator",
     "poly-studio-mobile",
-    "map-view",
+    "android",
     "gps-location",
-    "android-vs-ios",
-    "ui-inconsistency"
+    "map-zoom",
+    "location-indicator",
+    "blue-dot",
+    "app-menu"
   ],
   "source_last_updated": "1759929579",
   "source_hash": "cddad7d6d3bc8e5260baa39cf4e3608f7434701aa25eb8f34b667a73f55458e9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.835591Z",
+  "processed_at": "2026-04-25T08:21:30.938301Z",
   "status": "active"
 }
