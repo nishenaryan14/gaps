@@ -4,17 +4,17 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Settings - Settings description",
-  "feature": "Device Management",
+  "feature": "Device Settings",
   "scenario": "All settings descriptions display correctly when navigating Device Settings in Poly Studio Mobile app after headset pairing and connection",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. Pair and connect a Poly Bluetooth headset to the Android device.",
+    "2. Pair and connect a supported Poly Bluetooth headset to the Android device.",
     "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
     "4. Navigate through each settings section: Audio Settings, ANC, Transparency Mode, Equalizer, Notifications, and Account.",
-    "5. For each settings section, observe the description text displayed below or beside each setting option.",
-    "6. Verify that all descriptions are fully visible, properly formatted, and contain no truncation, overlapping, or garbled characters."
+    "5. For each settings section, observe the description text displayed below or beside each setting toggle, slider, or option.",
+    "6. Verify that all descriptions are fully visible, not truncated, and contain correct grammar and spelling."
   ],
-  "expected": "All settings descriptions in Device Settings are displayed correctly \u2014 fully visible, properly formatted, with no truncation, overlapping, or garbled characters across all sections (Audio Settings, ANC, Transparency Mode, Equalizer, Notifications, Account).",
+  "expected": "All settings descriptions in every section of Device Settings are displayed correctly \u2014 fully visible, properly formatted, with correct grammar and spelling.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,13 +23,13 @@
     "anc",
     "transparency-mode",
     "equalizer",
+    "audio-settings",
     "settings-descriptions",
-    "bluetooth-pairing",
-    "audio-settings"
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1762264858",
   "source_hash": "cf817da69c271543806b8eeb62f13a9dae9ac7dc2cd1ee6e8c0be0501e57ceb0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.965800Z",
+  "processed_at": "2026-04-25T09:32:26.194383Z",
   "status": "active"
 }
