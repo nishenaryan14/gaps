@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "1 step DFU - Language update when both EB and CC are on the latest version",
   "feature": "Firmware Updates",
-  "scenario": "Language update via Device Settings > Language does not apply to charge case menus after successful update on latest firmware",
+  "scenario": "Language update via Device Settings > Language completes successfully on both earbuds and charge case when already on latest firmware",
   "steps": [
-    "1. Open the Poly Studio Mobile app with the device connected (both earbuds and charge case on latest firmware).",
-    "2. Navigate to Device Settings \u2192 Language.",
-    "3. Select a new language from the list.",
-    "4. Tap \"Update Now\" to initiate the language update.",
-    "5. Wait for the language change to complete on the device.",
-    "6. Verify that the charge case menus display text in the newly selected language."
+    "1. Open the Poly Studio Mobile app with an Osprey device connected (both earbuds and charge case on the latest firmware version).",
+    "2. Go to Device Settings > Language.",
+    "3. Select any language from the list.",
+    "4. Tap \"Update Now\".",
+    "5. Observe the software update screen and wait for the language change to complete.",
+    "6. Check the charge case menus to verify they reflect the newly selected language."
   ],
-  "expected": "After completing the language update, the charge case menus should display all text in the newly selected language.",
+  "expected": "The software update screen is displayed, the language change completes successfully, and the charge case menus reflect the new language.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "language-update",
-    "charge-case-menus",
     "device-settings",
     "poly-studio-mobile",
-    "firmware",
-    "ui-language",
+    "osprey",
+    "firmware-update",
+    "charge-case",
     "earbuds"
   ],
   "source_last_updated": "1763381953",
   "source_hash": "8855f994980afa7a34409ee6a3d6e00406113bb420e5374ccc1cdad036fbe9eb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.961872Z",
+  "processed_at": "2026-04-25T08:21:31.033759Z",
   "status": "active"
 }
