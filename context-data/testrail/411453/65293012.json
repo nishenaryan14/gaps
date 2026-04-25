@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Onboarding -  Permission for location tracking accepted [Android]",
-  "feature": "Onboarding",
-  "scenario": "After accepting location permission via \"Enable now\" and \"Allow\" pop-up, the Poly Lens app should not re-prompt for location permissions when accessing the FindMyDevice menu later.",
+  "feature": "App Settings",
+  "scenario": "Location permission granted during onboarding does not persist for FindMyDevice feature on Poly Lens app",
   "steps": [
-    "Open the Poly Lens app on Android.",
-    "Tap the 'Enable now' button when prompted for location permission.",
-    "Tap 'Allow' on the permission pop-up to grant location tracking.",
-    "Proceed through the remaining onboarding steps.",
-    "Navigate to the FindMyDevice menu."
+    "Launch the Poly Studio Mobile app for the first time",
+    "Accept the License Agreement and Privacy Policy",
+    "Tap Continue",
+    "Navigate to the \"Organized\" screen",
+    "Tap \"Enable now\"",
+    "In the pop-up window, tap \"Allow\" to grant location tracking permission"
   ],
-  "expected": "The app should allow location tracking and proceed with further onboarding steps. When the user later accesses the FindMyDevice menu, the app should not ask for permissions again.",
+  "expected": "Location tracking is allowed for the Poly Lens app. The user proceeds to further onboarding steps. When the user later accesses the FindMyDevice menu, the app should not prompt for location permissions again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Poly Lens app",
-    "Android",
-    "location permission",
-    "FindMyDevice",
-    "permission re-prompt",
+    "poly-lens-app",
+    "find-my-device",
+    "location-permission",
     "onboarding",
-    "location tracking",
-    "Allow"
+    "permission-persistence",
+    "poly-studio-mobile",
+    "organized-screen"
   ],
   "source_last_updated": "1760528507",
   "source_hash": "e7cd4a243280184d2bd20f5bd21198920fefee42561396602d0c4121c6e0bfdd",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.087343Z",
+  "processed_at": "2026-04-25T05:37:16.700581Z",
   "status": "active"
 }
