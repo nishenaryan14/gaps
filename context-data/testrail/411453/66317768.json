@@ -5,29 +5,34 @@
   "project": "411453",
   "title": "Language Change - Houston Screen - Cancel",
   "feature": "Firmware Update",
-  "scenario": "User is returned to home screen after cancelling firmware update failure screen triggered by language change",
+  "scenario": "Canceling firmware update after language change failure returns user to device home screen in Poly Studio Mobile app",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen with a Poly Bluetooth audio device connected.",
-    "Navigate to Account \u2192 Language and change the language to a different supported language.",
-    "Observe that a firmware update is triggered as a result of the language change.",
-    "When the firmware update failure screen (Houston screen) appears, tap the Cancel or Dismiss button.",
-    "Observe the screen displayed after cancellation."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Pair and connect the Poly Bluetooth headset to the Android device via the app's Home screen.",
+    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
+    "4. In Device Settings, navigate to the Language option.",
+    "5. Select a different language from the available list.",
+    "6. Tap the \"Update Now\" button to trigger a firmware update for the language change.",
+    "7. While the firmware update is in progress, turn off the headset (e.g., press and hold the Power button) to simulate an update failure.",
+    "8. Observe the Houston error screen that appears on the app.",
+    "9. Tap the \"Cancel\" button on the Houston error screen."
   ],
-  "expected": "The user is returned to the Home screen showing the currently connected device.",
+  "expected": "After tapping \"Cancel\" on the Houston error screen, the app returns to the Home screen showing the currently connected device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "firmware-update",
-    "firmware-update-failure",
-    "houston-screen",
-    "language-change",
     "poly-studio-mobile",
-    "cancel-firmware-update",
-    "home-screen-navigation"
+    "firmware-update",
+    "language-change",
+    "houston-error-screen",
+    "cancel-update",
+    "device-home-screen",
+    "bluetooth-headset",
+    "update-failure"
   ],
   "source_last_updated": "1762252585",
   "source_hash": "2e11852b5393d4924ec8ddd8a3a2479d8e9994491408ab054299e0bca7beec98",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.805407Z",
+  "processed_at": "2026-04-25T07:55:31.887380Z",
   "status": "active"
 }
