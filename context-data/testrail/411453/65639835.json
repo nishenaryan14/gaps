@@ -4,21 +4,23 @@
   "type": "testcase",
   "project": "411453",
   "title": "1 step DFU - new DFU screen Release notes link",
-  "feature": "Firmware Updates",
-  "scenario": "Release notes links on DFU screen do not open the correct web pages for Osprey EB and CC devices",
+  "feature": "Firmware Update",
+  "scenario": "Release Notes links on DFU screen do not open the correct web pages for Osprey EB and CC devices",
   "steps": [
-    "1. Launch Poly Studio Mobile app and navigate to the Home screen.",
-    "2. Ensure an Osprey EB device is connected with firmware version 5039 or higher and an update is available.",
-    "3. Tap the Update button on the Home screen to open the DFU (Device Firmware Update) screen.",
-    "4. On the DFU screen, locate and tap the Release Notes link.",
-    "5. Verify that the correct web page opens in the device browser.",
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. On the Home screen, tap the Update button (or navigate to the DFU screen via Home \u2192 Update).",
+    "3. On the DFU screen, locate the release notes link for the available update.",
+    "4. Tap the release notes link.",
+    "5. Verify that the correct web page (Poly support page for the specific device/firmware) opens in the default browser.",
     "6. Return to the Poly Studio Mobile app.",
-    "7. Navigate to Settings \u2192 [Osprey EB Device Name] \u2192 Device Settings \u2192 Firmware Update (or similar path to DFU screen).",
-    "8. On the DFU screen, locate and tap the Release Notes link again.",
-    "9. Verify that the correct web page opens in the device browser.",
-    "10. Repeat steps 1\u20139 with an Osprey CC device (firmware version 5039 or higher) that has an update available."
+    "7. Navigate to Settings \u2192 [Device Name] \u2192 Device Firmware Update (or Settings \u2192 DFU).",
+    "8. On the DFU screen from Settings, locate the release notes link for the available update.",
+    "9. Tap the release notes link.",
+    "10. Verify that the correct web page (Poly support page for the specific device/firmware) opens in the default browser.",
+    "11. Repeat steps 1\u201310 for Osprey EB device (firmware \u2265 5039).",
+    "12. Repeat steps 1\u201310 for Osprey CC device (firmware \u2265 5039)."
   ],
-  "expected": "Tapping the Release Notes link on the DFU screen, both from the Home screen update flow and from the Settings screen, opens the correct corresponding web page for the connected device.",
+  "expected": "Tapping the release notes link on the DFU screen (from both Home screen and Settings screen) opens the correct Poly support web page for the device and firmware version.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -28,12 +30,12 @@
     "osprey-cc",
     "poly-studio-mobile",
     "firmware-update",
-    "device-firmware-update",
-    "web-page-redirect"
+    "web-page-redirect",
+    "device-firmware-update"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "a6f74abdc5bd7d40ee91a999a1dc9ff529d5379107f789f3041edbb7a56000b3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.893812Z",
+  "processed_at": "2026-04-25T07:55:31.960746Z",
   "status": "active"
 }
