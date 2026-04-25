@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Application - Fresh install mobile application",
   "feature": "App Settings",
-  "scenario": "Fresh install of Poly Studio Mobile app from Play Store/App Store completes successfully and user can start onboarding",
+  "scenario": "Fresh install of Poly Studio Mobile app from Play Store completes successfully and onboarding process can be started",
   "steps": [
-    "1. Uninstall the Poly Studio Mobile app from the device.",
-    "2. Open the Google Play Store (Android) or App Store (iOS).",
+    "1. Uninstall the Poly Studio Mobile app from the Android device if previously installed.",
+    "2. Open the Google Play Store on the Android device.",
     "3. Search for \"Poly Studio Mobile\" and select the app from the search results.",
-    "4. Tap \"Install\" (Android) or \"Get\" (iOS) to download and install the app.",
-    "5. Wait for the installation to complete.",
-    "6. Tap \"Open\" to launch the Poly Studio Mobile app.",
-    "7. Observe the initial screen that appears after launch."
+    "4. Tap \"Install\" and wait for the installation to complete.",
+    "5. Tap \"Open\" to launch the Poly Studio Mobile app.",
+    "6. Observe the initial launch screen and verify that the onboarding process begins (e.g., welcome screen, permission requests, or device pairing prompt)."
   ],
-  "expected": "The app installs successfully without errors. Upon launching, the user is presented with the onboarding/startup screen (e.g., welcome screen, terms of service, or device pairing prompt) indicating a fresh install experience.",
+  "expected": "The Poly Studio Mobile app installs successfully from the Play Store, launches without errors, and the user is presented with the onboarding process (e.g., welcome screen, permission prompts, or device setup flow).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "fresh-install",
     "play-store",
-    "app-store",
     "onboarding",
+    "android",
     "app-launch",
-    "initial-screen"
+    "welcome-screen",
+    "permission-requests"
   ],
   "source_last_updated": "1760615599",
   "source_hash": "899c8c2ab44a359ef6855a2bb6396dd8268db0ef6d762f793a1da42da4a3087c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.950173Z",
+  "processed_at": "2026-04-25T08:21:31.019282Z",
   "status": "active"
 }
