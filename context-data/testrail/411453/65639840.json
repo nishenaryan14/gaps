@@ -4,27 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "1 step DFU - Content of the Software Update tab when there is update available only for Earbuds",
-  "feature": "Software Update / DFU",
-  "scenario": "Verify the Software Update tab displays correct update info for Earbuds and up-to-date status for Charge Case when only Earbuds have a new version available.",
+  "feature": "Firmware Updates",
+  "scenario": "Software Update tab shows earbud firmware update details and marks charging case as up to date when only earbud update is available",
   "steps": [
-    "Start the app with Osprey where only the Earbuds have an update available.",
-    "Navigate to Fab/Settings/Software Update tab."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Ensure a Poly Bluetooth audio device (earbuds + charging case) is connected.",
+    "Navigate to Device Settings \u2192 [Device Name] \u2192 Software Update.",
+    "Observe the Software Update tab content when a firmware update is available only for the earbuds (not the charging case)."
   ],
-  "expected": "Earbuds show current and available version, release notes, and an Update button. Charge Case is marked as up to date.",
+  "expected": "The Software Update tab displays the current and available earbud firmware versions, release notes for the earbud update, and an Update button. The charging case is marked as 'Up to date'.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Software Update tab",
-    "Earbuds update",
-    "Charge Case up-to-date",
-    "Osprey",
-    "Fab/Settings",
-    "firmware version",
-    "update status"
+    "software-update",
+    "firmware-update",
+    "earbud-update",
+    "charging-case",
+    "poly-studio-mobile",
+    "device-settings",
+    "up-to-date-status"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "55779b747527aa18c83f5ce7e314c8d6eea23e5dd75f4414bcd7eb83f4191fb6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.295914Z",
+  "processed_at": "2026-04-25T05:37:16.883603Z",
   "status": "active"
 }
