@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "ANC - UI",
-  "feature": "ANC - UI",
-  "scenario": "Verify that when ANC/Adaptive is set to ON, the Transparency/Environment section is disabled and greyed out.",
+  "feature": "ANC",
+  "scenario": "Transparency Mode Environment and Speech sub-settings remain disabled/greyed out when ANC/Adaptive is ON as default state",
   "steps": [
-    "1. Open the audio settings UI.",
-    "2. Observe the default state of the ANC/Adaptive toggle.",
-    "3. Observe the Transparency/Environment toggle.",
-    "4. Check the available options under the ANC section.",
-    "5. Check the available options under the Transparency section."
+    "1. Launch the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen and tap on the connected [Device Name].",
+    "3. Tap on Audio Settings.",
+    "4. Tap on ANC / Transparency Mode to open the feature screen.",
+    "5. Observe the default state of the screen."
   ],
-  "expected": "ANC/Adaptive is set to ON by default. Transparency/Environment is set to OFF and all its values are disabled/greyed out. The ANC section displays \"Adaptive\" with description \"Automatically adjusts to provide the best ANC experience.\" and \"Standard\" with description \"Provide a more natural audio experience and enhanced sidetone comfort.\" The Transparency section displays \"Environment\" with description \"Optimized to hear your surroundings.\" and \"Speech\" with description \"Best for face-to-face communication.\"",
+  "expected": "The ANC / Transparency Mode screen displays two sections: ANC (with Adaptive and Standard options) and Transparency (with Environment and Speech options). By default, ANC is ON with Adaptive selected, Transparency is OFF, and all Transparency-related values/options are disabled/greyed out.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "ANC",
-    "Adaptive",
-    "Transparency",
-    "Environment",
-    "disabled",
-    "greyed out",
-    "audio settings",
-    "toggle"
+    "transparency-mode",
+    "environment-sub-setting",
+    "speech-sub-setting",
+    "anc",
+    "adaptive-anc",
+    "poly-studio-mobile",
+    "audio-settings",
+    "default-state"
   ],
   "source_last_updated": "1761045502",
   "source_hash": "60c462c9b5b7bb7c8f96c56056183c84d3960e11a011449eb4e7832bdc0b6e18",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.238521Z",
+  "processed_at": "2026-04-25T05:37:16.821238Z",
   "status": "active"
 }
