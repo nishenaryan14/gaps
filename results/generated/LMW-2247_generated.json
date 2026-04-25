@@ -1,128 +1,169 @@
 [
   {
-    "title": "TC-EARBUD-CONN-001: Primary earbud disconnects when placed in charging case with lid closed",
+    "title": "TC-VF60-CONN-001: Primary earbud placed in case with lid closed \u2014 verify connection status updates to disconnected in app",
     "steps": [
-      "1. Ensure both earbuds are fully charged and connected to the phone via Bluetooth.",
-      "2. Verify both earbuds show as 'Connected' in the Bluetooth settings and/or companion app.",
-      "3. Remove the primary (left) earbud from your ear.",
-      "4. Place the primary earbud into the charging case.",
-      "5. Close the charging case lid securely.",
-      "6. Wait 5 seconds.",
-      "7. Check the Bluetooth settings and/or companion app for the connection status of the primary earbud."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected (green checkmark or connected icon for Voyager Free 60+).",
+      "Remove the left earbud (primary) from your ears.",
+      "Place the left earbud into the charge case.",
+      "Close the charge case lid completely.",
+      "Observe the Home screen in the Poly Studio Mobile app for up to 10 seconds.",
+      "Open the charge case lid.",
+      "Observe the Home screen again for up to 10 seconds."
     ],
-    "expected": "The primary earbud should disconnect from the phone and no longer appear as 'Connected' in Bluetooth settings or the companion app. The secondary earbud may remain connected or also disconnect depending on the device's behavior."
+    "expected": "After placing the left (primary) earbud in the case and closing the lid, the Poly Studio Mobile app Home screen updates within 10 seconds to show the left earbud as disconnected (not connected, no charging icon). The right earbud remains shown as connected. After opening the lid, the left earbud re-appears as connected within 10 seconds."
   },
   {
-    "title": "TC-EARBUD-CONN-002: Secondary earbud disconnects when placed in charging case with lid closed",
+    "title": "TC-VF60-CONN-002: Both earbuds placed in case with lid closed \u2014 verify app shows both disconnected",
     "steps": [
-      "1. Ensure both earbuds are fully charged and connected to the phone via Bluetooth.",
-      "2. Verify both earbuds show as 'Connected' in the Bluetooth settings and/or companion app.",
-      "3. Remove the secondary (right) earbud from your ear.",
-      "4. Place the secondary earbud into the charging case.",
-      "5. Close the charging case lid securely.",
-      "6. Wait 5 seconds.",
-      "7. Check the Bluetooth settings and/or companion app for the connection status of the secondary earbud."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Remove both earbuds from your ears.",
+      "Place the left earbud (primary) into the charge case.",
+      "Place the right earbud (secondary) into the charge case.",
+      "Close the charge case lid completely.",
+      "Observe the Home screen in the Poly Studio Mobile app for up to 15 seconds.",
+      "Open the charge case lid.",
+      "Observe the Home screen again for up to 15 seconds."
     ],
-    "expected": "The secondary earbud should disconnect from the phone and no longer appear as 'Connected' in Bluetooth settings or the companion app. The primary earbud should remain connected if it is still in use."
+    "expected": "After placing both earbuds in the case and closing the lid, the Poly Studio Mobile app Home screen updates within 15 seconds to show both earbuds as disconnected (no charging icon, no connected status). After opening the lid, both earbuds re-appear as connected within 15 seconds."
   },
   {
-    "title": "TC-EARBUD-CONN-003: Both earbuds disconnect when both placed in charging case with lid closed",
+    "title": "TC-VF60-CONN-003: Left earbud removed first, then re-inserted while right remains out \u2014 verify connection state transitions",
     "steps": [
-      "1. Ensure both earbuds are fully charged and connected to the phone via Bluetooth.",
-      "2. Verify both earbuds show as 'Connected' in the Bluetooth settings and/or companion app.",
-      "3. Remove both earbuds from your ears.",
-      "4. Place both earbuds into the charging case.",
-      "5. Close the charging case lid securely.",
-      "6. Wait 5 seconds.",
-      "7. Check the Bluetooth settings and/or companion app for the connection status of both earbuds."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Remove the left earbud (primary) from the charge case first, then remove the right earbud (secondary).",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Place only the left earbud (primary) back into the charge case \u2014 do NOT close the lid.",
+      "Observe the Home screen in the Poly Studio Mobile app for up to 10 seconds.",
+      "Close the charge case lid with only the left earbud inside.",
+      "Observe the Home screen for up to 10 seconds.",
+      "Open the charge case lid.",
+      "Remove the left earbud from the case.",
+      "Observe the Home screen for up to 10 seconds."
     ],
-    "expected": "Both earbuds should disconnect from the phone and no longer appear as 'Connected' in Bluetooth settings or the companion app. The device should show 'Disconnected' or 'Not Connected' for the earbuds."
+    "expected": "Step 5-6: With the left earbud in the case and lid open, the app shows the left earbud as connected (charging icon may appear). Step 7-8: After closing the lid, the app updates within 10 seconds to show the left earbud as disconnected. The right earbud remains connected throughout. Step 9-10: After opening the lid, the left earbud re-appears as connected within 10 seconds. Step 11: After removing the left earbud from the case, it remains connected."
   },
   {
-    "title": "TC-EARBUD-CONN-004: Primary earbud remains connected when placed in charging case with lid open",
+    "title": "TC-VF60-CONN-004: Right earbud removed first, then re-inserted while left remains out \u2014 verify connection state transitions",
     "steps": [
-      "1. Ensure both earbuds are fully charged and connected to the phone via Bluetooth.",
-      "2. Verify both earbuds show as 'Connected' in the Bluetooth settings and/or companion app.",
-      "3. Remove the primary (left) earbud from your ear.",
-      "4. Place the primary earbud into the charging case.",
-      "5. Keep the charging case lid OPEN.",
-      "6. Wait 5 seconds.",
-      "7. Check the Bluetooth settings and/or companion app for the connection status of the primary earbud."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Remove the right earbud (secondary) from the charge case first, then remove the left earbud (primary).",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Place only the right earbud (secondary) back into the charge case \u2014 do NOT close the lid.",
+      "Observe the Home screen in the Poly Studio Mobile app for up to 10 seconds.",
+      "Close the charge case lid with only the right earbud inside.",
+      "Observe the Home screen for up to 10 seconds.",
+      "Open the charge case lid.",
+      "Remove the right earbud from the case.",
+      "Observe the Home screen for up to 10 seconds."
     ],
-    "expected": "The primary earbud should remain connected to the phone while the lid is open, as the case lid closure is the trigger for disconnection."
+    "expected": "Step 5-6: With the right earbud in the case and lid open, the app shows the right earbud as connected (charging icon may appear). Step 7-8: After closing the lid, the app updates within 10 seconds to show the right earbud as disconnected. The left earbud remains connected throughout. Step 9-10: After opening the lid, the right earbud re-appears as connected within 10 seconds. Step 11: After removing the right earbud from the case, it remains connected."
   },
   {
-    "title": "TC-EARBUD-CONN-005: Primary earbud reconnects after being removed from charging case with lid closed",
+    "title": "TC-VF60-CONN-005: One earbud in case (charging) while other is out \u2014 verify app does NOT show in-case earbud as connected",
     "steps": [
-      "1. Ensure both earbuds are fully charged and connected to the phone via Bluetooth.",
-      "2. Place the primary earbud into the charging case and close the lid.",
-      "3. Wait 5 seconds and verify the primary earbud has disconnected.",
-      "4. Open the charging case lid.",
-      "5. Remove the primary earbud from the case.",
-      "6. Wait up to 10 seconds for reconnection.",
-      "7. Check the Bluetooth settings and/or companion app for the connection status of the primary earbud."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Remove the left earbud (primary) from your ears.",
+      "Place the left earbud into the charge case.",
+      "Close the charge case lid.",
+      "Verify the left earbud is now shown as disconnected on the Home screen.",
+      "Remove the right earbud (secondary) from your ears and keep it in your hand (do not place in case).",
+      "Observe the Home screen in the Poly Studio Mobile app for up to 10 seconds.",
+      "Open the charge case lid.",
+      "Observe the Home screen for up to 10 seconds.",
+      "Place the right earbud into the charge case next to the left earbud.",
+      "Close the charge case lid.",
+      "Observe the Home screen for up to 10 seconds."
     ],
-    "expected": "The primary earbud should automatically reconnect to the phone within 10 seconds of being removed from the charging case. It should appear as 'Connected' in Bluetooth settings or the companion app."
+    "expected": "Step 6: Left earbud shows as disconnected (not connected, no charging icon). Step 7-8: Right earbud remains connected on the Home screen. The left earbud stays disconnected. Step 9-10: After opening the lid, the left earbud re-appears as connected. Step 11-13: After placing the right earbud in the case and closing the lid, both earbuds show as disconnected within 10 seconds."
   },
   {
-    "title": "TC-EARBUD-CONN-006: Primary earbud role transfer when primary is placed in case while secondary remains in use",
+    "title": "TC-VF60-CONN-006: Rapid lid open/close cycles while earbuds are in case \u2014 verify connection status accuracy",
     "steps": [
-      "1. Ensure both earbuds are fully charged and connected to the phone via Bluetooth.",
-      "2. Verify the primary (left) earbud is marked as primary/active in the companion app.",
-      "3. While the secondary (right) earbud remains in your ear and playing audio, remove the primary earbud from your ear.",
-      "4. Place the primary earbud into the charging case and close the lid.",
-      "5. Wait 5 seconds.",
-      "6. Check the Bluetooth settings and/or companion app for connection status.",
-      "7. Verify audio continues to play through the secondary earbud without interruption."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Place both earbuds into the charge case.",
+      "Close the charge case lid.",
+      "Wait for the app to show both earbuds as disconnected (up to 15 seconds).",
+      "Open the charge case lid.",
+      "Immediately close the charge case lid within 2 seconds.",
+      "Observe the Home screen for up to 15 seconds.",
+      "Open the charge case lid again.",
+      "Observe the Home screen for up to 15 seconds.",
+      "Repeat steps 6-10 two more times (total of 3 rapid open/close cycles)."
     ],
-    "expected": "The secondary earbud should take over as the primary connected earbud. Audio should continue playing through the secondary earbud without interruption. The companion app should reflect the secondary earbud as the active/primary connection."
+    "expected": "After each rapid open/close cycle, the app correctly reflects the final lid state: when lid is closed, both earbuds show as disconnected; when lid is open, both earbuds show as connected. No stale connection state persists. No charging icon appears for disconnected earbuds."
   },
   {
-    "title": "TC-EARBUD-CONN-007: Earbuds do not reconnect when charging case lid is closed after brief opening",
+    "title": "TC-VF60-CONN-007: App force-kill while earbuds in case with lid closed \u2014 verify connection state on relaunch",
     "steps": [
-      "1. Ensure both earbuds are fully charged and connected to the phone via Bluetooth.",
-      "2. Place both earbuds into the charging case and close the lid.",
-      "3. Wait 5 seconds and verify both earbuds have disconnected.",
-      "4. Open the charging case lid for 2 seconds, then close it again without removing any earbuds.",
-      "5. Wait 10 seconds.",
-      "6. Check the Bluetooth settings and/or companion app for the connection status of both earbuds."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Remove both earbuds from your ears.",
+      "Place both earbuds into the charge case.",
+      "Close the charge case lid.",
+      "Wait for the app to show both earbuds as disconnected (up to 15 seconds).",
+      "Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
+      "Wait 5 seconds.",
+      "Reopen the Poly Studio Mobile app.",
+      "Observe the Home screen for up to 15 seconds.",
+      "Open the charge case lid.",
+      "Observe the Home screen for up to 15 seconds."
     ],
-    "expected": "Both earbuds should remain disconnected. Opening and closing the lid without removing earbuds should not trigger a reconnection."
+    "expected": "Step 10: On relaunch with lid closed, the Home screen shows both earbuds as disconnected (no stale connected state). Step 11-12: After opening the lid, both earbuds re-appear as connected within 15 seconds."
   },
   {
-    "title": "TC-EARBUD-CONN-008: Verify charging case LED behavior when earbud is placed inside and lid is closed",
+    "title": "TC-VF60-CONN-008: Bluetooth disconnect while one earbud is in case with lid closed \u2014 verify app connection status",
     "steps": [
-      "1. Ensure both earbuds are fully charged and connected to the phone via Bluetooth.",
-      "2. Remove the primary earbud from your ear.",
-      "3. Place the primary earbud into the charging case.",
-      "4. Close the charging case lid.",
-      "5. Observe the LED indicator on the front of the charging case.",
-      "6. Wait 10 seconds and observe any LED changes."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Remove the left earbud (primary) from your ears.",
+      "Place the left earbud into the charge case.",
+      "Close the charge case lid.",
+      "Verify the left earbud shows as disconnected on the Home screen.",
+      "From the phone's Bluetooth settings, disconnect or unpair the Voyager Free 60+ device.",
+      "Observe the Home screen in the Poly Studio Mobile app for up to 15 seconds.",
+      "From the phone's Bluetooth settings, reconnect to the Voyager Free 60+ device.",
+      "Observe the Home screen for up to 15 seconds.",
+      "Open the charge case lid.",
+      "Observe the Home screen for up to 15 seconds."
     ],
-    "expected": "The charging case LED should illuminate briefly (e.g., green, orange, or red depending on charge level) to indicate the earbud is seated and charging, then turn off after a few seconds to conserve battery."
+    "expected": "Step 8: After Bluetooth disconnect, the app shows both earbuds as disconnected. Step 9-10: After Bluetooth reconnect, the right earbud (out of case) reconnects and shows as connected; the left earbud (in case with lid closed) remains disconnected. Step 11-12: After opening the lid, the left earbud re-appears as connected within 15 seconds."
   },
   {
-    "title": "TC-EARBUD-CONN-009: Verify audio routing when primary earbud is placed in case during a call",
+    "title": "TC-VF60-CONN-009: Earbud removed from case while lid is closed \u2014 verify app shows correct connection state",
     "steps": [
-      "1. Ensure both earbuds are fully charged and connected to the phone via Bluetooth.",
-      "2. Initiate a phone call and ensure audio is playing through both earbuds.",
-      "3. During the call, remove the primary earbud from your ear.",
-      "4. Place the primary earbud into the charging case and close the lid.",
-      "5. Wait 5 seconds.",
-      "6. Verify audio routing and call status."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Place both earbuds into the charge case.",
+      "Close the charge case lid.",
+      "Wait for the app to show both earbuds as disconnected (up to 15 seconds).",
+      "Open the charge case lid.",
+      "Remove only the left earbud (primary) from the case.",
+      "Close the charge case lid (right earbud remains inside).",
+      "Observe the Home screen in the Poly Studio Mobile app for up to 10 seconds.",
+      "Open the charge case lid.",
+      "Observe the Home screen for up to 10 seconds."
     ],
-    "expected": "The call should remain active. Audio should seamlessly route to the secondary earbud (if it remains in use) or to the phone's speaker/mic if both earbuds are placed in the case. The call should not drop."
+    "expected": "Step 9: After removing the left earbud and closing the lid with the right earbud inside, the app shows the left earbud as connected and the right earbud as disconnected within 10 seconds. Step 10-11: After opening the lid, the right earbud re-appears as connected within 10 seconds."
   },
   {
-    "title": "TC-EARBUD-CONN-010: Verify connection persistence when earbud is placed in case with low battery",
+    "title": "TC-VF60-CONN-010: Charge case battery critically low \u2014 verify earbud connection status accuracy when placed in case",
     "steps": [
-      "1. Ensure the primary earbud has low battery (e.g., less than 10%).",
-      "2. Connect both earbuds to the phone via Bluetooth.",
-      "3. Remove the primary earbud from your ear.",
-      "4. Place the primary earbud into the charging case and close the lid.",
-      "5. Wait 5 seconds.",
-      "6. Check the Bluetooth settings and/or companion app for the connection status of the primary earbud."
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Verify the Home screen shows both earbuds as connected.",
+      "Ensure the Voyager Free 60+ charge case battery is at a critically low level (below 5%).",
+      "Remove the left earbud (primary) from your ears.",
+      "Place the left earbud into the charge case.",
+      "Close the charge case lid.",
+      "Observe the Home screen in the Poly Studio Mobile app for up to 20 seconds.",
+      "Open the charge case lid.",
+      "Observe the Home screen for up to 20 seconds."
     ],
-    "expected": "The primary earbud should disconnect from the phone when placed in the charging case with the lid closed, regardless of battery level. Low battery should not prevent the disconnection behavior."
+    "expected": "Even with critically low charge case battery, the app correctly updates the connection status: after placing the left earbud in the case and closing the lid, the left earbud shows as disconnected within 20 seconds. After opening the lid, the left earbud re-appears as connected. No stale connected state or incorrect charging icon is displayed."
   }
 ]
