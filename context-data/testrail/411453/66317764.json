@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Reset Device - Clear Trusted Devices - Clear - Yes",
   "feature": "Device Management",
-  "scenario": "Clear Trusted Devices via Device Settings > Reset Device removes headset from My Devices and requires re-pairing in Poly Studio Mobile app",
+  "scenario": "Clear Trusted Devices via Device Settings > Reset Device removes headset from Bluetooth My Devices list and requires re-pairing",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. From the Home screen, tap on the connected device name to open Device Settings.",
-    "3. Scroll down and tap 'Reset Device'.",
-    "4. Under 'Clear Trusted Devices', tap the 'Clear' button.",
-    "5. A warning popup appears: 'This will clear all trusted devices. Device power-off is required and activity/call may be interrupted.' Tap 'Yes' to confirm.",
-    "6. Observe the headset behavior and the app UI."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the connected device name to open Device Settings.",
+    "Scroll down and tap 'Reset Device'.",
+    "Under 'Clear Trusted Devices', tap 'Clear'.",
+    "On the warning popup (which warns of device power-off and possible call interruption), tap 'Yes' to confirm.",
+    "Observe the headset behavior and the app status."
   ],
-  "expected": "The headset disconnects from the phone and is removed from the 'My Devices' list in the phone's Bluetooth settings. The headset appears only under 'Other Devices' (or 'Available Devices'), ready for re-pairing.",
+  "expected": "The headset disconnects and is removed from the Bluetooth 'My Devices' list. It appears only under 'Other Devices' on the phone, ready for re-pairing.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "clear-trusted-devices",
     "reset-device",
     "device-settings",
-    "poly-studio-mobile",
+    "bluetooth-my-devices",
     "re-pairing",
-    "my-devices",
-    "warning-popup",
-    "bluetooth-pairing"
+    "poly-studio-mobile",
+    "warning-popup"
   ],
   "source_last_updated": "1762260983",
   "source_hash": "954ddfdeb12d796ae960fb0500492c98a903ca742c6e54ff8d1d05afbc5e9c5b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.878488Z",
+  "processed_at": "2026-04-25T07:55:31.951685Z",
   "status": "active"
 }
