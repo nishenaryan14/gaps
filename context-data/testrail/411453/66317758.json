@@ -7,28 +7,31 @@
   "feature": "App Settings",
   "scenario": "Tapping \"Later\" on firmware update prompt after changing device language in Poly Studio Mobile app dismisses language list without applying the new language",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Tap on the device name to open Device Settings.",
-    "Navigate to the Language option under Device Settings.",
-    "Select a new language from the language list.",
-    "When the firmware update prompt appears, tap the \"Later\" button."
+    "Open Poly Studio Mobile app on the Android device.",
+    "Navigate to the Home screen.",
+    "Tap the menu icon (hamburger) or Account icon to access Settings.",
+    "Select 'Account' or 'Settings' from the menu.",
+    "Locate and tap the 'Language' option to open the language selection list.",
+    "Select a new language from the list (different from the current one).",
+    "Observe that a firmware update prompt appears on the screen.",
+    "On the firmware update prompt, tap the 'Later' button."
   ],
-  "expected": "The language list is dismissed, the current language remains unchanged, and the new language is not applied.",
+  "expected": "The language list is dismissed, the language is NOT changed, and the previously selected language remains displayed and active.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "firmware-update",
-    "language-settings",
-    "device-settings",
-    "language-list",
+    "language-selection",
     "later-button",
-    "language-persistence",
-    "ui-dismissal"
+    "dismiss-prompt",
+    "android",
+    "settings-menu",
+    "ui-behavior"
   ],
   "source_last_updated": "1762252394",
   "source_hash": "dda47d64465751ad0ad3a04c66e01c33348695f4b250dc4b26e805c536a2a8b0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.977004Z",
+  "processed_at": "2026-04-25T09:32:26.229941Z",
   "status": "active"
 }
