@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Falcon  - Custom Button - Teams Detected",
   "feature": "App Settings",
-  "scenario": "Custom Button screen shows \"Other Providers\" greyed out with message when Microsoft Teams is connected via Poly Studio Mobile app",
+  "scenario": "Custom Button Device Settings shows \"Microsoft Teams\" selected by default and \"Other Providers\" greyed out when Teams is detected by Poly Studio Mobile app",
   "steps": [
     "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Ensure a Poly Bluetooth audio device is paired and connected.",
-    "3. Open the Microsoft Teams app and establish a connection (sign in and connect to a meeting or enable Teams integration).",
-    "4. Return to the Poly Studio Mobile app.",
-    "5. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "6. Tap on 'Custom Button' in the Device Settings menu.",
-    "7. Observe the options displayed on the Custom Button screen."
+    "2. Navigate to the Home screen and ensure a Poly Bluetooth audio device is connected.",
+    "3. Open Device Settings by tapping on the connected [Device Name].",
+    "4. Locate and tap on the Custom Button option in the Device Settings menu.",
+    "5. Observe the two options displayed: \"Microsoft Teams\" and \"Other Providers\".",
+    "6. Verify that \"Microsoft Teams\" is selected by default.",
+    "7. Verify that \"Other Providers\" is greyed out and not tappable.",
+    "8. Check for the informational message indicating that Microsoft Teams is connected and Other Providers is not available."
   ],
-  "expected": "The Custom Button screen shows two options: \"Microsoft Teams\" (selected by default) and \"Other Providers\" (greyed out and inaccessible). A message is displayed: \"Microsoft Teams is connected. Other Providers is not available when Microsoft Teams is connected.\"",
+  "expected": "The Custom Button UI shows two options: \"Microsoft Teams\" (selected by default) and \"Other Providers\" (greyed out). A message indicates that Microsoft Teams is connected and Other Providers is not available. Tapping \"Other Providers\" does nothing.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "custom-button",
-    "other-providers",
     "poly-studio-mobile",
-    "microsoft-teams",
+    "custom-button",
     "device-settings",
-    "greyed-out",
-    "bluetooth-audio-device"
+    "microsoft-teams",
+    "other-providers",
+    "bluetooth-audio-device",
+    "android-app"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "ad25be3e0b32a8733a83c3afc8acce40b989c275cc8a7130384b10077a87500c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.006789Z",
+  "processed_at": "2026-04-25T08:21:31.083197Z",
   "status": "active"
 }
