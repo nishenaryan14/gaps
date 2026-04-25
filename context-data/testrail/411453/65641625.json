@@ -4,28 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Fit test - both earbuds are disconnected, not possible to start the Fit test [TO BE UPDATED]",
-  "feature": "Fit Test",
-  "scenario": "Fit test cannot be started because both earbuds are disconnected, causing the Test button to be disabled in Tutorials, Onboarding, or User Guides.",
+  "feature": "App Settings",
+  "scenario": "Fit Test button remains disabled in Tutorials section when both earbuds are disconnected from the Poly Studio Mobile app",
   "steps": [
-    "Open the app and navigate to Tutorials, Onboarding, or User Guides.",
-    "Attempt to start the Fit test.",
-    "Observe the Test button status."
+    "Open Poly Studio Mobile app",
+    "Go to Home screen",
+    "Ensure both earbuds are disconnected from the app",
+    "Navigate to Tutorials / Onboarding / User Guides section",
+    "Locate the Fit Test button"
   ],
-  "expected": "The Test button should be enabled and the Fit test should start.",
+  "expected": "The Fit Test button should be enabled and allow the user to start the Fit test from the Tutorials/Onboarding/User Guides section even when both earbuds are disconnected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "fit test cannot start",
-    "earbuds disconnected",
-    "test button disabled",
-    "tutorials onboarding user guides",
-    "fit test troubleshooting",
-    "bluetooth connection issue",
-    "app fit test error"
+    "fit-test",
+    "tutorials-section",
+    "poly-studio-mobile",
+    "earbuds-disconnected",
+    "button-disabled",
+    "onboarding",
+    "user-guides"
   ],
   "source_last_updated": "1760963205",
   "source_hash": "831e04a816d64e44bfc84d48e8748d582edd4e12eb6e82a9b7b0dcd5bcb07fee",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.231451Z",
+  "processed_at": "2026-04-25T05:37:16.816209Z",
   "status": "active"
 }
