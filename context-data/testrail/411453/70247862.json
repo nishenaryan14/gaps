@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Welcome to Poly Studio - Fresh install",
   "feature": "App Settings",
-  "scenario": "Welcome to Poly Studio screen appears during onboarding and tapping Get Started returns user to Organized screen",
+  "scenario": "\"Welcome to Poly Studio\" screen appears during first-launch onboarding and tapping \"Get Started\" returns user to the Organized screen",
   "steps": [
     "1. Fresh install the Poly Studio Mobile app on an Android device.",
     "2. Launch the Poly Studio Mobile app.",
-    "3. Observe the initial onboarding flow.",
-    "4. Verify that the \"Welcome to Poly Studio\" screen appears during onboarding.",
-    "5. Continue through the onboarding screens until reaching the \"Organized\" screen.",
-    "6. On the \"Organized\" screen, tap the \"Get Started\" button.",
-    "7. Observe the result after tapping \"Get Started\"."
+    "3. Observe the onboarding flow that appears.",
+    "4. Verify that the \"Welcome to Poly Studio\" screen is displayed.",
+    "5. Tap the \"Get Started\" button on the welcome screen.",
+    "6. Observe the screen that appears after tapping \"Get Started\"."
   ],
-  "expected": "Tapping \"Get Started\" should close the welcome screen and return the user to the \"Organized\" screen to continue progressing through the onboarding flow.",
+  "expected": "The \"Welcome to Poly Studio\" screen appears during onboarding after launching the app for the first time. Tapping \"Get Started\" closes the welcome screen and returns the user to the \"Organized\" screen to continue the onboarding flow.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-flow",
     "welcome-screen",
+    "get-started",
     "organized-screen",
-    "get-started-button",
-    "android",
-    "fresh-install"
+    "first-launch",
+    "android"
   ],
   "source_last_updated": "1771845442",
   "source_hash": "435aa362e2fece453ed83b3578a2484120b8715579dcb6c7a4bc2012eab340ec",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.903790Z",
+  "processed_at": "2026-04-25T09:32:26.117446Z",
   "status": "active"
 }
