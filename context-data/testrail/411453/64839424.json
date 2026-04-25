@@ -5,23 +5,34 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Allow Once option is selected",
   "feature": "App Settings",
-  "scenario": "Location sharing dialog does not reappear after app restart when \"Allow Once\" was selected during initial prompt on Home Screen",
-  "steps": [],
-  "expected": "",
+  "scenario": "Location sharing dialog reappears on Home Screen after app restart when 'Allow Once' is selected during onboarding in Poly Studio Mobile app",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app for the first time.",
+    "2. Complete the onboarding flow.",
+    "3. Observe the location sharing dialog that appears with options 'Allow Once', 'Allow While Using App', and 'Don't Allow'.",
+    "4. Select 'Allow Once'.",
+    "5. Verify the Home screen is displayed.",
+    "6. Navigate to App Settings \u2192 Find My Device.",
+    "7. Confirm the location sharing dialog does not reappear during this session.",
+    "8. Close and restart the Poly Studio Mobile app.",
+    "9. Observe the Home screen after restart."
+  ],
+  "expected": "After restarting the app, the location sharing dialog is shown again on the Home Screen, as expected for the 'Allow Once' permission behavior.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "location-sharing-dialog",
     "allow-once",
-    "app-restart",
-    "permission-persistence",
+    "onboarding-flow",
     "home-screen",
-    "dialog-reappearance",
-    "poly-app"
+    "find-my-device",
+    "app-restart",
+    "permission-persistence"
   ],
   "source_last_updated": "1759149575",
   "source_hash": "75cf0171aea815d2a3a261bdfa08a972f4e02283926cdfa73f2e644499004f87",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.788723Z",
+  "processed_at": "2026-04-25T08:21:30.915908Z",
   "status": "active"
 }
