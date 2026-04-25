@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "[IOS]Onboarding - Organized page has a continue button",
   "feature": "App Settings",
-  "scenario": "Onboarding flow shows Poly Lens Login screen after tapping Skip on Organized page instead of skipping login",
+  "scenario": "Onboarding flow shows \"Organized\" page with Poly Lens location tracking prompt after skipping license/privacy, then navigates to POLY LENS Login screen",
   "steps": [
     "Open Poly Studio Mobile app",
-    "On the onboarding screen, accept the License and Privacy terms",
-    "Tap Skip on the onboarding flow",
-    "Observe the 'Organized' page displayed",
-    "Tap the 'Continue' button on the 'Organized' page",
-    "Observe the next screen"
+    "On the onboarding flow, accept the License and Privacy terms",
+    "Tap Skip on the next screen",
+    "Observe the 'Organized' page",
+    "Tap the 'Continue' button on the 'Organized' page"
   ],
-  "expected": "After tapping Continue on the 'Organized' page, the Poly Lens Login screen should be displayed with 'Login' and 'Continue as Guest' options.",
+  "expected": "The POLY LENS Login screen should appear with both 'Login' and 'Continue as Guest' options.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "onboarding-flow",
     "organized-page",
-    "poly-lens-login",
-    "skip-login",
-    "license-privacy-terms",
-    "continue-button"
+    "poly-lens",
+    "location-tracking",
+    "license-privacy",
+    "poly-lens-login"
   ],
   "source_last_updated": "1764319860",
   "source_hash": "815e7efb7f3f8ba69170856220818683e683d5c03b6622e5572c9ecfa3c83bed",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.909858Z",
+  "processed_at": "2026-04-25T09:32:26.128609Z",
   "status": "active"
 }
