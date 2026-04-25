@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "Find My Device - Don't Allow - Enable Now - Allow While Using App [Deprecated for IOS]",
   "feature": "App Settings",
-  "scenario": "Find My Device location permission flow: granting \"While Using the App\" permission after initially denying opens FMD screen without further permission popups",
+  "scenario": "Find My Device location permission flow: user denies permission, then grants \"While Using the App\" via Enable Now prompt and returns to FMD screen",
   "steps": [
-    "1. Launch the Poly Studio Mobile app with a Poly headset connected.",
-    "2. On the Home screen, tap the main menu (hamburger icon).",
-    "3. From the menu, tap \"Find My Device\".",
-    "4. When the location permission popup appears, tap \"Don't Allow\".",
-    "5. Observe that the Find My Device screen shows a prompt to enable location access.",
-    "6. Tap \"Enable Now\" on the Find My Device screen.",
-    "7. When the system location permission dialog appears, select \"While Using the App\" to grant permission.",
-    "8. Return to the Poly Studio Mobile app."
+    "1. Launch Poly Studio Mobile app with a headset connected.",
+    "2. From the Home screen, tap the main menu (hamburger icon).",
+    "3. Tap \"Find My Device\" from the menu.",
+    "4. When the location permission prompt appears, tap \"Don't Allow\".",
+    "5. On the second prompt that appears, tap \"Enable Now\".",
+    "6. In the system settings, grant location permission with the \"While Using the App\" option.",
+    "7. Return to the Poly Studio Mobile app."
   ],
-  "expected": "The location permission popup appears at step 4. After tapping \"Don't Allow\", the FMD screen shows an \"Enable Now\" prompt. After tapping \"Enable Now\" and granting \"While Using the App\" permission, the Find My Device screen opens without any further permission windows.",
+  "expected": "1. The location permission prompt appears with three options: \"Allow Once\", \"Allow while using app\", and \"Don't allow\".<br>2. After tapping \"Don't Allow\", a second prompt appears with \"Cancel\" and \"Enable Now\" buttons, with the Find My Device screen visible in the background.<br>3. After tapping \"Enable Now\", the app navigates to system settings.<br>4. After granting \"While Using the App\" permission and returning to the app, the Find My Device screen is open and the permission window is no longer shown.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "location-permission",
     "while-using-the-app",
+    "enable-now-prompt",
     "permission-flow",
     "poly-studio-mobile",
-    "enable-now",
-    "permission-granting"
+    "bluetooth-headset"
   ],
   "source_last_updated": "1760352232",
   "source_hash": "3ca702ea9176c05b6e6f50b71bc51a5f3fc8c29c1af325e11733fe4d921669b7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.772036Z",
+  "processed_at": "2026-04-25T07:55:31.847955Z",
   "status": "active"
 }
