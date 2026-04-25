@@ -5,16 +5,17 @@
   "project": "411453",
   "title": "CCL - Selecting No Noise Block",
   "feature": "ANC",
-  "scenario": "Verify \"No Noise Block\" option is selectable in Device Settings > Advanced on CCL-supported devices",
+  "scenario": "Verify \"No Noise Block\" option can be selected in Device Settings > Advanced on Voyager Free 60+, Voyager Free 60, and Voyager Legend 50",
   "steps": [
-    "Open Poly Studio Mobile app on the Android device.",
+    "Open Poly Studio Mobile app on the connected smartphone.",
     "Navigate to the Home screen.",
-    "Tap on the connected device name to open Device Settings.",
-    "Scroll down and tap on 'Advanced' under Device Settings.",
-    "Locate the 'No Noise Block' option in the Advanced settings.",
-    "Tap on the 'No Noise Block' option to select it."
+    "Tap on the connected device name (e.g., Voyager Free 60+).",
+    "Tap on Device Settings.",
+    "Scroll down and tap on Advanced.",
+    "Locate the 'No Noise Block' option in the Advanced settings list.",
+    "Tap on 'No Noise Block' to select it."
   ],
-  "expected": "The 'No Noise Block' option is successfully selected and applied on devices that support CCL (Customizable Calibration Level).",
+  "expected": "The 'No Noise Block' option is successfully selected, and ANC/Transparency modes are disabled. The device should operate without any noise cancellation or transparency effect.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,13 +23,14 @@
     "device-settings",
     "advanced-settings",
     "poly-studio-mobile",
-    "ccl-supported-devices",
-    "android-app",
-    "noise-blocking"
+    "voyager-free-60-plus",
+    "voyager-free-60",
+    "voyager-legend-50",
+    "noise-block-option"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "6ae09597e06e994f94f8e266955ebfcffd22e185e1cc9516f6bf0d233c485728",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.004012Z",
+  "processed_at": "2026-04-25T09:32:26.259221Z",
   "status": "active"
 }
