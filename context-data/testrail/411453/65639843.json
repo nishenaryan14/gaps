@@ -5,31 +5,23 @@
   "project": "411453",
   "title": "1 step DFU - Language update  when only EB has update",
   "feature": "Firmware Update",
-  "scenario": "1-step DFU for language change succeeds when only Earbuds have a pending update and Charge Case is already on latest firmware on Voyager Free 60+",
-  "steps": [
-    "1. Open the Poly Studio Mobile app with an Osprey device (Voyager Free 60+ or Voyager Legend 50) where only the earbuds have a pending firmware update and the Charge Case is already on the latest version.",
-    "2. Navigate to Device Settings \u2192 Language and select a new language.",
-    "3. Tap \"Update Now\" and confirm the software update screen appears.",
-    "4. Complete the language change DFU (Device Firmware Update).",
-    "5. Verify the language change and DFU finish successfully and the earbuds are updated to the latest firmware.",
-    "6. Check the language on the Charge Case by navigating menus on the Charge Case touch screen, confirming the language was properly changed for the Charge Case."
-  ],
-  "expected": "The language change DFU completes successfully. The earbuds are updated to the latest firmware. The Charge Case touch screen menus display the newly selected language.",
+  "scenario": "1-step DFU for language change succeeds when only Earbuds have a pending update and Charge Case is already on latest firmware",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "voyager-free-60-plus",
-    "voyager-legend-50",
-    "dfu-language-change",
-    "poly-studio-mobile",
-    "charge-case-firmware",
-    "earbud-firmware-update",
-    "charge-case-language",
-    "osprey-device"
+    "dfu",
+    "firmware-update",
+    "language-change",
+    "earbuds",
+    "charge-case",
+    "pending-update",
+    "poly-bluetooth"
   ],
   "source_last_updated": "1763381953",
   "source_hash": "baa86884e559dc15fde9050cdda110145fdb4d835f38bc00a51bdff10ba3ef1c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.966106Z",
+  "processed_at": "2026-04-25T08:21:31.039426Z",
   "status": "active"
 }
