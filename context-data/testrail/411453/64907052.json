@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "App Settings - General - Notifications & Device Alerts - Tab UI",
-  "feature": "App Settings - Notifications",
+  "feature": "App Settings",
   "scenario": "Notifications & Device Alerts tab UI under General settings does not match Figma design",
   "steps": [
     "Open the Poly Studio Mobile app on the Android device.",
-    "Tap the Menu icon (hamburger) or navigate to the Home screen.",
-    "Tap on General settings.",
-    "Tap on the Notifications tab (or Notifications & Device Alerts).",
-    "Observe the UI elements, layout, toggles, and text displayed on the Notifications screen.",
-    "Compare the observed UI against the Figma design reference for the Notifications & Device Alerts screen."
+    "On the Home screen, tap the menu icon (hamburger) or navigate to the Account/Settings section.",
+    "Select 'General' from the settings menu.",
+    "In the General settings screen, tap on the 'Notifications & Device Alerts' tab.",
+    "Observe the menu items, layout, icons, toggles, and text displayed under the Notifications & Device Alerts tab.",
+    "Compare the observed UI elements against the approved Figma design for the Notifications & Device Alerts screen."
   ],
-  "expected": "The Notifications & Device Alerts screen UI matches the Figma design, including correct layout, toggles, labels, and styling.",
+  "expected": "The Notifications & Device Alerts tab UI matches the Figma design exactly, including correct menu items, layout, icons, toggle states, and text labels.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "general-settings",
     "notifications-device-alerts",
-    "ui-mismatch",
-    "figma-design",
+    "general-settings",
+    "figma-design-mismatch",
+    "ui-layout",
     "android-app",
-    "settings-ui"
+    "settings-menu"
   ],
   "source_last_updated": "1759416420",
   "source_hash": "9290dda9f56da59096a74c37e517fdfe4c3b02f217142f7a28c93c59471794cb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.930707Z",
+  "processed_at": "2026-04-25T09:32:26.162067Z",
   "status": "active"
 }
