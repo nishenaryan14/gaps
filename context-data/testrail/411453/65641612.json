@@ -10,25 +10,26 @@
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
     "Tap on the connected device name to open Device Settings",
-    "Locate and tap on Fit Test option",
-    "Follow the Fit Test prompts to complete the test",
-    "On the Fit Test results screen, tap the 'X' button"
+    "Locate and tap Fit Test option",
+    "On the first Fit Test screen, tap Start or Begin to run the fit test",
+    "Wait for the Fit Test to complete and results to display on the second screen (Fit Test results screen)",
+    "Tap the 'X' button on the Fit Test results screen"
   ],
-  "expected": "The Fit Test results screen closes and the user is returned to Device Settings.",
+  "expected": "The Fit Test results screen closes and the user is returned to the Device Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "fit-test-results",
+    "fit-test-results-screen",
     "device-settings",
-    "poly-studio-mobile",
     "x-button",
-    "ui-navigation",
-    "fit-test-completion"
+    "poly-studio-mobile",
+    "fit-test-completion",
+    "ui-navigation"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "94ec9ef2865711ebb54b5602c934bbb7fb9811f1c62401a14d7aff32342c55ba",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.813260Z",
+  "processed_at": "2026-04-25T07:55:31.892749Z",
   "status": "active"
 }
