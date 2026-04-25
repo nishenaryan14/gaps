@@ -8,18 +8,17 @@
   "scenario": "Pairing analytics event does not display Device Name, Device PID, and Device Serial in Firebase dashboard after successful device pairing",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Ensure no device is currently paired. Go to the Home screen.",
-    "3. Put the Poly Bluetooth audio device into pairing mode (press and hold the Bluetooth button until the LED flashes).",
-    "4. On the Home screen, tap \"Pair New Device\" or select the device from the available devices list.",
-    "5. Complete the pairing process. Wait for the confirmation that the device is successfully paired (device appears on the Home screen with a connected status).",
+    "2. On the Home screen, tap the device list or scan for nearby devices.",
+    "3. Put the Poly Bluetooth audio device into pairing mode (e.g., press and hold the Bluetooth button until the LED flashes).",
+    "4. From the list of available devices, tap the desired device name to initiate pairing.",
+    "5. Wait for the pairing process to complete and confirm the device appears as \"Connected\" on the Home screen.",
     "6. Navigate to the Firebase Analytics console for the Poly Studio Mobile app.",
     "7. Locate the analytics event for successful device pairing (e.g., \"device_paired\" or similar event name).",
     "8. Verify that the event page displays the following default elements: graph, events in last 30 minutes, event count by Country/Gender, events per session, App Version, App build, App Environment.",
     "9. Verify that the event page also displays the custom parameters: Device Name, Device PID, and Device Serial.",
-    "10. Wait a few hours (as per Firebase data processing latency), then return to the Firebase console and check the event count for the pairing event.",
-    "11. Verify that the event count for the related elements (Device Name, Device PID, Device Serial) has increased."
+    "10. After a few hours, return to the Firebase Analytics console and check that the event count for the related elements (e.g., Device Name, Device PID, Device Serial) has increased."
   ],
-  "expected": "The Firebase Analytics event page for the successful pairing event displays all default elements (graph, events in last 30 minutes, event count by Country/Gender, events per session, App Version, App build, App Environment) plus the custom parameters Device Name, Device PID, and Device Serial. After a few hours, the event count for these elements increases.",
+  "expected": "The Firebase Analytics event page for the successful device pairing event displays all default elements (graph, events in last 30 minutes, event count by Country/Gender, events per session, App Version, App build, App Environment) plus the custom parameters Device Name, Device PID, and Device Serial. After a few hours, the event count for these elements increases.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -35,6 +34,6 @@
   "source_last_updated": "1760949700",
   "source_hash": "601da469350b79b4f1f6bf012691c2a6e68bffeb231111e46309882340973afc",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.994540Z",
+  "processed_at": "2026-04-25T08:21:31.070857Z",
   "status": "active"
 }
