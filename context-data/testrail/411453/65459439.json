@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Software Update - DFU - Animations on Software Update screen",
   "feature": "Firmware Update",
-  "scenario": "Software Update screen animations during DFU verify correct slide transitions and animated update indicator on Poly Studio Mobile app",
+  "scenario": "Software Update screen animations during DFU flow on Poly Studio Mobile app",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
     "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
@@ -13,23 +13,25 @@
     "4. Tap the Update button \u2014 the Software Update screen should slide in from the right.",
     "5. Tap Continue \u2014 the Three Easy Steps screen should slide in from the right.",
     "6. Tap the back arrow \u2014 the Software Update screen should slide in from the left.",
-    "7. On the Three Easy Steps screen, tap Start Update \u2014 the Updating screen should slide in from the right with an animated picture in the center."
+    "7. Navigate back to the Three Easy Steps screen and tap \"Start Update\".",
+    "8. Observe the Updating screen \u2014 it should slide in from the right with an animated picture in the center."
   ],
-  "expected": "All screen transitions use smooth slide animations: Software Update slides in from the right when Update is tapped; Three Easy Steps slides in from the right when Continue is tapped; Software Update slides in from the left when the back arrow is tapped; Updating screen slides in from the right with an animated picture in the center when Start Update is tapped.",
+  "expected": "All screen transitions are smooth and follow the correct slide direction: Software Update slides in from the right, Three Easy Steps slides in from the right, back navigation slides from the left, and the Updating screen slides in from the right with a centered animated picture.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "software-update",
-    "dfu",
+    "dfu-flow",
+    "screen-animations",
     "slide-transition",
-    "animated-update-indicator",
     "updating-screen",
-    "three-easy-steps"
+    "three-easy-steps",
+    "android-app"
   ],
   "source_last_updated": "1763369558",
   "source_hash": "d587edff5e7214bcfab3dde6954c37d5506948b9ad51b83ad8e3dbc00e9eef14",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.028174Z",
+  "processed_at": "2026-04-25T09:32:26.286738Z",
   "status": "active"
 }
