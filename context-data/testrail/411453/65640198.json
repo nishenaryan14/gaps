@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Soak Test - Headset disconnected, app in the background, phone idle",
-  "feature": "Headset Connectivity / Soak Test",
-  "scenario": "Verify app remains stable and responsive after prolonged idle soak test with headset disconnected and app in background",
+  "feature": "App Settings",
+  "scenario": "App remains responsive and does not crash after prolonged idle with headset disconnected on Home Screen",
   "steps": [
-    "Install and launch app, pair headset, turn off headset, go to Home Screen.",
-    "Put app in background and leave phone idle.",
-    "After a few hours (ideally overnight or when phone can be idle for multiple hours), check the app."
+    "1. Install and launch the Poly Studio Mobile app.",
+    "2. Pair a Poly Bluetooth headset with the app.",
+    "3. Turn off the headset.",
+    "4. Navigate to the Home screen (the headset should be shown as disconnected).",
+    "5. Put the app in the background and leave the phone idle for several hours.",
+    "6. After several hours, bring the app back to the foreground and check if it is still running and responsive."
   ],
-  "expected": "Home screen shows headset as disconnected. App stays stable and running while in background. After a few hours, app is still running and user can interact normally.",
+  "expected": "The app remains running and responsive after several hours in the background. No memory leaks or crashes occur.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "idle soak test",
-    "app stability",
-    "background app",
-    "headset disconnected",
-    "prolonged idle",
-    "app responsiveness",
-    "phone idle",
-    "overnight test"
+    "poly-studio-mobile",
+    "home-screen",
+    "disconnected-state",
+    "app-responsiveness",
+    "idle-behavior",
+    "background-foreground",
+    "bluetooth-pairing",
+    "crash-recovery"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "f6e4db42218142e4c0f485ff7b34367f8035ef26544468a6893770b305f89e15",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.342815Z",
+  "processed_at": "2026-04-25T05:37:16.975727Z",
   "status": "active"
 }
