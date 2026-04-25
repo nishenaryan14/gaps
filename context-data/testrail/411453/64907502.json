@@ -5,31 +5,33 @@
   "project": "411453",
   "title": "Support - App, user not logged ever, login, Continue, login",
   "feature": "App Settings",
-  "scenario": "Guest user login from Support > App screen results in white screen with spinner instead of displaying correct support card data",
+  "scenario": "Support section login flow in Poly Studio Mobile app shows white screen with spinner after Lens account login, then displays correct card data",
   "steps": [
     "1. Install the Poly Studio Mobile app.",
-    "2. Complete onboarding as a Guest user.",
-    "3. Navigate to Support \u2192 App \u2192 Login.",
-    "4. Tap Continue.",
-    "5. Complete the login flow on the login page.",
-    "6. Observe the screen after login completes."
+    "2. During onboarding, select 'Continue as Guest'.",
+    "3. Tap the hamburger menu (\u2630) icon.",
+    "4. Tap 'Support' from the menu.",
+    "5. Tap the 'App' button.",
+    "6. Tap 'Login'.",
+    "7. Tap 'Continue' to proceed with login.",
+    "8. Complete the login process (enter credentials and authenticate)."
   ],
-  "expected": "After login completes, the Support card displays the correct data: App version, tenant name, tenant ID, user ID, app ID, and last connection.",
+  "expected": "Login page opens. User logs into their Lens account. A white screen with the Poly spinner appears. The support card then displays correct data: App version, tenant name, tenant ID, user ID, app ID, and last connected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "guest-user-login",
-    "support-screen",
-    "app-screen",
+    "support-section",
+    "login-flow",
+    "lens-account-login",
     "white-screen",
     "spinner",
-    "support-card-data",
-    "login-flow"
+    "app-login",
+    "onboarding-guest"
   ],
   "source_last_updated": "1759751931",
   "source_hash": "efbd95c884c51834fedc0bf152c5437c820c3b1ee63e3590e157e2f13bcbccda",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.847438Z",
+  "processed_at": "2026-04-25T08:21:30.955174Z",
   "status": "active"
 }
