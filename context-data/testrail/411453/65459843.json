@@ -5,29 +5,33 @@
   "project": "411453",
   "title": "Notifications - Master Toggle OFF - Update successful",
   "feature": "Notifications",
-  "scenario": "Verify that no notification is shown when a device firmware update completes successfully while the Notifications master toggle is OFF.",
+  "scenario": "No notification pop-up appears after successful firmware update when Notifications master toggle is OFF in App Settings > General > Notifications & Device Alerts",
   "steps": [
-    "1. Go to App Settings > General > Notifications & Device Alerts.",
-    "2. Turn OFF the Notifications master toggle.",
-    "3. Perform a device firmware update.",
-    "4. Wait for the firmware update to complete successfully."
+    "1. Open Poly Studio Mobile app on the Home screen.",
+    "2. Go to App Settings > General > Notifications & Device Alerts.",
+    "3. Turn OFF the Notifications master toggle.",
+    "4. Pair the Poly Bluetooth audio device with the mobile device.",
+    "5. Navigate to Device Settings > Software Update.",
+    "6. Start a Device Firmware Update (DFU).",
+    "7. Put the Poly Studio Mobile app in the background (e.g., press the Home button or switch to another app).",
+    "8. Wait for the firmware update to complete."
   ],
-  "expected": "No notification should pop up upon successful update.",
+  "expected": "No notification pops up upon successful firmware update completion.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "notifications",
-    "device firmware update",
-    "Notifications master toggle",
-    "App Settings",
-    "Notifications & Device Alerts",
-    "firmware update completion",
-    "notification suppression",
-    "device alerts"
+    "notifications-master-toggle",
+    "firmware-update",
+    "device-firmware-update-dfu",
+    "poly-studio-mobile",
+    "notifications-device-alerts",
+    "software-update",
+    "app-settings",
+    "background-update"
   ],
   "source_last_updated": "1761230695",
   "source_hash": "424d953999f775f94e927346ed46293d5c096ca20d800007f71281af1dccac8b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.305513Z",
+  "processed_at": "2026-04-25T05:37:16.945328Z",
   "status": "active"
 }
