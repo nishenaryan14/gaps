@@ -1,172 +1,139 @@
 [
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-001: Voyager Free 60+ UC \u2014 Single earbud insertion causes both to disconnect (connection state verification)",
+    "title": "TC-TWS-ASYM-001: Insert Right Earbud Into Case \u2014 Left Earbud Remains Connected",
     "steps": [
-      "1. Ensure both earbuds (Voyager Free 60+ UC) are fully charged and connected to the phone via Bluetooth.",
-      "2. Open Poly Studio Mobile app \u2192 verify Home screen shows both earbuds as connected (green indicators for Left and Right).",
-      "3. Play audio (music or test tone) on the phone.",
-      "4. Verify audio is playing through both earbuds.",
-      "5. Take the LEFT earbud and place it into the charging case.",
-      "6. Observe the connection behavior on the phone's Bluetooth status bar.",
-      "7. Open Poly Studio Mobile app \u2192 observe the Home screen connection status indicators for Left and Right earbuds.",
-      "8. Check if audio is still playing through the RIGHT earbud.",
-      "9. Remove the LEFT earbud from the charging case.",
-      "10. Observe whether the LEFT earbud automatically reconnects.",
-      "11. Check Poly Studio Mobile app Home screen for updated connection status."
+      "Precondition: Both earbuds connected, media streaming (music) active.",
+      "Open Poly Studio Mobile app \u2192 Home screen. Verify both earbuds show as connected.",
+      "Insert the RIGHT earbud into the charging case.",
+      "Observe the LEFT earbud connection state on the app Home screen.",
+      "Verify media audio continues playing through the LEFT earbud only.",
+      "Remove the RIGHT earbud from the case.",
+      "Verify both earbuds reconnect and stereo audio resumes."
     ],
-    "expected": "When one earbud is placed in the charging case, only that earbud should disconnect. The remaining earbud should stay connected and continue playing audio. The Poly Studio Mobile app should show the inserted earbud as disconnected/charging and the other earbud as still connected. When removed from the case, the earbud should automatically reconnect and the app UI should update accordingly."
+    "expected": "Expected: LEFT earbud remains connected and media continues in mono. App shows LEFT connected, RIGHT disconnected. Actual (If Bug): Both earbuds disconnect, media stops entirely, app shows both disconnected."
   },
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-002: Voyager Free 60+ UC \u2014 Single earbud insertion causes both to disconnect (RIGHT earbud test, asymmetry check)",
+    "title": "TC-TWS-ASYM-002: Insert Left Earbud Into Case \u2014 Right Earbud Remains Connected (Symmetry Check)",
     "steps": [
-      "1. Ensure both earbuds (Voyager Free 60+ UC) are fully charged and connected.",
-      "2. Open Poly Studio Mobile app \u2192 verify both earbuds connected on Home screen.",
-      "3. Play audio (music or test tone).",
-      "4. Verify audio playing through both earbuds.",
-      "5. Take the RIGHT earbud and place it into the charging case.",
-      "6. Observe Bluetooth connection status on phone.",
-      "7. Open Poly Studio Mobile app \u2192 check Home screen connection indicators for Left and Right.",
-      "8. Check if audio continues playing through the LEFT earbud.",
-      "9. Remove the RIGHT earbud from the charging case.",
-      "10. Verify automatic reconnection of RIGHT earbud.",
-      "11. Verify Poly Studio Mobile app shows both earbuds connected again."
+      "Precondition: Both earbuds connected, active phone call in progress.",
+      "Open Poly Studio Mobile app \u2192 Home screen. Verify both earbuds show as connected.",
+      "Insert the LEFT earbud into the charging case.",
+      "Observe the RIGHT earbud connection state on the app Home screen.",
+      "Verify call audio continues through the RIGHT earbud only.",
+      "Remove the LEFT earbud from the case.",
+      "Verify both earbuds reconnect and stereo call audio resumes."
     ],
-    "expected": "Inserting only the RIGHT earbud should disconnect only the RIGHT earbud. The LEFT earbud should remain connected and continue playing audio. The app should show RIGHT as disconnected/charging and LEFT as connected. On removal, RIGHT should auto-reconnect and app should reflect both connected. Behavior should be symmetric with LEFT earbud insertion test."
+    "expected": "Expected: RIGHT earbud remains connected and call continues in mono. App shows RIGHT connected, LEFT disconnected. Actual (If Bug): Both earbuds disconnect, call drops, app shows both disconnected."
   },
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-003: Voyager Free 20 \u2014 Single earbud insertion causes both to disconnect (connection state verification)",
+    "title": "TC-TWS-ASYM-003: App Lifecycle \u2014 Background/Foreground With One Earbud In Case",
     "steps": [
-      "1. Ensure both earbuds (Voyager Free 20) are fully charged and connected to the phone via Bluetooth.",
-      "2. Open Poly Studio Mobile app \u2192 verify Home screen shows both earbuds as connected.",
-      "3. Play audio (music or test tone) on the phone.",
-      "4. Verify audio is playing through both earbuds.",
-      "5. Take the LEFT earbud and place it into the charging case.",
-      "6. Observe the connection behavior on the phone's Bluetooth status bar.",
-      "7. Open Poly Studio Mobile app \u2192 observe the Home screen connection status indicators for Left and Right earbuds.",
-      "8. Check if audio is still playing through the RIGHT earbud.",
-      "9. Remove the LEFT earbud from the charging case.",
-      "10. Observe whether the LEFT earbud automatically reconnects.",
-      "11. Check Poly Studio Mobile app Home screen for updated connection status."
+      "Precondition: Both earbuds connected. Set Transparency Mode \u2192 Environment Surround level to 85.",
+      "Insert the RIGHT earbud into the charging case.",
+      "Press Home button to background the app.",
+      "Wait 30 seconds.",
+      "Reopen the app (foreground).",
+      "Observe the Home screen earbud connection indicators.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Transparency Mode. Verify Environment Surround level is still 85.",
+      "Switch to Speech sub-setting. Verify Free level is unchanged from last set value.",
+      "Switch back to Environment. Verify Surround level is still 85."
     ],
-    "expected": "For Voyager Free 20, inserting one earbud into the case should disconnect only that earbud. The remaining earbud should stay connected and continue playing audio. The app should show the inserted earbud as disconnected/charging. On removal, the earbud should auto-reconnect. Note: If the bug (both disconnect) is present, document that both earbuds disconnect and audio stops entirely."
+    "expected": "Expected: App shows LEFT connected, RIGHT disconnected after foreground. All Transparency settings persist correctly (Surround=85, Speech unchanged). Actual (If Bug): App shows both disconnected, or settings reset to defaults after lifecycle transition."
   },
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-004: Voyager Free 60+ UC \u2014 App UI state verification during single earbud insertion",
+    "title": "TC-TWS-ASYM-004: Reverse Scenario \u2014 Remove One Earbud From Case While Other Is Already Connected",
     "steps": [
-      "1. Connect both Voyager Free 60+ UC earbuds and open Poly Studio Mobile app.",
-      "2. Navigate: Home screen \u2192 tap [Device Name] \u2192 verify Device Settings screen shows both earbuds with connected status.",
-      "3. Place LEFT earbud into charging case.",
-      "4. Navigate back to Poly Studio Mobile app Home screen.",
-      "5. Observe the connection status icons/indicators for Left and Right earbuds.",
-      "6. Tap [Device Name] \u2192 navigate to Device Settings screen.",
-      "7. Observe the earbud status indicators on the Device Settings screen.",
-      "8. Check the battery level display for the LEFT earbud (should show charging indicator).",
-      "9. Check the battery level display for the RIGHT earbud (should show normal battery level).",
-      "10. Remove LEFT earbud from case and wait 5 seconds.",
-      "11. Verify both earbuds show as connected on Home screen and Device Settings screen."
+      "Precondition: LEFT earbud already connected and streaming media. RIGHT earbud is in the charging case.",
+      "Open Poly Studio Mobile app \u2192 Home screen. Verify LEFT shows connected, RIGHT shows disconnected.",
+      "Remove the RIGHT earbud from the charging case.",
+      "Observe the app Home screen connection indicators.",
+      "Verify the RIGHT earbud connects independently.",
+      "Verify the LEFT earbud remains connected without interruption (no audio dropout).",
+      "Verify stereo audio resumes on both earbuds."
     ],
-    "expected": "The Poly Studio Mobile app should correctly reflect the state: Home screen should show LEFT earbud as disconnected (grayed out or with charging icon) and RIGHT earbud as connected (green). Device Settings screen should show LEFT earbud status as 'In Case/Charging' and RIGHT as 'Connected'. Battery indicators should update accordingly. After removal, both should show as connected."
+    "expected": "Expected: RIGHT earbud connects independently. LEFT earbud remains connected throughout \u2014 no audio dropout or disconnection. App shows both connected. Actual (If Bug): LEFT earbud disconnects momentarily when RIGHT is removed, or RIGHT fails to connect independently."
   },
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-005: Audio continuity test \u2014 Audio continues through remaining earbud when one is inserted into case",
+    "title": "TC-TWS-ASYM-005: Rapid Insert/Remove Cycling \u2014 One Earbud",
     "steps": [
-      "1. Connect both Voyager Free 60+ UC earbuds to phone.",
-      "2. Open Poly Studio Mobile app \u2192 confirm both earbuds connected.",
-      "3. Start playing a continuous audio track (music or podcast) on the phone.",
-      "4. Verify audio is audible in both earbuds.",
-      "5. While audio is playing, insert the LEFT earbud into the charging case.",
-      "6. Immediately listen to the RIGHT earbud for audio continuity.",
-      "7. Note whether audio continues, stops, or pauses in the RIGHT earbud.",
-      "8. Check phone media player \u2014 is the track still playing or paused?",
-      "9. Remove LEFT earbud from case.",
-      "10. Verify audio resumes in both earbuds (if it stopped) or continues normally.",
-      "11. Repeat steps 3-10 inserting the RIGHT earbud instead."
+      "Precondition: Both earbuds connected, media streaming.",
+      "Insert the LEFT earbud into the case. Wait 2 seconds.",
+      "Remove the LEFT earbud from the case. Wait 2 seconds.",
+      "Repeat steps 2-3 rapidly 5 times in succession.",
+      "After the final removal, verify both earbuds are connected.",
+      "Verify stereo media playback resumes normally.",
+      "Open Poly Studio Mobile app \u2192 Home screen. Verify both earbuds show as connected."
     ],
-    "expected": "Audio should continue playing through the remaining earbud (the one not inserted into the case) without interruption. The media player on the phone should continue playing. When the inserted earbud is removed from the case, audio should resume in both earbuds. If audio stops entirely when one earbud is inserted, this confirms the bug (both earbuds disconnected)."
+    "expected": "Expected: After cycling completes, both earbuds reconnect and stereo audio resumes. App shows both connected. Actual (If Bug): One or both earbuds fail to reconnect, app shows persistent disconnection, or audio remains in mono."
   },
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-006: Reconnection test \u2014 Earbud auto-reconnects after removal from charging case",
+    "title": "TC-TWS-ASYM-006: Audio Routing \u2014 Mono Fallback When One Earbud In Case",
     "steps": [
-      "1. Connect both Voyager Free 60+ UC earbuds to phone.",
-      "2. Open Poly Studio Mobile app \u2192 verify both connected on Home screen.",
-      "3. Place LEFT earbud into charging case.",
-      "4. Wait 10 seconds.",
-      "5. Verify LEFT earbud is disconnected (app shows disconnected, no audio in LEFT).",
-      "6. Remove LEFT earbud from charging case.",
-      "7. Start a timer and observe how long it takes for the LEFT earbud to reconnect.",
-      "8. Check phone Bluetooth settings \u2014 verify LEFT earbud appears as connected.",
-      "9. Open Poly Studio Mobile app \u2192 verify Home screen shows both earbuds connected.",
-      "10. Play audio and verify audio is present in both earbuds.",
-      "11. Repeat steps 3-10 for the RIGHT earbud."
+      "Precondition: Both earbuds connected. Play stereo test track (left channel: sine tone, right channel: voice narration).",
+      "Insert the RIGHT earbud into the charging case.",
+      "Verify audio continues through the LEFT earbud only.",
+      "Verify the audio is the LEFT channel content (sine tone), not mixed or silent.",
+      "Remove the RIGHT earbud. Verify stereo audio returns (left: sine tone, right: voice).",
+      "Insert the LEFT earbud into the charging case.",
+      "Verify audio continues through the RIGHT earbud only.",
+      "Verify the audio is the RIGHT channel content (voice narration), not mixed or silent."
     ],
-    "expected": "The earbud should automatically reconnect within 5-10 seconds of being removed from the charging case. The Poly Studio Mobile app should update to show both earbuds as connected. Audio should resume in both earbuds. If the earbud does not auto-reconnect, this is a separate bug to document."
+    "expected": "Expected: Mono fallback correctly routes the remaining channel's audio to the single active earbud. No audio stops entirely. Actual (If Bug): Audio stops entirely when one earbud is inserted, or both channels are mixed into the remaining earbud incorrectly, or wrong channel plays."
   },
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-007: Voyager Free 60+ UC \u2014 Touchscreen case interaction during single earbud insertion",
+    "title": "TC-TWS-ASYM-007: Call Scenario \u2014 One Earbud Inserted During Active Call",
     "steps": [
-      "1. Connect both Voyager Free 60+ UC earbuds to phone.",
-      "2. Open Poly Studio Mobile app \u2192 verify both connected.",
-      "3. Place LEFT earbud into the charging case.",
-      "4. Observe the touchscreen display on the charging case.",
-      "5. Note what the touchscreen shows for LEFT earbud status (charging icon, battery level).",
-      "6. Note what the touchscreen shows for RIGHT earbud status (connected, battery level).",
-      "7. Remove LEFT earbud from case.",
-      "8. Observe touchscreen display updates.",
-      "9. Place RIGHT earbud into the charging case.",
-      "10. Observe touchscreen display for RIGHT (charging) and LEFT (connected) status.",
-      "11. Remove RIGHT earbud and verify touchscreen returns to showing both connected."
+      "Precondition: Both earbuds connected, active phone call.",
+      "Insert the RIGHT earbud into the charging case.",
+      "Verify call audio continues through the LEFT earbud.",
+      "Verify the far-end caller can still hear the user clearly (microphone on LEFT earbud active).",
+      "Verify the call is not dropped or put on hold.",
+      "Remove the RIGHT earbud from the case.",
+      "Verify call audio returns to stereo on both earbuds.",
+      "End the call normally."
     ],
-    "expected": "The Voyager Free 60+ UC touchscreen case should correctly reflect the state: when LEFT earbud is inserted, the touchscreen should show LEFT as charging (with charging icon) and RIGHT as still connected. When removed, both should show as connected. The touchscreen should not show both earbuds as disconnected when only one is inserted."
+    "expected": "Expected: Call continues uninterrupted in mono through the remaining earbud. Microphone remains active. Call is not dropped. Actual (If Bug): Call drops, or call is put on hold, or microphone deactivates, or both earbuds disconnect."
   },
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-008: Call behavior during single earbud insertion",
+    "title": "TC-TWS-ASYM-008: App Force-Kill While One Earbud In Case \u2014 State Persistence On Relaunch",
     "steps": [
-      "1. Connect both Voyager Free 60+ UC earbuds to phone.",
-      "2. Open Poly Studio Mobile app \u2192 verify both connected.",
-      "3. Initiate a phone call (or receive an incoming call) and answer using the earbuds.",
-      "4. Verify audio is working in both earbuds during the call.",
-      "5. During the active call, insert the LEFT earbud into the charging case.",
-      "6. Observe call audio behavior in the RIGHT earbud.",
-      "7. Check if the call continues or drops.",
-      "8. Check Poly Studio Mobile app for connection status during the call.",
-      "9. Remove LEFT earbud from case during the call.",
-      "10. Verify LEFT earbud reconnects and audio returns to both earbuds.",
-      "11. End the call and verify normal audio playback resumes in both earbuds."
+      "Precondition: Both earbuds connected. Set EQ to Bass Boost. Set ANC level to 70.",
+      "Insert the LEFT earbud into the charging case.",
+      "Immediately (within 2 seconds) force-kill the Poly Studio Mobile app.",
+      "Relaunch the app.",
+      "Observe the Home screen earbud connection indicators.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 EQ. Verify Bass Boost is still selected.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 ANC. Verify ANC level is still 70.",
+      "Remove the LEFT earbud from the case. Verify both earbuds reconnect."
     ],
-    "expected": "During an active call, inserting one earbud into the case should not drop the call. The remaining earbud should continue to carry the call audio. The Poly Studio Mobile app should show the inserted earbud as disconnected and the other as connected. When removed, the earbud should reconnect and both should carry call audio. If the call drops or audio stops entirely, this confirms the bug."
+    "expected": "Expected: App relaunches showing LEFT disconnected, RIGHT connected. EQ (Bass Boost) and ANC (70) persist correctly. Actual (If Bug): App shows both disconnected, or settings reset to defaults after force-kill."
   },
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-009: Voyager Free 20 \u2014 App UI state and audio continuity during single earbud insertion",
+    "title": "TC-TWS-ASYM-009: Bluetooth Disconnect/Reconnect While One Earbud In Case",
     "steps": [
-      "1. Connect both Voyager Free 20 earbuds to phone.",
-      "2. Open Poly Studio Mobile app \u2192 verify both earbuds connected on Home screen.",
-      "3. Start playing audio (music track).",
-      "4. Verify audio in both earbuds.",
-      "5. Place RIGHT earbud into charging case.",
-      "6. Open Poly Studio Mobile app \u2192 observe Home screen connection indicators.",
-      "7. Tap [Device Name] \u2192 navigate to Device Settings screen.",
-      "8. Observe earbud status and battery indicators for both earbuds.",
-      "9. Check if audio continues through LEFT earbud.",
-      "10. Remove RIGHT earbud from case and wait for reconnection.",
-      "11. Verify app UI updates to show both connected and audio resumes in both."
+      "Precondition: Both earbuds connected. LEFT earbud inserted in case, RIGHT earbud in ear and streaming.",
+      "From phone Bluetooth settings, disconnect the device.",
+      "Wait 10 seconds.",
+      "Reconnect the device from phone Bluetooth settings.",
+      "Open Poly Studio Mobile app \u2192 Home screen.",
+      "Verify the RIGHT earbud reconnects.",
+      "Verify the LEFT earbud remains disconnected (still in case).",
+      "Remove the LEFT earbud from the case. Verify it connects independently."
     ],
-    "expected": "For Voyager Free 20, inserting the RIGHT earbud should disconnect only the RIGHT earbud. The LEFT earbud should remain connected and continue playing audio. The Poly Studio Mobile app should show RIGHT as disconnected/charging and LEFT as connected. On removal, RIGHT should auto-reconnect and app should update accordingly."
+    "expected": "Expected: After Bluetooth reconnect, only the RIGHT earbud (out of case) reconnects. LEFT earbud remains disconnected until removed from case. Actual (If Bug): Both earbuds reconnect even though LEFT is still in case, or LEFT fails to connect when later removed."
   },
   {
-    "title": "TC-TWS-SINGLE-EARBUD-INSERT-010: Rapid insertion/removal cycle of single earbud",
+    "title": "TC-TWS-ASYM-010: Phone Reboot With One Earbud In Case",
     "steps": [
-      "1. Connect both Voyager Free 60+ UC earbuds to phone.",
-      "2. Open Poly Studio Mobile app \u2192 verify both connected.",
-      "3. Play audio continuously.",
-      "4. Insert LEFT earbud into charging case and immediately remove it (within 1 second).",
-      "5. Observe connection behavior \u2014 does LEFT earbud reconnect quickly?",
-      "6. Check Poly Studio Mobile app for connection status.",
-      "7. Verify audio continuity in both earbuds.",
-      "8. Repeat rapid insertion/removal 5 times in succession.",
-      "9. After the 5th cycle, wait 5 seconds and verify both earbuds are connected.",
-      "10. Open Poly Studio Mobile app \u2192 verify both earbuds show as connected.",
-      "11. Play audio and verify audio in both earbuds."
+      "Precondition: Both earbuds connected. RIGHT earbud inserted in case, LEFT earbud in ear.",
+      "Reboot the phone.",
+      "After phone restarts, wait for automatic Bluetooth reconnection.",
+      "Open Poly Studio Mobile app \u2192 Home screen.",
+      "Verify the LEFT earbud (out of case) reconnects automatically.",
+      "Verify the RIGHT earbud (in case) shows as disconnected.",
+      "Remove the RIGHT earbud from the case. Verify it connects independently.",
+      "Verify stereo audio playback on both earbuds."
     ],
-    "expected": "Rapid insertion and removal of a single earbud should not cause the other earbud to disconnect. After each cycle, the earbud should reconnect. After multiple rapid cycles, both earbuds should remain connected and audio should play through both. The app should correctly reflect the connection state after each cycle. No crashes or UI freezes should occur."
+    "expected": "Expected: After phone reboot, only the LEFT earbud (out of case) auto-reconnects. RIGHT earbud remains disconnected until removed from case. Actual (If Bug): Both earbuds fail to reconnect, or RIGHT earbud attempts connection while in case (wasting battery), or LEFT fails to auto-reconnect."
   }
 ]
