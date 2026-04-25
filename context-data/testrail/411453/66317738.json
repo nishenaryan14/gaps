@@ -7,27 +7,33 @@
   "feature": "Device Management",
   "scenario": "Renamed device name is not reflected on the Support device card in the Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Home screen with a connected device that supports renaming.",
-    "2. Tap the device name at the top of the Home screen to edit it, then enter a new name and confirm.",
-    "3. Tap the Menu icon (hamburger menu) in the top-left corner.",
-    "4. Select Support from the menu.",
-    "5. Locate the device card under the Support section and observe the displayed device name."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure a supported Poly Bluetooth audio device (e.g., Poly Voyager Focus 2) is connected.",
+    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
+    "4. Tap on the device name field and rename it to a new name (e.g., \"My Poly Headset\").",
+    "5. Confirm the rename.",
+    "6. Navigate back to the Home screen.",
+    "7. Tap the Menu icon (three lines) in the top-left corner.",
+    "8. Select Support from the menu.",
+    "9. On the Support screen, locate the device card for the renamed device.",
+    "10. Tap on the device name displayed on the card.",
+    "11. Observe the device name shown."
   ],
-  "expected": "The device card in the Support section displays the new (renamed) device name.",
+  "expected": "The device name displayed on the Support device card should reflect the new name that was set in Device Settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile-app",
-    "device-renaming",
+    "poly-studio-mobile",
+    "device-rename",
     "support-device-card",
     "device-name-persistence",
-    "home-screen",
-    "hamburger-menu",
-    "device-name-sync"
+    "android-app",
+    "poly-voyager-focus-2",
+    "device-settings"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "a1551c3d0eede8e35c3d71157d3a977b9cd6e61a733394ea841dabe2b7e39ed2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.883385Z",
+  "processed_at": "2026-04-25T08:21:30.976002Z",
   "status": "active"
 }
