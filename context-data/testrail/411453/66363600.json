@@ -16,7 +16,7 @@
     "7. Unplug the charger from the charge case.",
     "8. Observe the battery icon for the charge case on the Home screen."
   ],
-  "expected": "1. When the charge case is opened with both earbuds inside and no charger connected, the battery icon shows no charging sign.\\n2. When a charger is plugged into the charge case, the battery icon displays a charging sign.\\n3. When the charger is unplugged, the charging sign disappears.",
+  "expected": "1. When the charge case is opened with both earbuds inside and no charger connected, the battery icon should show no charging sign. 2. When a charger is plugged into the charge case, the battery icon should display a charging sign. 3. When the charger is unplugged, the charging sign should disappear.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -31,6 +31,6 @@
   "source_last_updated": "1773155558",
   "source_hash": "564406552c5478e464ec2bd6eea2e94ca299c5c3cadaa13b123266935d04ef69",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.743590Z",
+  "processed_at": "2026-04-25T07:55:31.804348Z",
   "status": "active"
 }
