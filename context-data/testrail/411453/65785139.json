@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "EQ - Changed custom EQ, not saved, reset device, changes are not preset [TO BE VERIFIED]",
   "feature": "Equalizer",
-  "scenario": "Unsaved custom EQ changes persist after device reset instead of reverting to the last saved preset",
+  "scenario": "Unsaved custom EQ changes persist after device reset instead of reverting to saved preset values",
   "steps": [
-    "Open Poly Studio Mobile app on the Android device.",
-    "Navigate to Home screen and tap on the connected Poly device name.",
-    "Go to Audio Settings \u2192 Equalizer.",
-    "Select a custom EQ preset and modify some frequency band sliders (e.g., increase bass or treble).",
-    "Do NOT tap 'Save' or confirm the changes.",
-    "Press the Power button on the Poly device to turn it off.",
-    "Wait a few seconds, then press the Power button again to turn the device back on.",
-    "Re-open Poly Studio Mobile app and navigate to Audio Settings \u2192 Equalizer."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the connected device name to open Device Settings.",
+    "Navigate to Audio Settings \u2192 Equalizer.",
+    "Select a custom EQ preset and modify some frequency bands (do not tap Save).",
+    "Press and hold the Power button on the device to reset it.",
+    "Wait for the device to power back on and reconnect to the app.",
+    "Return to Poly Studio Mobile \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer."
   ],
-  "expected": "After device restart, the EQ values should return to the previously saved preset (the custom unsaved changes should be discarded).",
+  "expected": "The unsaved EQ changes should be discarded, and the previously saved preset values should be restored.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "equalizer",
     "custom-eq-preset",
-    "frequency-band-sliders",
-    "device-reset",
     "eq-persistence",
+    "device-reset",
+    "poly-studio-mobile",
     "audio-settings",
-    "unsaved-changes"
+    "eq-revert",
+    "frequency-bands"
   ],
   "source_last_updated": "1761213229",
   "source_hash": "dd7562a612e0be67d287216ddba78b03f960c0aee464b02fa5c4823f67ebbab8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.934844Z",
+  "processed_at": "2026-04-25T08:21:31.005523Z",
   "status": "active"
 }
