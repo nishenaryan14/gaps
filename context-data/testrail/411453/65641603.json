@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "CCL - Close/reopen the app",
   "feature": "App Settings",
-  "scenario": "CCL (Call Control Level) setting does not persist after closing and reopening the Poly Studio Mobile app",
+  "scenario": "CCL (Call/Chat Control Level) setting does not persist after closing and reopening the Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app with a connected device that supports Call Control Level (CCL).",
-    "2. Navigate to the Home screen and tap on the connected [Device Name].",
-    "3. Go to Device Settings \u2192 Advanced.",
-    "4. Locate the Call Control Level (CCL) setting and select a value (e.g., High, Medium, Low, or Off).",
-    "5. Fully close the Poly Studio Mobile app (swipe it away from the recent apps list).",
-    "6. Reopen the Poly Studio Mobile app.",
-    "7. Navigate back to Device Settings \u2192 Advanced for the same device."
+    "Open the Poly Studio Mobile app on your Android device.",
+    "Ensure a Bluetooth audio device that supports Call/Chat Control Level (CCL) is connected.",
+    "From the Home screen, tap on the connected [Device Name] to enter Device Settings.",
+    "Navigate to Device Settings \u2192 Advanced.",
+    "Select a CCL value (e.g., Low, Medium, or High).",
+    "Close the Poly Studio Mobile app completely (swipe it away from the recent apps list).",
+    "Reopen the Poly Studio Mobile app.",
+    "Return to Device Settings \u2192 Advanced for the same connected device."
   ],
-  "expected": "The previously selected CCL setting value is still displayed and selected in the Advanced settings.",
+  "expected": "The previously selected CCL setting (e.g., Low, Medium, or High) is still displayed and selected in the Advanced settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "call-control-level",
     "ccl",
+    "call-chat-control-level",
     "poly-studio-mobile",
     "setting-persistence",
     "device-settings",
     "advanced-settings",
-    "app-close-reopen"
+    "android"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "6d9d51d42fb2e470871be973f011e8de4c813e8149a1c76e62a4680b702a4882",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.936953Z",
+  "processed_at": "2026-04-25T08:21:31.009092Z",
   "status": "active"
 }
