@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Device Home screen - Software version",
   "feature": "Device Management",
-  "scenario": "Verify software version format on Device Home screen in Poly Studio Mobile app for Morpheus (X.Y) and Neo/Chronos (setid) devices",
+  "scenario": "Software version is displayed in correct format (X.Y for Morpheus, setid for Neo/Chronos) on Device Home screen in Poly Studio Mobile app",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
     "2. Navigate to the Home screen.",
-    "3. Locate the connected device name and its software version displayed on the Home screen.",
-    "4. If the connected device is a Morpheus device (e.g., Voyager Focus UC), verify the version is displayed in X.Y format, where X is the firmware version and Y is the language version.",
-    "5. If the connected device is a Neo or Chronos device (e.g., Voyager 5200 Series), verify the version is displayed in setid format (e.g., 0.0.285.1601)."
+    "3. Locate the connected device card or tile for the Poly Bluetooth audio device.",
+    "4. Observe the software/firmware version displayed on the Device Home screen.",
+    "5. If the device is a Morpheus device (e.g., Voyager Focus UC), verify the version is shown in X.Y format where X is the firmware version and Y is the language version.",
+    "6. If the device is a Neo or Chronos device (e.g., Voyager 5200 Series), verify the version is shown in setid format (e.g., 0.0.285.1601)."
   ],
-  "expected": "The software version is correctly displayed on the Device Home screen in the Poly Studio Mobile app. For Morpheus devices, the version appears in X.Y format (firmware.language). For Neo and Chronos devices, the version appears in setid format (e.g., 0.0.285.1601).",
+  "expected": "The software version is displayed correctly on the Device Home screen according to the device type: Morpheus devices show version in X.Y format (firmware.language), and Neo/Chronos devices show version in setid format (e.g., 0.0.285.1601).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "software-version-format",
+    "software-version",
+    "firmware-version",
     "device-home-screen",
     "morpheus",
     "neo-chronos",
     "setid-format",
-    "firmware-version",
     "voyager-focus-uc"
   ],
   "source_last_updated": "1776242260",
   "source_hash": "55045719ca7d3fc52f68c06f022e69de6fcff1c6bd65bed7a85d796b4e335a5c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.744595Z",
+  "processed_at": "2026-04-25T07:55:31.805856Z",
   "status": "active"
 }
