@@ -5,31 +5,33 @@
   "project": "411453",
   "title": "Soak Test - Headset disconnected, app in the background, phone idle",
   "feature": "App Settings",
-  "scenario": "App remains responsive and does not crash after prolonged idle with headset disconnected on Home Screen",
+  "scenario": "App remains stable and responsive after prolonged idle with headset disconnected on Poly Studio Mobile",
   "steps": [
     "1. Install and launch the Poly Studio Mobile app.",
     "2. Pair a Poly Bluetooth headset with the app.",
-    "3. Turn off the headset.",
-    "4. Navigate to the Home screen (the headset should be shown as disconnected).",
-    "5. Put the app in the background and leave the phone idle for several hours.",
-    "6. After several hours, bring the app back to the foreground and check if it is still running and responsive."
+    "3. Turn off the paired headset.",
+    "4. Verify the app Home screen shows the headset as \"Disconnected\".",
+    "5. Put the app in the background (e.g., press the Home button or switch to another app).",
+    "6. Leave the phone idle for several hours.",
+    "7. After several hours, bring the Poly Studio Mobile app back to the foreground.",
+    "8. Check that the app is still running and responsive (e.g., UI responds to taps, no crash or freeze)."
   ],
-  "expected": "The app remains running and responsive after several hours in the background. No memory leaks or crashes occur.",
+  "expected": "The Poly Studio Mobile app remains stable and responsive after prolonged idle time in the background. No memory leaks, crashes, or freezes occur.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "home-screen",
+    "idle-stability",
     "disconnected-state",
+    "background-persistence",
     "app-responsiveness",
-    "idle-behavior",
-    "background-foreground",
-    "bluetooth-pairing",
-    "crash-recovery"
+    "bluetooth-disconnect",
+    "prolonged-idle",
+    "foreground-recovery"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "f6e4db42218142e4c0f485ff7b34367f8035ef26544468a6893770b305f89e15",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.975727Z",
+  "processed_at": "2026-04-25T07:55:32.001762Z",
   "status": "active"
 }
