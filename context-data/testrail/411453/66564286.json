@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "Device Settings - Headset connected on Settings screen",
   "feature": "Device Management",
-  "scenario": "Device Settings page correctly updates available options when headset connects and disconnects",
-  "steps": [],
-  "expected": "",
+  "scenario": "Device Settings page does not update available options when headset connects or disconnects",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Ensure a Poly Bluetooth headset (e.g., Poly Voyager 5200) is paired and connected to the Android device.",
+    "3. Navigate to the Home screen and tap on the connected device name to open the Device Settings page.",
+    "4. Observe the options displayed on the Device Settings page while the headset is connected.",
+    "5. Turn off the Poly headset (e.g., press and hold the Power button until the LED turns off).",
+    "6. Return to the Poly Studio Mobile app and observe the Device Settings page for the disconnected device.",
+    "7. Turn on the Poly headset (e.g., press and hold the Power button until the LED turns on).",
+    "8. Wait for the headset to reconnect to the Android device.",
+    "9. Return to the Poly Studio Mobile app and observe the Device Settings page for the reconnected device."
+  ],
+  "expected": "When the headset is turned off, the Device Settings page should show only options available for a disconnected device (e.g., Remove Device, Forget Device, or limited settings). When the headset is turned on and reconnected, the Device Settings page should update to show all available options for that device (e.g., Audio Settings, ANC, Transparency Mode, Equalizer, Notifications), except the Remove Device option should not be displayed while connected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "device-settings-page",
-    "headset-connection",
-    "headset-disconnection",
-    "ui-update",
-    "settings-availability",
+    "poly-voyager-5200",
     "bluetooth-connection-state",
-    "poly-headset"
+    "ui-refresh",
+    "headset-connect-disconnect",
+    "settings-options-update"
   ],
   "source_last_updated": "1762434098",
   "source_hash": "d08a24481a70fe489274350712c022bb71594b8d75e46f6e96a835343a3f5020",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.882314Z",
+  "processed_at": "2026-04-25T08:21:30.973497Z",
   "status": "active"
 }
