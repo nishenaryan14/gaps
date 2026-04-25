@@ -12,12 +12,12 @@
     "2. Connect to a Poly Bluetooth audio device.",
     "3. Make or receive an active call using the connected device.",
     "4. While on the active call, navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "5. Tap on 'Software' in the Device Settings menu.",
+    "5. Tap on 'Software' under Device Settings.",
     "6. Observe that the Software Update screen is displayed.",
     "7. Tap the 'Update' button to trigger DFU (firmware update)."
   ],
   "expected": "A popup message should be displayed informing the user that DFU (firmware update) is not available during an active call, and the update should be blocked.",
-  "actual": "No popup is shown. The user is taken to the Software Update screen and allowed to trigger DFU while still on the active call.",
+  "actual": "The user is taken to the Software Update screen and allowed to trigger DFU without any warning or block, even while on an active call.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -25,7 +25,7 @@
   ],
   "keywords": [
     "dfu-firmware-update",
-    "active-call-blocking",
+    "active-call-block",
     "device-settings-software",
     "poly-studio-mobile",
     "firmware-update-during-call",
@@ -35,6 +35,6 @@
   "source_last_updated": "2026-04-16T08:14:02.000+0000",
   "source_hash": "614f60f952732d5fc152a61bfe2ab0d4bdc59bd2ef3b8130c66382cfecbf1738",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.686848Z",
+  "processed_at": "2026-04-25T07:55:31.767301Z",
   "status": "active"
 }
