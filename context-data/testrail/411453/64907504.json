@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Support - App, user is logged out, correct data",
   "feature": "App Settings",
-  "scenario": "App Settings Support card shows tenant info when logged in and displays None for tenant name/ID and user ID after logout, with App ID unchanged and last connection as unknown",
+  "scenario": "Support > App card in App Settings shows tenant info when logged in, and displays None for tenant name/ID/user ID, unchanged App ID, and unknown last connection after logout",
   "steps": [
     "Open Poly Studio Mobile app",
     "Go to App Settings",
@@ -13,7 +13,7 @@
     "Tap on App card",
     "Note the displayed data: Tenant Name, Tenant ID, User ID, App ID, Last Connection",
     "Log out of the current tenant account",
-    "Go back to Support > App card in App Settings",
+    "Go back to App Settings \u2192 Support \u2192 App card",
     "Observe the displayed data after logout"
   ],
   "expected": "After logout: Tenant Name, Tenant ID, and User ID show as None. App ID remains unchanged (same as before logout). Last Connection shows as Unknown.",
@@ -22,16 +22,16 @@
   "keywords": [
     "poly-studio-mobile",
     "app-settings",
-    "support-card",
+    "support",
+    "app-card",
     "tenant-info",
-    "logout-behavior",
-    "app-id-persistence",
+    "logout",
     "user-id",
     "last-connection"
   ],
   "source_last_updated": "1759751986",
   "source_hash": "0fcf2b1e37228aaed39297e49b64db9cda5b8785250daee519df832dc1c6e240",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.953179Z",
+  "processed_at": "2026-04-25T09:32:26.187485Z",
   "status": "active"
 }
