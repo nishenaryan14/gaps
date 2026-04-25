@@ -7,14 +7,14 @@
   "feature": "App Settings",
   "scenario": "Account tab under General settings does not display delete icon below Log out button as per Figma design",
   "steps": [
-    "Open the Poly Studio Mobile app.",
+    "Open the Poly Studio Mobile app on the Android device.",
     "Navigate to the Home screen.",
-    "Tap on the Account tab.",
-    "Observe the General settings section.",
-    "Locate the Log out button.",
-    "Check below the Log out button for a delete icon."
+    "Tap on the General settings menu (gear icon).",
+    "Select the Account tab from the General settings list.",
+    "Scroll down to locate the Log out button.",
+    "Observe the area directly below the Log out button."
   ],
-  "expected": "A delete icon is displayed below the Log out button in the Account tab under General settings, matching the Figma design.",
+  "expected": "A delete icon is displayed below the Log out button, matching the Figma design specifications.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,11 +24,12 @@
     "log-out-button",
     "delete-icon",
     "figma-design",
+    "android-app",
     "ui-mismatch"
   ],
   "source_last_updated": "1759416328",
   "source_hash": "a4c1a518b125136c4439bd2194abbadfbd6cf60a27ca4edbe2dabdbe588a060b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.751645Z",
+  "processed_at": "2026-04-25T07:55:31.813377Z",
   "status": "active"
 }
