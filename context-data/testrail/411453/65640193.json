@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Soak Test - No Headset connected, app in the foreground, phone idle",
   "feature": "App Settings",
-  "scenario": "Poly Studio Mobile app remains stable and responsive after prolonged idle soak test with no headset connected",
+  "scenario": "App remains responsive and does not crash after prolonged idle on Home Screen with no headset connected",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. Ensure no Poly Bluetooth headset is connected to the phone.",
-    "3. Leave the app in the foreground (Home screen) with the phone idle for multiple hours (e.g., overnight).",
-    "4. After the idle period, wake the phone and observe the Poly Studio Mobile app."
+    "1. Install and launch the Poly Studio Mobile Android app.",
+    "2. On the Home screen, ensure no headset is connected.",
+    "3. Leave the phone idle with the app in the foreground for multiple hours (e.g., overnight).",
+    "4. After several hours, check that the app is still running and responsive."
   ],
-  "expected": "The Poly Studio Mobile app remains stable and responsive. No app crash, freeze, or out-of-memory error occurs. The Home screen is displayed correctly and responds to user input.",
+  "expected": "The app remains running and responsive after prolonged idle use. No memory leaks, crashes, or unresponsiveness occur.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "idle-soak-test",
+    "home-screen",
     "app-stability",
+    "idle-state",
     "no-headset-connected",
-    "android",
     "app-responsiveness",
-    "foreground-idle"
+    "android"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "6b72793655e75c4fd405ea079a64b6b475c55bacdcbef9f8078607e324e087a7",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.975727Z",
+  "processed_at": "2026-04-25T07:55:31.999244Z",
   "status": "active"
 }
