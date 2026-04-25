@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Support - Help Guide",
   "feature": "App Settings",
-  "scenario": "Help Guide redirects to Poly Lens Mobile online help page from Support screen in App Settings",
+  "scenario": "Help Guide opens from Support section in App Settings and Cancel returns to Support screen",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Tap App Settings (gear icon).",
+    "1. Open the Poly Studio Mobile app on the Home screen.",
+    "2. Tap App Settings (upper-left gear icon).",
     "3. Tap Support.",
     "4. Tap Help Guide.",
-    "5. Tap Cancel (X) to exit the help page."
+    "5. Tap Cancel (X) on the help screen."
   ],
-  "expected": "User is redirected to the Poly Lens Mobile online help page. Tapping Cancel (X) returns the user to the Support screen.",
+  "expected": "Step 4: User is redirected to the Poly Lens Mobile online help page. Step 5: Tapping Cancel (X) dismisses the help screen and returns the user to the Support screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "app-settings",
-    "support-screen",
+    "support-section",
     "help-guide",
-    "poly-lens-mobile",
-    "online-help",
-    "in-app-navigation"
+    "cancel-button",
+    "navigation",
+    "ui-flow"
   ],
   "source_last_updated": "1759762840",
   "source_hash": "7aba750a112378938e57a52c77b30939bec342c928b3b22eb7b31a3600ba2717",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.950988Z",
+  "processed_at": "2026-04-25T09:32:26.190529Z",
   "status": "active"
 }
