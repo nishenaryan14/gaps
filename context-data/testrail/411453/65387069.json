@@ -5,31 +5,23 @@
   "project": "411453",
   "title": "Feedback - back button",
   "feature": "App Settings",
-  "scenario": "Back button in Feedback section of App Settings does not return user to Menu screen",
-  "steps": [
-    "1. Open the Poly Studio Mobile app on the Home screen.",
-    "2. Tap the Menu icon (hamburger menu) or navigate to App Settings.",
-    "3. Tap on the Feedback tab/section.",
-    "4. Press the Back button (either the system back button or the in-app back arrow).",
-    "5. (Alternative scenario) Enter feedback text, name, and email in the respective fields.",
-    "6. Tap the Send button to submit the feedback.",
-    "7. Press the Back button (either the system back button or the in-app back arrow)."
-  ],
-  "expected": "In both scenarios, pressing the Back button returns the user to the Menu screen.",
+  "scenario": "Back button in App Settings > Feedback section does not return to Menu screen after entering feedback or viewing the tab",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "app-settings",
     "feedback-section",
     "back-button",
-    "navigation",
     "menu-screen",
-    "ui-bug"
+    "navigation-issue",
+    "ui-bug",
+    "poly-app"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "a1ac5ae4a401b17bbe37407c41ca5d928c199b4f442d0474bb5e3cacdbb3ac5c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.965800Z",
+  "processed_at": "2026-04-25T09:32:26.200836Z",
   "status": "active"
 }
