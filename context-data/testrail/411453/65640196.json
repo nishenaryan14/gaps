@@ -4,29 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Soak Test  - Headset connected, app in the background, phone idle",
-  "feature": "Soak Test - Headset Connectivity",
-  "scenario": "Soak test to verify app remains running and responsive after several hours idle with headset connected and app in background",
+  "feature": "App Settings",
+  "scenario": "App remains stable and headset stays connected after prolonged idle soak test with app in background",
   "steps": [
-    "Install and launch the app, pair the headset, then navigate to the Home Screen.",
-    "Put the app in the background and leave the phone idle for multiple hours (ideally overnight).",
-    "After several hours, check that the app is still running and responsive."
+    "1. Install and launch the Poly Studio Mobile app.",
+    "2. Pair a Poly Bluetooth headset with the app.",
+    "3. Navigate to the Home screen.",
+    "4. Put the app in the background (e.g., press the Home button or switch to another app).",
+    "5. Leave the phone idle for multiple hours (e.g., overnight)."
   ],
-  "expected": "App remains running and responsive after prolonged idle period with headset connected and app in background. No memory leaks or crashes.",
+  "expected": "App remains stable and responsive. The headset stays connected throughout the idle period. No memory leaks or crashes occur.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "soak test",
-    "idle test",
-    "background app",
-    "headset connected",
-    "app responsiveness",
-    "long duration stability",
-    "overnight test",
-    "app lifecycle"
+    "poly-studio-mobile",
+    "background-idle",
+    "connection-persistence",
+    "bluetooth-pairing",
+    "home-screen",
+    "app-stability",
+    "idle-soak-test"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "26e9e61f5e7afa714f2045b045c2bf99e6945bb8293e9c9554a0fe783f554428",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.341267Z",
+  "processed_at": "2026-04-25T05:37:16.975727Z",
   "status": "active"
 }
