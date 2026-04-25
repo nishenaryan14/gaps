@@ -5,31 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - Release Notes button opens modal with Release Notes",
   "feature": "Firmware Updates",
-  "scenario": "Release Notes modal displays and dismisses correctly when tapping OK on Device Home screen with connected headset not on latest firmware",
+  "scenario": "Release Notes modal displays and dismisses correctly when tapping OK on Device Home screen",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Ensure a Poly Bluetooth headset is connected and not on the latest firmware.",
-    "3. Navigate to the Home screen.",
-    "4. Tap the \"Release Notes\" button.",
-    "5. Observe the modal that appears displaying the release notes for the connected device.",
-    "6. Tap the \"OK\" button on the modal."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to the Home screen.",
+    "3. Tap the Release Notes button.",
+    "4. Observe the modal that appears displaying release notes for the connected device.",
+    "5. Tap the \"OK\" button in the modal."
   ],
   "expected": "The modal closes and the user is returned to the Device Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "release-notes-modal",
-    "poly-studio-mobile",
-    "home-screen",
-    "firmware-update",
-    "ok-button",
-    "bluetooth-headset",
+    "release-notes",
     "modal-dismiss",
-    "device-home"
+    "poly-studio-mobile",
+    "device-home-screen",
+    "ok-button",
+    "modal-display",
+    "connected-device"
   ],
   "source_last_updated": "1759234031",
   "source_hash": "3d8288578bb4f71d18dddf4f2f6302d4a28e978bf38784ae35aeb0bed501d098",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.804348Z",
+  "processed_at": "2026-04-25T08:21:30.917421Z",
   "status": "active"
 }
