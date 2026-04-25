@@ -7,29 +7,29 @@
   "feature": "App Settings",
   "scenario": "Onboarding screens do not render correctly in dark mode when phone is set to dark mode",
   "steps": [
-    "1. Set the phone's system theme to Dark Mode (Settings \u2192 Display \u2192 Dark theme).",
+    "1. Set the phone's system theme to Dark Mode (Settings \u2192 Display \u2192 Dark Mode).",
     "2. Launch the Poly Studio Mobile app.",
-    "3. If not a fresh install, clear app data or reinstall the app to trigger the onboarding flow.",
-    "4. Observe each onboarding screen as it appears (e.g., Welcome, Permissions, Device Pairing prompts).",
-    "5. For each screen, verify that all UI elements (text, buttons, illustrations, logos) are rendered correctly.",
-    "6. Compare the displayed colors, images, and layout against the Figma design specification for dark mode."
+    "3. If not already on the onboarding flow, log out or clear app data to trigger the onboarding screens.",
+    "4. Observe each onboarding screen as they appear (Welcome, Permissions, Device Pairing, etc.).",
+    "5. For each screen, verify that all UI elements (text, buttons, icons, illustrations) are rendered correctly.",
+    "6. Check that background colors, text colors, and accent colors match the Figma dark mode specification.",
+    "7. Verify that all images and illustrations have proper contrast and are not washed out or distorted in dark mode."
   ],
-  "expected": "All onboarding screens display correctly in dark mode. All elements, images, and colors match the Figma design specification.",
+  "expected": "All onboarding screens display correctly in dark mode. All elements, images, and colors match the Figma specification with proper contrast and legibility.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "dark-mode",
-    "onboarding-flow",
+    "onboarding-screens",
+    "poly-studio-mobile",
     "ui-rendering",
     "theme-compatibility",
-    "figma-design-spec",
-    "welcome-screen",
-    "permissions-screen"
+    "figma-specification",
+    "display-contrast"
   ],
   "source_last_updated": "1760524200",
   "source_hash": "3f990d6859d6895c8d07cf35199c2be6909c4f145f04e9d57b460261b208b152",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.899647Z",
+  "processed_at": "2026-04-25T09:32:26.114932Z",
   "status": "active"
 }
