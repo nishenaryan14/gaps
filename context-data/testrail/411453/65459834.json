@@ -5,17 +5,19 @@
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, dialog",
   "feature": "Notifications",
-  "scenario": "Notifications toggle in App Settings shows OS redirect dialog when re-enabled after being denied during onboarding",
+  "scenario": "Notifications toggle in App Settings shows OS redirect dialog when re-enabled after selecting \"Don't Allow\" during onboarding",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. During onboarding, when prompted for Notifications permission, select \"Don't Allow\".",
+    "1. Launch the Poly Studio Mobile app and begin the onboarding flow.",
+    "2. When prompted for Notifications permission, select \"Don't Allow\".",
     "3. Complete the onboarding process.",
     "4. Navigate to the Home screen.",
-    "5. Tap the menu icon (hamburger) or profile icon to access App Settings.",
-    "6. Go to App Settings > General > Notifications.",
-    "7. Tap the toggle to turn Notifications ON."
+    "5. Tap the menu icon (hamburger) or Account icon to open the side menu.",
+    "6. Tap on App Settings (or Settings).",
+    "7. Tap on General.",
+    "8. Tap on Notifications.",
+    "9. Attempt to toggle the Notifications switch to ON."
   ],
-  "expected": "The Notifications toggle should turn ON, or the app should gracefully handle the permission state without showing a confusing dialog.",
+  "expected": "The Notifications toggle should turn ON, or the app should gracefully guide the user to enable notifications in OS settings without an error dialog.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,13 +26,13 @@
     "app-settings",
     "onboarding",
     "os-redirect-dialog",
-    "permission-denied",
-    "toggle-behavior",
-    "general-settings"
+    "permission-toggle",
+    "general-settings",
+    "notification-prompt"
   ],
   "source_last_updated": "1761229604",
   "source_hash": "cbfecf81e93ce8c88b9d4202366a2076e02ce2597272f3d40c90f7109a0e698a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.945328Z",
+  "processed_at": "2026-04-25T07:55:31.974251Z",
   "status": "active"
 }
