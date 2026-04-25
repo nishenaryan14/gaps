@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Policy: Policy applied - Restart Headset - Settings stay locked",
   "feature": "App Settings",
-  "scenario": "Policy-locked settings remain locked after headset power cycle on Poly Bluetooth audio device",
+  "scenario": "Policy-affected settings remain locked after headset power cycle when policy is applied via Poly Studio Mobile app",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
     "2. Navigate to the Home screen and select the connected Poly headset.",
     "3. Go to Device Settings and apply a policy that locks specific settings (e.g., ANC, Transparency Mode, Equalizer).",
-    "4. Confirm the policy is applied and the affected settings appear locked/disabled in the app UI.",
+    "4. Confirm the policy is applied and the affected settings appear locked/grayed out in the app.",
     "5. Press and hold the Power button on the headset to turn it off.",
     "6. Wait a few seconds, then press and hold the Power button again to turn the headset back on.",
-    "7. Reconnect the headset to the Poly Studio Mobile app (if not auto-connected).",
-    "8. Navigate to Device Settings \u2192 Audio Settings and check the settings that were locked by the policy."
+    "7. Reconnect the headset to the Android device via Bluetooth if not automatically reconnected.",
+    "8. Open the Poly Studio Mobile app and navigate to the previously locked settings (e.g., Audio Settings \u2192 ANC, Transparency Mode, Equalizer)."
   ],
-  "expected": "The policy-locked settings remain locked/disabled in the app after the headset is turned off and on again.",
+  "expected": "Settings affected by the policy remain locked/grayed out in the app after the headset is turned off and on again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "policy-locked-settings",
+    "policy-lock",
     "power-cycle",
     "poly-studio-mobile",
     "anc",
     "transparency-mode",
     "equalizer",
-    "device-settings",
-    "bluetooth-headset"
+    "settings-persistence",
+    "bluetooth-reconnection"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "87b89c33be0d2faa33bf1481741b1b42af608c874ed14fb33d2dce1a03238f8a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.050280Z",
+  "processed_at": "2026-04-25T09:32:26.317899Z",
   "status": "active"
 }
