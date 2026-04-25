@@ -5,29 +5,32 @@
   "project": "411453",
   "title": "Flamingo - Software update for headset and charge case",
   "feature": "Firmware Updates",
-  "scenario": "DFU update for both headset and charge case can be initiated via \"Update All\" button from device home screen",
+  "scenario": "DFU update for both headset and charge case can be initiated from device home screen via Update All button in Device Settings",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. On the Home screen, locate the device card for the connected Poly headset and charge case.",
-    "3. Tap the 'Update All' button displayed on the Home screen.",
-    "4. Wait for the software update (DFU) process to complete for both the headset and the charge case.",
-    "5. After the update finishes, verify the firmware version displayed for the headset and charge case on the Home screen or Device Settings screen."
+    "1. Launch Poly Studio Mobile app and navigate to the Home screen.",
+    "2. Locate and tap the Software Update button on the Home screen.",
+    "3. Observe that the app opens Device Settings with the Software Update tab expanded.",
+    "4. Verify that an 'Update All' button is displayed at the top of the Software Update section.",
+    "5. Verify that separate update buttons are shown for the headset and the charge case.",
+    "6. Tap the 'Update All' button.",
+    "7. Wait for the single-step DFU process to complete for both the headset and charge case."
   ],
-  "expected": "Both the headset and charge case successfully complete the DFU process and are updated to the latest firmware version.",
+  "expected": "The Software Update button on the Home screen opens Device Settings with the Software Update tab expanded. An 'Update All' button is shown at the top, and separate update buttons are displayed for the headset and charge case. Tapping 'Update All' completes a single-step DFU process for both devices, leaving them on the latest firmware.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-update",
     "update-all",
-    "firmware-update",
+    "device-settings",
+    "software-update",
     "poly-studio-mobile",
-    "device-home-screen",
-    "headset-charge-case",
-    "firmware-version"
+    "headset-firmware",
+    "charge-case-firmware",
+    "home-screen"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "9416c393113a2ed295f15180583516af3606f9585ba6479fb9408cea4e4fe16c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.976724Z",
+  "processed_at": "2026-04-25T07:55:32.002770Z",
   "status": "active"
 }
