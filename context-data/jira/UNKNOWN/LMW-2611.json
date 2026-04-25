@@ -10,10 +10,10 @@
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
-    "Tap on the [Device Name] to access Device Settings",
-    "Select User Guides from the menu"
+    "Tap on the menu or settings icon to access User Guides",
+    "Observe the list of devices shown on the User Guides screen"
   ],
-  "expected": "The User Guides screen should only display relevant user guides for the connected device. The \"Falcon Charge Stand\" should NOT appear as a sub-device on this screen.",
+  "expected": "The \"Falcon Charge Stand\" should NOT appear as a sub-device on the User Guides screen.",
   "actual": "The \"Falcon Charge Stand\" is incorrectly displayed as a sub-device on the User Guides screen.",
   "priority": "P1: High",
   "severity": "",
@@ -23,14 +23,13 @@
     "poly-studio-mobile",
     "user-guides-screen",
     "sub-device",
-    "device-settings",
+    "device-listing",
     "home-screen",
-    "app-ui-bug",
-    "device-listing"
+    "settings-menu"
   ],
   "source_last_updated": "2026-04-23T13:05:07.000+0000",
   "source_hash": "3378544f9691cab9bd0547d0522de663be5e17be00fb7f8a7e5512b0d401c827",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:30.982568Z",
+  "processed_at": "2026-04-25T08:21:30.149171Z",
   "status": "active"
 }
