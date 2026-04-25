@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Swipe right, next screen",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide onboarding screens do not match Figma design when swiping through earbuds and charge case views",
+  "scenario": "Quick Start Guide screen navigation: swiping right from right side cycles through onboarding screens showing earbuds, charge case outside, and charge case inside",
   "steps": [
-    "Open the Poly Studio Mobile app for the first time (or after clearing app data) to reach the Quick Start Guide (QSG) onboarding flow.",
-    "On the first QSG screen, swipe right from the right edge of the screen.",
-    "Observe the second QSG screen showing two earbuds.",
-    "Swipe right again from the right edge of the screen.",
-    "Observe the third QSG screen showing the charge case (outside view).",
-    "Swipe right again from the right edge of the screen.",
-    "Observe the fourth QSG screen showing the charge case (inside view)."
+    "Open the Poly Studio Mobile app",
+    "If this is a fresh install or first launch, the Quick Start Guide (QSG) onboarding flow should appear",
+    "On the first QSG screen, swipe right from the right edge of the screen",
+    "Observe the next onboarding screen showing two earbuds",
+    "Swipe right again from the right edge of the screen",
+    "Observe the next onboarding screen showing the charge case (outside view)",
+    "Swipe right again from the right edge of the screen",
+    "Observe the next onboarding screen showing the charge case (inside view)"
   ],
-  "expected": "All QSG screens (two earbuds, charge case outside, charge case inside) match the Figma design in layout, imagery, and text.",
+  "expected": "Each QSG screen displays the correct illustration (two earbuds, charge case outside, charge case inside) matching the Figma design. Swiping right from the right side of the screen smoothly transitions to the next onboarding screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "quick-start-guide",
     "onboarding-flow",
     "poly-studio-mobile",
-    "earbuds-view",
-    "charge-case-view",
-    "figma-design-mismatch",
-    "ui-screens",
-    "swipe-navigation"
+    "swipe-navigation",
+    "earbuds-screen",
+    "charge-case-outside",
+    "charge-case-inside"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "22341cdda76b21748508c112ec6394807128808564f7a34ddb4850155f482aa4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.939470Z",
+  "processed_at": "2026-04-25T08:21:31.010610Z",
   "status": "active"
 }
