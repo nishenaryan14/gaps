@@ -5,32 +5,29 @@
   "project": "411453",
   "title": "Fit test - Onboarding flow - Fit Test is present",
   "feature": "Device Management",
-  "scenario": "Fit Test screen displays Skip/Test options in Onboarding flow under Device Settings, matching Figma design",
+  "scenario": "Fit Test screen appears in Onboarding flow under Device Settings with Skip/Test options matching Figma design",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Go to Home screen",
-    "Tap Device Settings",
-    "Navigate through the Onboarding flow",
-    "Proceed past the Pairing 2 screen",
-    "Observe the Fit Test screen",
-    "Check the bottom of the screen for Skip and Test options"
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Complete the initial onboarding flow up to the Pairing 2 screen.",
+    "3. After the Pairing 2 screen, observe the Fit Test screen.",
+    "4. On the Fit Test screen, verify the bottom of the screen displays two options: Skip and Test.",
+    "5. Compare the layout and appearance of the Fit Test screen (including the Skip/Test buttons) against the Figma design reference."
   ],
-  "expected": "The Fit Test screen appears after the Pairing 2 screen in the Onboarding flow under Device Settings. The screen displays Skip and Test options at the bottom, matching the Figma design.",
+  "expected": "The Fit Test screen appears after the Pairing 2 screen in the onboarding flow under Device Settings. The screen displays Skip and Test options at the bottom, matching the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "fit-test-screen",
+    "fit-test",
     "onboarding-flow",
     "device-settings",
     "poly-studio-mobile",
-    "skip-option",
-    "test-option",
-    "pairing-2-screen",
-    "figma-design"
+    "skip-test-options",
+    "pairing-screen",
+    "figma-design-verification"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "fae45dc8fa67390d62594f671e16b71affc2feee9f7724b1e57c42678eafa22f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.982543Z",
+  "processed_at": "2026-04-25T09:32:26.237745Z",
   "status": "active"
 }
