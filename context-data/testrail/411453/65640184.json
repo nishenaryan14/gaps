@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Fit Test Opened",
-  "feature": "Analytics",
-  "scenario": "Fit Test screen opening logs an event with Device PID, with event counts updating after a few hours on the Firebase dashboard.",
+  "feature": "App Settings",
+  "scenario": "Fit Test screen open event is logged with analytics metrics in Poly Studio Mobile app",
   "steps": [
-    "Open the Fit Test screen.",
-    "Wait for event counts to update (a few hours).",
-    "Open the Firebase dashboard.",
-    "Check the displayed elements."
+    "1. Open the Poly Studio Mobile app on a connected Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Locate and tap the Fit Test tab (or navigate to Fit Test from the Home screen).",
+    "4. Observe that the Fit Test screen opens and loads.",
+    "5. Wait a few hours for the analytics event to be processed and logged.",
+    "6. Check the analytics backend/dashboard for the Fit Test screen open event.",
+    "7. Verify the event metrics: event count by country, gender, per session, app version, app build, and app environment."
   ],
-  "expected": "The Firebase dashboard displays default elements (graph, events in last 30 minutes, event count by Country, event count by Gender, events per session, App Version, App build, App Environment) plus Device PID.",
+  "expected": "The Fit Test screen open event is logged in analytics with correct metrics (event count by country, gender, per session, app version, app build, and app environment) after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Fit Test screen",
-    "event logging",
-    "Device PID",
-    "event counts",
-    "Firebase dashboard",
-    "analytics update",
-    "screen open event"
+    "poly-studio-mobile",
+    "fit-test",
+    "analytics-metrics",
+    "screen-open-event",
+    "app-version",
+    "app-build",
+    "app-environment"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "135380f9db72cfe8ddd827d0392be3ca8b3ecfab3c3cd27ae981162a4033944c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.329403Z",
+  "processed_at": "2026-04-25T05:37:16.970831Z",
   "status": "active"
 }
