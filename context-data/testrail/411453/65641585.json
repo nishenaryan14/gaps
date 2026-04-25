@@ -4,29 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "EQ - Custom EQ, save a custom EQ, change some values, Reset EQ",
-  "feature": "EQ (Equalizer)",
-  "scenario": "Reset EQ button should restore sliders to default positions and remove saved custom EQ profile",
-  "steps": [
-    "Open the Custom EQ settings.",
-    "Save a custom EQ profile with some values.",
-    "Change some of the EQ values from the saved profile.",
-    "Click the Reset EQ button."
-  ],
-  "expected": "The EQ slider positions should return to the default positions (middle of the slider), and the saved custom positions should be removed.",
+  "feature": "Equalizer",
+  "scenario": "Custom EQ preset values are not cleared after Reset EQ button is used in Poly Studio Mobile app",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Reset EQ",
-    "restore defaults",
-    "sliders",
-    "custom EQ profile",
-    "remove profile",
-    "equalizer settings",
-    "audio configuration"
+    "poly-studio-mobile",
+    "custom-eq-preset",
+    "reset-eq",
+    "eq-settings",
+    "audio-equalizer",
+    "app-settings-persistence",
+    "eq-clear"
   ],
   "source_last_updated": "1761210804",
   "source_hash": "1da04c541c42994569d324dcb9d8887f18d5ad3b8422bd665da02dad455e7a36",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.254329Z",
+  "processed_at": "2026-04-25T05:37:16.841823Z",
   "status": "active"
 }
