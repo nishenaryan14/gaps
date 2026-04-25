@@ -1,111 +1,130 @@
 [
   {
-    "title": "TC-CS-SW-001: Verify Charge Stand name and image display correctly when plugged into power",
+    "title": "TC-001: Charge Stand name and image persist in Software tab when unplugged from power",
     "steps": [
-      "1. Ensure the Charge Stand is plugged into power via USB-C cable.",
-      "2. Open Poly Studio Mobile app on the connected phone.",
-      "3. Tap the Charge Stand device name on the Home Screen to enter Device Settings.",
-      "4. Tap the 'Software' tab (or scroll to the Software section).",
-      "5. Observe the device name displayed at the top of the Software tab.",
-      "6. Observe the device image/icon displayed next to or near the device name."
+      "Open Poly Studio Mobile app.",
+      "Tap the connected device (e.g., Poly Voyager Free 60+ UC).",
+      "Navigate to Device Settings \u2192 Software tab.",
+      "Verify the Charge Stand accessory is displayed with its correct name (e.g., 'Charge Stand') and correct image/icon.",
+      "Note the exact name and image shown.",
+      "Unplug the Charge Stand from power (remove USB-C cable or disconnect from power source).",
+      "Wait 5 seconds.",
+      "Observe the Software tab UI for the Charge Stand entry.",
+      "Verify the Charge Stand name and image remain unchanged from the noted values \u2014 they should NOT revert to a placeholder name (e.g., 'Accessory') or placeholder icon."
     ],
-    "expected": "The Charge Stand's correct product name (e.g., 'Poly Charge Stand') is displayed. The correct Charge Stand product image/icon is displayed \u2014 not a generic placeholder image."
+    "expected": "The Charge Stand name and image in the Software tab remain correct and unchanged after unplugging from power. No placeholder text or default icon replaces the accessory metadata."
   },
   {
-    "title": "TC-CS-SW-002: Verify Charge Stand name and image are replaced with placeholder when unplugged from power",
+    "title": "TC-002: Charge Stand name and image re-populate correctly in Software tab when plugged back into power",
     "steps": [
-      "1. Ensure the Charge Stand is plugged into power via USB-C cable.",
-      "2. Open Poly Studio Mobile app \u2192 tap the Charge Stand device \u2192 navigate to Device Settings > Software tab.",
-      "3. Verify the correct Charge Stand name and image are displayed (baseline).",
-      "4. Unplug the USB-C power cable from the Charge Stand.",
-      "5. Wait 10 seconds for the app to refresh the device state.",
-      "6. Observe the device name displayed at the top of the Software tab.",
-      "7. Observe the device image/icon displayed next to or near the device name."
+      "Open Poly Studio Mobile app.",
+      "Tap the connected device \u2192 Device Settings \u2192 Software tab.",
+      "Verify the Charge Stand is displayed with correct name and image.",
+      "Unplug the Charge Stand from power.",
+      "Wait 5 seconds.",
+      "Observe the Software tab \u2014 note if the Charge Stand name/image changes to placeholder (e.g., 'Accessory' / generic icon).",
+      "Plug the Charge Stand back into power.",
+      "Wait 10 seconds for the accessory to re-initialize.",
+      "Observe the Software tab UI for the Charge Stand entry.",
+      "Verify the Charge Stand name and image return to the correct values (e.g., 'Charge Stand' with correct icon)."
     ],
-    "expected": "After unplugging from power, the Charge Stand's product name is replaced with a generic placeholder name (e.g., 'Device' or 'Charge Stand' without model details). The product image is replaced with a generic placeholder icon (e.g., a gray silhouette or default device icon)."
+    "expected": "After reconnecting power, the Charge Stand name and image in the Software tab are restored to the correct, non-placeholder values. The UI does not remain stuck on a placeholder."
   },
   {
-    "title": "TC-CS-SW-003: Verify Charge Stand name and image restore when re-plugged into power",
+    "title": "TC-003: Charge Stand metadata remains stable in Software tab during rapid power toggle (unplug/plug cycle)",
     "steps": [
-      "1. Start with the Charge Stand unplugged from power.",
-      "2. Open Poly Studio Mobile app \u2192 tap the Charge Stand device \u2192 navigate to Device Settings > Software tab.",
-      "3. Verify the placeholder name and image are displayed (baseline for unplugged state).",
-      "4. Plug the USB-C power cable back into the Charge Stand.",
-      "5. Wait 10 seconds for the app to refresh the device state.",
-      "6. Observe the device name at the top of the Software tab.",
-      "7. Observe the device image/icon."
+      "Open Poly Studio Mobile app.",
+      "Navigate to Device Settings \u2192 Software tab.",
+      "Verify Charge Stand is displayed with correct name and image.",
+      "Rapidly unplug and re-plug the Charge Stand from power 3 times in succession (each unplug/plug cycle within 2 seconds).",
+      "After the third plug-in, wait 10 seconds.",
+      "Observe the Software tab UI.",
+      "Verify the Charge Stand name is still the correct name (e.g., 'Charge Stand'), not a placeholder.",
+      "Verify the Charge Stand image/icon is the correct accessory icon, not a generic placeholder."
     ],
-    "expected": "After re-plugging into power, the Charge Stand's correct product name and image are restored \u2014 the placeholder is replaced with the proper device metadata."
+    "expected": "After rapid power toggle cycles, the Charge Stand name and image remain correct in the Software tab. No placeholder values appear."
   },
   {
-    "title": "TC-CS-SW-004: Verify Charge Stand placeholder persists after app restart while unplugged",
+    "title": "TC-004: Charge Stand placeholder state does not persist after power restore and app restart",
     "steps": [
-      "1. Ensure the Charge Stand is unplugged from power.",
-      "2. Open Poly Studio Mobile app \u2192 tap the Charge Stand device \u2192 navigate to Device Settings > Software tab.",
-      "3. Verify the placeholder name and image are displayed.",
-      "4. Press the Home button to background the app.",
-      "5. Fully close (force-kill) the Poly Studio Mobile app from the app switcher.",
-      "6. Reopen Poly Studio Mobile app.",
-      "7. Tap the Charge Stand device \u2192 navigate to Device Settings > Software tab.",
-      "8. Observe the device name and image."
+      "Open Poly Studio Mobile app.",
+      "Navigate to Device Settings \u2192 Software tab.",
+      "Verify Charge Stand is displayed with correct name and image.",
+      "Unplug the Charge Stand from power.",
+      "Wait 5 seconds.",
+      "Observe if the Charge Stand name/image changes to placeholder.",
+      "Plug the Charge Stand back into power.",
+      "Wait 10 seconds.",
+      "Fully close (kill) the Poly Studio Mobile app.",
+      "Reopen the Poly Studio Mobile app.",
+      "Navigate to Device Settings \u2192 Software tab.",
+      "Verify the Charge Stand is displayed with its correct name and image."
     ],
-    "expected": "While the Charge Stand remains unplugged from power, the placeholder name and image persist across app restart. The correct product name and image are NOT restored until the device is plugged back into power."
+    "expected": "After power restore and app restart, the Charge Stand name and image in the Software tab are correct. No placeholder values persist across app sessions."
   },
   {
-    "title": "TC-CS-SW-005: Verify Charge Stand placeholder behavior during power state transitions (plug \u2192 unplug \u2192 plug)",
+    "title": "TC-005: Charge Stand placeholder state does not persist after power restore and Bluetooth reconnect",
     "steps": [
-      "1. Ensure the Charge Stand is plugged into power.",
-      "2. Open Poly Studio Mobile app \u2192 tap the Charge Stand device \u2192 navigate to Device Settings > Software tab.",
-      "3. Verify the correct Charge Stand name and image are displayed.",
-      "4. Unplug the Charge Stand from power.",
-      "5. Wait 5 seconds and observe the Software tab UI \u2014 do not navigate away.",
-      "6. Re-plug the Charge Stand into power.",
-      "7. Wait 5 seconds and observe the Software tab UI \u2014 do not navigate away.",
-      "8. Unplug the Charge Stand from power again.",
-      "9. Wait 5 seconds and observe the Software tab UI."
+      "Open Poly Studio Mobile app.",
+      "Navigate to Device Settings \u2192 Software tab.",
+      "Verify Charge Stand is displayed with correct name and image.",
+      "Unplug the Charge Stand from power.",
+      "Wait 5 seconds.",
+      "Observe if the Charge Stand name/image changes to placeholder.",
+      "Plug the Charge Stand back into power.",
+      "Wait 10 seconds.",
+      "Disconnect Bluetooth from the device (turn off Bluetooth or disconnect from app).",
+      "Reconnect Bluetooth to the device.",
+      "Open Poly Studio Mobile app.",
+      "Navigate to Device Settings \u2192 Software tab.",
+      "Verify the Charge Stand is displayed with its correct name and image."
     ],
-    "expected": "Step 5: The name and image change to placeholder within a few seconds of unplugging. Step 7: The correct name and image are restored within a few seconds of re-plugging. Step 9: The placeholder reappears after unplugging again. The UI correctly reflects the power state on each transition without requiring navigation away and back."
+    "expected": "After power restore and Bluetooth reconnection, the Charge Stand name and image in the Software tab are correct. No placeholder values persist through the Bluetooth disconnect/reconnect cycle."
   },
   {
-    "title": "TC-CS-SW-006: Verify other tabs are NOT affected by Charge Stand power state changes",
+    "title": "TC-006: Charge Stand name and image remain correct in Software tab when navigating away and back after unplug",
     "steps": [
-      "1. Ensure the Charge Stand is plugged into power.",
-      "2. Open Poly Studio Mobile app \u2192 tap the Charge Stand device \u2192 navigate to Device Settings.",
-      "3. Navigate to a non-Software tab (e.g., 'Audio' or 'General' settings tab).",
-      "4. Verify the device name displayed in the header/title bar shows the correct Charge Stand name.",
-      "5. Unplug the Charge Stand from power.",
-      "6. Wait 10 seconds.",
-      "7. Observe the device name in the header/title bar of the current (non-Software) tab.",
-      "8. Navigate to the Software tab and observe the device name and image."
+      "Open Poly Studio Mobile app.",
+      "Navigate to Device Settings \u2192 Software tab.",
+      "Verify Charge Stand is displayed with correct name and image.",
+      "Unplug the Charge Stand from power.",
+      "Wait 5 seconds.",
+      "Navigate away from the Software tab to another tab (e.g., Audio Settings or Home).",
+      "Wait 3 seconds.",
+      "Navigate back to Device Settings \u2192 Software tab.",
+      "Verify the Charge Stand name and image are correct and not placeholder values."
     ],
-    "expected": "Step 7: The device name in the header/title bar of non-Software tabs remains correct (not replaced with placeholder). Step 8: The Software tab shows the placeholder name and image. The placeholder replacement is isolated to the Software tab's device metadata display and does not affect other tabs or the navigation header."
+    "expected": "After unplugging from power and navigating away and back to the Software tab, the Charge Stand name and image remain correct. No placeholder values appear upon returning to the tab."
   },
   {
-    "title": "TC-CS-SW-007: Verify Charge Stand placeholder appears on Software tab when navigating from another tab after unplugging",
+    "title": "TC-007: Charge Stand name and image remain correct in Software tab when app is backgrounded and restored after unplug",
     "steps": [
-      "1. Ensure the Charge Stand is plugged into power.",
-      "2. Open Poly Studio Mobile app \u2192 tap the Charge Stand device \u2192 navigate to Device Settings.",
-      "3. Navigate to a non-Software tab (e.g., 'Audio' tab).",
-      "4. Unplug the Charge Stand from power.",
-      "5. Wait 10 seconds.",
-      "6. Tap the 'Software' tab to navigate to it.",
-      "7. Observe the device name and image displayed on the Software tab."
+      "Open Poly Studio Mobile app.",
+      "Navigate to Device Settings \u2192 Software tab.",
+      "Verify Charge Stand is displayed with correct name and image.",
+      "Unplug the Charge Stand from power.",
+      "Wait 5 seconds.",
+      "Press the Home button to background the app.",
+      "Wait 10 seconds.",
+      "Reopen the Poly Studio Mobile app from the recent apps list.",
+      "Observe the Software tab UI.",
+      "Verify the Charge Stand name and image are correct and not placeholder values."
     ],
-    "expected": "When navigating to the Software tab after the Charge Stand has been unplugged, the placeholder name and image are displayed (not the cached correct name/image from when the device was plugged in)."
+    "expected": "After unplugging from power and backgrounding/restoring the app, the Charge Stand name and image in the Software tab remain correct. No placeholder values appear."
   },
   {
-    "title": "TC-CS-SW-008: Verify Charge Stand placeholder behavior during Bluetooth disconnect while unplugged",
+    "title": "TC-008: Charge Stand placeholder does not appear in Software tab when Charge Stand is unplugged but device remains connected via Bluetooth",
     "steps": [
-      "1. Ensure the Charge Stand is unplugged from power.",
-      "2. Open Poly Studio Mobile app \u2192 tap the Charge Stand device \u2192 navigate to Device Settings > Software tab.",
-      "3. Verify the placeholder name and image are displayed.",
-      "4. Disconnect Bluetooth from the Charge Stand (turn off Bluetooth on phone or disconnect from device).",
-      "5. Wait 5 seconds.",
-      "6. Reconnect Bluetooth to the Charge Stand.",
-      "7. Wait 10 seconds for the app to reconnect.",
-      "8. Tap the Charge Stand device \u2192 navigate to Device Settings > Software tab.",
-      "9. Observe the device name and image."
+      "Open Poly Studio Mobile app.",
+      "Navigate to Device Settings \u2192 Software tab.",
+      "Verify Charge Stand is displayed with correct name and image.",
+      "Verify the headset/earbud is connected via Bluetooth and the app shows the device as connected.",
+      "Unplug the Charge Stand from power while keeping the headset/earbud connected via Bluetooth.",
+      "Wait 10 seconds.",
+      "Observe the Software tab UI for the Charge Stand entry.",
+      "Verify the Charge Stand name is still the correct name (e.g., 'Charge Stand').",
+      "Verify the Charge Stand image/icon is the correct accessory icon."
     ],
-    "expected": "Step 4-5: The app may show 'Disconnected' state. Step 9: After reconnecting while the Charge Stand remains unplugged, the placeholder name and image are still displayed. The placeholder state is tied to power state, not Bluetooth connection state."
+    "expected": "Even when the Charge Stand is unplugged from power, as long as the headset remains connected via Bluetooth, the Charge Stand name and image in the Software tab remain correct. No placeholder values appear."
   }
 ]
