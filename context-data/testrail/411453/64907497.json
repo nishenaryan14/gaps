@@ -4,30 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Support - Device - No Devices Connected screen",
-  "feature": "Support - Device",
-  "scenario": "Verify that tapping Menu > Support > Device from the \"No Devices Connected\" screen displays the Poly Support screen with the correct text and image.",
+  "feature": "Device Management",
+  "scenario": "Support > Device screen shows \"No Devices Connected\" message when no previously connected devices are found",
   "steps": [
-    "Open Lens App with \"No Devices Connected\" screen.",
-    "Tap Menu (hamburger icon) in upper left corner.",
-    "Tap Support.",
-    "Tap Device."
+    "1. Open the Poly Studio Mobile app on your mobile device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the Support option (or navigate to Support from the menu).",
+    "4. Tap on the Device screen within Support.",
+    "5. Ensure there are no previously connected Bluetooth audio devices listed in the app."
   ],
-  "expected": "Poly Support screen is visible with image per Figma. Text displayed: \"No previously connected devices were found. Please connect devices using the mobile device's Bluetooth Settings prior to requesting device support.\"",
+  "expected": "The app displays a \"No Devices Connected\" screen with the text: \"No previously connected devices were found. Please connect devices using the mobile device's Bluetooth Settings prior to requesting device support.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "No Devices Connected",
-    "Menu",
-    "Support",
-    "Device",
-    "Poly Support screen",
-    "hamburger icon",
-    "Lens App",
-    "display verification"
+    "no-devices-connected",
+    "poly-studio-mobile",
+    "support-screen",
+    "device-screen",
+    "bluetooth-pairing",
+    "home-screen",
+    "connected-devices"
   ],
   "source_last_updated": "1759761658",
   "source_hash": "4e4d3786b5542f0628b93234c875144cd580fe7b7c780de129e8988fb40f85fd",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.181414Z",
+  "processed_at": "2026-04-25T05:37:16.768997Z",
   "status": "active"
 }
