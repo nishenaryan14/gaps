@@ -7,11 +7,11 @@
   "feature": "App Settings",
   "scenario": "Device details modal fails to display when navigating to Menu > Support > [Device] for a disconnected headset visible on the Home Screen",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
+    "1. Open the Poly Studio Mobile app on your Android device.",
     "2. On the Home screen, ensure a headset is disconnected but visible in the device list.",
-    "3. Tap the Menu icon (hamburger menu) in the top-left or top-right corner.",
-    "4. From the Menu, select 'Support'.",
-    "5. In the Support screen, tap on the disconnected [Device] entry.",
+    "3. Tap the Menu icon (three horizontal lines or hamburger menu) in the top-left or top-right corner.",
+    "4. From the menu, select 'Support'.",
+    "5. Tap on the disconnected headset's name or entry under the Support section.",
     "6. Observe the modal that appears."
   ],
   "expected": "A modal is displayed showing the following device details: Device Name, Product ID, Serial Number, Software Version, Headset Revision, and Last Connected. The modal also includes a 'Go' button for sending support information.",
@@ -21,14 +21,14 @@
     "poly-studio-mobile",
     "device-details-modal",
     "disconnected-headset",
-    "support-screen",
-    "home-screen-device-list",
-    "menu-navigation",
-    "modal-display-failure"
+    "support-menu",
+    "home-screen",
+    "modal-display",
+    "android-app"
   ],
   "source_last_updated": "1759761384",
   "source_hash": "d8e6e21576097264dbf0df1d2a29f3aeff799400c9982337133219dcd2d36e63",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.773603Z",
+  "processed_at": "2026-04-25T07:55:31.845844Z",
   "status": "active"
 }
