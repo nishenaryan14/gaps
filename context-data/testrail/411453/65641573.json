@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "EQ - Select a value, put the app in background, return - the selected value stays",
   "feature": "Equalizer",
-  "scenario": "EQ setting does not persist after backgrounding and returning to the Poly Studio Mobile app",
-  "steps": [],
-  "expected": "",
+  "scenario": "EQ setting (Bass, Flat, Bright, Custom EQ) does not persist after app is backgrounded and reopened in Device Settings",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Audio Settings \u2192 Equalizer.",
+    "3. Select an EQ value (e.g., Bass).",
+    "4. Press the Home button or recent apps button to put the app into the background.",
+    "5. Wait a few seconds, then return to the Poly Studio Mobile app by tapping the app icon or selecting it from recent apps.",
+    "6. Navigate back to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Audio Settings \u2192 Equalizer.",
+    "7. Observe the currently selected EQ value.",
+    "8. Repeat steps 2\u20137 for each of the remaining EQ values: Flat, Bright, and Custom EQ."
+  ],
+  "expected": "The EQ value selected before backgrounding the app should still be selected after returning to the app, for all EQ values (Bass, Flat, Bright, Custom EQ).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "eq-setting",
     "eq-persistence",
+    "equalizer-setting",
+    "bass-flat-bright-custom-eq",
+    "device-settings",
     "poly-studio-mobile",
-    "backgrounding",
-    "app-state",
-    "settings-persistence",
-    "audio-profile"
+    "background-app",
+    "audio-settings",
+    "setting-retention"
   ],
   "source_last_updated": "1761144081",
   "source_hash": "7c82a73f32f65282745f5afce32d9d4088d9170781e9e0bade51439d18a7f1d9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.923546Z",
+  "processed_at": "2026-04-25T08:21:31.000484Z",
   "status": "active"
 }
