@@ -6,7 +6,6 @@
     "65459826",
     "65459827",
     "65459840",
-    "65459818",
     "65459819",
     "65459820",
     "65459822",
@@ -15,166 +14,103 @@
     "65459825",
     "65459829",
     "65459830",
-    "65459831"
+    "65459831",
+    "65459841"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test covers the specific scenario of one earbud worn + one earbud in the charging case (asymmetric earbud state).",
-    "No test covers charging notifications triggered by placing an earbud in the case (contact-based charging) vs. plugging in a cable.",
-    "No test covers duplicate/duplicate notification behavior \u2014 all existing tests assume a single notification event.",
-    "No test covers the unplugged charging case state \u2014 all existing charging notification tests assume the case/device is plugged into power.",
-    "No test covers the Poly Voyager Free 60+ specific behavior where the charge case has its own touchscreen and can charge earbuds independently without being plugged in (internal battery).",
-    "No test covers the lifecycle scenario where placing an earbud in the case triggers a state transition from 'worn' to 'charging' while the other earbud remains in 'worn' state \u2014 this is a concurrent asymmetric state not tested.",
-    "No test covers notification deduplication logic \u2014 the bug is about duplicate notifications, which implies a missing validation that the system should suppress a second identical notification when the state hasn't fully changed."
+    "The bug scenario involves a specific state: ONE earbud worn + ONE earbud in the OPEN (unplugged) charging case. No existing test covers this asymmetric earbud state where only one earbud is charging while the other is in active use.",
+    "The bug involves repeated/duplicate charging notifications (a spamming behavior). No existing test validates notification frequency or deduplication logic \u2014 all existing tests only check if a notification appears or not, not whether it appears repeatedly.",
+    "The bug uses the Voyager Free 20 (TWS earbuds with separate charge case). Existing tests reference 'headset plugged in' or 'device plugged into charger' \u2014 these are generic wired charging scenarios, not the specific TWS case-charging behavior where an earbud is placed into an open case.",
+    "No test covers the lifecycle dimension of what happens when the earbud is repeatedly inserted/removed from the open case while the other earbud remains worn. This is a state transition gap (earbud in ear vs. in case, asymmetric).",
+    "No test validates charging notification behavior specifically when the charge case is OPEN (unplugged) vs. closed/plugged. The open case state may trigger different charging detection logic.",
+    "No test covers the interaction between the worn earbud's active connection state and the charging earbud's notification generation \u2014 the app may be incorrectly generating notifications based on the worn earbud's state rather than the charging earbud's state."
   ],
   "generated_testcases": [
     {
-      "title": "TC-001: Single Earbud Placed in Unplugged Case \u2014 Verify No Duplicate Charging Notification (Asymmetric State)",
+      "title": "[Voyager Free 20] Asymmetric State \u2014 One Earbud Worn, Other in Open Case \u2014 No Repeated Charging Notifications",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ earbuds are connected to phone via Bluetooth. Charge case is NOT plugged into power (running on internal battery). Phone notifications are enabled for Poly Studio Mobile app.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify both earbuds show as 'Connected' and 'Worn'.",
-        "2. Close/minimize the app (press Home button).",
-        "3. Remove the RIGHT earbud from your ear and place it into the charging case. Close the case lid partially or ensure the earbud makes contact with charging pins.",
-        "4. Observe the phone notification area for 10 seconds.",
-        "5. Without removing the LEFT earbud from your ear, open the charging case and remove the RIGHT earbud from the case.",
-        "6. Place the RIGHT earbud back into the charging case a second time.",
-        "7. Observe the phone notification area for 10 seconds."
+        "Precondition: Voyager Free 20 connected to Poly Studio Mobile app. Both earbuds fully charged and idle.",
+        "Wear the LEFT earbud (in ear). Leave the RIGHT earbud in the open (unplugged) charging case.",
+        "Observe notification behavior for 60 seconds.",
+        "Remove RIGHT earbud from open case, then reinsert it into the open case. Repeat 3 times rapidly.",
+        "Observe notification behavior during and after each insertion.",
+        "Navigate to: App \u2192 Device \u2192 Audio Settings. Verify no disruption or notification spam during navigation.",
+        "Keep LEFT earbud worn. Close the charging case lid with RIGHT earbud inside. Wait 30 seconds.",
+        "Open the charging case lid again (RIGHT earbud still inside). Observe notification behavior."
       ],
-      "expected": "A single charging notification appears when the RIGHT earbud first makes contact with the charging pins. No duplicate or second notification appears when the earbud is placed back in the case a second time. The LEFT earbud continues to show as 'Worn' in the app. The notification accurately reflects that only the RIGHT earbud is charging."
+      "expected": "Expected: A single charging notification appears when RIGHT earbud is first placed in the open case. No repeated/duplicate notifications appear during the 60-second idle period. No notification spam during repeated insert/remove cycles \u2014 at most one notification per insertion event. App navigation remains smooth with no notification interruptions. Closing the case lid does NOT generate a new notification (earbud already charging). Opening the lid does NOT regenerate the notification. Actual (If Bug): Charging notification appears repeatedly every few seconds while one earbud is in the open case and the other is worn. Rapid insert/remove cycles trigger cascading duplicate notifications. Notification spam disrupts app UI."
     },
     {
-      "title": "TC-002: Asymmetric Earbud State \u2014 One Worn, One Charging in Unplugged Case \u2014 Notification Content Accuracy",
+      "title": "[Voyager Free 20] Asymmetric State \u2014 Notification Deduplication During Extended Wear + Charging",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ earbuds connected. Charge case unplugged (internal battery).",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 Audio Settings \u2192 verify both earbuds show 'Worn' status.",
-        "2. Keep the LEFT earbud in your ear (worn state).",
-        "3. Remove the RIGHT earbud from your ear and place it into the charging case. Ensure charging contact is made.",
-        "4. Observe the notification that appears. Note the exact text of the notification.",
-        "5. Open the Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify the device status screen shows LEFT: 'Worn' and RIGHT: 'Charging'.",
-        "6. Leave the LEFT earbud in your ear. Remove the RIGHT earbud from the case and re-insert it into the case.",
-        "7. Observe if any new notification appears.",
-        "8. Open the app again and verify the device status screen."
+        "Precondition: Voyager Free 20 connected. LEFT earbud worn, RIGHT earbud in open charging case.",
+        "Note the timestamp of the first charging notification.",
+        "Wait 2 minutes without touching either earbud.",
+        "Count all charging-related notifications received during the 2-minute window.",
+        "After 2 minutes, remove RIGHT earbud from case and reinsert. Note new notification timestamp.",
+        "Wait another 1 minute. Count notifications again.",
+        "Swap: place RIGHT earbud in ear, put LEFT earbud in open charging case. Wait 1 minute.",
+        "Count notifications during the swapped asymmetric state."
       ],
-      "expected": "The notification text accurately indicates that only the RIGHT earbud is charging (e.g., 'Right earbud charging' or similar specific text, NOT 'Both earbuds charging'). No duplicate notification appears upon re-insertion. The app device status screen shows asymmetric state: LEFT = 'Worn', RIGHT = 'Charging'."
+      "expected": "Expected: Exactly 1 charging notification in the first 2-minute window (the initial one). Exactly 1 new notification after reinsertion (not multiple). Exactly 1 notification after swapping earbuds (for the newly charging LEFT earbud). Total notifications \u2264 3 for the entire test duration. Actual (If Bug): Notifications appear repeatedly every 10-30 seconds during each asymmetric state window, producing 6+ notifications in the first 2-minute window alone. Swapping earbuds does not stop the original notification spam and may add new spam for the other earbud."
     },
     {
-      "title": "TC-003: App Lifecycle \u2014 Background/Foreground During Asymmetric Charging State \u2014 Notification Deduplication",
+      "title": "[Voyager Free 20] Asymmetric State \u2014 App Lifecycle: Background/Foreground During One Earbud Charging",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ connected. Charge case unplugged.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify both earbuds 'Worn'.",
-        "2. Press Home button to background the app.",
-        "3. Place the LEFT earbud into the charging case (RIGHT earbud remains in ear). Observe notification.",
-        "4. Wait 5 seconds. Force-kill the Poly Studio Mobile app (swipe away from Recent Apps).",
-        "5. Reopen Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify device status.",
-        "6. While keeping LEFT earbud in the case, remove and re-insert it into the case.",
-        "7. Observe notification area for any new notifications.",
-        "8. Open the app and verify device status screen shows LEFT: 'Charging', RIGHT: 'Worn'."
+        "Precondition: Voyager Free 20 connected. LEFT earbud worn, RIGHT earbud in open charging case.",
+        "Verify initial charging notification appears (single).",
+        "Press Home button to background the Poly Studio Mobile app. Wait 30 seconds.",
+        "Reopen the app from recent apps. Observe notification behavior immediately and for 30 seconds after.",
+        "Force-kill the app (swipe from recent apps). Wait 10 seconds.",
+        "Relaunch the app. Observe notification behavior on reconnect and for 30 seconds after.",
+        "While app is in foreground, disconnect Bluetooth from phone settings. Wait 10 seconds.",
+        "Reconnect Bluetooth. Observe notification behavior on reconnection."
       ],
-      "expected": "After force-kill and relaunch, the app correctly shows the asymmetric state (LEFT charging, RIGHT worn). Re-inserting the LEFT earbud does NOT trigger a duplicate charging notification. Only a single notification was ever shown (from step 3)."
+      "expected": "Expected: After backgrounding and reopening \u2014 no new/repeat charging notification appears (the original single notification state is preserved). After force-kill and relaunch \u2014 at most one charging notification appears on reconnection (the app re-syncs state, but deduplicates). After Bluetooth disconnect/reconnect \u2014 at most one notification on reconnect. No notification spam in any lifecycle transition. Actual (If Bug): Each foreground transition, app relaunch, or Bluetooth reconnect triggers a fresh burst of repeated charging notifications, as if the asymmetric state is being re-detected and re-notified each time without deduplication."
     },
     {
-      "title": "TC-004: Bluetooth Disconnect/Reconnect During Asymmetric Charging \u2014 Notification Behavior",
+      "title": "[Voyager Free 20] Asymmetric State \u2014 Open Case vs. Closed Case Charging Notification Behavior",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ connected. Charge case unplugged.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify both earbuds 'Worn'.",
-        "2. Place the RIGHT earbud into the charging case. LEFT earbud remains worn. Observe notification.",
-        "3. From the phone's Bluetooth settings, tap 'Forget' or 'Disconnect' from the Voyager Free 60+.",
-        "4. Wait 5 seconds. Re-pair/reconnect the earbuds from Bluetooth settings.",
-        "5. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify device status.",
-        "6. Observe the notification area for any charging notifications.",
-        "7. Remove the RIGHT earbud from the case and re-insert it.",
-        "8. Observe notification area."
+        "Precondition: Voyager Free 20 connected. Both earbuds in ears, not charging.",
+        "Remove LEFT earbud, place it in the open (unplugged) charging case. Keep RIGHT earbud worn.",
+        "Observe notification behavior for 30 seconds.",
+        "Close the charging case lid (LEFT earbud inside). Observe notifications for 30 seconds.",
+        "Open the case lid again. Observe notifications for 30 seconds.",
+        "Remove LEFT earbud from case, wear it. Remove RIGHT earbud, place in open case. Repeat steps 2-5 for RIGHT earbud.",
+        "Now with one earbud in open case: plug the charging case into USB-C power. Observe notifications.",
+        "Unplug the charging case. Observe notifications."
       ],
-      "expected": "After Bluetooth disconnect and reconnect, the app correctly restores the asymmetric state display (LEFT worn, RIGHT charging). No duplicate charging notification appears upon reconnection. Re-inserting the RIGHT earbud does NOT trigger a second notification. The system deduplicates the charging notification based on the unchanged state (RIGHT was already charging before disconnect)."
+      "expected": "Expected: Step 2 \u2014 Single charging notification for LEFT earbud. Step 3 (lid closed) \u2014 No new notification (earbud continues charging, state unchanged). Step 4 (lid opened) \u2014 No new notification (charging state unchanged). Step 7 (case plugged in) \u2014 At most one notification indicating case is charging (not a repeat of the earbud charging notification). Step 8 (case unplugged) \u2014 At most one notification. Total notifications \u2264 4 for the entire test. Actual (If Bug): Opening/closing the case lid retriggers the charging notification. Plugging the case into power generates duplicate earbud charging notifications on top of the case charging notification. Notifications cascade and repeat."
     },
     {
-      "title": "TC-005: Switching Which Earbud is Worn vs. Charging \u2014 Verify Independent Notification Events",
+      "title": "[Voyager Free 20] Asymmetric State \u2014 Rapid Earbud Swap Between Ear and Open Case (Stress Test)",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ connected. Charge case unplugged.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify both earbuds 'Worn'.",
-        "2. Place the LEFT earbud into the charging case. RIGHT earbud remains worn. Observe notification.",
-        "3. Wait 5 seconds. Remove the LEFT earbud from the case and put it back in your ear.",
-        "4. Observe notification area \u2014 note if a 'charging stopped' or 'worn' notification appears.",
-        "5. Now place the RIGHT earbud into the charging case. LEFT earbud remains worn.",
-        "6. Observe notification area for 10 seconds.",
-        "7. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify device status."
+        "Precondition: Voyager Free 20 connected. LEFT earbud worn, RIGHT earbud in open charging case.",
+        "Perform the following sequence rapidly (each action within 1 second): Remove RIGHT from case \u2192 wear RIGHT \u2192 remove LEFT from ear \u2192 place LEFT in open case \u2192 remove LEFT from case \u2192 wear LEFT \u2192 remove RIGHT from ear \u2192 place RIGHT in open case.",
+        "Repeat the full swap cycle 5 times consecutively.",
+        "After the 5 cycles, stop and let the state settle (LEFT worn, RIGHT in open case).",
+        "Count total notifications received from start of step 1 through 30 seconds after step 3.",
+        "Open the Poly Studio Mobile app. Navigate to: Device \u2192 Audio Settings \u2192 Transparency Mode. Verify all sliders and values are responsive and correct.",
+        "Verify the worn earbud (LEFT) still plays audio correctly (play a test track)."
       ],
-      "expected": "When LEFT earbud is removed from the case, a notification (or notification update) indicates LEFT is no longer charging. When RIGHT earbud is then placed in the case, a single new notification appears indicating RIGHT is charging \u2014 NOT a duplicate of the previous LEFT notification. The app shows LEFT: 'Worn', RIGHT: 'Charging'. No duplicate or stale notifications remain."
+      "expected": "Expected: Each earbud insertion into the open case generates at most 1 notification. With 5 swap cycles \u00d7 2 earbud insertions per cycle = 10 insertion events, total notifications \u2264 10 (ideally \u2264 10, with no duplicates per event). App remains fully responsive during and after stress test. Transparency Mode sliders respond immediately with no lag. Audio playback on worn earbud is uninterrupted. Actual (If Bug): Each swap cycle generates 3-5 duplicate notifications per insertion event, producing 30+ notifications in seconds. App UI becomes sluggish or unresponsive due to notification flood. Audio stutters or drops on the worn earbud during rapid state changes."
     },
     {
-      "title": "TC-006: Both Earbuds Worn \u2192 One Placed in Case \u2192 Second Also Placed in Case \u2014 Progressive Notification Accuracy",
+      "title": "[Voyager Free 20] Asymmetric State \u2014 Notification Source Validation: Worn Earbud vs. Charging Earbud",
       "steps": [
-        "Precondition: Poly Voyager Free 60+ connected. Charge case unplugged.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify both earbuds 'Worn'.",
-        "2. Place the LEFT earbud into the charging case. Observe notification.",
-        "3. Wait 5 seconds. While LEFT remains in the case, place the RIGHT earbud into the charging case as well.",
-        "4. Observe notification area for 10 seconds after the second earbud is placed.",
-        "5. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify device status.",
-        "6. Remove the LEFT earbud from the case (RIGHT remains in case).",
-        "7. Observe notification area.",
-        "8. Open the app and verify device status."
+        "Precondition: Voyager Free 20 connected. Both earbuds worn. Media playing.",
+        "Place LEFT earbud in open charging case. Keep RIGHT earbud worn and playing media.",
+        "Observe notification content: does it identify the LEFT earbud as charging?",
+        "Verify media continues on RIGHT earbud without interruption.",
+        "Pause media. Initiate a phone call on the phone. Verify call audio routes to the worn RIGHT earbud.",
+        "During the call, remove LEFT earbud from case and reinsert it. Observe notification behavior during active call.",
+        "End the call. Check notification history/log in the app (if available) or Android notification shade.",
+        "Verify the app's device status screen shows correct state: LEFT charging, RIGHT connected/in use."
       ],
-      "expected": "Step 2: Single notification 'Left earbud charging' appears. Step 3-4: Notification updates to 'Both earbuds charging' \u2014 NO duplicate notification. Only one notification is present, with updated content. Step 6-7: Notification updates to 'Right earbud charging' \u2014 again, no duplicate. The app correctly shows progressive state changes: (LEFT charging) \u2192 (Both charging) \u2192 (RIGHT charging)."
-    },
-    {
-      "title": "TC-007: Charge Case Touchscreen Interaction During Asymmetric Charging \u2014 Verify No Duplicate Phone Notifications",
-      "steps": [
-        "Precondition: Poly Voyager Free 60+ connected. Charge case unplugged and touchscreen active.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify both earbuds 'Worn'.",
-        "2. Place the LEFT earbud into the charging case. Observe phone notification.",
-        "3. On the charge case touchscreen, navigate to the earbud status screen and verify it shows LEFT as charging.",
-        "4. On the charge case touchscreen, tap to dismiss or navigate away from the charging status screen.",
-        "5. Observe the phone notification area for any new or duplicate notifications triggered by the touchscreen interaction.",
-        "6. Remove the LEFT earbud from the case and re-insert it.",
-        "7. Observe phone notification area.",
-        "8. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify device status."
-      ],
-      "expected": "Interacting with the charge case touchscreen (viewing/dismissing charging status) does NOT trigger any additional or duplicate phone notifications. The phone notification from step 2 remains the only notification. Re-inserting the LEFT earbud also does not create a duplicate. The app shows LEFT: 'Charging', RIGHT: 'Worn'."
-    },
-    {
-      "title": "TC-008: Rapid Toggle \u2014 Earbud In/Out of Case Multiple Times \u2014 Verify Notification Throttling/Deduplication",
-      "steps": [
-        "Precondition: Poly Voyager Free 60+ connected. Charge case unplugged.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify both earbuds 'Worn'.",
-        "2. Rapidly (within 3 seconds) perform the following sequence with the RIGHT earbud: Remove from ear \u2192 Place in case \u2192 Remove from case \u2192 Place in ear \u2192 Remove from ear \u2192 Place in case.",
-        "3. Observe the notification area for 15 seconds after the sequence ends.",
-        "4. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify device status.",
-        "5. Wait 10 seconds. Observe if any additional notifications appear.",
-        "6. Open the app again and verify device status remains consistent."
-      ],
-      "expected": "At most one charging notification appears for the RIGHT earbud during the rapid toggle sequence. The system throttles or deduplicates notifications during rapid state changes. The final device status shows RIGHT: 'Charging' (since the last action was placing it in the case). No delayed or duplicate notifications appear after the 15-second observation window."
-    },
-    {
-      "title": "TC-009: Phone Reboot During Asymmetric Charging \u2014 Notification Restoration and Deduplication",
-      "steps": [
-        "Precondition: Poly Voyager Free 60+ connected. Charge case unplugged.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify both earbuds 'Worn'.",
-        "2. Place the RIGHT earbud into the charging case. LEFT earbud remains worn. Observe notification.",
-        "3. Reboot the phone.",
-        "4. After phone restarts, ensure Bluetooth is enabled. Wait for automatic reconnection to Voyager Free 60+.",
-        "5. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify device status.",
-        "6. Observe the notification area for 15 seconds.",
-        "7. Remove the RIGHT earbud from the case and re-insert it.",
-        "8. Observe notification area for 10 seconds."
-      ],
-      "expected": "After phone reboot and reconnection, the app correctly shows LEFT: 'Worn', RIGHT: 'Charging'. A single charging notification may reappear (restored from the persistent state), but NO duplicate notification appears. Re-inserting the RIGHT earbud does NOT trigger a second notification. The system deduplicates based on the unchanged charging state."
-    },
-    {
-      "title": "TC-010: Verify No Charging Notification When Earbud is Placed in Case but Case Battery is Depleted",
-      "steps": [
-        "Precondition: Poly Voyager Free 60+ charge case battery is fully depleted (0%). Earbuds are connected to phone via Bluetooth. Case is NOT plugged into power.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify both earbuds show as 'Connected' and 'Worn'.",
-        "2. Verify the charge case battery status shows 0% or 'Case battery low' in the app.",
-        "3. Place the LEFT earbud into the charging case. Ensure charging pins make contact.",
-        "4. Observe the phone notification area for 15 seconds.",
-        "5. Open Poly Studio Mobile app \u2192 tap [Voyager Free 60+] \u2192 verify device status.",
-        "6. Remove the LEFT earbud from the case and place the RIGHT earbud into the case.",
-        "7. Observe the phone notification area for 15 seconds.",
-        "8. Open the app and verify device status."
-      ],
-      "expected": "No charging notification appears when an earbud is placed in the case with a depleted case battery, because the earbud cannot actually charge. The app device status shows the earbud as 'In case' or 'Not charging' (not 'Charging'). No duplicate or false 'charging' notifications are generated. This validates that the notification trigger is based on actual charging current detection, not just physical contact with the case."
+      "expected": "Expected: Notification explicitly identifies the LEFT earbud as charging (not ambiguous 'device charging'). Media continues uninterrupted on RIGHT earbud. Call audio routes correctly to RIGHT earbud only. During active call, reinserting LEFT earbud generates at most one notification and does NOT interrupt the call audio. Notification history shows only LEFT earbud charging events. App device status correctly shows asymmetric state (LEFT: charging, RIGHT: connected). Actual (If Bug): Notification is generic ('Earbud charging') without identifying which earbud. Notification incorrectly references the worn RIGHT earbud's state. Call audio is interrupted or rerouted when LEFT earbud is reinserted during the call. App device status shows both earbuds as charging or both as connected."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:09.765302Z"
+  "processed_at": "2026-04-25T09:45:49.452044Z"
 }
