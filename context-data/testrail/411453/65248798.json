@@ -5,34 +5,34 @@
   "project": "411453",
   "title": "Find My Device - Allow While Using App [Deprecated for IOS]",
   "feature": "App Settings",
-  "scenario": "Find My Device location permission persists after app restart without re-prompting user for consent on Poly Studio Mobile",
+  "scenario": "Find My Device location permission persists after app restart when \"Allow while using app\" is selected",
   "steps": [
     "1. Launch Poly Studio Mobile app on Android.",
     "2. Ensure a Poly Bluetooth headset is connected to the device.",
     "3. On the Home screen, tap the main menu (hamburger icon).",
     "4. From the menu, tap \"Find My Device\".",
     "5. Observe the location permission popup that appears.",
-    "6. Tap \"Allow while using app\" on the permission popup.",
+    "6. On the permission popup, tap \"Allow while using app\".",
     "7. Observe the Location and Geo icons on the screen.",
     "8. Close and restart the Poly Studio Mobile app.",
     "9. Tap the main menu again and tap \"Find My Device\"."
   ],
-  "expected": "After selecting \"Allow while using app\", the Location and Geo icons become visible. After restarting the app, the permission persists and the user is not re-prompted for location consent.",
+  "expected": "After selecting \"Allow while using app\", the Location and Geo icons become visible. The permission persists after restarting the app without re-prompting the user.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "location-permission",
-    "poly-studio-mobile",
+    "allow-while-using-app",
     "permission-persistence",
+    "poly-studio-mobile",
     "app-restart",
-    "android-permissions",
     "geo-icon",
-    "bluetooth-headset"
+    "android"
   ],
   "source_last_updated": "1760352196",
   "source_hash": "7bc154d874068a1127fe583a5df6eb2595524b144a44743171f364373edd88ea",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.845310Z",
+  "processed_at": "2026-04-25T08:21:30.947960Z",
   "status": "active"
 }
