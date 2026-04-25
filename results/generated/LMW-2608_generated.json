@@ -1,156 +1,120 @@
 [
   {
-    "title": "LENS-001: Verify Voyager Free 60+ appears in Inventory on lens.poly.com after device sync",
+    "title": "TC-WEB-001: Verify Voyager Free 60+ appears in both Inventory and Policies > Individual Device list after device registration",
     "steps": [
-      "Log in to lens.poly.com as an admin user with device management privileges.",
-      "Navigate to Manage \u2192 Inventory.",
-      "Locate the search/filter bar and enter 'Voyager Free 60+'.",
-      "Verify the Voyager Free 60+ device appears in the Inventory list with correct serial number, model name, and status.",
-      "Note the serial number and device ID shown in Inventory."
+      "Precondition: Voyager Free 60+ is registered and visible in lens.poly.com Inventory.",
+      "Navigate to: lens.poly.com \u2192 Manage \u2192 Inventory",
+      "Locate the Voyager Free 60+ device entry. Note its Device ID/Serial Number.",
+      "Navigate to: Manage \u2192 Policies \u2192 Individual Device list",
+      "Search for the same Device ID/Serial Number in the Individual Device list.",
+      "Verify the Voyager Free 60+ device entry is present in the Individual Device list."
     ],
-    "expected": "Voyager Free 60+ is listed in the Inventory section with correct model name, serial number, and connection status."
+    "expected": "Voyager Free 60+ device (matching Device ID from Inventory) is listed in Policies > Individual Device list. \ud83e\udde0 BUG SIGNATURE VALIDATION: If the device is present in Inventory but absent from Policies > Individual Device list, this confirms the LMW-type regression where device registration is incomplete across management sections."
   },
   {
-    "title": "LENS-002: Verify Voyager Free 60+ appears in Manage > Policies > Individual Device list",
+    "title": "TC-WEB-002: Verify Voyager Free 20 appears in both Inventory and Policies > Individual Device list (asymmetric device comparison)",
     "steps": [
-      "Log in to lens.poly.com as an admin user.",
-      "Navigate to Manage \u2192 Policies.",
-      "Select an existing policy or create a new one (e.g., 'Test Policy - VF60+').",
-      "Click on the policy to open its details.",
-      "Navigate to the 'Individual Device' tab/section within the policy.",
-      "In the device assignment field, search for 'Voyager Free 60+'.",
-      "Check if the device appears in the dropdown/list of assignable devices.",
-      "If the device appears, select it and assign it to the policy.",
-      "Save the policy changes."
+      "Precondition: Both Voyager Free 60+ and Voyager Free 20 are registered in lens.poly.com Inventory.",
+      "Navigate to: lens.poly.com \u2192 Manage \u2192 Inventory",
+      "Note Device IDs for both Voyager Free 60+ and Voyager Free 20.",
+      "Navigate to: Manage \u2192 Policies \u2192 Individual Device list",
+      "Search for the Voyager Free 20 Device ID.",
+      "Verify Voyager Free 20 is listed.",
+      "Search for the Voyager Free 60+ Device ID.",
+      "Verify Voyager Free 60+ is listed."
     ],
-    "expected": "Voyager Free 60+ appears in the Individual Device list within the policy assignment section. The device can be selected and assigned to the policy successfully."
+    "expected": "Both Voyager Free 20 and Voyager Free 60+ are present in the Policies > Individual Device list. \ud83e\udde0 DEVICE ASYMMETRY: If Voyager Free 20 appears but Voyager Free 60+ does not, this confirms a device-specific registration gap for the Free 60+ model in the policy management interface."
   },
   {
-    "title": "LENS-003: Cross-section consistency \u2014 Voyager Free 60+ in Inventory vs. Individual Device policy list",
+    "title": "TC-WEB-003: Verify policy assignment from Inventory and subsequent policy removal from Policies > Individual Device list for Voyager Free 60+",
     "steps": [
-      "Log in to lens.poly.com as an admin user.",
-      "Navigate to Manage \u2192 Inventory.",
-      "Search for 'Voyager Free 60+' and confirm the device is listed. Note its serial number and device ID.",
-      "Navigate to Manage \u2192 Policies.",
-      "Open any existing policy (or create a new one) and go to the Individual Device tab.",
-      "Search for the same Voyager Free 60+ device using its serial number or device ID noted from Inventory.",
-      "Check if the device appears in the Individual Device assignment list.",
-      "If the device does NOT appear, attempt to refresh the page, log out and log back in, and re-check.",
-      "If the device still does not appear, this is a cross-section data inconsistency bug."
+      "Precondition: Voyager Free 60+ is registered in lens.poly.com Inventory.",
+      "Navigate to: lens.poly.com \u2192 Manage \u2192 Inventory",
+      "Select the Voyager Free 60+ device.",
+      "Assign a test policy (e.g., 'Test_Policy_Free60') to the device from Inventory.",
+      "Confirm policy assignment success notification.",
+      "Navigate to: Manage \u2192 Policies \u2192 Individual Device list",
+      "Locate the Voyager Free 60+ device entry.",
+      "Remove the assigned policy from the device.",
+      "Confirm policy removal success notification.",
+      "Refresh the Individual Device list and verify the policy is no longer assigned."
     ],
-    "expected": "The Voyager Free 60+ device that appears in Manage \u2192 Inventory should also appear in Manage \u2192 Policies \u2192 [Policy Name] \u2192 Individual Device list. Both sections should show consistent device data for the same serial number."
+    "expected": "Policy can be assigned to Voyager Free 60+ from Inventory AND successfully removed from Policies > Individual Device list. \ud83e\udde0 BUG SIGNATURE VALIDATION (Asymmetric CRUD): If policy assignment succeeds from Inventory but the device is missing from Policies > Individual Device list (preventing removal), this confirms the asymmetric CRUD workflow bug where Create/Assign works but Delete/Remove is blocked."
   },
   {
-    "title": "LENS-004: Verify Voyager Free 60+ policy removal via Individual Device list",
+    "title": "TC-WEB-004: Verify Voyager Free 60+ appears in Policies > Individual Device list after device power cycle and re-sync",
     "steps": [
-      "Precondition: Voyager Free 60+ is already assigned to a policy on lens.poly.com.",
-      "Log in to lens.poly.com as an admin user.",
-      "Navigate to Manage \u2192 Policies.",
-      "Select the policy that the Voyager Free 60+ is assigned to.",
-      "Go to the Individual Device tab.",
-      "Locate the Voyager Free 60+ in the assigned devices list.",
-      "Click the remove/delete icon next to the Voyager Free 60+ entry.",
-      "Confirm the removal in any dialog that appears.",
-      "Save the policy changes.",
-      "Refresh the page and navigate back to the same policy's Individual Device tab.",
-      "Verify the Voyager Free 60+ is no longer listed as an assigned device.",
-      "Navigate to Manage \u2192 Inventory and verify the device still exists in Inventory (policy should be removed but device remains)."
+      "Precondition: Voyager Free 60+ is registered in lens.poly.com Inventory but NOT visible in Policies > Individual Device list.",
+      "Power off the Voyager Free 60+ earbuds and charge case.",
+      "Wait 30 seconds.",
+      "Power on the Voyager Free 60+ earbuds and charge case.",
+      "Ensure the device reconnects to the Poly Studio Mobile app and syncs with lens.poly.com.",
+      "Wait up to 2 minutes for cloud sync.",
+      "Navigate to: lens.poly.com \u2192 Manage \u2192 Policies \u2192 Individual Device list",
+      "Refresh the page.",
+      "Search for the Voyager Free 60+ Device ID."
     ],
-    "expected": "Voyager Free 60+ is successfully removed from the policy's Individual Device list. The device remains in Inventory but shows no policy assignment. The removal persists after page refresh."
+    "expected": "Voyager Free 60+ device appears in Policies > Individual Device list after power cycle and re-sync. \ud83e\udde0 DEEP LIFECYCLE: Device power cycle triggers re-registration/sync that should populate the device across all management sections including policy interfaces."
   },
   {
-    "title": "LENS-005: Verify Voyager Free 60+ appears in Individual Device list after device re-sync from Poly Studio Mobile app",
+    "title": "TC-WEB-005: Verify Voyager Free 60+ appears in Policies > Individual Device list after re-adding device to Inventory",
     "steps": [
-      "Precondition: Voyager Free 60+ is paired and connected to the Poly Studio Mobile Android app.",
-      "Open Poly Studio Mobile app on the connected Android device.",
-      "Navigate to the device settings screen for Voyager Free 60+.",
-      "Trigger a manual sync/refresh (e.g., pull-to-refresh or tap Sync button if available).",
-      "On lens.poly.com web portal, log in as admin.",
-      "Navigate to Manage \u2192 Inventory and confirm the Voyager Free 60+ is listed with updated last-sync timestamp.",
-      "Navigate to Manage \u2192 Policies \u2192 [Any Policy] \u2192 Individual Device tab.",
-      "Search for the Voyager Free 60+ device.",
-      "Verify the device appears in the Individual Device assignment list."
+      "Precondition: Voyager Free 60+ is registered in lens.poly.com Inventory but NOT visible in Policies > Individual Device list.",
+      "Navigate to: lens.poly.com \u2192 Manage \u2192 Inventory",
+      "Remove the Voyager Free 60+ device from Inventory.",
+      "Confirm removal.",
+      "Re-add the Voyager Free 60+ device to Inventory (via serial number or auto-discovery).",
+      "Confirm the device appears in Inventory.",
+      "Navigate to: Manage \u2192 Policies \u2192 Individual Device list",
+      "Refresh the page.",
+      "Search for the Voyager Free 60+ Device ID."
     ],
-    "expected": "After a manual sync from the Poly Studio Mobile app, the Voyager Free 60+ appears in both Inventory and the Individual Device policy list on lens.poly.com with an updated last-sync timestamp."
+    "expected": "After re-adding Voyager Free 60+ to Inventory, the device appears in Policies > Individual Device list. \ud83e\udde0 BUG SIGNATURE VALIDATION: If the device was missing from Policies despite being in Inventory, a fresh re-add should trigger proper cross-section registration. If it still does not appear, this indicates a systemic backend registration gap specific to the Free 60+ model."
   },
   {
-    "title": "LENS-006: Verify Voyager Free 60+ appears in Individual Device list after Bluetooth reconnect and app relaunch",
+    "title": "TC-WEB-006: Verify bulk device list consistency \u2014 all devices in Inventory are present in Policies > Individual Device list",
     "steps": [
-      "Precondition: Voyager Free 60+ is paired with the Android device running Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app and confirm Voyager Free 60+ is connected.",
-      "Disconnect Bluetooth from the Android device's Bluetooth settings.",
-      "Wait 10 seconds, then reconnect Bluetooth to the Voyager Free 60+.",
-      "Open Poly Studio Mobile app and confirm the device reconnects successfully.",
-      "Navigate to device settings and trigger a sync if available.",
-      "On lens.poly.com, log in as admin.",
-      "Navigate to Manage \u2192 Inventory and verify the Voyager Free 60+ appears with recent sync time.",
-      "Navigate to Manage \u2192 Policies \u2192 [Any Policy] \u2192 Individual Device tab.",
-      "Search for the Voyager Free 60+ and verify it appears in the assignable devices list."
+      "Precondition: Multiple device types are registered in lens.poly.com Inventory (Voyager Free 60+, Voyager Free 20, Voyager Legend 50, Voyager Legend 30).",
+      "Navigate to: lens.poly.com \u2192 Manage \u2192 Inventory",
+      "Export or record all Device IDs present in Inventory.",
+      "Navigate to: Manage \u2192 Policies \u2192 Individual Device list",
+      "Export or record all Device IDs present in the Individual Device list.",
+      "Compare the two lists \u2014 verify every Device ID from Inventory exists in the Individual Device list.",
+      "Flag any Device IDs present in Inventory but missing from the Individual Device list."
     ],
-    "expected": "After Bluetooth disconnect/reconnect and app relaunch, the Voyager Free 60+ syncs to lens.poly.com and appears in both Inventory and the Individual Device policy list."
+    "expected": "Every device in Inventory has a corresponding entry in Policies > Individual Device list. \ud83e\udde0 BUG SIGNATURE VALIDATION: If Voyager Free 60+ is the only device missing from Policies while all other models (Free 20, Legend 50, Legend 30) are present, this confirms a device-model-specific registration gap rather than a systemic issue."
   },
   {
-    "title": "LENS-007: Verify Voyager Free 60+ appears in Individual Device list after phone reboot",
+    "title": "TC-WEB-007: Verify policy removal from Inventory directly (workaround path) for Voyager Free 60+",
     "steps": [
-      "Precondition: Voyager Free 60+ is paired with the Android device running Poly Studio Mobile app.",
-      "Open Poly Studio Mobile app and confirm Voyager Free 60+ is connected.",
-      "Reboot the Android phone.",
-      "After reboot, open Poly Studio Mobile app.",
-      "Wait for the app to automatically reconnect to Voyager Free 60+ (or manually reconnect via Bluetooth settings).",
-      "Confirm the device is connected in the app.",
-      "Navigate to device settings and trigger a sync if available.",
-      "On lens.poly.com, log in as admin.",
-      "Navigate to Manage \u2192 Inventory and verify the Voyager Free 60+ appears with recent sync time.",
-      "Navigate to Manage \u2192 Policies \u2192 [Any Policy] \u2192 Individual Device tab.",
-      "Search for the Voyager Free 60+ and verify it appears in the assignable devices list."
+      "Precondition: Voyager Free 60+ has a policy assigned and is visible in Inventory but NOT in Policies > Individual Device list.",
+      "Navigate to: lens.poly.com \u2192 Manage \u2192 Inventory",
+      "Select the Voyager Free 60+ device.",
+      "Locate the assigned policy field on the device detail/info panel.",
+      "Attempt to remove/clear the policy assignment directly from the Inventory device detail view.",
+      "Confirm the removal action.",
+      "Navigate to: Manage \u2192 Policies \u2192 Individual Device list",
+      "Refresh and verify the device is still absent (expected given the bug).",
+      "Navigate back to: Manage \u2192 Inventory",
+      "Verify the policy field for Voyager Free 60+ now shows 'No Policy' or equivalent."
     ],
-    "expected": "After a phone reboot and app relaunch, the Voyager Free 60+ syncs to lens.poly.com and appears in both Inventory and the Individual Device policy list."
+    "expected": "Policy can be removed from Voyager Free 60+ via Inventory device detail as a workaround path. \ud83e\udde0 WORKFLOW GAP VALIDATION: This confirms that policy removal is functionally possible via an alternative UI path, but the primary path (Policies > Individual Device list) is broken due to the device not being listed there."
   },
   {
-    "title": "LENS-008: Verify Voyager Free 60+ appears in Individual Device list after app force-kill and relaunch",
+    "title": "TC-WEB-008: Verify Voyager Free 60+ appears in Policies > Individual Device list after app re-pairing and cloud re-sync",
     "steps": [
-      "Precondition: Voyager Free 60+ is paired and connected to the Poly Studio Mobile Android app.",
-      "Open Poly Studio Mobile app and confirm Voyager Free 60+ is connected.",
-      "Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
-      "Reopen Poly Studio Mobile app.",
-      "Wait for the app to reconnect to Voyager Free 60+.",
-      "Confirm the device is connected in the app.",
-      "Navigate to device settings and trigger a sync if available.",
-      "On lens.poly.com, log in as admin.",
-      "Navigate to Manage \u2192 Inventory and verify the Voyager Free 60+ appears with recent sync time.",
-      "Navigate to Manage \u2192 Policies \u2192 [Any Policy] \u2192 Individual Device tab.",
-      "Search for the Voyager Free 60+ and verify it appears in the assignable devices list."
+      "Precondition: Voyager Free 60+ is registered in lens.poly.com Inventory but NOT visible in Policies > Individual Device list.",
+      "Open Poly Studio Mobile app on the paired phone.",
+      "Navigate to: Device \u2192 Settings \u2192 Remove Device / Forget",
+      "Confirm removal of Voyager Free 60+ from the app.",
+      "Re-pair the Voyager Free 60+ earbuds with the phone via Bluetooth.",
+      "Complete the onboarding flow in Poly Studio Mobile app.",
+      "Ensure the device syncs with lens.poly.com (wait up to 2 minutes).",
+      "Navigate to: lens.poly.com \u2192 Manage \u2192 Inventory",
+      "Verify the Voyager Free 60+ is present in Inventory.",
+      "Navigate to: Manage \u2192 Policies \u2192 Individual Device list",
+      "Refresh and search for the Voyager Free 60+ Device ID."
     ],
-    "expected": "After force-killing and relaunching the Poly Studio Mobile app, the Voyager Free 60+ syncs to lens.poly.com and appears in both Inventory and the Individual Device policy list."
-  },
-  {
-    "title": "LENS-009: Verify Voyager Free 20 also appears correctly in Individual Device list (sibling model comparison)",
-    "steps": [
-      "Precondition: Both Voyager Free 60+ and Voyager Free 20 are paired and synced to lens.poly.com.",
-      "Log in to lens.poly.com as an admin user.",
-      "Navigate to Manage \u2192 Inventory.",
-      "Search for 'Voyager Free 20' and confirm it is listed with correct model name and serial number.",
-      "Search for 'Voyager Free 60+' and confirm it is also listed.",
-      "Navigate to Manage \u2192 Policies \u2192 [Any Policy] \u2192 Individual Device tab.",
-      "Search for 'Voyager Free 20' and verify it appears in the assignable devices list.",
-      "Search for 'Voyager Free 60+' and verify it also appears in the assignable devices list.",
-      "Compare: both sibling models should behave consistently in the Individual Device list."
-    ],
-    "expected": "Both Voyager Free 20 and Voyager Free 60+ appear in Inventory and in the Individual Device policy list on lens.poly.com. There is no model-specific exclusion for either device."
-  },
-  {
-    "title": "LENS-010: Verify policy assignment persists for Voyager Free 60+ across browser sessions",
-    "steps": [
-      "Precondition: Voyager Free 60+ is assigned to a policy via lens.poly.com.",
-      "Log in to lens.poly.com as an admin user.",
-      "Navigate to Manage \u2192 Policies \u2192 [Policy with VF60+ assigned] \u2192 Individual Device tab.",
-      "Confirm the Voyager Free 60+ is listed as an assigned device.",
-      "Log out of lens.poly.com.",
-      "Close the browser completely.",
-      "Open a new browser session and log in to lens.poly.com again.",
-      "Navigate to Manage \u2192 Policies \u2192 [Same Policy] \u2192 Individual Device tab.",
-      "Verify the Voyager Free 60+ is still listed as an assigned device."
-    ],
-    "expected": "The Voyager Free 60+ policy assignment persists across browser sessions. After logging out, closing the browser, and logging back in, the device still appears in the policy's Individual Device list."
+    "expected": "After re-pairing and re-syncing, Voyager Free 60+ appears in both Inventory and Policies > Individual Device list. \ud83e\udde0 DEEP LIFECYCLE: Full device removal and re-pairing triggers a fresh registration cycle that should populate all management sections, including policy interfaces."
   }
 ]
