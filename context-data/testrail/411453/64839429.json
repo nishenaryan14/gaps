@@ -5,35 +5,31 @@
   "project": "411453",
   "title": "[IOS] Location Sharing Dialogue - Don't Allow - Enable Now - Allow While Using App",
   "feature": "App Settings",
-  "scenario": "Find My Device screen fails to show location permission dialog after granting \"While Using the App\" permission via \"Enable Now\" from App Settings",
+  "scenario": "Find My Device location permission dialog does not dismiss after granting \"While Using the App\" permission and returning to the app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and complete the onboarding flow.",
-    "2. When prompted for Location Sharing permission during onboarding, select \"Don't Allow\".",
-    "3. Navigate to the Home screen of the app.",
-    "4. Tap the menu icon (hamburger or gear) to access App Settings.",
-    "5. Select \"Find My Device\" from the App Settings menu.",
-    "6. Observe the location permission dialog that appears with \"Cancel\" and \"Enable Now\" options.",
-    "7. Tap \"Enable Now\" on the location permission dialog.",
-    "8. The phone's system settings for location permissions should open.",
-    "9. Grant the \"While Using the App\" location permission for Poly Studio Mobile.",
-    "10. Return to the Poly Studio Mobile app."
+    "1. Launch Poly Studio Mobile app and complete onboarding, selecting \"Don't Allow\" when prompted for location permission.",
+    "2. From the Home screen, navigate to App Settings.",
+    "3. Tap \"Find My Device\".",
+    "4. Observe the location permission dialog that appears with \"Cancel\" and \"Enable Now\" options.",
+    "5. Tap \"Enable Now\".",
+    "6. In the phone system settings, grant the \"While Using the App\" location permission.",
+    "7. Return to the Poly Studio Mobile app."
   ],
-  "expected": "The Find My Device screen is displayed with no permission dialog, and the user can see their paired Poly Bluetooth audio devices on a map or list.",
+  "expected": "The Find My Device screen is displayed and the location permission dialog is dismissed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "location-permission",
     "while-using-the-app",
-    "enable-now",
+    "permission-dialog",
     "poly-studio-mobile",
     "app-settings",
-    "location-sharing",
-    "permission-dialog"
+    "dialog-dismissal"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "70dd6e57d57b180a7975da950ca006e1daf01a559f527302ca9f0f25341f53ec",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.733507Z",
+  "processed_at": "2026-04-25T07:55:31.792834Z",
   "status": "active"
 }
