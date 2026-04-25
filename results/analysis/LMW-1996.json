@@ -1,12 +1,12 @@
 {
   "bug_id": "LMW-1996",
   "matched_testcases": [
+    "66317754",
     "66317771",
     "66317762",
     "66317765",
     "66317766",
     "66317767",
-    "65868311",
     "66317773",
     "67365092",
     "65641607",
@@ -19,177 +19,116 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case validates that Voice Prompts & Tones settings (Calls, Hold Reminder, Incoming Call, Active Audio Tone, Answering Call, Answer/Ignore) changed on PC propagate to the Android Poly Studio Mobile app.",
-    "No test case covers the cross-platform sync direction: PC \u2192 Android. Existing test 66317771 only covers the reverse direction (Android \u2192 other devices), not PC \u2192 Android.",
-    "No test case validates the sync trigger mechanism \u2014 e.g., whether changes take effect on reconnection, power cycle, or require manual refresh in the app. The bug scenario explicitly involves waiting for sync, which is untested.",
-    "No test case covers the specific Voice Prompts & Tones sub-settings as a group. These are distinct from generic toggle/slider settings and have unique behavior (e.g., Active Audio Tone is a selection, not a toggle).",
-    "\ud83e\udde0 LIFECYCLE DIMENSIONS: No test validates whether PC-side changes persist in the Android app after: (a) navigating away from Device Settings and back, (b) backgrounding/foregrounding the app, (c) killing and relaunching the app, or (d) Bluetooth disconnect/reconnect cycle.",
-    "\ud83e\udde0 DEVICE ASYMMETRY: No test accounts for device-specific behavior differences. For example, Sync 20/Sync 20+ speakerphones have Secure Connection feature that disconnects after each call, which could interfere with sync propagation. Voyager series headsets may handle settings sync differently than Sync speakerphones.",
-    "\ud83e\udde0 STATE TRIGGERS: No test validates exactly when the Android app reads/refreshes settings from the device. Does it poll on app foreground? On Device Settings screen entry? On Bluetooth service discovery? The bug could be a timing issue where the app shows stale cached values instead of re-reading from the device."
+    "No existing test case covers cross-platform (PC \u2192 Android) propagation of Voice Prompts & Tones settings. The bug is about PC-side changes not syncing to the Android app \u2014 this is a multi-device sync scenario, not a single-app persistence scenario.",
+    "Test 66317771 covers propagation FROM Poly Studio Mobile TO other connected devices, but the bug is the REVERSE direction: PC \u2192 Android. This is a critical asymmetry gap.",
+    "No test validates the sync mechanism itself \u2014 e.g., what triggers the sync (reconnect, refresh, polling interval, push notification). The bug steps mention 'Wait for the device to sync (reconnect or refresh)' but no test defines the exact sync trigger or validates it.",
+    "No test covers the Voice Prompts & Tones sub-screen specifically for cross-device sync. Existing tests focus on generic settings persistence (66317765, 66317766, 66317767) but only within the Android app lifecycle, not across platforms.",
+    "No test validates state after a PC-side change + device reconnect cycle. This is a Bluetooth state transition gap (Connected \u2192 Disconnected \u2192 Reconnected) combined with cross-platform sync.",
+    "No test covers the specific Voice Prompts & Tones settings items (Calls, Hold Reminder, Incoming Call, Active Audio Tone, Answering Call, Answer/Ignore) for sync behavior. These are distinct toggle/option types that may have different sync behaviors.",
+    "No test validates the scenario where settings are changed on PC while the Android app is in different lifecycle states (open/foreground, backgrounded, killed) \u2014 the sync may behave differently depending on app state."
   ],
   "generated_testcases": [
     {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate to Android app on reconnection",
+      "title": "PC\u2192Android Sync: Voice Prompts & Tones \u2014 Toggle change on PC propagates after Bluetooth reconnect (Android app backgrounded)",
       "steps": [
-        "1. Connect Poly device (e.g., Sync 20, Voyager 4320) to both PC (via BT700/BT600 dongle or USB) and Android phone (via Bluetooth).",
-        "2. Open Poly Lens Desktop on PC \u2192 navigate to Device Settings \u2192 Voice Prompts & Tones.",
-        "3. Change the following settings on PC: Set 'Calls' to 'Disabled', Set 'Hold Reminder' to 'Disabled', Set 'Incoming Call' tone to 'Ring 2', Set 'Active Audio Tone' to 'Tone 2', Set 'Answering Call' to 'Disabled', Set 'Answer/Ignore' to 'Disabled'.",
-        "4. On Android, open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "5. Observe all six settings values displayed in the app.",
-        "6. Disconnect Bluetooth from Android (Settings \u2192 Bluetooth \u2192 tap device \u2192 Forget, or turn off Bluetooth).",
-        "7. Reconnect Android to the Poly device via Bluetooth.",
-        "8. Open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "9. Observe all six settings values again."
+        "Precondition: Poly Studio Mobile app installed, device paired to both Android phone and PC (via BT700/USB). Voice Prompts & Tones screen open on Android app.",
+        "1. On PC (Poly Lens Desktop or Plantronics Hub): Navigate to Device Settings \u2192 Voice Prompts & Tones \u2192 Set 'Calls' toggle to OFF.",
+        "2. On Android: Press Home button to background the app (do not kill).",
+        "3. On Android: Force Bluetooth disconnect \u2014 Settings \u2192 Bluetooth \u2192 tap device \u2192 'Forget' OR turn off phone Bluetooth.",
+        "4. Wait 5s. Reconnect: Turn Bluetooth ON \u2192 re-pair device.",
+        "5. Open Poly Studio Mobile app. Navigate to: Device \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
+        "6. Observe the 'Calls' toggle state."
       ],
-      "expected": "After Bluetooth reconnection, all six Voice Prompts & Tones settings in the Android Poly Studio Mobile app match the values set on PC (Calls=Disabled, Hold Reminder=Disabled, Incoming Call=Ring 2, Active Audio Tone=Tone 2, Answering Call=Disabled, Answer/Ignore=Disabled). The app does not show stale cached values."
+      "expected": "Expected: 'Calls' toggle shows OFF (synced from PC). Actual (If Bug): Toggle still shows ON \u2014 PC change was not propagated to Android app after reconnect cycle."
     },
     {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after Android app force-kill and relaunch",
+      "title": "PC\u2192Android Sync: Voice Prompts & Tones \u2014 Toggle change on PC propagates while Android app is in foreground (live sync)",
       "steps": [
-        "1. Connect Poly device (e.g., Sync 20, Voyager 4320) to both PC and Android phone.",
-        "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "3. Change settings on PC: Set 'Calls' to 'Tones Only', Set 'Hold Reminder' to 'Enabled', Set 'Incoming Call' to 'Ring 1', Set 'Active Audio Tone' to 'Tone 1', Set 'Answering Call' to 'Enabled', Set 'Answer/Ignore' to 'Enabled'.",
-        "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Note the current values.",
-        "5. Press the Android Recents button and swipe Poly Studio Mobile away to force-kill the app.",
-        "6. Wait 10 seconds.",
-        "7. Reopen Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "8. Observe all six settings values."
+        "Precondition: Device connected to both Android (Poly Studio Mobile app open, Voice Prompts & Tones screen visible) and PC.",
+        "1. On PC: Navigate to Device Settings \u2192 Voice Prompts & Tones \u2192 Set 'Hold Reminder' toggle to OFF.",
+        "2. On Android: Remain on Voice Prompts & Tones screen. Do NOT navigate away. Observe the 'Hold Reminder' toggle for up to 30 seconds.",
+        "3. If no change observed: Pull-to-refresh or tap the sync icon (if available) on the Android app.",
+        "4. Note the exact trigger that caused the sync (automatic push, pull-to-refresh, or required reconnect)."
       ],
-      "expected": "After force-kill and relaunch of the Android app, all six Voice Prompts & Tones settings match the values set on PC. The app reads fresh settings from the device rather than showing cached pre-change values."
+      "expected": "Expected: 'Hold Reminder' toggle updates to OFF on Android within 30s OR immediately after manual refresh. Actual (If Bug): Toggle remains ON \u2014 no live sync mechanism works from PC\u2192Android."
     },
     {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after Android app background/foreground cycle",
+      "title": "PC\u2192Android Sync: Voice Prompts & Tones \u2014 Multiple toggles changed on PC sync after app force-kill and relaunch",
       "steps": [
-        "1. Connect Poly device to both PC and Android phone.",
-        "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "3. Set 'Calls' to 'Tones Only', 'Hold Reminder' to 'Enabled', 'Incoming Call' to 'Ring 3', 'Active Audio Tone' to 'Tone 3', 'Answering Call' to 'Enabled', 'Answer/Ignore' to 'Enabled'.",
-        "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify initial values.",
-        "5. On PC, change settings: Set 'Calls' to 'Disabled', 'Hold Reminder' to 'Disabled', 'Incoming Call' to 'Ring 2', 'Active Audio Tone' to 'Tone 2', 'Answering Call' to 'Disabled', 'Answer/Ignore' to 'Disabled'.",
-        "6. On Android, press the Home button to background the Poly Studio Mobile app.",
-        "7. Wait 15 seconds.",
-        "8. Tap the Poly Studio Mobile icon to bring the app back to foreground.",
-        "9. Navigate to Device Settings \u2192 Voice Prompts & Tones.",
-        "10. Observe all six settings values."
+        "Precondition: Device connected to both Android and PC. Android app in foreground.",
+        "1. On PC: Navigate to Device Settings \u2192 Voice Prompts & Tones \u2192 Set the following: 'Incoming Call' = OFF, 'Active Audio Tone' = OFF, 'Answering Call' = ON.",
+        "2. IMMEDIATELY on Android: Force-kill the app (swipe from recents). Do NOT navigate away or refresh first.",
+        "3. Wait 10s. Relaunch Poly Studio Mobile app.",
+        "4. Navigate to: Device \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
+        "5. Verify each toggle state."
       ],
-      "expected": "After backgrounding and foregrounding the Android app, all six Voice Prompts & Tones settings reflect the values changed on PC in step 5. The app re-reads settings from the device on foreground, not showing stale cached values."
+      "expected": "Expected: 'Incoming Call' = OFF, 'Active Audio Tone' = OFF, 'Answering Call' = ON (all synced from PC). Actual (If Bug): All toggles show pre-change values \u2014 PC changes lost because app was killed before sync trigger occurred."
     },
     {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after navigating away and back to Device Settings",
+      "title": "PC\u2192Android Sync: Voice Prompts & Tones \u2014 Dropdown option change on PC propagates after device power cycle",
       "steps": [
-        "1. Connect Poly device to both PC and Android phone.",
-        "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "3. Set baseline values on PC: 'Calls'='Tones Only', 'Hold Reminder'='Enabled', 'Incoming Call'='Ring 1', 'Active Audio Tone'='Tone 1', 'Answering Call'='Enabled', 'Answer/Ignore'='Enabled'.",
-        "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify baseline.",
-        "5. On PC, change settings: 'Calls'='Disabled', 'Hold Reminder'='Disabled', 'Incoming Call'='Ring 3', 'Active Audio Tone'='Tone 3', 'Answering Call'='Disabled', 'Answer/Ignore'='Disabled'.",
-        "6. On Android, tap the back arrow to navigate from Device Settings to the main device screen.",
-        "7. Wait 5 seconds.",
-        "8. Tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "9. Observe all six settings values."
+        "Precondition: Device connected to both Android and PC. Android app open at Home screen (not in Voice Prompts & Tones).",
+        "1. On PC: Navigate to Device Settings \u2192 Voice Prompts & Tones \u2192 Set 'Answer/Ignore' dropdown to 'Tones Only'.",
+        "2. On Android: Do NOT open Voice Prompts & Tones screen yet.",
+        "3. Power off the device (hold Power button 2s). Wait 5s.",
+        "4. Power on the device. Wait for auto-reconnect to Android.",
+        "5. Open Poly Studio Mobile app. Navigate to: Device \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
+        "6. Observe the 'Answer/Ignore' dropdown value."
       ],
-      "expected": "After navigating away from Device Settings and back, all six Voice Prompts & Tones settings in the Android app match the values changed on PC in step 5. The app refreshes settings upon re-entering the Device Settings screen."
+      "expected": "Expected: 'Answer/Ignore' shows 'Tones Only' (synced from PC after device power cycle + reconnect). Actual (If Bug): Dropdown shows previous value (e.g., 'Voice & Tones') \u2014 PC change not persisted through device power cycle."
     },
     {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after Bluetooth disconnect/reconnect cycle (Sync 20 with Secure Connection)",
+      "title": "PC\u2192Android Sync: Voice Prompts & Tones \u2014 Sync trigger identification (polling interval test)",
       "steps": [
-        "1. Connect Sync 20/Sync 20+ to both PC (via BT700/BT600 dongle) and Android phone.",
-        "2. On Android, open Poly Studio Mobile \u2192 tap Sync 20 \u2192 Device Settings \u2192 Voice Prompts & Tones. Note baseline values.",
-        "3. On PC, open Poly Lens Desktop \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "4. Change settings on PC: Set 'Calls' to 'Disabled', 'Hold Reminder' to 'Disabled', 'Incoming Call' to 'Ring 2', 'Active Audio Tone' to 'Tone 2', 'Answering Call' to 'Disabled', 'Answer/Ignore' to 'Disabled'.",
-        "5. On Android, go to Settings \u2192 Bluetooth \u2192 tap Sync 20 \u2192 select 'Forget' to disconnect.",
-        "6. Wait 10 seconds.",
-        "7. Re-pair Android phone with Sync 20 via Bluetooth.",
-        "8. Open Poly Studio Mobile \u2192 tap Sync 20 \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "9. Observe all six settings values.",
-        "10. Make a mobile call from the Android phone through the Sync 20.",
-        "11. End the call. (Note: Sync 20 with Secure Connection enabled will disconnect Bluetooth after the call.)",
-        "12. Wait for Bluetooth to automatically reconnect (or manually reconnect if needed).",
-        "13. Open Poly Studio Mobile \u2192 tap Sync 20 \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "14. Observe all six settings values again."
+        "Precondition: Device connected to both Android and PC. Android app open at Voice Prompts & Tones screen.",
+        "1. Note current time T0. On PC: Change 'Calls' toggle to opposite state.",
+        "2. On Android: Do NOT interact with the app. Observe the screen continuously.",
+        "3. Record the timestamp T_sync when the Android UI updates to reflect the PC change.",
+        "4. Calculate delta = T_sync - T0.",
+        "5. Repeat steps 1-4 two more times with different toggles ('Hold Reminder', 'Incoming Call').",
+        "6. Determine if sync is push-based (instant, delta < 2s), polling-based (consistent delta ~5s/10s/30s), or reconnect-triggered (no update without disconnect/reconnect)."
       ],
-      "expected": "After Bluetooth reconnection (step 8-9), all six Voice Prompts & Tones settings match the PC-changed values. After the call ends and Secure Connection triggers a disconnect/reconnect cycle (step 12-14), the settings still match the PC-changed values and are not reset to defaults or lost."
+      "expected": "Expected: Sync occurs within a consistent time window across all three trials, identifying the sync mechanism. Actual (If Bug): No sync occurs at all while app is idle on the screen \u2014 user must navigate away and back, or disconnect/reconnect, to see PC changes."
     },
     {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify PC changes propagate after device power cycle",
+      "title": "PC\u2192Android Sync: Voice Prompts & Tones \u2014 PC change while Android app is closed, then app opened later",
       "steps": [
-        "1. Connect Poly device (e.g., Voyager 4320) to both PC and Android phone.",
-        "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "3. Change settings on PC: Set 'Calls' to 'Tones Only', 'Hold Reminder' to 'Enabled', 'Incoming Call' to 'Ring 1', 'Active Audio Tone' to 'Tone 1', 'Answering Call' to 'Enabled', 'Answer/Ignore' to 'Enabled'.",
-        "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify baseline.",
-        "5. On PC, change settings: Set 'Calls' to 'Disabled', 'Hold Reminder' to 'Disabled', 'Incoming Call' to 'Ring 3', 'Active Audio Tone' to 'Tone 3', 'Answering Call' to 'Disabled', 'Answer/Ignore' to 'Disabled'.",
-        "6. Power off the Poly device by pressing and holding the Power button for 2 seconds (or until power off).",
-        "7. Wait 10 seconds.",
-        "8. Power on the Poly device by pressing and holding the Power button for 2 seconds.",
-        "9. Wait for the device to reconnect to both PC and Android automatically.",
-        "10. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "11. Observe all six settings values."
+        "Precondition: Device connected to both Android and PC. Poly Studio Mobile app is fully closed (not in recents).",
+        "1. On PC: Navigate to Device Settings \u2192 Voice Prompts & Tones \u2192 Set 'Calls' = OFF, 'Hold Reminder' = ON, 'Incoming Call' = OFF.",
+        "2. Wait 30s. On Android: Open Poly Studio Mobile app.",
+        "3. Navigate to: Device \u2192 Audio Settings \u2192 Voice Prompts & Tones.",
+        "4. Verify all three toggle states."
       ],
-      "expected": "After the device power cycle and reconnection, all six Voice Prompts & Tones settings in the Android app match the values changed on PC in step 5. The device persists the PC-side settings through a power cycle and the Android app reads the updated values upon reconnection."
+      "expected": "Expected: 'Calls' = OFF, 'Hold Reminder' = ON, 'Incoming Call' = OFF \u2014 all synced from PC upon app open. Actual (If Bug): Toggles show default or previous values \u2014 PC changes not fetched on app launch."
     },
     {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify partial change propagation (single setting change on PC)",
+      "title": "PC\u2192Android Sync: Voice Prompts & Tones \u2014 Asymmetry validation: Android\u2192PC direction works but PC\u2192Android does not",
       "steps": [
-        "1. Connect Poly device to both PC and Android phone.",
-        "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "3. Set all six settings to known baseline values on PC: 'Calls'='Tones Only', 'Hold Reminder'='Enabled', 'Incoming Call'='Ring 1', 'Active Audio Tone'='Tone 1', 'Answering Call'='Enabled', 'Answer/Ignore'='Enabled'.",
-        "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify all six match baseline.",
-        "5. On PC, change ONLY ONE setting: Set 'Incoming Call' from 'Ring 1' to 'Ring 3'. Leave all other five settings unchanged.",
-        "6. Disconnect Bluetooth from Android (Settings \u2192 Bluetooth \u2192 tap device \u2192 Forget).",
-        "7. Reconnect Android to the Poly device.",
-        "8. Open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "9. Observe all six settings values."
+        "Precondition: Device connected to both Android and PC. Both apps showing Voice Prompts & Tones screen.",
+        "1. On Android: Set 'Calls' toggle to OFF. Observe PC screen updates to OFF within 30s.",
+        "2. On Android: Set 'Calls' toggle back to ON. Observe PC screen updates to ON.",
+        "3. On PC: Set 'Hold Reminder' toggle to OFF. Observe Android screen.",
+        "4. Wait 30s. If no update, perform Bluetooth disconnect/reconnect on Android.",
+        "5. Note whether PC\u2192Android sync succeeded after reconnect.",
+        "6. On PC: Set 'Hold Reminder' toggle back to ON. Observe Android screen again."
       ],
-      "expected": "Only the 'Incoming Call' setting shows the PC-changed value ('Ring 3'). The other five settings ('Calls', 'Hold Reminder', 'Active Audio Tone', 'Answering Call', 'Answer/Ignore') remain at their baseline values. A single-setting change on PC does not corrupt or reset other Voice Prompts & Tones settings."
+      "expected": "Expected (Symmetry): Both directions sync reliably \u2014 Android\u2192PC updates immediately, PC\u2192Android updates within same mechanism. Actual (If Bug - Asymmetry): Android\u2192PC sync works (steps 1-2 pass), but PC\u2192Android sync fails even after reconnect (steps 3-5 fail) \u2014 confirming the reported bug scenario."
     },
     {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify Active Audio Tone selection syncs correctly (dropdown/selection, not toggle)",
+      "title": "PC\u2192Android Sync: Voice Prompts & Tones \u2014 All 6 setting items sync independently",
       "steps": [
-        "1. Connect Poly device to both PC and Android phone.",
-        "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "3. Set 'Active Audio Tone' to 'Tone 1' on PC.",
-        "4. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify 'Active Audio Tone' shows 'Tone 1'.",
-        "5. On PC, change 'Active Audio Tone' to 'Tone 3'.",
-        "6. Disconnect Bluetooth from Android and reconnect.",
-        "7. Open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "8. Observe the 'Active Audio Tone' value.",
-        "9. On PC, change 'Active Audio Tone' to 'Off'.",
-        "10. Disconnect Bluetooth from Android and reconnect.",
-        "11. Open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "12. Observe the 'Active Audio Tone' value."
+        "Precondition: Device connected to both Android and PC. Android app open at Voice Prompts & Tones screen.",
+        "1. On PC: Set all 6 items to known states: 'Calls'=OFF, 'Hold Reminder'=OFF, 'Incoming Call'=ON, 'Active Audio Tone'=ON, 'Answering Call'=OFF, 'Answer/Ignore'='Voice Only'.",
+        "2. On Android: Perform Bluetooth disconnect \u2192 reconnect.",
+        "3. Navigate away from Voice Prompts & Tones screen, then back.",
+        "4. Verify each of the 6 items matches the PC-set values.",
+        "5. On PC: Reverse all 6 items: 'Calls'=ON, 'Hold Reminder'=ON, 'Incoming Call'=OFF, 'Active Audio Tone'=OFF, 'Answering Call'=ON, 'Answer/Ignore'='Tones Only'.",
+        "6. Repeat steps 2-3.",
+        "7. Verify all 6 items match the reversed values."
       ],
-      "expected": "The 'Active Audio Tone' setting (a selection-type setting, not a simple toggle) correctly syncs from PC to Android for all valid values: 'Tone 1', 'Tone 3', and 'Off'. The Android app displays the exact selection made on PC without truncation or fallback to default."
-    },
-    {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify sync when Android app is already open on Device Settings screen during PC change",
-      "steps": [
-        "1. Connect Poly device to both PC and Android phone.",
-        "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "3. On Android, open Poly Studio Mobile \u2192 tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "4. While the Android app is actively displaying the Voice Prompts & Tones screen, change settings on PC: Set 'Calls' to 'Disabled', 'Hold Reminder' to 'Disabled', 'Incoming Call' to 'Ring 2', 'Active Audio Tone' to 'Tone 2', 'Answering Call' to 'Disabled', 'Answer/Ignore' to 'Disabled'.",
-        "5. Observe the Android app screen for 30 seconds without navigating away.",
-        "6. Tap the back arrow to leave Device Settings, then tap [Device Name] \u2192 Device Settings \u2192 Voice Prompts & Tones again.",
-        "7. Observe all six settings values."
-      ],
-      "expected": "The Android app may or may not update in real-time while on the screen (step 5). However, after navigating away and back (step 6-7), all six Voice Prompts & Tones settings match the values changed on PC. The app does not require a Bluetooth disconnect/reconnect to pick up PC-side changes \u2014 re-entering the settings screen is sufficient."
-    },
-    {
-      "title": "[PC\u2192Android Sync] Voice Prompts & Tones \u2014 Verify sync with Voyager series headset (device asymmetry check)",
-      "steps": [
-        "1. Connect Voyager 4320 (or other Voyager series headset) to both PC (via BT700 dongle) and Android phone.",
-        "2. Open Poly Lens Desktop on PC \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "3. Set baseline on PC: 'Calls'='Tones Only', 'Hold Reminder'='Enabled', 'Incoming Call'='Ring 1', 'Active Audio Tone'='Tone 1', 'Answering Call'='Enabled', 'Answer/Ignore'='Enabled'.",
-        "4. On Android, open Poly Studio Mobile \u2192 tap Voyager 4320 \u2192 Device Settings \u2192 Voice Prompts & Tones. Verify baseline.",
-        "5. On PC, change settings: 'Calls'='Disabled', 'Hold Reminder'='Disabled', 'Incoming Call'='Ring 3', 'Active Audio Tone'='Tone 3', 'Answering Call'='Disabled', 'Answer/Ignore'='Disabled'.",
-        "6. Disconnect Bluetooth from Android and reconnect.",
-        "7. Open Poly Studio Mobile \u2192 tap Voyager 4320 \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "8. Observe all six settings values.",
-        "9. Power cycle the Voyager headset (power off, wait 10s, power on).",
-        "10. Reconnect to Android.",
-        "11. Open Poly Studio Mobile \u2192 tap Voyager 4320 \u2192 Device Settings \u2192 Voice Prompts & Tones.",
-        "12. Observe all six settings values again."
-      ],
-      "expected": "The Voyager series headset behaves consistently with Sync 20: all six Voice Prompts & Tones settings changed on PC propagate to the Android app after Bluetooth reconnection (step 7-8) and persist through a device power cycle (step 11-12). No device-specific divergence in sync behavior is observed."
+      "expected": "Expected: All 6 Voice Prompts & Tones items sync correctly from PC to Android in both directions (original and reversed). Actual (If Bug): Some items sync while others do not \u2014 indicating per-item sync implementation gaps or different sync behaviors for toggle vs. dropdown types."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:24.342797Z"
+  "processed_at": "2026-04-25T09:45:49.454052Z"
 }
