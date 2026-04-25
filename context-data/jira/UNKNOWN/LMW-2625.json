@@ -5,34 +5,34 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83d\udfe5 DFU flow can proceed on Software Update page even though device was disconnected",
   "feature": "Firmware Updates",
-  "scenario": "DFU flow incorrectly proceeds to Three Easy Steps page when device is disconnected during Software Update on Poly Studio Mobile app",
-  "description_clean": "DFU flow can proceed on the Software Update page even though the device was disconnected. After entering the DFU flow and navigating to the Software Update page, if the user disconnects the headset (or puts one earbud in the case) and taps \"Continue\", they are incorrectly navigated to the Three Easy Steps page instead of being shown an error message: \"Update currently not available, please try back later.\"",
+  "scenario": "DFU flow proceeds on Software Update page after device disconnection instead of showing \"Update currently not available\" error",
+  "description_clean": "DFU flow can proceed on the Software Update page even though the device was disconnected. After entering the DFU flow and navigating to the Software Update page, if the user disconnects the headset and tries to continue, they are taken to the Three Easy Steps page instead of being blocked with an error message: \"Update currently not available, please try back later.\"",
   "steps": [
     "Open Poly Studio Mobile app on Android.",
-    "Ensure a Poly Bluetooth audio device (e.g., headset or earbuds) is connected.",
+    "Ensure a Poly Bluetooth headset is connected.",
     "Navigate to Home \u2192 [Device Name] \u2192 Software Update.",
-    "Tap 'Continue' to enter the DFU (Device Firmware Update) flow.",
-    "While on the Software Update page, disconnect the device (e.g., turn off the headset or place one earbud in the charging case).",
-    "Tap 'Continue' again."
+    "Tap 'Update' or enter the DFU (Device Firmware Update) flow.",
+    "While on the Software Update page, disconnect the headset (e.g., turn off Bluetooth or move out of range).",
+    "Attempt to continue or proceed with the update on the Software Update page."
   ],
-  "expected": "An error message should be displayed: \"Update currently not available, please try back later.\"",
-  "actual": "The user is incorrectly navigated to the Three Easy Steps page instead of seeing the error message.",
+  "expected": "The user should be blocked with an error message: \"Update currently not available, please try back later.\"",
+  "actual": "The user is taken to the \"Three Easy Steps\" page instead of being blocked with the error message.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "dfu-flow",
-    "software-update",
+    "software-update-page",
+    "device-disconnection",
+    "update-currently-not-available",
     "poly-studio-mobile",
-    "device-disconnect",
-    "three-easy-steps",
+    "bluetooth-headset",
     "firmware-update",
-    "bluetooth-disconnection",
-    "dfu-state-transition"
+    "error-handling"
   ],
   "source_last_updated": "2026-04-23T09:49:42.000+0000",
   "source_hash": "b7eb5debf54f242eceff5449ea011c4566cc6a7197a38c7ae4c3391af68613be",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.249873Z",
+  "processed_at": "2026-04-25T07:55:31.137898Z",
   "status": "active"
 }
