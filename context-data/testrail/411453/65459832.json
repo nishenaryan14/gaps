@@ -10,11 +10,11 @@
     "1. Launch the Poly Studio Mobile app and complete the onboarding flow.",
     "2. When prompted during onboarding, tap \"Allow\" to grant notification permissions.",
     "3. After onboarding completes, navigate to the Home screen.",
-    "4. Tap the menu icon (hamburger) or profile icon to access App Settings.",
+    "4. Tap the menu icon (hamburger) or your profile icon to access App Settings.",
     "5. Go to App Settings \u2192 General \u2192 Notifications.",
     "6. Observe the Notifications screen UI."
   ],
-  "expected": "The Notifications screen displays a master toggle for Notifications set to ON. Individual notification settings (e.g., call alerts, message alerts, firmware update notifications) are visible and can be toggled on/off independently.",
+  "expected": "The Notifications screen displays a master toggle for Notifications set to ON. Individual notification settings (e.g., call alerts, message alerts, firmware update notifications) are visible and can be toggled independently.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +24,11 @@
     "notification-master-toggle",
     "individual-notification-settings",
     "onboarding-flow",
-    "general-settings",
-    "notifications-screen"
+    "general-settings"
   ],
   "source_last_updated": "1761227849",
   "source_hash": "38c93f85d50c71fddfa0c72ded23e9753a15e360e45e4fc5479d9f1e03885f31",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.973249Z",
+  "processed_at": "2026-04-25T08:21:31.046571Z",
   "status": "active"
 }
