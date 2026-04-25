@@ -4,30 +4,25 @@
   "type": "testcase",
   "project": "411453",
   "title": "New DFU screen - translations",
-  "feature": "DFU Screen",
-  "scenario": "Verify that the new DFU screen displays correct translations for supported languages",
-  "steps": [
-    "Set phone language to a supported language.",
-    "Open the app with an update for EB/CC on Tern/Emu.",
-    "Navigate to the new DFU screen.",
-    "Check the text for correctness, broken words, and visibility."
-  ],
-  "expected": "The DFU screen displays correct translations for all supported languages, with no broken words or visibility issues.",
+  "feature": "Firmware Updates",
+  "scenario": "New DFU screen displays correctly with proper translations and no broken text on Tern/Emu devices with EB/CC firmware update available",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU screen",
-    "translations",
-    "supported languages",
-    "EB/CC update",
-    "Tern/Emu",
-    "text correctness",
-    "localization",
-    "firmware update"
+    "dfu-screen",
+    "firmware-update",
+    "tern",
+    "emu",
+    "eb-firmware",
+    "cc-firmware",
+    "translation-validation",
+    "ui-text-integrity"
   ],
   "source_last_updated": "1762331320",
   "source_hash": "48234d326f02030e09057c1cb8aa9a81056dcbba8068abe2118cc7a667aa2c46",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.349973Z",
+  "processed_at": "2026-04-25T05:37:16.980757Z",
   "status": "active"
 }
