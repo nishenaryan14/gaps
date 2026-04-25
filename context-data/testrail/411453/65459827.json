@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Notifications - Device disconnected",
   "feature": "Notifications",
-  "scenario": "Tapping \"Device is disconnected\" notification redirects to Poly Lens Home Screen showing the disconnected device when paired device is turned off while app is in background",
+  "scenario": "Tapping \"Device is disconnected\" notification redirects to Poly Lens app Home Screen showing the disconnected device",
   "steps": [
     "1. Launch the Poly Studio Mobile app and ensure a Bluetooth audio device is paired and connected.",
-    "2. Press the Home button to send the app to the background.",
-    "3. Turn off the paired Bluetooth audio device (e.g., press and hold the Power button to power off).",
-    "4. Observe the notification that appears on the device.",
-    "5. Tap the notification."
+    "2. Press the Home button or switch to another app to send the Poly Studio Mobile app to the background.",
+    "3. Disconnect the paired device (e.g., turn off the device, move out of range, or press the Bluetooth button to disconnect).",
+    "4. Observe the notification area for a \"Device is disconnected\" notification.",
+    "5. Tap the \"Device is disconnected\" notification.",
+    "6. Observe the screen that opens."
   ],
   "expected": "A \"Device is disconnected\" notification appears. Tapping the notification redirects the user to the Poly Studio Mobile app Home Screen showing the disconnected device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "device-disconnected-notification",
-    "poly-lens-home-screen",
     "poly-studio-mobile",
+    "lens-app-home-screen",
     "bluetooth-disconnection",
-    "background-app-behavior",
     "notification-redirect",
-    "paired-device-off"
+    "paired-device-status",
+    "app-background-behavior"
   ],
   "source_last_updated": "1761224568",
   "source_hash": "370d86ade79840de4f042c507f844dde69c66de0d680c245e1654a872ed49742",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.961872Z",
+  "processed_at": "2026-04-25T08:21:31.040426Z",
   "status": "active"
 }
