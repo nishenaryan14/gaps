@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Flamingo/Spoonbill - Software update for standalone headset",
   "feature": "Firmware Update",
-  "scenario": "DFU (software update) completes successfully on a standalone headset (not paired with charge case) via Poly Studio Mobile app",
+  "scenario": "DFU (software update) completes successfully on a standalone headset (not paired with charge case) via Poly Studio Mobile app Device Settings",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. On the Home screen, locate your standalone headset (not paired with a charge case) and tap the update button.",
-    "3. Verify that the Device Settings screen opens with the Software Update tab expanded and only one \"Update\" button visible.",
-    "4. Tap the \"Update\" button to initiate the DFU process.",
-    "5. Wait for the DFU process to complete on the standalone headset."
+    "1. Open Poly Studio Mobile app on the Home screen.",
+    "2. Ensure the standalone headset (not paired with a charge case) is connected to the app.",
+    "3. Tap the update button on the device Home screen.",
+    "4. Verify that Device Settings opens with the Software Update tab expanded and only one \"Update\" button is visible.",
+    "5. Tap the \"Update\" button.",
+    "6. Complete the DFU (Device Firmware Update) process as prompted by the app."
   ],
-  "expected": "The DFU process for the standalone headset completes successfully.",
+  "expected": "The DFU process for the standalone headset completes successfully without errors.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu",
-    "software-update",
-    "standalone-headset",
-    "poly-studio-mobile",
     "firmware-update",
+    "poly-studio-mobile",
+    "standalone-headset",
     "device-settings",
-    "android"
+    "software-update",
+    "device-firmware-update"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "783431837a2b217fa64a8f1d883d71aa30460ac2cd11202b0dc5ee8d7f67ff8f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.976724Z",
+  "processed_at": "2026-04-25T07:55:32.002770Z",
   "status": "active"
 }
