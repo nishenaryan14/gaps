@@ -8,28 +8,28 @@
   "scenario": "DFU is blocked with popup message when attempting to update firmware during an active call on Device Settings Software Update page",
   "steps": [
     "1. Launch Poly Studio Mobile app on Android.",
-    "2. Connect to a supported Poly Bluetooth audio device.",
-    "3. Initiate or receive an active call on the device.",
-    "4. While on the active call, navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "5. Tap on 'Software Update' (or 'Update') option in Device Settings.",
-    "6. Observe the popup message displayed on screen.",
-    "7. Tap 'OK' on the popup to dismiss it."
+    "2. Connect a Poly Bluetooth audio device.",
+    "3. Initiate or receive an active call on the connected device.",
+    "4. While on the active call, navigate to: Poly Studio Mobile \u2192 [Device Name] \u2192 Device Settings \u2192 Software Update.",
+    "5. On the Software Update page, tap the \"Update\" button.",
+    "6. Observe the popup message displayed.",
+    "7. Tap \"OK\" on the popup to dismiss it."
   ],
-  "expected": "The DFU (Device Firmware Update) should not start. A popup should appear with the message \"Cannot update this device during a call\". Tapping OK dismisses the popup and returns the user to the Software Update tab without initiating the update.",
+  "expected": "A popup appears with the message \"Cannot update this device during a call\". Tapping OK dismisses the popup and returns the user to the Software Update tab without starting the DFU.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-blocked",
     "firmware-update",
     "active-call",
-    "software-update",
-    "device-settings",
+    "software-update-page",
     "poly-studio-mobile",
-    "popup-message"
+    "popup-message",
+    "device-settings"
   ],
   "source_last_updated": "1763042058",
   "source_hash": "0b903097a6059f97cd827c270b88cbe303f20450d3504b9bc95e1bb59355efbc",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.953695Z",
+  "processed_at": "2026-04-25T08:21:31.022429Z",
   "status": "active"
 }
