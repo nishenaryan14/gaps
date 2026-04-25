@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "Support - App, user not logged ever, login, dialog, Cancel",
   "feature": "App Settings",
-  "scenario": "Login dialog Cancel button returns to Later/Login dialog when accessed from Support screen after onboarding as Guest",
+  "scenario": "Guest user stuck in login loop when cancelling login from Support screen in Poly Studio Mobile app",
   "steps": [
-    "Launch Poly Studio Mobile app",
-    "During onboarding, select 'Go as Guest'",
-    "Navigate to Home screen",
-    "Tap hamburger menu (\u2630)",
-    "Select 'Support' from the menu",
-    "Tap the 'App' button",
-    "Tap 'Login'",
-    "Observe the login dialog with Cancel and Continue buttons",
-    "Tap 'Cancel'"
+    "1. Install Poly Studio Mobile app and complete onboarding as a Guest.",
+    "2. Open the hamburger menu (three-line icon) on the Home screen.",
+    "3. Tap 'Support' from the menu.",
+    "4. Tap the 'App' button on the Support screen.",
+    "5. Tap the 'Login' button.",
+    "6. Observe the login dialog that appears with 'Cancel' and 'Continue' buttons.",
+    "7. Tap the 'Cancel' button."
   ],
-  "expected": "The user is returned to the Later/Login dialog.",
+  "expected": "The user should be returned to the previous screen (Support screen) or the app should dismiss the login dialog and return to the Support screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "login-dialog",
-    "cancel-button",
+    "guest-user",
+    "login-loop",
     "support-screen",
-    "guest-onboarding",
-    "hamburger-menu",
-    "app-settings"
+    "login-cancel",
+    "app-login",
+    "hamburger-menu"
   ],
   "source_last_updated": "1759751912",
   "source_hash": "711a0fc59e89d1f04a8d6056a66730f56e67d8bd0d460756fe20aacbb7927ea0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.844245Z",
+  "processed_at": "2026-04-25T08:21:30.949470Z",
   "status": "active"
 }
