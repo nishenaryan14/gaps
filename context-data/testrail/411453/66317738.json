@@ -8,12 +8,12 @@
   "scenario": "Renamed device name is not reflected on the Support device card in the Poly Studio Mobile app",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Home screen with a connected device that supports renaming.",
-    "2. Tap the device name at the top of the Home screen to enter edit mode, then change the device name to a new name (e.g., \"My Poly Device\") and confirm.",
+    "2. Tap the device name at the top of the Home screen to edit it, then enter a new name and confirm.",
     "3. Tap the Menu icon (hamburger menu) in the top-left corner.",
-    "4. Tap Support from the menu.",
-    "5. Locate the device card under the Support screen and observe the device name displayed."
+    "4. Select Support from the menu.",
+    "5. Locate the device card under the Support section and observe the displayed device name."
   ],
-  "expected": "The device card on the Support screen displays the new (renamed) device name.",
+  "expected": "The device card in the Support section displays the new (renamed) device name.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,12 +23,11 @@
     "device-name-persistence",
     "home-screen",
     "hamburger-menu",
-    "support-screen",
     "device-name-sync"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "a1551c3d0eede8e35c3d71157d3a977b9cd6e61a733394ea841dabe2b7e39ed2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.802904Z",
+  "processed_at": "2026-04-25T07:55:31.883385Z",
   "status": "active"
 }
