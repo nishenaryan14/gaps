@@ -4,31 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "First screen, Continue button",
-  "feature": "Onboarding",
-  "scenario": "Verify the Continue button is present on the first onboarding screen and clicking it opens the second screen.",
+  "feature": "App Settings",
+  "scenario": "Onboarding first screen Continue button navigates to second screen",
   "steps": [
-    "Open the app and navigate to the first onboarding screen.",
-    "Locate the Continue button at the bottom of the screen.",
-    "Verify that the Continue button is present.",
-    "Tap/click the Continue button.",
-    "Observe the screen that appears after clicking."
+    "Open the Poly Studio Mobile app for the first time (or after clearing app data).",
+    "Observe the first onboarding screen displayed.",
+    "Verify the 'Continue' button is present at the bottom of the screen.",
+    "Tap the 'Continue' button."
   ],
-  "expected": "The Continue button is present on the first onboarding screen. After clicking it, the second onboarding screen opens.",
+  "expected": "The Continue button is visible at the bottom of the first onboarding screen. Tapping it navigates to the second onboarding screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Continue button",
-    "onboarding screen",
-    "first screen",
-    "second screen",
-    "button presence",
-    "screen navigation",
-    "button click",
-    "onboarding flow"
+    "poly-studio-mobile",
+    "onboarding",
+    "continue-button",
+    "first-screen",
+    "second-screen",
+    "navigation",
+    "app-first-launch"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "6abaf461805b8d90923d2f8ffc49f97a6063c5842f80f552cded81999abf7459",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.271805Z",
+  "processed_at": "2026-04-25T05:37:16.863318Z",
   "status": "active"
 }
