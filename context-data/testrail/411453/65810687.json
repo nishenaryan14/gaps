@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Quick Guide - Translations",
-  "feature": "Quick Guide",
-  "scenario": "Verify that the Quick Guide is properly translated and displayed for all supported languages.",
+  "feature": "App Settings",
+  "scenario": "Quick Guide translations are incorrect or missing across supported languages in Poly Studio Mobile app",
   "steps": [
-    "Start the app with a supported language.",
-    "Go through the entire Quick Guide to check translations.",
-    "Repeat steps 1-2 for all supported languages."
+    "1. Open the Poly Studio Mobile app on a device set to a supported language.",
+    "2. Navigate to the Home screen.",
+    "3. Locate and access the Quick Guide (e.g., via the menu or settings).",
+    "4. Go through each screen/page of the Quick Guide and verify all text is translated into the selected language.",
+    "5. Note any untranslated, garbled, or incorrectly translated text.",
+    "6. Change the device system language to another supported language.",
+    "7. Repeat steps 1\u20135 for each supported language."
   ],
-  "expected": "All text is properly translated and displayed.",
+  "expected": "All text in the Quick Guide is properly translated and displayed correctly for every supported language, with no untranslated strings, truncation, or formatting issues.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Quick Guide",
-    "translation verification",
-    "supported languages",
-    "localization testing",
-    "multilingual UI",
-    "language support",
-    "app translation",
-    "guide display"
+    "poly-studio-mobile",
+    "quick-guide",
+    "localization",
+    "translation-accuracy",
+    "language-support",
+    "ui-text-verification",
+    "internationalization"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "b6eb58e1b68112efc878abf47f1a85e5b07d2bc8077db94638ba5dd96de32489",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.270722Z",
+  "processed_at": "2026-04-25T05:37:16.864833Z",
   "status": "active"
 }
