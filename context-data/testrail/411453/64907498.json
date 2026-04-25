@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Support - App, user not logged ever, dialog",
   "feature": "App Settings",
-  "scenario": "Guest user in Poly Studio Mobile app sees login prompt when tapping App button in Support via hamburger menu",
+  "scenario": "Guest user in Poly Studio Mobile app is prompted to log in with Poly Lens account when tapping App button in Support screen",
   "steps": [
     "1. Install the Poly Studio Mobile app.",
     "2. During onboarding, select \"Go as Guest\".",
     "3. Open the hamburger menu (three-line icon in the top-left corner).",
-    "4. Tap \"Support\" from the menu.",
+    "4. Tap \"Support\" in the hamburger menu.",
     "5. Tap the \"App\" button on the Support screen."
   ],
-  "expected": "A dialog is displayed prompting the user to log in with their Poly Lens account. The dialog includes \"Later\" and \"Login\" buttons.",
+  "expected": "The user should be able to access App support content without being prompted to log in, since they chose to use the app as a guest.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "guest-user",
+    "poly-lens-account",
     "login-prompt",
-    "hamburger-menu",
     "support-screen",
     "app-button",
+    "hamburger-menu",
     "onboarding"
   ],
   "source_last_updated": "1759751857",
   "source_hash": "0c33eee5ec36788b26cd43b446544ed6593a760b189a79b9feea02817770068c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.844245Z",
+  "processed_at": "2026-04-25T08:21:30.949470Z",
   "status": "active"
 }
