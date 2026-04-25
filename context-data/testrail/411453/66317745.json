@@ -8,16 +8,17 @@
   "scenario": "Custom device name does not persist after power cycling the device",
   "steps": [
     "1. Open the Poly Studio Mobile app with the device connected.",
-    "2. Go to Device Settings \u2192 General.",
-    "3. Tap the device's official name.",
-    "4. Enter a new custom name.",
-    "5. Tap Done.",
-    "6. Turn the device off (press and hold the Power button until it powers down).",
-    "7. Turn the device back on (press and hold the Power button until it powers on).",
-    "8. Open the Poly Studio Mobile app and check the device name on the Home screen.",
-    "9. Navigate to Device Settings and verify the device name displayed there."
+    "2. Navigate to Device Settings \u2192 General.",
+    "3. Tap the device's official name field.",
+    "4. Enter a new custom name for the device.",
+    "5. Tap Done to save the custom name.",
+    "6. Power off the device (e.g., press and hold the Power button).",
+    "7. Power on the device (e.g., press and hold the Power button).",
+    "8. Wait for the device to reconnect to the app.",
+    "9. Check the device name displayed on the Home screen.",
+    "10. Navigate to Device Settings \u2192 General and verify the device name there as well."
   ],
-  "expected": "The custom device name is still displayed on both the Home screen and the Device Settings screen after power cycling.",
+  "expected": "The custom device name is still displayed on the Home screen and in Device Settings \u2192 General after power cycling.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -27,11 +28,12 @@
     "poly-studio-mobile",
     "device-settings",
     "general-settings",
-    "device-name-retention"
+    "name-retention",
+    "bluetooth-reconnection"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "bad31d081bb09fcfa58be70020394f99d17f0edeec631c79d5bdbcc1c5266452",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.890612Z",
+  "processed_at": "2026-04-25T08:21:30.976002Z",
   "status": "active"
 }
