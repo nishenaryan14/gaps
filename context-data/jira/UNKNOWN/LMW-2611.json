@@ -5,31 +5,33 @@
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83e\udd16 Falcon Charge Stand displays on User Guides screen but it shouldn't",
   "feature": "App Settings",
-  "scenario": "Falcon Charge Stand incorrectly appears as a sub-device on the User Guides screen in the Poly Studio Mobile app",
-  "description_clean": "The \"Falcon Charge Stand\" is incorrectly displayed on the User Guides screen in the app. It should not appear as a sub-device on that screen.",
+  "scenario": "User Guides screen incorrectly displays \"Charge Stand\" sub-device that should not be shown",
+  "description_clean": "The User Guides screen in the app incorrectly displays a \"Charge Stand\" sub-device that should not appear. Expected behavior is that no sub-devices should be shown on the User Guides screen.",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the menu or settings icon to access User Guides",
-    "Observe the list of devices shown on the User Guides screen"
+    "Open the Poly Studio Mobile app on the Android device.",
+    "Navigate to the Home screen.",
+    "Tap on the menu icon or hamburger menu to access the side navigation.",
+    "Select 'User Guides' from the navigation menu.",
+    "Observe the list of devices and sub-devices displayed on the User Guides screen."
   ],
-  "expected": "The \"Falcon Charge Stand\" should NOT appear as a sub-device on the User Guides screen.",
-  "actual": "The \"Falcon Charge Stand\" is incorrectly displayed as a sub-device on the User Guides screen.",
+  "expected": "The User Guides screen should display only the main device(s) and no sub-devices such as \"Charge Stand\".",
+  "actual": "The User Guides screen incorrectly displays a \"Charge Stand\" sub-device that should not appear.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "falcon-charge-stand",
     "poly-studio-mobile",
     "user-guides-screen",
-    "sub-device",
-    "device-listing",
-    "home-screen",
-    "settings-menu"
+    "charge-stand",
+    "sub-device-display",
+    "android-app",
+    "device-list",
+    "ui-bug",
+    "navigation-menu"
   ],
   "source_last_updated": "2026-04-23T13:05:07.000+0000",
   "source_hash": "3378544f9691cab9bd0547d0522de663be5e17be00fb7f8a7e5512b0d401c827",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.149171Z",
+  "processed_at": "2026-04-25T09:32:24.938053Z",
   "status": "active"
 }
