@@ -4,29 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Support  - App page Cancel",
-  "feature": "Support - App page",
-  "scenario": "Verify that tapping the Cancel (X) button on the Support App page dismisses the screen and returns the user to the Support first screen.",
+  "feature": "App Settings",
+  "scenario": "Tapping Cancel (X) on the App page in the Support section returns user to the Support main screen",
   "steps": [
-    "Open the Support App.",
-    "Navigate to a secondary page within the app.",
-    "Tap the Cancel (X) button on the page."
+    "Open the Poly Studio Mobile app.",
+    "Navigate to the Home screen.",
+    "Tap the menu icon or navigate to the Support section.",
+    "On the Support main screen, tap any option to open an App page (e.g., \"About\", \"Help\", etc.).",
+    "On the App page, tap the Cancel (X) button located in the top corner of the screen."
   ],
-  "expected": "The screen is dismissed and the user is returned to the Support first screen.",
+  "expected": "The App page is dismissed and the user is returned to the Support main screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Cancel button",
-    "X button",
-    "dismiss screen",
-    "Support App",
-    "return to first screen",
-    "navigation back",
-    "secondary page",
-    "UI dismissal"
+    "poly-studio-mobile",
+    "support-section",
+    "cancel-button",
+    "app-navigation",
+    "ui-ux",
+    "back-navigation",
+    "support-main-screen"
   ],
   "source_last_updated": "1759762356",
   "source_hash": "e958a43206c7c5bfe7541a175cca2d33467bfafcdadea8158a21ab27ced12210",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.172829Z",
+  "processed_at": "2026-04-25T05:37:16.775611Z",
   "status": "active"
 }
