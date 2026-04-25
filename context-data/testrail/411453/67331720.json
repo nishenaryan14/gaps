@@ -4,31 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - Device images",
-  "feature": "Device Home Screen",
-  "scenario": "Verify device images display correctly on the home screen: properly loaded when paired and connected, and greyed out when the device is turned off.",
+  "feature": "Device Management",
+  "scenario": "Device image fails to load or display properly on Device Home Screen when device is powered off",
   "steps": [
-    "Pair and connect a device to the internet.",
-    "Navigate to the home screen.",
-    "Observe the device image.",
-    "Turn off the device.",
-    "Observe the device image again."
+    "1. Open the Poly Studio Mobile app on the Home screen.",
+    "2. Pair a Bluetooth audio device with the app while the internet connection is ON.",
+    "3. Observe the device image displayed on the Home screen.",
+    "4. Turn the paired device OFF (e.g., press and hold the Power button until the device powers down).",
+    "5. Observe the device image on the Home screen again."
   ],
-  "expected": "When the device is paired and connected to the internet, the device image should load properly. When the device is turned off, the image should still be displayed but greyed out.",
+  "expected": "1. When the device is paired and internet is ON, the device image loads and displays properly on the Home screen. 2. When the device is turned OFF, the device image remains displayed but is greyed out.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device images",
-    "home screen",
-    "paired",
-    "connected",
-    "greyed out",
-    "device turned off",
-    "image loading",
-    "device status"
+    "poly-studio-mobile",
+    "device-home-screen",
+    "device-image",
+    "bluetooth-pairing",
+    "power-off",
+    "image-loading",
+    "device-display"
   ],
   "source_last_updated": "1769425030",
   "source_hash": "6c9c6938d5ca431c41b8ba06d9659697e8dc7af57a914b8886fcbc1e397556cd",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.113398Z",
+  "processed_at": "2026-04-25T05:37:16.733507Z",
   "status": "active"
 }
