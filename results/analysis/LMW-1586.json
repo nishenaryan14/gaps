@@ -1,135 +1,194 @@
 {
   "bug_id": "LMW-1586",
   "matched_testcases": [
-    "65641608",
-    "65641609",
-    "65641610",
-    "65641611",
-    "65641612",
-    "65641613",
-    "65641620",
-    "65641621",
-    "65641614",
-    "65641615",
-    "65641625",
-    "65641626",
-    "65641627",
     "65458387",
-    "65293009"
+    "65293009",
+    "65293034",
+    "65293028",
+    "65293010",
+    "65293019",
+    "65293025",
+    "65293011",
+    "65293016",
+    "65293012",
+    "65293013",
+    "65293014",
+    "65293015",
+    "65293021",
+    "65293022"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No existing test case covers the scenario of tapping a button on either the primary or non-primary earbud during an active Fit Test.",
-    "No test case verifies the app's behavior/response when a button tap occurs on an earbud while the fit test is running.",
-    "No test case distinguishes between primary and non-primary earbud button taps during the fit test.",
-    "The existing tests cover UI layout, navigation (start/cancel/close/retry), success/fail results, and disconnection scenarios, but none address the interaction of physical button presses during the test."
+    "No test covers the Fit Test feature at all \u2014 none of the existing test cases reference Fit Test, earbud button presses during audio playback, or the interaction between hardware buttons and the fit test process.",
+    "No test covers concurrent operations where a hardware button press (on primary or non-primary earbud) interrupts an in-progress audio-based feature like Fit Test.",
+    "No test covers the behavior difference between pressing the button on the primary earbud vs. the non-primary earbud during Fit Test \u2014 this is a specific state transition gap.",
+    "No test covers Fit Test result consistency/inconsistency when interrupted by earbud button presses, which is the core failure point of this bug.",
+    "No test covers the Fit Test lifecycle (start, in-progress, completion/cancellation) in combination with hardware input events."
   ],
   "generated_testcases": [
     {
-      "title": "Fit Test - Tap button on primary earbud during active test shows appropriate feedback",
+      "title": "TC-FITTEST-001: Fit Test completes successfully without interruption (baseline)",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test",
-        "3. While the fit test is actively running, tap the physical button on the primary earbud",
-        "4. Observe the app's response on screen"
+        "Open Poly Studio Mobile app on the connected phone.",
+        "Tap the connected device name (e.g., Voyager Free 60+ UC, Poly Voyager Surround 80, or supported earbuds).",
+        "Navigate to Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "Wait for the fit test to complete without pressing any earbud buttons.",
+        "Observe the fit test result screen."
       ],
-      "expected": "The app displays a clear notification or on-screen message indicating that a button tap was detected on the primary earbud during the fit test. The fit test continues running without crashing or freezing."
+      "expected": "Fit Test completes successfully. A result screen is displayed showing the fit quality (e.g., 'Good Fit' or 'Adjust Fit') for each earbud. No interruption or premature cancellation occurs."
     },
     {
-      "title": "Fit Test - Tap button on non-primary earbud during active test shows appropriate feedback",
+      "title": "TC-FITTEST-002: Fit Test interrupted by single press on primary earbud button during playback",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test",
-        "3. While the fit test is actively running, tap the physical button on the non-primary earbud",
-        "4. Observe the app's response on screen"
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "While the fit test audio is playing (within 2-3 seconds of starting), perform a single press of the hardware button on the PRIMARY earbud (the earbud designated as primary in the device UI).",
+        "Observe the Fit Test screen and the audio playback state."
       ],
-      "expected": "The app displays a clear notification or on-screen message indicating that a button tap was detected on the non-primary earbud during the fit test. The fit test continues running without crashing or freezing."
+      "expected": "The Fit Test is interrupted/cancelled by the button press. The fit test audio stops. The app may return to the Fit Test start screen or show a 'Cancelled'/'Interrupted' state. The button press should not cause the app to crash or become unresponsive."
     },
     {
-      "title": "Fit Test - Tap button on both earbuds sequentially during active test",
+      "title": "TC-FITTEST-003: Fit Test interrupted by single press on non-primary earbud button during playback",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test",
-        "3. While the fit test is actively running, tap the button on the primary earbud",
-        "4. Immediately after, tap the button on the non-primary earbud",
-        "5. Observe the app's response on screen"
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "While the fit test audio is playing (within 2-3 seconds of starting), perform a single press of the hardware button on the NON-PRIMARY earbud (the other earbud).",
+        "Observe the Fit Test screen and the audio playback state."
       ],
-      "expected": "The app handles both button taps gracefully, displaying appropriate feedback for each tap. The fit test continues running without crashing, freezing, or prematurely ending."
+      "expected": "The Fit Test is interrupted/cancelled by the button press on the non-primary earbud. The fit test audio stops. Behavior should be consistent with pressing the primary earbud button \u2014 no crash, no hang, and the app returns to a stable state."
     },
     {
-      "title": "Fit Test - Tap button on primary earbud at the exact moment fit test completes",
+      "title": "TC-FITTEST-004: Fit Test interrupted by double press on primary earbud during playback",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test",
-        "3. At the precise moment the fit test is completing (showing results), tap the button on the primary earbud",
-        "4. Observe the app's response"
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "While the fit test audio is playing, perform a double press of the hardware button on the PRIMARY earbud.",
+        "Observe the Fit Test screen and audio state."
       ],
-      "expected": "The fit test results are displayed correctly. The button tap does not interfere with the result display, navigation, or any retry/close actions. No crash or inconsistent state occurs."
+      "expected": "The Fit Test is interrupted/cancelled. The double press action (which may normally trigger next track or other function) takes precedence and stops the fit test. App should not crash and should return to a stable state."
     },
     {
-      "title": "Fit Test - Tap button on non-primary earbud at the exact moment fit test completes",
+      "title": "TC-FITTEST-005: Fit Test interrupted by long press on primary earbud during playback",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test",
-        "3. At the precise moment the fit test is completing (showing results), tap the button on the non-primary earbud",
-        "4. Observe the app's response"
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "While the fit test audio is playing, perform a long press (hold for ~2 seconds) of the hardware button on the PRIMARY earbud.",
+        "Observe the Fit Test screen and audio state."
       ],
-      "expected": "The fit test results are displayed correctly. The button tap does not interfere with the result display, navigation, or any retry/close actions. No crash or inconsistent state occurs."
+      "expected": "The Fit Test is interrupted/cancelled. The long press action (which may normally trigger voice assistant or other function) takes precedence. App should not crash and should return to a stable state."
     },
     {
-      "title": "Fit Test - Rapidly tap button on primary earbud multiple times during active test",
+      "title": "TC-FITTEST-006: Fit Test interrupted by button press on both earbuds simultaneously",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test",
-        "3. While the fit test is actively running, rapidly tap the button on the primary earbud 5 times in quick succession",
-        "4. Observe the app's response on screen"
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "While the fit test audio is playing, press the hardware button on BOTH earbuds simultaneously.",
+        "Observe the Fit Test screen and audio state."
       ],
-      "expected": "The app handles rapid button taps gracefully without crashing. The fit test continues running normally. No unexpected behavior such as test cancellation, result screen appearing prematurely, or UI freezes occurs."
+      "expected": "The Fit Test is interrupted/cancelled. The app handles simultaneous button presses gracefully \u2014 no crash, no hang, no undefined state. The app returns to a stable Fit Test start screen or shows a cancelled state."
     },
     {
-      "title": "Fit Test - Tap button on primary earbud then immediately cancel the fit test",
+      "title": "TC-FITTEST-007: Fit Test result consistency after multiple start/interrupt cycles",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test",
-        "3. While the fit test is actively running, tap the button on the primary earbud",
-        "4. Immediately tap the 'Cancel' button on screen",
-        "5. Observe the app's response"
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "Immediately press the PRIMARY earbud button to interrupt (within 1 second).",
+        "Wait 3 seconds for the app to settle.",
+        "Tap 'Start Fit Test' again to restart the fit test.",
+        "Let the fit test run to completion without interruption this time.",
+        "Observe the fit test result."
       ],
-      "expected": "The fit test is cancelled successfully. The app returns to the Fit Test start screen without any residual state from the button tap. No crash or UI inconsistency occurs."
+      "expected": "After the interruption, the second Fit Test runs to completion successfully and displays a valid fit result (e.g., 'Good Fit' or 'Adjust Fit'). The interruption does not corrupt the fit test state for subsequent attempts. No crash or UI freeze occurs."
     },
     {
-      "title": "Fit Test - Tap button on non-primary earbud then immediately retry the fit test",
+      "title": "TC-FITTEST-008: Fit Test interrupted at the exact moment of completion",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test and let it complete to show results",
-        "3. Tap the button on the non-primary earbud",
-        "4. Immediately tap the 'Retry' button on screen",
-        "5. Observe the app's response"
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "As the fit test audio is finishing (last ~1 second of playback), press the PRIMARY earbud button.",
+        "Observe the Fit Test result screen and audio state."
       ],
-      "expected": "A new fit test starts successfully. The button tap on the non-primary earbud does not interfere with the retry action. The fit test runs normally without any inconsistent behavior."
+      "expected": "The Fit Test either completes and shows the result, or is cancelled by the button press. In either case, the app should not crash, freeze, or show a partial/blank result screen. The app should be in a stable state (either result displayed or Fit Test start screen)."
     },
     {
-      "title": "Fit Test - Long press button on primary earbud during active test",
+      "title": "TC-FITTEST-009: Fit Test interrupted by rapid successive button presses on primary earbud",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test",
-        "3. While the fit test is actively running, long-press the button on the primary earbud for 3 seconds",
-        "4. Observe the app's response on screen"
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "While the fit test audio is playing, rapidly press the PRIMARY earbud button 5 times in quick succession.",
+        "Observe the Fit Test screen and audio state."
       ],
-      "expected": "The app handles the long press appropriately. The fit test continues running or shows appropriate feedback. No crash, freeze, or premature test termination occurs."
+      "expected": "The Fit Test is interrupted/cancelled by the first button press. The subsequent rapid presses do not cause any crash, double-cancellation error, or UI glitch. The app remains stable on the Fit Test start screen or cancelled state."
     },
     {
-      "title": "Fit Test - Tap button on primary earbud during fit test with poor connection",
+      "title": "TC-FITTEST-010: Fit Test interrupted by button press, then immediately restarted and interrupted again",
       "steps": [
-        "1. Launch the app and navigate to the Fit Test screen",
-        "2. Start a new Fit Test",
-        "3. While the fit test is actively running, simulate a poor Bluetooth connection",
-        "4. Tap the button on the primary earbud",
-        "5. Observe the app's response"
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "Press PRIMARY earbud button to interrupt (within 2 seconds).",
+        "Immediately (within 1 second) tap 'Start Fit Test' again.",
+        "While the second fit test audio is playing, press the NON-PRIMARY earbud button to interrupt.",
+        "Observe the Fit Test screen after the second interruption."
       ],
-      "expected": "The app handles the combination of poor connection and button tap gracefully. An appropriate error or notification message is displayed. The app does not crash or enter an inconsistent state."
+      "expected": "Both interruptions are handled cleanly. After the second interruption, the app returns to a stable Fit Test start screen. No crash, no UI corruption, no residual audio playback. The app is ready for another Fit Test attempt."
+    },
+    {
+      "title": "TC-FITTEST-011: Fit Test with earbud button press during the 'Analyzing' phase (post-playback)",
+      "steps": [
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "Wait for the fit test audio to finish playing (the app transitions to an 'Analyzing...' or processing state).",
+        "During the 'Analyzing...' phase, press the PRIMARY earbud button.",
+        "Observe the Fit Test result screen."
+      ],
+      "expected": "The Fit Test should complete its analysis and display the result. The button press during the analysis phase should not cancel the result or cause a crash. The fit result should be displayed correctly."
+    },
+    {
+      "title": "TC-FITTEST-012: Fit Test interrupted by earbud button press while media is playing in background",
+      "steps": [
+        "Start playing music or a podcast on the connected phone (e.g., Spotify, YouTube Music).",
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback (media should pause or duck).",
+        "While the fit test audio is playing, press the PRIMARY earbud button.",
+        "Observe the Fit Test screen, audio state, and whether background media resumes."
+      ],
+      "expected": "The Fit Test is interrupted/cancelled by the button press. After interruption, the background media should resume playing normally (or return to its previous state). The app should not crash and the Fit Test screen should return to the start state."
+    },
+    {
+      "title": "TC-FITTEST-013: Fit Test interrupted by earbud button press during a phone call",
+      "steps": [
+        "Initiate or receive a phone call on the connected phone while earbuds are connected.",
+        "While on the call, open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "While the fit test audio is playing, press the PRIMARY earbud button.",
+        "Observe the Fit Test screen, call state, and audio behavior."
+      ],
+      "expected": "The Fit Test is interrupted/cancelled by the button press. The phone call should remain active and not be dropped. The call audio should return to normal after the fit test interruption. No crash or call disconnection occurs."
+    },
+    {
+      "title": "TC-FITTEST-014: Fit Test result screen dismissed by earbud button press after successful completion",
+      "steps": [
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' and let it complete without interruption.",
+        "On the Fit Test result screen (showing 'Good Fit' or 'Adjust Fit'), press the PRIMARY earbud button.",
+        "Observe the app behavior."
+      ],
+      "expected": "The Fit Test result screen should remain displayed. The earbud button press should not dismiss the result screen or trigger any unintended action. The result should persist until the user manually navigates away."
+    },
+    {
+      "title": "TC-FITTEST-015: Fit Test state after app is backgrounded and restored during button-press interruption",
+      "steps": [
+        "Open Poly Studio Mobile app \u2192 tap connected device \u2192 Audio Settings \u2192 Fit Test.",
+        "Tap 'Start Fit Test' to begin the fit test audio playback.",
+        "While the fit test audio is playing, press the PRIMARY earbud button to interrupt.",
+        "Immediately press the Home button (or gesture) to background the app.",
+        "Wait 5 seconds, then reopen the Poly Studio Mobile app from the recent apps list or home screen.",
+        "Observe the Fit Test screen state."
+      ],
+      "expected": "The app should restore to a stable state \u2014 either the Fit Test start screen or the cancelled state. No crash, no frozen UI, no residual 'in-progress' state. The app should be fully responsive and allow starting a new Fit Test."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-24T12:05:47.448587Z"
+  "processed_at": "2026-04-25T05:50:26.089911Z"
 }
