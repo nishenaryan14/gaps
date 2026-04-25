@@ -5,29 +5,31 @@
   "project": "411453",
   "title": "App Settings - General - Privacy Policy no wifi [New]",
   "feature": "App Settings",
-  "scenario": "Privacy Policy screen shows \"Something is wrong\" error when WiFi is off and navigating from Main Menu > General",
+  "scenario": "Privacy Policy page shows \"Something is wrong\" error when WiFi is off and navigating from General settings",
   "steps": [
-    "1. Turn off WiFi on the Android device.",
-    "2. Launch the Poly Studio Mobile app.",
-    "3. Tap the Main Menu (hamburger icon) in the top-left corner.",
-    "4. Tap General.",
-    "5. Tap Privacy Policy."
+    "1. Turn off Wi-Fi on the Android device.",
+    "2. Open the Poly Studio Mobile app.",
+    "3. Navigate to the Home screen.",
+    "4. Tap the menu icon (hamburger) or your profile icon to access the side menu.",
+    "5. Tap on 'Settings' or 'Account' to open app settings.",
+    "6. Tap on 'General'.",
+    "7. Tap on 'Privacy Policy'."
   ],
-  "expected": "The Privacy Policy content loads and displays correctly within the app.",
+  "expected": "The Privacy Policy content should load and display within the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "privacy-policy",
     "general-settings",
-    "main-menu",
     "wifi-offline",
-    "poly-studio-mobile",
     "error-handling",
-    "network-error"
+    "android-app",
+    "side-menu-navigation"
   ],
   "source_last_updated": "1773152996",
   "source_hash": "367a2a34bf7864a6e860df66b7dd3fcdd7fe483ce6855e473a09a91f304be063",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.930707Z",
+  "processed_at": "2026-04-25T09:32:26.164136Z",
   "status": "active"
 }
