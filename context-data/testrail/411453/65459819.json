@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Notifications -  Device updating",
   "feature": "Notifications",
-  "scenario": "User taps on \"Device software is updating...\" notification while app is in background and is taken to Software Update screen with DFU progress bar",
+  "scenario": "DFU notification \"Device software is updating...\" appears and tapping it opens the app to the Software Update screen with progress bar",
   "steps": [
-    "Ensure the device has a firmware version lower than the current version on the server (Cloud).",
-    "Initiate a device software update.",
-    "Observe the notification that appears: 'Device software is updating...'.",
-    "Send the app to the background.",
-    "Tap the notification while the app is in the background."
+    "1. Launch Poly Studio Mobile app and connect to a Poly Bluetooth audio device.",
+    "2. Initiate a Device Firmware Update (DFU) from the app (e.g., via Home \u2192 Device Settings \u2192 Software Update).",
+    "3. Observe the notification area on the device for the message \"Device software is updating...\".",
+    "4. Press the Home button or switch to another app to send the Poly Studio Mobile app to the background.",
+    "5. Tap the \"Device software is updating...\" notification from the notification shade."
   ],
-  "expected": "The app opens to the Software Update screen showing the DFU progress bar.",
+  "expected": "The notification \"Device software is updating...\" appears when the DFU begins. Tapping the notification while the app is in the background brings the Poly Studio Mobile app to the foreground and opens the Software Update screen showing the DFU progress bar.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU",
-    "Device Firmware Update",
-    "Software Update Notification",
-    "Background App",
-    "Notification Tap",
-    "Progress Bar",
-    "Firmware Version",
-    "OTA Update"
+    "dfu-notification",
+    "device-software-updating",
+    "software-update-screen",
+    "progress-bar",
+    "poly-studio-mobile",
+    "firmware-update",
+    "notification-tap",
+    "background-app"
   ],
   "source_last_updated": "1761222555",
   "source_hash": "b9b4913f6577e3f20197653d645ce19d36fc67a79ef4ce6f9fb351c06dc2a77a",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.304002Z",
+  "processed_at": "2026-04-25T05:37:16.941770Z",
   "status": "active"
 }
