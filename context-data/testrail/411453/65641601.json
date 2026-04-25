@@ -5,34 +5,22 @@
   "project": "411453",
   "title": "CCL - Close/reopen the tab and the settings screen",
   "feature": "App Settings",
-  "scenario": "Call Control Lock (CCL) setting does not persist after closing and reopening the Advanced tab in Device Settings",
-  "steps": [
-    "Open Poly Studio Mobile app \u2192 Home screen",
-    "Tap on the connected device name \u2192 Device Settings",
-    "Tap on Advanced tab",
-    "Set the CCL (Call Control Lock) toggle to ON (or OFF)",
-    "Close the Advanced tab by tapping the back arrow or navigating away",
-    "Re-open Device Settings \u2192 Advanced tab",
-    "Observe the CCL toggle value",
-    "Navigate back to Home screen",
-    "Re-enter Device Settings \u2192 Advanced tab",
-    "Observe the CCL toggle value again"
-  ],
-  "expected": "The CCL (Call Control Lock) setting retains its previously selected value (ON or OFF) after closing and reopening the Advanced tab, and after navigating back to the Home screen and re-entering Device Settings > Advanced.",
+  "scenario": "CCL (Call Control Lock) setting does not persist after closing and reopening the Advanced tab in Device Settings",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "call-control-lock",
     "ccl",
+    "call-control-lock",
     "device-settings",
     "advanced-tab",
-    "poly-studio-mobile",
     "setting-persistence",
-    "toggle-state"
+    "settings-retention"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "cda507f677d99b6d3fa30a961ba0a11074c1c91b8ada660e6d1a22f3a201d71b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.934844Z",
+  "processed_at": "2026-04-25T08:21:31.009092Z",
   "status": "active"
 }
