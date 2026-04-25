@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Rename device - Cancel",
   "feature": "Device Management",
-  "scenario": "Device name reverts to official name when Cancel is pressed after renaming in Device Settings > General",
+  "scenario": "Device name changes after entering a new name and pressing Cancel in Device Settings > General",
   "steps": [
     "Open Poly Studio Mobile app",
     "Go to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Tap on General",
+    "Tap on the connected [Device Name] to open Device Settings",
+    "Navigate to General settings",
     "Tap on the device name field to edit it",
-    "Enter a new name (e.g., \"My Poly\")",
-    "Tap Cancel"
+    "Enter a new name for the device",
+    "Tap the Cancel button (or back/close without saving)"
   ],
-  "expected": "The device name should remain unchanged (the official name).",
+  "expected": "The device name should remain unchanged (the official/original name).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device-rename",
+    "poly-studio-mobile",
+    "device-name-change",
     "cancel-behavior",
     "device-settings",
     "general-settings",
-    "poly-studio-mobile",
-    "device-name-revert",
-    "name-persistence"
+    "name-persistence",
+    "ui-cancel-button"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "53bcad97ddffb85248afc939debfe5a5d2aba4e7e9cb87603a5b828a013a6a8e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.966314Z",
+  "processed_at": "2026-04-25T09:32:26.201836Z",
   "status": "active"
 }
