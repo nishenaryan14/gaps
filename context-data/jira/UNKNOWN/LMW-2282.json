@@ -5,35 +5,36 @@
   "project": "UNKNOWN",
   "summary": "iOS | Free 60 artwork missing, and update from v231.591.0.5046 (MR1.5) to latest not working (Studio iOS or PTT)",
   "feature": "Firmware Updates",
-  "scenario": "Poly Voyager Free 60+ artwork missing and firmware update fails from v231.591.0.5046 via Poly Studio Mobile iOS app or PTT",
-  "description_clean": "On iOS, the Poly Voyager Free 60+ artwork is missing, and firmware update from version v231.591.0.5046 (MR1.5) to the latest is not working via the Poly Studio Mobile iOS app or PTT.",
+  "scenario": "Free 60 artwork missing in Poly Studio Mobile app; firmware update from v231.591.0.5046 (MR1.5) fails on iOS and PTT",
+  "description_clean": "Free 60 artwork missing in the app. Firmware update from version v231.591.0.5046 (MR1.5) to latest not working via Studio iOS or PTT.",
   "steps": [
     "Open Poly Studio Mobile app on iOS",
-    "Navigate to Home screen",
-    "Verify the Poly Voyager Free 60+ device artwork is displayed",
-    "Go to Device Settings \u2192 [Poly Voyager Free 60+] \u2192 Firmware Update",
-    "Attempt to update firmware from version v231.591.0.5046 (MR1.5) to the latest version",
-    "Alternatively, attempt firmware update via PTT (Push-to-Talk) app"
+    "Go to Home screen",
+    "Navigate to Device Settings for the connected Poly device",
+    "Check the firmware version displayed",
+    "Attempt to update firmware from version v231.591.0.5046 (MR1.5) to the latest available version",
+    "Observe the firmware update process",
+    "After update, check the 'Free 60' artwork or theme on the Home screen or Device Settings screen"
   ],
-  "expected": "Poly Voyager Free 60+ device artwork is displayed correctly in the app. Firmware update from v231.591.0.5046 (MR1.5) to the latest version completes successfully via both Poly Studio Mobile iOS app and PTT.",
-  "actual": "Poly Voyager Free 60+ artwork is missing in the Poly Studio Mobile iOS app. Firmware update from v231.591.0.5046 (MR1.5) to the latest fails via both Poly Studio Mobile iOS app and PTT.",
+  "expected": "Firmware update completes successfully from v231.591.0.5046 (MR1.5) to the latest version. The 'Free 60' artwork is displayed correctly in the app after the update.",
+  "actual": "Firmware update fails or does not work via Studio iOS or PTT. The 'Free 60' artwork is missing in the app.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "NeedsEngineeringReview"
   ],
   "keywords": [
-    "poly-voyager-free-60-plus",
-    "firmware-update-failure",
+    "free-60",
+    "poly-studio-mobile",
+    "firmware-update",
     "artwork-missing",
-    "poly-studio-mobile-ios",
-    "ptt-app",
-    "firmware-version-v231-591-0-5046",
-    "device-settings"
+    "ios",
+    "device-settings",
+    "voyager-free-60"
   ],
   "source_last_updated": "2026-04-15T08:55:53.000+0000",
   "source_hash": "69ee9443598565007bef5314c9016caf53790522b13437dd68320862bc1f6dee",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.770846Z",
+  "processed_at": "2026-04-25T08:21:30.787324Z",
   "status": "active"
 }
