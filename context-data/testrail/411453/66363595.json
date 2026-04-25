@@ -16,7 +16,7 @@
     "7. Close and restart the Poly Studio Mobile app.",
     "8. After the app restarts, observe the Home screen again for any popup or card."
   ],
-  "expected": "No \"Case Update Needed\" popup or card should appear on the Home screen after the earbud DFU completes or after restarting the app, since the charge case is already on the latest firmware.",
+  "expected": "The \"Case Update Needed\" popup/card should NOT be displayed on the Home screen after the DFU completes or after restarting the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -27,11 +27,11 @@
     "dfu",
     "earbud-firmware",
     "charge-case",
-    "popup-persistence"
+    "persistent-popup"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "a66fb4b06f6ce3d27d090e2b5c846cdf1a2505fb1a7529b8b07b2264bd03a4c5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.091233Z",
+  "processed_at": "2026-04-25T09:32:26.348049Z",
   "status": "active"
 }
