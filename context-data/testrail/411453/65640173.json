@@ -5,24 +5,34 @@
   "project": "411453",
   "title": "Analytics - Firmware Update Completed",
   "feature": "Firmware Updates",
-  "scenario": "DFU completion event counts and Firebase dashboard elements (Graph, Events, Device PID, Update Type) update correctly after firmware update on Poly Bluetooth device",
-  "steps": [],
-  "expected": "",
+  "scenario": "DFU completion event counts and Firebase dashboard elements (Device PID, Charge Unit PID, Update Type, Target Language ID) update correctly after firmware update on Poly Bluetooth device",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen and ensure a Poly Bluetooth audio device is connected.",
+    "3. Initiate a DFU (firmware update) on the connected device via the app (e.g., Device Settings \u2192 Firmware Update).",
+    "4. Wait for the DFU process to complete successfully on the device.",
+    "5. After the DFU completes, open the Firebase Analytics dashboard (or relevant Firebase page) for the app.",
+    "6. Verify that the Firebase page loads properly and contains the following default elements:\n   - Graph\n   - Events in last 30 minutes\n   - Event count by Country\n   - Event count by Gender\n   - Events per session\n   - App Version\n   - App Build\n   - App Environment\n   - Device PID\n   - Charge Unit PID\n   - Update Type\n   - Target Language ID",
+    "7. Wait for a few hours after the DFU completion.",
+    "8. Revisit the Firebase Analytics dashboard and check the event counts for the related elements (e.g., DFU completion events).",
+    "9. Observe whether the event counts for the related elements have increased."
+  ],
+  "expected": "The Firebase page opens properly and displays all default elements (Graph, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App Build, App Environment, Device PID, Charge Unit PID, Update Type, Target Language ID). After a few hours, the event count for related elements increases, reflecting the completed DFU.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-completion",
-    "firmware-update",
-    "firebase-dashboard",
+    "firebase-analytics",
     "device-pid",
+    "charge-unit-pid",
     "update-type",
-    "poly-bluetooth-device",
-    "event-counts",
-    "graph-update"
+    "target-language-id",
+    "poly-studio-mobile",
+    "firmware-update"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "c82cec22de20324500f2e8f4cd30e54cacd651d401b991982ff3e376dd49fa64",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.070857Z",
+  "processed_at": "2026-04-25T09:32:26.328116Z",
   "status": "active"
 }
