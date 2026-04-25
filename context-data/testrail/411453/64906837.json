@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - Default Quick Settings",
-  "feature": "Device Home Screen",
-  "scenario": "Verify that the three quick settings displayed on the Device Home Screen match the first three options from the settings screen when a device is paired.",
+  "feature": "App Settings",
+  "scenario": "Default quick settings tiles on Device Home Screen correspond to first three options from Device Settings screen",
   "steps": [
-    "1. Pair a device with the app.",
-    "2. Navigate to the Device Home Screen.",
-    "3. Observe the quick settings displayed under the device's image."
+    "Open the Poly Studio Mobile app.",
+    "Navigate to the Home screen.",
+    "Observe the quick settings tiles displayed below the device image.",
+    "Note the three default quick settings tiles shown.",
+    "Tap the device name or gear icon to open Device Settings.",
+    "Observe the order of the first three options listed in the Device Settings screen.",
+    "Compare the three quick settings tiles on the Home screen with the first three options in Device Settings."
   ],
-  "expected": "Three quick settings should be displayed under the device's image, and they must always be the first three options from the settings screen.",
+  "expected": "The three default quick settings tiles displayed on the Home screen match the first three options listed in the Device Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "quick settings",
-    "Device Home Screen",
-    "paired device",
-    "settings screen",
-    "first three options",
-    "device image",
-    "settings verification",
-    "quick settings matching"
+    "poly-studio-mobile",
+    "device-home-screen",
+    "quick-settings-tiles",
+    "device-settings",
+    "default-tiles",
+    "settings-order",
+    "home-screen-layout"
   ],
   "source_last_updated": "1764600389",
   "source_hash": "2e3d4581ca6c966baa703ae0f47c08abf7bdb57a712458d53145167b8dff10b4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.121100Z",
+  "processed_at": "2026-04-25T05:37:16.743072Z",
   "status": "active"
 }
