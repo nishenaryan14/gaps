@@ -7,29 +7,29 @@
   "feature": "App Settings",
   "scenario": "Onboarding screen navigation: swiping right from Continue button advances through screens with dot indicators, all screens must match Figma design",
   "steps": [
-    "Open Poly Studio Mobile app for the first time (or clear app data to trigger onboarding).",
-    "Observe the first onboarding screen with a 'Continue' button.",
+    "Open Poly Studio Mobile app for the first time (or after clearing app data) to land on the Onboarding screen.",
+    "On the first onboarding screen, locate the 'Continue' button.",
     "Swipe right from the 'Continue' button to advance to the next onboarding screen.",
-    "Repeat swiping right from the 'Continue' button on each subsequent screen to navigate through the third, fourth, fifth, and sixth onboarding screens.",
-    "Observe the dot indicators at the bottom of each screen to confirm they update correctly as you advance.",
-    "Compare each onboarding screen's layout, text, imagery, and button placement against the Figma design specifications."
+    "Observe the dot indicators at the bottom of the screen to confirm progression.",
+    "Repeat swiping right from the 'Continue' button through the third, fourth, fifth, and sixth onboarding screens.",
+    "On each screen, visually compare the layout, text, images, and UI elements against the Figma design specifications."
   ],
-  "expected": "Swiping right from the Continue button advances through all onboarding screens (third, fourth, fifth, sixth) in sequence. Dot indicators update to reflect the current screen position. All screens match the Figma design in layout, content, and styling.",
+  "expected": "Swiping right from the Continue button advances through all onboarding screens (third, fourth, fifth, sixth) with dot indicators updating correctly. Each screen matches the Figma design in layout, text, images, and UI elements.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "onboarding-screens",
+    "onboarding-screen",
     "continue-button",
-    "dot-indicators",
     "swipe-navigation",
+    "dot-indicators",
     "figma-design-validation",
-    "screen-layout",
-    "first-launch-experience"
+    "ui-layout",
+    "screen-progression"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "51007c4a673aca191dd68a7ee7076fb11bf76c7d6528347a7677350afcc6320d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.946525Z",
+  "processed_at": "2026-04-25T08:21:31.019282Z",
   "status": "active"
 }
