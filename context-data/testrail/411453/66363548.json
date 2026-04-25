@@ -5,15 +5,16 @@
   "project": "411453",
   "title": "Tern - no charge case screens (Onboarding, Supported devices list)",
   "feature": "Device Management",
-  "scenario": "Onboarding for Voyager Free 60 Charge Case does not show smart charge case screens when started from supported devices list",
+  "scenario": "Onboarding for Voyager Free 60 Charge Case shows no charge case screens when started from supported devices list",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on a mobile device with no Bluetooth audio device connected.",
-    "2. On the Home screen, tap the supported devices list or equivalent option to view available devices.",
-    "3. From the list, select 'Voyager Free 60 Charge Case' (not the Voyager Free 60+ variant).",
-    "4. Begin the onboarding process for the selected device.",
-    "5. Observe the screens shown during the onboarding flow."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. On the Home screen, ensure no Poly device is currently connected.",
+    "3. Tap the menu or option to open the supported devices list.",
+    "4. From the supported devices list, select \"Voyager Free 60 Charge Case\" (not the Free 60+ variant).",
+    "5. Tap to start the onboarding process for the selected device.",
+    "6. Observe the screens shown during the onboarding flow for the charge case."
   ],
-  "expected": "Smart charge case screens should appear during onboarding for the Voyager Free 60.",
+  "expected": "The onboarding flow should display dedicated charge case screens for the Voyager Free 60 Charge Case, guiding the user through setup of the smart charge case.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,13 +22,13 @@
     "poly-studio-mobile",
     "onboarding-flow",
     "supported-devices-list",
-    "smart-charge-case-screens",
-    "bluetooth-pairing",
-    "device-selection"
+    "charge-case-screens",
+    "android",
+    "device-connection"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "f3c528d9b5339a5fb7d30b97f043e1ef0611766a61841aa361e9c3c009eefcd6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.874486Z",
+  "processed_at": "2026-04-25T08:21:31.019282Z",
   "status": "active"
 }
