@@ -5,7 +5,7 @@
   "project": "UNKNOWN",
   "summary": "iOS | Images in User Guides section (PLACEHOLDER)",
   "feature": "App Settings",
-  "scenario": "Device images fail to load in User Guides section under App Settings for devices beyond the top 6, showing placeholders instead",
+  "scenario": "Device images fail to load for devices beyond the top 6 in the User Guides section under App Settings",
   "description_clean": "In the User Guides section under App Settings, only images for the top 6 devices are loaded; all other device images show placeholders instead of loading properly.",
   "steps": [
     "Open Poly Studio Mobile app",
@@ -15,7 +15,7 @@
     "Observe the device images for the first 6 devices",
     "Continue scrolling to view devices beyond the top 6"
   ],
-  "expected": "All device images in the User Guides section should load properly regardless of position in the list.",
+  "expected": "All device images in the User Guides section should load properly, regardless of position in the list.",
   "actual": "Only images for the top 6 devices are loaded; all other device images show placeholders instead of loading properly.",
   "priority": "P1: High",
   "severity": "",
@@ -26,13 +26,12 @@
     "user-guides",
     "device-images",
     "image-loading",
-    "placeholder",
-    "device-list",
-    "scrolling"
+    "scrolling",
+    "supported-devices"
   ],
   "source_last_updated": "2026-04-23T08:37:02.000+0000",
   "source_hash": "86f232d474ddd682f5de6a3d5cd81ce6db2947b438f12a904203ab1825be7eb1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.582205Z",
+  "processed_at": "2026-04-25T09:32:24.748273Z",
   "status": "active"
 }
