@@ -7,16 +7,15 @@
   "feature": "ANC",
   "scenario": "ANC setting does not persist after restarting the Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app and ensure a Poly Bluetooth audio device is connected.",
-    "2. Navigate to the Home screen and tap on the connected [Device Name].",
-    "3. Go to Audio Settings \u2192 ANC.",
-    "4. Set ANC to a specific mode (e.g., High ANC, Low ANC, or Adaptive ANC).",
-    "5. Force close the Poly Studio Mobile app (swipe it away from the recent apps list).",
-    "6. Reopen the Poly Studio Mobile app and wait for the device to reconnect.",
-    "7. Navigate again to Audio Settings \u2192 ANC.",
-    "8. Observe the ANC setting displayed."
+    "1. Open the Poly Studio Mobile app and connect to the Poly Bluetooth audio device.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 ANC.",
+    "3. Set ANC to a specific value (e.g., High, Low, or a custom level).",
+    "4. Fully close (kill) the Poly Studio Mobile app.",
+    "5. Reopen the Poly Studio Mobile app and reconnect to the device.",
+    "6. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 ANC.",
+    "7. Observe the ANC setting value."
   ],
-  "expected": "The ANC setting should remain at the value selected in step 4 (e.g., High ANC, Low ANC, or Adaptive ANC).",
+  "expected": "The ANC setting value remains the same as set in step 3.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,7 +23,6 @@
     "anc-persistence",
     "poly-studio-mobile",
     "audio-settings",
-    "anc-mode",
     "setting-persistence",
     "app-restart",
     "bluetooth-audio-device"
@@ -32,6 +30,6 @@
   "source_last_updated": "1760956286",
   "source_hash": "b75af31b92ee5885a6efba0858bbe67dd9cf9ff25aa6d62c9e86535b37172d24",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.912339Z",
+  "processed_at": "2026-04-25T08:21:30.991150Z",
   "status": "active"
 }
