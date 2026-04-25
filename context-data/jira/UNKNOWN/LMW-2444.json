@@ -8,27 +8,29 @@
   "scenario": "Onboarding screens show device code name \"Falcon\" instead of the proper product name",
   "description_clean": "Onboarding screens display the device code name \"Falcon\" instead of the proper product name for the Falcon device.",
   "steps": [
-    "Open the Poly Studio Mobile app",
-    "Begin the onboarding flow for a new device",
-    "Observe the device name displayed on the onboarding screens"
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Observe the onboarding screens that appear upon first launch or after a factory reset of the app.",
+    "3. Look for the device name displayed on the onboarding screens (e.g., device discovery, pairing, or connection confirmation screens).",
+    "4. Note the text shown for the device name."
   ],
-  "expected": "Onboarding screens display the proper product name for the Falcon device (e.g., \"Poly Voyager Free 20\" or the correct retail name).",
-  "actual": "Onboarding screens display the internal code name \"Falcon\" instead of the proper product name.",
+  "expected": "The onboarding screens display the proper product name for the device (e.g., \"Poly Voyager Focus 2\" or the correct retail name).",
+  "actual": "The onboarding screens display the internal code name \"Falcon\" instead of the proper product name.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "poly-studio-mobile",
-    "onboarding-flow",
+    "onboarding-screens",
     "device-name",
-    "product-name",
     "falcon",
-    "codename",
-    "branding-issue"
+    "product-name",
+    "device-discovery",
+    "pairing-screen",
+    "connection-confirmation"
   ],
   "source_last_updated": "2026-04-14T11:32:09.000+0000",
   "source_hash": "53e4081ec8f5a6e584d4bdac8092f69dcd84285052b42e5dceee63a49d43367e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.678096Z",
+  "processed_at": "2026-04-25T08:21:30.783186Z",
   "status": "active"
 }
