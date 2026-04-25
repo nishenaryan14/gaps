@@ -1,66 +1,129 @@
 [
   {
-    "title": "Cold Start: No low battery notification when battery level is high (>50%)",
+    "title": "TC-BAT-COLD-001: Verify No Low Battery Notification on App Cold Start with Fully Charged Device",
     "steps": [
-      "1. Set device battery level to 80% (high).",
-      "2. Perform a cold start of the device (power off, then power on).",
-      "3. Observe any notification or warning displayed on the screen during boot sequence.",
-      "4. Check system logs for any low battery warning messages."
+      "Ensure the Poly device (e.g., Voyager 5200, Voyager Free 60+) is fully charged (battery level 100%).",
+      "Disconnect the device from the phone via Bluetooth (turn off Bluetooth or unpair).",
+      "Force-close the Poly Studio Mobile app (swipe it away from the recent apps list).",
+      "Re-enable Bluetooth and pair/connect the fully charged device to the phone.",
+      "Wait 5 seconds for the connection to stabilize.",
+      "Cold-launch the Poly Studio Mobile app by tapping its icon.",
+      "Observe the Home screen and the device card at the top of the screen.",
+      "Check for any low battery notification, toast message, or banner (e.g., 'Low Battery' or 'Battery Low \u2014 Charge your device').",
+      "Navigate to the device details screen: tap [Device Name] \u2192 Device Info \u2192 Battery Level.",
+      "Verify the displayed battery percentage reads 100%."
     ],
-    "expected": "No low battery notification or warning is displayed on the screen. System logs contain no low battery warning messages. The device boots normally without any spurious battery alerts."
+    "expected": "No low battery notification, toast, or banner is displayed on the Home screen or anywhere in the app upon cold start. The device battery level shown in Device Info is 100%."
   },
   {
-    "title": "Cold Start: No low battery notification when battery level is exactly 50%",
+    "title": "TC-BAT-COLD-002: Verify No Low Battery Notification on App Cold Start with High Battery (80%) Device",
     "steps": [
-      "1. Set device battery level to exactly 50%.",
-      "2. Perform a cold start of the device (power off, then power on).",
-      "3. Observe any notification or warning displayed on the screen during boot sequence.",
-      "4. Check system logs for any low battery warning messages."
+      "Charge the Poly device to approximately 80% battery level (above the low threshold of 20%).",
+      "Disconnect the device from the phone via Bluetooth.",
+      "Force-close the Poly Studio Mobile app.",
+      "Reconnect the device to the phone via Bluetooth.",
+      "Wait 5 seconds for the connection to stabilize.",
+      "Cold-launch the Poly Studio Mobile app.",
+      "Observe the Home screen for any low battery notification, warning icon, or toast message.",
+      "Tap [Device Name] \u2192 Device Info \u2192 Battery Level.",
+      "Verify the displayed battery percentage is approximately 80% (within \u00b15% tolerance)."
     ],
-    "expected": "No low battery notification or warning is displayed on the screen. System logs contain no low battery warning messages. The threshold for low battery warning should be strictly below 50%."
+    "expected": "No low battery notification is shown on app cold start. The battery level displayed in Device Info correctly reflects the actual ~80% charge."
   },
   {
-    "title": "Cold Start: Low battery notification correctly appears when battery level is critically low (<10%)",
+    "title": "TC-BAT-COLD-003: Verify No Stale/Default Low Battery Notification on App Cold Start After Force-Close with High Battery",
     "steps": [
-      "1. Set device battery level to 5% (critically low).",
-      "2. Perform a cold start of the device (power off, then power on).",
-      "3. Observe any notification or warning displayed on the screen during boot sequence.",
-      "4. Check system logs for low battery warning messages."
+      "Connect a Poly device with a high battery level (e.g., 90%) to the phone.",
+      "Open the Poly Studio Mobile app and verify the Home screen shows no low battery notification and the battery level reads ~90%.",
+      "Without disconnecting the device, force-close the Poly Studio Mobile app (swipe away from recent apps).",
+      "Wait 10 seconds.",
+      "Cold-launch the Poly Studio Mobile app again.",
+      "Observe the Home screen immediately upon launch for any low battery notification, toast, or banner.",
+      "Verify the device card shows the correct battery level (should still be ~90%).",
+      "Tap [Device Name] \u2192 Audio Settings \u2192 navigate to any setting screen (e.g., Transparency Mode), then return to Home.",
+      "Check again for any low battery notification."
     ],
-    "expected": "A low battery notification or warning is displayed on the screen during or after boot. System logs contain appropriate low battery warning messages. This validates the notification system works correctly when battery is genuinely low."
+    "expected": "No low battery notification appears at any point during the cold start or subsequent navigation. The battery level correctly reflects the actual ~90% charge, not a stale or default value."
   },
   {
-    "title": "Cold Start: Battery status initialization reads correct value from hardware",
+    "title": "TC-BAT-COLD-004: Verify Battery State Read Accuracy During App Cold Start \u2014 Correct High Battery Value from Bluetooth",
     "steps": [
-      "1. Set device battery level to 75%.",
-      "2. Perform a cold start of the device (power off, then power on).",
-      "3. After boot completes, navigate to Settings > Battery (or equivalent).",
-      "4. Read the reported battery percentage from the UI.",
-      "5. Check system logs for the battery level reading during initialization."
+      "Ensure the Poly device (e.g., Voyager Free 60+) has a battery level of 75% (mid-high range).",
+      "Disconnect the device from the phone.",
+      "Force-close the Poly Studio Mobile app.",
+      "Reconnect the device via Bluetooth and wait for the connection to fully establish (Bluetooth icon solid).",
+      "Cold-launch the Poly Studio Mobile app.",
+      "Immediately on the Home screen, check the battery icon/percentage shown on the device card.",
+      "Tap [Device Name] \u2192 Device Info \u2192 Battery Level.",
+      "Record the exact battery percentage displayed.",
+      "Compare the displayed value against the actual device battery level (75%).",
+      "Navigate: Back to Home \u2192 tap [Device Name] \u2192 Audio Settings \u2192 Transparency Mode \u2192 Environment.",
+      "Verify the Surround level slider is at its previously set value (or default).",
+      "Return to Home and re-check the battery level has not changed to a different value."
     ],
-    "expected": "The reported battery percentage in the UI matches the hardware-set value of 75%. System logs show the correct battery level reading during the initialization phase. No discrepancy between hardware and software readings."
+    "expected": "The battery level displayed on cold start matches the actual device battery level (75% \u00b15%). The value remains consistent across navigation and does not change to a default or stale low value."
   },
   {
-    "title": "Cold Start: Rapid battery level fluctuation does not trigger false low battery warning",
+    "title": "TC-BAT-COLD-005: Verify No Spurious Low Battery Warning on App Cold Start After Phone Reboot with High Battery Device",
     "steps": [
-      "1. Set device battery level to 70%.",
-      "2. Perform a cold start of the device.",
-      "3. During boot sequence, simulate a transient battery reading dip to 15% for <100ms, then return to 70%.",
-      "4. Observe any notification or warning displayed on the screen.",
-      "5. Check system logs for low battery warning messages."
+      "Charge the Poly device to 100% battery level.",
+      "Pair and connect the device to the phone.",
+      "Open the Poly Studio Mobile app and confirm the device is connected and battery shows 100%.",
+      "Force-close the Poly Studio Mobile app.",
+      "Reboot the phone.",
+      "After the phone restarts, ensure Bluetooth is enabled.",
+      "Wait for the Poly device to automatically reconnect to the phone (may take up to 30 seconds).",
+      "Cold-launch the Poly Studio Mobile app.",
+      "Observe the Home screen for any low battery notification, warning banner, or toast.",
+      "Tap [Device Name] \u2192 Device Info \u2192 Battery Level.",
+      "Verify the battery level is 100%."
     ],
-    "expected": "No low battery notification or warning is displayed. The system should debounce or filter transient battery readings and not act on spurious dips. Only sustained low readings should trigger warnings."
+    "expected": "No low battery notification appears on the Home screen after phone reboot and app cold start. The battery level correctly displays 100%."
   },
   {
-    "title": "Cold Start: Low battery notification does not persist after battery is charged above threshold",
+    "title": "TC-BAT-COLD-006: Verify No Low Battery Notification on App Cold Start with Device at Low-but-Above-Threshold Battery (25%)",
     "steps": [
-      "1. Set device battery level to 5% (low).",
-      "2. Perform a cold start of the device.",
-      "3. Verify low battery notification appears (baseline confirmation).",
-      "4. Connect the device to a charger and charge battery to 60%.",
-      "5. Reboot the device (cold start).",
-      "6. Observe any notification or warning displayed on the screen."
+      "Set the Poly device battery level to 25% (above the typical low battery threshold of 20% but close to it).",
+      "Disconnect the device from the phone.",
+      "Force-close the Poly Studio Mobile app.",
+      "Reconnect the device via Bluetooth.",
+      "Cold-launch the Poly Studio Mobile app.",
+      "Observe the Home screen for any low battery notification, warning icon, or toast.",
+      "Tap [Device Name] \u2192 Device Info \u2192 Battery Level.",
+      "Verify the displayed battery level is approximately 25%.",
+      "Check if any low battery warning is shown on the Device Info screen."
     ],
-    "expected": "After charging to 60% and performing a cold start, no low battery notification or warning is displayed. The notification state is correctly reset on boot based on current battery level, not persisted from previous state."
+    "expected": "No low battery notification is displayed on the Home screen or Device Info screen when the battery is at 25% (above the low threshold). The displayed battery level correctly reads ~25%."
+  },
+  {
+    "title": "TC-BAT-COLD-007: Verify Low Battery Notification Correctly Appears on App Cold Start with Genuinely Low Battery (10%)",
+    "steps": [
+      "Set the Poly device battery level to 10% (below the low battery threshold).",
+      "Disconnect the device from the phone.",
+      "Force-close the Poly Studio Mobile app.",
+      "Reconnect the device via Bluetooth.",
+      "Cold-launch the Poly Studio Mobile app.",
+      "Observe the Home screen for a low battery notification, warning banner, or toast message (e.g., 'Low Battery \u2014 Charge your device').",
+      "Tap [Device Name] \u2192 Device Info \u2192 Battery Level.",
+      "Verify the displayed battery level is approximately 10%.",
+      "Confirm the low battery warning is present and correctly reflects the actual low battery state."
+    ],
+    "expected": "A low battery notification IS correctly displayed on the Home screen upon cold start when the device battery is genuinely low (10%). The battery level in Device Info reads ~10%."
+  },
+  {
+    "title": "TC-BAT-COLD-008: Verify Rapid App Cold Start Cycle Does Not Trigger False Low Battery Notification",
+    "steps": [
+      "Connect a Poly device with a high battery level (e.g., 95%) to the phone.",
+      "Open the Poly Studio Mobile app and verify no low battery notification is shown.",
+      "Force-close the app.",
+      "Immediately (within 2 seconds) cold-launch the app again.",
+      "Observe the Home screen for any low battery notification.",
+      "Force-close the app again.",
+      "Wait 5 seconds.",
+      "Cold-launch the app a third time.",
+      "Observe the Home screen for any low battery notification.",
+      "Tap [Device Name] \u2192 Device Info \u2192 Battery Level and verify the level is still ~95%."
+    ],
+    "expected": "No low battery notification appears during any of the rapid cold start cycles. The battery level consistently reads ~95% across all launches."
   }
 ]
