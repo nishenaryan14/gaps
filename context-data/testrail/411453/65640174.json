@@ -5,20 +5,19 @@
   "project": "411453",
   "title": "Analytics - Firmware Update Failed",
   "feature": "Firmware Updates",
-  "scenario": "Firmware Update Failed Firebase page does not show updated event counts immediately after a DFU failure on Poly Bluetooth device",
+  "scenario": "Firmware Update Failed Firebase page does not update event counts immediately after a DFU failure on a Poly Bluetooth device",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
     "2. Navigate to the Home screen and ensure a Poly Bluetooth audio device is connected.",
-    "3. Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
-    "4. Initiate a DFU (firmware update) on the connected device.",
-    "5. Cause the firmware update to fail (e.g., disconnect the device, interrupt Bluetooth, or force close the app during the update).",
-    "6. Wait a few hours (as event counts are updated after a few hours).",
-    "7. Open the Firmware Update Failed Firebase page in the Firebase console.",
-    "8. Verify the page loads properly and contains the following default elements: Graph, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, App Environment.",
-    "9. Verify the page also contains the following additional elements: Device PID, Charge Unit PID, Update Type, Error Description.",
-    "10. Check that the event count for the related elements (Device PID, Charge Unit PID, Update Type, Error Description) has increased compared to before the failed DFU."
+    "3. Initiate a firmware update (DFU) for the connected device via the app.",
+    "4. Cause the firmware update to fail (e.g., disconnect the device, interrupt Bluetooth, or force close the app during the update).",
+    "5. Wait a few hours for Firebase event counts to propagate.",
+    "6. Open the Firmware Update Failed Firebase page.",
+    "7. Verify the page loads properly and contains all default elements: Graph, Events in last 30 minutes, Event count by Country/Gender, Events per session, App Version, App build, App Environment.",
+    "8. Verify the page also contains the additional elements: Device PID, Charge Unit PID, Update Type, and Error Description.",
+    "9. Check that the event count for the related elements (e.g., Device PID, Update Type, Error Description) has increased compared to before the failed DFU."
   ],
-  "expected": "The Firmware Update Failed Firebase page loads properly and displays all expected default elements (Graph, Events in last 30 minutes, Event count by Country, Event count by Gender, Events per session, App Version, App build, App Environment) plus the additional elements (Device PID, Charge Unit PID, Update Type, Error Description). After a failed DFU and waiting a few hours, the event counts for these elements increase.",
+  "expected": "The Firmware Update Failed Firebase page loads with all default elements (Graph, Events in last 30 minutes, Event count by Country/Gender, Events per session, App Version, App build, App Environment) and additional elements (Device PID, Charge Unit PID, Update Type, Error Description). After a failed DFU, the event counts for related elements increase within a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -26,14 +25,14 @@
     "dfu-failure",
     "firebase-event-counts",
     "poly-studio-mobile",
-    "device-pid",
-    "charge-unit-pid",
-    "update-type",
-    "error-description"
+    "bluetooth-pairing",
+    "firmware-update",
+    "event-propagation",
+    "device-pid"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "ae857232fabe0b515f9e2a894a382ef4160ed3c7c10de2371801efdf885b9f25",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.970831Z",
+  "processed_at": "2026-04-25T07:55:32.000255Z",
   "status": "active"
 }
