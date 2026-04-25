@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Software Update - DFU - HS low battery: multiple clicks on buttons",
   "feature": "Firmware Update",
-  "scenario": "DFU should be blocked when headset battery is below 5% and not on charger; rapid button clicks must not break app or dialog flow",
+  "scenario": "DFU is allowed despite headset battery below 5%, and rapid button clicks break dialog flow on low battery",
   "steps": [
     "1. Launch Poly Studio Mobile app on Android.",
-    "2. Connect a Bluetooth headset with battery level below 5% (and not plugged into power).",
-    "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "4. Locate the DFU (Device Firmware Update) option and tap it.",
-    "5. Observe that the DFU option is disabled or a warning is shown indicating low battery.",
-    "6. If the DFU flow is accessible despite low battery, rapidly tap the 'Update', 'Continue', or 'Start' buttons multiple times in quick succession.",
-    "7. Rapidly tap any dialog 'OK' buttons that appear during the DFU flow.",
-    "8. Observe the app and dialog behavior during and after the rapid clicks."
+    "2. Navigate to Home screen and connect a Poly Bluetooth headset.",
+    "3. Ensure the headset battery level is below 5% and the headset is NOT plugged into power.",
+    "4. Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update (or DFU).",
+    "5. Observe the UI: verify that the update/continue/start button is disabled or a warning is shown indicating insufficient battery.",
+    "6. Attempt to rapidly click (multiple times) on the update/continue/start button.",
+    "7. If a dialog appears (e.g., 'Battery too low to update'), rapidly click the OK / Confirm button multiple times.",
+    "8. Observe the app behavior and dialog flow after the rapid clicks."
   ],
-  "expected": "DFU should not be possible when the headset battery is below 5% and not plugged into power. The app should either disable the DFU option or show a clear warning preventing the update. Rapid clicking on buttons should not crash the app, cause UI freezes, or break the dialog flow.",
+  "expected": "The DFU process should not start. The app should display a clear warning that the headset battery is too low (below 5%) and block the update. Rapid clicking on buttons should not bypass this check, and the app should remain stable without crashing or entering an unexpected state.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu-blocked",
+    "poly-studio-mobile",
+    "dfu",
     "low-battery",
     "firmware-update",
-    "poly-studio-mobile",
-    "rapid-button-clicks",
+    "rapid-click",
     "dialog-flow",
     "battery-persistence",
-    "device-settings"
+    "bluetooth-headset"
   ],
   "source_last_updated": "1763371834",
   "source_hash": "55a454a73f03bc851618f25adf612376e06f7364f988f153c7d7ac666430ea76",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.032728Z",
+  "processed_at": "2026-04-25T09:32:26.291763Z",
   "status": "active"
 }
