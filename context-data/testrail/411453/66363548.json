@@ -4,29 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Tern - no charge case screens (Onboarding, Supported devices list)",
-  "feature": "Tern - Onboarding / Supported Devices",
-  "scenario": "Onboarding the Voyager Free 60 Charge Case without a device connected does not display smart charge case screens.",
+  "feature": "Device Management",
+  "scenario": "Onboarding for Voyager Free 60 Charge Case does not show smart charge case screens when started from supported devices list",
   "steps": [
-    "Start the app without a device connected",
-    "Open the supported devices list",
-    "Select the Voyager Free 60 Charge Case (not Free 60+)",
-    "Start onboarding"
+    "1. Launch the Poly Studio Mobile app on a mobile device with no Bluetooth audio device connected.",
+    "2. On the Home screen, tap the supported devices list or equivalent option to view available devices.",
+    "3. From the list, select 'Voyager Free 60 Charge Case' (not the Voyager Free 60+ variant).",
+    "4. Begin the onboarding process for the selected device.",
+    "5. Observe the screens shown during the onboarding flow."
   ],
-  "expected": "No smart charge case screens are displayed",
+  "expected": "Smart charge case screens should appear during onboarding for the Voyager Free 60.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Voyager Free 60 Charge Case",
-    "onboarding",
-    "smart charge case screens",
-    "no device connected",
-    "supported devices list",
-    "Voyager Free 60",
-    "app"
+    "voyager-free-60-charge-case",
+    "poly-studio-mobile",
+    "onboarding-flow",
+    "supported-devices-list",
+    "smart-charge-case-screens",
+    "bluetooth-pairing",
+    "device-selection"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "f3c528d9b5339a5fb7d30b97f043e1ef0611766a61841aa361e9c3c009eefcd6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.274616Z",
+  "processed_at": "2026-04-25T05:37:16.874486Z",
   "status": "active"
 }
