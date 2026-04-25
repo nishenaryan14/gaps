@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Home Screen - Charger case pop up appears after 1st, 3rd, 5th, 10th 15th... app launch",
   "feature": "Battery/Charging",
-  "scenario": "Charging case pop-up dialog reappears on home screen on repeated app launches when case firmware is outdated",
+  "scenario": "Charging case pop-up dialog reappears repeatedly on home screen after multiple app launches when case firmware is outdated",
   "steps": [
     "1. Launch Poly Studio Mobile app on Android.",
     "2. On the Home screen, connect to a Poly Bluetooth audio device whose charging case is on outdated firmware.",
@@ -25,12 +25,12 @@
     "poly-studio-mobile",
     "home-screen",
     "dialog-reappearance",
-    "app-launch",
+    "app-launch-cycle",
     "android"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "4d5883011d23c59b40692992e6f586c2ee557de7784d87fc16e99f06f6146a28",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.091233Z",
+  "processed_at": "2026-04-25T09:32:26.450641Z",
   "status": "active"
 }
