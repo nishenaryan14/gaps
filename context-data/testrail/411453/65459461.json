@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Updating screen",
-  "feature": "Software Update - DFU",
-  "scenario": "DFU update via app shows progress bar and warning message about call interruptions after tapping \"Update\" and \"Start update\"",
+  "feature": "Firmware Updates",
+  "scenario": "DFU update screen displays call interruption warning message during software update from Device Settings",
   "steps": [
-    "Open the app and navigate to the DFU (Device Firmware Update) section.",
-    "Tap the 'Update' button.",
-    "Tap the 'Start update' button."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Scroll down and tap 'Software Update'",
+    "Tap 'Check for Update' or the available update prompt",
+    "Observe the updating screen with progress bar",
+    "Read the message displayed on screen"
   ],
-  "expected": "The updating screen should be shown with a progress bar and a message: \"Answering a call may interrupt the update and require you to restart the update once the call ends. To avoid interruptions, we recommend completing the update before using your device for calls.\"",
+  "expected": "The updating screen is shown with a progress bar and the message: \"Answering a call may interrupt the update and require you to restart the update once the call ends. To avoid interruptions, we recommend completing the update before using your device for calls.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU update",
-    "firmware update",
-    "progress bar",
-    "warning message",
-    "call interruption",
-    "app update flow",
-    "start update button",
-    "device firmware"
+    "dfu-update",
+    "call-interruption-warning",
+    "software-update",
+    "device-settings",
+    "poly-studio-mobile",
+    "update-progress-screen",
+    "firmware-update"
   ],
   "source_last_updated": "1763369574",
   "source_hash": "974b30f6c9546699f4049c24d4a2314412280526a160d4fa66d0eb971e5c34e1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.286095Z",
+  "processed_at": "2026-04-25T05:37:16.879993Z",
   "status": "active"
 }
