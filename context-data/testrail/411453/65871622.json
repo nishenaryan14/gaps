@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - No Device Connected - Internet is off - Supported List",
-  "feature": "Device Home Screen",
-  "scenario": "When no device is connected and internet is off, tapping \"Supported Devices\" shows an error dialog that can be dismissed to return to the No Devices screen.",
+  "feature": "App Settings",
+  "scenario": "Tapping \"Supported Devices\" link on home screen shows \"Feature unavailable\" dialog when no device is connected and internet is off",
   "steps": [
-    "Ensure no device is connected.",
-    "Turn off internet connection.",
-    "Tap the 'Supported Devices' link.",
-    "Observe the dialog that appears.",
-    "Tap the 'Ok got it' button."
+    "1. Ensure no Poly Bluetooth audio device is connected to the phone.",
+    "2. Turn off internet (Wi-Fi and mobile data) on the phone.",
+    "3. Open the Poly Studio Mobile app.",
+    "4. On the Home screen, locate and tap the 'Supported Devices' link.",
+    "5. Observe the dialog that appears.",
+    "6. Tap the 'Ok got it' button on the dialog."
   ],
-  "expected": "A dialog appears with the message: \"Feature unavailable. An internet connection is required to access this feature.\" and an \"Ok got it\" button. Tapping the button closes the dialog and returns to the No Devices screen.",
+  "expected": "A dialog is displayed: 'Feature unavailable. An internet connection is required to access this feature.' with an 'Ok got it' button. Tapping the button dismisses the dialog and returns to the no-device Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "no device connected",
-    "internet off",
-    "Supported Devices",
-    "error dialog",
-    "dismiss",
-    "No Devices screen",
-    "offline",
-    "Ok got it"
+    "supported-devices",
+    "feature-unavailable",
+    "poly-studio-mobile",
+    "no-device-connected",
+    "offline-behavior",
+    "home-screen",
+    "dialog"
   ],
   "source_last_updated": "1762181111",
   "source_hash": "48fcc4940d2f99e7cf0dcd7ca90e15851d7e0f45b2c7038a1f3113cea2aca099",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.105751Z",
+  "processed_at": "2026-04-25T05:37:16.718938Z",
   "status": "active"
 }
