@@ -5,33 +5,30 @@
   "project": "411453",
   "title": "Device Home screen - Connection status",
   "feature": "Device Management",
-  "scenario": "Device Home screen connection status updates correctly between 'Connected' (green) and 'Disconnected' (red) when Poly headset is powered on/off",
+  "scenario": "Device Home screen connection status updates correctly between 'Connected' (green) and 'Disconnected' (red) based on headset power state",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
+    "1. Launch the Poly Studio Mobile app on the Android device.",
     "2. Navigate to the Home screen.",
-    "3. Ensure a Poly headset is paired and powered ON.",
-    "4. Observe the connection status displayed on the Home screen for the paired device.",
-    "5. Note the status text and marker color (expected: 'Connected' with a green marker).",
-    "6. Turn OFF the paired Poly headset.",
-    "7. Observe the connection status displayed on the Home screen for the paired device.",
-    "8. Note the status text and marker color (expected: 'Disconnected' with a red marker)."
+    "3. Ensure a Poly Bluetooth headset is paired and connected to the Android device.",
+    "4. Observe the connection status indicator on the Home screen for the paired headset.",
+    "5. Turn off the Poly Bluetooth headset (e.g., press and hold the Power button until it powers off).",
+    "6. Observe the connection status indicator on the Home screen again."
   ],
-  "expected": "When the headset is connected, the Home screen shows 'Connected' with a green marker. When the headset is turned off, the status updates to 'Disconnected' with a red marker.",
+  "expected": "When the headset is paired and connected, the Home screen displays 'Connected' with a green marker. When the headset is turned off, the status updates to 'Disconnected' with a red marker.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "home-screen",
     "connection-status",
-    "connected",
-    "disconnected",
+    "connected-disconnected",
     "bluetooth-pairing",
-    "power-on-off",
-    "status-indicator"
+    "headset-power-state",
+    "connection-indicator"
   ],
   "source_last_updated": "1762181274",
   "source_hash": "7fa3abe4ca5e15e897f97742dbe986539567e580e54d05f2637e1f4098f4287f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.802069Z",
+  "processed_at": "2026-04-25T08:21:30.917421Z",
   "status": "active"
 }
