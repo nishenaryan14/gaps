@@ -5,31 +5,34 @@
   "project": "411453",
   "title": "ANC - Both modes disabled, turn on ANC, default value selected",
   "feature": "ANC",
-  "scenario": "ANC Mode does not default to \"On - Adaptive\" when enabled from a state where both ANC and Transparency are disabled",
+  "scenario": "ANC defaults to \"On - Adaptive\" mode when enabled while both ANC and Transparency modes are disabled; Transparency remains off",
   "steps": [
-    "Open Poly Studio Mobile app on Android.",
-    "Navigate to Home screen and tap on the connected Poly audio device.",
-    "Go to Audio Settings.",
-    "Ensure ANC Mode is set to Off.",
-    "Ensure Transparency Mode is set to Off.",
-    "Return to Audio Settings and tap on ANC to turn it On.",
-    "Observe the ANC mode that is selected by default."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Tap on Audio Settings",
+    "Ensure ANC Mode is set to Off",
+    "Ensure Transparency Mode is set to Off",
+    "Go back to Device Settings",
+    "Tap on ANC to turn it On",
+    "Observe the ANC mode that is activated"
   ],
-  "expected": "ANC Mode turns On and defaults to \"On - Adaptive\" mode. Transparency Mode remains disabled (Off).",
+  "expected": "ANC turns on and defaults to \"On - Adaptive\" mode. Transparency Mode remains disabled (Off).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "anc",
     "anc-mode",
-    "on-adaptive",
+    "adaptive-anc",
+    "transparency-mode",
     "poly-studio-mobile",
     "audio-settings",
-    "anc-default",
-    "transparency-mode-off",
-    "anc-off"
+    "device-settings",
+    "anc-default"
   ],
   "source_last_updated": "1761047398",
   "source_hash": "32664b94129fe8b7bdd05900997ed8ca37a5abc2385ec39558ac707888dd6d01",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.984558Z",
+  "processed_at": "2026-04-25T09:32:26.237745Z",
   "status": "active"
 }
