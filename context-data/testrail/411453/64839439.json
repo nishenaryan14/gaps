@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device Home Screen - Device Connected and Update available",
   "feature": "Firmware Updates",
-  "scenario": "Device Home Screen displays Software Update and Release Notes buttons in status box under Battery icons when firmware update is available",
+  "scenario": "Device Home Screen displays \"Software Update\" and \"Release Notes\" buttons in status box when firmware update is available for connected headset",
   "steps": [
-    "1. Launch Poly Studio Mobile app on the Android device.",
-    "2. Ensure a Poly Bluetooth headset is connected to the Android device.",
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Ensure a Poly Bluetooth headset is connected and paired to the Android device.",
     "3. Navigate to the Home screen of the app.",
-    "4. Verify that a firmware update is available for the connected headset.",
+    "4. Confirm that a firmware update is available for the connected headset.",
     "5. Observe the status box located under the Battery icons on the Device Home Screen.",
-    "6. Check if \"Software Update\" and \"Release Notes\" buttons are displayed in the status box."
+    "6. Check for the presence of a \"Software Update\" button within the status box.",
+    "7. Check for the presence of a \"Release Notes\" button within the status box."
   ],
-  "expected": "The Device Home Screen displays \"Software Update\" and \"Release Notes\" buttons in the status box under the Battery icons when a headset is connected and a firmware update is available.",
+  "expected": "The Device Home Screen displays both \"Software Update\" and \"Release Notes\" buttons in the status box under the Battery icons when a firmware update is available.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-home-screen",
     "firmware-update",
     "software-update",
     "release-notes",
+    "device-home-screen",
     "status-box",
-    "battery-icons",
-    "bluetooth-headset"
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1759234031",
   "source_hash": "3288738199578aa00647e90ff73eb16dae3432ecf148dfff99346c5f33091ca8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.799546Z",
+  "processed_at": "2026-04-25T08:21:30.917421Z",
   "status": "active"
 }
