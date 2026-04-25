@@ -5,33 +5,33 @@
   "project": "UNKNOWN",
   "summary": "iOS | OSPREY | Popup about update for Charge Case appears after launching the app",
   "feature": "Firmware Updates",
-  "scenario": "Brief Charge Case firmware update popup appears momentarily after app launch on Voyager Free 60+ despite updates being handled via the mobile app",
-  "description_clean": "After pairing Poly Voyager Free 60+ with the app, if the Charge Case is on outdated firmware, a popup about updating the Charge Case appears briefly (for a split second) after launching the app. This popup should not appear for the Free 60+ charge case since firmware updates for it can be performed via the mobile app.",
+  "scenario": "Brief firmware update popup appears for Charge Case on Poly Voyager Free 60+ when launching app, despite updates being handled via the mobile app",
+  "description_clean": "After pairing Poly Voyager Free 60+ with the app, if the Charge Case is on outdated firmware, a popup about updating the Charge Case appears briefly (for a split second) when launching the app. This popup should not appear for the Free 60+ charge case since firmware updates for it can be performed via the mobile app.",
   "steps": [
-    "1. Pair the Poly Voyager Free 60+ with the Poly Studio Mobile app.",
+    "1. Pair Poly Voyager Free 60+ with the Poly Studio Mobile app.",
     "2. Ensure the Charge Case is on outdated firmware.",
     "3. Launch the Poly Studio Mobile app.",
-    "4. Observe the Home screen for any popup related to updating the Charge Case."
+    "4. Observe the popup that appears on the Home screen."
   ],
   "expected": "No popup about updating the Charge Case should appear, since firmware updates for the Free 60+ charge case can be performed via the mobile app.",
-  "actual": "A popup about updating the Charge Case appears briefly (for a split second) after launching the app.",
+  "actual": "A popup about updating the Charge Case appears briefly (for a split second) when launching the app.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "NeedsEngineeringReview"
   ],
   "keywords": [
-    "voyager-free-60-plus",
+    "poly-voyager-free-60-plus",
     "charge-case",
-    "firmware-update-popup",
-    "poly-studio-mobile",
+    "firmware-update",
+    "poly-studio-mobile-app",
+    "update-popup",
     "home-screen",
-    "brief-popup",
-    "firmware-update"
+    "bluetooth-pairing"
   ],
   "source_last_updated": "2026-04-15T08:55:37.000+0000",
   "source_hash": "3387de25661c56696d4d058577e58de6cb2df437061175b595c47ea9ed03c1d9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.690394Z",
+  "processed_at": "2026-04-25T07:55:31.762260Z",
   "status": "active"
 }
