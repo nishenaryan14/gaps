@@ -12,111 +12,85 @@
     "65459448",
     "65459456",
     "65459427",
-    "65459458",
     "65459457",
     "65459438",
-    "65459432"
+    "65459432",
+    "65459433"
   ],
   "coverage_status": "partial",
   "gaps": [
-    "Analysis returned empty result"
+    "LIFECYCLE DIMENSION \u2014 App backgrounding during call: The bug scenario involves navigating to Home screen (app backgrounding) while on a call, then returning to Device Settings. Existing test 65459432 only checks DFU blocking on the Software Update page during an active call, but does NOT test the lifecycle transition of: app backgrounded -> call active -> app foregrounded -> navigate to Software Update. This is a distinct path where the app's call-state awareness could be lost after being backgrounded and re-entered.",
+    "STATE TRIGGER \u2014 Timing of call-state check: Test 65459432 checks DFU blocking when the call is already active AND the user is already on the Software Update page. The bug scenario has the user navigate through multiple screens (Home -> Device Settings -> Software) while the call is active. This tests whether the call-state check is performed lazily (only on page entry) or is continuously monitored. If the check only happens on initial page load, navigating to Software Update after the call started could bypass it.",
+    "DEVICE ASYMMETRY \u2014 Voyager 5200-specific behavior: The existing test 65459432 does not specify which device it was validated against. The Voyager 5200 is a mono headset (not TWS earbuds) with different firmware update mechanics. The DFU blocking logic for call state may behave differently on mono headsets vs. multi-component devices like Voyager Free 60+. No test explicitly validates DFU blocking during a call specifically on Voyager 5200.",
+    "MISSING SCENARIO \u2014 Softphone-specific call state: The bug specifies a softphone app (Zoom) rather than the native phone dialer. Softphone calls use different audio routing and may not trigger the same 'in-call' state flags that the app checks. Test 65459432 does not specify whether it uses native dialer or softphone. This is a critical gap \u2014 the app may check TelephonyManager state (native calls) but miss VoIP call states from softphone apps."
   ],
   "generated_testcases": [
     {
-      "title": "DFU Blocked During Active Softphone Call \u2014 Incoming Call During Update",
+      "title": "LIFECYCLE \u2014 DFU Blocked After App Backgrounding During Active Softphone Call (Voyager 5200)",
       "steps": [
-        "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
-        "Precondition: Poly Studio Mobile app is open and a firmware update notification is available.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Software & Updates.",
-        "2. Tap 'Check for Updates' and confirm a firmware update is available.",
-        "3. Do NOT start the update yet.",
-        "4. Place an active softphone call (e.g., Teams, Zoom, or native dialer) from the Android phone using the Poly device.",
-        "5. While the call is active, navigate back to Poly Studio Mobile app \u2192 Software & Updates.",
-        "6. Tap 'Update Now' or the firmware update button.",
-        "7. Observe the app behavior."
+        "Precondition: Voyager 5200 connected to phone via Bluetooth. Poly Studio Mobile app installed. Zoom (or any softphone) configured.",
+        "1. Open Poly Studio Mobile app. Navigate to: Device \u2192 Software Update. Verify page shows 'No update available' or update prompt.",
+        "2. Press Home button to background the app.",
+        "3. Open Zoom (softphone). Place an active call (e.g., join a test meeting or call echo test number).",
+        "4. While call is active, return to Poly Studio Mobile app (foreground from recent apps).",
+        "5. Navigate to: Device \u2192 Software Update.",
+        "6. If an update is available, tap 'Update' / 'Install'.",
+        "7. Observe system behavior."
       ],
-      "expected": "The firmware update should be blocked. The app should display a warning message: 'Cannot update while on a call. Please end your call and try again.' The update should not start. The call remains active and unaffected."
+      "expected": "Expected: Software Update page detects active call state and displays 'Cannot update during a call' message (or equivalent). The 'Update' button is disabled/greyed out. DFU firmware update is BLOCKED. Actual (If Bug): App fails to re-evaluate call state after being foregrounded. The update proceeds or the button is enabled, allowing DFU to start during the active softphone call \u2014 regression boundary: call-state awareness lost after app backgrounding + foregrounding cycle."
     },
     {
-      "title": "DFU Blocked During Active Softphone Call \u2014 Start Update Then Receive Call",
+      "title": "STATE TRIGGER \u2014 DFU Blocked When Navigating to Software Update After Call Already Active (Voyager 5200)",
       "steps": [
-        "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
-        "Precondition: Poly Studio Mobile app is open and a firmware update notification is available.",
-        "1. Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Software & Updates.",
-        "2. Tap 'Update Now' to start the firmware update.",
-        "3. While the update is in progress (e.g., during 'Downloading' or 'Installing' phase), receive an incoming softphone call (e.g., Teams, Zoom, or native dialer).",
-        "4. Attempt to answer the call by pressing the Call button on the Poly device.",
-        "5. Observe the app and device behavior."
+        "Precondition: Voyager 5200 connected. Softphone (Zoom) installed and signed in.",
+        "1. Open Zoom (softphone). Place an active call.",
+        "2. While call is active, open Poly Studio Mobile app (fresh launch or from background).",
+        "3. Navigate: Device \u2192 Software Update (i.e., traverse Home \u2192 Device Settings \u2192 Software Update while call is already active).",
+        "4. If an update is available, attempt to tap 'Update'.",
+        "5. Observe the UI state of the Update button and any warning messages."
       ],
-      "expected": "The firmware update should be paused or blocked. The app should display a warning: 'Update paused. An active call is in progress. Please end the call to resume update.' The user should NOT be able to answer the call while the update is active, OR the update should automatically pause when the call is answered. The call audio should not be compromised."
+      "expected": "Expected: App detects active call state upon entering the Software Update page (lazy check on page entry). Update button is disabled. Warning message displayed: 'Cannot update during a call'. DFU is blocked. Actual (If Bug): The call-state check only fires on initial app launch or page mount at app start. Navigating to Software Update after the call has already started bypasses the check \u2014 the Update button remains enabled, allowing DFU to proceed during the active call. Regression boundary: call-state check is not continuously monitored; it is evaluated only at page entry time."
     },
     {
-      "title": "DFU Blocked During Active Softphone Call \u2014 Outgoing Call During Update",
+      "title": "DEVICE ASYMMETRY \u2014 DFU Blocked During Active Call on Voyager 5200 (Mono Headset Specific)",
       "steps": [
-        "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
-        "Precondition: Poly Studio Mobile app is open and a firmware update is in progress (downloading or installing phase).",
-        "1. While the firmware update is active in Poly Studio Mobile app, initiate an outgoing softphone call (e.g., via Teams, Zoom, or native dialer).",
-        "2. Attempt to place the call using the Poly device.",
-        "3. Observe the app and device behavior."
+        "Precondition: Voyager 5200 (mono headset) connected. No other Poly device connected.",
+        "1. Open Poly Studio Mobile app. Navigate: Device \u2192 Software Update.",
+        "2. Verify current firmware version displayed.",
+        "3. Place an active call using the native phone dialer (not softphone).",
+        "4. While call is active, navigate to: Device \u2192 Software Update.",
+        "5. If an update is available, attempt to initiate DFU.",
+        "6. Observe the result."
       ],
-      "expected": "The firmware update should be blocked or paused. The app should display a warning: 'Cannot place a call during firmware update. Please wait for the update to complete.' The outgoing call should not connect, or the update should pause automatically. The user should be notified clearly."
+      "expected": "Expected: DFU firmware update is BLOCKED. The app displays a warning that a call is in progress. The Update button is disabled. This validates Voyager 5200-specific DFU blocking logic (mono headset with single audio path \u2014 updating during a call would disrupt the only audio channel). Actual (If Bug): The DFU blocking logic works differently on mono headsets vs. TWS earbuds (e.g., Voyager Free 60+). On Voyager 5200, the update proceeds or the call-state check is absent \u2014 regression boundary: device asymmetry where mono headset DFU blocking is not implemented or uses a different code path than TWS devices."
     },
     {
-      "title": "DFU Blocked During Active Softphone Call \u2014 Call Waiting / Call Hold During Update",
+      "title": "SOFTPHONE SPECIFIC \u2014 DFU Not Blocked During Zoom Call (VoIP Call State Gap)",
       "steps": [
-        "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
-        "Precondition: Poly Studio Mobile app is open and a firmware update is in progress.",
-        "1. While the firmware update is active, receive a second incoming call (call waiting scenario) while already on an active call.",
-        "2. Press the Call button on the Poly device for 2 seconds to switch between calls or place the first call on hold.",
-        "3. Observe the app and device behavior."
+        "Precondition: Voyager 5200 connected. Zoom (or other softphone) installed and configured with active account.",
+        "1. Open Zoom. Start/join a meeting or place a VoIP call (audio only).",
+        "2. While the Zoom call is active, open Poly Studio Mobile app.",
+        "3. Navigate: Device \u2192 Software Update.",
+        "4. If an update is available, attempt to tap 'Update'.",
+        "5. Observe whether the app detects the softphone call state.",
+        "6. Repeat steps 1-5 using a different softphone (e.g., Microsoft Teams, Skype) if available."
       ],
-      "expected": "The firmware update should remain paused or blocked. The app should continue to display the warning about active calls. Switching between calls or placing a call on hold should not resume the update. The update should only resume after ALL calls are ended."
+      "expected": "Expected: DFU firmware update is BLOCKED. The app detects the softphone VoIP call state (via AudioManager or NotificationListener) and displays 'Cannot update during a call'. Update button disabled. Actual (If Bug): The app only checks TelephonyManager.CallState (native dialer calls) and does NOT detect softphone/VoIP call states. The Update button remains enabled and DFU proceeds during the Zoom call \u2014 regression boundary: softphone calls are invisible to the app's call-state detection, allowing DFU to corrupt the headset firmware during an active VoIP session."
     },
     {
-      "title": "DFU Blocked During Active Softphone Call \u2014 End Call and Resume Update",
+      "title": "IMMEDIATE STATE TRIGGER \u2014 DFU Blocked When Call Starts Mid-Update Page Visit (Voyager 5200)",
       "steps": [
-        "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
-        "Precondition: Poly Studio Mobile app is open and a firmware update is in progress.",
-        "Precondition: An active softphone call is in progress and the update is paused/blocked.",
-        "1. End the active softphone call by pressing the Call button on the Poly device.",
-        "2. Observe the Poly Studio Mobile app for any prompt or automatic behavior.",
-        "3. If prompted, tap 'Resume Update' or navigate to Software & Updates and tap 'Resume'.",
-        "4. Wait for the update to complete.",
-        "5. Verify the device restarts and the firmware version is updated."
+        "Precondition: Voyager 5200 connected. Softphone (Zoom) ready.",
+        "1. Open Poly Studio Mobile app. Navigate: Device \u2192 Software Update.",
+        "2. Verify the Software Update page is displayed and the Update button is enabled (no call active).",
+        "3. WITHOUT leaving the Software Update page, use another device or split-screen to place a Zoom call.",
+        "4. Return focus to the Poly Studio Mobile app (still on Software Update page).",
+        "5. Observe the Update button state and any UI changes.",
+        "6. If the button remains enabled, tap it to attempt DFU."
       ],
-      "expected": "After ending the call, the app should display a notification: 'Call ended. Tap to resume firmware update.' OR the update should automatically resume. The update should complete successfully. The device should restart. The firmware version in Settings \u2192 Device Info \u2192 Firmware Version should reflect the new version. All audio settings (ANC, EQ, volume) should be preserved."
-    },
-    {
-      "title": "DFU Blocked During Active Softphone Call \u2014 Multiple Softphone Apps (Teams + Zoom Simultaneous Calls)",
-      "steps": [
-        "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
-        "Precondition: Both Microsoft Teams and Zoom apps are installed and configured on the Android phone.",
-        "Precondition: Poly Studio Mobile app is open and a firmware update notification is available.",
-        "1. Start an active call on Microsoft Teams using the Poly device.",
-        "2. While the Teams call is active, start a second call on Zoom (placing Teams on hold or merging).",
-        "3. Navigate to Poly Studio Mobile app \u2192 Software & Updates.",
-        "4. Tap 'Update Now'.",
-        "5. Observe the app behavior."
-      ],
-      "expected": "The firmware update should be blocked. The app should detect that the device is in use across multiple softphone apps and display: 'Cannot update while device is in use on calls. Please end all calls and try again.' The update should not start."
-    },
-    {
-      "title": "DFU Blocked During Active Softphone Call \u2014 App Backgrounding During Call + Update Attempt",
-      "steps": [
-        "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
-        "Precondition: Poly Studio Mobile app is open and a firmware update notification is available.",
-        "1. Place an active softphone call (e.g., native dialer) using the Poly device.",
-        "2. While on the call, open Poly Studio Mobile app.",
-        "3. Navigate to Software & Updates.",
-        "4. Tap 'Update Now'.",
-        "5. Observe the warning message.",
-        "6. Press the Home button to background the Poly Studio Mobile app.",
-        "7. Reopen Poly Studio Mobile app from the recent apps list.",
-        "8. Observe the app state and any update-related UI."
-      ],
-      "expected": "Step 4: The update should be blocked with a warning message. Step 7-8: After reopening the app, the warning should still be displayed. The update should not have started in the background. The call should remain active and unaffected. The app should not crash or lose state."
+      "expected": "Expected: The app continuously monitors call state. When the call starts, the Update button immediately disables and a warning appears ('Call in progress \u2014 update blocked'). DFU is blocked even though the user was already on the Software Update page before the call began. Actual (If Bug): The call-state check is performed only once on page entry. A call that starts while the user is already on the Software Update page is not detected. The Update button remains enabled, allowing DFU to start during the call \u2014 regression boundary: no real-time call-state listener; stale page-entry check only."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:10.928852Z"
+  "processed_at": "2026-04-25T09:46:00.200137Z"
 }
