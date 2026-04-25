@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Analytics - Fit Test Opened",
   "feature": "App Settings",
-  "scenario": "Fit Test screen opening does not increment analytics event count after several hours in Poly Studio Mobile app",
+  "scenario": "Analytics event logged when Fit Test screen is opened in Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app on a connected Android device.",
-    "2. Navigate to the Home screen.",
-    "3. Tap on the Fit Test tab to open the Fit Test screen.",
-    "4. Wait a few hours for the analytics event to be logged and processed.",
-    "5. Check the analytics backend to verify that the event was logged with the correct metrics (event count by country, gender, per session, app version, app build, and app environment)."
+    "Open the Poly Studio Mobile app on the Android device.",
+    "Navigate to the Home screen.",
+    "Tap on the connected Poly Bluetooth audio device to open Device Settings.",
+    "In Device Settings, locate and tap on 'Fit Test' (or navigate to Audio Settings \u2192 Fit Test if applicable).",
+    "Observe that the Fit Test screen opens."
   ],
-  "expected": "The analytics event is logged successfully after opening the Fit Test screen, with correct metrics for event count by country, gender, per session, app version, app build, and app environment.",
+  "expected": "An analytics event is logged when the Fit Test screen is opened. The event should include the following data fields: event count, country, gender, sessions, app version, build, and environment.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "fit-test",
+    "poly-studio-mobile",
+    "device-settings",
     "analytics-event",
-    "event-count",
-    "app-version",
-    "app-build",
-    "app-environment"
+    "audio-settings",
+    "bluetooth-audio-device",
+    "android"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "135380f9db72cfe8ddd827d0392be3ca8b3ecfab3c3cd27ae981162a4033944c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.993534Z",
+  "processed_at": "2026-04-25T08:21:31.066786Z",
   "status": "active"
 }
