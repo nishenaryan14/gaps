@@ -4,29 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "Soak Test - No Headset connected, app in the foreground, phone idle",
-  "feature": "Soak Test / Stability",
-  "scenario": "Soak test: App remains stable and usable after prolonged idle foreground use with no headset connected.",
+  "feature": "App Settings",
+  "scenario": "Poly Studio Mobile app remains stable and responsive after prolonged idle soak test with no headset connected",
   "steps": [
-    "Install and launch the app, go to the Home Screen (no headset connected).",
-    "Leave the phone idle with the app in the foreground.",
-    "After several hours (ideally overnight or multiple hours), check that the app is still running and usable."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Ensure no Poly Bluetooth headset is connected to the phone.",
+    "3. Leave the app in the foreground (Home screen) with the phone idle for multiple hours (e.g., overnight).",
+    "4. After the idle period, wake the phone and observe the Poly Studio Mobile app."
   ],
-  "expected": "App remains running and usable with no memory leaks or crashes after prolonged idle time.",
+  "expected": "The Poly Studio Mobile app remains stable and responsive. No app crash, freeze, or out-of-memory error occurs. The Home screen is displayed correctly and responds to user input.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "soak test",
-    "idle foreground",
-    "stability",
-    "no headset",
-    "prolonged idle",
-    "app usability",
-    "overnight test",
-    "background persistence"
+    "poly-studio-mobile",
+    "idle-soak-test",
+    "app-stability",
+    "no-headset-connected",
+    "android",
+    "app-responsiveness",
+    "foreground-idle"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "6b72793655e75c4fd405ea079a64b6b475c55bacdcbef9f8078607e324e087a7",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.337160Z",
+  "processed_at": "2026-04-25T05:37:16.975727Z",
   "status": "active"
 }
