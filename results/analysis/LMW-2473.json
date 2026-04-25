@@ -17,106 +17,152 @@
     "65459438",
     "65459432"
   ],
-  "coverage_status": "partial",
+  "coverage_status": "none",
   "gaps": [
-    "Analysis returned empty result"
+    "No test covers DFU initiated via 'Update All' button after a PC-side downgrade (dual-path firmware state manipulation).",
+    "No test covers the scenario where the headset is simultaneously connected to the Poly Studio Mobile app AND connected to a PC via USB for firmware downgrade before initiating DFU from the app.",
+    "No test validates the 'retry' option (or lack thereof) after a DFU failure \u2014 the bug specifically calls out 'no retry option after failure' which is untested.",
+    "No test covers stale/incorrect firmware version state displayed after app restart following a failed DFU \u2014 the bug reports that version state does not refresh correctly.",
+    "No test covers the 'Update All' DFU flow for a headset + Charge Stand combination (most DFU tests focus on Voyager Free 60+ earbuds + charge case, not headset + charge stand).",
+    "No test covers DFU failure recovery lifecycle: app close \u2192 reopen \u2192 check update availability \u2192 app restart \u2192 check version state persistence.",
+    "No test covers intermittent DFU failures \u2014 all existing tests assume success or deterministic failure paths (e.g., active call blocking).",
+    "No test validates the Software Update tab state after a failed DFU attempt \u2014 specifically whether 'Update All' button reappears or remains absent."
   ],
   "generated_testcases": [
     {
-      "title": "TC-DFU-001: Verify 'Update All' DFU failure when headset connected to Poly Studio Mobile app during PC downgrade \u2014 no retry option",
+      "title": "TC-DFU-001: 'Update All' DFU after PC-side downgrade \u2014 headset connected to app during PC downgrade",
       "steps": [
-        "1. Connect Poly Voyager Free 60+ UC earbuds to the Poly Studio Mobile app on Android.",
-        "2. Ensure the earbuds are also connected to a PC via Bluetooth.",
-        "3. On the PC, initiate a firmware downgrade for the earbuds using Poly Lens Desktop or Plantronics Hub.",
-        "4. While the PC downgrade is in progress, open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
-        "5. Tap 'Update All' to start a firmware update from the app.",
-        "6. Observe the DFU process on the app \u2014 note any error message or failure indication.",
-        "7. After the failure, check if a 'Retry' button or any retry option is displayed on the Firmware Update screen.",
-        "8. Close and reopen the Poly Studio Mobile app.",
-        "9. Navigate to Device Settings \u2192 Firmware Update again."
+        "Connect headset to Poly Studio Mobile app via Bluetooth.",
+        "Connect headset to PC via USB cable.",
+        "On PC, use Poly Lens Desktop to perform a firmware downgrade on the headset (e.g., from v6.0 to v5.0).",
+        "While PC downgrade is in progress, keep Poly Studio Mobile app open and connected to the headset.",
+        "After PC downgrade completes, disconnect headset from PC USB.",
+        "In Poly Studio Mobile app, navigate to Device \u2192 Software Update.",
+        "Tap 'Update All' button to initiate DFU.",
+        "Observe the DFU progress indicator.",
+        "If DFU fails mid-way (intermittent failure), observe the UI state after failure."
       ],
-      "expected": "The 'Update All' DFU fails with an error message. No 'Retry' button or retry option is shown on the Firmware Update screen. After app restart, the firmware update status remains stale (e.g., still shows 'Update Available' or 'Update All' even though the update failed or was interrupted)."
+      "expected": "The 'Update All' button should be present after PC downgrade. If DFU fails, the app should display a clear failure message with a 'Retry' option. The headset should remain discoverable and connectable after failure."
     },
     {
-      "title": "TC-DFU-002: Verify stale update status persists after app restart when DFU fails during PC downgrade",
+      "title": "TC-DFU-002: No retry option after 'Update All' DFU failure \u2014 UI state validation",
       "steps": [
-        "1. Connect Poly Voyager Free 60+ UC to the Poly Studio Mobile app.",
-        "2. Connect the same device to a PC via Bluetooth.",
-        "3. On the PC, start a firmware downgrade using Poly Lens Desktop.",
-        "4. During the PC downgrade, open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
-        "5. Tap 'Update All' and allow the DFU to fail (due to concurrent PC downgrade).",
-        "6. Note the firmware version shown on the app after failure.",
-        "7. Force-kill the Poly Studio Mobile app (swipe from recent apps).",
-        "8. Reopen the Poly Studio Mobile app and reconnect to the device.",
-        "9. Navigate to Device Settings \u2192 Firmware Update.",
-        "10. Compare the displayed firmware version and update status with the version noted in step 6."
+        "Connect headset to Poly Studio Mobile app.",
+        "Connect headset to PC via USB and perform a firmware downgrade using Poly Lens Desktop.",
+        "Disconnect USB and return to Poly Studio Mobile app.",
+        "Navigate to Device \u2192 Software Update.",
+        "Tap 'Update All' to start DFU.",
+        "Force an intermittent failure (e.g., move out of Bluetooth range during DFU, or trigger a call notification).",
+        "After DFU failure, observe the on-screen UI elements.",
+        "Check for presence of 'Retry', 'Try Again', or 'Update All' button.",
+        "Check for any error message text displayed."
       ],
-      "expected": "The firmware update status remains stale after app restart \u2014 the app still shows the same outdated firmware version and 'Update Available' or 'Update All' prompt, even though the device may have been partially updated or is in an inconsistent state. No indication of the previous failed update attempt is shown."
+      "expected": "The app should display a 'Retry' or 'Try Again' button after DFU failure. If no retry option is present, this is a bug. The error message should clearly indicate the failure reason."
     },
     {
-      "title": "TC-DFU-003: Verify 'Update All' DFU failure when PC downgrade completes before app DFU starts",
+      "title": "TC-DFU-003: Stale firmware version displayed after app restart following failed DFU",
       "steps": [
-        "1. Connect Poly Voyager Free 60+ UC to the Poly Studio Mobile app.",
-        "2. Connect the same device to a PC via Bluetooth.",
-        "3. On the PC, complete a full firmware downgrade using Poly Lens Desktop.",
-        "4. Without disconnecting from PC, open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
-        "5. Tap 'Update All' to start the DFU from the app.",
-        "6. Observe the DFU process for any error or failure.",
-        "7. After failure, check for a 'Retry' button on the Firmware Update screen.",
-        "8. Close and reopen the app, then navigate back to Firmware Update."
+        "Connect headset to Poly Studio Mobile app.",
+        "Perform PC-side firmware downgrade while headset is connected to app (dual-path state manipulation).",
+        "Disconnect USB and initiate 'Update All' DFU from app.",
+        "Allow DFU to fail (intermittent failure).",
+        "After failure, force-close the Poly Studio Mobile app (swipe from recents).",
+        "Reopen Poly Studio Mobile app.",
+        "Navigate to Device \u2192 Device Info or Software Update.",
+        "Observe the displayed firmware version for the headset.",
+        "Compare displayed version with the actual firmware version on the headset (verify via PC Poly Lens Desktop)."
       ],
-      "expected": "The 'Update All' DFU fails or behaves unexpectedly (e.g., shows incorrect version, hangs, or errors out). No retry option is available. After app restart, the update status is stale and does not reflect the actual firmware version on the device."
+      "expected": "The firmware version displayed in the app should accurately reflect the actual firmware version on the headset after restart. If the app shows a stale/incorrect version (e.g., the target version from the failed DFU instead of the actual downgraded version), this is a bug."
     },
     {
-      "title": "TC-DFU-004: Verify 'Update All' DFU failure when PC downgrade is initiated during app DFU transfer phase",
+      "title": "TC-DFU-004: 'Update All' DFU failure recovery lifecycle \u2014 app close \u2192 reopen \u2192 check update \u2192 app restart \u2192 version persistence",
       "steps": [
-        "1. Connect Poly Voyager Free 60+ UC to the Poly Studio Mobile app.",
-        "2. Connect the same device to a PC via Bluetooth.",
-        "3. Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
-        "4. Tap 'Update All' and wait for the DFU transfer to begin (progress bar appears).",
-        "5. While the app DFU transfer is in progress (e.g., at 30-50%), start a firmware downgrade on the PC using Poly Lens Desktop.",
-        "6. Observe the app DFU progress \u2014 note any error, freeze, or crash.",
-        "7. After the app DFU fails, check if a 'Retry' button is displayed.",
-        "8. Force-kill and reopen the Poly Studio Mobile app.",
-        "9. Navigate to Device Settings \u2192 Firmware Update."
+        "Connect headset to Poly Studio Mobile app.",
+        "Perform PC-side firmware downgrade while headset is connected to app.",
+        "Disconnect USB and navigate to Device \u2192 Software Update.",
+        "Tap 'Update All' to start DFU.",
+        "Allow DFU to fail (intermittent failure).",
+        "Force-close the app.",
+        "Reopen the app and navigate to Device \u2192 Software Update.",
+        "Observe whether 'Update All' button is present or absent.",
+        "Force-close the app again.",
+        "Reopen the app and navigate to Device \u2192 Device Info.",
+        "Note the firmware version displayed.",
+        "Restart the phone (full reboot).",
+        "Open Poly Studio Mobile app and navigate to Device \u2192 Software Update.",
+        "Observe the 'Update All' button state and firmware version display."
       ],
-      "expected": "The app DFU fails during the transfer phase when the PC downgrade is initiated. No retry option is shown. After app restart, the firmware update status is stale \u2014 the app may still show the old firmware version and 'Update Available' even though the device firmware state is now inconsistent due to the interrupted dual update."
+      "expected": "After each app restart, the 'Update All' button should reappear if an update is still available. The firmware version should consistently show the actual version on the headset. No stale state should persist across app restarts or phone reboot."
     },
     {
-      "title": "TC-DFU-005: Verify no retry option after 'Update All' DFU failure due to concurrent PC downgrade \u2014 device reconnection scenario",
+      "title": "TC-DFU-005: 'Update All' DFU for headset + Charge Stand combination \u2014 dual-device DFU",
       "steps": [
-        "1. Connect Poly Voyager Free 60+ UC to the Poly Studio Mobile app.",
-        "2. Connect the same device to a PC via Bluetooth.",
-        "3. On the PC, start a firmware downgrade using Poly Lens Desktop.",
-        "4. During the PC downgrade, open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
-        "5. Tap 'Update All' and let the DFU fail.",
-        "6. After failure, disconnect the device from the PC Bluetooth.",
-        "7. On the Poly Studio Mobile app, check if a 'Retry' button appears on the Firmware Update screen.",
-        "8. Tap the device name to go back to Device Settings, then re-enter Firmware Update.",
-        "9. Disconnect and reconnect the earbuds from the phone Bluetooth (Phone Settings \u2192 Bluetooth \u2192 Forget device, then re-pair).",
-        "10. Reopen Poly Studio Mobile app, navigate to Device Settings \u2192 Firmware Update."
+        "Connect headset (e.g., Voyager Focus 2) to Poly Studio Mobile app.",
+        "Ensure headset is docked on the Charge Stand.",
+        "Connect headset to PC via USB and perform a firmware downgrade using Poly Lens Desktop.",
+        "Disconnect USB from PC.",
+        "In Poly Studio Mobile app, navigate to Device \u2192 Software Update.",
+        "Observe the Software Update screen for both headset and Charge Stand entries.",
+        "Tap 'Update All' button.",
+        "Monitor DFU progress for both devices.",
+        "If DFU fails for either device, observe the UI state.",
+        "Force-close the app, reopen, and navigate back to Software Update."
       ],
-      "expected": "No 'Retry' button appears on the Firmware Update screen even after disconnecting from PC. Navigating away and back does not show a retry option. After Bluetooth re-pairing and app reconnection, the firmware update status remains stale \u2014 the app does not recover to show the correct firmware version or offer a fresh update option."
+      "expected": "The 'Update All' button should be present and should attempt to update both headset and Charge Stand. If DFU fails for one device, the app should show which device failed and provide a retry option. After app restart, the update availability should be correctly reflected for both devices."
     },
     {
-      "title": "TC-DFU-006: Verify 'Update All' DFU failure leaves device in inconsistent state \u2014 audio functionality check",
+      "title": "TC-DFU-006: Software Update tab state after failed DFU \u2014 'Update All' button presence validation",
       "steps": [
-        "1. Connect Poly Voyager Free 60+ UC to the Poly Studio Mobile app.",
-        "2. Connect the same device to a PC via Bluetooth.",
-        "3. On the PC, start a firmware downgrade using Poly Lens Desktop.",
-        "4. During the PC downgrade, open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Device Settings \u2192 Firmware Update.",
-        "5. Tap 'Update All' and allow the DFU to fail.",
-        "6. After the failure, close the Poly Studio Mobile app.",
-        "7. Play audio media (music or video) on the phone.",
-        "8. Make a phone call using the earbuds.",
-        "9. Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Audio Settings \u2192 Transparency Mode \u2192 Environment.",
-        "10. Adjust the Surround level slider and verify audio pass-through.",
-        "11. Switch to Speech sub-setting and adjust the Free level slider.",
-        "12. Navigate to Device Settings \u2192 Firmware Update and check the status."
+        "Connect headset to Poly Studio Mobile app.",
+        "Perform PC-side firmware downgrade while headset is connected to app.",
+        "Disconnect USB and navigate to Device \u2192 Software Update.",
+        "Tap 'Update All' to start DFU.",
+        "Allow DFU to fail (intermittent failure).",
+        "Observe the Software Update screen immediately after failure.",
+        "Note whether 'Update All' button is still present, replaced by a different button, or absent entirely.",
+        "Navigate away from Software Update to another screen (e.g., Audio Settings).",
+        "Navigate back to Device \u2192 Software Update.",
+        "Observe the 'Update All' button state.",
+        "Force-close the app, reopen, and navigate to Device \u2192 Software Update.",
+        "Observe the 'Update All' button state again."
       ],
-      "expected": "Audio playback and call functionality may be degraded or non-functional after the failed DFU. Transparency Mode settings (Surround and Free levels) may not persist or may behave incorrectly. The Firmware Update screen shows a stale status with no retry option, and the device firmware version may be incorrect or blank."
+      "expected": "After DFU failure, the 'Update All' button should either reappear or a 'Retry' button should be shown. The button should persist when navigating away and back. After app restart, if an update is still available, the 'Update All' button should be present. If the button is permanently absent after a failed DFU, this is a bug."
+    },
+    {
+      "title": "TC-DFU-007: Intermittent DFU failure during 'Update All' \u2014 Bluetooth disconnection mid-DFU",
+      "steps": [
+        "Connect headset to Poly Studio Mobile app.",
+        "Perform PC-side firmware downgrade while headset is connected to app.",
+        "Disconnect USB and navigate to Device \u2192 Software Update.",
+        "Tap 'Update All' to start DFU.",
+        "During DFU progress (at ~30-50%), trigger a Bluetooth disconnection by moving the phone out of range or disabling Bluetooth on the phone.",
+        "Wait 30 seconds.",
+        "Re-enable Bluetooth and reconnect to the headset.",
+        "Open Poly Studio Mobile app and navigate to Device \u2192 Software Update.",
+        "Observe the DFU state and 'Update All' button presence.",
+        "Force-close the app, reopen, and check the Software Update screen again."
+      ],
+      "expected": "After Bluetooth reconnection, the app should recognize the failed DFU and show the 'Update All' or 'Retry' button. The firmware version should reflect the actual state on the headset. No stale 'updating' state should persist."
+    },
+    {
+      "title": "TC-DFU-008: 'Update All' DFU failure \u2014 app backgrounding during failure state",
+      "steps": [
+        "Connect headset to Poly Studio Mobile app.",
+        "Perform PC-side firmware downgrade while headset is connected to app.",
+        "Disconnect USB and navigate to Device \u2192 Software Update.",
+        "Tap 'Update All' to start DFU.",
+        "Allow DFU to fail (intermittent failure).",
+        "Without dismissing the failure screen, press the Home button to background the app.",
+        "Wait 10 seconds.",
+        "Reopen the app from the app switcher.",
+        "Observe the screen state.",
+        "Navigate to Device \u2192 Software Update.",
+        "Check for 'Update All' or 'Retry' button presence.",
+        "Force-close the app, reopen, and navigate to Device \u2192 Software Update again."
+      ],
+      "expected": "After backgrounding and reopening, the app should show the DFU failure state with a retry option. The 'Update All' button should be present after navigating to Software Update. After full app restart, the update availability should be correctly reflected."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T05:50:39.036018Z"
+  "processed_at": "2026-04-25T08:35:22.712019Z"
 }
