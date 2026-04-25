@@ -8,27 +8,26 @@
   "scenario": "Release Notes link in App Settings > General > About opens correct web page for current Lens version release notes",
   "steps": [
     "Open the Poly Studio Mobile app.",
-    "Navigate to App Settings (gear icon).",
-    "Tap General.",
-    "Tap About.",
+    "Tap the Account icon or navigate to App Settings.",
+    "Go to General \u2192 About.",
     "Tap the Release Notes link.",
     "Observe the web page that opens."
   ],
-  "expected": "The Release Notes link opens the correct web page displaying the release notes for the current version of the app.",
+  "expected": "The device's default web browser opens and displays the correct release notes page for the current Lens version.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "release-notes",
     "app-settings",
-    "general-settings",
-    "about-screen",
+    "general-about",
     "lens-version",
-    "web-link-navigation"
+    "in-app-link",
+    "web-page-redirect"
   ],
   "source_last_updated": "1759416405",
   "source_hash": "8dcfca9aba77d5da0a7c940d7c0010f380929a1fe8c887dcedb12f4347a1c70e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.752830Z",
+  "processed_at": "2026-04-25T07:55:31.814515Z",
   "status": "active"
 }
