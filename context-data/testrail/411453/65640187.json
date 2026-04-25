@@ -4,28 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Support App Opened",
-  "feature": "Analytics",
-  "scenario": "Support App Opened event is logged when navigating to Support > App screen, tracking occurrences with default analytics elements and delayed event count updates.",
+  "feature": "App Settings",
+  "scenario": "Analytics event logged when Support > App screen is opened, tracking event metrics with delayed count updates",
   "steps": [
-    "Open the app",
-    "Navigate to Support > App screen",
-    "Observe the logged event"
+    "Open the Poly Studio Mobile app on the Android device.",
+    "Navigate to the Home screen.",
+    "Tap on the Support option (or navigate to Support via the menu).",
+    "Tap on the App screen within the Support section.",
+    "Observe the analytics event being logged.",
+    "Check the event metrics: event count, events in the last 30 minutes, event count by country/gender, events per session, app version, app build, and app environment.",
+    "Wait a few hours and check if the event counts update."
   ],
-  "expected": "The Support App Opened event is logged, tracking occurrences and including default analytics elements: a graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment. Event counts are updated after a few hours.",
+  "expected": "Analytics event is logged immediately when the Support > App screen is opened, and all metrics (event count, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment) are displayed and updated in real-time or near real-time.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Support App Opened",
-    "event logged",
-    "Support > App screen",
-    "navigation tracking",
-    "analytics elements",
-    "delayed event count",
-    "screen open event"
+    "poly-studio-mobile",
+    "analytics-event",
+    "support-screen",
+    "app-screen",
+    "event-metrics",
+    "event-count",
+    "app-version",
+    "app-environment"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "704427ab4b8e8e0c3d0dbcf834b6d6e67854aeaf9694b2b1db190342ec6e7c79",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.330912Z",
+  "processed_at": "2026-04-25T05:37:16.970831Z",
   "status": "active"
 }
