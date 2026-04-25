@@ -6,32 +6,32 @@
   "summary": "ANDROID | Device remains connected in app after Bluetooth disconnect",
   "feature": "Bluetooth Pairing",
   "scenario": "Device remains shown as connected in Poly Studio Mobile app after disconnecting via Bluetooth menu",
-  "description_clean": "Device remains shown as connected in the Poly Studio Mobile app after the user disconnects the headset via the Bluetooth menu. Expected behavior: the device state should update to disconnected in the app.",
+  "description_clean": "Device remains shown as connected in the Poly Studio Mobile app after the user disconnects the headset via the Bluetooth menu. Expected behavior: device state should update to disconnected in the app.",
   "steps": [
-    "Open the Poly Studio Mobile app on the Android device.",
-    "Ensure a Poly Bluetooth headset is connected and shown on the Home screen.",
-    "Open the Android Bluetooth settings menu.",
-    "Tap on the connected Poly device and select \"Disconnect\" or \"Forget\" to disconnect the headset.",
-    "Return to the Poly Studio Mobile app Home screen.",
-    "Observe the device connection status displayed in the app."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Ensure a Poly Bluetooth headset is connected and shown on the Home screen.",
+    "3. Navigate to the Android device's Bluetooth settings menu.",
+    "4. Tap on the connected Poly headset and select 'Disconnect' or 'Forget' to disconnect the device.",
+    "5. Return to the Poly Studio Mobile app Home screen.",
+    "6. Observe the connection status displayed for the headset."
   ],
-  "expected": "The device state should update to \"Disconnected\" in the Poly Studio Mobile app Home screen.",
-  "actual": "The device remains shown as \"Connected\" in the Poly Studio Mobile app even after disconnecting via the Android Bluetooth menu.",
+  "expected": "The device state should update to 'Disconnected' in the Poly Studio Mobile app Home screen.",
+  "actual": "The device remains shown as 'Connected' in the Poly Studio Mobile app even after disconnecting via the Bluetooth menu.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
     "poly-studio-mobile",
-    "bluetooth-disconnect",
     "connection-status",
+    "bluetooth-disconnect",
     "home-screen",
-    "android-bluetooth-settings",
+    "bluetooth-settings",
     "device-persistence",
-    "bluetooth-pairing"
+    "android"
   ],
   "source_last_updated": "2026-04-16T11:45:32.000+0000",
   "source_hash": "046afc27dd1d2ebd462027de82a82bed86df5f8e84fcecb8cbce7f88812f035d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.754016Z",
+  "processed_at": "2026-04-25T09:32:25.737923Z",
   "status": "active"
 }
