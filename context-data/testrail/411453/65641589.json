@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "EQ - Custom EQ, change the some values, Save EQ, dialog present, click OK",
   "feature": "Equalizer",
-  "scenario": "Custom EQ changes are not saved after clicking OK in the save confirmation dialog",
+  "scenario": "Custom EQ changes are not saved when clicking OK on the save confirmation dialog",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
@@ -13,27 +13,27 @@
     "Select Audio Settings",
     "Select Equalizer",
     "Choose Custom EQ preset",
-    "Adjust one or more frequency band sliders (e.g., increase 100 Hz or decrease 1 kHz)",
-    "Tap Save EQ",
+    "Adjust one or more frequency band sliders (e.g., increase bass or treble)",
+    "Tap Save EQ button",
     "Observe the dialog that appears",
     "Tap OK on the dialog"
   ],
-  "expected": "The Custom EQ settings are saved successfully, the dialog is dismissed, and the new EQ values are applied to the audio output.",
+  "expected": "The Custom EQ settings are saved, the dialog is dismissed, and the new EQ values are applied to the audio output.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "custom-eq",
     "equalizer",
-    "frequency-band",
-    "save-eq",
+    "eq-preset-save",
     "poly-studio-mobile",
     "audio-settings",
-    "eq-persistence",
-    "device-settings"
+    "frequency-band",
+    "save-confirmation-dialog",
+    "eq-persistence"
   ],
   "source_last_updated": "1761210934",
   "source_hash": "0bc96f428d0ca12c170c0b6c97589ac1a64b12f48bf0bdf16d1501feffbe3917",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.929732Z",
+  "processed_at": "2026-04-25T08:21:31.003014Z",
   "status": "active"
 }
