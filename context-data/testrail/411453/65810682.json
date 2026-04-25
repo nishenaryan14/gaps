@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Charge case outside screen/third screen, left zoom in/out",
-  "feature": "QSG (Quick Start Guide) - Third Screen",
-  "scenario": "Verify zoom in/out functionality on the third screen (charge case outside) by clicking the left circle button to zoom in (revealing new text) and clicking again to zoom out to the original screen.",
+  "feature": "App Settings",
+  "scenario": "Quick Start Guide third screen zoom toggles when clicking left circle button on charge case outside view",
   "steps": [
-    "Open QSG",
-    "Swipe to third screen",
-    "Click left circle button to zoom in (new text appears)",
-    "Click circle button again to zoom out to original screen showing charge case outside"
+    "Open the Poly Studio Mobile app.",
+    "Navigate to the Home screen.",
+    "Tap on the Quick Start Guide (QSG) option.",
+    "Swipe or navigate to the third screen showing the charge case outside view.",
+    "Tap the left circle button on the screen.",
+    "Tap the left circle button again."
   ],
-  "expected": "Zoom in shows new text, zoom out returns to original screen showing charge case outside",
+  "expected": "On first tap, the view zooms in and displays new text. On second tap, the view zooms out to the original screen showing the charge case outside view.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "zoom in/out",
-    "charge case outside",
-    "left circle button",
-    "third screen",
-    "QSG",
-    "zoom functionality",
-    "UI interaction"
+    "poly-studio-mobile",
+    "quick-start-guide",
+    "charge-case",
+    "left-circle-button",
+    "zoom-toggle",
+    "third-screen",
+    "app-navigation"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "67bf9214da83b3f8598a19052bbd78741d53994963797cc70394debb25d257e9",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.270722Z",
+  "processed_at": "2026-04-25T05:37:16.858583Z",
   "status": "active"
 }
