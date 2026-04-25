@@ -4,28 +4,29 @@
   "type": "testcase",
   "project": "411453",
   "title": "PPIP - Dialog after Onboarding - UI",
-  "feature": "Onboarding / PPIP Dialog",
-  "scenario": "After onboarding, tapping \"Continue as Guest\" displays a PPIP dialog with \"Help us improve your experience\" and options \"Don't Share\" and \"Share Data\"",
+  "feature": "App Settings",
+  "scenario": "PPIP dialog appears after onboarding when tapping \"Continue as Guest\" on Poly Studio Mobile app",
   "steps": [
-    "Complete the onboarding screens",
-    "Tap 'Continue as Guest'"
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Complete the onboarding screens.",
+    "3. On the final onboarding screen, tap \"Continue as Guest\".",
+    "4. Observe the dialog that appears."
   ],
-  "expected": "A PPIP (Privacy, Performance, Improvement Program) dialog should appear displaying: \"Help us improve your experience.\" followed by a description about collecting basic device and app information (model, serial number, software version, feature usage) for performance and support, noting no personal data is collected or shared with third parties, and that preferences can be changed anytime in Settings. The dialog includes two options: \"Don't Share\" and \"Share Data\".",
+  "expected": "The PPIP (Product and Personal Improvement Program) dialog appears, asking the user to share basic device and app information (model, serial number, software version, feature usage) to help improve performance and support. The dialog states no personal information is collected or shared with third parties, and preferences can be changed anytime in Settings. Two options are presented: \"Don't Share\" and \"Share Data\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "onboarding",
-    "Continue as Guest",
-    "PPIP dialog",
-    "Help us improve your experience",
-    "Don't Share",
-    "Share Data",
-    "guest mode",
-    "data sharing consent"
+    "continue-as-guest",
+    "ppip-dialog",
+    "guest-mode",
+    "app-launch",
+    "ui-dialog"
   ],
   "source_last_updated": "1760536922",
   "source_hash": "5124052491945a95b02769748f4dbf40e8773d251cb84960e2ef6daae5f1e39e",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.097179Z",
+  "processed_at": "2026-04-25T05:37:16.715900Z",
   "status": "active"
 }
