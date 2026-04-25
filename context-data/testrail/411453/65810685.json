@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Charge case inside screen/forth screen, right zoom in/out",
-  "feature": "QSG (Quick Start Guide) - Charge Case Screen",
-  "scenario": "Clicking the right circle button on the fourth QSG screen toggles between a zoomed-in view with new text and a zoomed-out view showing the charge case.",
+  "feature": "App Settings",
+  "scenario": "Quick Start Guide charge case inside screen zoom in/out toggle fails when clicking the right circle button",
   "steps": [
-    "Navigate to the fourth screen of the QSG.",
-    "Click the right circle button.",
-    "Observe the zoom and new text displayed.",
-    "Click the circle button again.",
-    "Observe the zoom out to the original screen showing the charge case inside."
+    "Open the Poly Studio Mobile app.",
+    "Navigate to the Home screen.",
+    "Tap on the Quick Start Guide (QSG) option.",
+    "Swipe or navigate to the fourth screen showing the charge case inside.",
+    "Tap the right circle button on the screen.",
+    "Tap the right circle button again."
   ],
-  "expected": "On the fourth screen of the QSG, clicking the right circle button zooms in and displays new text. Clicking the circle button again zooms out to the original screen showing the charge case inside.",
+  "expected": "First tap: The screen zooms in and displays new text related to the charge case inside. Second tap: The screen zooms out to the original view showing the charge case inside.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "QSG",
-    "fourth screen",
-    "right circle button",
-    "zoom toggle",
-    "charge case",
-    "zoom in",
-    "zoom out",
-    "text display"
+    "poly-studio-mobile",
+    "quick-start-guide",
+    "charge-case-inside",
+    "screen-zoom-toggle",
+    "right-circle-button",
+    "ui-navigation",
+    "app-home-screen"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "2148b22681bff987d2cc37779edfc087f87554f676b0b7933317001c28d700e8",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.274087Z",
+  "processed_at": "2026-04-25T05:37:16.858583Z",
   "status": "active"
 }
