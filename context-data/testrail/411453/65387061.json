@@ -5,18 +5,17 @@
   "project": "411453",
   "title": "Feedback - send a Bug feedback with names/email",
   "feature": "App Settings",
-  "scenario": "Bug feedback submitted via App Settings > Feedback does not include user's name and email",
+  "scenario": "Bug feedback submitted via App Settings > Feedback does not include user's name and email when sent",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Tap the menu icon (hamburger) or navigate to App Settings.",
-    "Select Feedback from the App Settings menu.",
-    "Choose the Bug option from the feedback type selection.",
+    "Open the Poly Studio Mobile app.",
+    "Tap the Menu icon (hamburger) or your profile avatar to access App Settings.",
+    "Navigate to App Settings \u2192 Feedback.",
+    "Select the Bug option.",
     "Enter a description of the bug in the text field.",
-    "Enter the user's name in the Name field.",
-    "Enter the user's email address in the Email field.",
-    "Tap the Send button to submit the feedback."
+    "Enter the user's name and email address in the respective fields.",
+    "Tap the Send button."
   ],
-  "expected": "Feedback is sent with the user's name and email attached to the submission.",
+  "expected": "Feedback is sent with the user's name and email attached.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,14 +23,14 @@
     "app-settings",
     "feedback",
     "bug-report",
-    "name-field",
-    "email-field",
-    "feedback-submission",
-    "user-information"
+    "user-name",
+    "user-email",
+    "send-feedback",
+    "settings-menu"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "4b2228baeeda313b921af622067ef8173bb79e6eeccbd1d3b15ce3236de84f2c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.786175Z",
+  "processed_at": "2026-04-25T07:55:31.859950Z",
   "status": "active"
 }
