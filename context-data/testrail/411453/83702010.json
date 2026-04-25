@@ -5,31 +5,23 @@
   "project": "411453",
   "title": "App Settings - General - Licenses no wifi  [New]",
   "feature": "App Settings",
-  "scenario": "License Source links show \"Something is wrong\" error when WiFi is off in Poly Studio Mobile App Settings > General > Licenses",
-  "steps": [
-    "1. Turn off WiFi on the device.",
-    "2. Launch the Poly Studio Mobile app.",
-    "3. Navigate to App Settings \u2192 General \u2192 Licenses.",
-    "4. Tap on a license link (e.g., MIT, Apache 2.0, etc.).",
-    "5. Observe the license screen \u2014 it should display the headline, description, and a Cancel (X) button.",
-    "6. Tap the Source link within the license screen."
-  ],
-  "expected": "The Source link loads the source content properly within the app.",
+  "scenario": "License Source links show \"Something is wrong\" error when tapped in App Settings > General > Licenses with WiFi off",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "licenses",
-    "source-link",
-    "wifi-offline",
-    "settings-general",
-    "error-message",
+    "license-source",
     "app-settings",
-    "license-screen"
+    "general-settings",
+    "licenses",
+    "wifi-off",
+    "error-message",
+    "poly-app"
   ],
   "source_last_updated": "1773153247",
   "source_hash": "2e93d9b4c7225be05dbc61b0134372e2649fd9f6911f6aaa7bc99b5fc499913d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.828229Z",
+  "processed_at": "2026-04-25T08:21:30.935975Z",
   "status": "active"
 }
