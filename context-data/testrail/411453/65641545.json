@@ -7,30 +7,31 @@
   "feature": "ANC",
   "scenario": "ANC and Transparency sub-options are disabled and unselected when both are set to Off in Device Settings > ANC",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Tap on the connected device name to open Device Settings.",
-    "Navigate to Audio Settings.",
-    "Tap on ANC to open ANC settings.",
-    "Set ANC to Off.",
-    "Set Transparency Mode to Off.",
-    "Observe the state of both ANC and Transparency Mode toggles and sub-options."
+    "1. Open the Poly Studio Mobile app.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "3. Tap on ANC.",
+    "4. Set ANC to Off.",
+    "5. Set Transparency Mode to Off.",
+    "6. Observe the ANC and Transparency Mode toggle states and sub-option selections.",
+    "7. Repeat steps 4-6 with ANC set to On and Transparency Mode set to Off.",
+    "8. Repeat steps 4-6 with ANC set to Off and Transparency Mode set to On."
   ],
-  "expected": "Both ANC and Transparency Mode are set to Off. Both toggles appear disabled/greyed out. None of the sub-options (e.g., Adaptive ANC, Low, Medium, High for Transparency) are selected.",
+  "expected": "When both ANC and Transparency Mode are set to Off, both toggles should be disabled/greyed out and none of the sub-options should be selected. When either ANC or Transparency Mode is On, the respective toggle should be enabled and its sub-options should be selectable.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "anc",
     "transparency-mode",
     "device-settings",
-    "audio-settings",
     "poly-studio-mobile",
+    "toggle-states",
+    "sub-options",
     "anc-off",
-    "transparency-off",
-    "sub-options-disabled"
+    "transparency-off"
   ],
   "source_last_updated": "1761046304",
   "source_hash": "ef1a7607f4dfc844ae35a20082537c0ffc9022586cbdfe61857e5e5fb2225a6d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.988638Z",
+  "processed_at": "2026-04-25T09:32:26.247312Z",
   "status": "active"
 }
