@@ -4,29 +4,33 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - Connecting Headset when device list is empty",
-  "feature": "Device Home Screen",
-  "scenario": "When the device list is empty, connecting a headset via the Bluetooth menu should show the headset in the list upon returning to the app.",
+  "feature": "Bluetooth Pairing",
+  "scenario": "Newly connected headset does not appear in Poly Studio Mobile app device list when home screen device list is empty",
   "steps": [
-    "Ensure the device list in the app is empty.",
-    "Connect a headset via the Bluetooth menu.",
-    "Return to the app."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Ensure the Home screen is displayed with an empty device list (no previously paired headsets shown).",
+    "3. Open the Android Bluetooth settings menu (Settings \u2192 Bluetooth).",
+    "4. Put the Poly Bluetooth headset into pairing mode (e.g., press and hold the Power button or Bluetooth button until the LED flashes).",
+    "5. From the Android Bluetooth menu, tap the headset name to pair and connect.",
+    "6. Return to the Poly Studio Mobile app Home screen.",
+    "7. Observe the device list on the Home screen."
   ],
-  "expected": "The newly connected headset appears in the device list.",
+  "expected": "The newly connected Poly headset should appear in the app's device list on the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Bluetooth",
-    "headset",
-    "device list",
-    "empty state",
-    "connection",
-    "app",
-    "pairing",
-    "discovery"
+    "poly-studio-mobile",
+    "device-list",
+    "home-screen",
+    "bluetooth-pairing",
+    "empty-device-list",
+    "headset-discovery",
+    "android-bluetooth-settings",
+    "app-connection-issue"
   ],
   "source_last_updated": "1761740908",
   "source_hash": "8b1f2ad02c5d3d3e13bb26e9d2594fa39eaa1248b63e2e2ed798fff51756d731",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.103231Z",
+  "processed_at": "2026-04-25T05:37:16.734514Z",
   "status": "active"
 }
