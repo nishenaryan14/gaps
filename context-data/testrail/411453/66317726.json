@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Rename device - Rename, spec chars",
-  "feature": "Device Settings - Rename Device",
-  "scenario": "Verify that renaming a device with special characters correctly updates the device name and reflects it on the Home screen.",
+  "feature": "Device Management",
+  "scenario": "Device name with special characters (e.g., ?*\\!#$%&'()+,-./:;@[]^_`{|}~) does not persist or reflect on Home screen after renaming in Device Settings > General",
   "steps": [
-    "Start the app with device attached.",
-    "Navigate to Device Settings - General.",
-    "Click on the device's official name.",
-    "Enter special characters for the name (e.g., ?*\\!#$%\"&'()+,-./:;?@\\[]^_`'{|}~).",
-    "Click Done."
+    "1. Open the Poly Studio Mobile app with the Bluetooth audio device connected.",
+    "2. Navigate to Device Settings \u2192 General.",
+    "3. Tap the device's official name field.",
+    "4. Enter special characters for the name (e.g., ?*\\!#$%&'()+,-./:;@[]^_`{|}~).",
+    "5. Tap Done to save the new name.",
+    "6. Return to the Home screen."
   ],
-  "expected": "The device's name is changed and the new name is also reflected on the Home screen.",
+  "expected": "The device name is successfully changed to the entered special characters and the updated name is reflected on the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "rename device",
-    "special characters",
-    "device name update",
-    "Home screen reflection",
-    "Device Settings",
-    "device naming",
-    "name validation",
-    "UI update"
+    "device-rename",
+    "special-characters",
+    "home-screen-persistence",
+    "device-settings-general",
+    "poly-studio-mobile",
+    "bluetooth-audio-device",
+    "name-reflection"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "f149644c9a94cf43c10194b398c826906e00501cca3fc0216716ae4a12f12fc5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.216183Z",
+  "processed_at": "2026-04-25T05:37:16.800387Z",
   "status": "active"
 }
