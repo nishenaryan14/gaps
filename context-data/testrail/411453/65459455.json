@@ -5,33 +5,35 @@
   "project": "411453",
   "title": "Software Update - DFU - Turn off the device before starting DFU",
   "feature": "Firmware Update",
-  "scenario": "Device Firmware Update fails with \"Update currently not available\" popup when device is turned off before starting the update",
+  "scenario": "DFU fails gracefully with \"Update currently not available\" popup when device is powered off before starting firmware update",
   "steps": [
     "1. Pair and connect a Poly Bluetooth audio device that has an available firmware update.",
     "2. Open the Poly Studio Mobile app.",
     "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software Update.",
-    "4. Tap the \"Update\" button.",
+    "4. Tap Update.",
     "5. Turn off the device (e.g., press and hold the Power button until the device powers down).",
     "6. Observe the app screen.",
-    "7. Tap \"Continue\" and then \"Start Update\".",
-    "8. Observe the popup that appears.",
-    "9. Tap \"OK\" on the popup."
+    "7. Tap Continue.",
+    "8. Tap Start Update.",
+    "9. Observe the popup that appears.",
+    "10. Tap OK."
   ],
-  "expected": "1. After turning off the device, nothing happens \u2014 the app remains on the \"Software Update\" screen. 2. After tapping Continue and Start Update, a popup appears with the message \"Update currently not available, please try back later\". 3. Tapping OK closes the popup and returns the user to the \"Three Easy Steps\" screen.",
+  "expected": "After step 5: Nothing happens; the app remains on the \"Software Update\" screen. After step 8: An \"Update currently not available, please try back later\" popup appears. After step 10: The popup closes and the user is returned to the \"Three Easy Steps\" screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "dfu",
     "firmware-update",
-    "update-currently-not-available",
+    "update-unavailable",
+    "power-off",
     "poly-studio-mobile",
-    "device-power-off",
     "software-update",
-    "bluetooth-pairing",
-    "update-failure"
+    "error-handling",
+    "bluetooth-pairing"
   ],
   "source_last_updated": "1763372941",
   "source_hash": "9737c4bc283afbe75891be29c5d122a11264e68afb4a91cd8c0f8278e4363fab",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.894920Z",
+  "processed_at": "2026-04-25T07:55:31.960746Z",
   "status": "active"
 }
