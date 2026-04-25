@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "CCL - Selecting AI Noise Block",
-  "feature": "CCL (Camera Control Lens)",
-  "scenario": "Verify that the \"AI Noise Block\" option can be selected from Device Settings > Advanced on a device that supports CCL.",
+  "feature": "App Settings",
+  "scenario": "Verify AI Noise Block option can be selected in Device Settings > Advanced on Poly Studio Mobile app for Voyager Free 60+, Voyager Free 60, and Voyager Legend 50",
   "steps": [
-    "1. Open Device Settings on a device that supports CCL.",
-    "2. Navigate to the 'Advanced' section.",
-    "3. Locate the 'AI Noise Block' option.",
-    "4. Select the 'AI Noise Block' option."
+    "Open the Poly Studio Mobile app on your Android device.",
+    "Ensure a supported device (Voyager Free 60+, Voyager Free 60, or Voyager Legend 50) is connected.",
+    "Tap on the connected device name to open Device Settings.",
+    "Scroll down and tap on 'Advanced' in the Device Settings menu.",
+    "Locate the 'AI Noise Block' option in the Advanced settings list.",
+    "Tap on the 'AI Noise Block' toggle or option to select/enable it."
   ],
-  "expected": "The \"AI Noise Block\" option can be selected successfully from Device Settings > Advanced.",
+  "expected": "The 'AI Noise Block' option is selectable and can be enabled successfully in Device Settings > Advanced for supported devices.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "AI Noise Block",
-    "Device Settings",
-    "Advanced settings",
-    "CCL support",
-    "Noise cancellation",
-    "Audio settings",
-    "Feature selection"
+    "ai-noise-block",
+    "device-settings",
+    "advanced-settings",
+    "poly-studio-mobile",
+    "voyager-free-60-plus",
+    "voyager-free-60",
+    "voyager-legend-50"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "b5de2eb106ec59a4897844c39e10d0aaeba523823b84ca7f4b20f5452b4a130c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.258900Z",
+  "processed_at": "2026-04-25T05:37:16.845877Z",
   "status": "active"
 }
