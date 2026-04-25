@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Fit test - Starting Fit Test with one Earbud disconnected [TO BE UPDATED]",
-  "feature": "Fit Test",
-  "scenario": "Starting Fit Test with one earbud disconnected shows results for connected earbud and marks disconnected earbud with yellow icon and \"Fail\" tag",
+  "feature": "App Settings",
+  "scenario": "Fit Test fails to start or displays incorrectly when one earbud is disconnected on Voyager Free 60+/Free 20",
   "steps": [
-    "Start the app with Osprey/Tern/Emu connected, one earbud disconnected.",
-    "Navigate to Fit test (Tutorials, Onboarding, User Guides).",
-    "Try to start the Fit test."
+    "1. Launch the Poly Studio Mobile app on your Android device.",
+    "2. Ensure a Poly Voyager Free 60+ or Free 20 is connected via Bluetooth, with one earbud disconnected (e.g., left earbud removed from the charging case or powered off).",
+    "3. From the Home screen, navigate to Fit Test. (Path: Poly Studio Mobile \u2192 [Device Name] \u2192 Tutorials, Onboarding, User Guides \u2192 Fit Test)",
+    "4. Tap the Start button to initiate the Fit Test.",
+    "5. Observe the results displayed for both earbuds."
   ],
-  "expected": "It is possible to start the Fit test. Results for the connected earbud are properly displayed. The disconnected earbud is marked with a yellow icon and \"Fail\" tag, with text \"The {right/left} earbud was disconnected during the fit test\".",
+  "expected": "The Fit Test should start successfully. Results for the connected earbud should be properly displayed. The disconnected earbud should always be marked with a yellow icon and a \"Fail\" tag, with the text: \"The {right/left} earbud was disconnected during the fit test\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Fit Test",
-    "earbud disconnected",
-    "yellow icon",
-    "Fail tag",
-    "one earbud",
-    "connected earbud results",
-    "Osprey",
-    "Tern",
-    "Emu"
+    "fit-test",
+    "voyager-free-60-plus",
+    "voyager-free-20",
+    "poly-studio-mobile",
+    "single-earbud-disconnected",
+    "fit-test-start-failure",
+    "earbud-fit-test",
+    "bluetooth-audio-testing"
   ],
   "source_last_updated": "1760963233",
   "source_hash": "9cacc83b1f4965d1dbbda939ed97406aaac8e543f08614b860e0ca68f77cfde5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.238013Z",
+  "processed_at": "2026-04-25T05:37:16.830002Z",
   "status": "active"
 }
