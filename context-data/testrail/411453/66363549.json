@@ -4,30 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Tern - no charge case screens (Onboarding, Tutorial screen)",
-  "feature": "App Settings",
-  "scenario": "Onboarding tutorial does not display smart charge case screens for Voyager Free 60+ when starting from Poly Studio Mobile app",
+  "feature": "Device Management",
+  "scenario": "Onboarding tutorial flow on Voyager Free 60+ does not display smart charge case screens when starting from Tutorial screen",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on the mobile device.",
-    "2. Ensure a Voyager Free 60+ (Tern) headset is connected to the device via Bluetooth.",
-    "3. On the Home screen, locate and tap the Tutorial option to open the Tutorial screen.",
-    "4. On the Tutorial screen, tap Start Onboarding to begin the onboarding process.",
-    "5. Observe the onboarding screens that appear during the process."
+    "1. Launch Poly Studio Mobile app.",
+    "2. Ensure a Voyager Free 60+ device is connected.",
+    "3. Navigate to the Tutorial screen.",
+    "4. Start the Onboarding flow.",
+    "5. Observe the screens displayed during the onboarding/tutorial flow."
   ],
-  "expected": "The onboarding process should display tutorial/onboarding screens for the smart charging case (e.g., charging case features, usage instructions).",
+  "expected": "Smart charge case screens should be displayed during the onboarding/tutorial flow.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "voyager-free-60-plus",
-    "poly-studio-mobile",
     "onboarding-tutorial",
     "smart-charge-case",
-    "bluetooth-pairing",
-    "tern",
-    "tutorial-screen"
+    "poly-studio-mobile",
+    "tutorial-screen",
+    "onboarding-flow",
+    "device-setup"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "d526f46716211c0f4f356bc986c08a34c7a9bed0b37d8f2330b8d3f5a2811ad5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.019282Z",
+  "processed_at": "2026-04-25T09:32:26.275592Z",
   "status": "active"
 }
