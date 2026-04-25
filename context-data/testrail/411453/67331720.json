@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - Device images",
   "feature": "Device Management",
-  "scenario": "Device images display properly on Device Home Screen when paired and grey out correctly when device is turned off",
+  "scenario": "Device images fail to load or display incorrectly on the Device Home Screen when device is turned off",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Home screen.",
-    "2. Pair a Poly Bluetooth audio device with the app while the internet connection is ON.",
+    "2. Pair a supported Poly Bluetooth audio device with the app while Internet is ON.",
     "3. Observe the device image displayed on the Home screen.",
-    "4. Turn the paired device OFF (e.g., press and hold the Power button until the device powers off).",
+    "4. Turn the paired device OFF (e.g., press and hold the Power button until the device powers down).",
     "5. Observe the device image on the Home screen again."
   ],
-  "expected": "1. When the device is paired and internet is ON, the device image loads and displays properly on the Home screen. 2. When the device is turned OFF, the device image remains displayed but is greyed out.",
+  "expected": "1. The device image loads properly and is fully visible on the Home screen when the device is ON and Internet is available. 2. When the device is turned OFF, the device image remains displayed but is greyed out to indicate the device is powered off.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-home-screen",
-    "device-image",
-    "bluetooth-pairing",
+    "device-image-loading",
     "device-power-off",
-    "greyed-out",
-    "device-visibility"
+    "bluetooth-pairing",
+    "ui-display-issue",
+    "image-rendering"
   ],
   "source_last_updated": "1769425030",
   "source_hash": "6c9c6938d5ca431c41b8ba06d9659697e8dc7af57a914b8886fcbc1e397556cd",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.917421Z",
+  "processed_at": "2026-04-25T09:32:26.141279Z",
   "status": "active"
 }
