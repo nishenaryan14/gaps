@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Soak Test - Headset disconnected, app in the foreground, phone idle",
-  "feature": "Headset Connectivity / Soak Test",
-  "scenario": "Soak test: app remains stable and responsive after prolonged idle time with headset disconnected",
+  "feature": "App Settings",
+  "scenario": "App remains responsive and does not crash after prolonged idle soak test with headset disconnected on Home Screen",
   "steps": [
-    "Install and launch app, pair headset, then turn off headset and go to app Home Screen",
-    "Leave phone idle with app in foreground",
-    "After several hours, check app"
+    "1. Install and launch the Poly Studio Mobile app.",
+    "2. Pair a Poly Bluetooth headset with the phone via the app.",
+    "3. Turn off the paired headset.",
+    "4. Navigate to the app Home screen (the headset should be shown as disconnected).",
+    "5. Leave the phone idle with the app in the foreground for several hours (e.g., overnight).",
+    "6. After the idle period, check whether the app is still running and responsive."
   ],
-  "expected": "Home screen shows headset as disconnected; app remains stable; app still running and responsive after several hours",
+  "expected": "The app remains running and responsive after prolonged idle time. No memory leaks, crashes, or freezes occur.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "soak test",
-    "idle stability",
-    "headset disconnected",
-    "app responsiveness",
-    "prolonged idle",
-    "bluetooth disconnect",
-    "foreground idle",
-    "stability test"
+    "poly-studio-mobile",
+    "idle-soak-test",
+    "home-screen",
+    "disconnected-state",
+    "app-responsiveness",
+    "bluetooth-headset",
+    "crash-recovery"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "b21c49867cbaf439368b4916c68a52843aca3a12e79f4b2c4010e4368c59c91b",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.337160Z",
+  "processed_at": "2026-04-25T05:37:16.976724Z",
   "status": "active"
 }
