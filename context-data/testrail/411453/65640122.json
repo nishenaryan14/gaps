@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "Policy: Modify Policy Settings",
   "feature": "App Settings",
-  "scenario": "Policy-controlled settings from Lens Cloud are locked and greyed out in Poly Studio Mobile app with managed-by-policy dialog",
+  "scenario": "Policy settings applied via Lens Cloud appear locked/greyed out in Poly Studio Mobile app device settings with a dialog when user attempts to modify them",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Home screen and ensure the target Poly Bluetooth audio device is connected.",
-    "3. Tap on the connected device name to open the Device Settings screen.",
-    "4. Apply a policy (e.g., disable ANC, lock Equalizer, or restrict Transparency Mode) to the device via Lens Cloud.",
-    "5. Return to the Poly Studio Mobile app and navigate to the policy-controlled setting (e.g., Audio Settings \u2192 ANC, Equalizer, or Transparency Mode).",
-    "6. Observe the UI state of the policy-controlled setting.",
-    "7. Attempt to modify the policy-controlled setting (e.g., toggle ANC, change EQ preset, or adjust Transparency Mode)."
+    "2. Navigate to the Home screen and ensure a Poly Bluetooth audio device is connected.",
+    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
+    "4. Apply a policy via Lens Cloud that restricts or locks specific settings (e.g., ANC, Transparency Mode, Equalizer).",
+    "5. Return to the Poly Studio Mobile app and navigate to Device Settings \u2192 Audio Settings.",
+    "6. Observe the affected settings (e.g., ANC, Transparency Mode, Equalizer) \u2014 they should appear locked or greyed out.",
+    "7. Tap on one of the locked/greyed-out settings to attempt to modify it.",
+    "8. Observe the dialog that appears, informing the user that the setting is managed by an IT policy."
   ],
-  "expected": "The policy-controlled setting is greyed out/locked and cannot be modified. When attempting to change it, a dialog appears indicating the setting is managed by policy.",
+  "expected": "The affected settings appear locked/greyed out in the device settings page, and a dialog appears when the user attempts to modify them, indicating the setting is managed by an IT policy.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "lens-cloud",
-    "policy-controlled-settings",
-    "managed-by-policy",
+    "policy-settings",
+    "device-settings",
     "anc",
-    "equalizer",
     "transparency-mode",
-    "device-settings"
+    "equalizer",
+    "it-policy-locked"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "b44ac44838e4555464c05b8fe1ef91c5d9d1c7bc6c693eacc41ef8297c2f9d82",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.948364Z",
+  "processed_at": "2026-04-25T07:55:31.976765Z",
   "status": "active"
 }
