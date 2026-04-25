@@ -7,31 +7,31 @@
   "feature": "App Settings",
   "scenario": "Share Data toggle disappears from App Settings > General > Account after logging in with Poly credentials",
   "steps": [
-    "1. Launch the Poly Studio Mobile app fresh (clear app data or reinstall).",
+    "1. Launch the Poly Studio Mobile app for the first time.",
     "2. Complete the onboarding flow.",
-    "3. On the onboarding screen, tap \"Continue as Guest\".",
-    "4. Choose either \"Share\" or \"Don't Share\" option for data sharing.",
-    "5. Navigate to App Settings \u2192 General \u2192 Account.",
-    "6. Verify the \"Share Data\" toggle is visible.",
-    "7. Tap \"Log in\" and log in with valid Poly credentials.",
-    "8. Observe the Account screen after successful login."
+    "3. Select 'Continue as Guest' when prompted.",
+    "4. Choose either 'Share' or 'Don't Share' for the data sharing option.",
+    "5. Navigate to App Settings > General > Account.",
+    "6. Verify that the 'Share Data' toggle is present.",
+    "7. Tap 'Log in' and enter valid Poly credentials to log in.",
+    "8. After successful login, observe the Account screen."
   ],
-  "expected": "The \"Share Data\" toggle should remain visible in App Settings > General > Account after logging in with Poly credentials.",
+  "expected": "The 'Share Data' toggle should remain visible in App Settings > General > Account after logging in with Poly credentials.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "share-data-toggle",
     "poly-studio-mobile",
+    "share-data-toggle",
     "app-settings",
     "account-screen",
-    "poly-credentials-login",
+    "poly-credentials",
+    "login",
     "data-sharing",
-    "onboarding-flow",
-    "guest-continue"
+    "onboarding"
   ],
   "source_last_updated": "1760538045",
   "source_hash": "479fa81840340ef2505c52aa3494402e536f04427d5c316f23899f459dbdc1f8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.910862Z",
+  "processed_at": "2026-04-25T09:32:26.126605Z",
   "status": "active"
 }
