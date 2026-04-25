@@ -5,18 +5,16 @@
   "project": "411453",
   "title": "Personal User - update for headset is present",
   "feature": "Firmware Updates",
-  "scenario": "Firmware update notification appears on Home Screen for outdated firmware; tapping update completes DFU process successfully",
+  "scenario": "Software update notification appears on Home Screen for outdated firmware on connected Poly device; tapping update completes DFU process",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. Ensure a Poly Bluetooth audio device (e.g., Poly Voyager Focus 2) is connected to the Android device via Bluetooth.",
-    "3. Verify the connected device has outdated firmware (e.g., firmware version older than the latest available).",
-    "4. Observe the Home Screen of the Poly Studio Mobile app.",
-    "5. Confirm that a firmware update notification is displayed on the Home Screen.",
-    "6. Tap the update button within the firmware update notification.",
-    "7. Follow the on-screen prompts to initiate and complete the Device Firmware Update (DFU) process.",
-    "8. Wait for the DFU process to finish successfully."
+    "2. Log in as a Personal User (or proceed as Guest).",
+    "3. Connect a Poly Bluetooth audio device that has outdated firmware.",
+    "4. Observe the Home Screen for a software update notification related to the connected device.",
+    "5. Tap the update button in the notification.",
+    "6. Follow the on-screen prompts to complete the Device Firmware Update (DFU) process."
   ],
-  "expected": "A Personal User (logged in or as Guest) sees a firmware update notification on the Home Screen when a connected device has outdated firmware. Tapping the update button successfully completes the Device Firmware Update (DFU) process.",
+  "expected": "A software update notification appears on the Home Screen for the connected device with outdated firmware. Tapping the update button initiates and successfully completes the DFU process.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,14 +22,14 @@
     "dfu-process",
     "home-screen-notification",
     "poly-studio-mobile",
-    "poly-voyager-focus-2",
-    "bluetooth-pairing",
+    "software-update-prompt",
+    "bluetooth-connection",
     "outdated-firmware",
-    "update-button"
+    "device-firmware-update"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "43eef6fc1d6d9b4591c4b3b6b89f1f951957a73903e4179945c5d827678c847d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.982391Z",
+  "processed_at": "2026-04-25T08:21:31.051787Z",
   "status": "active"
 }
