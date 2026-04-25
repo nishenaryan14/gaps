@@ -5,35 +5,37 @@
   "project": "411453",
   "title": "Device Settings - All toggles OFF - Persist after closing tab, settings page or app",
   "feature": "Device Settings",
-  "scenario": "Toggle button OFF state does not persist in Device Settings after closing/reopening tabs, returning to Device Home Screen, or restarting the Poly Studio Mobile app",
+  "scenario": "Device Settings toggle buttons do not persist as OFF after closing and reopening tabs, returning to Device Home Screen, or restarting the Poly Studio Mobile app",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
     "Tap on the connected [Device Name] to open Device Settings",
     "Set all toggle buttons (e.g., ANC, Transparency Mode, Equalizer, etc.) to OFF",
-    "Close the Device Settings tab",
-    "Reopen Device Settings tab",
+    "Close the Device Settings tab and reopen it",
+    "Verify all toggles remain OFF",
     "Return to the Device Home Screen",
-    "Navigate back to Device Settings",
-    "Force close and restart the Poly Studio Mobile app",
-    "Navigate to Home \u2192 [Device Name] \u2192 Device Settings"
+    "Navigate back to Device Settings \u2192 [Device Name]",
+    "Verify all toggles remain OFF",
+    "Restart the Poly Studio Mobile app",
+    "Navigate to Home \u2192 [Device Name] \u2192 Device Settings",
+    "Verify all toggles remain OFF"
   ],
-  "expected": "All toggle buttons remain OFF after closing/reopening tabs, returning to the Home screen, and restarting the app.",
+  "expected": "All toggle buttons remain OFF after closing and reopening tabs, returning to the Device Home Screen, and restarting the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "toggle-button-persistence",
+    "toggle-persistence",
     "device-settings",
     "poly-studio-mobile",
     "anc",
     "transparency-mode",
     "equalizer",
-    "state-persistence",
-    "settings-revert"
+    "settings-persistence",
+    "app-restart"
   ],
   "source_last_updated": "1762432129",
   "source_hash": "b561e3468cffd436cb0b5286f0e8007257e44e966795222cb3d7a9e958c25762",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.866426Z",
+  "processed_at": "2026-04-25T08:21:30.967321Z",
   "status": "active"
 }
