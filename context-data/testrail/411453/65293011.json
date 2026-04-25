@@ -8,30 +8,27 @@
   "scenario": "Onboarding EULA page requires License Agreement and Privacy Policy checkbox to be checked before Continue button becomes active",
   "steps": [
     "1. Launch the Poly Studio Mobile app for the first time.",
-    "2. On the EULA (End User License Agreement) screen, observe the License Agreement and Privacy Policy checkbox.",
-    "3. Without checking the checkbox, tap the Continue button.",
-    "4. Verify that the Continue button is inactive/grayed out and the user cannot proceed.",
-    "5. Tap the License Agreement and Privacy Policy checkbox to check it.",
-    "6. Observe that a checkmark appears in the checkbox.",
-    "7. Verify that the Continue button becomes active (tappable).",
-    "8. Tap the Continue button."
+    "2. On the initial onboarding screen, observe the License Agreement and Privacy Policy check box.",
+    "3. Tap the Continue button while the check box is unchecked.",
+    "4. Check the box for License Agreement and Privacy Policy.",
+    "5. Observe the Continue button state after checking the box.",
+    "6. Tap Continue."
   ],
-  "expected": "The user must check the License Agreement and Privacy Policy checkbox before the Continue button becomes active. After checking the box, the Continue button activates and the user can proceed with the onboarding flow.",
+  "expected": "The Continue button should be inactive (grayed out) when the check box is unchecked. After checking the box, a checkmark appears and the Continue button becomes active (tappable). Tapping Continue proceeds to the next onboarding step.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
+    "onboarding",
     "eula",
     "license-agreement",
     "privacy-policy",
-    "checkbox",
     "continue-button",
-    "onboarding",
-    "user-consent"
+    "checkbox-validation"
   ],
   "source_last_updated": "1760528320",
   "source_hash": "583c39b2abb90d42e2c712d7c2348c22c64c7bda2af10563fcfc5939fae03f89",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.774991Z",
+  "processed_at": "2026-04-25T08:21:30.903161Z",
   "status": "active"
 }
