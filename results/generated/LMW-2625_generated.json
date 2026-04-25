@@ -1,113 +1,133 @@
 [
   {
-    "title": "DFU Flow: Device disconnected before tapping Continue on Software Update page \u2014 headset power off",
+    "title": "DFU Flow: Device Disconnected on Software Update Page \u2014 Should Block Navigation to Three Easy Steps",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap on a connected headset device (e.g., Poly Voyager 5200)",
-      "Navigate to Settings \u2192 Software Update",
-      "Verify the Software Update page is displayed with device info and 'Continue' button",
-      "Press and hold the Call button on the headset for 5 seconds to power off the device",
-      "Wait 3 seconds",
-      "Tap the 'Continue' button on the Software Update page",
-      "Observe the app response"
+      "Open Poly Studio Mobile app on Android.",
+      "Ensure a Poly device (e.g., Voyager Surround 85) is connected via Bluetooth.",
+      "Tap the device name (e.g., 'Voyager Surround 85') to open Device Details screen.",
+      "Navigate to 'Software & Updates' under the Device section.",
+      "If a firmware update is available, the Software Update page displays with a 'Continue' or 'Update' button. If no update is available, note this and use a device with a pending update.",
+      "While on the Software Update page (before tapping Continue), disable Bluetooth on the phone OR power off the device to simulate disconnection.",
+      "Wait 5 seconds for the app to detect the disconnection (observe the device status change to 'Disconnected' or 'Not Connected').",
+      "Tap the 'Continue' button on the Software Update page."
     ],
-    "expected": "The app MUST NOT proceed to the 'Three Easy Steps' page. Instead, the app should display an appropriate error message such as 'Device disconnected' or 'Connection lost' and block the DFU flow. The user should remain on the Software Update page or be returned to the device list."
+    "expected": "The app MUST NOT navigate to the 'Three Easy Steps' page. Instead, the app should display an error message such as 'Device disconnected. Please reconnect to continue with the update.' or block the flow with a dialog stating 'Device is no longer connected. Please reconnect your device.' The user should remain on the Software Update page or be redirected to the device list."
   },
   {
-    "title": "DFU Flow: Device disconnected before tapping Continue on Software Update page \u2014 earbud placed in charging case",
+    "title": "DFU Flow: Reconnect Device After Disconnect on Software Update Page \u2014 Validate Flow Recovery",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap on a connected earbud device (e.g., Poly Voyager Free 20)",
-      "Navigate to Settings \u2192 Software Update",
-      "Verify the Software Update page is displayed with device info and 'Continue' button",
-      "Place both earbuds into the charging case and close the lid",
-      "Wait 5 seconds for the device to disconnect",
-      "Tap the 'Continue' button on the Software Update page",
-      "Observe the app response"
+      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Free 60).",
+      "Navigate to Device Details \u2192 Software & Updates.",
+      "Ensure a firmware update is available and you are on the Software Update page.",
+      "Disconnect the device by turning off Bluetooth on the phone.",
+      "Wait for the app to show 'Disconnected' status.",
+      "Re-enable Bluetooth and reconnect the device (put device in pairing mode if needed, or simply re-enable BT if auto-reconnect occurs).",
+      "Once the device shows as 'Connected' again, tap 'Continue' on the Software Update page."
     ],
-    "expected": "The app MUST NOT proceed to the 'Three Easy Steps' page. Instead, the app should display an appropriate error message such as 'Device disconnected' or 'Connection lost' and block the DFU flow. The user should remain on the Software Update page or be returned to the device list."
+    "expected": "After reconnection, tapping 'Continue' should successfully proceed to the 'Three Easy Steps' page (or the next step in the DFU flow). The app should correctly re-evaluate the device connection state and allow the flow to proceed only when the device is confirmed connected."
   },
   {
-    "title": "DFU Flow: Device disconnected before tapping Continue on Software Update page \u2014 Bluetooth turned off on phone",
+    "title": "DFU Flow: App Backgrounding While on Software Update Page with Disconnected Device \u2014 State Persistence",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap on a connected device (e.g., Poly Sync 40)",
-      "Navigate to Settings \u2192 Software Update",
-      "Verify the Software Update page is displayed with device info and 'Continue' button",
-      "Open phone Settings \u2192 Bluetooth \u2192 Toggle Bluetooth OFF",
-      "Return to Poly Studio Mobile app",
-      "Wait 3 seconds",
-      "Tap the 'Continue' button on the Software Update page",
-      "Observe the app response"
+      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Surround 85).",
+      "Navigate to Device Details \u2192 Software & Updates \u2192 Software Update page.",
+      "Disconnect the device by turning off Bluetooth.",
+      "Press the Home button to background the app.",
+      "Wait 30 seconds.",
+      "Reopen the app from the recent apps list.",
+      "Observe the current screen and device connection status.",
+      "Tap 'Continue' on the Software Update page."
     ],
-    "expected": "The app MUST NOT proceed to the 'Three Easy Steps' page. Instead, the app should display an appropriate error message such as 'Device disconnected' or 'Bluetooth turned off' and block the DFU flow. The user should remain on the Software Update page or be returned to the device list."
+    "expected": "After reopening the app, the device should still show as 'Disconnected'. Tapping 'Continue' must NOT navigate to the 'Three Easy Steps' page. The app should display an appropriate error or block the flow due to the disconnected device state. The disconnected state must persist across app backgrounding."
   },
   {
-    "title": "DFU Flow: Device disconnected before tapping Continue \u2014 then reconnected before tapping Continue",
+    "title": "DFU Flow: App Force-Kill While on Software Update Page with Disconnected Device \u2014 State Persistence",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap on a connected headset device (e.g., Poly Voyager 5200)",
-      "Navigate to Settings \u2192 Software Update",
-      "Verify the Software Update page is displayed with device info and 'Continue' button",
-      "Press and hold the Call button on the headset for 5 seconds to power off the device",
-      "Wait 3 seconds",
-      "Power on the headset by pressing and holding the Call button for 3 seconds",
-      "Wait for the device to reconnect (verify Bluetooth icon in app shows connected state)",
-      "Tap the 'Continue' button on the Software Update page",
-      "Observe the app response"
+      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Free 60).",
+      "Navigate to Device Details \u2192 Software & Updates \u2192 Software Update page.",
+      "Disconnect the device by turning off Bluetooth.",
+      "Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
+      "Reopen the Poly Studio Mobile app.",
+      "Observe the initial screen (should be device list or home screen).",
+      "Reconnect the device if not auto-connected.",
+      "Navigate back to Device Details \u2192 Software & Updates.",
+      "Tap 'Continue' on the Software Update page."
     ],
-    "expected": "After reconnection, tapping 'Continue' should proceed normally to the 'Three Easy Steps' page, as the device is now connected. The app should correctly detect the reconnected state and allow the DFU flow to continue."
+    "expected": "The app should start fresh after force-kill. When navigating back to Software & Updates and tapping 'Continue', the app should correctly check the current device connection state. If the device is now connected, the flow should proceed normally. If still disconnected, the app must block navigation to 'Three Easy Steps'."
   },
   {
-    "title": "DFU Flow: Device disconnected during Software Update page \u2014 app backgrounded and restored",
+    "title": "DFU Flow: Phone Rotation While on Software Update Page with Disconnected Device \u2014 Configuration Change Handling",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap on a connected device (e.g., Poly Voyager 5200)",
-      "Navigate to Settings \u2192 Software Update",
-      "Verify the Software Update page is displayed with device info and 'Continue' button",
-      "Press the Home button to background the app",
-      "While app is backgrounded, press and hold the Call button on the headset for 5 seconds to power off the device",
-      "Wait 5 seconds",
-      "Reopen Poly Studio Mobile app from the app switcher",
-      "Verify the current screen shown",
-      "Tap the 'Continue' button on the Software Update page",
-      "Observe the app response"
+      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Surround 85).",
+      "Navigate to Device Details \u2192 Software & Updates \u2192 Software Update page.",
+      "Disconnect the device by turning off Bluetooth.",
+      "Rotate the phone from portrait to landscape (or vice versa).",
+      "Observe the screen after rotation \u2014 note if the Software Update page is preserved.",
+      "Tap 'Continue' on the Software Update page."
     ],
-    "expected": "When the app is restored, it should detect the disconnected state. The 'Continue' button should either be disabled or tapping it should show an error message. The app MUST NOT proceed to the 'Three Easy Steps' page."
+    "expected": "After rotation, the app should preserve the Software Update page state and the disconnected device status. Tapping 'Continue' must NOT navigate to the 'Three Easy Steps' page. The app should block the flow and show an appropriate error message indicating the device is disconnected."
   },
   {
-    "title": "DFU Flow: Device disconnected during Software Update page \u2014 app force-killed and relaunched",
+    "title": "DFU Flow: Device Disconnection During DFU on Voyager Surround 85 (Over-the-Ear Headset) \u2014 Validate Blocking Behavior",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap on a connected device (e.g., Poly Voyager 5200)",
-      "Navigate to Settings \u2192 Software Update",
-      "Verify the Software Update page is displayed with device info and 'Continue' button",
-      "Press and hold the Call button on the headset for 5 seconds to power off the device",
-      "Wait 3 seconds",
-      "Force-kill the Poly Studio Mobile app (swipe away from recent apps)",
-      "Reopen Poly Studio Mobile app",
-      "Observe the initial screen shown after relaunch",
-      "If the device is still shown in the device list, tap on it and navigate to Settings \u2192 Software Update",
-      "Observe the Software Update page behavior"
+      "Open Poly Studio Mobile app and connect a Voyager Surround 85 headset.",
+      "Navigate to Device Details \u2192 Software & Updates.",
+      "Ensure a firmware update is available.",
+      "While on the Software Update page (before tapping Continue), disconnect the headset by powering it off.",
+      "Wait 5 seconds for the app to update the connection status.",
+      "Tap 'Continue' on the Software Update page."
     ],
-    "expected": "After force-kill and relaunch, the app should show the device list. If the device is disconnected, it should show as 'Not Connected' or similar. Navigating to Software Update should either be blocked or show a 'Device not connected' message. The 'Three Easy Steps' page must NOT be shown for a disconnected device."
+    "expected": "The app must detect the Voyager Surround 85 is disconnected and block navigation to the 'Three Easy Steps' page. An error dialog or message should appear: 'Device disconnected. Please reconnect to proceed with the update.' The user must not be able to proceed further in the DFU flow without a connected device."
   },
   {
-    "title": "DFU Flow: Verify 'Three Easy Steps' page is never shown for disconnected device \u2014 multiple disconnection methods",
+    "title": "DFU Flow: Device Disconnection During DFU on Poly Free 60 (Earbuds) \u2014 Validate Blocking Behavior",
     "steps": [
-      "Open Poly Studio Mobile app",
-      "Tap on a connected device",
-      "Navigate to Settings \u2192 Software Update",
-      "Verify the Software Update page is displayed",
-      "Disconnect the device using one of the following methods: a) Power off the device, b) Place earbuds in charging case, c) Turn off phone Bluetooth, d) Move device out of Bluetooth range (>30 meters)",
-      "Wait 5 seconds",
-      "Tap the 'Continue' button",
-      "Verify the app does NOT navigate to the 'Three Easy Steps' page",
-      "If the app shows an error, dismiss it",
-      "Reconnect the device",
-      "Navigate back to Settings \u2192 Software Update",
-      "Repeat steps 4-8 for each disconnection method (a, b, c, d) listed in step 5"
+      "Open Poly Studio Mobile app and connect a pair of Poly Free 60 earbuds.",
+      "Navigate to Device Details \u2192 Software & Updates.",
+      "Ensure a firmware update is available.",
+      "While on the Software Update page (before tapping Continue), place both earbuds in the charging case and close the lid (or disable Bluetooth on the phone).",
+      "Wait 5 seconds for the app to detect disconnection.",
+      "Tap 'Continue' on the Software Update page."
     ],
-    "expected": "For ALL disconnection methods, the app MUST NOT navigate to the 'Three Easy Steps' page. The app should consistently detect the disconnected state and block the DFU flow with an appropriate error message or disabled button."
+    "expected": "The app must detect the Free 60 earbuds are disconnected and block navigation to the 'Three Easy Steps' page. An appropriate error message must be displayed. The DFU flow must not proceed without a connected device."
+  },
+  {
+    "title": "DFU Flow: Device Disconnection During DFU on Voyager Free 60+ (with Case) \u2014 Validate Blocking Behavior",
+    "steps": [
+      "Open Poly Studio Mobile app and connect a Voyager Free 60+ (with case connected via Bluetooth).",
+      "Navigate to Device Details \u2192 Software & Updates.",
+      "Ensure a firmware update is available.",
+      "While on the Software Update page (before tapping Continue), disconnect the device by turning off the case or disabling Bluetooth.",
+      "Wait 5 seconds for the app to detect disconnection.",
+      "Tap 'Continue' on the Software Update page."
+    ],
+    "expected": "The app must detect the Voyager Free 60+ is disconnected and block navigation to the 'Three Easy Steps' page. An appropriate error message must be displayed. The DFU flow must not proceed without a connected device, regardless of device type (headset, earbuds, or case)."
+  },
+  {
+    "title": "DFU Flow: Multiple Disconnect/Reconnect Cycles on Software Update Page \u2014 State Consistency",
+    "steps": [
+      "Open Poly Studio Mobile app and connect a Poly device (e.g., Voyager Surround 85).",
+      "Navigate to Device Details \u2192 Software & Updates \u2192 Software Update page.",
+      "Disconnect the device (disable Bluetooth).",
+      "Wait 5 seconds. Verify the app shows 'Disconnected'.",
+      "Reconnect the device (re-enable Bluetooth, wait for auto-reconnect).",
+      "Verify the app shows 'Connected'.",
+      "Disconnect the device again.",
+      "Wait 5 seconds.",
+      "Reconnect the device again.",
+      "Verify the app shows 'Connected'.",
+      "Tap 'Continue' on the Software Update page."
+    ],
+    "expected": "After multiple disconnect/reconnect cycles, the app must correctly reflect the current connection state. When the device is connected and 'Continue' is tapped, the app should proceed to the 'Three Easy Steps' page. The app must not cache an old disconnected state and must always check the live connection status before proceeding."
+  },
+  {
+    "title": "DFU Flow: Verify 'Three Easy Steps' Page is Inaccessible Without Connected Device via Deep Link or Back Navigation",
+    "steps": [
+      "Open Poly Studio Mobile app with NO device connected.",
+      "Attempt to directly navigate to the 'Three Easy Steps' page by any means (e.g., if a deep link exists, try to open it; or attempt to navigate back from a previous session state).",
+      "Alternatively: Connect a device, navigate to Software Update page, disconnect the device, then attempt to use Android's back button or gesture to navigate back to a previous screen and then forward again to see if the 'Three Easy Steps' page becomes accessible.",
+      "Observe the app behavior."
+    ],
+    "expected": "The 'Three Easy Steps' page must be gated behind a connected device check. It must not be reachable via deep links, back navigation tricks, or any other means when no device is connected. The app should redirect to the device list or home screen if the user attempts to access this page without a connected device."
   }
 ]
