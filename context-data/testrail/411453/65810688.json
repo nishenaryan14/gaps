@@ -7,27 +7,26 @@
   "feature": "App Settings",
   "scenario": "Zooming in on a big blue dot in the Poly Studio Mobile app causes old text (headline, swipe) and X button to disappear, replaced by new description text",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Tap on a device that is connected and has a large blue dot (e.g., a firmware update or status indicator).",
-    "Zoom in on the blue dot (e.g., pinch-to-zoom or tap to expand).",
-    "Observe the UI elements on the screen during and after zooming."
+    "Open the Poly Studio Mobile app on the Home screen.",
+    "Locate a big blue dot (likely a device or feature indicator) on the screen.",
+    "Perform a zoom-in gesture (pinch-to-zoom) on the big blue dot.",
+    "Observe the UI elements during and after the zoom action."
   ],
-  "expected": "The headline, swipe text, and X (close) button remain visible. No new description text appears unexpectedly.",
+  "expected": "When zooming in on a big blue dot, the existing UI elements (headline text, swipe text, X close button) should remain visible and functional. New description text may appear as additional information, but existing elements should not disappear.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "ui-zoom-behavior",
-    "blue-dot-indicator",
-    "firmware-update",
+    "zoom-gesture",
+    "ui-transition",
+    "big-blue-dot",
     "home-screen",
-    "text-disappearance",
-    "ui-element-transition",
+    "text-replacement",
     "pinch-to-zoom"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "92c1b2959cb9d59f6503776c145287c293890e5b7ee06c634390cdac22f00588",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.868858Z",
+  "processed_at": "2026-04-25T07:55:31.941979Z",
   "status": "active"
 }
