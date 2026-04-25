@@ -5,32 +5,31 @@
   "project": "411453",
   "title": "ANC - Switch from Transparency Mode to ANC Mode",
   "feature": "ANC",
-  "scenario": "ANC mode retains previously selected level and Transparency Mode sub-setting is greyed out/disabled when switching from Transparency Mode to ANC Mode",
+  "scenario": "Verify that switching from Transparency Mode to ANC Mode disables Transparency and retains previously selected ANC level",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen and tap on the connected [Device Name].",
-    "3. Go to Audio Settings \u2192 ANC / Transparency Mode.",
-    "4. Tap on Transparency Mode to enable it.",
-    "5. Within Transparency Mode, select a sub-setting (e.g., Environment or Speech).",
-    "6. Verify that Transparency Mode is active and the selected sub-setting (Environment or Speech) is highlighted/enabled.",
-    "7. Tap on ANC Mode to switch from Transparency Mode to ANC Mode.",
-    "8. Observe the ANC Mode state and the Transparency Mode state."
+    "Open Poly Studio Mobile app on the Android device.",
+    "Navigate to the Home screen and tap on the connected [Device Name].",
+    "Go to Audio Settings \u2192 ANC / Transparency Mode.",
+    "Ensure Transparency Mode is currently ON and set to a previously selected value (e.g., Environment or Speech).",
+    "Tap the ANC toggle to turn ANC ON.",
+    "Observe the Transparency Mode toggle and its selected value (Environment or Speech).",
+    "Observe the ANC toggle and its selected value."
   ],
-  "expected": "ANC Mode turns ON with the previously selected ANC value (e.g., High, Low, Adaptive). Transparency Mode switches OFF, and its previously selected sub-setting (Environment or Speech) is greyed out/disabled.",
+  "expected": "When ANC is turned ON, Transparency Mode switches OFF and its previously selected value (Environment or Speech) is greyed out/disabled. ANC is set to ON with its previously selected value.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "anc-mode",
     "transparency-mode",
+    "anc-mode",
+    "anc-level",
     "environment-sub-setting",
     "speech-sub-setting",
     "poly-studio-mobile",
-    "audio-settings",
-    "mode-persistence"
+    "audio-settings"
   ],
   "source_last_updated": "1761046159",
   "source_hash": "cb1dc4ed876eef5ba1d486f94ac5ed21b9024707c3f05d13d6ce88451cf9426d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.821756Z",
+  "processed_at": "2026-04-25T07:55:31.908286Z",
   "status": "active"
 }
