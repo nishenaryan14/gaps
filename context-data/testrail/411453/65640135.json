@@ -5,31 +5,29 @@
   "project": "411453",
   "title": "Mobile app inventory details",
   "feature": "App Settings",
-  "scenario": "Mobile app inventory details can be viewed by navigating through Poly Lens Menu > General > Account and logging into the Lens server",
+  "scenario": "Mobile app inventory details are not displayed correctly in Poly Lens app under Account > Lens server inventory",
   "steps": [
     "Open the Poly Studio Mobile app.",
-    "Tap the Menu icon (hamburger menu) to open the side navigation.",
-    "Select General from the menu.",
-    "Tap Account.",
-    "Log in with valid Poly Lens credentials.",
-    "Navigate to the Lens server inventory section.",
-    "Locate and tap on Mobile app to view its details."
+    "Navigate to Menu > General > Account.",
+    "Log in with valid credentials.",
+    "Go to Lens server inventory.",
+    "Click on Mobile app to view details."
   ],
-  "expected": "The mobile app inventory details (e.g., app version, device info, status) are displayed on screen.",
+  "expected": "Mobile app inventory details are displayed correctly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-lens",
+    "poly-lens-app",
     "poly-studio-mobile",
-    "account-login",
-    "lens-server",
-    "mobile-app-inventory",
-    "poly-lens-credentials",
-    "app-navigation"
+    "lens-server-inventory",
+    "account-settings",
+    "mobile-app-details",
+    "inventory-display",
+    "app-credentials"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "e61c51e63ca96c42cbac9ded76159d1e683132681d18ab1dd1b97e898c0ae4e2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.960577Z",
+  "processed_at": "2026-04-25T07:55:31.985915Z",
   "status": "active"
 }
