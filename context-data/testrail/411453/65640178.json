@@ -8,19 +8,17 @@
   "scenario": "Analytics event for device removal in Poly Studio Mobile app does not log Device Name, PID, and Serial fields",
   "steps": [
     "Open Poly Studio Mobile app on the Home screen.",
-    "Ensure at least one Bluetooth audio device is paired and connected.",
-    "Tap on the connected device to open Device Settings.",
-    "Note the Device Name, Device PID, and Device Serial shown on the Device Settings screen.",
-    "Navigate to the phone's system Bluetooth settings and unpair / forget the device.",
-    "Return to the Poly Studio Mobile app Home screen.",
-    "Verify the device no longer appears in the device list.",
+    "Ensure at least one Bluetooth audio device (e.g., Poly Voyager Focus 2) is paired and connected.",
+    "Navigate to Device Settings by tapping the gear icon next to the device name.",
+    "Tap 'Remove Device' or the delete/trash icon to remove the device from the app.",
+    "Go to phone system Settings \u2192 Bluetooth, find the same device in the paired list, and tap 'Forget' or 'Unpair' to remove it from phone Bluetooth.",
+    "Return to Poly Studio Mobile app Home screen and confirm the device no longer appears.",
     "Wait a few hours for Firebase Analytics to process and update event counts.",
-    "Open the Firebase Analytics console and navigate to the relevant event (e.g., device_removed).",
-    "Check that the analytics page displays default elements: graph, event count by country/gender, events per session, app version/build/environment.",
-    "Check that the analytics page also displays device-specific fields: Device Name, Device PID, and Device Serial.",
-    "Compare the event count for related elements before and after the removal to confirm the count incremented."
+    "Log into Firebase Analytics console and navigate to the relevant event (e.g., 'device_removed').",
+    "Verify the analytics page displays default elements: graph, event count by country/gender, events per session, app version/build/environment.",
+    "Verify the analytics page also displays device-specific fields: Device Name, Device PID, and Device Serial."
   ],
-  "expected": "Firebase Analytics page shows default elements (graph, event count by country/gender, events per session, app version/build/environment) plus device-specific fields (Device Name, Device PID, Device Serial). The event count for the device removal event increments after a few hours.",
+  "expected": "Firebase Analytics page shows default elements (graph, event count by country/gender, events per session, app version/build/environment) plus device-specific fields (Device Name, Device PID, Device Serial). The event count for the 'device_removed' event increments after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -36,6 +34,6 @@
   "source_last_updated": "1760949700",
   "source_hash": "0795ae12e1291c414a5988d74f767e650212da16233ca2dba5f128b97ac92967",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.000255Z",
+  "processed_at": "2026-04-25T08:21:31.072432Z",
   "status": "active"
 }
