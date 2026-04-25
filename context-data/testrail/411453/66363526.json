@@ -5,24 +5,33 @@
   "project": "411453",
   "title": "[Cloud] Flamingo - Connect headset already paired with charge case",
   "feature": "Bluetooth Pairing",
-  "scenario": "Verify Voyager Legend 50 paired with Charge Case appears correctly in Poly Studio Mobile app and Cloud web page with earpiece and case details",
-  "steps": [],
-  "expected": "",
+  "scenario": "Voyager Legend 50 paired with Charge Case displays earpiece and case components correctly in Poly Studio Mobile app and Cloud web page",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Pair the Voyager Legend 50 headset with the app via Bluetooth. Ensure the headset is in its Charge Case during pairing.",
+    "3. On the Home screen of the app, verify the headset appears correctly as a paired device.",
+    "4. Log in to the Poly Cloud web page (e.g., Poly Lens or Poly+ portal).",
+    "5. Navigate to the device list and locate the paired Voyager Legend 50 headset.",
+    "6. Confirm the device is displayed as \"Voyager Legend 50 UC\" on the Cloud web page.",
+    "7. Click on the device entry to open its detailed view.",
+    "8. In the device details, verify the following are present:\n   - Earpiece and Charge Case information\n   - An image showing both the earpiece and the charge case\n   - A \"Component\" section with separate entries for the earpiece and the charge case"
+  ],
+  "expected": "The Voyager Legend 50 headset appears correctly in the Poly Studio Mobile app. On the Cloud web page, the device displays as \"Voyager Legend 50 UC\". The device details page shows earpiece and charge case information, an image of both components, and a Component section with separate entries for the earpiece and charge case.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "voyager-legend-50",
     "charge-case",
-    "poly-studio-mobile-app",
-    "poly-cloud",
+    "poly-studio-mobile",
+    "poly-lens",
+    "component-section",
+    "earpiece",
     "device-pairing",
-    "earpiece-details",
-    "case-details",
-    "device-appearance"
+    "cloud-web-page"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "69458d429675ffeae82eb97b83164f03b28bfbcae07e6defa287a6fcf13e6030",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.085240Z",
+  "processed_at": "2026-04-25T09:32:26.347042Z",
   "status": "active"
 }
