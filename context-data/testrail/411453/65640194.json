@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Soak Test - No Headset connected, app in the background, phone idle",
   "feature": "App Settings",
-  "scenario": "Poly Studio Mobile app remains responsive after prolonged idle soak test with no headset connected",
+  "scenario": "Poly Studio Mobile app remains responsive after prolonged idle soak test on Home Screen with no headset connected",
   "steps": [
     "1. Ensure no Poly Bluetooth audio device is connected to the phone.",
     "2. Launch the Poly Studio Mobile app.",
@@ -21,15 +21,15 @@
   "keywords": [
     "poly-studio-mobile",
     "idle-soak-test",
+    "home-screen",
     "app-responsiveness",
     "background-foreground",
     "no-headset-connected",
-    "app-persistence",
-    "home-screen"
+    "app-persistence"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "744cdbca0dbdf17bbcf273a8f5b7c0ec07ff53155e05e6357872cff2fbaec898",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.976724Z",
+  "processed_at": "2026-04-25T07:55:32.000255Z",
   "status": "active"
 }
