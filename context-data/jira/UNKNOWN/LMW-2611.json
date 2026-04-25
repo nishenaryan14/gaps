@@ -4,31 +4,32 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "ANDROID \ud83e\udd16 Falcon Charge Stand displays on User Guides screen but it shouldn't",
-  "feature": "Android App - User Guides",
-  "scenario": "Falcon Charge Stand incorrectly appears as a sub-device on the User Guides screen where no sub-devices should be displayed.",
-  "description_clean": "On the User Guides screen, the Falcon Charge Stand is displayed as a sub-device, but it should not be shown. The user should see no sub-devices on this screen.",
+  "feature": "App Settings",
+  "scenario": "Falcon Charge Stand incorrectly appears as a sub-device on the User Guides screen in the Poly Studio Mobile app",
+  "description_clean": "The Falcon Charge Stand is incorrectly displayed on the User Guides screen in the app. The charge stand should not appear as a sub-device in this screen.",
   "steps": [
-    "Navigate to the User Guides screen.",
-    "Observe the list of devices displayed on the screen.",
-    "Check if the Falcon Charge Stand appears as a sub-device."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the User Guides option",
+    "Observe the list of devices and accessories displayed"
   ],
-  "expected": "No sub-devices should be displayed on the User Guides screen. The Falcon Charge Stand should not appear.",
-  "actual": "The Falcon Charge Stand is displayed as a sub-device on the User Guides screen.",
+  "expected": "The Falcon Charge Stand should NOT appear as a sub-device on the User Guides screen.",
+  "actual": "The Falcon Charge Stand is incorrectly displayed as a sub-device on the User Guides screen.",
   "priority": "P1: High",
   "severity": "",
   "labels": [],
   "keywords": [
-    "Falcon Charge Stand",
-    "sub-device",
-    "User Guides screen",
-    "device display issue",
-    "incorrect sub-device",
-    "UI bug",
-    "device hierarchy"
+    "poly-studio-mobile-app",
+    "falcon-charge-stand",
+    "user-guides-screen",
+    "sub-device-display",
+    "device-listing",
+    "accessories-listing",
+    "home-screen-navigation"
   ],
   "source_last_updated": "2026-04-23T13:05:07.000+0000",
   "source_hash": "3378544f9691cab9bd0547d0522de663be5e17be00fb7f8a7e5512b0d401c827",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:52.620407Z",
+  "processed_at": "2026-04-25T05:37:15.436647Z",
   "status": "active"
 }
