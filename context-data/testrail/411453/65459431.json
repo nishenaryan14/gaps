@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Incoming SMS during update",
-  "feature": "Software Update - DFU",
-  "scenario": "Verify that an incoming SMS during a Device Firmware Update (DFU) does not interrupt or break the update process.",
+  "feature": "Firmware Update",
+  "scenario": "Incoming SMS does not interrupt or break Device Firmware Update (DFU) process on Poly Bluetooth audio device",
   "steps": [
-    "1. Initiate a Device Firmware Update (DFU) on the target device.",
-    "2. While the DFU is in progress, send an incoming SMS to the device.",
-    "3. Monitor the DFU process to check if it continues without interruption.",
-    "4. Wait for the DFU to complete.",
-    "5. Verify that the firmware update completed successfully (e.g., check firmware version, device functionality)."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen and ensure a Poly Bluetooth audio device is connected.",
+    "3. Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
+    "4. Initiate a Device Firmware Update (DFU) on the connected Poly device.",
+    "5. While the DFU is in progress, send an SMS message to the Android device from another phone.",
+    "6. Observe the behavior of the DFU process on the Poly Studio Mobile app and the connected Poly device."
   ],
-  "expected": "The DFU process continues running and completes successfully despite the incoming SMS. The device firmware is updated to the target version and the device remains functional.",
+  "expected": "The DFU process continues running without interruption and completes successfully. The incoming SMS does not break, pause, or cancel the firmware update.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Device Firmware Update",
-    "DFU",
-    "SMS interruption",
-    "firmware update process",
-    "incoming SMS",
-    "update integrity",
-    "firmware version verification",
-    "device functionality"
+    "device-firmware-update",
+    "dfu-interruption",
+    "sms-notification",
+    "poly-studio-mobile",
+    "firmware-update-persistence",
+    "android-sms-during-dfu",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1763371022",
   "source_hash": "6ae97ca0037d2b56834ca6b5c59b59b5a40e8102cd03e5a9b28a5af593b213eb",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.289914Z",
+  "processed_at": "2026-04-25T05:37:16.883603Z",
   "status": "active"
 }
