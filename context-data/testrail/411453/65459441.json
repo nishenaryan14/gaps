@@ -4,32 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software Update - DFU - Charge Case at low battery - Software update tab in device settings",
-  "feature": "Software Update - DFU",
-  "scenario": "Verify DFU is blocked with a popup when charge case battery is below 5% and not plugged in, but proceeds successfully once the case is connected to a charger.",
+  "feature": "Firmware Update",
+  "scenario": "DFU is blocked with low battery popup when headset or charge case battery is below 5%",
   "steps": [
-    "1. Ensure the charge case battery is below 5% and not plugged into power.",
-    "2. Attempt to perform a DFU (Device Firmware Update) on the headset/charge case.",
-    "3. Observe the system response.",
-    "4. Connect the charge case to a charger.",
-    "5. Attempt the DFU again.",
-    "6. Observe the system response."
+    "1. Open Poly Studio Mobile app on the Home screen.",
+    "2. Ensure the headset or charge case battery level is below 5%.",
+    "3. Navigate to Poly Studio Mobile \u2192 [Device Name] \u2192 Device Settings.",
+    "4. Locate and tap the Firmware Update (DFU) option.",
+    "5. Observe the app response when attempting to initiate the update."
   ],
-  "expected": "1. When battery is below 5% and not plugged in, attempting DFU shows a popup: \"Update currently not available, please try back later\".\\n2. After connecting to a charger, the DFU should proceed and complete successfully.",
+  "expected": "The app should display a popup message: \"Update currently not available, please try back later\". The DFU update should not proceed. The update should only become available once the charge case is plugged into power.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU",
-    "Device Firmware Update",
-    "charge case battery",
-    "low battery",
-    "popup blocked",
-    "charger connected",
-    "battery below 5%",
-    "firmware update blocked"
+    "dfu-blocked",
+    "low-battery-popup",
+    "firmware-update",
+    "poly-studio-mobile",
+    "battery-persistence",
+    "device-settings",
+    "charge-case-battery"
   ],
   "source_last_updated": "1763369632",
   "source_hash": "2fa50f275a2b8df92cf5bafd12c8b567932e35e17eca3c654393c5a472307dcc",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.290466Z",
+  "processed_at": "2026-04-25T05:37:16.882088Z",
   "status": "active"
 }
