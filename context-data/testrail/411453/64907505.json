@@ -5,19 +5,19 @@
   "project": "411453",
   "title": "Support - Verify that data is correct after moving from Account linked to Tenant to Account not linked to any Tenant",
   "feature": "App Settings",
-  "scenario": "Tenant name and Tenant ID are not cleared in Support > App section when switching from a tenant-linked account to a non-tenant account",
+  "scenario": "Tenant name and ID are not cleared in Support > App section when switching from a tenant-linked account to a non-tenant account",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Home screen.",
     "2. Log in with an account that is linked to Tenant A.",
     "3. Navigate to: Account \u2192 Support \u2192 App section.",
-    "4. Verify that Tenant A information (Tenant name and Tenant ID) is displayed alongside the account information.",
+    "4. Verify that Tenant A information (tenant name and tenant ID) is displayed correctly.",
     "5. Log out of the account.",
     "6. Log in with an account that is NOT linked to any Tenant.",
     "7. Navigate to: Account \u2192 Support \u2192 App section.",
     "8. Verify that the account information is displayed.",
-    "9. Verify that the Tenant name and Tenant ID fields are NOT present."
+    "9. Verify that the tenant name and tenant ID fields are NOT present."
   ],
-  "expected": "After logging in with an account linked to Tenant A, the Support > App section displays both the account info and Tenant A's name and ID. After logging in with an account not linked to any Tenant, only the account info is shown; Tenant name and Tenant ID are absent.",
+  "expected": "After logging in with an account linked to Tenant A, the Support > App section displays the tenant name and tenant ID. After logging in with an account not linked to any tenant, the account information is displayed but the tenant name and tenant ID fields are absent.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -28,11 +28,11 @@
     "account-switching",
     "tenant-linked-account",
     "non-tenant-account",
-    "account-information-persistence"
+    "account-persistence"
   ],
   "source_last_updated": "1759751999",
   "source_hash": "bf5e8e09e2de54b71c58cd3ab93478cc6547c5a2be0c26953024b941b14bd207",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.957669Z",
+  "processed_at": "2026-04-25T09:32:26.189521Z",
   "status": "active"
 }
