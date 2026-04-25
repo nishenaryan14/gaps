@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Find My Device - Connected / Nearby device details",
-  "feature": "Find My Device",
-  "scenario": "Verify the Connected/Nearby device details screen displays device name, status, description, and play button when HS is paired and connected.",
+  "feature": "App Settings",
+  "scenario": "\"Find My Device\" feature in App Settings correctly displays connected device name, connection status, instruction text, and Play button",
   "steps": [
-    "Start the App with HS paired and connected.",
-    "Go to App Settings.",
-    "Tap on Find My Device (if prompted allow access to GPS location).",
-    "Tap on Blue Geo icon."
+    "Open Poly Studio Mobile app on the mobile device.",
+    "Navigate to the Home screen.",
+    "Tap on the connected device name to open Device Settings.",
+    "Tap on the menu icon (three dots or hamburger) or navigate to App Settings.",
+    "Select 'Find My Device' from the App Settings menu.",
+    "Observe the displayed information on the Find My Device screen."
   ],
-  "expected": "New window shows Device name, Status (Connected), description \"Make sure this device is being used as your main audio source to play tone\", and a Play Button.",
+  "expected": "The Find My Device screen displays the connected/nearby device details including: device name, connection status (Connected), a description instructing the user to ensure the device is the main audio source to play a tone, and a Play button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Connected device details screen",
-    "HS paired and connected",
-    "Device name",
-    "Device status",
-    "Device description",
-    "Play button",
-    "Find My Device",
-    "Blue Geo icon"
+    "find-my-device",
+    "poly-studio-mobile",
+    "app-settings",
+    "device-settings",
+    "connection-status",
+    "play-button",
+    "device-name"
   ],
   "source_last_updated": "1759928440",
   "source_hash": "ecaf3032835267094300f02f0aa5ea9903fde256c84772523a36b0d4d1ec1b7f",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.152194Z",
+  "processed_at": "2026-04-25T05:37:16.765048Z",
   "status": "active"
 }
