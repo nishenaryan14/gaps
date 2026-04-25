@@ -5,24 +5,22 @@
   "project": "411453",
   "title": "App Settings - General - Licenses",
   "feature": "App Settings",
-  "scenario": "Verify that Third-party Software licenses with Source and License links are displayed consistently under App Settings > General > Licenses and Phone Settings > Poly Lens > Acknowledgements",
+  "scenario": "Third-party Software licenses with Source and License links are visible under App Settings > General > Licenses and match those in Phone Settings > Poly Lens > Acknowledgements",
   "steps": [
     "Open Poly Studio Mobile app",
-    "Navigate to App Settings",
+    "Go to App Settings",
     "Tap General",
     "Tap Licenses",
     "Observe the 'Third-party Software' headline",
     "Verify a list of licenses is displayed",
-    "Tap on any license entry",
-    "Verify a Source link is displayed",
-    "Verify a License link is displayed",
-    "Close the app",
+    "For each license entry, verify that a 'Source' link is visible",
+    "For each license entry, verify that a 'License' link is visible",
     "Open Phone Settings",
-    "Navigate to Poly Lens",
+    "Go to Poly Lens",
     "Tap Acknowledgements",
-    "Verify the same list of licenses is present"
+    "Verify that the same licenses listed in the app are also present here"
   ],
-  "expected": "The 'Third-party Software' headline is visible under App Settings > General > Licenses, with a list of licenses. Each license displays both a Source link and a License link. The same licenses are also present in Phone Settings > Poly Lens > Acknowledgements.",
+  "expected": "The 'Third-party Software' headline is visible with a list of licenses. Each license displays both a Source link and a License link. The same licenses are also present in Phone Settings > Poly Lens > Acknowledgements.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -31,13 +29,13 @@
     "licenses",
     "third-party-software",
     "acknowledgements",
+    "poly-lens",
     "source-link",
-    "license-link",
-    "phone-settings"
+    "license-link"
   ],
   "source_last_updated": "1759327858",
   "source_hash": "f211271dd5e3822129310c678804cf82a127d9828d1d5c5ae8ab7285afb635bc",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.935975Z",
+  "processed_at": "2026-04-25T09:32:26.167666Z",
   "status": "active"
 }
