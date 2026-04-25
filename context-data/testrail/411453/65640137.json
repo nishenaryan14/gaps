@@ -4,29 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "Personal User - no headset policy, all settings unlocked",
-  "feature": "Personal User - Headset Policy",
-  "scenario": "Personal user with a headset can unlock and change all headset settings in the mobile app.",
-  "steps": [
-    "Personal user with headset downloads/installs/logs in (or as Guest) with the mobile app.",
-    "Navigate to headset settings.",
-    "Check status and change all settings."
-  ],
-  "expected": "Settings are not locked, all can be changed.",
+  "feature": "App Settings",
+  "scenario": "All headset settings are unlocked and changeable for personal users (no headset policy) in Poly Studio Mobile app",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "personal user",
-    "headset",
-    "mobile app",
-    "headset settings",
-    "unlock settings",
-    "change settings",
-    "guest login",
-    "device configuration"
+    "poly-studio-mobile",
+    "headset-settings",
+    "personal-users",
+    "no-headset-policy",
+    "settings-unlocked",
+    "settings-changeable",
+    "app-configuration"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "189ee3fd10dbcb73a387a58fedf5fc844098072a90a88589ea25d39f0caf4abf",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.318318Z",
+  "processed_at": "2026-04-25T05:37:16.949375Z",
   "status": "active"
 }
