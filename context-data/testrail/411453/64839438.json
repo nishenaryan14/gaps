@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - Disconnected device",
   "feature": "Device Management",
-  "scenario": "Device Home Screen displays correct UI elements (Not Connected label, greyed out device image, battery icons, firmware version) when paired headset is disconnected",
+  "scenario": "Device Home Screen displays correct \"Not Connected\" state with greyed out elements when paired headset is powered off",
   "steps": [
-    "Open the Poly Studio Mobile app on the Android device.",
-    "Ensure a headset is already paired with the app.",
-    "Turn off the paired headset or move it out of Bluetooth range so it disconnects.",
-    "Observe the Home screen of the app.",
-    "Verify the following elements are displayed on the Home screen:\n  - Device Name (e.g., \"Poly Voyager 5200\") with an \"i\" icon next to it (if applicable).\n  - A crossed red dot with the label \"Not Connected\".\n  - A greyed out device image.\n  - A \"...\" button (more options).\n  - Greyed out Battery icons.\n  - The firmware version displayed as \"Version X.Y.Z\" (e.g., \"Version 6.15.0\")."
+    "1. Pair and connect the headset to the mobile device.",
+    "2. Launch the Poly Studio Mobile app.",
+    "3. Navigate to the Home screen (Device Home page).",
+    "4. Turn off the headset (e.g., press and hold the Power button to power it off).",
+    "5. Observe the Home screen UI elements."
   ],
-  "expected": "The Home screen displays: Device Name with \\\"i\\\" icon, a crossed red dot with \\\"Not Connected\\\" label, a greyed out device image, a \\\"...\\\" button, greyed out Battery icons, and the firmware version \\\"Version X.Y.Z\\\".",
+  "expected": "The Home screen displays: Device Name (with an \"i\" info icon if applicable), a crossed red dot with \"Not Connected\" label, a greyed out device image, a \"...\" (more options) button, greyed out Battery icons, and firmware version \"Version X.Y.Z\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "home-screen",
-    "not-connected",
-    "device-image-greyed",
-    "battery-icons-greyed",
-    "firmware-version",
-    "bluetooth-disconnect",
-    "poly-voyager-5200"
+    "device-home-screen",
+    "not-connected-state",
+    "greyed-out-elements",
+    "headset-power-off",
+    "bluetooth-disconnection",
+    "ui-state-persistence"
   ],
   "source_last_updated": "1775206608",
   "source_hash": "9b34d1f2b52081163ce4a2e0f815a9a3effca07e7a2113dcb379a4202c3b6846",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.922623Z",
+  "processed_at": "2026-04-25T09:32:26.147052Z",
   "status": "active"
 }
