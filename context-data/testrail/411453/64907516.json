@@ -10,27 +10,27 @@
     "1. Open the Poly Studio Mobile app on the Home screen.",
     "2. Log in with Account A (Tenant A).",
     "3. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
-    "4. Verify that the App section displays Tenant A information.",
-    "5. Log out of Account A.",
+    "4. Verify that the App screen displays Tenant A information.",
+    "5. Log out of Account A from the Account screen.",
     "6. Log in with Account B (Tenant B).",
     "7. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
-    "8. Verify that the App section displays Tenant B information."
+    "8. Verify that the App screen now displays Tenant B information."
   ],
-  "expected": "After switching accounts, the Support > App section correctly updates to show the tenant information corresponding to the currently logged-in account (Tenant A info for Account A, Tenant B info for Account B).",
+  "expected": "After switching accounts, the Support > App screen correctly updates to show the tenant information corresponding to the currently logged-in account (Tenant A info for Account A, Tenant B info for Account B).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-lens-menu",
     "poly-studio-mobile",
+    "poly-lens-menu",
     "support-app",
-    "tenant-switching",
-    "account-login",
-    "app-data-update",
-    "multi-tenant"
+    "account-switching",
+    "tenant-data",
+    "multi-tenant",
+    "data-persistence"
   ],
   "source_last_updated": "1759752644",
   "source_hash": "e2e1d9b5ca51d1c18e1aeb4b2a9ddd369e6179a31144b5e9fd3ac6cfb1589374",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.957669Z",
+  "processed_at": "2026-04-25T09:32:26.193370Z",
   "status": "active"
 }
