@@ -7,29 +7,30 @@
   "feature": "Device Management",
   "scenario": "Device name with special characters does not persist or reflect on Home screen after renaming in Device Settings > General",
   "steps": [
-    "1. Open the Poly Studio Mobile app with the Bluetooth audio device connected and attached.",
-    "2. Navigate to Device Settings \u2192 General.",
-    "3. Tap the device's official name field.",
-    "4. Enter special characters for the name (e.g., ?*!#$%&'()+,-./:;@[]^_`{|}~).",
-    "5. Tap Done to save the new name.",
-    "6. Return to the Home screen."
+    "1. Open the Poly Studio Mobile app with the Bluetooth audio device connected.",
+    "2. Tap the device name on the Home screen to open Device Settings.",
+    "3. In Device Settings, tap General.",
+    "4. Tap the device's official name field.",
+    "5. Enter special characters for the name (e.g., ?*!#$%&'()+,-./:;@[]^_`{|}~).",
+    "6. Tap Done to save the new name.",
+    "7. Return to the Home screen."
   ],
-  "expected": "The device name is successfully changed to the name containing special characters, and the updated name is reflected on the Home screen.",
+  "expected": "The device name is updated with the special characters and the new name is reflected on the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device-name-persistence",
+    "poly-studio-mobile",
+    "device-rename",
     "special-characters",
     "home-screen",
     "device-settings",
     "general-settings",
-    "poly-studio-mobile",
-    "rename-device",
-    "name-reflection"
+    "name-persistence",
+    "bluetooth-audio"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "f149644c9a94cf43c10194b398c826906e00501cca3fc0216716ae4a12f12fc5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.971341Z",
+  "processed_at": "2026-04-25T09:32:26.222421Z",
   "status": "active"
 }
