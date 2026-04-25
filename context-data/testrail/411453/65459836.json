@@ -5,23 +5,31 @@
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, allowed in OS settings, new UI",
   "feature": "Notifications",
-  "scenario": "Notifications toggle in App Settings does not unlock notification sub-settings after enabling via OS settings on Poly Studio Mobile app",
-  "steps": [],
-  "expected": "",
+  "scenario": "Notification settings remain locked in Poly Studio Mobile app after enabling notifications via OS settings post-onboarding",
+  "steps": [
+    "1. Launch Poly Studio Mobile app and begin onboarding flow.",
+    "2. When prompted for notification permissions, tap \"Don't Allow\".",
+    "3. Complete the onboarding process.",
+    "4. Navigate to device Settings \u2192 Notifications (or OS Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Notifications).",
+    "5. Enable notifications for the Poly Studio Mobile app.",
+    "6. Return to the Poly Studio Mobile app.",
+    "7. Go to Home \u2192 [Device Name] \u2192 Notifications."
+  ],
+  "expected": "Notifications are shown as ON, and all notification settings are unlocked and user-changeable.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "notifications-toggle",
-    "notification-sub-settings",
-    "app-settings",
+    "notification-permissions",
+    "onboarding-flow",
+    "notification-settings-locked",
     "os-settings",
-    "settings-persistence",
-    "notification-permissions"
+    "device-settings",
+    "permission-persistence"
   ],
   "source_last_updated": "1761229691",
   "source_hash": "e78b9f5cac27b0efaaf139d38d91588c7ca16f6af0d93d5e6f1f3c55fcb80725",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.943811Z",
+  "processed_at": "2026-04-25T07:55:31.974251Z",
   "status": "active"
 }
