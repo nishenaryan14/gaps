@@ -5,16 +5,16 @@
   "project": "411453",
   "title": "FMD - Permission is not previously given",
   "feature": "App Settings",
-  "scenario": "Find My Device geo pin not visible on map after tapping \"Allow Once\" for location permission in App Settings",
+  "scenario": "Find My Device geo pin does not appear on map after tapping \"Allow Once\" for location permission in App Settings",
   "steps": [
     "Open Poly Studio Mobile app",
     "Go to Home screen",
-    "Tap on Device Settings (gear icon) for the connected device",
+    "Tap on Device Settings for the connected device",
     "Navigate to App Settings",
     "Tap on Find My Device feature",
-    "When the location permission prompt appears, tap 'Allow Once'"
+    "When prompted for location permission, tap 'Allow Once'"
   ],
-  "expected": "The geo pin becomes visible on the map in the Find My Device screen.",
+  "expected": "The geo pin becomes visible on the map in the Find My Device feature.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -29,6 +29,6 @@
   "source_last_updated": "1762331664",
   "source_hash": "d26fab24290b61d0d087d62a5bbf01b21a8ee3fe520cea34180b49723701cb11",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.080676Z",
+  "processed_at": "2026-04-25T09:32:26.340947Z",
   "status": "active"
 }
