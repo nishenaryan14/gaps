@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device Settings  - Custom Button - Teams Detected",
   "feature": "Device Settings",
-  "scenario": "Custom Button \"Other Providers\" option is greyed out when Microsoft Teams is connected on Falcon headsets",
+  "scenario": "Custom Button \"Other Providers\" option is greyed out and inaccessible when Microsoft Teams is connected on Falcon headsets",
   "steps": [
     "Open Poly Studio Mobile app on Android.",
-    "Ensure a Falcon headset (e.g., Voyager 5200, Voyager Focus 2) is paired and connected to the Android device.",
+    "Ensure a Falcon headset (e.g., Poly Voyager Focus 2) is paired and connected to the Android device.",
     "Ensure the same headset is also connected to a PC running Microsoft Teams.",
-    "Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "Tap on 'Custom Button' configuration.",
+    "Navigate to Home \u2192 Device Settings \u2192 [Connected Falcon Headset Name].",
+    "Tap on 'Custom Button' configuration option.",
     "Observe the available options under Custom Button settings."
   ],
   "expected": "The Custom Button settings should display two options: \"Microsoft Teams\" (selected by default) and \"Other Providers\". \"Other Providers\" should be greyed out and inaccessible. A message should be displayed: \"Microsoft Teams is connected. Other Providers is not available when Microsoft Teams is connected.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "falcon-headsets",
     "custom-button",
     "other-providers",
     "microsoft-teams",
-    "falcon-headsets",
-    "poly-studio-mobile",
-    "voyager-5200",
-    "voyager-focus-2",
-    "device-settings"
+    "poly-studio-mobile-app",
+    "poly-voyager-focus-2",
+    "device-settings",
+    "android"
   ],
   "source_last_updated": "1769430868",
   "source_hash": "5a9b1a7d8353bacbfc00e4b501803d3edf0d8534aa8bfb94e56eb3fe68a07b95",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.872546Z",
+  "processed_at": "2026-04-25T08:21:30.973497Z",
   "status": "active"
 }
