@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen  - Connecting HS without internet access",
-  "feature": "Device Home Screen",
-  "scenario": "Connect headset to app when phone has no internet access",
+  "feature": "Bluetooth Pairing",
+  "scenario": "Headset pairing and connection via Poly Studio Mobile app succeeds when phone has no internet access (WiFi and cellular off)",
   "steps": [
-    "Turn off WiFi and cellular on the phone.",
-    "Pair and connect Headset.",
-    "Start the app."
+    "1. Turn off WiFi and cellular data on the phone (enable Airplane Mode).",
+    "2. Open the Poly Studio Mobile app.",
+    "3. On the Home screen, tap the '+' or 'Add Device' button to start pairing.",
+    "4. Put the headset into pairing mode (press and hold the Bluetooth button until the LED flashes red/blue).",
+    "5. Wait for the headset to appear in the list of available devices on the Home screen.",
+    "6. Tap the headset name to initiate pairing and connection.",
+    "7. Observe the device list on the Home screen after pairing completes."
   ],
-  "expected": "Headset is shown as connected in device list.",
+  "expected": "The headset appears as 'Connected' in the device list on the Home screen of the Poly Studio Mobile app, even without internet access.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "headset",
-    "app",
-    "phone",
-    "no internet",
-    "offline",
-    "pair",
-    "connect",
-    "WiFi"
+    "poly-studio-mobile",
+    "bluetooth-pairing",
+    "airplane-mode",
+    "offline-connection",
+    "no-internet",
+    "device-discovery",
+    "headset-connection"
   ],
   "source_last_updated": "1761749943",
   "source_hash": "c60317bfbad46efdee75f0c9b776e0617dacf7bf7521c1056adbb48b882b4f25",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.113398Z",
+  "processed_at": "2026-04-25T05:37:16.734514Z",
   "status": "active"
 }
