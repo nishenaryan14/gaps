@@ -7,14 +7,14 @@
   "feature": "Firmware Update",
   "scenario": "Placing earbuds into charge case during 1-step CC DFU over 20% triggers Houston screen on Voyager Free 60+ and Voyager Legend 50",
   "steps": [
-    "1. Open Poly Studio Mobile app on your Android device.",
-    "2. Connect to a Voyager Free 60+ or Voyager Legend 50 device.",
+    "1. Open Poly Studio Mobile app on the connected device.",
+    "2. Ensure a Voyager Free 60+ or Voyager Legend 50 device is paired and connected.",
     "3. Initiate a 1-step Device Firmware Update (DFU) for the Charge Case (CC) only.",
-    "4. Wait for the CC update to progress past 20%.",
+    "4. Wait for the CC update progress to exceed 20%.",
     "5. While the CC update is in progress (over 20%), place the earbuds into the charge case.",
     "6. Observe the app screen."
   ],
-  "expected": "The app should continue to display the DFU progress screen or a relevant status update for the Charge Case update.",
+  "expected": "The app should continue to display the DFU progress screen or a relevant update status without interruption.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -30,6 +30,6 @@
   "source_last_updated": "1760949167",
   "source_hash": "716c323320ccabbd9fbfd4a304d0825704ec2b65fe9803cdac6120370d6a5c83",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.966106Z",
+  "processed_at": "2026-04-25T08:21:31.042979Z",
   "status": "active"
 }
