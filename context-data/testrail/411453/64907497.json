@@ -5,30 +5,29 @@
   "project": "411453",
   "title": "Support - Device - No Devices Connected screen",
   "feature": "Device Management",
-  "scenario": "Support > Device screen shows incorrect \"No Devices Connected\" message when no devices have been previously connected",
+  "scenario": "Support > Device screen shows \"No Devices Connected\" message when no previously connected devices are found",
   "steps": [
-    "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Ensure no Bluetooth audio devices have been previously paired/connected to the app.",
+    "1. Open the Poly Studio Mobile app on the mobile device.",
+    "2. Ensure no Poly Bluetooth audio devices have been previously connected to the mobile device.",
     "3. Navigate to the Home screen.",
-    "4. Tap on the Support menu option.",
-    "5. Tap on the Device screen within Support.",
-    "6. Observe the message displayed on the screen."
+    "4. Tap on the Support option (or navigate to Support from the menu).",
+    "5. Tap on the Device screen within Support."
   ],
-  "expected": "The screen displays the message: \"No previously connected devices were found. Please connect devices using the mobile device's Bluetooth Settings prior to requesting device support.\" The screen layout matches the Figma design.",
+  "expected": "The app displays a \"No Devices Connected\" screen with the text: \"No previously connected devices were found. Please connect devices using the mobile device's Bluetooth Settings prior to requesting device support.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "no-devices-connected",
+    "poly-studio-mobile",
+    "support-screen",
     "device-screen",
-    "support-menu",
     "bluetooth-pairing",
     "home-screen",
-    "android"
+    "app-navigation"
   ],
   "source_last_updated": "1759761658",
   "source_hash": "4e4d3786b5542f0628b93234c875144cd580fe7b7c780de129e8988fb40f85fd",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.946442Z",
+  "processed_at": "2026-04-25T09:32:26.180914Z",
   "status": "active"
 }
