@@ -5,18 +5,18 @@
   "project": "411453",
   "title": "Multiple times zoom in/out",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide zoom in/out via circle button remains stable across all screens on Poly Studio Mobile app",
+  "scenario": "Quick Start Guide zoom in/out functionality fails or app becomes unstable when circle button is used multiple times across QSG screens",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
-    "Tap the Quick Start Guide (QSG) icon to open it",
-    "Tap the circle button to zoom in",
+    "Tap the Quick Start Guide (QSG) option",
+    "On any QSG screen, tap the circle button to zoom in",
     "Tap the circle button again to zoom out",
     "Repeat steps 4-5 multiple times (e.g., 5-10 times)",
-    "Navigate to each screen within the QSG (e.g., swipe left/right through all pages)",
-    "On each QSG screen, repeat steps 4-5 multiple times"
+    "Navigate to the next QSG screen and repeat the zoom in/out sequence",
+    "Repeat for all QSG screens available"
   ],
-  "expected": "The app remains stable with no crashes or freezes. The zoom in/out functionality works correctly on every QSG screen, and the circle button responds consistently each time it is tapped.",
+  "expected": "The app remains stable with no crashes or freezes. The zoom in/out functionality works correctly on every QSG screen when the circle button is tapped multiple times.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,13 +25,13 @@
     "circle-button",
     "zoom-in",
     "zoom-out",
-    "ui-stability",
-    "screen-navigation",
-    "qsg-pages"
+    "app-stability",
+    "qsg-navigation",
+    "ui-crash"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "2ca623fc415d9e2a7284167d125994e5c94e41375c1de0edcbcc47c31c2e2396",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.939470Z",
+  "processed_at": "2026-04-25T08:21:31.014257Z",
   "status": "active"
 }
