@@ -5,17 +5,19 @@
   "project": "411453",
   "title": "Flamingo - Software update for headset and charge case",
   "feature": "Firmware Updates",
-  "scenario": "DFU update for headset and charge case completes successfully via \"Update All\" button on device home screen",
+  "scenario": "DFU update for both headset and charge case completes successfully via \"Update All\" button in Device Settings Software Update tab",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. On the Home screen, ensure the headset and charge case are both connected and visible.",
-    "3. Locate and tap the \"Update All\" button on the Home screen.",
-    "4. Confirm the DFU (Device Firmware Update) initiation prompt if presented.",
-    "5. Wait for the update process to complete for the headset.",
-    "6. Wait for the update process to complete for the charge case.",
-    "7. After completion, verify the firmware version displayed on the Home screen or Device Settings screen matches the latest available firmware for both devices."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Ensure a Poly Bluetooth headset and charge case are connected and visible on the Home screen.",
+    "Tap the update button (or firmware update notification) on the device card on the Home screen.",
+    "Observe that the Device Settings page opens with the Software Update tab expanded.",
+    "Verify that an 'Update All' button is displayed at the top of the Software Update section.",
+    "Verify that separate 'Update' buttons are shown for the headset and for the charge case.",
+    "Tap the 'Update All' button.",
+    "Wait for the single-step DFU process to complete for both the headset and charge case.",
+    "After completion, check that both devices are on the latest firmware version."
   ],
-  "expected": "Both the headset and charge case successfully update to the latest firmware via the \"Update All\" button, with no errors during the process. The firmware versions shown in the app match the latest available versions.",
+  "expected": "The Device Settings page opens with the Software Update tab expanded, showing an 'Update All' button at the top and individual 'Update' buttons for the headset and charge case. Tapping 'Update All' initiates a single-step DFU process that completes successfully for both devices, leaving them on the latest firmware.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,14 +25,14 @@
     "update-all",
     "firmware-update",
     "poly-studio-mobile",
-    "headset-firmware",
-    "charge-case-firmware",
-    "device-home-screen",
-    "firmware-version-verification"
+    "device-settings",
+    "software-update-tab",
+    "charge-case",
+    "bluetooth-headset"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "9416c393113a2ed295f15180583516af3606f9585ba6479fb9408cea4e4fe16c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.080676Z",
+  "processed_at": "2026-04-25T09:32:26.338330Z",
   "status": "active"
 }
