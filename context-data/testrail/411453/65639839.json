@@ -5,24 +5,25 @@
   "project": "411453",
   "title": "1 step DFU - Content of the Software Update tab when there is update available for Earbuds and Charge Case",
   "feature": "Firmware Updates",
-  "scenario": "Software Update tab displays current and available firmware versions, release notes, individual Update buttons for earbuds and charge case, and an Update All button when updates are available for both components",
+  "scenario": "Software Update tab displays current/available versions, release notes, individual Update buttons for earbuds and charge case, and an Update All button when firmware updates are available for both components",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Ensure Bluetooth is enabled and the Poly earbuds + charge case are connected.",
-    "Navigate to Device Settings \u2192 [Connected Device Name].",
-    "Tap on 'Software Update' tab.",
-    "Verify that firmware updates are available for both earbuds and the charge case (simulate or wait for server check).",
+    "Open the Poly Studio Mobile app on your Android device.",
+    "Ensure your Poly Bluetooth earbuds and charge case are connected and paired.",
+    "Navigate to the Home screen.",
+    "Tap on the device name to open Device Settings.",
+    "Locate and tap on the Software Update tab/section.",
+    "Verify that firmware updates are available for both the earbuds and the charge case.",
     "Observe the Software Update tab content."
   ],
-  "expected": "The Software Update tab displays: current firmware version and available firmware version for the earbuds, current firmware version and available firmware version for the charge case, release notes for each update, an individual \"Update\" button for the earbuds, an individual \"Update\" button for the charge case, and an additional \"Update All\" button.",
+  "expected": "The Software Update tab displays: current and available firmware versions for both earbuds and charge case, release notes for each component, individual \"Update\" buttons for earbuds and charge case, and an additional \"Update All\" button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "software-update-tab",
-    "firmware-version",
-    "release-notes",
-    "update-all-button",
+    "firmware-update",
     "poly-studio-mobile",
+    "update-all-button",
+    "release-notes",
     "earbuds-firmware",
     "charge-case-firmware",
     "device-settings"
@@ -30,6 +31,6 @@
   "source_last_updated": "1760949167",
   "source_hash": "d1bdcc78460230895438066cab71a9ba9b2608df01062dc028ad866af5c1e3c8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.893812Z",
+  "processed_at": "2026-04-25T07:55:31.959739Z",
   "status": "active"
 }
