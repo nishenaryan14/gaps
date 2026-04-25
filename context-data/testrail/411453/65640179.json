@@ -4,32 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Device Connected",
-  "feature": "Analytics",
-  "scenario": "Verify that the device connection success event is logged with default elements (graph, events in last 30 min, event count by country/gender, events per session, app version/build/environment) and additional tracked fields (Device PID, Device Serial), and that event counts update after a few hours.",
+  "feature": "App Settings",
+  "scenario": "Analytics event \"device_connected\" is logged upon successful device connection via the Poly Studio Mobile app, with event counts updating in Firebase dashboard after a few hours",
   "steps": [
-    "Open the app and connect a device successfully.",
-    "Wait a few hours for event counts to update.",
-    "Navigate to the event logs section.",
-    "Locate the event logged for the device connection.",
-    "Verify the event includes default elements: graph, events in the last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
-    "Check that the event includes additional tracked fields: Device PID and Device Serial."
+    "Open Poly Studio Mobile app on Android.",
+    "Navigate to the Home screen.",
+    "Tap on a device to initiate connection.",
+    "Wait for the device to connect successfully.",
+    "Observe the Firebase Analytics dashboard for the \"device_connected\" event."
   ],
-  "expected": "The event is logged with all default elements (graph, events in last 30 min, event count by country, event count by gender, events per session, app version, app build, app environment) and additional fields (Device PID, Device Serial). Event counts are updated after a few hours.",
+  "expected": "The \"device_connected\" analytics event is logged in Firebase with correct event counts, device PID, device serial, app version, app build, app environment, and default analytics dimensions (country, gender, events per session). Event counts update after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device connection success event",
-    "event logs",
-    "default elements",
-    "additional tracked fields",
-    "Device PID",
-    "Device Serial",
-    "event count update",
-    "app version build environment"
+    "poly-studio-mobile",
+    "device-connected",
+    "firebase-analytics",
+    "android",
+    "device-connection",
+    "analytics-event",
+    "home-screen"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "be9ff0c0564115b16197ac7f12661bab56da3fb15a7bbb8a8fc30f5a3f567bf4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.334131Z",
+  "processed_at": "2026-04-25T05:37:16.964234Z",
   "status": "active"
 }
