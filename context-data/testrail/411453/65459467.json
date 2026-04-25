@@ -4,31 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Application - Fresh install mobile application",
-  "feature": "Application - Fresh Install",
-  "scenario": "Verify fresh installation of the mobile app from the Play Store/App Store and successful onboarding start.",
+  "feature": "App Settings",
+  "scenario": "Fresh install of Poly Studio Mobile app from Play Store/App Store completes successfully and user can start onboarding",
   "steps": [
-    "Uninstall the mobile app from the device.",
-    "Go to the Play Store (Android) or App Store (iOS).",
-    "Search for and select the Lens mobile app.",
-    "Install the app.",
-    "Open the app after installation.",
-    "Verify the app is installed successfully and the user can start the onboarding process."
+    "1. Uninstall the Poly Studio Mobile app from the device.",
+    "2. Open the Google Play Store (Android) or App Store (iOS).",
+    "3. Search for \"Poly Studio Mobile\" and select the app from the search results.",
+    "4. Tap \"Install\" (Android) or \"Get\" (iOS) to download and install the app.",
+    "5. Wait for the installation to complete.",
+    "6. Tap \"Open\" to launch the Poly Studio Mobile app.",
+    "7. Observe the initial screen that appears after launch."
   ],
-  "expected": "The app is installed successfully and the user can start the onboarding process.",
+  "expected": "The app installs successfully without errors. Upon launching, the user is presented with the onboarding/startup screen (e.g., welcome screen, terms of service, or device pairing prompt) indicating a fresh install experience.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "fresh installation",
-    "mobile app",
-    "Play Store",
-    "App Store",
+    "poly-studio-mobile",
+    "fresh-install",
+    "play-store",
+    "app-store",
     "onboarding",
-    "install",
-    "verify installation"
+    "app-launch",
+    "initial-screen"
   ],
   "source_last_updated": "1760615599",
   "source_hash": "899c8c2ab44a359ef6855a2bb6396dd8268db0ef6d762f793a1da42da4a3087c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.274616Z",
+  "processed_at": "2026-04-25T05:37:16.874486Z",
   "status": "active"
 }
