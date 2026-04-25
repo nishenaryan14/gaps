@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "Fit test - 1st screen close button [TBD]",
   "feature": "Device Management",
-  "scenario": "Fit Test screen closes and returns to Device Settings when tapping close button on first Fit Test screen",
+  "scenario": "Fit Test first screen close button returns user to Device Settings instead of staying in Fit Test flow",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on a connected Poly Bluetooth device to open Device Settings",
-    "In Device Settings, locate and tap Fit Test",
-    "On the first Fit Test screen, tap the close button (X)"
+    "1. Launch the Poly Studio Mobile app with a device that supports Fit Test connected.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "3. Tap on 'Fit Test'.",
+    "4. On the first Fit Test screen, tap the close button (X)."
   ],
   "expected": "The Fit Test screen is closed and the user is returned to the Device Settings screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "device-settings",
-    "poly-studio-mobile",
     "close-button",
+    "device-settings",
+    "navigation-flow",
+    "poly-studio-mobile",
     "fit-test-screen",
-    "bluetooth-device",
-    "home-screen"
+    "ui-regression"
   ],
   "source_last_updated": "1760958387",
   "source_hash": "929b5f3622464fe6b8517c1ae1bb0b4cb737375ad453a65932d824feadb46ce5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.976002Z",
+  "processed_at": "2026-04-25T09:32:26.234649Z",
   "status": "active"
 }
