@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "App Settings - General - User stays logged in after restating the app",
   "feature": "App Settings",
-  "scenario": "User remains logged into account after restarting the Poly Studio Mobile app",
+  "scenario": "User session persists after app restart but no passcode or Face ID prompt appears upon relaunch in Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to App Settings \u2192 General \u2192 Account.",
-    "3. Log in with valid credentials.",
-    "4. Close the Poly Studio Mobile app completely (swipe it away from the recent apps list).",
-    "5. Reopen the Poly Studio Mobile app.",
-    "6. Observe whether the user is still logged in.",
-    "7. If the device has passcode or Face ID enabled, check whether a passcode or Face ID prompt appears."
+    "Open the Poly Studio Mobile app.",
+    "Go to App Settings \u2192 General \u2192 Account.",
+    "Log in with valid credentials.",
+    "Restart the app (force close and reopen).",
+    "Navigate back to App Settings \u2192 General \u2192 Account."
   ],
-  "expected": "The user remains logged into their account after restarting the app. If the device has passcode or Face ID enabled, a passcode or Face ID prompt appears before accessing the app.",
+  "expected": "User should remain logged in. Upon reopening the app as a logged-in user, a passcode or Face ID prompt should appear depending on phone settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "account-persistence",
-    "session-persistence",
+    "user-session-persistence",
     "app-restart",
-    "login-state",
     "passcode-prompt",
-    "face-id"
+    "face-id",
+    "account-login",
+    "app-settings",
+    "session-recovery"
   ],
   "source_last_updated": "1759236683",
   "source_hash": "b6873a95b44831299e763cddb14e40527bc8e56e718fa6bbdd28baec77d8d7a1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.929699Z",
+  "processed_at": "2026-04-25T09:32:26.155188Z",
   "status": "active"
 }
