@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "Software Update - DFU - Can be completed for standalone headsets",
   "feature": "Firmware Updates",
-  "scenario": "DFU completes successfully for standalone headset via Device Settings > Software in Poly Studio Mobile app",
+  "scenario": "Software Update (DFU) completes successfully for standalone headset via Device Settings > Software",
   "steps": [
-    "Open Poly Studio Mobile app on the Android device.",
-    "Ensure the headset is paired and connected to the app via Bluetooth.",
-    "Navigate to the Home screen.",
-    "Tap on the connected [Device Name] to open Device Settings.",
-    "Scroll to and tap on Software.",
-    "Tap the Update button (or Check for Update).",
-    "Wait for the DFU process to complete. Do not disconnect the headset or close the app during the update."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Ensure the headset is paired and connected to the app via Bluetooth.",
+    "3. Navigate to the Home screen and tap on the connected [Device Name] to open Device Settings.",
+    "4. In Device Settings, scroll to and tap on 'Software' (or 'Software Update').",
+    "5. Tap the 'Update' button (or 'Check for Update') to initiate the DFU process.",
+    "6. Wait for the firmware download and installation to complete. Do not disconnect the headset or close the app during the process.",
+    "7. Once the update finishes, verify the headset firmware version is updated in the Software section."
   ],
-  "expected": "The headset firmware is updated to the latest version. The app displays a success message and the new firmware version number in Device Settings > Software.",
+  "expected": "The headset firmware is successfully updated to the latest version. The Software section in Device Settings displays the new firmware version, and the headset remains connected and functional.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu",
     "firmware-update",
     "poly-studio-mobile",
-    "device-settings",
     "software-update",
+    "device-settings",
     "bluetooth-pairing",
-    "standalone-headset"
+    "standalone-headset",
+    "firmware-version"
   ],
   "source_last_updated": "1770389945",
   "source_hash": "5e8c37248a199e0a213482a9202bf21fe603bd9c93598f6e38f34d4972a05f3d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.038420Z",
+  "processed_at": "2026-04-25T09:32:26.295871Z",
   "status": "active"
 }
