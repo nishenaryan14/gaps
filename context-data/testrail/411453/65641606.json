@@ -5,31 +5,36 @@
   "project": "411453",
   "title": "CCL - During  Call - Settings are locked",
   "feature": "Call Management",
-  "scenario": "Close Conversation Limiting settings are locked and greyed out during an active call, showing a dialog that the setting cannot be adjusted",
+  "scenario": "Close Conversation Limiting (CCL) settings are locked and greyed out during an active call, with a dialog preventing adjustment until the call ends",
   "steps": [
     "1. Launch Poly Studio Mobile app on the Android device.",
-    "2. Pair and connect a supported Poly Bluetooth audio device.",
-    "3. Initiate or receive an active call on the connected device.",
-    "4. While on the active call, navigate to: Home \u2192 [Device Name] \u2192 Device Settings \u2192 Advanced.",
-    "5. Observe the Close Conversation Limiting (CCL) settings.",
-    "6. Tap on any CCL option (e.g., Off, Low, Medium, High)."
+    "2. Navigate to Home screen and tap on the connected [Device Name].",
+    "3. Go to Device Settings \u2192 Advanced.",
+    "4. Verify that Close Conversation Limiting (CCL) options are visible.",
+    "5. Place or receive an active call using the connected Poly Bluetooth device.",
+    "6. During the active call, return to Poly Studio Mobile \u2192 [Device Name] \u2192 Device Settings \u2192 Advanced.",
+    "7. Observe the CCL settings area.",
+    "8. Tap on any CCL option (e.g., Off, Low, Medium, High).",
+    "9. End the active call.",
+    "10. Return to Poly Studio Mobile \u2192 [Device Name] \u2192 Device Settings \u2192 Advanced.",
+    "11. Tap on any CCL option."
   ],
-  "expected": "CCL settings should be adjustable during an active call, or if locked, the dialog should clearly explain why and allow the user to change the setting after acknowledging.",
+  "expected": "During an active call, CCL settings should be locked and greyed out. Tapping any CCL option should show a dialog: \"This setting cannot be adjusted when on a call\". After ending the call, CCL settings should become available again and the user should be able to change them.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "close-conversation-limiting",
-    "ccl-settings",
-    "active-call-restrictions",
+    "ccl",
+    "active-call-lock",
     "poly-studio-mobile",
     "device-settings",
     "advanced-settings",
     "call-management",
-    "greyed-out-settings"
+    "ccl-adjustment"
   ],
   "source_last_updated": "1760956340",
   "source_hash": "fe73780fed6e032eafd6aa75113df5ce6d126cd8719aee8d67484e9446c7f6c3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.009092Z",
+  "processed_at": "2026-04-25T09:32:26.270513Z",
   "status": "active"
 }
