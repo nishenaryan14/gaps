@@ -5,29 +5,33 @@
   "project": "411453",
   "title": "Reset Device - Clear Trusted Devices - Clear - No",
   "feature": "Device Management",
-  "scenario": "\"Clear Trusted Devices\" confirmation popup \"No\" button closes popup without clearing devices and headset remains connected",
+  "scenario": "Tapping \"No\" on confirmation popup for Clear Trusted Devices in Reset Device settings does not clear the list and keeps headset connected",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to Home \u2192 Device Settings \u2192 Reset Device.",
-    "3. Tap \"Clear\" under \"Clear Trusted Devices\".",
-    "4. Observe the confirmation popup that appears, warning that device power off is required and activity/calls may be interrupted.",
-    "5. Tap \"No\" on the confirmation popup."
+    "Open Poly Studio Mobile app",
+    "Go to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Scroll to and tap 'Reset Device'",
+    "Tap 'Clear Trusted Devices'",
+    "Tap 'Clear' button",
+    "Observe confirmation popup: 'Device power off is required. Your activity and call may be interrupted. Do you want to proceed?' with 'No' and 'Yes' buttons",
+    "Tap 'No' button"
   ],
-  "expected": "The confirmation popup closes without clearing trusted devices, and the headset remains connected.",
+  "expected": "The confirmation popup closes. The headset's trusted devices list is not cleared. The headset remains connected.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "clear-trusted-devices",
+    "reset-device",
     "confirmation-popup",
     "poly-studio-mobile",
-    "reset-device",
     "device-settings",
-    "android-app",
-    "no-button"
+    "bluetooth-connection",
+    "cancel-action",
+    "device-power-off"
   ],
   "source_last_updated": "1762260877",
   "source_hash": "cdc2b36dd2f3e7e097fe1c19c05317c763616a53133440f77f54050e77ee6b4f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.021423Z",
+  "processed_at": "2026-04-25T09:32:26.279705Z",
   "status": "active"
 }
