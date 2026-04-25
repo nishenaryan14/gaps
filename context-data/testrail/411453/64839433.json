@@ -5,28 +5,28 @@
   "project": "411453",
   "title": "Device Home Screen - Device Connected and up to date",
   "feature": "Device Management",
-  "scenario": "\"i\" icon not displayed on Device Home Screen for unencrypted or limited-support devices",
+  "scenario": "Device Home Screen fails to display all required elements: device name with info icon, green dot with Connected label, device image, quick settings, battery icons, and firmware version",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to the Home screen.",
-    "3. Observe the device card for the connected Poly Bluetooth audio device.",
-    "4. Check for the presence of an \"i\" icon next to the device name."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Observe the device card area"
   ],
-  "expected": "An \"i\" icon is visible next to the device name for unencrypted devices or devices with limited support. The Home screen displays: Device Name (with \"i\" icon if applicable), green dot and \"Connected\" label, device image, quick settings (if enabled), \"...\" button, battery icons, and firmware version.",
+  "expected": "Home screen displays: Device Name (with \"i\" icon for unencrypted devices or devices with limited support), green dot with \"Connected\" label, device image, quick settings (if enabled), \"...\" button, battery icons, and firmware version \"X.Y.Z\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "device-home-screen",
-    "i-icon",
+    "home-screen",
     "device-card",
-    "unencrypted-device",
-    "limited-support-devices",
-    "bluetooth-audio-device"
+    "device-name",
+    "connected-label",
+    "battery-icons",
+    "firmware-version",
+    "quick-settings"
   ],
   "source_last_updated": "1761663315",
   "source_hash": "2c04d08e719582a22c576691acafbd9e26ba1649a3269055a7783a7dc419b5b3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.736022Z",
+  "processed_at": "2026-04-25T07:55:31.799546Z",
   "status": "active"
 }
