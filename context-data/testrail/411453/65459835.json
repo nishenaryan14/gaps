@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, dialog - Cancel then Go to Settings",
   "feature": "Notifications",
-  "scenario": "Notifications toggle in App Settings shows OS settings dialog when notifications were initially denied during onboarding",
+  "scenario": "Notifications toggle in App Settings shows OS settings dialog when notifications were denied during onboarding",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and begin onboarding.",
-    "2. When prompted for notification permissions, select \"Don't Allow\".",
-    "3. Complete onboarding and reach the Home screen.",
-    "4. Navigate to App Settings \u2192 General \u2192 Notifications.",
-    "5. Tap the toggle to turn Notifications ON.",
+    "1. Launch Poly Studio Mobile app and complete onboarding, denying the Notifications permission when prompted.",
+    "2. Navigate to the Home screen.",
+    "3. Tap the Account icon or menu to access App Settings.",
+    "4. Select General \u2192 Notifications.",
+    "5. Attempt to toggle the Notifications switch to ON.",
     "6. Observe the dialog that appears.",
     "7. Tap Cancel on the dialog.",
-    "8. Tap the toggle again to turn Notifications ON.",
-    "9. Tap Go to Settings on the dialog."
+    "8. Tap Go to Settings on the dialog."
   ],
-  "expected": "After tapping Cancel, the user is returned to the Notifications tab with the toggle remaining OFF. After tapping Go to Settings, the OS notification settings for the app should open.",
+  "expected": "- Tapping Cancel returns the user to the Notifications tab within the app.\\n- Tapping Go to Settings navigates the user to the OS-level Notification settings for the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "notification-permissions",
     "app-settings",
-    "onboarding",
-    "os-settings-dialog",
     "notifications-toggle",
-    "permission-denied"
+    "os-settings-dialog",
+    "onboarding-permissions",
+    "notification-permission-denied",
+    "general-settings",
+    "permission-prompt"
   ],
   "source_last_updated": "1761229662",
   "source_hash": "7d878efb8ebbf1acd03910850c77b6823845a0dcc6caa0a5e196296738b4618e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.974251Z",
+  "processed_at": "2026-04-25T08:21:31.047099Z",
   "status": "active"
 }
