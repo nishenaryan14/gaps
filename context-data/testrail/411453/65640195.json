@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Soak Test - Headset connected, app in the foreground, idle",
-  "feature": "Soak Test / Memory Leak Detection",
-  "scenario": "Verify no memory leaks or crashes after prolonged idle foreground use with a paired headset",
+  "feature": "App Settings",
+  "scenario": "App remains responsive and does not crash after prolonged idle soak test on Home Screen with paired headset",
   "steps": [
-    "Install and launch the app",
-    "Pair the headset with the phone",
-    "Go to the home screen",
-    "Leave the phone idle for multiple hours (ideally overnight)",
-    "Check that the app is still running and responsive"
+    "1. Install and launch the Poly Studio Mobile app.",
+    "2. Pair the Poly Bluetooth headset with the app via the Home screen.",
+    "3. Navigate to the app Home screen.",
+    "4. Leave the phone idle with the app in the foreground for multiple hours (preferably overnight).",
+    "5. After several hours, check whether the app is still running and responsive."
   ],
-  "expected": "The app remains running and responsive after prolonged idle time with a headset connected.",
+  "expected": "The app remains running and responsive after prolonged idle time. No crashes, freezes, or memory-related issues occur.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "memory leaks",
-    "crashes",
-    "idle foreground",
-    "paired headset",
-    "prolonged idle",
-    "app responsiveness",
-    "stability test",
-    "overnight test"
+    "poly-studio-mobile",
+    "home-screen",
+    "idle-soak-test",
+    "app-responsiveness",
+    "bluetooth-pairing",
+    "crash-recovery",
+    "prolonged-idle",
+    "foreground-stability"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "01663ad7e8e92873e6ed292fa777d8a2e040fda3a444ef56bc09a8ff451c29ef",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.337160Z",
+  "processed_at": "2026-04-25T05:37:16.976724Z",
   "status": "active"
 }
