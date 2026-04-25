@@ -5,18 +5,17 @@
   "project": "411453",
   "title": "CCL - Restore defaults",
   "feature": "App Settings",
-  "scenario": "CCL (Call Clarity Level) does not reset to \"UC Noise Block\" after restoring device to default settings via Device Settings > Reset Device > Restore",
+  "scenario": "CCL setting does not reset to \"UC Noise Block\" after restoring device defaults via Device Settings > Reset Device > Restore",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
     "2. Ensure a CCL-supported Poly Bluetooth audio device is connected.",
-    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
-    "4. In Device Settings, tap on 'Advanced'.",
-    "5. Locate the Call Clarity Level (CCL) setting and change it to either 'No Noise Block' or 'AI Noise Block'.",
-    "6. Navigate back to Device Settings.",
-    "7. Tap on 'Reset Device'.",
-    "8. Tap on 'Restore' to restore the device to default settings.",
-    "9. After the reset completes, navigate back to Device Settings > Advanced.",
-    "10. Check the Call Clarity Level (CCL) setting."
+    "3. Navigate to the Home screen and tap on the connected [Device Name].",
+    "4. Go to Device Settings > Advanced.",
+    "5. Change the Call Clarity Level (CCL) setting to either \"No Noise Block\" or \"AI Noise Block\".",
+    "6. Return to Device Settings and select \"Reset Device\".",
+    "7. Tap \"Restore\" to restore the device to default settings.",
+    "8. Navigate back to Device Settings > Advanced.",
+    "9. Observe the Call Clarity Level (CCL) setting."
   ],
   "expected": "The Call Clarity Level (CCL) setting should revert to \"UC Noise Block\" after restoring device defaults.",
   "coverage": [],
@@ -24,16 +23,16 @@
   "keywords": [
     "call-clarity-level",
     "ccl",
-    "reset-device",
+    "uc-noise-block",
     "restore-defaults",
-    "noise-block",
+    "reset-device",
     "poly-studio-mobile",
     "device-settings",
-    "uc-noise-block"
+    "noise-block"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "f1c6b242cc315ddd7b9f518563851b4251562caf16495138afda9c47dde89e5f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.941979Z",
+  "processed_at": "2026-04-25T08:21:31.009092Z",
   "status": "active"
 }
