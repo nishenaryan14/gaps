@@ -7,16 +7,18 @@
   "feature": "Firmware Updates",
   "scenario": "Language update notification does not appear when app is backgrounded during firmware update on Device Settings > Language screen",
   "steps": [
-    "1. Launch Poly Studio Mobile app on the Android device.",
-    "2. Pair and connect a supported Poly Bluetooth headset to the Android device.",
-    "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Language.",
-    "4. Select a supported language from the list.",
-    "5. Tap the \"Update now\" button.",
-    "6. Observe the popup window that appears, followed by the \"Software update - Three easy steps\" screen with animation.",
+    "1. Launch Poly Studio Mobile app and pair/connect a supported Bluetooth headset.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Language.",
+    "3. Select a supported language from the list.",
+    "4. Tap \"Update now\".",
+    "5. Observe the popup window that appears.",
+    "6. Observe the \"Software update - Three easy steps\" screen with animation.",
     "7. While the update is in progress, press the Home button or switch to another app to put the Poly Studio Mobile app in the background.",
-    "8. Check the Android notification shade for a notification from the Poly Studio Mobile app."
+    "8. Check the device notification area for a notification indicating \"device update is in progress\".",
+    "9. Wait for the language update to complete.",
+    "10. Check the device notification area for a notification indicating the device has been updated."
   ],
-  "expected": "A notification should appear in the Android notification shade stating \"device update is in progress\" while the update is ongoing. After the update completes successfully, a notification should appear stating that the device is updated.",
+  "expected": "A notification appears showing \"device update is in progress\" when the app is backgrounded during the update. After the update completes successfully, a notification is shown indicating the device has been updated.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,13 +26,14 @@
     "firmware-update-background",
     "poly-studio-mobile",
     "device-settings-language",
+    "update-now",
+    "software-update-screen",
     "background-notification",
-    "software-update-progress",
-    "android-notification-shade"
+    "device-update-progress"
   ],
   "source_last_updated": "1763382922",
   "source_hash": "07a6efddc3ae38d96be7ba081661b6b5f1218306872876d0cf4a0830448505ec",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.982034Z",
+  "processed_at": "2026-04-25T09:32:26.237745Z",
   "status": "active"
 }
