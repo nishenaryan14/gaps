@@ -5,23 +5,24 @@
   "project": "411453",
   "title": "Find My Device - Moving in and out of range",
   "feature": "App Settings",
-  "scenario": "Find My Device map pin changes to grey and shows \"Out of range\" view when headset moves out of Bluetooth range, then reconnects to blue pin and \"Nearby\" view when back in range",
+  "scenario": "Find My Device map pin transitions between grey (Out of range) and blue (Nearby) when headset moves in and out of Bluetooth range",
   "steps": [],
   "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
-    "out-of-range",
     "bluetooth-range",
-    "nearby-view",
+    "out-of-range",
+    "nearby",
     "map-pin",
-    "reconnection",
-    "poly-bluetooth-headset"
+    "bluetooth-connection",
+    "proximity-detection",
+    "poly-headset"
   ],
   "source_last_updated": "1759933800",
   "source_hash": "e89a49a43b7c8bfce9f9d039ada60f076bd42e83eec1faa8550d9d00490d453a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.768997Z",
+  "processed_at": "2026-04-25T07:55:31.835055Z",
   "status": "active"
 }
