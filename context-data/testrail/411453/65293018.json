@@ -5,32 +5,23 @@
   "project": "411453",
   "title": "Onboarding - Navigating through onboarding screens",
   "feature": "App Settings",
-  "scenario": "User can swipe left/right or tap Continue to navigate through the three onboarding screens (Organized, Up-to-Date, Personal)",
-  "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Observe the onboarding flow that appears on first launch (or after clearing app data).",
-    "3. On the first onboarding screen (\"Organized\"), swipe left to navigate to the next screen.",
-    "4. On the \"Up-to-Date\" screen, swipe left again to navigate to the next screen.",
-    "5. On the \"Personal\" screen, swipe right to navigate back to the \"Up-to-Date\" screen.",
-    "6. On any onboarding screen, tap the \"Continue\" button to advance to the next screen.",
-    "7. On the final screen (\"Personal\"), tap \"Continue\" to complete onboarding and proceed to the Home screen."
-  ],
-  "expected": "User can smoothly scroll left and right through all three onboarding screens (\"Organized\", \"Up-to-Date\", \"Personal\") by swiping or tapping \"Continue\". On the final screen, tapping \"Continue\" completes onboarding and navigates to the Home screen.",
+  "scenario": "User can swipe left/right or tap Continue to navigate through the three onboarding screens: Organized, Up-to-Date, and Personal",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "onboarding-flow",
+    "onboarding-screens",
     "swipe-navigation",
-    "continue-button",
     "organized-screen",
     "up-to-date-screen",
     "personal-screen",
-    "home-screen"
+    "continue-button",
+    "user-interface"
   ],
   "source_last_updated": "1768389408",
   "source_hash": "626cfa41c05df9196da4056eb758b97b136e61afff8d1172e1d14b1e7dfde3ee",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.710809Z",
+  "processed_at": "2026-04-25T07:55:31.778002Z",
   "status": "active"
 }
