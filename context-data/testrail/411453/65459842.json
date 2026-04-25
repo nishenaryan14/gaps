@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "Notifications - Master Toggle OFF - Device updating",
   "feature": "Notifications",
-  "scenario": "Verify that no notification appears when a device with a lower FW version starts a DFU update and the app is backgrounded, while the notification master toggle is OFF.",
+  "scenario": "No notification pop-ups appear during DFU process when Notification master toggle is OFF in App Settings > General > Notifications & Device Alerts",
   "steps": [
-    "1. Go to App Settings > General > Notifications & Device Alerts.",
-    "2. Set the notification master toggle to OFF.",
-    "3. Navigate to Device Settings > Software Update.",
-    "4. Start a DFU update process on a device with a lower FW version.",
-    "5. Put the app in the background."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to App Settings \u2192 General \u2192 Notifications & Device Alerts.",
+    "3. Set the Notification master toggle to OFF.",
+    "4. Ensure the paired Poly Bluetooth audio device has a pending firmware update available.",
+    "5. Initiate the Device Firmware Update (DFU) process from the app.",
+    "6. While the DFU is in progress, press the Home button on the Android device to send the app to the background.",
+    "7. Observe the Android notification shade and screen for any notification pop-ups related to the DFU process."
   ],
-  "expected": "No notification should pop up.",
+  "expected": "No notification pop-up appears on the Android device during the DFU process when the app is in the background, because the Notification master toggle is OFF.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "DFU update",
-    "notification master toggle OFF",
-    "lower FW version",
-    "app backgrounded",
-    "no notification",
-    "Device Settings",
-    "Software Update",
-    "App Settings"
+    "notification-master-toggle",
+    "device-firmware-update",
+    "dfu-notifications",
+    "app-settings",
+    "notifications-and-device-alerts",
+    "poly-studio-mobile",
+    "background-dfu",
+    "android-notifications"
   ],
   "source_last_updated": "1761230695",
   "source_hash": "a95974e8f32411d6ffed9c0ab2fcd6146ed376ecfbca9981ed021d651c88b511",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.308032Z",
+  "processed_at": "2026-04-25T05:37:16.943811Z",
   "status": "active"
 }
