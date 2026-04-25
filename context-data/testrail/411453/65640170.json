@@ -5,28 +5,29 @@
   "project": "411453",
   "title": "Analytics - Logout Initiated",
   "feature": "App Settings",
-  "scenario": "User logout event is logged via Firebase Analytics in the Poly Studio Mobile app",
+  "scenario": "Firebase \"logout_initiated\" event is triggered when user logs out of Poly account in the Poly Studio Mobile app",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Go to Account screen",
-    "Tap Log Out / Sign Out button",
-    "Confirm logout if prompted"
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Ensure the user is logged into their Poly account (navigate to Account screen if needed).",
+    "3. Navigate to the Account screen (Home \u2192 Account or via menu).",
+    "4. Tap the 'Log Out' or 'Sign Out' button to initiate logout.",
+    "5. Observe the Firebase event tracking in the analytics console."
   ],
-  "expected": "Firebase Analytics logs a logout event with default event data (event count by country, gender, app version, app build, app environment).",
+  "expected": "The Firebase event \"logout_initiated\" is triggered upon logout. The event tracking includes default analytics elements such as event graph, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "firebase-analytics",
-    "user-logout",
+    "logout-initiated",
+    "firebase-event",
     "account-screen",
     "sign-out",
-    "logout-event",
-    "app-analytics"
+    "android",
+    "analytics-tracking"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "cd2636a2ad732cc814c85f4e6c9b9dacc4dd6a5972ccb161744941094de5914f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.062127Z",
+  "processed_at": "2026-04-25T09:32:26.327120Z",
   "status": "active"
 }
