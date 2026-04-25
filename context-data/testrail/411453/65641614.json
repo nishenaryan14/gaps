@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "Fit test - Successfully completing the Fit Test",
   "feature": "Device Management",
-  "scenario": "Fit Test completes successfully showing \"This is a good fit!\" message with \"Good\" tags on both earbuds and returns to Device Home Screen after tapping \"Done\" on Voyager Free 60/60+/20",
+  "scenario": "Fit Test completes successfully showing \"This is a good fit!\" message with both earbuds marked \"Good\" on Voyager Free 60/60+/20",
   "steps": [
     "1. Open the Poly Studio Mobile app with a supported Poly device (Voyager Free 60/60+/20) connected and correctly positioned in the ears.",
-    "2. Go to Device Settings \u2192 Fit Test.",
-    "3. Start and successfully complete the fit test.",
-    "4. Tap the \"Done\" button."
+    "2. Go to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Fit Test.",
+    "3. Tap Start to begin the Fit Test.",
+    "4. Successfully complete the Fit Test."
   ],
-  "expected": "\"This is a good fit!\" message appears, both earbuds show \"Good\" tag with icon, and \"Done\" button is displayed. After tapping \"Done\", user returns to Device Home Screen (or Onboarding if fit test was triggered during Onboarding).",
+  "expected": "\"This is a good fit!\" message appears, both earbuds show \"Good\" tag with icon, and \"Done\" button is displayed. Tapping \"Done\" returns the user to the Device Home Screen (or Onboarding if triggered during onboarding).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
     "good-fit",
-    "device-home-screen",
     "voyager-free-60",
     "voyager-free-60-plus",
     "voyager-free-20",
     "poly-studio-mobile",
-    "earbud-fit-validation"
+    "device-settings"
   ],
   "source_last_updated": "1760959668",
   "source_hash": "acaf0b803d0b9896e2b42a8df7dfa18fa128b0e8cbba359d4769cc2c083c49ec",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.989644Z",
+  "processed_at": "2026-04-25T09:32:26.241770Z",
   "status": "active"
 }
