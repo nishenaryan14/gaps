@@ -10,163 +10,127 @@
     "66363517",
     "66363523",
     "66363526",
-    "66363528",
     "66363589",
     "65458387",
     "65293009",
     "65293034",
-    "65293028"
+    "65293028",
+    "65293010"
   ],
   "coverage_status": "partial",
   "gaps": [
-    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 App restart dependency: The bug states the device is 'intermittently missing until app restart.' None of the existing test cases validate that a newly paired device appears in the device list after app background/foreground or app kill/relaunch. Test 65868076 checks 'returning from Bluetooth menu' but does not cover the scenario where the device fails to appear and requires an app restart to surface.",
-    "\ud83e\udde0 STATE TRIGGER \u2014 Timing of device list refresh: The bug involves an intermittent failure where the device list does not update after the OS-level Bluetooth pairing completes. No existing test validates the exact moment the app syncs its device list with the OS Bluetooth bond table. The gap is testing whether the app polls for new paired devices on Home screen resume vs. requiring a lifecycle restart to trigger the refresh.",
-    "\ud83e\udde0 DEVICE ASYMMETRY \u2014 Multi-device behavior: The bug scenario lists Focus 2, Legend 30, and Voyager 6200 as example devices. No existing test validates whether the intermittent missing-device behavior is device-specific (e.g., occurs only with certain firmware versions or Bluetooth chipset types). Tests are written generically without device-specific coverage.",
-    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Power cycle sequence: Steps 8-11 involve turning the device off and back on, then checking if status updates to 'Connected.' No existing test covers the sequence of: pair \u2192 appear in list \u2192 power off \u2192 power on \u2192 status update. Test 65868080 covers Bluetooth toggle on the phone side, but not device power cycling.",
-    "\ud83e\udde0 STATE TRIGGER \u2014 Intermittent/race condition: The bug is described as 'intermittent,' implying a race condition between the Android Bluetooth stack bonding callback and the app's UI refresh. No existing test covers repeated pairing attempts (e.g., pair, unpair, re-pair 5-10 times) to catch flaky behavior."
+    "MISSING: App lifecycle state transition gap \u2014 The bug specifically requires an app restart to make the device appear. Existing test 65868076 ('Empty device list on home screen does not update with newly connected headset after Bluetooth pairing and returning to the app') covers the initial observation (step 5-6) but does NOT test the app restart recovery path (step 7-8). The bug's root cause is that the app fails to refresh its device list upon returning to foreground after a system-level Bluetooth pairing. A proper test would: (1) pair via system BT, (2) return to app, (3) observe missing device, (4) background the app (home button), (5) return to app again to see if the list auto-updates without a force-kill.",
+    "MISSING: Device-specific asymmetry validation \u2014 The bug explicitly calls out Focus 2, Legend 30, and Voyager 6200 as affected models. Existing tests do not parameterize by device model. The bug may be device-specific (e.g., different Bluetooth stack behavior, different HFP/AVRCP profiles). A gap exists in testing the pairing flow with each of these specific models to confirm the device list refresh behavior is consistent across the product line.",
+    "MISSING: Disconnected-to-connected state transition without app restart \u2014 Step 10-11 describes a scenario where a device already in the app's list (disconnected state) is turned on, and the app fails to update to 'connected' status. No existing test covers this specific state transition: device visible in list but disconnected -> device powered on -> app should reflect connected status in real-time. This is a separate lifecycle event (BLE/GATT reconnection notification handling) that is not tested.",
+    "MISSING: Timing/race condition around Bluetooth pairing completion \u2014 The bug is described as 'intermittently' missing. This suggests a race condition between the system Bluetooth pairing completing and the app's BLE scan or device list refresh. No existing test covers rapid re-entry to the app immediately after pairing completes, or tests the device list at varying time intervals (0s, 1s, 5s, 10s) after pairing to catch timing-dependent failures.",
+    "MISSING: Multi-device list refresh after pairing a second device \u2014 The bug involves the device list not updating. No test covers the scenario where a user has one device already in the list (disconnected), then pairs a second device via system BT, and checks whether both devices appear correctly in the list without an app restart."
   ],
   "generated_testcases": [
     {
-      "title": "TC-BT-001: Newly paired device appears in device list after app background/foreground cycle",
+      "title": "TC-BUG-001: App Lifecycle Recovery \u2014 Device missing after system BT pairing, recovery via background/foreground cycle (no force-kill)",
       "steps": [
-        "Precondition: No Poly devices currently paired to the phone. Poly Studio Mobile app is installed and logged in.",
-        "1. Open Poly Studio Mobile app on the Home screen.",
-        "2. Tap the '+' (Add Device) icon or navigate to the device list.",
-        "3. Put the target device (e.g., Poly Focus 2) into Bluetooth pairing mode.",
-        "4. On the phone, go to Settings \u2192 Bluetooth and pair with the device (select 'Poly Focus 2' from available devices).",
-        "5. Once pairing is successful, press the Home button to background the Poly Studio Mobile app.",
-        "6. Wait 5 seconds, then reopen Poly Studio Mobile app from the app switcher or home screen.",
-        "7. Observe the device list on the Home screen."
+        "Precondition: Poly device (Focus 2) is powered off and not in Bluetooth memory of phone.",
+        "1. Open Poly Studio Mobile app. Verify home screen shows empty device list.",
+        "2. Background the app (press Home button).",
+        "3. Open system Bluetooth settings. Initiate pairing with Focus 2. Complete pairing.",
+        "4. Return to Poly Studio Mobile app (foreground). Observe device list.",
+        "5. If device appears \u2192 PASS (no bug triggered). If device is missing \u2192 continue to step 6.",
+        "6. Press Home button to background the app again.",
+        "7. Wait 3 seconds. Return to app (foreground). Observe device list.",
+        "8. If device still missing \u2192 force-kill app and relaunch. Verify device appears."
       ],
-      "expected": "The newly paired Poly Focus 2 appears in the device list on the Home screen immediately upon returning to the app, without requiring an app restart. The device shows as 'Connected' or 'Available' status."
+      "expected": "Step 4: Device may be missing (bug signature). Step 7: Device list MUST auto-update and show Focus 2 without force-kill. Actual (If Bug): Device remains missing after background/foreground cycle, requiring force-kill to appear."
     },
     {
-      "title": "TC-BT-002: Newly paired device appears in device list after app force-kill and relaunch",
+      "title": "TC-BUG-002: Device-Specific Asymmetry \u2014 Pairing flow on Focus 2, Legend 30, and Voyager 6200",
       "steps": [
-        "Precondition: No Poly devices currently paired to the phone. Poly Studio Mobile app is installed and logged in.",
-        "1. Open Poly Studio Mobile app on the Home screen.",
-        "2. Tap the '+' (Add Device) icon or navigate to the device list.",
-        "3. Put the target device (e.g., Poly Legend 30) into Bluetooth pairing mode.",
-        "4. On the phone, go to Settings \u2192 Bluetooth and pair with the device (select 'Poly Legend 30' from available devices).",
-        "5. Once pairing is successful, fully close (force-kill) the Poly Studio Mobile app from the recent apps menu.",
-        "6. Wait 3 seconds, then relaunch Poly Studio Mobile app.",
-        "7. Observe the device list on the Home screen."
+        "Precondition: Phone forgets all Poly devices. App is installed and logged in.",
+        "1. Run this test case 3 times, once per device model: Focus 2, Legend 30, Voyager 6200.",
+        "2. Open Poly Studio Mobile app. Verify empty device list.",
+        "3. Background app. Pair [Device Model] via system Bluetooth settings.",
+        "4. Return to app. Observe device list.",
+        "5. If device missing \u2192 background app (Home), wait 3s, return to app. Observe.",
+        "6. If still missing \u2192 force-kill app, relaunch. Observe.",
+        "7. Note: For each model, record: (a) Does device appear immediately? (b) Does background/foreground cycle fix it? (c) Is force-kill required?"
       ],
-      "expected": "The newly paired Poly Legend 30 appears in the device list on the Home screen after the app is relaunched. The device shows as 'Connected' or 'Available' status."
+      "expected": "All three devices (Focus 2, Legend 30, Voyager 6200) MUST exhibit identical behavior: either all appear immediately, or all recover via background/foreground cycle. Actual (If Bug): One or more devices require force-kill while others recover normally, indicating device-specific Bluetooth stack asymmetry."
     },
     {
-      "title": "TC-BT-003: Device list refresh timing \u2014 app polls for new paired devices on Home screen resume without lifecycle restart",
+      "title": "TC-BUG-003: Disconnected-to-Connected State Transition \u2014 Device visible in list but not updating status on power-on",
       "steps": [
-        "Precondition: No Poly devices currently paired to the phone. Poly Studio Mobile app is installed and logged in.",
-        "1. Open Poly Studio Mobile app and stay on the Home screen.",
-        "2. Tap the Home button to background the app.",
-        "3. While the app is backgrounded, go to Settings \u2192 Bluetooth on the phone.",
-        "4. Put the target device (e.g., Poly Voyager 6200) into pairing mode and pair it with the phone.",
-        "5. After pairing completes, immediately switch back to Poly Studio Mobile app (do NOT force-kill).",
-        "6. Observe the device list on the Home screen within 3 seconds of returning."
+        "Precondition: Focus 2 is already paired and visible in Poly Studio Mobile app device list (disconnected state, greyed out).",
+        "1. Open Poly Studio Mobile app. Verify Focus 2 is visible in device list with 'Disconnected' status.",
+        "2. Power ON Focus 2 headset. Wait 5 seconds.",
+        "3. Observe device list in app without navigating away or refreshing.",
+        "4. Note: Do NOT background or force-kill the app.",
+        "5. If status does NOT update to 'Connected' within 10 seconds \u2192 background app (Home), wait 3s, return.",
+        "6. Observe if status updates after foreground cycle.",
+        "7. If still not connected \u2192 force-kill and relaunch. Verify connection status."
       ],
-      "expected": "The newly paired Poly Voyager 6200 appears in the device list on the Home screen within 3 seconds of returning to the app, without requiring any app restart or manual refresh. This validates that the app polls/syncs its device list on Home screen resume."
+      "expected": "Step 3: Device status MUST update from 'Disconnected' to 'Connected' in real-time within 10 seconds without any app lifecycle intervention. Actual (If Bug): Status remains 'Disconnected' indefinitely until app is backgrounded/foregrounded or force-killed."
     },
     {
-      "title": "TC-BT-004: Device-specific coverage \u2014 Pair, power cycle, and status update for Focus 2",
+      "title": "TC-BUG-004: Timing/Race Condition \u2014 Device list refresh at varying intervals after system BT pairing",
       "steps": [
-        "Precondition: Poly Focus 2 is fully charged and in pairing mode. Phone Bluetooth is enabled. Poly Studio Mobile app is installed.",
-        "1. Open Poly Studio Mobile app \u2192 Home screen.",
-        "2. Pair Poly Focus 2 with the phone via Settings \u2192 Bluetooth.",
-        "3. Return to Poly Studio Mobile app and verify the device appears in the device list as 'Connected'.",
-        "4. Power OFF the Poly Focus 2 headset by sliding the power switch to OFF.",
-        "5. Wait 10 seconds. Observe the device status in the Poly Studio Mobile app device list.",
-        "6. Power ON the Poly Focus 2 headset by sliding the power switch to ON.",
-        "7. Wait up to 15 seconds for Bluetooth reconnection. Observe the device status in the Poly Studio Mobile app device list."
+        "Precondition: Phone forgets all Poly devices. App is installed.",
+        "1. Open Poly Studio Mobile app. Verify empty device list.",
+        "2. Background app. Pair Focus 2 via system Bluetooth settings.",
+        "3. Immediately return to app (0s delay). Record: Does device appear? (Y/N)",
+        "4. If No \u2192 wait 1s in app. Does device appear? (Y/N)",
+        "5. If No \u2192 wait 5s in app. Does device appear? (Y/N)",
+        "6. If No \u2192 wait 10s in app. Does device appear? (Y/N)",
+        "7. If No \u2192 background app, return immediately. Does device appear? (Y/N)",
+        "8. If No \u2192 force-kill and relaunch. Does device appear? (Y/N)",
+        "9. Repeat steps 1-8 for Legend 30 and Voyager 6200."
       ],
-      "expected": "Step 3: Poly Focus 2 appears in the device list as 'Connected'. Step 5: Device status changes to 'Disconnected' or 'Not Connected' within 10 seconds of power-off. Step 7: Device status updates to 'Connected' within 15 seconds of power-on, without requiring app restart or manual refresh."
+      "expected": "Device MUST appear in the list within 5 seconds of returning to the app after pairing, without requiring any app lifecycle action. Actual (If Bug): Device appears only after background/foreground cycle or force-kill, with timing varying across attempts (intermittent race condition)."
     },
     {
-      "title": "TC-BT-005: Device-specific coverage \u2014 Pair, power cycle, and status update for Legend 30",
+      "title": "TC-BUG-005: Multi-Device List Refresh \u2014 Pairing a second device while first device is in disconnected state",
       "steps": [
-        "Precondition: Poly Legend 30 is fully charged and in pairing mode. Phone Bluetooth is enabled. Poly Studio Mobile app is installed.",
-        "1. Open Poly Studio Mobile app \u2192 Home screen.",
-        "2. Pair Poly Legend 30 with the phone via Settings \u2192 Bluetooth.",
-        "3. Return to Poly Studio Mobile app and verify the device appears in the device list as 'Connected'.",
-        "4. Power OFF the Poly Legend 30 headset.",
-        "5. Wait 10 seconds. Observe the device status in the Poly Studio Mobile app device list.",
-        "6. Power ON the Poly Legend 30 headset.",
-        "7. Wait up to 15 seconds for Bluetooth reconnection. Observe the device status in the Poly Studio Mobile app device list."
+        "Precondition: Focus 2 is already paired and visible in app device list (disconnected).",
+        "1. Open Poly Studio Mobile app. Verify Focus 2 is visible with 'Disconnected' status.",
+        "2. Background app (Home button).",
+        "3. Open system Bluetooth settings. Pair Legend 30 as a second device.",
+        "4. Return to Poly Studio Mobile app. Observe device list.",
+        "5. Verify: (a) Focus 2 still visible? (b) Legend 30 appears in list? (c) Status of each device.",
+        "6. If Legend 30 is missing \u2192 background app, wait 3s, return to app. Observe.",
+        "7. If still missing \u2192 force-kill app and relaunch. Verify both devices appear.",
+        "8. Tap on Legend 30 to connect. Verify connection succeeds."
       ],
-      "expected": "Step 3: Poly Legend 30 appears in the device list as 'Connected'. Step 5: Device status changes to 'Disconnected' within 10 seconds of power-off. Step 7: Device status updates to 'Connected' within 15 seconds of power-on, without requiring app restart."
+      "expected": "Step 5: Both Focus 2 (Disconnected) AND Legend 30 (Disconnected or Connecting) MUST appear in the device list. Adding a second device MUST NOT cause the first device to disappear. Actual (If Bug): Legend 30 is missing from list, or Focus 2 disappears when Legend 30 is paired, requiring app restart to see both devices."
     },
     {
-      "title": "TC-BT-006: Device-specific coverage \u2014 Pair, power cycle, and status update for Voyager 6200",
+      "title": "TC-BUG-006: Deep Lifecycle \u2014 Device missing after system BT pairing survives phone reboot",
       "steps": [
-        "Precondition: Poly Voyager 6200 is fully charged and in pairing mode. Phone Bluetooth is enabled. Poly Studio Mobile app is installed.",
-        "1. Open Poly Studio Mobile app \u2192 Home screen.",
-        "2. Pair Poly Voyager 6200 with the phone via Settings \u2192 Bluetooth.",
-        "3. Return to Poly Studio Mobile app and verify the device appears in the device list as 'Connected'.",
-        "4. Power OFF the Poly Voyager 6200 headset.",
-        "5. Wait 10 seconds. Observe the device status in the Poly Studio Mobile app device list.",
-        "6. Power ON the Poly Voyager 6200 headset.",
-        "7. Wait up to 15 seconds for Bluetooth reconnection. Observe the device status in the Poly Studio Mobile app device list."
+        "Precondition: Phone forgets all Poly devices. App is installed.",
+        "1. Open Poly Studio Mobile app. Verify empty device list.",
+        "2. Background app. Pair Focus 2 via system Bluetooth settings.",
+        "3. Return to app. If device appears \u2192 PASS. If missing \u2192 continue.",
+        "4. Without force-killing app, reboot the phone.",
+        "5. After phone reboots, open Poly Studio Mobile app.",
+        "6. Observe device list. Does Focus 2 appear?",
+        "7. If missing \u2192 background app (Home), wait 3s, return. Observe.",
+        "8. If still missing \u2192 force-kill app and relaunch. Verify device appears."
       ],
-      "expected": "Step 3: Poly Voyager 6200 appears in the device list as 'Connected'. Step 5: Device status changes to 'Disconnected' within 10 seconds of power-off. Step 7: Device status updates to 'Connected' within 15 seconds of power-on, without requiring app restart."
+      "expected": "Step 6: Focus 2 MUST appear in the device list after phone reboot without any app lifecycle intervention. The pairing state is persisted at the OS level and the app must read it on cold start. Actual (If Bug): Device list remains empty after reboot, requiring background/foreground cycle or force-kill to populate."
     },
     {
-      "title": "TC-BT-007: Intermittent/race condition \u2014 Repeated pair/unpair/re-pair cycle (10 iterations) to catch flaky device list refresh",
+      "title": "TC-BUG-007: Concurrent Pairing During Media Playback \u2014 Device list refresh with audio streaming active",
       "steps": [
-        "Precondition: Poly Focus 2 is charged and ready. Phone Bluetooth is enabled. Poly Studio Mobile app is installed and open on Home screen.",
-        "For iteration = 1 to 10:",
-        "1. Put Poly Focus 2 into pairing mode (slide and hold Power switch away from OFF until LCDs flash red/blue).",
-        "2. On phone, go to Settings \u2192 Bluetooth \u2192 tap 'Poly Focus 2' to pair.",
-        "3. Wait for pairing success confirmation on phone.",
-        "4. Switch to Poly Studio Mobile app (do NOT force-kill).",
-        "5. Observe the device list on the Home screen. Check if Poly Focus 2 appears.",
-        "6. If device appears, tap 'Forget' or 'Unpair' in the Poly Studio Mobile app device list (or go to phone Bluetooth settings and unpair).",
-        "7. Wait 5 seconds.",
-        "8. Repeat from step 1 for next iteration."
+        "Precondition: Phone is playing music via speaker or wired headphones.",
+        "1. Start media playback (music/podcast) on phone speaker.",
+        "2. Open Poly Studio Mobile app. Verify empty device list.",
+        "3. Background app. Pair Focus 2 via system Bluetooth settings while media continues playing.",
+        "4. Return to Poly Studio Mobile app (media still playing on phone speaker).",
+        "5. Observe device list. Does Focus 2 appear?",
+        "6. If missing \u2192 background app, return. Observe.",
+        "7. If still missing \u2192 force-kill app, relaunch. Verify device appears.",
+        "8. Stop media playback."
       ],
-      "expected": "Across all 10 iterations, the Poly Focus 2 appears in the Poly Studio Mobile app device list within 5 seconds of returning to the app after pairing, with zero failures. If any iteration fails (device missing without app restart), the test FAILS and the iteration number is logged."
-    },
-    {
-      "title": "TC-BT-008: Intermittent/race condition \u2014 Rapid pair/unpair with app background/foreground between each cycle (5 iterations)",
-      "steps": [
-        "Precondition: Poly Legend 30 is charged and ready. Phone Bluetooth is enabled. Poly Studio Mobile app is installed.",
-        "For iteration = 1 to 5:",
-        "1. Put Poly Legend 30 into pairing mode.",
-        "2. On phone, go to Settings \u2192 Bluetooth \u2192 pair with 'Poly Legend 30'.",
-        "3. Wait for pairing success.",
-        "4. Press Home button to background Poly Studio Mobile app.",
-        "5. Immediately reopen the app from app switcher.",
-        "6. Observe the device list on the Home screen. Check if Poly Legend 30 appears.",
-        "7. If device appears, go to phone Bluetooth settings \u2192 tap 'Forget This Device' to unpair Poly Legend 30.",
-        "8. Wait 3 seconds.",
-        "9. Repeat from step 1 for next iteration."
-      ],
-      "expected": "Across all 5 iterations, the Poly Legend 30 appears in the Poly Studio Mobile app device list immediately upon returning to the app after background/foreground, with zero failures. This validates the app's device list refresh is robust against rapid lifecycle transitions."
-    },
-    {
-      "title": "TC-BT-009: Device list refresh when pairing completes while app is on a different screen (not Home)",
-      "steps": [
-        "Precondition: No Poly devices currently paired. Poly Studio Mobile app is installed.",
-        "1. Open Poly Studio Mobile app \u2192 navigate to a non-Home screen (e.g., Settings or Profile tab).",
-        "2. Put the target device (e.g., Poly Focus 2) into pairing mode.",
-        "3. On the phone, go to Settings \u2192 Bluetooth and pair with the device.",
-        "4. After pairing completes, navigate back to the Home screen by tapping the Home tab.",
-        "5. Observe the device list on the Home screen."
-      ],
-      "expected": "The newly paired Poly Focus 2 appears in the device list on the Home screen immediately upon navigating to the Home tab, without requiring app restart. This validates that the device list refresh is triggered by Home screen visibility, not just app resume."
-    },
-    {
-      "title": "TC-BT-010: Device list refresh when pairing completes while app is in foreground on Home screen",
-      "steps": [
-        "Precondition: No Poly devices currently paired. Poly Studio Mobile app is installed.",
-        "1. Open Poly Studio Mobile app and stay on the Home screen.",
-        "2. Put the target device (e.g., Poly Voyager 6200) into pairing mode.",
-        "3. Without leaving the app, use the phone's quick settings or split-screen to navigate to Settings \u2192 Bluetooth and pair with the device.",
-        "4. After pairing completes, return focus to Poly Studio Mobile app (still on Home screen).",
-        "5. Observe the device list on the Home screen for up to 10 seconds."
-      ],
-      "expected": "The newly paired Poly Voyager 6200 appears in the device list on the Home screen within 10 seconds, without any app navigation, backgrounding, or restart. This validates that the app actively polls for new bonded devices even while in the foreground."
+      "expected": "Step 5: Focus 2 MUST appear in device list even when media is actively streaming. Audio state MUST NOT interfere with BLE scan or device list refresh. Actual (If Bug): Device list remains empty while media is playing, but populates correctly when media is stopped."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:40.509517Z"
+  "processed_at": "2026-04-25T09:46:12.463907Z"
 }
