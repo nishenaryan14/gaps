@@ -9,13 +9,13 @@
   "steps": [
     "Open Poly Studio Mobile app",
     "Go to Home screen",
-    "Tap on Account or Settings icon to open App Settings",
-    "Scroll to find and tap 'User Guides'",
-    "Tap on 'Onboarding' or 'Onboarding screens'",
-    "Swipe or tap through each onboarding screen (e.g., Next/Back arrows or dots)",
-    "Verify each onboarding screen displays correctly (text, images, layout)"
+    "Tap on App Settings (gear icon)",
+    "Scroll down and tap on 'User Guides'",
+    "Tap on 'Onboarding'",
+    "Swipe left through all onboarding screens",
+    "Swipe right to navigate back through onboarding screens"
   ],
-  "expected": "All onboarding screens open and display correctly with proper text, images, and layout when navigating through them.",
+  "expected": "All onboarding screens display correctly with proper text, images, and layout. Navigation (swipe left/right) works smoothly between screens without any visual glitches, truncation, or missing elements.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +24,12 @@
     "user-guides",
     "app-settings",
     "screen-navigation",
-    "ui-layout",
-    "swipe-gesture"
+    "swipe-gesture",
+    "poly-app"
   ],
   "source_last_updated": "1760352155",
   "source_hash": "546000005ad3f2c3a6a6dcd825ab38e25074cc2113390635bc15e951c351e98e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.765048Z",
+  "processed_at": "2026-04-25T07:55:31.834515Z",
   "status": "active"
 }
