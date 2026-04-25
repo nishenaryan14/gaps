@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Swipe right, next screen",
   "feature": "App Settings",
-  "scenario": "Onboarding screen navigation via swiping right from Continue button advances through screens with dot indicators, but screens do not match Figma design",
+  "scenario": "Onboarding screen navigation: swiping right from Continue button advances through screens with dot indicators, all screens must match Figma design",
   "steps": [
     "Open Poly Studio Mobile app for the first time (or clear app data to trigger onboarding).",
     "Observe the first onboarding screen with a 'Continue' button.",
     "Swipe right from the 'Continue' button to advance to the next onboarding screen.",
-    "Repeat swiping right from the 'Continue' button to navigate through the third, fourth, fifth, and sixth onboarding screens.",
+    "Repeat swiping right from the 'Continue' button on each subsequent screen to navigate through the third, fourth, fifth, and sixth onboarding screens.",
     "Observe the dot indicators at the bottom of each screen to confirm they update correctly as you advance.",
     "Compare each onboarding screen's layout, text, imagery, and button placement against the Figma design specifications."
   ],
-  "expected": "All onboarding screens (first through sixth) display correctly with proper dot indicator progression. Each screen's layout, text, imagery, and button placement match the Figma design.",
+  "expected": "Swiping right from the Continue button advances through all onboarding screens (third, fourth, fifth, sixth) in sequence. Dot indicators update to reflect the current screen position. All screens match the Figma design in layout, content, and styling.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "onboarding-screen",
-    "swipe-navigation",
-    "dot-indicators",
+    "onboarding-screens",
     "continue-button",
-    "figma-design-mismatch",
+    "dot-indicators",
+    "swipe-navigation",
+    "figma-design-validation",
     "screen-layout",
-    "ui-consistency"
+    "first-launch-experience"
   ],
   "source_last_updated": "1763378362",
   "source_hash": "51007c4a673aca191dd68a7ee7076fb11bf76c7d6528347a7677350afcc6320d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.868858Z",
+  "processed_at": "2026-04-25T07:55:31.946525Z",
   "status": "active"
 }
