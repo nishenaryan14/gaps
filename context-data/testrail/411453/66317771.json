@@ -10,29 +10,29 @@
     "1. Pair and connect the headset to Phone A via Bluetooth.",
     "2. Pair the same headset to Phone B (or desktop) via Bluetooth.",
     "3. On Phone A, open the Poly Studio Mobile app.",
-    "4. Tap the Home screen, then tap the device name to open Device Settings.",
-    "5. Tap the \"...\" (More) button in Device Settings.",
-    "6. Change a setting value (e.g., ANC mode, Transparency Mode, Equalizer preset, or Notification settings).",
-    "7. On Phone B (or desktop), open the Poly Lens mobile/desktop app.",
-    "8. Navigate to the same device's settings page in the Poly Lens app.",
-    "9. Observe whether the setting change made on Phone A is reflected in the Poly Lens app on Phone B."
+    "4. Tap the device name or \"...\" button to navigate to Device Settings.",
+    "5. Change a setting value (e.g., ANC mode, Transparency Mode, Equalizer preset, or Audio Settings feature).",
+    "6. On Phone B (or desktop), open the Poly Lens mobile/desktop app.",
+    "7. Navigate to the same device's settings page.",
+    "8. Observe whether the setting change made on Phone A is reflected in the Poly Lens app on Phone B.",
+    "9. Repeat steps 5\u20138 for each available setting (ANC, Transparency, Equalizer, Audio Settings, Notifications, etc.)."
   ],
-  "expected": "All setting changes made in the Poly Studio Mobile app on Phone A are propagated and visible on the other connected device's app (Poly Lens mobile/desktop).",
+  "expected": "All setting changes made in the Poly Studio Mobile app on Phone A are propagated and visible in the Poly Lens app on the other connected device (Phone B or desktop).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile-app",
     "poly-lens-app",
-    "settings-sync",
-    "multi-device-pairing",
+    "settings-propagation",
     "anc-mode",
     "transparency-mode",
     "equalizer-preset",
-    "device-settings-propagation"
+    "multi-device-sync",
+    "audio-settings"
   ],
   "source_last_updated": "1762431573",
   "source_hash": "05a85f8dee0cc14f79c13586587b8af18c4a365434abf088c230043576a5b588",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.970834Z",
+  "processed_at": "2026-04-25T09:32:26.202975Z",
   "status": "active"
 }
