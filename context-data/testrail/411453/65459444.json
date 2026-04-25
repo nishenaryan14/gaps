@@ -5,17 +5,16 @@
   "project": "411453",
   "title": "Software Update - DFU - HS low battery: multiple clicks on buttons",
   "feature": "Firmware Update",
-  "scenario": "DFU should be blocked when headset battery is below 5%, and rapid button clicks should not break the app or dialog flow",
+  "scenario": "DFU blocked when headset battery is below 5%; rapid button clicks on update dialogs should not break app flow",
   "steps": [
-    "1. Launch Poly Studio Mobile app on Android.",
-    "2. Connect a Bluetooth headset with battery level below 5% (and not plugged into power).",
-    "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "4. Tap on 'Firmware Update' or 'DFU' option.",
-    "5. Observe the dialog or screen that appears (should indicate low battery and block the update).",
-    "6. Rapidly tap multiple times on any available buttons such as 'Update', 'Continue', 'Start', or 'OK' in the dialog.",
-    "7. Continue rapid clicking for several seconds."
+    "1. Open Poly Studio Mobile app on the Home screen.",
+    "2. Ensure the connected headset battery level is below 5%.",
+    "3. Navigate to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
+    "4. Tap the 'Update' or 'Start' button.",
+    "5. If a confirmation dialog appears, tap 'OK' or 'Continue'.",
+    "6. Rapidly tap the 'Update' / 'Continue' / 'Start' buttons and dialog 'OK' buttons multiple times in quick succession."
   ],
-  "expected": "The app should prevent the DFU process from starting. A clear message should indicate that the headset battery is too low (below 5%) and that the headset must be charged or plugged into power before updating. Rapid clicking should not cause the app to crash, freeze, or bypass the low-battery check. The dialog flow should remain stable and consistent.",
+  "expected": "The app should block the DFU process due to low battery (below 5%). Rapid tapping should not bypass the low-battery check, and the app should remain stable without crashes, freezes, or unexpected dialog behavior.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +23,13 @@
     "firmware-update",
     "poly-studio-mobile",
     "rapid-button-clicks",
-    "dialog-flow",
+    "update-dialog",
+    "app-flow-stability",
     "battery-threshold"
   ],
   "source_last_updated": "1763371834",
   "source_hash": "55a454a73f03bc851618f25adf612376e06f7364f988f153c7d7ac666430ea76",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.884608Z",
+  "processed_at": "2026-04-25T07:55:31.959739Z",
   "status": "active"
 }
