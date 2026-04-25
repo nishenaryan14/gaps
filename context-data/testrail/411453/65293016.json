@@ -5,17 +5,17 @@
   "project": "411453",
   "title": "Onboarding - Eula page - Continue",
   "feature": "App Settings",
-  "scenario": "Onboarding EULA checkbox must be checked before Continue button becomes active on first launch",
+  "scenario": "Onboarding EULA checkbox must be checked before Continue button becomes active on first launch of Poly Studio Mobile app",
   "steps": [
-    "Launch Poly Studio Mobile app for the first time",
-    "Observe the 'Well hello, first things first...' onboarding screen",
-    "Locate the checkbox for agreeing to the Poly User License Agreement and Privacy Policy",
-    "Tap the Continue button without checking the checkbox",
-    "Check the checkbox to agree to the EULA and Privacy Policy",
-    "Tap the Continue button after checking the checkbox",
-    "Observe the next screen titled 'Up-to-Date' with information about using Poly Lens for updates and a Skip button"
+    "Open the Poly Studio Mobile app for the first time.",
+    "Observe the 'Well hello, first things first...' onboarding screen.",
+    "Locate the checkbox for agreeing to the Poly User License Agreement and Privacy Policy.",
+    "Tap the Continue button without checking the checkbox.",
+    "Check the checkbox to agree to the EULA and Privacy Policy.",
+    "Tap the Continue button after checking the checkbox.",
+    "Observe the next screen titled 'Up-to-Date'."
   ],
-  "expected": "The Continue button is disabled until the checkbox is checked. After checking the box and tapping Continue, the 'Up-to-Date' page appears with information about using Poly Lens for updates and a Skip button.",
+  "expected": "The Continue button is disabled until the checkbox is checked. Tapping Continue without checking the box does nothing. After checking the box and tapping Continue, the 'Up-to-Date' page appears with information about using Poly Lens for updates, along with a Skip button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -26,11 +26,11 @@
     "user-license-agreement",
     "privacy-policy",
     "first-launch",
-    "poly-lens"
+    "up-to-date-screen"
   ],
   "source_last_updated": "1760528496",
   "source_hash": "f232f918d9128c42fdc8c76309d7fdc0b745d9990d40d03a05a9f8662fdc4b07",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.704093Z",
+  "processed_at": "2026-04-25T07:55:31.776001Z",
   "status": "active"
 }
