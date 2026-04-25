@@ -1,141 +1,149 @@
 [
   {
-    "title": "TC-DFU-FAIL-001: Verify DFU failure does NOT mark headset as 'Up to Date' \u2014 app restart scenario",
+    "title": "TC-DFU-FALSE-SUCCESS-001: Verify app does NOT display 'updated successfully' when DFU fails due to Bluetooth disconnection",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to the Poly Voyager Free 60+ UC device.",
-      "2. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "3. Verify the current firmware version displayed for the headset (note it, e.g., v1.0.0).",
-      "4. Initiate a firmware update by tapping 'Check for Updates' and then 'Update' if a newer version is available (e.g., v1.2.0).",
-      "5. During the DFU process, force a failure by one of the following methods:",
-      "   a. Move the headset out of Bluetooth range (30+ feet away) during the firmware transfer phase.",
-      "   b. OR place the headset in the charge case and close the lid during the update.",
-      "6. Wait for the update process to complete/fail. Observe the on-screen result.",
-      "7. If the app shows a 'Houston' error screen or 'Update Failed' dialog, DO NOT tap Retry. Instead, force-close the app (swipe from recents).",
-      "8. Reopen Poly Studio Mobile app and reconnect to the device.",
-      "9. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "10. Observe the status displayed for the headset firmware version."
+      "Open Poly Studio Mobile app",
+      "Tap the connected device name (e.g., 'Poly Voyager Surround 80 UC')",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Note the current firmware version displayed (e.g., '1.2.3')",
+      "Tap 'Check for Update' and confirm an update is available",
+      "Tap 'Update Now' to start the firmware update process",
+      "During the update progress (at ~30-50%), force a Bluetooth disconnection by turning off the headset or moving out of range",
+      "Wait for the app to show a connection lost indicator",
+      "Reconnect the headset by powering it on and waiting for Bluetooth reconnection",
+      "Observe the Firmware Update screen"
     ],
-    "expected": "The Software Update screen MUST show the headset's firmware version as the ORIGINAL version (e.g., v1.0.0), NOT the target version (v1.2.0). The app MUST NOT display 'Up to Date' or 'Firmware is up to date'. The 'Check for Updates' or 'Update' button MUST be available to allow a retry."
+    "expected": "The app does NOT display 'Updated successfully' or any success/completion message. The firmware version shown should still be the original version (e.g., '1.2.3'), not a phantom updated version. The app should display an error or failure state (e.g., 'Update failed', 'Connection lost during update')."
   },
   {
-    "title": "TC-DFU-FAIL-002: Verify DFU failure does NOT falsely mark charge stand as updated",
+    "title": "TC-DFU-FALSE-SUCCESS-002: Verify app does NOT display 'updated successfully' when DFU fails due to app force-kill during transfer",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to the Poly Voyager Free 60+ UC device.",
-      "2. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "3. Note the current firmware versions for BOTH the headset AND the charge stand/case.",
-      "4. Initiate a firmware update that includes updates for both the headset and the charge stand.",
-      "5. During the update, induce a failure (e.g., press and hold the Bluetooth button on the device for 10 seconds to force a reset, OR disconnect the phone's Bluetooth from the device in phone settings).",
-      "6. Wait for the update process to terminate. Observe the result screen.",
-      "7. If a failure/error screen appears, dismiss it (tap Cancel or close the app).",
-      "8. Reopen Poly Studio Mobile app and reconnect to the device.",
-      "9. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "10. Observe the firmware version displayed for the charge stand/case."
+      "Open Poly Studio Mobile app",
+      "Tap the connected device name (e.g., 'Poly Voyager Legend 50')",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Note the current firmware version (e.g., '2.0.1')",
+      "Tap 'Check for Update' and confirm an update is available",
+      "Tap 'Update Now' to start the firmware update",
+      "During the update progress (at ~40-60%), force-kill the Poly Studio Mobile app (swipe away from recent apps)",
+      "Reopen Poly Studio Mobile app",
+      "Wait for the app to reconnect to the headset automatically",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Observe the firmware version and any status messages"
     ],
-    "expected": "The charge stand/case firmware version MUST still show its ORIGINAL version (the version noted in step 3). The app MUST NOT display 'Up to Date' for the charge stand. The charge stand MUST NOT be falsely marked as having been updated."
+    "expected": "The app does NOT display 'Updated successfully'. The firmware version should remain the original version (e.g., '2.0.1'). The app should show the update as incomplete/failed, or prompt to retry the update. No false success state is persisted across app restart."
   },
   {
-    "title": "TC-DFU-FAIL-003: Verify retry mechanism is NOT blocked after DFU failure \u2014 'Update' button remains available",
+    "title": "TC-DFU-RETRY-UNAVAILABLE-001: Verify 'Update unavailable' message when retrying DFU after a failed update that showed false success",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to the Poly Voyager Free 60+ UC device.",
-      "2. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "3. Verify a newer firmware version is available (if not, this test requires a device with an updatable firmware).",
-      "4. Tap 'Update' to start the DFU process.",
-      "5. During the firmware transfer (e.g., at ~30-50% progress), trigger a failure by turning off the headset (press and hold the call button for 5 seconds to power off).",
-      "6. Wait for the update to fail. Observe the on-screen result.",
-      "7. If a 'Houston' error screen appears with 'Retry' and 'Cancel' buttons, tap 'Cancel'.",
-      "8. If the app returns to the Software Update screen without an error dialog, observe the status.",
-      "9. Tap the 'Check for Updates' button or the 'Update' button (whichever is available).",
-      "10. Observe the message/behavior when attempting to retry the update."
+      "Open Poly Studio Mobile app",
+      "Tap the connected device name (e.g., 'Poly Voyager Surround 80 UC')",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Note the current firmware version (e.g., '3.0.0')",
+      "Tap 'Check for Update' and confirm an update is available to version '3.1.0'",
+      "Tap 'Update Now' to start the firmware update",
+      "During the update (at ~50%), force a Bluetooth disconnection by turning off the headset",
+      "Wait 10 seconds, then turn the headset back on",
+      "Reconnect to the headset in the app",
+      "Observe the Firmware Update screen \u2014 note any success/failure message",
+      "Tap 'Retry' or 'Check for Update' again",
+      "Observe the message displayed"
     ],
-    "expected": "The app MUST allow the user to retry the update. Tapping 'Check for Updates' or 'Update' MUST initiate a new update attempt. The app MUST NOT display a misleading message such as 'Firmware is up to date', 'No updates available', or 'Already up to date'. The retry mechanism MUST NOT be blocked."
+    "expected": "If the app incorrectly shows 'Updated successfully' (the bug scenario), tapping 'Check for Update' or 'Retry' should NOT show 'Update unavailable'. The app should either allow a retry of the update or correctly show the original firmware version and allow a fresh update attempt. If the bug is present, this test documents the 'Update unavailable' false blocking state."
   },
   {
-    "title": "TC-DFU-FAIL-004: Verify app does NOT show 'Up to Date' for headset after DFU failure at 99% progress",
+    "title": "TC-DFU-STATE-PERSISTENCE-001: Verify firmware version displayed after interrupted DFU survives app restart and Bluetooth reconnection",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to the Poly Voyager Free 60+ UC device.",
-      "2. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "3. Note the current headset firmware version (e.g., v1.0.0).",
-      "4. Initiate a firmware update to a newer version (e.g., v1.2.0).",
-      "5. Allow the update to progress to 99% (near completion of the transfer/installation phase).",
-      "6. At 99%, force a disconnection: go to phone Settings \u2192 Bluetooth \u2192 tap the connected Poly device \u2192 'Forget' or 'Disconnect'.",
-      "7. Wait 30 seconds. Reconnect to the device via Bluetooth.",
-      "8. Open Poly Studio Mobile app and navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "9. Observe the firmware version and status displayed for the headset.",
-      "10. Tap 'Check for Updates' and observe the result."
+      "Open Poly Studio Mobile app",
+      "Connect to a Poly device (e.g., 'Poly Voyager Legend 30')",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Record the current firmware version (e.g., '1.5.0')",
+      "Start a firmware update to version '1.6.0'",
+      "At ~60% progress, turn off the headset to interrupt the update",
+      "Wait 15 seconds",
+      "Turn the headset back on and allow Bluetooth reconnection",
+      "Observe the Firmware Update screen \u2014 record the firmware version shown",
+      "Close the Poly Studio Mobile app (background it)",
+      "Reopen the app and navigate back to Firmware Update",
+      "Record the firmware version shown again",
+      "Force-kill the app (swipe away from recent apps)",
+      "Reopen the app, reconnect to the headset, navigate to Firmware Update",
+      "Record the firmware version shown a third time"
     ],
-    "expected": "The headset firmware version MUST still display the ORIGINAL version (v1.0.0), NOT the target version (v1.2.0). The app MUST NOT display 'Up to Date' or 'Firmware is up to date'. The 'Check for Updates' or 'Update' button MUST be functional and allow a retry of the update."
+    "expected": "The firmware version displayed should consistently show the ORIGINAL version (e.g., '1.5.0') across all three checks \u2014 after reconnection, after app background/foreground, and after app force-kill/relaunch. The app should NOT persist a phantom 'updated' version. The version should match what the headset actually reports via Bluetooth."
   },
   {
-    "title": "TC-DFU-FAIL-005: Verify app update status tracking does NOT desynchronize from actual firmware after DFU failure + reconnect cycle",
+    "title": "TC-DFU-BT-RECONNECT-001: Verify firmware update screen correctly reflects actual headset firmware after DFU failure and Bluetooth reconnection cycle",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to the Poly Voyager Free 60+ UC device.",
-      "2. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "3. Record the actual firmware versions for headset and charge stand from the app UI.",
-      "4. Initiate a firmware update for both headset and charge stand.",
-      "5. During the update, induce a failure by placing the headset in the charge case and closing the lid for 15 seconds, then removing it.",
-      "6. Observe the failure/error screen. Dismiss it.",
-      "7. Without restarting the app, navigate away: tap back arrow to go to Device screen, then tap [Device Name] \u2192 Settings \u2192 Software Update again.",
-      "8. Observe the firmware versions displayed.",
-      "9. Now force-close the app (swipe from recents).",
-      "10. Reopen the app, reconnect, and navigate back to Software Update.",
-      "11. Observe the firmware versions again.",
-      "12. Power cycle the headset (turn off, wait 10 seconds, turn on).",
-      "13. Reconnect and navigate back to Software Update.",
-      "14. Observe the firmware versions a third time.",
-      "15. Compare all observed versions across steps 8, 11, and 14 with the original versions from step 3."
+      "Open Poly Studio Mobile app",
+      "Connect to a Poly device (e.g., 'Poly Voyager Surround 80 UC')",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Record the current firmware version (e.g., '2.2.0')",
+      "Start a firmware update to version '2.3.0'",
+      "At ~40% progress, force Bluetooth disconnection by turning off the headset",
+      "Wait 5 seconds, turn the headset back on",
+      "Allow the app to automatically reconnect to the headset",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Record the firmware version displayed",
+      "Disconnect Bluetooth from phone Settings (tap 'Forget this device')",
+      "Re-pair the headset with the phone",
+      "Open Poly Studio Mobile app and reconnect to the headset",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Record the firmware version displayed a second time",
+      "Compare both recorded versions to the original version (2.2.0)"
     ],
-    "expected": "At ALL observation points (steps 8, 11, 14), the firmware versions for BOTH the headset and charge stand MUST match the ORIGINAL versions recorded in step 3. The app MUST NOT show any version as updated. The app MUST NOT display 'Up to Date' for either component. The update status tracking MUST remain synchronized with the actual firmware on the devices."
+    "expected": "Both post-reconnection checks should show the ORIGINAL firmware version (2.2.0), not a phantom updated version. The app should correctly read the actual firmware version from the headset after each reconnection cycle, regardless of the interrupted DFU state."
   },
   {
-    "title": "TC-DFU-FAIL-006: Verify DFU failure does NOT block retry after app force-kill and relaunch",
+    "title": "TC-DFU-DEVICE-ASYMMETRY-001: Verify DFU failure handling on Poly Voyager Surround 80 UC (touch control device)",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to the Poly Voyager Free 60+ UC device.",
-      "2. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "3. Verify a newer firmware version is available. Note the current version.",
-      "4. Tap 'Update' to start the DFU process.",
-      "5. During the update (at any progress point), force-kill the app (swipe from recents).",
-      "6. Wait 10 seconds.",
-      "7. Reopen Poly Studio Mobile app and reconnect to the device.",
-      "8. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "9. Observe the status text and firmware version displayed for the headset.",
-      "10. Tap 'Check for Updates' or the available update button.",
-      "11. Observe the result."
+      "Open Poly Studio Mobile app",
+      "Connect to a 'Poly Voyager Surround 80 UC' headset",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Record current firmware version",
+      "Start a firmware update",
+      "During the update, use the touch control surface on the right earcup: tap to play/pause media",
+      "Observe if the touch gesture interrupts the DFU process",
+      "If the update continues, swipe to skip track during the update",
+      "Observe the app behavior and any error messages",
+      "After the update attempt completes (or fails), check the firmware version displayed",
+      "Attempt to retry the update by tapping 'Check for Update'"
     ],
-    "expected": "The app MUST display the ORIGINAL firmware version (not the target version). The app MUST NOT display 'Up to Date' or 'Firmware is up to date'. Tapping 'Check for Updates' or the update button MUST initiate a new firmware update attempt. The retry mechanism MUST be fully functional after an app force-kill during DFU."
+    "expected": "Touch control gestures during DFU should not corrupt the update state. If the update fails due to touch input interference, the app should show a clear error (not false success). The firmware version should remain unchanged. Retry should be available without showing 'Update unavailable'. The touch control device should handle DFU interruptions gracefully."
   },
   {
-    "title": "TC-DFU-FAIL-007: Verify DFU failure with low battery does NOT falsely mark headset as updated",
+    "title": "TC-DFU-DEVICE-ASYMMETRY-002: Verify DFU failure handling on Poly Voyager 4210-4220 Office System (base station device)",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to the Poly Voyager Free 60+ UC device.",
-      "2. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "3. Note the current headset firmware version.",
-      "4. Ensure the headset battery is low (10-15%) and the charge stand battery is also low.",
-      "5. Initiate a firmware update by tapping 'Check for Updates' and then 'Update'.",
-      "6. Allow the update to start. Observe if the app shows a low battery warning.",
-      "7. If a low battery warning appears, dismiss it and continue (or the update may fail automatically due to low battery).",
-      "8. Wait for the update process to complete or fail.",
-      "9. Observe the final screen. If an error appears, dismiss it.",
-      "10. Navigate: tap back \u2192 [Device Name] \u2192 Settings \u2192 Software Update.",
-      "11. Observe the firmware version and status for the headset.",
-      "12. Tap 'Check for Updates' and observe the result."
+      "Open Poly Studio Mobile app",
+      "Connect to a 'Poly Voyager 4210/4220' office headset system (headset connected to base)",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Record current firmware version of the headset",
+      "Start a firmware update",
+      "During the update, lift the headset from the base (simulating a desk phone call)",
+      "Observe if the base disconnection interrupts the DFU",
+      "Place the headset back on the base",
+      "Wait for reconnection",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Record the firmware version displayed",
+      "Attempt to retry the update"
     ],
-    "expected": "The headset firmware version MUST still show the ORIGINAL version. The app MUST NOT display 'Up to Date'. The 'Check for Updates' or 'Update' button MUST be available and functional for retrying the update after charging the device."
+    "expected": "The office base station system should handle headset lift/return during DFU without corrupting state. The firmware version should remain the original version. No false success message should appear. The retry option should be available without 'Update unavailable' message. The base station's unique hook-switch behavior should not cause state persistence issues."
   },
   {
-    "title": "TC-DFU-FAIL-008: Verify DFU failure during charge stand update does NOT falsely mark charge stand as updated while headset shows correctly",
+    "title": "TC-DFU-LIFECYCLE-001: Verify DFU failure state after app backgrounding during update and subsequent foregrounding",
     "steps": [
-      "1. Launch Poly Studio Mobile app and connect to the Poly Voyager Free 60+ UC device.",
-      "2. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "3. Record the firmware versions for both headset (e.g., v1.0.0) and charge stand (e.g., v1.0.0).",
-      "4. Initiate a firmware update that updates the charge stand firmware.",
-      "5. During the charge stand update phase (after headset update completes, or during the charge stand portion), induce a failure by removing the headset from the charge case and moving out of Bluetooth range.",
-      "6. Wait for the update to fail. Observe the error screen.",
-      "7. Dismiss the error screen (tap Cancel if available, or close and reopen the app).",
-      "8. Navigate: tap [Device Name] \u2192 Settings \u2192 Software Update.",
-      "9. Observe the firmware version displayed for the charge stand.",
-      "10. Observe the firmware version displayed for the headset.",
-      "11. Tap 'Check for Updates' and observe the result for both components."
+      "Open Poly Studio Mobile app",
+      "Connect to a Poly device (e.g., 'Poly Voyager Legend 50')",
+      "Navigate to Settings \u2192 Firmware Update",
+      "Record current firmware version (e.g., '4.0.0')",
+      "Start a firmware update to version '4.1.0'",
+      "At ~50% progress, press the Home button to background the app",
+      "Wait 30 seconds",
+      "Reopen the app from the app switcher",
+      "Observe the Firmware Update screen",
+      "Record the firmware version and any status messages",
+      "Tap 'Check for Update' or the available action button",
+      "Observe the result"
     ],
-    "expected": "The charge stand firmware version MUST still show its ORIGINAL version (v1.0.0). The headset firmware version MUST also show its ORIGINAL version (v1.0.0) if its update also failed, OR the updated version if the headset update completed successfully before the charge stand update began. The app MUST NOT display 'Up to Date' for the charge stand. The update button MUST be available to retry the charge stand update."
+    "expected": "After backgrounding and foregrounding during an active DFU, the app should not show a false 'Updated successfully' message. The firmware version should remain the original version (4.0.0). The app should either show the update as interrupted/failed or resume the update. No 'Update unavailable' blocking message should appear on retry."
   }
 ]
