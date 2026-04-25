@@ -5,22 +5,33 @@
   "project": "411453",
   "title": "Software Update - DFU - Putting app in background during update",
   "feature": "Firmware Updates",
-  "scenario": "DFU continues successfully when Poly Studio Mobile app is placed in the background during firmware update",
-  "steps": [],
-  "expected": "",
+  "scenario": "Device Firmware Update (DFU) continues successfully when Poly Studio Mobile app is placed in the background during the update process",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen and ensure a Poly Bluetooth audio device is connected.",
+    "3. Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
+    "4. Initiate a Device Firmware Update (DFU) by tapping 'Check for Update' or 'Update Now' if a new firmware version is available.",
+    "5. Once the firmware download and update process begins, press the Home button or use the app switcher to move the Poly Studio Mobile app to the background.",
+    "6. Wait for several minutes to allow the DFU to progress while the app is in the background.",
+    "7. After waiting, return to the Poly Studio Mobile app by tapping its icon or selecting it from the app switcher.",
+    "8. Observe the firmware update status on the Device Settings or Firmware Update screen."
+  ],
+  "expected": "The Device Firmware Update (DFU) completes successfully even after the app is put into the background. When the user returns to the app, the update status shows as completed or still progressing to completion, and the device remains functional with the new firmware applied.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "firmware-update",
+    "device-firmware-update",
     "poly-studio-mobile",
-    "background-mode",
-    "dfu",
-    "app-persistence",
-    "update-reliability"
+    "background-update",
+    "firmware-update",
+    "android",
+    "bluetooth-audio-device",
+    "app-background-behavior",
+    "dfu-persistence"
   ],
   "source_last_updated": "1763371340",
   "source_hash": "6664cb65ba0dea23381235c678dbf78686b65e4c24e5bdc6438007762c0e337c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.028174Z",
+  "processed_at": "2026-04-25T09:32:26.287367Z",
   "status": "active"
 }
