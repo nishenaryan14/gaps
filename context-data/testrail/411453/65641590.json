@@ -5,31 +5,23 @@
   "project": "411453",
   "title": "EQ - Custom EQ, all possible values",
   "feature": "Equalizer",
-  "scenario": "Custom EQ slider values can be set and saved successfully across all combinations in Device Settings",
-  "steps": [
-    "1. Launch the Poly Studio Mobile app with a supported EQ device connected.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
-    "3. Tap the Custom EQ tab.",
-    "4. Move each frequency slider (e.g., 32Hz, 64Hz, 125Hz, 250Hz, 500Hz, 1kHz, 2kHz, 4kHz, 8kHz, 16kHz) to various positions across the full range (minimum, middle, maximum).",
-    "5. Tap the Save or Apply button to save the custom EQ configuration.",
-    "6. Exit the Equalizer screen and re-enter it to verify the saved settings persist."
-  ],
-  "expected": "All combinations of slider values can be set across the full range, and the custom EQ configuration is saved successfully and persists after navigating away and back.",
+  "scenario": "Custom EQ sliders can be adjusted to any value/combination and saved as a preset in Device Settings",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "custom-eq",
-    "equalizer",
-    "frequency-sliders",
-    "audio-settings",
-    "eq-persistence",
-    "poly-studio-mobile",
+    "eq-sliders",
+    "equalizer-preset",
     "device-settings",
-    "eq-configuration"
+    "audio-tuning",
+    "preset-management",
+    "sound-profile"
   ],
   "source_last_updated": "1760956310",
   "source_hash": "5a70e2769916cdda1462c20eec859f5f90247734104200239ffced7c6ebfc7bd",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.005523Z",
+  "processed_at": "2026-04-25T09:32:26.260748Z",
   "status": "active"
 }
