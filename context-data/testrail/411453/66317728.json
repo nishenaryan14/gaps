@@ -5,34 +5,33 @@
   "project": "411453",
   "title": "Rename device - Rename, emojis not allowed",
   "feature": "Device Management",
-  "scenario": "Device name should not accept emojis in Device Settings > General; Done button should be disabled and name unchanged on Home screen",
+  "scenario": "Device name should reject emojis and disable Done button in Device Settings > General on Poly Studio Mobile app",
   "steps": [
-    "Open Poly Studio Mobile app on Android.",
-    "Navigate to the Home screen.",
-    "Tap on the device name or settings icon to access Device Settings.",
-    "Go to General settings.",
-    "Tap on the device name field to edit it.",
-    "Enter one or more emoji characters (e.g., \ud83d\ude00, \ud83c\udfa7, \u2764\ufe0f) as the device name.",
-    "Observe the state of the \"Done\" button (or equivalent save/confirm button).",
-    "Attempt to tap \"Done\" to save the change.",
-    "Return to the Home screen and observe the displayed device name."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. On the Home screen, tap on the connected Poly Bluetooth device to open Device Settings.",
+    "3. In Device Settings, tap on 'General'.",
+    "4. Tap on the device name field to edit it.",
+    "5. Enter one or more emoji characters (e.g., \ud83d\ude00, \ud83c\udfa7, \u2764\ufe0f) as the new device name.",
+    "6. Observe the state of the 'Done' button (or equivalent save/confirm button) in the editing interface.",
+    "7. If the 'Done' button is enabled, tap it to attempt to save the name.",
+    "8. Return to the Home screen and check the displayed device name."
   ],
-  "expected": "The \"Done\" button should be disabled/grayed out when emojis are entered as the device name. Tapping \"Done\" should not save the change. The device name on the Home screen should remain unchanged (the previous valid name).",
+  "expected": "The \"Done\" button should be disabled when emojis are entered in the device name field. The device name should not be changed. On the Home screen, the device name should remain unchanged (the original name before editing).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-name",
     "emoji-validation",
+    "done-button",
     "device-settings",
     "general-settings",
-    "done-button",
-    "home-screen",
-    "name-persistence"
+    "name-field",
+    "input-validation"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "a945b24f8c9947534b02f66873a1991bcc2269dbf9d5046c5e5d068cc278741d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.882314Z",
+  "processed_at": "2026-04-25T08:21:30.974497Z",
   "status": "active"
 }
