@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "CCL - Selecting No Noise Block",
   "feature": "ANC",
-  "scenario": "\"No Noise Block\" option can be selected in Device Settings > Advanced on a CCL-supported device",
+  "scenario": "Verify \"No Noise Block\" option is selectable in Device Settings > Advanced on CCL-supported devices",
   "steps": [
-    "Open the Poly Studio Mobile app.",
+    "Open Poly Studio Mobile app on the Android device.",
     "Navigate to the Home screen.",
     "Tap on the connected device name to open Device Settings.",
-    "Scroll down and tap on 'Advanced'.",
-    "Locate the 'No Noise Block' option.",
-    "Tap on 'No Noise Block' to select it."
+    "Scroll down and tap on 'Advanced' under Device Settings.",
+    "Locate the 'No Noise Block' option in the Advanced settings.",
+    "Tap on the 'No Noise Block' option to select it."
   ],
-  "expected": "The 'No Noise Block' option is successfully selected and applied on a device that supports CCL.",
+  "expected": "The 'No Noise Block' option is successfully selected and applied on devices that support CCL (Customizable Calibration Level).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "no-noise-block",
     "device-settings",
     "advanced-settings",
-    "ccl-supported-device",
     "poly-studio-mobile",
-    "noise-blocking",
-    "audio-settings"
+    "ccl-supported-devices",
+    "android-app",
+    "noise-blocking"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "6ae09597e06e994f94f8e266955ebfcffd22e185e1cc9516f6bf0d233c485728",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.841823Z",
+  "processed_at": "2026-04-25T07:55:31.933835Z",
   "status": "active"
 }
