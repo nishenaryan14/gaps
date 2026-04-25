@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Fit test - Onboarding flow - Fit Test is present",
   "feature": "Device Management",
-  "scenario": "Fit Test screen appears in Onboarding flow under Device Settings after Pairing 2 screen with Skip/Test buttons as per Figma design",
+  "scenario": "Fit Test screen appears in Onboarding flow under Device Settings after Pairing 2 screen with Skip/Test options as per Figma design",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
     "Tap Device Settings",
-    "Proceed through Onboarding flow",
-    "Complete Pairing screen 2",
-    "Observe the next screen that appears"
+    "Proceed through the Onboarding flow",
+    "Observe the screen after the Pairing 2 screen",
+    "Check for Fit Test screen with Skip and Test options at the bottom"
   ],
-  "expected": "Fit Test screen appears after Pairing 2 screen, with Skip and Test buttons at the bottom, matching the Figma design specification.",
+  "expected": "Fit Test screen appears after the Pairing 2 screen in the Onboarding flow under Device Settings, with Skip and Test options at the bottom, matching the Figma design specification.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
     "onboarding-flow",
     "device-settings",
-    "pairing-screen",
+    "pairing-2",
     "poly-studio-mobile",
-    "skip-button",
-    "test-button",
+    "skip-option",
+    "test-option",
     "figma-design"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "fae45dc8fa67390d62594f671e16b71affc2feee9f7724b1e57c42678eafa22f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.816209Z",
+  "processed_at": "2026-04-25T07:55:31.898290Z",
   "status": "active"
 }
