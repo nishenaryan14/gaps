@@ -12,139 +12,159 @@
     "65459448",
     "65459456",
     "65459427",
-    "65459458",
     "65459457",
     "65459438",
-    "65459432"
+    "65459432",
+    "65459433"
   ],
   "coverage_status": "partial",
   "gaps": [
-    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Post-update language display persistence: The bug shows that after a firmware update with language change, the settings screen displays the *previous* language (not the newly updated one). No existing test verifies what language value is *shown* in the Device Settings \u2192 Language selection immediately after a DFU completes. Tests 66363556-66363559 verify DFU success/failure and pop-ups, but none check the displayed language value in the settings UI post-update.",
-    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 'Update currently not available' dialog on re-selection: The bug shows that attempting to change the language *again* after the update shows a blocking dialog. No existing test covers the scenario of tapping the language selection option a second time post-update to verify whether the dialog appears correctly or incorrectly.",
-    "\ud83e\udde0 STATE TRIGGER \u2014 Dialog trigger timing: The bug implies the dialog appears when it shouldn't (or the wrong dialog appears). No test validates the exact state transition that triggers this dialog \u2014 e.g., is it triggered by the UI detecting a pending update state that wasn't cleared, or by a mismatch between the displayed language and the actual device language?",
-    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 App restart behavior: The bug steps include closing and restarting the app to check firmware version. No existing test verifies that after an app kill/relaunch, the language selection UI correctly reflects the updated language from the device. This is a critical persistence gap across app lifecycle.",
-    "\ud83e\udde0 DEVICE ASYMMETRY \u2014 Device-specific behavior: Existing tests are heavily biased toward Voyager Free 60+ (earbuds with smart charge case). The bug scenario is generic to 'Poly Bluetooth audio device' but the existing test coverage does not include simpler devices like Poly Sync 20/20+ speakerphones or other headset form factors that lack a charge case. The language update flow may behave differently on devices without multiple firmware components (earbud + case).",
-    "\ud83e\udde0 STATE TRIGGER \u2014 Language value vs. firmware version mismatch: The bug steps ask to check firmware version after restart, implying the language issue may correlate with a stale firmware version display. No test validates the relationship between the displayed firmware version and the displayed language selection post-update."
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Post-FW-update state persistence: No test verifies that the language selection UI correctly reflects the newly installed language pack immediately after a firmware update completes. Existing tests (66363556, 66363557, 66363558) cover the DFU trigger and update flow itself, but none validate that the settings screen refreshes to show the updated language without requiring an app restart.",
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Stale UI state after FW update: The bug shows the *previous* language still displayed after update. No existing test checks for stale cached language values in the UI layer after a firmware update completes. This is a UI refresh/sync gap between the device firmware state and the app's in-memory settings cache.",
+    "\ud83e\udde0 STATE TRIGGER \u2014 'Update currently not available' dialog on language change attempt: Test 66363583 covers this dialog persisting after earbud reconnection on Voyager Free 60+, but does NOT cover the scenario where the dialog appears after a *successful firmware update* when trying to change language again. The trigger condition is different \u2014 stale post-update state vs. disconnected device.",
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 App restart as workaround: No test validates that the language settings UI and language change functionality are restored to correct behavior only after an app kill/relaunch. This is a critical lifecycle gap \u2014 the bug requires app restart to resolve, and no existing test covers this recovery path.",
+    "\ud83e\udde0 DEVICE ASYMMETRY \u2014 Missing multi-device coverage: The bug scenario does not specify a device model. Existing tests (66363558, 66363583) are specific to Voyager Free 60+. There is no coverage for this language-stale-after-FW-update bug on other Poly devices like Surround 85, Voyager Surround 80, or Free 60 (non-plus). The bug may be device-agnostic or device-specific \u2014 no test covers the general case.",
+    "\ud83e\udde0 STATE TRIGGER \u2014 Language change blocked vs. FW update completion: No test verifies the exact state machine transition: after a FW update that includes a language pack, the app should allow a subsequent language change (since the FW is now current). The bug shows the app incorrectly blocks the next language change. This is a missing validation of the 'FW update completed \u2192 language change allowed' state transition."
   ],
   "generated_testcases": [
     {
-      "title": "TC-LANG-001: Verify displayed language in Device Settings immediately after DFU completes (Poly Sync 20+)",
+      "title": "TC-LANG-FW-001: Post-FW-update language UI refresh \u2014 immediate validation after update completes",
       "steps": [
-        "Open Poly Studio Mobile app on the paired mobile device.",
-        "Tap the [Sync 20+] device name from the home screen to enter Device Settings.",
-        "Navigate to Device Settings \u2192 Language selection and note the currently displayed language (e.g., 'English').",
-        "Go back to Device Settings main screen.",
-        "Initiate a firmware update via Device Settings \u2192 Firmware Update \u2192 Check for Updates.",
-        "Allow the firmware update to complete 100% and observe the 'Update successful' confirmation pop-up.",
-        "Do NOT close or restart the app. Immediately tap OK/dismiss the pop-up.",
-        "Navigate back to Device Settings \u2192 Language selection.",
-        "Observe the language value displayed in the Language selection row."
+        "Precondition: Device connected, app open, current language = English.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language. Note current selection (English).",
+        "Trigger firmware update: Navigate to Device \u2192 Software & Updates \u2192 Install available update.",
+        "Wait for update to complete (device restarts, reconnects automatically).",
+        "DO NOT restart app. Immediately navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Observe the displayed language selection."
       ],
-      "expected": "The Language selection row displays the newly updated language (the language selected during the firmware update process), NOT the previous language. If no language was changed during the update, the displayed language should remain the same as before the update."
+      "expected": "Expected: Language selection shows the language that was active before the update (English). \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): Language selection still shows English (correct in this case, but the UI may be stale from cache). The key validation is that the UI reflects the device's actual language state without requiring app restart. If the FW update changed the language pack, the new language must be displayed. If no language change occurred, English must still be displayed \u2014 but it must be the LIVE device state, not a stale cached value."
     },
     {
-      "title": "TC-LANG-002: Verify 'Update currently not available' dialog does NOT appear when tapping Language selection post-update (Poly Sync 20+)",
+      "title": "TC-LANG-FW-002: Stale UI cache detection \u2014 change language, FW update, verify UI shows stale previous language",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Sync 20+].",
-        "Navigate to Device Settings \u2192 Language selection and note the current language.",
-        "Perform a firmware update that includes a language change (e.g., change from English to French during the update flow).",
-        "Wait for the update to complete successfully and dismiss the success pop-up.",
-        "Immediately navigate to Device Settings \u2192 Language selection and tap on it.",
-        "Observe the screen/dialog that appears."
+        "Precondition: Device connected, app open, current language = English.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language. Set language to French.",
+        "Verify French is now displayed and active.",
+        "Trigger firmware update: Navigate to Device \u2192 Software & Updates \u2192 Install available update.",
+        "Wait for update to complete (device restarts, reconnects automatically).",
+        "DO NOT restart app. Immediately navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Observe the displayed language selection."
       ],
-      "expected": "The Language selection screen opens normally showing the list of available languages with the newly updated language selected. The 'Update currently not available' blocking dialog does NOT appear."
+      "expected": "Expected: Language selection shows French (the language set before the update). \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): Language selection incorrectly shows English (the pre-change default), indicating the app is displaying a stale cached value from before the language was changed, and the UI did not refresh from the device's actual firmware state after the update completed."
     },
     {
-      "title": "TC-LANG-003: Verify Language selection UI reflects updated language after app kill and relaunch (Poly Sync 20+)",
+      "title": "TC-LANG-FW-003: 'Update currently not available' dialog after successful FW update \u2014 immediate language change attempt",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Sync 20+].",
-        "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
-        "Perform a firmware update that changes the device language (e.g., English \u2192 German).",
-        "Wait for the update to complete successfully and dismiss the success pop-up.",
-        "Fully close (kill) the Poly Studio Mobile app from the phone's recent apps menu.",
-        "Reopen the Poly Studio Mobile app.",
-        "Wait for the app to reconnect to [Sync 20+].",
-        "Navigate to Device Settings \u2192 Language selection.",
-        "Observe the language value displayed."
+        "Precondition: Device connected, app open, current language = English.",
+        "Trigger firmware update: Navigate to Device \u2192 Software & Updates \u2192 Install available update.",
+        "Wait for update to complete (device restarts, reconnects automatically).",
+        "DO NOT restart app. Navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Attempt to change language from English to German.",
+        "Observe the dialog/behavior."
       ],
-      "expected": "The Language selection row displays the updated language (German) that was set during the firmware update. The app correctly reads and displays the current device language after a full app restart, not a stale/cached value."
+      "expected": "Expected: Language changes to German successfully \u2014 no dialog shown. \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): App displays 'Update currently not available' dialog when attempting to change language, even though the FW update just completed successfully. This indicates the app's state machine incorrectly believes a firmware update is still in progress or the language change is blocked due to stale post-update state."
     },
     {
-      "title": "TC-LANG-004: Verify firmware version displayed post-update matches updated language state (Poly Sync 20+)",
+      "title": "TC-LANG-FW-004: App restart recovery \u2014 language change unblocked after kill/relaunch",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Sync 20+].",
-        "Navigate to Device Settings \u2192 About/Device Info and note the current firmware version (e.g., v1.2.3).",
-        "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
-        "Perform a firmware update that updates both the firmware version (e.g., to v1.2.4) and changes the language (e.g., English \u2192 Spanish).",
-        "Wait for the update to complete successfully and dismiss the success pop-up.",
-        "Navigate to Device Settings \u2192 About/Device Info and note the new firmware version.",
-        "Navigate to Device Settings \u2192 Language selection and observe the displayed language.",
-        "Fully kill and relaunch the Poly Studio Mobile app.",
-        "Reconnect to [Sync 20+] and navigate to Device Settings \u2192 About/Device Info and Language selection.",
-        "Compare the firmware version and language values before and after the restart."
+        "Precondition: Device connected, app open, current language = English.",
+        "Trigger firmware update: Navigate to Device \u2192 Software & Updates \u2192 Install available update.",
+        "Wait for update to complete (device restarts, reconnects automatically).",
+        "Attempt to change language from English to German. (Expected to fail with 'Update currently not available' dialog per bug.)",
+        "Force-kill the Poly Studio Mobile app (swipe from recents).",
+        "Relaunch app. Wait for device to reconnect.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Attempt to change language from English to German.",
+        "Observe the behavior."
       ],
-      "expected": "Both the firmware version (v1.2.4) and the language (Spanish) are correctly displayed immediately after the update AND persist correctly after app kill/relaunch. There is no mismatch where the firmware version updates but the language remains stale, or vice versa."
+      "expected": "Expected: Language changes to German successfully \u2014 no dialog shown. \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): 'Update currently not available' dialog still appears even after app restart, indicating the stale state is persisted beyond app lifecycle and requires device re-pairing or cache clear. The critical validation is that app restart IS the expected workaround and MUST resolve the issue."
     },
     {
-      "title": "TC-LANG-005: Verify Language selection behavior on device without charge case (Poly Sync 20) \u2014 post-update display",
+      "title": "TC-LANG-FW-005: IMMEDIATE STATE TRIGGER \u2014 Change language, IMMEDIATELY kill app before navigating away, reopen to verify persistence",
       "steps": [
-        "Connect to a [Poly Sync 20] (non-Plus variant, no smart charge case) via the Poly Studio Mobile app.",
-        "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
-        "Initiate a firmware update via Device Settings \u2192 Firmware Update \u2192 Check for Updates, selecting a different language (e.g., change to French).",
-        "Allow the firmware update to complete 100% and dismiss the success pop-up.",
-        "Navigate to Device Settings \u2192 Language selection and observe the displayed language.",
-        "Kill and relaunch the Poly Studio Mobile app.",
-        "Reconnect to [Sync 20] and navigate back to Device Settings \u2192 Language selection.",
-        "Observe the displayed language again."
+        "Precondition: Device connected, app open, current language = English.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Change language from English to Spanish.",
+        "IMMEDIATELY (within 1 second, do NOT navigate away or switch tabs) force-kill the app via swipe from recents.",
+        "Relaunch app. Wait for device to reconnect.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Observe the displayed language selection."
       ],
-      "expected": "On Poly Sync 20 (no charge case), the Language selection correctly displays the updated language (French) both immediately after the update and after app kill/relaunch. The behavior is consistent with earbud devices \u2014 the absence of a charge case does not cause the language to revert or display incorrectly."
+      "expected": "Expected: Language selection shows Spanish. The language change was committed to the device firmware before the app was killed. \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): Language selection shows English, indicating the app's in-memory state was not flushed/persisted to the device before the app was terminated, or the app relies on a local cache that was lost on kill. This validates immediate state saving/sync timing."
     },
     {
-      "title": "TC-LANG-006: Verify tapping Language selection a second time post-update does not show stale dialog (Poly Sync 20+)",
+      "title": "TC-LANG-FW-006: DEEP LIFECYCLE \u2014 FW update, phone reboot, then verify language UI and change functionality",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Sync 20+].",
-        "Navigate to Device Settings \u2192 Language selection and note the current language.",
-        "Perform a firmware update that changes the language (e.g., English \u2192 Italian).",
-        "Wait for the update to complete successfully and dismiss the success pop-up.",
-        "Navigate to Device Settings \u2192 Language selection and tap to open it. Verify the language list opens normally.",
-        "Close the language selection screen (go back to Device Settings).",
-        "Immediately tap Language selection again to open it a second time.",
-        "Observe the screen that appears."
+        "Precondition: Device connected, app open, current language = English.",
+        "Trigger firmware update: Navigate to Device \u2192 Software & Updates \u2192 Install available update.",
+        "Wait for update to complete (device restarts, reconnects automatically).",
+        "Reboot the phone (power off, then power on).",
+        "Launch Poly Studio Mobile app. Wait for device to reconnect.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Observe the displayed language selection.",
+        "Attempt to change language from English to Italian.",
+        "Observe the behavior."
       ],
-      "expected": "The Language selection screen opens normally on the second tap as well. No 'Update currently not available' dialog or any other blocking dialog appears. The newly updated language (Italian) is shown as selected in the list."
+      "expected": "Expected: Language selection shows English (or the language set before the update). Language changes to Italian successfully \u2014 no dialog shown. \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): Language selection shows a stale/wrong value, or the 'Update currently not available' dialog appears when attempting to change language. A phone reboot should fully clear any stale app cache and force a fresh read from the device firmware."
     },
     {
-      "title": "TC-LANG-007: Verify language display after Bluetooth disconnect/reconnect post-update (Poly Sync 20+)",
+      "title": "TC-LANG-FW-007: DEVICE ASYMMETRY \u2014 Surround 85 post-FW-update language UI refresh",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Sync 20+].",
-        "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
-        "Perform a firmware update that changes the language (e.g., English \u2192 Japanese).",
-        "Wait for the update to complete successfully and dismiss the success pop-up.",
-        "Navigate to Device Settings \u2192 Language selection and verify the updated language is displayed.",
-        "Disconnect Bluetooth from the phone's Bluetooth settings or turn off the Sync 20+.",
-        "Wait 10 seconds, then reconnect Bluetooth (turn Sync 20+ back on or re-pair).",
-        "Open Poly Studio Mobile app and wait for reconnection.",
-        "Navigate to Device Settings \u2192 Language selection.",
-        "Observe the displayed language."
+        "Precondition: Poly Surround 85 connected, app open, current language = English.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language. Note current selection (English).",
+        "Trigger firmware update: Navigate to Device \u2192 Software & Updates \u2192 Install available update.",
+        "Wait for update to complete (device restarts, reconnects automatically).",
+        "DO NOT restart app. Immediately navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Observe the displayed language selection.",
+        "Attempt to change language from English to French.",
+        "Observe the behavior."
       ],
-      "expected": "The Language selection row displays the updated language (Japanese) after Bluetooth disconnect and reconnect. The language value is correctly re-read from the device and not cached from a previous session."
+      "expected": "Expected: Language selection shows English. Language changes to French successfully \u2014 no dialog shown. \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): Language selection shows a stale value (e.g., previous language from before update), or 'Update currently not available' dialog appears. This test validates whether the bug is device-agnostic (also affects Surround 85) or specific to Voyager Free 60+."
     },
     {
-      "title": "TC-LANG-008: Verify language selection UI when NO language change is made during firmware update (Poly Sync 20+)",
+      "title": "TC-LANG-FW-008: DEVICE ASYMMETRY \u2014 Voyager Free 60 (non-plus) post-FW-update language UI refresh",
       "steps": [
-        "Open Poly Studio Mobile app and connect to [Sync 20+].",
-        "Navigate to Device Settings \u2192 Language selection and note the current language (e.g., 'English').",
-        "Initiate a firmware update via Device Settings \u2192 Firmware Update \u2192 Check for Updates.",
-        "During the update flow, do NOT change the language \u2014 keep the default/current language selected.",
-        "Allow the firmware update to complete 100% and dismiss the success pop-up.",
-        "Navigate to Device Settings \u2192 Language selection and observe the displayed language.",
-        "Kill and relaunch the Poly Studio Mobile app.",
-        "Reconnect to [Sync 20+] and navigate back to Device Settings \u2192 Language selection.",
-        "Observe the displayed language again."
+        "Precondition: Poly Voyager Free 60 (non-plus) connected, app open, current language = English.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language. Note current selection (English).",
+        "Trigger firmware update: Navigate to Device \u2192 Software & Updates \u2192 Install available update.",
+        "Wait for update to complete (device restarts, reconnects automatically).",
+        "DO NOT restart app. Immediately navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Observe the displayed language selection.",
+        "Attempt to change language from English to German.",
+        "Observe the behavior."
       ],
-      "expected": "The Language selection row displays the same language (English) that was set before the update, both immediately after the update and after app kill/relaunch. No language regression or unexpected change occurs when the language is not explicitly changed during the update."
+      "expected": "Expected: Language selection shows English. Language changes to German successfully \u2014 no dialog shown. \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): Language selection shows a stale value, or 'Update currently not available' dialog appears. This test validates whether the bug affects the non-plus variant of Voyager Free 60, which may have different firmware or app handling."
+    },
+    {
+      "title": "TC-LANG-FW-009: STATE MACHINE \u2014 FW update completed \u2192 language change allowed (multiple sequential changes)",
+      "steps": [
+        "Precondition: Device connected, app open, current language = English.",
+        "Trigger firmware update: Navigate to Device \u2192 Software & Updates \u2192 Install available update.",
+        "Wait for update to complete (device restarts, reconnects automatically).",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Change language from English to French. Verify success.",
+        "Change language from French to German. Verify success.",
+        "Change language from German to Spanish. Verify success.",
+        "Change language from Spanish back to English. Verify success."
+      ],
+      "expected": "Expected: All four language changes succeed without any dialog. \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): The first language change after FW update may show 'Update currently not available' dialog (per bug), or subsequent changes may fail. This validates the full state machine transition: 'FW update completed \u2192 language change allowed' is not a one-shot state \u2014 it must remain unlocked for all subsequent changes."
+    },
+    {
+      "title": "TC-LANG-FW-010: Bluetooth disconnect/reconnect after FW update \u2014 language UI and change functionality",
+      "steps": [
+        "Precondition: Device connected, app open, current language = English.",
+        "Trigger firmware update: Navigate to Device \u2192 Software & Updates \u2192 Install available update.",
+        "Wait for update to complete (device restarts, reconnects automatically).",
+        "Disconnect Bluetooth (from phone settings or app).",
+        "Reconnect Bluetooth. Wait for app to recognize device.",
+        "Navigate to: Device \u2192 Audio Settings \u2192 Language.",
+        "Observe the displayed language selection.",
+        "Attempt to change language from English to French.",
+        "Observe the behavior."
+      ],
+      "expected": "Expected: Language selection shows English. Language changes to French successfully \u2014 no dialog shown. \ud83e\udde0 BUG SIGNATURE: Actual (If Bug): Language selection shows a stale value, or 'Update currently not available' dialog appears. A Bluetooth disconnect/reconnect should force the app to re-read device state, clearing any stale in-memory cache from the post-FW-update period."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:22.879822Z"
+  "processed_at": "2026-04-25T09:46:12.944552Z"
 }
