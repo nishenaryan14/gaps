@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Find My Device - Disconnected / Out of range device details",
   "feature": "App Settings",
-  "scenario": "Find My Device shows last known location address, device name, status, last connection date, and battery percentage when headset is out of range",
+  "scenario": "Find My Device shows last known location, device status, and battery percentage when headset is out of range",
   "steps": [
-    "1. Ensure the headset is disconnected or out of range from the phone.",
-    "2. Open the Poly Studio Mobile app.",
-    "3. Navigate to the App Menu (e.g., hamburger menu or menu icon).",
-    "4. Tap 'Find My Device' from the menu.",
-    "5. Ensure GPS location permission is granted to the app.",
-    "6. Tap the gray geo icon on the Find My Device screen.",
-    "7. Observe the new window that appears."
+    "1. Ensure the Poly Bluetooth headset is disconnected or out of range from the phone.",
+    "2. Open the Poly Studio Mobile app on the Android device.",
+    "3. Navigate to the Home screen and tap the App Menu (hamburger icon or menu icon).",
+    "4. From the menu, tap \"Find My Device\".",
+    "5. If prompted, grant GPS location access to the app.",
+    "6. Observe the gray geo icon displayed on the screen and tap it.",
+    "7. Note the pop-up window that appears showing the last known location details."
   ],
-  "expected": "A new window is displayed showing: the last known location address (street & city), device name & status, date of last connection, and last known battery percentage.",
+  "expected": "A window opens displaying the last known location address (street & city), device name & status, date of last connection, and last known battery percentage.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "last-known-location",
-    "poly-studio-mobile",
-    "gps-location-permission",
-    "out-of-range",
-    "battery-percentage",
     "device-status",
-    "last-connection-date"
+    "battery-percentage",
+    "poly-studio-mobile",
+    "out-of-range",
+    "gps-location-access",
+    "geo-icon"
   ],
   "source_last_updated": "1759927716",
   "source_hash": "155aba18f56f37deea67dd4769664baabf2d0d36362256fc06bd4a0d2996b005",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.831264Z",
+  "processed_at": "2026-04-25T08:21:30.940379Z",
   "status": "active"
 }
