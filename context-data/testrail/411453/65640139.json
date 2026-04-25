@@ -5,16 +5,16 @@
   "project": "411453",
   "title": "Personal user - no tenant data in the mobile app",
   "feature": "App Settings",
-  "scenario": "Guest user in Poly Studio Mobile app shows \"None\" for Tenant name, Tenant ID, and User ID, and \"Unknown\" for Last connected in Poly Lens Menu > Support > App",
+  "scenario": "Guest user in Poly Studio Mobile app shows Tenant name, Tenant ID, and User ID as \"None\" and Last connected as \"Unknown\" in Support > App screen",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. Log in as Guest (personal user, no tenant).",
-    "3. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
-    "4. Observe the displayed values for Tenant name, Tenant ID, User ID, and Last connected.",
-    "5. Tap the 'Later' button.",
-    "6. Navigate back to Poly Lens Menu \u2192 Support \u2192 App and observe the values again."
+    "2. Ensure you are logged in as a Guest user (no tenant).",
+    "3. Tap the Poly Lens Menu (hamburger menu or menu icon).",
+    "4. Tap Support.",
+    "5. Tap App.",
+    "6. Tap the 'Later' button."
   ],
-  "expected": "For a Guest user, the Tenant name, Tenant ID, and User ID should display appropriate values (e.g., \"N/A\" or blank) and Last connected should show a valid timestamp or \"N/A\" rather than \"Unknown\". Tapping \"Later\" should not alter these values.",
+  "expected": "For a personal user (no tenant) logged in as Guest, the Tenant name, Tenant ID, and User ID fields should display appropriate values (e.g., \"N/A\" or be hidden) and Last connected should show a valid timestamp or \"N/A\".",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +24,12 @@
     "tenant-id",
     "user-id",
     "last-connected",
-    "poly-lens-menu",
-    "support-app"
+    "support-app-screen",
+    "lens-menu"
   ],
   "source_last_updated": "1760949388",
   "source_hash": "f4730afc86fb3c114bca643218b3bb723eb5634dc57b14f5e7c5a507db72a70e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.956010Z",
+  "processed_at": "2026-04-25T07:55:31.980776Z",
   "status": "active"
 }
