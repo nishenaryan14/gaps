@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "1 step DFU - Content of the Software Update tab when there is update available only for Charge Case",
-  "feature": "Firmware Updates",
-  "scenario": "Software Update tab shows earbuds as up to date and Charge Case with version info, release notes, and Update button when firmware update is available only for the Charge Case",
+  "feature": "Firmware Update",
+  "scenario": "Software Update tab shows Charge Case update available with release notes and Update button while earbuds are marked up to date on Voyager Free 60+",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Ensure a Bluetooth audio device (earbuds + charge case) is connected.",
-    "Navigate to Device Settings \u2192 [Device Name].",
-    "Tap on Software Update.",
-    "Observe the Software Update tab content when a firmware update is available only for the Charge Case (CC)."
+    "1. Launch the Poly Studio Mobile app on the phone.",
+    "2. Ensure the Osprey (Voyager Free 60+) device is connected, with the Charge Case on at least firmware 5039 and the earbuds on the latest firmware.",
+    "3. From the Home screen, tap the Favorites or Settings icon.",
+    "4. Select the Software Update tab.",
+    "5. Observe the status displayed for the Earbuds and the Charge Case."
   ],
-  "expected": "The earbuds are marked as \"Up to date\". The Charge Case displays the current firmware version, the available firmware version, release notes, and an \"Update\" button.",
+  "expected": "Earbuds are marked as \\\"Up to date\\\". The Charge Case shows its current firmware version, the available firmware version, release notes, and an \\\"Update\\\" button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "software-update",
-    "charge-case-firmware",
-    "firmware-update",
-    "poly-studio-mobile",
+    "voyager-free-60-plus",
+    "software-update-tab",
+    "charge-case-update",
     "release-notes",
-    "update-button",
-    "device-settings",
-    "earbuds-up-to-date"
+    "poly-studio-mobile",
+    "firmware-update",
+    "earbuds-up-to-date",
+    "osprey"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "9a543314c45c3180005229bacdd54e70e397de1c214d295d0edc5522e0766188",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.032728Z",
+  "processed_at": "2026-04-25T09:32:26.293884Z",
   "status": "active"
 }
