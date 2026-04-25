@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "ANC - Transparency mode behavior during the call",
   "feature": "ANC",
-  "scenario": "Transparency Mode in Device Settings > ANC tab is not greyed out and remains selectable during an active call on ANC-supported devices",
+  "scenario": "Transparency Mode in Device Settings > ANC tab is not greyed out and allows selection during an active call",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Navigate to the Home screen and tap on the connected ANC-supported device name to open Device Settings.",
-    "3. Tap on the ANC tab within Device Settings.",
-    "4. Verify that the Transparency Mode option is displayed.",
-    "5. Place an active call using the connected device (e.g., dial a number or receive an incoming call).",
-    "6. While on the active call, return to the Poly Studio Mobile app and navigate to Device Settings \u2192 ANC tab.",
-    "7. Observe the Transparency Mode option.",
-    "8. Attempt to tap/select the Transparency Mode option."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Connect to a supported Poly Bluetooth audio device (e.g., Poly Voyager Focus 2).",
+    "3. From the Home screen, tap on the connected [Device Name] to open Device Settings.",
+    "4. Navigate to Audio Settings \u2192 ANC tab.",
+    "5. Place an active call (either incoming or outgoing) using the connected Poly device.",
+    "6. While on the call, observe the Transparency Mode option within the ANC tab.",
+    "7. Attempt to tap/select the Transparency Mode option."
   ],
-  "expected": "The Transparency Mode option should be greyed out and non-selectable while on a call. If the user taps it, a pop-up dialog should appear stating \\\"This settings cannot be adjusted while on a call\\\" with an \\\"Ok\\\" button. Tapping Ok dismisses the dialog.",
+  "expected": "The Transparency Mode option should be greyed out and non-selectable. When tapped, a pop-up dialog should appear with the message \"This settings cannot be adjusted while on a call\" and an \"Ok\" button. Tapping \"Ok\" should close the dialog.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "transparency-mode",
     "anc-tab",
     "device-settings",
-    "active-call",
     "poly-studio-mobile",
-    "anc-supported-devices",
-    "call-management",
-    "ui-greyed-out"
+    "active-call",
+    "voyager-focus-2",
+    "audio-settings",
+    "call-management"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "f49d3079b3e31938fdc247ad36d398d61b3e520fd19203bae7abb06418a253ab",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.994674Z",
+  "processed_at": "2026-04-25T09:32:26.249358Z",
   "status": "active"
 }
