@@ -1,158 +1,148 @@
 [
   {
-    "title": "TC-CCL-001: CCL Settings Lock/Unlock Transition When Call Ends (Voyager Free 60+)",
+    "title": "CCL Lock Stability \u2014 No UI Flicker/Blinking During Active Call (Steady State)",
     "steps": [
-      "Launch Poly Studio Mobile app on Android.",
-      "Tap [Voyager Free 60+] from the device list.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL (Call Comfort Level) settings.",
-      "Set CCL to a mid-range value (e.g., 50).",
-      "Exit Audio Settings and return to the Home screen.",
-      "Place an active outgoing call from the phone (or receive an incoming call).",
-      "While the call is active, return to the Poly Studio Mobile app.",
-      "Tap [Voyager Free 60+] \u2192 Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Observe that CCL sliders/buttons are locked and greyed out.",
-      "End the call from the phone dialer.",
-      "Immediately (within 2 seconds) return to the CCL settings screen in the app.",
-      "Observe the CCL UI state."
+      "Precondition: Device connected (e.g., Voyager Free 60+). Navigate to: Device \u2192 Audio Settings \u2192 CCL.",
+      "Verify CCL settings are interactive (not locked) \u2014 no call active.",
+      "Initiate an outgoing call from the phone dialer.",
+      "Immediately observe the CCL settings UI for 5 continuous seconds.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 CCL.",
+      "Observe the CCL toggle and any sub-settings continuously for 10 seconds."
     ],
-    "expected": "After the call ends, CCL settings should unlock and return to their previous state (value 50) within 2 seconds. The UI should NOT show any flickering, blinking, or momentary greyed-out/locked state. The slider should be interactive and display the previously set value of 50 without any visual instability."
+    "expected": "Expected: CCL toggle and all sub-settings appear greyed out/locked immediately upon call connection and remain STABLE (no flicker, no blinking, no rapid toggling between locked/unlocked states) for the entire observation period. Actual (If Bug): CCL settings blink/rapidly toggle between locked and unlocked states during the call."
   },
   {
-    "title": "TC-CCL-002: CCL UI State at Exact Moment of Call Connection (Surround 80)",
+    "title": "CCL Lock Transition \u2014 Outgoing Call Initiation (No Flicker During Lock Application)",
     "steps": [
-      "Launch Poly Studio Mobile app on Android.",
-      "Tap [Surround 80] from the device list.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Set CCL to value 75.",
-      "Minimize the app (press Home button).",
-      "From a second phone, call the phone connected to Surround 80.",
-      "Answer the incoming call on the connected phone.",
-      "While the call is connecting (during the ring-to-connected transition), immediately foreground the Poly Studio Mobile app.",
-      "Tap [Surround 80] \u2192 Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Observe the CCL UI continuously for 5 seconds.",
-      "End the call and repeat steps 3-10 two more times."
+      "Precondition: Device connected. Navigate to: Device \u2192 Audio Settings \u2192 CCL. Note initial state (unlocked).",
+      "Start screen recording on the phone (or use continuous visual observation).",
+      "Initiate an outgoing call from the phone dialer.",
+      "Observe the CCL settings UI continuously from the moment the call starts until 3 seconds after the call is fully connected.",
+      "Stop screen recording."
     ],
-    "expected": "At the exact moment the call connects, the CCL settings should transition smoothly from unlocked to locked/greyed-out state. There should be NO blinking, flickering, or rapid toggling between locked and unlocked states. The transition should be instantaneous and stable. This behavior should be consistent across 3 consecutive attempts."
+    "expected": "Expected: CCL settings transition from unlocked to locked state exactly once, cleanly, without any intermediate unlocked flash or flicker. The lock applies within 1 second of call connection and remains stable. Actual (If Bug): CCL settings briefly show unlocked state after call connection, or flicker/blink multiple times before settling into locked state."
   },
   {
-    "title": "TC-CCL-003: CCL Settings During Call Waiting / Call Hold (Voyager Free 60+)",
+    "title": "CCL Lock Transition \u2014 Incoming Call Answer (No Flicker During Lock Application)",
     "steps": [
-      "Launch Poly Studio Mobile app on Android.",
-      "Tap [Voyager Free 60+] from the device list.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Set CCL to value 30.",
-      "Place Call A from the connected phone.",
-      "While Call A is active, observe CCL settings are locked/greyed out.",
-      "Receive an incoming Call B (call waiting).",
-      "While Call B is ringing (Call A on hold), observe the CCL settings screen.",
-      "Answer Call B (putting Call A on hold).",
-      "Observe CCL settings during the call swap transition.",
-      "Swap back to Call A (putting Call B on hold).",
-      "Observe CCL settings during the second swap.",
-      "End both calls.",
-      "Observe CCL settings after all calls end."
+      "Precondition: Device connected. Navigate to: Device \u2192 Audio Settings \u2192 CCL. Note initial state (unlocked).",
+      "Start screen recording.",
+      "Have a second phone call the test device. Answer the incoming call.",
+      "Observe the CCL settings UI continuously from the moment the call rings through answer + 3 seconds.",
+      "Stop screen recording."
     ],
-    "expected": "CCL settings should remain locked and greyed out during ALL call states: active call, call waiting, call on hold, and during call swap transitions. There should be NO blinking or flickering at any point. After both calls end, CCL settings should unlock and return to value 30 without any visual instability."
+    "expected": "Expected: CCL settings transition from unlocked to locked state exactly once upon answering the call, without flicker or intermediate unlocked flash. Actual (If Bug): CCL settings blink during the ringing-to-connected transition, or show unlocked state briefly after answering before locking."
   },
   {
-    "title": "TC-CCL-004: CCL Settings During Active Call + App Background/Foreground Cycle (Sync 20)",
+    "title": "CCL Lock During Call Waiting \u2014 Second Incoming Call",
     "steps": [
-      "Launch Poly Studio Mobile app on Android.",
-      "Tap [Sync 20] from the device list.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Set CCL to value 40.",
-      "Place an active call from the connected phone.",
-      "While call is active, foreground the Poly Studio Mobile app.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Verify CCL settings are locked and greyed out.",
+      "Precondition: Device connected. Establish an active call (Call A). Navigate to: Device \u2192 Audio Settings \u2192 CCL. Verify CCL is locked and stable.",
+      "While Call A is active, have a second phone call the test device (Call B incoming, call waiting tone heard).",
+      "Observe CCL settings continuously for 5 seconds during the call waiting alert.",
+      "Put Call A on hold and answer Call B.",
+      "Observe CCL settings continuously for 5 seconds after switching calls.",
+      "Swap back to Call A (hold Call B).",
+      "Observe CCL settings continuously for 5 seconds."
+    ],
+    "expected": "Expected: CCL settings remain locked and stable (no flicker/blinking) throughout all call waiting transitions \u2014 during the incoming call alert, after answering Call B, and when swapping between calls. The locked state is never interrupted. Actual (If Bug): CCL settings blink or briefly become unlocked during call waiting alert or call swap transitions."
+  },
+  {
+    "title": "CCL Lock During Call Hold/Resume",
+    "steps": [
+      "Precondition: Device connected. Establish an active call. Navigate to: Device \u2192 Audio Settings \u2192 CCL. Verify CCL is locked and stable.",
+      "Put the active call on hold.",
+      "Observe CCL settings continuously for 5 seconds during hold state.",
+      "Resume the call.",
+      "Observe CCL settings continuously for 5 seconds after resume."
+    ],
+    "expected": "Expected: CCL settings remain locked and stable (no flicker/blinking) during both hold and resume states. The lock persists regardless of call hold status. Actual (If Bug): CCL settings blink or become unlocked during hold state, or flicker during the hold-to-resume transition."
+  },
+  {
+    "title": "CCL Lock During Call Transfer (Bluetooth Handoff Between Devices)",
+    "steps": [
+      "Precondition: Device connected (e.g., Voyager Free 60+). Establish an active call. Navigate to: Device \u2192 Audio Settings \u2192 CCL. Verify CCL is locked and stable.",
+      "Transfer the audio from the headset to the phone handset (using phone's audio source selector).",
+      "Observe CCL settings continuously for 5 seconds after transfer.",
+      "Transfer the audio back to the headset.",
+      "Observe CCL settings continuously for 5 seconds after transfer back."
+    ],
+    "expected": "Expected: CCL settings remain locked and stable (no flicker/blinking) during and after audio transfer to phone and back to headset. The lock is tied to the call being active on the device, not to audio routing. Actual (If Bug): CCL settings blink or become unlocked momentarily during audio transfer transitions."
+  },
+  {
+    "title": "CCL Lock Persistence \u2014 App Backgrounded During Active Call",
+    "steps": [
+      "Precondition: Device connected. Establish an active call. Navigate to: Device \u2192 Audio Settings \u2192 CCL. Verify CCL is locked and stable.",
       "Press Home button to background the app.",
       "Wait 10 seconds.",
-      "Re-open Poly Studio Mobile app from the app switcher (not from cold start).",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Observe CCL UI state for 5 seconds.",
-      "While still on the CCL screen, background the app again.",
-      "Wait 30 seconds.",
-      "Foreground the app again from app switcher.",
-      "Observe CCL UI state for 5 seconds.",
-      "End the call.",
-      "Observe CCL UI state immediately after call ends."
+      "Reopen the app from the recent apps list.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 CCL.",
+      "Observe CCL settings continuously for 10 seconds."
     ],
-    "expected": "CCL settings should remain locked and greyed out consistently across all app background/foreground cycles while the call is active. There should be NO blinking, flickering, or momentary unlocking when the app is restored from background. The locked state should be stable and persistent. After the call ends, CCL settings should unlock and return to value 40."
+    "expected": "Expected: CCL settings remain locked and stable (no flicker/blinking) upon re-entering the app. The locked state persists correctly through app backgrounding and foregrounding. Actual (If Bug): CCL settings blink or show unlocked state briefly upon app re-entry before locking."
   },
   {
-    "title": "TC-CCL-005: CCL Settings During Active Call + App Force-Kill and Relaunch (Voyager Free 60+)",
+    "title": "CCL Lock Persistence \u2014 App Force-Kill and Relaunch During Active Call",
     "steps": [
-      "Launch Poly Studio Mobile app on Android.",
-      "Tap [Voyager Free 60+] from the device list.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Set CCL to value 60.",
-      "Place an active call from the connected phone.",
-      "While call is active, foreground the Poly Studio Mobile app.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Verify CCL settings are locked and greyed out.",
-      "Force-kill the Poly Studio Mobile app (swipe from recent apps or Settings \u2192 Apps \u2192 Force Stop).",
+      "Precondition: Device connected. Establish an active call. Navigate to: Device \u2192 Audio Settings \u2192 CCL. Verify CCL is locked and stable.",
+      "Force-kill the app (swipe from recent apps).",
       "Wait 5 seconds.",
-      "Relaunch Poly Studio Mobile app.",
-      "Tap [Voyager Free 60+] from the device list.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Observe CCL UI state for 10 seconds.",
-      "End the call.",
-      "Observe CCL UI state after call ends."
+      "Relaunch the app and reconnect to the device.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 CCL.",
+      "Observe CCL settings continuously for 10 seconds."
     ],
-    "expected": "After app force-kill and relaunch while a call is active, the CCL settings screen should load with CCL settings locked and greyed out. There should be NO blinking, flickering, or temporary unlocked state during the initial rendering of the CCL screen. After the call ends, CCL settings should unlock and display the previously set value of 60 (or the default value if state was not persisted across kill). The transition should be stable with no visual artifacts."
+    "expected": "Expected: CCL settings are locked and stable (no flicker/blinking) upon app relaunch while call is still active. The app correctly reads the call state from the device and applies the lock. Actual (If Bug): CCL settings initially appear unlocked or blink before locking, indicating a race condition in call state retrieval on app startup."
   },
   {
-    "title": "TC-CCL-006: CCL Settings Value Persistence After Call Ends \u2014 Verify No Reset (Surround 80)",
+    "title": "CCL Lock Stability \u2014 Rapid Call Start/End Cycles",
     "steps": [
-      "Launch Poly Studio Mobile app on Android.",
-      "Tap [Surround 80] from the device list.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Set CCL to a non-default value (e.g., 80).",
-      "Take a screenshot of the CCL value.",
-      "Exit to Home screen.",
-      "Place an active call from the connected phone (duration: 2 minutes).",
-      "During the call, do NOT open the app.",
-      "End the call.",
-      "Wait 5 seconds.",
-      "Open Poly Studio Mobile app.",
-      "Tap [Surround 80] \u2192 Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Observe the CCL value displayed.",
-      "Compare with the screenshot taken in step 5.",
-      "Repeat steps 1-14 two more times with different CCL values (e.g., 20 and 50)."
+      "Precondition: Device connected. Navigate to: Device \u2192 Audio Settings \u2192 CCL.",
+      "Start screen recording.",
+      "Initiate a call, wait 2 seconds, end the call.",
+      "Immediately initiate another call, wait 2 seconds, end the call.",
+      "Repeat rapid call start/end cycle 5 times total.",
+      "Observe CCL settings continuously during all transitions.",
+      "Stop screen recording."
     ],
-    "expected": "After the call ends, the CCL settings should display the SAME value that was set before the call (80, 20, 50 respectively). The value should NOT reset to default. The UI should be stable with no blinking or flickering. The slider should be interactive and show the correct persisted value on all 3 attempts."
+    "expected": "Expected: CCL settings lock cleanly during each call and unlock cleanly after each call ends. No flicker, blinking, or residual lock state across cycles. The UI state transitions exactly once per call start and once per call end. Actual (If Bug): CCL settings blink during rapid transitions, or the lock/unlock state becomes desynchronized (e.g., remains locked after call ends or becomes unlocked during a call)."
   },
   {
-    "title": "TC-CCL-007: Rapid Call State Transitions \u2014 CCL UI Stability (Voyager Free 60+)",
+    "title": "CCL Lock \u2014 Device Asymmetry: Sync 20 vs. Voyager Free 60+ vs. Surround 80",
     "steps": [
-      "Launch Poly Studio Mobile app on Android.",
-      "Tap [Voyager Free 60+] from the device list.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Set CCL to value 45.",
-      "Keep the CCL settings screen visible on the phone.",
-      "From a second phone, rapidly place and end calls to the connected phone (call \u2192 answer \u2192 hang up) 5 times in quick succession (each call lasting ~3 seconds).",
-      "During each call transition (ringing \u2192 connected \u2192 ended), observe the CCL UI continuously.",
-      "After the 5th call ends, observe the CCL UI for 10 seconds.",
-      "Interact with the CCL slider to verify it is functional."
+      "Precondition: Test device = Poly Sync 20. Connect and pair.",
+      "Establish an active call. Navigate to: Device \u2192 Audio Settings \u2192 CCL.",
+      "Observe CCL settings continuously for 10 seconds. Note any flicker/blinking.",
+      "End the call. Disconnect Sync 20.",
+      "Precondition: Test device = Voyager Free 60+. Connect and pair.",
+      "Establish an active call. Navigate to: Device \u2192 Audio Settings \u2192 CCL.",
+      "Observe CCL settings continuously for 10 seconds. Note any flicker/blinking.",
+      "End the call. Disconnect Voyager Free 60+.",
+      "Precondition: Test device = Poly Surround 80. Connect and pair.",
+      "Establish an active call. Navigate to: Device \u2192 Audio Settings \u2192 CCL.",
+      "Observe CCL settings continuously for 10 seconds. Note any flicker/blinking.",
+      "End the call."
     ],
-    "expected": "During all 5 rapid call transitions, the CCL UI should transition cleanly between locked (during call) and unlocked (after call ends) states. There should be NO blinking, flickering, or visual instability at any transition point. After all calls end, the CCL slider should be fully interactive and display value 45 without any delay or visual artifacts."
+    "expected": "Expected: CCL settings remain locked and stable (no flicker/blinking) on ALL three device types during an active call. The locking behavior is consistent across Sync 20, Voyager Free 60+, and Surround 80. Actual (If Bug): One or more device types exhibit CCL blinking/flickering while others do not \u2014 indicating device-specific race condition in CCL lock implementation."
   },
   {
-    "title": "TC-CCL-008: CCL Settings During Multi-Party Conference Call (Surround 80)",
+    "title": "CCL Lock \u2014 Immediate State Trigger: Change CCL Setting and Immediately Start Call",
     "steps": [
-      "Launch Poly Studio Mobile app on Android.",
-      "Tap [Surround 80] from the device list.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Set CCL to value 70.",
-      "Initiate a 3-way conference call from the connected phone (Call A + Call B merged).",
-      "While the conference call is active, foreground the Poly Studio Mobile app.",
-      "Navigate to Audio Settings \u2192 Call Experience \u2192 CCL settings.",
-      "Observe CCL UI state for 10 seconds.",
-      "While observing, have one participant leave the conference call.",
-      "Observe CCL UI during the participant drop.",
-      "End the conference call.",
-      "Observe CCL UI state after call ends."
+      "Precondition: Device connected. Navigate to: Device \u2192 Audio Settings \u2192 CCL.",
+      "Set CCL to ON (if available) or adjust a CCL sub-setting.",
+      "IMMEDIATELY (within 1 second) initiate an outgoing call from the phone dialer WITHOUT navigating away from the CCL screen.",
+      "Observe CCL settings continuously for 10 seconds during the call."
     ],
-    "expected": "CCL settings should remain locked and greyed out during the entire multi-party conference call, including during the participant drop transition. There should be NO blinking or flickering. After the conference call ends, CCL settings should unlock and return to value 70 without any visual instability."
+    "expected": "Expected: CCL settings lock cleanly and immediately upon call connection, regardless of whether a CCL change was just made. No flicker, no blinking, no race condition between the setting change and the lock application. The last CCL value set before the call persists. Actual (If Bug): CCL settings blink or the recently changed value is lost/reset during the lock transition."
+  },
+  {
+    "title": "CCL Lock \u2014 Call End Transition (Lock Releases Cleanly)",
+    "steps": [
+      "Precondition: Device connected. Establish an active call. Navigate to: Device \u2192 Audio Settings \u2192 CCL. Verify CCL is locked and stable.",
+      "Start screen recording.",
+      "End the call from the phone dialer.",
+      "Observe CCL settings continuously from call end until 5 seconds after.",
+      "Stop screen recording.",
+      "Interact with CCL settings (toggle or adjust)."
+    ],
+    "expected": "Expected: CCL settings transition from locked to unlocked state exactly once, cleanly, without flicker. Settings become interactive immediately after call ends. No residual lock state. Actual (If Bug): CCL settings blink during call end transition, or remain locked for a period after call ends, or briefly flash locked/unlocked multiple times before settling to unlocked."
   }
 ]
