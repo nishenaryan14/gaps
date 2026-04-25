@@ -5,16 +5,17 @@
   "project": "411453",
   "title": "[IOS] Location Sharing Dialogue - Don't Allow - Cancel",
   "feature": "App Settings",
-  "scenario": "Location permission popup appears in Find My Device after declining location sharing during onboarding; tapping Cancel returns to Poly Lens Menu",
+  "scenario": "Location permission popup with \"Cancel\" and \"Enable Now\" appears in Find My Device after declining location sharing during onboarding; tapping Cancel returns to Poly Lens Menu",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. During onboarding, when the Location Sharing dialogue appears, tap \"Don't Allow\".",
-    "3. Complete the remaining onboarding steps to reach the Home screen.",
-    "4. Navigate to App Settings (gear icon) \u2192 Find My Device.",
-    "5. Observe the permission popup that appears.",
-    "6. Tap \"Cancel\" on the permission popup."
+    "1. Launch the Poly Studio Mobile app and begin onboarding.",
+    "2. When the Location Sharing dialogue appears, tap \"Don't Allow\".",
+    "3. Complete onboarding and navigate to the Home screen.",
+    "4. Tap the menu icon (hamburger) to open the Poly Lens Menu.",
+    "5. Tap \"Find My Device\" under App Settings.",
+    "6. Observe the permission popup that appears with \"Cancel\" and \"Enable Now\" options.",
+    "7. Tap \"Cancel\" on the permission popup."
   ],
-  "expected": "The user remains on the Find My Device screen within the app, or the permission request is dismissed without navigating away.",
+  "expected": "Tapping \"Cancel\" should dismiss the popup and remain on the Find My Device screen within the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,14 +23,13 @@
     "find-my-device",
     "location-permission",
     "permission-popup",
-    "onboarding",
-    "location-sharing",
     "poly-lens-menu",
-    "app-settings"
+    "onboarding",
+    "location-sharing"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "62f7efea81a876f1627372dd7e7c2f56f14a07f7f4163a75c1e8a3a5861ab981",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.910862Z",
+  "processed_at": "2026-04-25T09:32:26.130637Z",
   "status": "active"
 }
