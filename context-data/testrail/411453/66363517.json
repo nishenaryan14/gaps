@@ -4,27 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "[App] Flamingo - Connect headset already paired with charge case",
-  "feature": "App - Flamingo",
-  "scenario": "Connect a headset that is already paired with the charge case but not with the app, then pair it with the app and verify battery indicators and software update info.",
-  "steps": [
-    "Pair headset with the app.",
-    "Go to Settings > Software Update."
-  ],
-  "expected": "1. Headset appears properly, two battery indicators are visible on home screen (headset and case).\\n2. Update all button is present (if DFU available), info about headset and charge case is displayed.",
+  "feature": "Bluetooth Pairing",
+  "scenario": "Headset pre-paired with charge case shows dual battery indicators and charge case info in Software Update after pairing with Poly Studio Mobile app",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "headset pairing",
-    "app pairing",
-    "battery indicator",
-    "software update",
-    "charge case",
-    "settings",
-    "bluetooth headset"
+    "battery-indicators",
+    "charge-case",
+    "software-update",
+    "poly-studio-mobile",
+    "bluetooth-pairing",
+    "dual-battery",
+    "headset-pairing"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "a728fb67f89fb820c08bc598cbf93f04a0e5ed5982e297e9692538a98051735c",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.344816Z",
+  "processed_at": "2026-04-25T05:37:16.979750Z",
   "status": "active"
 }
