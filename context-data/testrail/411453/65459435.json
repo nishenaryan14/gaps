@@ -5,17 +5,17 @@
   "project": "411453",
   "title": "Software Update - DFU -  Locking mobile device during update",
   "feature": "Firmware Update",
-  "scenario": "Firmware update (DFU) continues running or completes successfully when mobile device is locked during the update process",
+  "scenario": "Firmware update (DFU) continues running or completes successfully when the mobile device is locked during the update process",
   "steps": [
     "1. Open the Poly Studio Mobile app on the mobile device.",
     "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
     "3. Initiate a firmware update (DFU) for the connected Poly Bluetooth audio device.",
-    "4. While the DFU is in progress, press the Power button on the mobile device to lock the screen.",
-    "5. Wait for a reasonable duration (e.g., 30\u201360 seconds).",
+    "4. While the DFU is in progress, lock the mobile device (press the power button or allow the screen to time out).",
+    "5. Wait for a reasonable duration (e.g., 1\u20132 minutes).",
     "6. Unlock the mobile device and return to the Poly Studio Mobile app.",
     "7. Observe the DFU status on the Device Settings or Home screen."
   ],
-  "expected": "The firmware update (DFU) is still running or has successfully completed. No error, interruption, or failure message is shown.",
+  "expected": "The firmware update is still running (progress indicator visible) or has successfully completed (success message shown).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -23,13 +23,13 @@
     "dfu",
     "poly-studio-mobile",
     "device-settings",
-    "screen-lock",
-    "battery-persistence",
-    "update-continuity"
+    "mobile-device-lock",
+    "update-persistence",
+    "bluetooth-audio-device"
   ],
   "source_last_updated": "1763371055",
   "source_hash": "1ed716413f658640a27f2da172303380435a834ef12ccd9512a32ecf21f0f605",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.881571Z",
+  "processed_at": "2026-04-25T07:55:31.957714Z",
   "status": "active"
 }
