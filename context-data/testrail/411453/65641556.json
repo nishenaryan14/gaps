@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "ANC - 2b-Change ANC to\u202fOff\u202fduring call when Transparency is ON before call",
   "feature": "ANC",
-  "scenario": "ANC and Transparency mode interaction breaks during calls: ANC turns ON, Transparency greys out, and post-call state differs between Emu/Osprey/Tern and Lark/Peregrine devices",
+  "scenario": "ANC and Transparency mode states are incorrectly managed during and after calls, with device-specific behavior differences between Emu/Osprey/Tern and Lark/Peregrine",
   "steps": [],
   "expected": "",
   "coverage": [],
@@ -14,7 +14,7 @@
     "anc",
     "transparency-mode",
     "call-management",
-    "post-call-state",
+    "state-persistence",
     "emu",
     "osprey",
     "tern",
@@ -24,6 +24,6 @@
   "source_last_updated": "1760956286",
   "source_hash": "a291f4a69815c3cc2020107a81c596181a2f6bd17c9af63a344efc85ec0033c2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.839295Z",
+  "processed_at": "2026-04-25T07:55:31.927866Z",
   "status": "active"
 }
