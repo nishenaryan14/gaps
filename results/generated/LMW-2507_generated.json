@@ -1,202 +1,115 @@
 [
   {
-    "title": "TC-DFU-CRASH-001: Verify DFU initiation for Voyager Free 60+ UC Charge Case (CC) does not crash app",
+    "title": "CCX Sub-Device DFU Initiation \u2014 App Stability Check",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Verify firmware update notification is present (or manually trigger check for update via Settings \u2192 Firmware Update)",
-      "5. Tap 'Update' or 'Start Update' for the Charge Case (CC) firmware",
-      "6. Observe app behavior during the update initiation sequence",
-      "7. Wait 10 seconds and check if the app remains responsive"
+      "Connect a Poly CCX device (e.g., CCX 500/600) to the Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Verify the component list renders correctly (base station, handset, etc.).",
+      "Tap 'Start DFU' on a sub-device component (e.g., base station firmware).",
+      "Observe app behavior immediately after tapping."
     ],
-    "expected": "The Poly Studio Mobile app does not crash, freeze, or become unresponsive when initiating the Charge Case firmware update. The update progress screen appears and the update proceeds normally."
+    "expected": "App remains stable and responsive. No crash, ANR, or force-close occurs. The DFU initiation dialog or progress screen appears. Actual (If Bug): App crashes immediately upon tapping 'Start DFU' on the CCX sub-device component."
   },
   {
-    "title": "TC-DFU-CRASH-002: Verify DFU initiation for Voyager Free 60+ UC Charging Case (CS) does not crash app",
+    "title": "CS540 Sub-Device DFU Initiation \u2014 App Stability Check",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Verify firmware update notification is present (or manually trigger check for update via Settings \u2192 Firmware Update)",
-      "5. Tap 'Update' or 'Start Update' for the Charging Case (CS) firmware",
-      "6. Observe app behavior during the update initiation sequence",
-      "7. Wait 10 seconds and check if the app remains responsive"
+      "Connect a Poly CS540 DECT headset to the Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Verify the component list renders correctly (headset, base station, charging stand).",
+      "Tap 'Start DFU' on the base station sub-device component.",
+      "Observe app behavior immediately after tapping."
     ],
-    "expected": "The Poly Studio Mobile app does not crash, freeze, or become unresponsive when initiating the Charging Case firmware update. The update progress screen appears and the update proceeds normally."
+    "expected": "App remains stable and responsive. No crash, ANR, or force-close occurs. The DFU initiation dialog or progress screen appears. Actual (If Bug): App crashes immediately upon tapping 'Start DFU' on the CS540 base station sub-device component."
   },
   {
-    "title": "TC-DFU-CRASH-003: Verify DFU initiation for CC while media is streaming does not crash app",
+    "title": "CCX Sub-Device DFU Initiation \u2014 Component List Rendering Before DFU",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Start playing music or a podcast on the phone (e.g., Spotify, YouTube)",
-      "4. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "5. Tap 'Update' or 'Start Update' for the Charge Case (CC) firmware",
-      "6. Observe app behavior during the update initiation",
-      "7. Verify media playback state after 10 seconds"
+      "Connect a Poly CCX device to the Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Observe the full component list rendered on screen.",
+      "Verify each sub-device entry shows firmware version and update availability.",
+      "Tap 'Start DFU' on the first sub-device component."
     ],
-    "expected": "The Poly Studio Mobile app does not crash. The firmware update initiation proceeds. Media playback may pause or continue depending on firmware update requirements, but the app remains stable and responsive."
+    "expected": "All sub-device components render with correct firmware version strings and update status. No blank entries, 'null' values, or formatting errors. Tapping 'Start DFU' does not crash the app. Actual (If Bug): Component list shows malformed/null firmware info, or app crashes when parsing/displaying sub-device data before DFU starts."
   },
   {
-    "title": "TC-DFU-CRASH-004: Verify DFU initiation for CS while media is streaming does not crash app",
+    "title": "CS540 Sub-Device DFU Initiation \u2014 Immediate App Backgrounding After Tap",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Start playing music or a podcast on the phone (e.g., Spotify, YouTube)",
-      "4. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "5. Tap 'Update' or 'Start Update' for the Charging Case (CS) firmware",
-      "6. Observe app behavior during the update initiation",
-      "7. Verify media playback state after 10 seconds"
+      "Connect a Poly CS540 DECT headset to the Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Tap 'Start DFU' on the headset sub-device component.",
+      "IMMEDIATELY press the Home button to background the app (within 1 second of tapping).",
+      "Wait 5 seconds, then foreground the app by tapping the app icon."
     ],
-    "expected": "The Poly Studio Mobile app does not crash. The firmware update initiation proceeds. Media playback may pause or continue depending on firmware update requirements, but the app remains stable and responsive."
+    "expected": "App does not crash upon backgrounding or foregrounding. The DFU state is preserved or gracefully handled (either DFU continues or shows a consistent error state). No ANR or blank screen on return. Actual (If Bug): App crashes on backgrounding or shows a frozen/blank screen upon return."
   },
   {
-    "title": "TC-DFU-CRASH-005: Verify DFU initiation for CC after app background/foreground cycle does not crash app",
+    "title": "CCX Sub-Device DFU Initiation \u2014 App Force-Kill Mid-Initiation",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Tap 'Update' or 'Start Update' for the Charge Case (CC) firmware",
-      "5. Immediately press the Home button to background the app",
-      "6. Wait 5 seconds",
-      "7. Reopen the Poly Studio Mobile app from the app switcher or home screen",
-      "8. Observe app behavior"
+      "Connect a Poly CCX device to the Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Tap 'Start DFU' on a sub-device component.",
+      "IMMEDIATELY (within 1 second) force-kill the app via Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Force Stop.",
+      "Reopen the app and reconnect to the CCX device.",
+      "Navigate to: Device \u2192 Software Update"
     ],
-    "expected": "The Poly Studio Mobile app does not crash upon backgrounding or foregrounding during the CC firmware update initiation. The app returns to the update screen or a stable state without crashing."
+    "expected": "App reopens without crash. The Software Update tab loads correctly showing all sub-device components with their current firmware info. No persistent crash loop. Actual (If Bug): App enters a crash loop on restart, or the Software Update tab fails to render sub-device components after the interrupted DFU initiation."
   },
   {
-    "title": "TC-DFU-CRASH-006: Verify DFU initiation for CS after app background/foreground cycle does not crash app",
+    "title": "Device Asymmetry \u2014 Voyager Free 60+ DFU vs CCX DFU Initiation Comparison",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Tap 'Update' or 'Start Update' for the Charging Case (CS) firmware",
-      "5. Immediately press the Home button to background the app",
-      "6. Wait 5 seconds",
-      "7. Reopen the Poly Studio Mobile app from the app switcher or home screen",
-      "8. Observe app behavior"
+      "Connect a Poly Voyager Free 60+ to the app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Tap 'Start DFU' on the earbuds component \u2014 verify success.",
+      "Disconnect Voyager Free 60+ and connect a Poly CCX device.",
+      "Navigate to: Device \u2192 Software Update",
+      "Tap 'Start DFU' on a CCX sub-device component."
     ],
-    "expected": "The Poly Studio Mobile app does not crash upon backgrounding or foregrounding during the CS firmware update initiation. The app returns to the update screen or a stable state without crashing."
+    "expected": "Voyager Free 60+ DFU initiation proceeds normally (dialog/progress appears). CCX DFU initiation also proceeds without crash. Both device types handle the 'Start DFU' tap identically from a stability perspective. Actual (If Bug): CCX DFU initiation crashes while Voyager Free 60+ DFU works fine, indicating device asymmetry in DFU initiation handling."
   },
   {
-    "title": "TC-DFU-CRASH-007: Verify DFU initiation for CC after Bluetooth disconnect/reconnect does not crash app",
+    "title": "Device Asymmetry \u2014 CS540 Sub-Device DFU vs Earbud DFU Initiation",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Tap 'Update' or 'Start Update' for the Charge Case (CC) firmware",
-      "5. While update is initiating, disable Bluetooth on the phone (via Quick Settings)",
-      "6. Wait 5 seconds",
-      "7. Re-enable Bluetooth on the phone",
-      "8. Wait for the earbuds to reconnect automatically",
-      "9. Observe app behavior"
+      "Connect a Poly Voyager Free 60+ to the app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Tap 'Start DFU' on the charge case component \u2014 verify success.",
+      "Disconnect Voyager Free 60+ and connect a Poly CS540 DECT headset.",
+      "Navigate to: Device \u2192 Software Update",
+      "Tap 'Start DFU' on the CS540 base station sub-device component."
     ],
-    "expected": "The Poly Studio Mobile app does not crash during Bluetooth disconnect/reconnect while the CC firmware update is initiating. The app handles the state transition gracefully and may show a reconnection or retry prompt without crashing."
+    "expected": "Voyager Free 60+ charge case DFU initiation proceeds normally. CS540 base station DFU initiation also proceeds without crash. Actual (If Bug): CS540 base station DFU initiation crashes while Voyager Free 60+ charge case DFU works fine, confirming device asymmetry specific to DECT/desk phone sub-device DFU."
   },
   {
-    "title": "TC-DFU-CRASH-008: Verify DFU initiation for CS after Bluetooth disconnect/reconnect does not crash app",
+    "title": "CCX Sub-Device DFU \u2014 Rapid Repeated Initiation Taps",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Tap 'Update' or 'Start Update' for the Charging Case (CS) firmware",
-      "5. While update is initiating, disable Bluetooth on the phone (via Quick Settings)",
-      "6. Wait 5 seconds",
-      "7. Re-enable Bluetooth on the phone",
-      "8. Wait for the earbuds to reconnect automatically",
-      "9. Observe app behavior"
+      "Connect a Poly CCX device to the Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Rapidly tap 'Start DFU' on a sub-device component 10 times in quick succession (< 3 seconds).",
+      "Observe app behavior."
     ],
-    "expected": "The Poly Studio Mobile app does not crash during Bluetooth disconnect/reconnect while the CS firmware update is initiating. The app handles the state transition gracefully and may show a reconnection or retry prompt without crashing."
+    "expected": "App does not crash, ANR, or become unresponsive. Only one DFU initiation dialog/progress is triggered (duplicate taps are debounced). Actual (If Bug): App crashes due to race condition from multiple simultaneous DFU initiation requests, or multiple overlapping DFU dialogs appear."
   },
   {
-    "title": "TC-DFU-CRASH-009: Verify DFU initiation for CC with low battery on earbuds does not crash app",
+    "title": "CS540 Sub-Device DFU \u2014 Component List Scroll + Initiation",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth with battery level below 15%",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Tap 'Update' or 'Start Update' for the Charge Case (CC) firmware",
-      "5. Observe app behavior during the update initiation"
+      "Connect a Poly CS540 DECT headset to the Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Scroll the component list up and down multiple times to ensure all sub-device entries are rendered.",
+      "Tap 'Start DFU' on the last visible sub-device component (e.g., charging stand).",
+      "Observe app behavior."
     ],
-    "expected": "The Poly Studio Mobile app does not crash. The app should display a low battery warning if applicable, but should not crash. The update may be blocked with a user-friendly message, or proceed if battery is sufficient."
+    "expected": "All sub-device components render correctly during scrolling. No blank entries, overlapping text, or rendering glitches. Tapping 'Start DFU' on any scrolled-to component does not crash the app. Actual (If Bug): App crashes when tapping DFU on a component that was scrolled into view, indicating lazy-loading or view recycling issues."
   },
   {
-    "title": "TC-DFU-CRASH-010: Verify DFU initiation for CS with low battery on earbuds does not crash app",
+    "title": "CCX Sub-Device DFU \u2014 Phone Rotation During Initiation",
     "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth with battery level below 15%",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Tap 'Update' or 'Start Update' for the Charging Case (CS) firmware",
-      "5. Observe app behavior during the update initiation"
+      "Connect a Poly CCX device to the Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Software Update",
+      "Tap 'Start DFU' on a sub-device component.",
+      "Immediately rotate the phone to landscape orientation.",
+      "Rotate back to portrait orientation.",
+      "Observe app behavior."
     ],
-    "expected": "The Poly Studio Mobile app does not crash. The app should display a low battery warning if applicable, but should not crash. The update may be blocked with a user-friendly message, or proceed if battery is sufficient."
-  },
-  {
-    "title": "TC-DFU-CRASH-011: Verify rapid sequential DFU initiation (CC then CS) does not crash app",
-    "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Tap 'Update' or 'Start Update' for the Charge Case (CC) firmware",
-      "5. Within 2 seconds, also tap 'Update' or 'Start Update' for the Charging Case (CS) firmware",
-      "6. Observe app behavior"
-    ],
-    "expected": "The Poly Studio Mobile app does not crash. The app should handle the rapid sequential update requests gracefully, either queuing the second update or showing a message that an update is already in progress, without crashing."
-  },
-  {
-    "title": "TC-DFU-CRASH-012: Verify DFU initiation for CC after app force-kill and relaunch does not crash app",
-    "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Tap 'Update' or 'Start Update' for the Charge Case (CC) firmware",
-      "5. Immediately force-kill the Poly Studio Mobile app (swipe away from Recent Apps)",
-      "6. Wait 5 seconds",
-      "7. Relaunch the Poly Studio Mobile app",
-      "8. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "9. Tap 'Update' or 'Start Update' for the Charge Case (CC) firmware again",
-      "10. Observe app behavior"
-    ],
-    "expected": "The Poly Studio Mobile app does not crash upon relaunch or upon re-initiating the CC firmware update. The app should recover cleanly and allow the update to be started again."
-  },
-  {
-    "title": "TC-DFU-CRASH-013: Verify DFU initiation for CS after app force-kill and relaunch does not crash app",
-    "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "4. Tap 'Update' or 'Start Update' for the Charging Case (CS) firmware",
-      "5. Immediately force-kill the Poly Studio Mobile app (swipe away from Recent Apps)",
-      "6. Wait 5 seconds",
-      "7. Relaunch the Poly Studio Mobile app",
-      "8. Navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "9. Tap 'Update' or 'Start Update' for the Charging Case (CS) firmware again",
-      "10. Observe app behavior"
-    ],
-    "expected": "The Poly Studio Mobile app does not crash upon relaunch or upon re-initiating the CS firmware update. The app should recover cleanly and allow the update to be started again."
-  },
-  {
-    "title": "TC-DFU-CRASH-014: Verify DFU initiation for CC during an active phone call does not crash app",
-    "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Initiate or receive a phone call on the earbuds",
-      "4. While the call is active, navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "5. Tap 'Update' or 'Start Update' for the Charge Case (CC) firmware",
-      "6. Observe app behavior"
-    ],
-    "expected": "The Poly Studio Mobile app does not crash. The app should display a warning that the device is in use and cannot be updated during a call, or gracefully block the update without crashing."
-  },
-  {
-    "title": "TC-DFU-CRASH-015: Verify DFU initiation for CS during an active phone call does not crash app",
-    "steps": [
-      "1. Launch Poly Studio Mobile app on the phone",
-      "2. Ensure Poly Voyager Free 60+ UC earbuds are connected via Bluetooth",
-      "3. Initiate or receive a phone call on the earbuds",
-      "4. While the call is active, navigate to Device screen \u2192 tap [Voyager Free 60+ UC]",
-      "5. Tap 'Update' or 'Start Update' for the Charging Case (CS) firmware",
-      "6. Observe app behavior"
-    ],
-    "expected": "The Poly Studio Mobile app does not crash. The app should display a warning that the device is in use and cannot be updated during a call, or gracefully block the update without crashing."
+    "expected": "App does not crash during or after rotation. The DFU initiation state is preserved across configuration changes. No blank screen, overlapping UI elements, or ANR. Actual (If Bug): App crashes on rotation due to improper handling of DFU initiation state during Activity recreation."
   }
 ]
