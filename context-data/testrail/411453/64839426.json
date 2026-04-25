@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Don't Allow is selected",
   "feature": "App Settings",
-  "scenario": "Location permission prompt reappears in Find My Device screen after user selects \"Don't Allow\" during onboarding on Poly Studio Mobile app",
+  "scenario": "Location permission dialog reappears in Find My Device screen after user selects \"Don't Allow\" during onboarding on Poly Studio Mobile app",
   "steps": [
     "Launch Poly Studio Mobile app for the first time",
     "Complete the onboarding flow",
     "When the location sharing dialog appears, tap \"Don't Allow\"",
-    "Navigate to Home screen",
-    "Tap on the menu icon (hamburger) or settings gear",
-    "Go to App Settings",
-    "Select \"Find My Device\"",
-    "Observe the permission prompt that appears"
+    "Navigate to App Settings > Find My Device",
+    "Observe the permission for location usage window that pops up with \"Cancel\" and \"Enable Now\" options, with the Find My Device screen visible in the background",
+    "Restart the Poly Studio Mobile app",
+    "Navigate again to App Settings > Find My Device"
   ],
-  "expected": "After selecting \"Don't Allow\" initially, navigating to Find My Device should show a permission prompt with \"Cancel\" and \"Enable Now\" options, with the Find My Device screen visible behind the prompt. This behavior should persist after restarting the app.",
+  "expected": "After selecting \"Don't Allow\" on the initial location sharing dialog, navigating to Find My Device should either gracefully show the feature with limited functionality or prompt the user to enable location permissions in a standard manner. The behavior should not persist indefinitely after restarting the app without any change in permission state.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "find-my-device",
     "location-permission",
-    "onboarding-flow",
-    "permission-prompt",
-    "dont-allow",
+    "onboarding",
+    "don't-allow",
+    "permission-dialog",
     "app-settings",
     "permission-persistence"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "a6367c385c3ee2007ce25ae1cb88fe4a8ce85d33043cf86c50cd803658dda995",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.787180Z",
+  "processed_at": "2026-04-25T08:21:30.915908Z",
   "status": "active"
 }
