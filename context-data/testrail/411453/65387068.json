@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "Feedback - the thank you card after sending the feedback",
   "feature": "App Settings",
-  "scenario": "\"Thank you\" feedback confirmation card does not auto-dismiss after 5 seconds or via back button in Poly Studio Mobile app",
+  "scenario": "\"Thank you\" feedback confirmation card does not auto-dismiss after 5 seconds or allow back button dismissal in Poly Studio Mobile app",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
     "2. Navigate to the Home screen.",
     "3. Tap the menu icon (hamburger menu) in the top-left corner.",
-    "4. Select 'Send Feedback' from the menu.",
-    "5. Fill in the feedback form with relevant details.",
-    "6. Tap the 'Submit' or 'Send' button to submit the feedback.",
-    "7. Observe the 'Thank you' card/note that appears on the screen."
+    "4. Select Account from the menu.",
+    "5. Scroll down and tap Send Feedback.",
+    "6. Fill in the feedback form fields (e.g., description, category).",
+    "7. Tap the Submit or Send button to submit the feedback.",
+    "8. Observe the \"Thank you\" card/note that appears on the screen after submission."
   ],
-  "expected": "A 'Thank you' card/note is displayed on the screen. The note should be visible for 5 seconds and then automatically disappear. Alternatively, the user can dismiss the note immediately by tapping the back button.",
+  "expected": "A \"Thank you\" card/note is displayed after submitting feedback. The note should remain visible for 5 seconds and then automatically disappear, or the user should be able to dismiss it immediately by tapping the back button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "send-feedback",
+    "feedback-submission",
     "thank-you-card",
     "auto-dismiss",
-    "back-button",
-    "feedback-submission",
+    "back-button-dismissal",
+    "android",
     "ui-persistence",
-    "android-app"
+    "send-feedback"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "ebddf3609192ccd2159281ae9e42721ed4d29e996f80c8db840d0f153f6bf8ea",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.965800Z",
+  "processed_at": "2026-04-25T09:32:26.194383Z",
   "status": "active"
 }
