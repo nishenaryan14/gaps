@@ -1,7 +1,6 @@
 {
   "bug_id": "LMW-2537",
   "matched_testcases": [
-    "66317736",
     "65458387",
     "65293009",
     "65293034",
@@ -15,91 +14,148 @@
     "65293013",
     "65293014",
     "65293015",
-    "65293021"
+    "65293021",
+    "65293022"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test case covers the scenario where the data collection dialog reappears after being dismissed (by tapping outside) and then clicking a device card on the FMD screen on first launch with location denied.",
-    "Test 65293012 covers accepting location permission, not denying it.",
-    "Test 65293013 covers denying location during onboarding but does not cover the subsequent dialog dismissal and device card click interaction.",
-    "Test 65293014 covers revoking location after onboarding but not the first-launch denied state with dialog reappearance.",
-    "The specific bug flow \u2014 dismiss data collection dialog by tapping outside \u2192 click device card \u2192 dialog reappears \u2014 is entirely untested."
+    "No test covers the scenario where denying Location permission during onboarding causes a 'Data Collection' dialog to repeatedly reappear when tapping the device card on the FMD (Find My Device) Home screen, preventing navigation to Device Settings.",
+    "No test covers the interaction between Location permission denial and a subsequent Data Collection consent dialog that blocks access to the device settings screen.",
+    "No test covers the repeated reappearance of a Data Collection dialog after dismissing it by tapping outside (background tap) and re-tapping the device card.",
+    "No test covers the persistence of a blocking dialog state across multiple attempts to access device settings from the FMD Home screen after permission denial.",
+    "No test covers the scenario where the user is stuck in a loop on the FMD screen (dialog -> dismiss -> tap card -> dialog again) without ever reaching the Device Settings screen."
   ],
   "generated_testcases": [
     {
-      "title": "Data collection dialog reappears after dismissing by tapping outside and clicking device card on first launch with location denied",
+      "title": "FMD_DataCollectionDialog_Loop_LocationDenied_Onboarding",
       "steps": [
-        "1. Install the app and launch it for the first time.",
-        "2. When the location permission prompt appears, deny it.",
-        "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
-        "4. Observe that the data collection dialog is displayed on the FMD screen.",
-        "5. Tap outside the data collection dialog (e.g., tap on the background/scrim area) to dismiss it.",
-        "6. Verify the data collection dialog is dismissed and no longer visible.",
-        "7. Tap on any device card displayed on the FMD screen.",
-        "8. Observe the UI response."
+        "Factory reset the Poly Voyager Free 60+ earbuds or ensure a fresh install state.",
+        "Install Poly Studio Mobile app and launch it.",
+        "Complete Bluetooth pairing with the Poly Voyager Free 60+ earbuds.",
+        "During the onboarding flow, when prompted for Location permission, tap 'Deny' or 'While Using the App' \u2192 select 'Deny'.",
+        "Complete the remaining onboarding steps to reach the Home screen.",
+        "Tap the device card for the Poly Voyager Free 60+ on the Home screen to navigate to Device Settings.",
+        "Observe that the Device Settings screen loads successfully.",
+        "Navigate to Find My Device (FMD) by tapping the 'Find My Device' option from the device settings menu or Home screen.",
+        "On the FMD Home screen, tap the device card (the card showing the earbud name/status).",
+        "Observe the dialog that appears.",
+        "If a 'Data Collection' dialog appears, tap outside the dialog (tap on the background/grey overlay area) to dismiss it.",
+        "Immediately tap the same device card on the FMD Home screen again.",
+        "Observe whether the 'Data Collection' dialog reappears.",
+        "Repeat steps 11-13 three more times.",
+        "If the dialog appears each time, attempt to tap 'Allow' or 'Accept' on the Data Collection dialog.",
+        "Observe whether the Device Settings screen loads after accepting."
       ],
-      "expected": "After tapping outside to dismiss the data collection dialog, tapping on a device card causes the data collection dialog to reappear. The dialog is shown again instead of performing the normal device card action (e.g., navigating to device details)."
+      "expected": "After denying Location permission during onboarding, the user should NOT be stuck in a loop on the FMD screen. Either: (1) The Data Collection dialog should appear only once and then allow navigation to Device Settings on subsequent taps, OR (2) The dialog should provide a clear path to Device Settings without requiring acceptance, OR (3) A clear error/message should explain why the user cannot proceed. The dialog should NOT reappear indefinitely after being dismissed via background tap."
     },
     {
-      "title": "Data collection dialog does not reappear after accepting it and clicking device card on first launch with location denied",
+      "title": "FMD_DataCollectionDialog_BlocksDeviceSettings_AfterLocationDenial",
       "steps": [
-        "1. Install the app and launch it for the first time.",
-        "2. When the location permission prompt appears, deny it.",
-        "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
-        "4. Observe that the data collection dialog is displayed on the FMD screen.",
-        "5. Tap the accept/agree button on the data collection dialog to accept it.",
-        "6. Verify the data collection dialog is dismissed and no longer visible.",
-        "7. Tap on any device card displayed on the FMD screen.",
-        "8. Observe the UI response."
+        "Factory reset the Poly Voyager Free 60+ earbuds.",
+        "Install and launch Poly Studio Mobile app.",
+        "Pair the earbuds and complete onboarding, denying Location permission when prompted.",
+        "Navigate to the Home screen and tap the device card to enter Device Settings.",
+        "Verify Device Settings loads successfully.",
+        "Navigate to Find My Device (FMD) from the device settings menu.",
+        "On the FMD Home screen, tap the device card.",
+        "Observe the dialog that appears \u2014 note the exact title and message text.",
+        "If a 'Data Collection' dialog appears, tap the 'Accept' or 'Allow' button.",
+        "Observe whether the screen transitions to Device Settings or remains on the FMD screen.",
+        "If the dialog is dismissed (via Accept), navigate back to the FMD Home screen.",
+        "Tap the device card again.",
+        "Observe whether the Data Collection dialog reappears or the Device Settings screen loads directly."
       ],
-      "expected": "After accepting the data collection dialog, tapping on a device card performs the normal expected action (e.g., navigating to device details) and the data collection dialog does NOT reappear."
+      "expected": "After denying Location permission during onboarding, the Data Collection dialog should appear at most once on the FMD screen. After accepting or dismissing the dialog, subsequent taps on the device card should navigate directly to Device Settings without showing the dialog again. The dialog should not permanently block access to Device Settings."
     },
     {
-      "title": "Data collection dialog does not reappear after declining it and clicking device card on first launch with location denied",
+      "title": "FMD_DataCollectionDialog_Persistence_AcrossMultipleTaps_BackgroundDismiss",
       "steps": [
-        "1. Install the app and launch it for the first time.",
-        "2. When the location permission prompt appears, deny it.",
-        "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
-        "4. Observe that the data collection dialog is displayed on the FMD screen.",
-        "5. Tap the decline/do-not-accept button on the data collection dialog to decline it.",
-        "6. Verify the data collection dialog is dismissed and no longer visible.",
-        "7. Tap on any device card displayed on the FMD screen.",
-        "8. Observe the UI response."
+        "Factory reset and pair Poly Voyager Free 60+ earbuds with Poly Studio Mobile app.",
+        "During onboarding, deny Location permission.",
+        "Complete onboarding and reach the Home screen.",
+        "Navigate to Find My Device (FMD) screen.",
+        "On the FMD Home screen, tap the device card.",
+        "When the 'Data Collection' dialog appears, tap outside the dialog (on the grey overlay/background) to dismiss it.",
+        "Wait 2 seconds.",
+        "Tap the device card again.",
+        "If the dialog reappears, tap outside to dismiss again.",
+        "Repeat steps 8-9 for a total of 5 attempts.",
+        "On the 6th attempt, tap the device card and then tap the 'Accept' or 'Allow' button on the Data Collection dialog.",
+        "Observe the resulting screen.",
+        "Navigate back to FMD Home screen.",
+        "Tap the device card again.",
+        "Observe whether the Data Collection dialog reappears or Device Settings loads."
       ],
-      "expected": "After declining the data collection dialog, tapping on a device card performs the normal expected action (e.g., navigating to device details) and the data collection dialog does NOT reappear."
+      "expected": "Dismissing the Data Collection dialog by tapping outside should not cause it to reappear indefinitely. After accepting the dialog once, subsequent taps on the device card should navigate to Device Settings without showing the dialog again. The user should not be trapped in a loop where tapping the device card always shows the dialog regardless of how many times it is dismissed."
     },
     {
-      "title": "Data collection dialog reappears after dismissing by tapping outside repeatedly and clicking device card on first launch with location denied",
+      "title": "FMD_DataCollectionDialog_AppLifecycle_AfterLocationDenial",
       "steps": [
-        "1. Install the app and launch it for the first time.",
-        "2. When the location permission prompt appears, deny it.",
-        "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
-        "4. Observe that the data collection dialog is displayed on the FMD screen.",
-        "5. Tap outside the data collection dialog to dismiss it.",
-        "6. Verify the dialog is dismissed.",
-        "7. Tap on a device card and verify the data collection dialog reappears.",
-        "8. Tap outside the data collection dialog again to dismiss it.",
-        "9. Verify the dialog is dismissed again.",
-        "10. Tap on a different device card (or the same device card) on the FMD screen.",
-        "11. Observe the UI response."
+        "Factory reset and pair Poly Voyager Free 60+ earbuds with Poly Studio Mobile app.",
+        "During onboarding, deny Location permission.",
+        "Complete onboarding and reach the Home screen.",
+        "Navigate to Find My Device (FMD) screen.",
+        "Tap the device card on the FMD Home screen.",
+        "When the 'Data Collection' dialog appears, tap outside to dismiss it.",
+        "Press the Home button on the phone to background the Poly Studio Mobile app.",
+        "Wait 10 seconds, then reopen the app by tapping the app icon.",
+        "Observe that the app returns to the FMD Home screen.",
+        "Tap the device card on the FMD Home screen.",
+        "Observe whether the Data Collection dialog reappears.",
+        "If the dialog appears, tap 'Accept' or 'Allow'.",
+        "Navigate back to FMD Home screen.",
+        "Force-kill the Poly Studio Mobile app (swipe it away from the Recent Apps list).",
+        "Reopen the app and wait for the device to reconnect.",
+        "Navigate to Find My Device (FMD) screen.",
+        "Tap the device card on the FMD Home screen.",
+        "Observe whether the Data Collection dialog appears or Device Settings loads directly."
       ],
-      "expected": "The data collection dialog reappears each time after dismissing it by tapping outside and then clicking a device card. This behavior repeats consistently \u2014 the dialog should not be permanently dismissable via tapping outside when a device card is subsequently clicked."
+      "expected": "After the Data Collection dialog has been accepted once, it should not reappear after app backgrounding/foregrounding or after a full app restart (force-kill and relaunch). The user should be able to navigate directly to Device Settings from the FMD screen without seeing the dialog again."
     },
     {
-      "title": "Data collection dialog does not reappear after dismissing by tapping outside and clicking non-interactive area on FMD screen with location denied",
+      "title": "FMD_DataCollectionDialog_LocationPermission_GrantedLater_ResolvesLoop",
       "steps": [
-        "1. Install the app and launch it for the first time.",
-        "2. When the location permission prompt appears, deny it.",
-        "3. Complete the onboarding flow (if any) until reaching the Find My Device (FMD) screen.",
-        "4. Observe that the data collection dialog is displayed on the FMD screen.",
-        "5. Tap outside the data collection dialog to dismiss it.",
-        "6. Verify the data collection dialog is dismissed and no longer visible.",
-        "7. Tap on a non-interactive area of the FMD screen (e.g., empty space, background, or a label that is not a button or card).",
-        "8. Observe the UI response."
+        "Factory reset and pair Poly Voyager Free 60+ earbuds with Poly Studio Mobile app.",
+        "During onboarding, deny Location permission.",
+        "Complete onboarding and reach the Home screen.",
+        "Navigate to Find My Device (FMD) screen.",
+        "Tap the device card on the FMD Home screen.",
+        "When the 'Data Collection' dialog appears, tap outside to dismiss it.",
+        "Tap the device card again and confirm the dialog reappears (verify the loop exists).",
+        "Press the Home button to background the app.",
+        "Open phone Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions.",
+        "Grant Location permission (select 'Allow all the time' or 'While using the app').",
+        "Return to the Poly Studio Mobile app.",
+        "Navigate to FMD Home screen if not already there.",
+        "Tap the device card on the FMD Home screen.",
+        "Observe whether the Data Collection dialog appears or Device Settings loads.",
+        "If Device Settings loads, navigate back to FMD Home screen and tap the device card again to confirm the dialog does not reappear."
       ],
-      "expected": "After dismissing the data collection dialog by tapping outside, tapping on a non-interactive area of the FMD screen does NOT cause the data collection dialog to reappear. The dialog remains dismissed."
+      "expected": "Granting Location permission after initially denying it during onboarding should resolve the blocking Data Collection dialog loop. After Location permission is granted, tapping the device card on the FMD screen should navigate directly to Device Settings without showing the Data Collection dialog. The dialog should not reappear on subsequent taps."
+    },
+    {
+      "title": "FMD_DataCollectionDialog_MinMax_AcceptAndRejectPaths",
+      "steps": [
+        "Factory reset and pair Poly Voyager Free 60+ earbuds with Poly Studio Mobile app.",
+        "During onboarding, deny Location permission.",
+        "Complete onboarding and reach the Home screen.",
+        "Navigate to Find My Device (FMD) screen.",
+        "Tap the device card on the FMD Home screen.",
+        "When the 'Data Collection' dialog appears, tap the 'Decline' or 'Deny' button (if available).",
+        "Observe the resulting behavior \u2014 does the dialog close? Does the screen change?",
+        "Tap the device card again.",
+        "Observe whether the dialog reappears.",
+        "If the dialog reappears, tap 'Accept' or 'Allow'.",
+        "Verify that Device Settings loads.",
+        "Navigate back to FMD Home screen.",
+        "Tap the device card again and confirm Device Settings loads directly without the dialog.",
+        "Now, navigate to phone Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions and revoke Location permission.",
+        "Return to the app and navigate to FMD Home screen.",
+        "Tap the device card and observe whether the Data Collection dialog reappears after permission is revoked post-acceptance."
+      ],
+      "expected": "If a 'Decline' option exists on the Data Collection dialog, declining should either: (1) dismiss the dialog and allow navigation to Device Settings, or (2) dismiss the dialog but show it again on next tap. If only 'Accept' is available, accepting should permanently resolve the dialog. Revoking Location permission after having accepted the dialog should not cause the dialog to reappear \u2014 the acceptance state should persist independently of Location permission state."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-24T12:05:42.247269Z"
+  "processed_at": "2026-04-25T05:50:17.153529Z"
 }
