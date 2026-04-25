@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Support - Device page with headset disconnected",
-  "feature": "Support - Device Page",
-  "scenario": "User navigates to Support section, taps on a previously disconnected headset visible on Home Screen, and expects a modal with device details and a \"Go\" button to slide up from the bottom.",
+  "feature": "App Settings",
+  "scenario": "Device details modal fails to display when navigating to Menu > Support > [Device] for a disconnected headset visible on the Home Screen",
   "steps": [
-    "Close the app",
-    "Ensure a previously disconnected headset is visible on the Home Screen",
-    "Navigate to the Support section",
-    "Tap on a device",
-    "Tap on a specific device"
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. On the Home screen, ensure a headset is disconnected but visible in the device list.",
+    "3. Tap the Menu icon (hamburger menu) in the top-left or top-right corner.",
+    "4. From the Menu, select 'Support'.",
+    "5. In the Support screen, tap on the disconnected [Device] entry.",
+    "6. Observe the modal that appears."
   ],
-  "expected": "A modal slides up from the bottom of the screen displaying device details (Device Name, Device Product ID, Serial Number, Software Version, Headset Revision, Last Connected) along with instructions to send detailed information to Support, and a \"Go\" button.",
+  "expected": "A modal is displayed showing the following device details: Device Name, Product ID, Serial Number, Software Version, Headset Revision, and Last Connected. The modal also includes a 'Go' button for sending support information.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Support section",
-    "disconnected headset",
-    "Home Screen",
-    "device details modal",
-    "Go button",
-    "slide up bottom sheet",
-    "tap device",
-    "device connection"
+    "poly-studio-mobile",
+    "device-details-modal",
+    "disconnected-headset",
+    "support-screen",
+    "home-screen-device-list",
+    "menu-navigation",
+    "modal-display-failure"
   ],
   "source_last_updated": "1759761384",
   "source_hash": "d8e6e21576097264dbf0df1d2a29f3aeff799400c9982337133219dcd2d36e63",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.181414Z",
+  "processed_at": "2026-04-25T05:37:16.773603Z",
   "status": "active"
 }
