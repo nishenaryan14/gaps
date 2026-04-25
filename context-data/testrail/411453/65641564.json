@@ -5,23 +5,35 @@
   "project": "411453",
   "title": "ANC - 10.-ANC is OFF without selected values and the User does not toggle it ON during a call when Transparency is ON before a call",
   "feature": "ANC",
-  "scenario": "Transparency Mode is disabled and greyed out during a call when ANC is OFF, but restores to previous setting after call ends",
-  "steps": [],
-  "expected": "",
+  "scenario": "Transparency mode becomes greyed out and inaccessible during a call when ANC is OFF with no value selected before the call",
+  "steps": [
+    "1. Open Poly Studio Mobile app on the Home screen.",
+    "2. Navigate to Device Settings \u2192 [Device Name] \u2192 Audio Settings.",
+    "3. Set ANC to OFF with no value selected.",
+    "4. Set Transparency Mode to ON and select either Environment or Speech.",
+    "5. Make or receive a call.",
+    "6. During the call, observe the ANC and Transparency controls in Audio Settings.",
+    "7. Tap the Transparency toggle during the call.",
+    "8. End the call.",
+    "9. After the call, observe the ANC and Transparency controls in Audio Settings.",
+    "10. Attempt to toggle between ANC and Transparency modes normally."
+  ],
+  "expected": "During a call, ANC remains OFF with no value selected and Transparency becomes greyed out/inaccessible. Tapping the Transparency toggle during the call shows a popup indicating the option is unavailable. After the call ends, ANC remains OFF with no value selected and Transparency returns to ON with the previously selected value (Environment or Speech). The user can then toggle between ANC and Transparency modes normally.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "transparency-mode",
     "anc-off",
     "call-management",
-    "setting-persistence",
+    "audio-settings",
+    "poly-studio-mobile",
     "greyed-out",
-    "call-behavior",
-    "audio-mode"
+    "mode-toggle",
+    "call-behavior"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "53a9095d9bbe5780cfeed5e5bed2153081f75bbc5203d07d8b5e3c4e0cf256b5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.994674Z",
+  "processed_at": "2026-04-25T09:32:26.251883Z",
   "status": "active"
 }
