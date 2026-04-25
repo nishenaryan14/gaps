@@ -5,33 +5,23 @@
   "project": "411453",
   "title": "Find My Device - Don't Allow - Enable now - Allow Once [Only This Time - Android] [Deprecated for IOS]",
   "feature": "App Settings",
-  "scenario": "Find My Device location permission prompt reappears after granting \"Ask Next Time or When I Share\" permission on Android",
-  "steps": [
-    "1. Launch Poly Studio Mobile app on Android device.",
-    "2. Connect a supported Poly Bluetooth headset to the Android device.",
-    "3. From the Home screen, tap the main menu (hamburger icon) in the top-left corner.",
-    "4. Tap 'Find My Device' from the main menu.",
-    "5. When the location permission prompt appears, tap 'Don't Allow'.",
-    "6. On the Find My Device screen, tap 'Enable Now'.",
-    "7. When the system location permission dialog appears, select 'Ask Next Time or When I Share' (Android).",
-    "8. Return to the Poly Studio Mobile app.",
-    "9. Observe the location permission prompt that reappears."
-  ],
-  "expected": "After returning to the app, the location permission prompt should not reappear if the user has already made a selection. The Find My Device screen should be displayed without further permission prompts.",
+  "scenario": "Find My Device location permission prompt reappears after denying and re-enabling permission via system settings on Poly Studio Mobile app",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "find-my-device",
     "location-permission",
-    "poly-studio-mobile",
-    "android-permissions",
-    "ask-next-time-or-when-i-share",
-    "bluetooth-headset",
-    "permission-prompt-reappears"
+    "permission-prompt",
+    "system-settings",
+    "permission-re-enable",
+    "android-permissions"
   ],
   "source_last_updated": "1760352215",
   "source_hash": "172df16d660f02df5b18f33120a6a0fa999e392affa8542effd1cb1776665a3c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.772036Z",
+  "processed_at": "2026-04-25T07:55:31.847438Z",
   "status": "active"
 }
