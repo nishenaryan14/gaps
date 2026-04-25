@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "Device Home Screen - No device connected - Select Device link",
   "feature": "Device Management",
-  "scenario": "Poly Studio Mobile app home screen \"Other devices\" button opens Poly support web page when no device is connected",
+  "scenario": "Poly Studio Mobile app home screen \"Select Device\" link navigates to device list with \"Other devices\" button opening Poly support web page when no device is connected",
   "steps": [
-    "Launch Poly Studio Mobile app",
-    "Observe the Home screen when no device is connected",
-    "Tap the 'Select Device' link",
-    "Observe the list of supported Poly devices with images",
-    "Scroll to the bottom of the list",
-    "Tap the 'Other devices' button"
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Observe the Home screen when no device is connected.",
+    "3. Tap the \"Select Device\" link displayed on the Home screen.",
+    "4. Observe the list of supported devices with images.",
+    "5. Scroll to the bottom of the list.",
+    "6. Tap the \"Other devices\" button.",
+    "7. Observe the resulting action."
   ],
-  "expected": "The Poly support web page opens in a browser.",
+  "expected": "Tapping \"Other devices\" opens the Poly support web page with information about additional compatible devices.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "other-devices",
     "select-device",
+    "device-list",
+    "other-devices",
     "poly-support",
     "home-screen",
     "no-device-connected",
-    "device-list"
+    "supported-devices"
   ],
   "source_last_updated": "1774958838",
   "source_hash": "9f4e7748d9cd731530d28706109ee05f8f4558126860e641ea893979a8283061",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.912375Z",
+  "processed_at": "2026-04-25T09:32:26.133665Z",
   "status": "active"
 }
