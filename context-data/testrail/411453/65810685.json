@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "Charge case inside screen/forth screen, right zoom in/out",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide charge case inside screen zoom toggle fails when clicking the right circle button",
+  "scenario": "Tapping circle button on QSG charge case inside screen toggles zoom and text display",
   "steps": [
-    "Open the Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on Quick Start Guide (QSG)",
-    "Swipe or navigate to the fourth screen showing the charge case inside view",
-    "Tap the right circle button on the screen",
-    "Tap the right circle button again"
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Locate and tap on the Quick Start Guide (QSG) option.",
+    "4. On the QSG screen, find the charge case inside view.",
+    "5. Tap the right circle button on the charge case inside screen.",
+    "6. Observe the zoomed-in view and any new text that appears.",
+    "7. Tap the same right circle button again."
   ],
-  "expected": "First tap of the right circle button zooms in and displays new text. Second tap of the right circle button zooms out to the original screen showing the charge case inside.",
+  "expected": "Tapping the right circle button zooms in and displays new text. Tapping the circle button again zooms out to the original charge case inside screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "quick-start-guide",
+    "qsg",
     "charge-case-inside",
-    "screen-zoom-toggle",
-    "right-circle-button",
-    "home-screen-navigation",
-    "qsg-ui"
+    "circle-button",
+    "zoom-toggle",
+    "text-display"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "2148b22681bff987d2cc37779edfc087f87554f676b0b7933317001c28d700e8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.014257Z",
+  "processed_at": "2026-04-25T09:32:26.271548Z",
   "status": "active"
 }
