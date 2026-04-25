@@ -5,31 +5,34 @@
   "project": "411453",
   "title": "Rename device - Rename",
   "feature": "Device Management",
-  "scenario": "Device name change via Device Settings > General is not reflected on the Home screen",
+  "scenario": "Renaming a connected Poly Bluetooth audio device from Device Settings > General does not update the device name on the Home screen",
   "steps": [
-    "Launch the Poly Studio Mobile app with a Bluetooth audio device connected.",
-    "On the Home screen, tap the device name or gear icon to navigate to Device Settings.",
-    "In Device Settings, tap General.",
-    "Tap on the device's official name field.",
-    "Enter new text for the device name.",
-    "Tap Done to confirm the name change.",
-    "Return to the Home screen."
+    "1. Open the Poly Studio Mobile app on your mobile device.",
+    "2. Ensure a Poly Bluetooth audio device is connected and appears on the Home screen.",
+    "3. Tap the device name or icon to navigate to the Device Settings screen.",
+    "4. On the Device Settings screen, tap General.",
+    "5. Tap the device's official name field.",
+    "6. Enter a new name for the device.",
+    "7. Tap Done to confirm the new name.",
+    "8. Observe the device name on the Device Settings screen.",
+    "9. Navigate back to the Home screen and observe the device name there."
   ],
-  "expected": "The device's name is changed and the new name is reflected on the Home screen.",
+  "expected": "The device name should update and display the new name on both the Device Settings screen and the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device-name-change",
+    "poly-studio-mobile",
+    "device-rename",
     "home-screen",
     "device-settings",
     "general-settings",
-    "poly-studio-mobile",
+    "bluetooth-audio-device",
     "name-persistence",
-    "ui-refresh"
+    "ui-sync"
   ],
   "source_last_updated": "1762182893",
   "source_hash": "5f33e0901b673a2517789792fadfeafa33aa7ad681e080f89b70530cc0559fc6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.967321Z",
+  "processed_at": "2026-04-25T09:32:26.205491Z",
   "status": "active"
 }
