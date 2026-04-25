@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "App Settings - General - Account - Account delete - dialog",
   "feature": "App Settings",
-  "scenario": "Account delete dialog does not match Figma design when accessed from App Settings > General > Account",
+  "scenario": "Account delete dialog appears and matches Figma design when tapping delete icon in General > Account tab in Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
+    "1. Open the Poly Studio Mobile app on the Android device.",
     "2. Navigate to the Home screen.",
-    "3. Tap the Account icon or menu to access Account settings.",
-    "4. Go to App Settings \u2192 General \u2192 Account.",
-    "5. Locate and tap the delete icon (trash icon) next to the account.",
+    "3. Tap the menu icon (hamburger) or navigate to General settings.",
+    "4. Select the Account tab.",
+    "5. Locate and tap the delete icon (trash icon) on the Account screen.",
     "6. Observe the delete confirmation dialog that appears."
   ],
-  "expected": "A delete confirmation dialog is displayed that matches the Figma design specifications (correct layout, text, button labels, spacing, and styling).",
+  "expected": "The Account delete dialog is displayed and matches the Figma design specifications (correct layout, text, button labels, colors, and spacing).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "account-delete-dialog",
-    "app-settings",
+    "delete-icon",
+    "account-tab",
     "general-settings",
-    "delete-confirmation",
-    "ui-mismatch",
-    "figma-design"
+    "figma-design",
+    "android",
+    "confirmation-dialog"
   ],
   "source_last_updated": "1759416338",
   "source_hash": "af28e7292ae4408418d0e6f91893b5f52168ed1d54279031feb4ce1cd89d4db4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.818092Z",
+  "processed_at": "2026-04-25T08:21:30.929175Z",
   "status": "active"
 }
