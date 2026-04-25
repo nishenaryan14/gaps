@@ -1,117 +1,128 @@
 [
   {
-    "title": "TC-SUPPORTED-DEVICES-001: Supported Devices screen loads correctly from Home screen with no headset connected",
+    "title": "TC-SUPPORTED-DEVICES-001: Supported Devices screen opens and renders correctly with no headset connected",
     "steps": [
-      "Launch Poly Studio Mobile app with no headset connected (Bluetooth off or no paired devices)",
-      "Verify the Home screen is displayed",
-      "Tap the menu icon (hamburger menu) in the top-left corner",
-      "Tap 'Supported Devices' from the navigation menu",
-      "Verify the Supported Devices screen loads and displays the list of compatible Poly devices",
-      "Verify the screen is scrollable and all device categories are visible",
-      "Tap the back arrow or close button to return to the Home screen"
+      "Ensure no Poly Bluetooth headset is connected to the phone.",
+      "Open Poly Studio Mobile app.",
+      "If a device is shown on the home screen, tap the back/chevron arrow or menu icon to navigate away from any device detail screen.",
+      "Locate and tap the menu icon (hamburger menu or gear icon) in the top-left or top-right corner of the home screen.",
+      "From the menu, tap 'Supported Devices' (or 'Compatible Devices' / 'Device List' depending on app version).",
+      "Observe the Supported Devices screen that loads."
     ],
-    "expected": "Supported Devices screen loads fully with all compatible devices listed. Screen is responsive, scrollable, and all UI elements are tappable. Returning to Home screen works without errors."
+    "expected": "The Supported Devices screen loads within 3 seconds. A list of supported Poly Bluetooth devices is displayed (e.g., Voyager Free 60+ UC, Voyager 4220, etc.). The screen is fully scrollable and tappable. No loading spinner hangs indefinitely. No ANR (Application Not Responding) dialog appears."
   },
   {
-    "title": "TC-SUPPORTED-DEVICES-002: Rapid close and reopen of Supported Devices screen within 2 seconds \u2014 no headset connected",
+    "title": "TC-SUPPORTED-DEVICES-002: Supported Devices screen remains responsive after rapid close and reopen within 2 seconds (no headset connected)",
     "steps": [
-      "Launch Poly Studio Mobile app with no headset connected",
-      "Verify the Home screen is displayed",
-      "Tap the menu icon \u2192 'Supported Devices' to open the Supported Devices screen",
-      "Immediately (within 1 second) tap the back arrow or close button to return to Home screen",
-      "Within 2 seconds of closing, tap the menu icon \u2192 'Supported Devices' again",
-      "Attempt to scroll the Supported Devices list",
-      "Tap on any device category to expand it",
-      "Tap the back arrow to return to Home screen"
+      "Ensure no Poly Bluetooth headset is connected to the phone.",
+      "Open Poly Studio Mobile app.",
+      "Navigate to the Supported Devices screen (Menu \u2192 Supported Devices).",
+      "Wait for the Supported Devices screen to fully load (verify list is visible and scrollable).",
+      "Tap the back button (or close button) to return to the home screen.",
+      "Within 2 seconds of closing the Supported Devices screen, tap Menu \u2192 Supported Devices again to reopen it.",
+      "Immediately attempt to scroll the device list up and down.",
+      "Tap on any device name in the list (e.g., 'Poly Voyager Free 60+ UC').",
+      "Tap the back button to return to the Supported Devices list.",
+      "Repeat steps 5-9 two more times (total of 3 rapid open/close cycles)."
     ],
-    "expected": "Supported Devices screen opens and is fully responsive on the second open. All UI elements are tappable, scrolling works, device categories expand on tap, and the back navigation works correctly. No screen freeze, lag, or unresponsiveness occurs."
+    "expected": "The Supported Devices screen loads correctly on each reopen. Scrolling is smooth and responsive on every open. Tapping a device name navigates to the device detail/info screen each time. The back button works correctly each time. No screen freeze, blank screen, or unresponsiveness occurs at any point. No ANR dialog appears."
   },
   {
-    "title": "TC-SUPPORTED-DEVICES-003: Triple rapid cycle: Home \u2192 Supported Devices \u2192 Home \u2192 Supported Devices \u2192 Home \u2192 Supported Devices \u2014 no headset connected",
+    "title": "TC-SUPPORTED-DEVICES-003: Supported Devices screen rapid open/close cycle with app backgrounding (no headset connected)",
     "steps": [
-      "Launch Poly Studio Mobile app with no headset connected",
-      "From Home screen, tap menu icon \u2192 'Supported Devices'",
-      "Immediately tap back arrow to return to Home screen",
-      "Within 1 second, tap menu icon \u2192 'Supported Devices' again",
-      "Wait 1 second, then tap back arrow to return to Home screen",
-      "Within 1 second, tap menu icon \u2192 'Supported Devices' a third time",
-      "Verify the screen is fully loaded and responsive",
-      "Scroll to the bottom of the device list",
-      "Tap the back arrow to return to Home screen"
+      "Ensure no Poly Bluetooth headset is connected to the phone.",
+      "Open Poly Studio Mobile app.",
+      "Navigate to the Supported Devices screen (Menu \u2192 Supported Devices).",
+      "Wait for the screen to fully load.",
+      "Tap the Home button on the phone to background the app.",
+      "Within 2 seconds, reopen the app from the recent apps list or app icon.",
+      "Observe the Supported Devices screen state.",
+      "Tap the back button to return to the home screen.",
+      "Within 2 seconds, navigate back to Menu \u2192 Supported Devices.",
+      "Repeat steps 4-9 two more times."
     ],
-    "expected": "Supported Devices screen remains fully responsive after three rapid open/close cycles. No screen freeze, blank screen, overlapping UI elements, or navigation failures occur. All three cycles complete successfully."
+    "expected": "Each time the Supported Devices screen is reopened (whether from backgrounding or fresh navigation), it loads correctly with the full device list. No blank screen, frozen UI, or partial rendering occurs. The screen remains tappable and scrollable. No ANR or crash occurs."
   },
   {
-    "title": "TC-SUPPORTED-DEVICES-004: Supported Devices screen rapid open/close while device list is still rendering \u2014 no headset connected",
+    "title": "TC-SUPPORTED-DEVICES-004: Supported Devices screen state reset on each open \u2014 verify no stale state from previous session",
     "steps": [
-      "Launch Poly Studio Mobile app with no headset connected",
-      "Tap menu icon \u2192 'Supported Devices'",
-      "Before the device list finishes rendering (within 500ms), tap the back arrow",
-      "Immediately (within 1 second) tap menu icon \u2192 'Supported Devices' again",
-      "Verify the screen loads completely with all device categories visible",
-      "Tap on 'Voyager Free 60+ UC' (or first available device category) to expand",
-      "Verify the expanded view shows device details",
-      "Collapse the category and return to Home screen"
+      "Ensure no Poly Bluetooth headset is connected to the phone.",
+      "Open Poly Studio Mobile app.",
+      "Navigate to the Supported Devices screen (Menu \u2192 Supported Devices).",
+      "Scroll down to the bottom of the device list.",
+      "Tap the back button to return to the home screen.",
+      "Immediately (within 2 seconds) navigate back to Menu \u2192 Supported Devices.",
+      "Observe the scroll position of the device list.",
+      "Without scrolling, tap the first visible device name in the list.",
+      "Tap the back button to return to the Supported Devices list.",
+      "Tap the back button again to return to the home screen.",
+      "Wait 5 seconds.",
+      "Navigate to Menu \u2192 Supported Devices again.",
+      "Observe the scroll position and list state."
     ],
-    "expected": "Supported Devices screen recovers gracefully from an interrupted initial load. On the second open, the full device list renders correctly, categories are expandable, and no crash, ANR, or frozen UI occurs."
+    "expected": "Each time the Supported Devices screen is opened, the list resets to the top (scroll position = 0). The list is fully populated and not truncated. Tapping any device name works correctly on every open. No stale state (e.g., previously selected device highlight, partial list, incorrect scroll position) carries over from the previous session."
   },
   {
-    "title": "TC-SUPPORTED-DEVICES-005: Supported Devices screen opened immediately after app launch with no headset connected \u2014 rapid navigation from splash/onboarding",
+    "title": "TC-SUPPORTED-DEVICES-005: Supported Devices screen rapid open/close with concurrent Bluetooth state changes",
     "steps": [
-      "Clear app data or reinstall Poly Studio Mobile app",
-      "Launch the app and complete EULA acceptance and permission grants (if presented)",
-      "On the Home screen (no headset connected), immediately tap menu icon \u2192 'Supported Devices'",
-      "Verify the Supported Devices screen loads within 3 seconds",
-      "Rapidly tap the back arrow twice within 1 second",
-      "Verify the app returns to Home screen without crashing or showing a blank screen",
-      "Tap menu icon \u2192 'Supported Devices' again",
-      "Verify the screen is fully responsive"
+      "Ensure no Poly Bluetooth headset is connected to the phone initially.",
+      "Open Poly Studio Mobile app.",
+      "Navigate to the Supported Devices screen (Menu \u2192 Supported Devices).",
+      "While the Supported Devices screen is visible, turn ON Bluetooth on the phone (if it was off) or ensure Bluetooth is ON.",
+      "Bring a Poly Voyager Free 60+ UC headset near the phone and put it into pairing mode.",
+      "Within 2 seconds of the Bluetooth state change, tap the back button to close the Supported Devices screen.",
+      "Immediately (within 2 seconds) navigate back to Menu \u2192 Supported Devices.",
+      "Observe the screen behavior.",
+      "Repeat steps 4-8 two more times, alternating between turning Bluetooth ON and OFF between cycles."
     ],
-    "expected": "Supported Devices screen loads successfully even when accessed immediately after app launch. Double-tapping back navigates correctly to Home screen without crash. Subsequent re-entry to Supported Devices works normally."
+    "expected": "The Supported Devices screen remains responsive through all rapid open/close cycles, even during concurrent Bluetooth state changes. No crash, ANR, or screen freeze occurs. The device list updates correctly based on Bluetooth state (e.g., if a device connects, it may appear differently in the list). The screen always renders the full device list correctly."
   },
   {
-    "title": "TC-SUPPORTED-DEVICES-006: Supported Devices screen state after rapid close/reopen \u2014 verify no UI element overlap or corruption",
+    "title": "TC-SUPPORTED-DEVICES-006: Supported Devices screen rapid open/close during app cold start (no headset connected)",
     "steps": [
-      "Launch Poly Studio Mobile app with no headset connected",
-      "Open Supported Devices screen via menu icon \u2192 'Supported Devices'",
-      "Close and reopen Supported Devices screen 3 times rapidly (within 2 seconds total)",
-      "On the 4th open, visually inspect the screen for: text truncation, overlapping elements, missing device names, broken icons, or misaligned layout",
-      "Scroll through the entire device list",
-      "Verify all device category headers are readable and properly formatted",
-      "Return to Home screen"
+      "Ensure no Poly Bluetooth headset is connected to the phone.",
+      "Force-kill the Poly Studio Mobile app (swipe it away from recent apps).",
+      "Wait 3 seconds.",
+      "Open Poly Studio Mobile app.",
+      "As soon as the home screen appears, immediately tap Menu \u2192 Supported Devices (within 2 seconds of app launch).",
+      "Observe if the Supported Devices screen loads.",
+      "Tap the back button immediately (within 2 seconds of the screen loading).",
+      "Immediately tap Menu \u2192 Supported Devices again (within 2 seconds of closing).",
+      "Observe the screen behavior.",
+      "Repeat steps 7-9 two more times."
     ],
-    "expected": "No UI corruption, text truncation, overlapping elements, or layout misalignment after rapid open/close cycles. All device names and category headers render correctly. Screen is visually intact and fully functional."
+    "expected": "The Supported Devices screen loads correctly even when accessed immediately after a cold app start. No blank screen, frozen state, or crash occurs. The device list is fully rendered and scrollable. Each rapid open/close cycle completes successfully without degradation. No ANR dialog appears."
   },
   {
-    "title": "TC-SUPPORTED-DEVICES-007: Supported Devices screen rapid close/reopen while rotating device orientation \u2014 no headset connected",
+    "title": "TC-SUPPORTED-DEVICES-007: Supported Devices screen rapid open/close with phone rotation (no headset connected)",
     "steps": [
-      "Launch Poly Studio Mobile app with no headset connected",
-      "Open Supported Devices screen via menu icon \u2192 'Supported Devices'",
-      "Rotate device to landscape orientation",
-      "Immediately tap back arrow to return to Home screen",
-      "Rotate device back to portrait orientation",
-      "Within 1 second, tap menu icon \u2192 'Supported Devices' again",
-      "Rotate device to landscape while the screen is loading",
-      "Verify the Supported Devices screen renders correctly in landscape",
-      "Rotate back to portrait and verify the layout adjusts properly",
-      "Scroll and interact with the device list"
+      "Ensure no Poly Bluetooth headset is connected to the phone.",
+      "Open Poly Studio Mobile app.",
+      "Navigate to the Supported Devices screen (Menu \u2192 Supported Devices).",
+      "Wait for the screen to fully load.",
+      "Rotate the phone to landscape orientation.",
+      "Within 2 seconds, tap the back button to close the Supported Devices screen.",
+      "Rotate the phone back to portrait orientation.",
+      "Within 2 seconds, navigate back to Menu \u2192 Supported Devices.",
+      "Observe the screen behavior.",
+      "Repeat steps 4-9 two more times, varying the rotation timing."
     ],
-    "expected": "Supported Devices screen handles orientation changes gracefully even during rapid open/close cycles. Layout renders correctly in both portrait and landscape. No screen freeze, blank areas, or layout corruption occurs."
+    "expected": "The Supported Devices screen correctly handles rotation during rapid open/close cycles. The device list re-renders correctly in both orientations. No blank screen, layout corruption, overlapping UI elements, or frozen state occurs. No crash or ANR."
   },
   {
-    "title": "TC-SUPPORTED-DEVICES-008: Supported Devices screen rapid close/reopen with app backgrounding \u2014 no headset connected",
+    "title": "TC-SUPPORTED-DEVICES-008: Supported Devices screen rapid open/close during app update scenario (simulated)",
     "steps": [
-      "Launch Poly Studio Mobile app with no headset connected",
-      "Open Supported Devices screen via menu icon \u2192 'Supported Devices'",
-      "Tap the Home button (background the app) while Supported Devices is visible",
-      "Immediately reopen the app from the recent apps list",
-      "Within 1 second, tap back arrow to return to Home screen",
-      "Tap menu icon \u2192 'Supported Devices' again",
-      "Verify the screen loads and is responsive",
-      "Tap the Home button again to background the app",
-      "Wait 5 seconds, then reopen the app from recent apps",
-      "Verify the Supported Devices screen (or Home screen if navigated away) is responsive"
+      "Ensure no Poly Bluetooth headset is connected to the phone.",
+      "Open Poly Studio Mobile app.",
+      "Navigate to the Supported Devices screen (Menu \u2192 Supported Devices).",
+      "Wait for the screen to fully load.",
+      "Tap the Home button to background the app.",
+      "Simulate an app update by clearing the app's cache (via phone Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Storage \u2192 Clear Cache).",
+      "Reopen the app from the recent apps list within 2 seconds.",
+      "Observe the Supported Devices screen state.",
+      "If the screen is still visible, tap the back button and navigate back to Menu \u2192 Supported Devices.",
+      "If the app restarted, navigate to Menu \u2192 Supported Devices."
     ],
-    "expected": "Supported Devices screen survives app backgrounding during rapid navigation. No crash, ANR, or frozen state when returning from background. Screen remains responsive after multiple background/foreground cycles."
+    "expected": "The Supported Devices screen either recovers gracefully or the app handles the cache clear without crashing. If the app restarts, the Supported Devices screen loads correctly from the fresh state. No frozen or unresponsive UI occurs. No ANR dialog appears."
   }
 ]
