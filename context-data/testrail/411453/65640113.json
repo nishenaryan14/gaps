@@ -6,23 +6,33 @@
   "title": "Mobile app version is changed",
   "feature": "Firmware Updates",
   "scenario": "Mobile app version is not correctly reflected on Lens tenant pages (Device user, Inventory, Mobile profile, Device profile) after app upgrade",
-  "steps": [],
-  "expected": "",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app on the mobile device.",
+    "2. Navigate to Account \u2192 App Settings and note the current app version.",
+    "3. Upgrade the Poly Studio Mobile app to the latest version via the app store (Google Play Store or Apple App Store).",
+    "4. Open the upgraded Poly Studio Mobile app and pair/connect a supported Poly Bluetooth audio device.",
+    "5. Log in to the Lens tenant (web portal) using administrator credentials.",
+    "6. Navigate to the Device user / Mobile user page and verify the app version displayed for the connected user.",
+    "7. Navigate to the Inventory page and verify the app version listed for the paired device.",
+    "8. Navigate to the Mobile profile page and verify the app version shown.",
+    "9. Navigate to the Device profile page and verify the app version shown."
+  ],
+  "expected": "The new app version is correctly reflected on the Lens tenant across the Device user/Mobile user page, Inventory page, Mobile profile page, and Device profile page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "mobile-app-version",
+    "poly-studio-mobile",
+    "app-version",
     "lens-tenant",
     "device-user",
     "inventory",
     "mobile-profile",
     "device-profile",
-    "app-upgrade",
-    "version-mismatch"
+    "app-upgrade"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "bd435874bb25119e6c9ffb3de8f42ca2c983be44063ad00e5bbb009b69a3564d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.954489Z",
+  "processed_at": "2026-04-25T07:55:31.982391Z",
   "status": "active"
 }
