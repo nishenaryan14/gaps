@@ -1,106 +1,96 @@
 [
   {
-    "title": "TC-DFU-CALL-001: Verify DFU 'Update' button is disabled/greyed out on Software screen during an active call",
+    "title": "DFU Blocked During Active Softphone Call \u2014 Incoming Call During Update",
     "steps": [
-      "Open Poly Studio Mobile app on the paired phone.",
-      "Tap the [Device Name] (e.g., Voyager Free 60+ UC) on the Home screen to navigate to Device Settings.",
-      "Tap 'Device Settings' \u2192 'Software' (or 'Software & Updates').",
-      "Verify the 'Update' button (or 'Update All' button) is enabled and tappable (baseline check).",
-      "Place an active call from the paired phone (e.g., dial any number or call voicemail).",
-      "While the call is active, navigate back to Poly Studio Mobile \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
-      "Observe the state of the 'Update' button (or 'Update All' button) on the Software screen."
+      "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
+      "Precondition: Poly Studio Mobile app is open and a firmware update notification is available.",
+      "1. Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Software & Updates.",
+      "2. Tap 'Check for Updates' and confirm a firmware update is available.",
+      "3. Do NOT start the update yet.",
+      "4. Place an active softphone call (e.g., Teams, Zoom, or native dialer) from the Android phone using the Poly device.",
+      "5. While the call is active, navigate back to Poly Studio Mobile app \u2192 Software & Updates.",
+      "6. Tap 'Update Now' or the firmware update button.",
+      "7. Observe the app behavior."
     ],
-    "expected": "The 'Update' button (or 'Update All' button) on the Software screen is disabled/greyed out and cannot be tapped while a call is active. The button becomes enabled again only after the call ends."
+    "expected": "The firmware update should be blocked. The app should display a warning message: 'Cannot update while on a call. Please end your call and try again.' The update should not start. The call remains active and unaffected."
   },
   {
-    "title": "TC-DFU-CALL-002: Verify DFU pop-up appears with correct message when tapping 'Update' during an active call",
+    "title": "DFU Blocked During Active Softphone Call \u2014 Start Update Then Receive Call",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
-      "Place an active call from the paired phone.",
-      "While the call is active, tap the 'Update' button (or 'Update All' button) on the Software screen.",
-      "Observe the pop-up dialog that appears.",
-      "Verify the exact text/message content of the pop-up.",
-      "Tap 'OK' or 'Dismiss' on the pop-up to close it.",
-      "Verify the Software screen is still displayed and the call remains active."
+      "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
+      "Precondition: Poly Studio Mobile app is open and a firmware update notification is available.",
+      "1. Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Software & Updates.",
+      "2. Tap 'Update Now' to start the firmware update.",
+      "3. While the update is in progress (e.g., during 'Downloading' or 'Installing' phase), receive an incoming softphone call (e.g., Teams, Zoom, or native dialer).",
+      "4. Attempt to answer the call by pressing the Call button on the Poly device.",
+      "5. Observe the app and device behavior."
     ],
-    "expected": "A pop-up dialog appears with a message indicating that the firmware update cannot proceed while a call is active (e.g., 'Cannot update during a call. Please end your call to start the update.'). The pop-up includes a dismiss/OK button. After dismissing, the Software screen is shown and the call continues uninterrupted."
+    "expected": "The firmware update should be paused or blocked. The app should display a warning: 'Update paused. An active call is in progress. Please end the call to resume update.' The user should NOT be able to answer the call while the update is active, OR the update should automatically pause when the call is answered. The call audio should not be compromised."
   },
   {
-    "title": "TC-DFU-CALL-003: Verify DFU can proceed after call ends while pop-up is displayed (no re-navigation needed)",
+    "title": "DFU Blocked During Active Softphone Call \u2014 Outgoing Call During Update",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
-      "Place an active call from the paired phone.",
-      "While the call is active, tap the 'Update' button on the Software screen to trigger the DFU-blocked pop-up.",
-      "Do NOT dismiss the pop-up. Keep it displayed on screen.",
-      "End the active call from the phone (hang up).",
-      "Observe the pop-up behavior \u2014 does it auto-dismiss, remain, or change?",
-      "If the pop-up remains, tap 'OK'/'Dismiss' to close it.",
-      "Tap the 'Update' button again on the Software screen.",
-      "Observe whether the firmware update begins."
+      "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
+      "Precondition: Poly Studio Mobile app is open and a firmware update is in progress (downloading or installing phase).",
+      "1. While the firmware update is active in Poly Studio Mobile app, initiate an outgoing softphone call (e.g., via Teams, Zoom, or native dialer).",
+      "2. Attempt to place the call using the Poly device.",
+      "3. Observe the app and device behavior."
     ],
-    "expected": "After the call ends, the pop-up may auto-dismiss or remain. In either case, tapping 'Update' again on the Software screen should now initiate the firmware update process (download/install begins) without needing to re-navigate. The update should proceed normally."
+    "expected": "The firmware update should be blocked or paused. The app should display a warning: 'Cannot place a call during firmware update. Please wait for the update to complete.' The outgoing call should not connect, or the update should pause automatically. The user should be notified clearly."
   },
   {
-    "title": "TC-DFU-CALL-004: Verify DFU pop-up re-appears consistently after dismiss and re-navigation while still on call",
+    "title": "DFU Blocked During Active Softphone Call \u2014 Call Waiting / Call Hold During Update",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
-      "Place an active call from the paired phone.",
-      "While the call is active, tap the 'Update' button on the Software screen.",
-      "Verify the DFU-blocked pop-up appears.",
-      "Dismiss the pop-up by tapping 'OK' or the close button.",
-      "Navigate away from the Software screen (e.g., tap 'Audio Settings' or tap the back arrow to go to Device Settings).",
-      "Navigate back to the Software screen: Device Settings \u2192 Software.",
-      "While still on the active call, tap the 'Update' button again.",
-      "Observe whether the pop-up appears again.",
-      "Repeat the dismiss-and-re-navigate cycle 3 times."
+      "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
+      "Precondition: Poly Studio Mobile app is open and a firmware update is in progress.",
+      "1. While the firmware update is active, receive a second incoming call (call waiting scenario) while already on an active call.",
+      "2. Press the Call button on the Poly device for 2 seconds to switch between calls or place the first call on hold.",
+      "3. Observe the app and device behavior."
     ],
-    "expected": "The DFU-blocked pop-up appears consistently every time the 'Update' button is tapped while a call is active, regardless of how many times the user dismisses it and re-navigates to the Software screen. The pop-up behavior is deterministic and repeatable."
+    "expected": "The firmware update should remain paused or blocked. The app should continue to display the warning about active calls. Switching between calls or placing a call on hold should not resume the update. The update should only resume after ALL calls are ended."
   },
   {
-    "title": "TC-DFU-CALL-005: Verify DFU blocked for individual component updates on multi-component firmware device (e.g., Voyager Free 60+) during active call",
+    "title": "DFU Blocked During Active Softphone Call \u2014 End Call and Resume Update",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 Home \u2192 tap 'Voyager Free 60+ UC' \u2192 Device Settings \u2192 Software.",
-      "Verify the Software screen shows multiple firmware components (e.g., 'Earbuds Firmware', 'Charge Case Firmware', 'Touchscreen Firmware') with individual 'Update' buttons and an 'Update All' button.",
-      "Place an active call from the paired phone.",
-      "While the call is active, tap the individual 'Update' button for the first component (e.g., 'Earbuds Firmware').",
-      "Observe the result.",
-      "Dismiss any pop-up if shown.",
-      "Tap the individual 'Update' button for the second component (e.g., 'Charge Case Firmware').",
-      "Observe the result.",
-      "Dismiss any pop-up if shown.",
-      "Tap the 'Update All' button.",
-      "Observe the result."
+      "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
+      "Precondition: Poly Studio Mobile app is open and a firmware update is in progress.",
+      "Precondition: An active softphone call is in progress and the update is paused/blocked.",
+      "1. End the active softphone call by pressing the Call button on the Poly device.",
+      "2. Observe the Poly Studio Mobile app for any prompt or automatic behavior.",
+      "3. If prompted, tap 'Resume Update' or navigate to Software & Updates and tap 'Resume'.",
+      "4. Wait for the update to complete.",
+      "5. Verify the device restarts and the firmware version is updated."
     ],
-    "expected": "All individual component 'Update' buttons AND the 'Update All' button are either disabled/greyed out OR show the DFU-blocked pop-up when tapped during an active call. No component update can be initiated while the call is active. The behavior is consistent across all update entry points."
+    "expected": "After ending the call, the app should display a notification: 'Call ended. Tap to resume firmware update.' OR the update should automatically resume. The update should complete successfully. The device should restart. The firmware version in Settings \u2192 Device Info \u2192 Firmware Version should reflect the new version. All audio settings (ANC, EQ, volume) should be preserved."
   },
   {
-    "title": "TC-DFU-CALL-006: Verify DFU blocked pop-up appears when call is received (incoming) while on Software screen",
+    "title": "DFU Blocked During Active Softphone Call \u2014 Multiple Softphone Apps (Teams + Zoom Simultaneous Calls)",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
-      "Ensure no call is active. Verify the 'Update' button is enabled.",
-      "Have a second phone call the paired phone (incoming call).",
-      "While the phone is ringing (incoming call), tap the 'Update' button on the Software screen.",
-      "Observe the result.",
-      "Answer the incoming call.",
-      "While the call is now active, tap the 'Update' button again.",
-      "Observe the result."
+      "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
+      "Precondition: Both Microsoft Teams and Zoom apps are installed and configured on the Android phone.",
+      "Precondition: Poly Studio Mobile app is open and a firmware update notification is available.",
+      "1. Start an active call on Microsoft Teams using the Poly device.",
+      "2. While the Teams call is active, start a second call on Zoom (placing Teams on hold or merging).",
+      "3. Navigate to Poly Studio Mobile app \u2192 Software & Updates.",
+      "4. Tap 'Update Now'.",
+      "5. Observe the app behavior."
     ],
-    "expected": "During the incoming call ringing state, tapping 'Update' may either show the pop-up or proceed (depending on whether ringing is treated as 'in use'). After answering the call, tapping 'Update' consistently shows the DFU-blocked pop-up or the button is disabled."
+    "expected": "The firmware update should be blocked. The app should detect that the device is in use across multiple softphone apps and display: 'Cannot update while device is in use on calls. Please end all calls and try again.' The update should not start."
   },
   {
-    "title": "TC-DFU-CALL-007: Verify DFU button state and pop-up behavior during call hold/swap scenarios",
+    "title": "DFU Blocked During Active Softphone Call \u2014 App Backgrounding During Call + Update Attempt",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 Home \u2192 [Device Name] \u2192 Device Settings \u2192 Software.",
-      "Place Call A from the paired phone.",
-      "While Call A is active, verify the 'Update' button is disabled or shows pop-up when tapped.",
-      "Place Call A on hold and answer/switched to Call B (call waiting/swap).",
-      "While Call B is active (Call A on hold), navigate to Software screen and tap 'Update'.",
-      "Observe the result.",
-      "End Call B, resume Call A.",
-      "While Call A is active again, tap 'Update' and observe the result.",
-      "End Call A completely.",
-      "Immediately tap 'Update' and verify the firmware update can proceed."
+      "Precondition: Poly Bluetooth device (e.g., Poly Voyager Focus 2) is paired and connected to the Android phone.",
+      "Precondition: Poly Studio Mobile app is open and a firmware update notification is available.",
+      "1. Place an active softphone call (e.g., native dialer) using the Poly device.",
+      "2. While on the call, open Poly Studio Mobile app.",
+      "3. Navigate to Software & Updates.",
+      "4. Tap 'Update Now'.",
+      "5. Observe the warning message.",
+      "6. Press the Home button to background the Poly Studio Mobile app.",
+      "7. Reopen Poly Studio Mobile app from the recent apps list.",
+      "8. Observe the app state and any update-related UI."
     ],
-    "expected": "The DFU update is blocked (button disabled or pop-up shown) during ANY active call state, including when one call is on hold and another is active. The update is only allowed after ALL calls have ended."
+    "expected": "Step 4: The update should be blocked with a warning message. Step 7-8: After reopening the app, the warning should still be displayed. The update should not have started in the background. The call should remain active and unaffected. The app should not crash or lose state."
   }
 ]
