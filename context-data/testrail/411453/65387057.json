@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "User Guides - Onboarding > Fit test for a device that is not currently connected",
   "feature": "App Settings",
-  "scenario": "Fit Test page is accessible for a device that is not currently connected during onboarding user guides",
+  "scenario": "Fit Test page is accessible for a device that is not currently connected to the Poly Studio Mobile app",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on a device that is NOT currently connected to the app",
-    "Observe the device details or settings page",
-    "Look for the Fit Test option or page",
-    "Tap on Fit Test"
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the device name to access Device Settings.",
+    "4. Ensure no Poly Bluetooth audio device is actively connected to the app.",
+    "5. Go to the onboarding section or user guides within the app.",
+    "6. Locate and open the Fit Test page.",
+    "7. Observe whether the Fit Test option is displayed and available to start."
   ],
-  "expected": "The Fit Test page should NOT be accessible or should be grayed out/disabled for a device that is not actively connected to the app.",
+  "expected": "The Fit Test page should not be displayed or should be grayed out/unavailable when no device is actively connected to the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "onboarding-user-guides",
     "poly-studio-mobile",
-    "device-not-connected",
-    "device-details-page",
-    "settings-page",
-    "home-screen"
+    "device-settings",
+    "bluetooth-connection",
+    "onboarding",
+    "user-guides",
+    "home-screen",
+    "android"
   ],
   "source_last_updated": "1760532159",
   "source_hash": "a583eaf4f66a06cd3774cf44e24f905e260725fa51b143953df23e7ffcab94a8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.836660Z",
+  "processed_at": "2026-04-25T08:21:30.944936Z",
   "status": "active"
 }
