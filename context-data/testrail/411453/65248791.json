@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Find My Device - Play button",
   "feature": "App Settings",
-  "scenario": "Find My Device Play button shows hearing safety warning dialog before playing tone on headset",
+  "scenario": "Find My Device Play button shows hearing safety warning dialog before sending tone and flashing headset lights",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
+    "1. Open the Poly Studio Mobile app on your Android device.",
     "2. Navigate to the Home screen.",
     "3. Tap on the Find My Device feature.",
     "4. Tap the Play button in the Find My Device screen.",
     "5. Observe the hearing safety warning dialog that appears.",
     "6. Acknowledge/dismiss the hearing safety warning dialog.",
     "7. Tap the Play button again.",
-    "8. Observe the behavior on the headset and the app."
+    "8. Observe the behavior of the headset and the app."
   ],
-  "expected": "After acknowledging the warning and tapping Play again, a tone plays on the headset, the headset lights flash (if applicable), and the app displays a \"Sending tone...\" message with an animated stop button.",
+  "expected": "After acknowledging the warning and tapping Play again, a tone is sent to the headset, the headset lights flash (if applicable), and the app displays a \"Sending tone...\" message with an animated stop button.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "hearing-safety-warning",
-    "play-tone",
+    "play-button",
     "poly-studio-mobile",
-    "dialog-dismissal",
-    "headset-tone-playback",
-    "safety-prompt"
+    "headset-lights",
+    "tone",
+    "android"
   ],
   "source_last_updated": "1759929777",
   "source_hash": "8e0935dc6abcb223e5001280cb42c62ca743061cb78580463844ed2975612c10",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.831264Z",
+  "processed_at": "2026-04-25T08:21:30.943927Z",
   "status": "active"
 }
