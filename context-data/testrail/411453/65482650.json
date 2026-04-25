@@ -8,15 +8,13 @@
   "scenario": "App update from previous version fails or behaves unexpectedly when using a guest account in Poly Studio Mobile",
   "steps": [
     "1. Launch Poly Studio Mobile app on the Android device.",
-    "2. On the Home screen, ensure the app is logged in using a Guest account.",
-    "3. Navigate to Account settings and confirm the account type is set to Guest.",
-    "4. Return to the Home screen.",
-    "5. Go to the Google Play Store and check for available updates for the Poly Studio Mobile app.",
-    "6. If an update is available, tap 'Update' to install the latest version.",
-    "7. Wait for the update to complete and the app to re-launch.",
-    "8. Observe the app state after the update."
+    "2. Ensure the app is currently signed in using a Guest account.",
+    "3. Navigate to the device's app settings (e.g., via Android Settings \u2192 Apps \u2192 Poly Studio Mobile) or the Google Play Store.",
+    "4. Trigger an update of the Poly Studio Mobile app from the previous version to the latest available version.",
+    "5. After the update completes, relaunch the Poly Studio Mobile app.",
+    "6. Observe the app's state, including the account session and any onboarding or setup screens."
   ],
-  "expected": "The app should successfully update and launch, retaining the Guest account session. The user should remain logged in as Guest with no data loss or forced login prompts.",
+  "expected": "The app updates successfully while retaining the Guest account session. After relaunch, the user remains logged in as Guest and can continue using the app without being prompted to sign in again or losing any settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,13 +22,13 @@
     "guest-account",
     "app-update",
     "android",
-    "account-settings",
-    "update-failure",
-    "post-update-behavior"
+    "account-session",
+    "onboarding",
+    "app-upgrade-failure"
   ],
   "source_last_updated": "1762420656",
   "source_hash": "f329e9c6d47124891c943f07e6485c1b7ba9d606fa0a1344b6e4e971a3968b46",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.877487Z",
+  "processed_at": "2026-04-25T07:55:31.949166Z",
   "status": "active"
 }
