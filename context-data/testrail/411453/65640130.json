@@ -5,18 +5,18 @@
   "project": "411453",
   "title": "Policy: Policy applied - Restart Headset - Settings stay locked",
   "feature": "App Settings",
-  "scenario": "Policy-locked settings become editable after headset power cycle when policy is applied via Poly Studio Mobile app",
+  "scenario": "Policy-locked settings remain locked after headset power cycle on Poly Bluetooth audio device",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Home screen and select the connected Poly Bluetooth headset.",
+    "2. Navigate to the Home screen and select the connected Poly headset.",
     "3. Go to Device Settings and apply a policy that locks specific settings (e.g., ANC, Transparency Mode, Equalizer).",
-    "4. Verify that the locked settings are grayed out and cannot be changed in the app.",
-    "5. Press the Power button on the headset to turn it off.",
-    "6. Press the Power button again to turn the headset back on.",
-    "7. Wait for the headset to reconnect to the Android device and the Poly Studio Mobile app.",
-    "8. Navigate back to Device Settings \u2192 Audio Settings \u2192 [the locked feature] in the app."
+    "4. Confirm the policy is applied and the affected settings appear locked/disabled in the app UI.",
+    "5. Press and hold the Power button on the headset to turn it off.",
+    "6. Wait a few seconds, then press and hold the Power button again to turn the headset back on.",
+    "7. Reconnect the headset to the Poly Studio Mobile app (if not auto-connected).",
+    "8. Navigate to Device Settings \u2192 Audio Settings and check the settings that were locked by the policy."
   ],
-  "expected": "The policy-locked settings remain locked and unchangeable after the headset is powered off and on again.",
+  "expected": "The policy-locked settings remain locked/disabled in the app after the headset is turned off and on again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -32,6 +32,6 @@
   "source_last_updated": "1760949373",
   "source_hash": "87b89c33be0d2faa33bf1481741b1b42af608c874ed14fb33d2dce1a03238f8a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.980776Z",
+  "processed_at": "2026-04-25T08:21:31.050280Z",
   "status": "active"
 }
