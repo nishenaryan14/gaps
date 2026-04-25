@@ -9,27 +9,27 @@
   "steps": [
     "1. Turn off WiFi and cellular data on the phone (enable Airplane Mode).",
     "2. Open the Poly Studio Mobile app.",
-    "3. On the Home screen, tap the '+' or 'Add Device' button to start pairing.",
+    "3. On the Home screen, tap the '+' icon or 'Add Device' to start pairing.",
     "4. Put the headset into pairing mode (press and hold the Bluetooth button until the LED flashes red/blue).",
-    "5. Wait for the headset to appear in the list of available devices on the Home screen.",
-    "6. Tap the headset name to initiate pairing and connection.",
+    "5. Wait for the headset to appear in the available devices list on the Home screen.",
+    "6. Tap the headset name to pair and connect.",
     "7. Observe the device list on the Home screen after pairing completes."
   ],
   "expected": "The headset appears as 'Connected' in the device list on the Home screen of the Poly Studio Mobile app, even without internet access.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
+    "poly-studio-mobile-app",
     "bluetooth-pairing",
     "airplane-mode",
     "offline-connection",
     "no-internet",
     "device-discovery",
-    "headset-connection"
+    "home-screen"
   ],
   "source_last_updated": "1761749943",
   "source_hash": "c60317bfbad46efdee75f0c9b776e0617dacf7bf7521c1056adbb48b882b4f25",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.734514Z",
+  "processed_at": "2026-04-25T07:55:31.798360Z",
   "status": "active"
 }
