@@ -5,31 +5,33 @@
   "project": "411453",
   "title": "Device Home Screen - Limited Support Before Launch Date",
   "feature": "Device Management",
-  "scenario": "Pre-release device shows \"Device support coming soon\" pop-up with limited functionality when connected before official launch date",
+  "scenario": "Pre-release Poly device shows \"Device support coming soon\" pop-up when tapped on black \"i\" icon before launch date in Poly Studio Mobile app",
   "steps": [
-    "1. Launch Poly Studio Mobile app on Android.",
-    "2. Connect a pre-release / not-yet-released Poly Bluetooth audio device to the app.",
-    "3. Observe the connection status icon on the Home screen.",
-    "4. Tap the black \"i\" icon in the top right corner of the connection status area.",
-    "5. Observe the pop-up message displayed.",
-    "6. Tap outside the pop-up to dismiss it."
+    "1. Launch the Poly Studio Mobile app on an Android device.",
+    "2. Pair a not-yet-released Poly Bluetooth audio device with the app (ensure the current date is before the device's official launch date).",
+    "3. Navigate to the Home screen of the app.",
+    "4. Observe the connection status ring for the paired device.",
+    "5. Observe the \"i\" icon next to the device name.",
+    "6. Tap the \"i\" icon.",
+    "7. Observe the pop-up message that appears.",
+    "8. Tap outside the pop-up to dismiss it."
   ],
-  "expected": "The connection status icon shows a green ring with a black \"i\" icon in the top right corner. Tapping the \"i\" icon displays a pop-up message: \"Device support coming soon. In-app functionality may be limited.\" Tapping outside the pop-up dismisses it.",
+  "expected": "The device home screen shows a green connection status ring and a black \"i\" icon. Tapping the \"i\" icon displays a pop-up message: \"Device support coming soon. In-app functionality may be limited.\" Tapping outside the pop-up dismisses it.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "pre-release-device",
     "device-support-coming-soon",
-    "connection-status",
+    "pre-release-device",
+    "info-icon",
+    "connection-status-ring",
+    "bluetooth-pairing",
     "pop-up-message",
-    "bluetooth-connection",
-    "home-screen",
-    "limited-functionality"
+    "launch-date"
   ],
   "source_last_updated": "1764663020",
   "source_hash": "7516386f09b73bfb1dbc8550354edd253239a76aa4b7120e292ebf09251520d4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.743590Z",
+  "processed_at": "2026-04-25T07:55:31.807377Z",
   "status": "active"
 }
