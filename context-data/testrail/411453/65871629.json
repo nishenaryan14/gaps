@@ -8,10 +8,10 @@
   "scenario": "Tapping Phone Settings button from Device Home Screen with no device connected does not navigate to Android Bluetooth settings",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
-    "2. Ensure no device is connected (Device Home screen shows 'No device connected').",
+    "2. Ensure no device is connected (Device Home screen shows \"No device connected\").",
     "3. Tap the Phone Settings button (gear icon) on the Device Home screen."
   ],
-  "expected": "The app navigates to the Android Bluetooth settings page.",
+  "expected": "The user is navigated to the Android Bluetooth settings page.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -19,13 +19,13 @@
     "device-home-screen",
     "phone-settings-button",
     "no-device-connected",
-    "android-bluetooth-settings",
-    "navigation-issue",
+    "bluetooth-settings",
+    "android-navigation",
     "gear-icon"
   ],
   "source_last_updated": "1761657139",
   "source_hash": "2e0749d4bdd53e34d2b438a23f6246283d99f559099005d3e919f700539f631a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.903790Z",
+  "processed_at": "2026-04-25T09:32:26.132152Z",
   "status": "active"
 }
