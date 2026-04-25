@@ -1,153 +1,172 @@
 [
   {
-    "title": "TC-FALCON-CEQ-001: Custom EQ Save Button Commit \u2014 Falcon Device",
+    "title": "[Falcon] Custom EQ Save Button \u2014 Persistence after Save EQ + Confirm dialog",
     "steps": [
-      "Open Poly Studio Mobile app.",
-      "Tap on the Falcon device name to enter Device Screen.",
-      "Navigate to Audio Settings \u2192 Equalizer.",
-      "Tap 'Custom' tab to enter Custom EQ screen.",
-      "Verify the Save button is disabled/grayed out (sliders at default positions).",
-      "Move any EQ slider (e.g., 100Hz band) from 0 to +6 dB.",
-      "Verify the Save button becomes enabled (changes color, becomes tappable).",
-      "Tap the Save button.",
-      "Observe any visual confirmation (toast, button state change, or screen flash).",
-      "Tap the X close button (top-left) to return to Device Settings.",
-      "Navigate back: Audio Settings \u2192 Equalizer \u2192 Custom tab.",
-      "Observe the 100Hz slider value."
+      "Precondition: Falcon device (Voyager Free 60+ UC) connected to Poly Studio Mobile app.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Set slider values: 32Hz = +6dB, 125Hz = +3dB, 500Hz = 0dB, 1kHz = -3dB, 4kHz = -6dB, 8kHz = +3dB",
+      "Tap 'Save EQ' button",
+      "Observe confirmation dialog appears",
+      "Tap 'Confirm' on the dialog",
+      "Navigate away: Device \u2192 Device Info screen",
+      "Navigate back: Device \u2192 Audio Settings \u2192 Equalizer",
+      "Verify preset name shows 'Custom'",
+      "Tap into Custom EQ preset",
+      "Verify slider positions: 32Hz = +6dB, 125Hz = +3dB, 500Hz = 0dB, 1kHz = -3dB, 4kHz = -6dB, 8kHz = +3dB"
     ],
-    "expected": "The 100Hz slider should still show +6 dB. The Save button should be disabled (since no changes were made since last save). The custom EQ values are confirmed to have been committed to persistent storage on the Falcon device after pressing Save."
+    "expected": "Expected: All 6 slider positions are restored exactly to +6, +3, 0, -3, -6, +3 dB respectively. Actual (If Bug): Slider positions reset to flat (0dB) or default values, even though preset name shows 'Custom'. Bug signature: Save EQ button + Confirm dialog fails to persist individual slider values to storage."
   },
   {
-    "title": "TC-FALCON-CEQ-002: Save Button State Machine \u2014 Default \u2192 Modified \u2192 Saved \u2192 Return Verification",
+    "title": "[Falcon] Custom EQ Save Button \u2014 Cancel dialog does NOT save",
     "steps": [
-      "Open Poly Studio Mobile app and connect to Falcon device.",
-      "Navigate: Device Screen \u2192 Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Record all default slider positions (all should be at 0 dB).",
-      "Verify Save button is disabled.",
-      "Move the 250Hz slider to +4 dB and the 1kHz slider to -3 dB.",
-      "Verify Save button is now enabled.",
-      "Tap Save button.",
-      "Verify Save button returns to disabled state (no pending changes).",
-      "Tap the X close button to exit Equalizer screen.",
-      "Re-enter: Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Check the 250Hz slider shows +4 dB and the 1kHz slider shows -3 dB.",
-      "Check Save button is disabled (values match last saved state)."
+      "Precondition: Falcon device connected. Current EQ preset is 'Flat'.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Set slider values: 32Hz = +9dB, 500Hz = -5dB, 8kHz = +6dB (leave others at 0dB)",
+      "Tap 'Save EQ' button",
+      "Observe confirmation dialog appears",
+      "Tap 'Cancel' on the dialog",
+      "Navigate away: Device \u2192 Device Info screen",
+      "Navigate back: Device \u2192 Audio Settings \u2192 Equalizer",
+      "Verify preset name shows 'Flat' (not 'Custom')",
+      "Tap into EQ and verify all sliders are at 0dB (Flat default)"
     ],
-    "expected": "The Save button state machine should transition correctly: disabled at default \u2192 enabled after slider move \u2192 disabled after Save press. The saved values should persist after exiting and re-entering the screen on Falcon device."
+    "expected": "Expected: EQ remains at 'Flat' preset with all sliders at 0dB. Actual (If Bug): EQ shows 'Custom' preset or sliders retain the modified values despite Cancel being tapped. Bug signature: Cancel dialog handler incorrectly triggers save, or dialog dismissal doesn't roll back the in-memory slider state."
   },
   {
-    "title": "TC-FALCON-CEQ-003: Save Button vs. X Close Button Behavior Asymmetry \u2014 Falcon Device",
+    "title": "[Falcon] Custom EQ Save Button \u2014 IMMEDIATE app kill after Confirm (no navigation away)",
     "steps": [
-      "Open Poly Studio Mobile app and connect to Falcon device.",
-      "Navigate: Device Screen \u2192 Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Move the 8kHz slider to +5 dB.",
-      "Do NOT press Save.",
-      "Tap the X close button to exit Equalizer screen.",
-      "Re-enter: Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Observe the 8kHz slider value.",
-      "Now move the 8kHz slider to -2 dB.",
-      "Tap the Save button.",
-      "Tap the X close button to exit.",
-      "Re-enter: Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Observe the 8kHz slider value."
+      "Precondition: Falcon device connected.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Set slider values: 32Hz = +3dB, 1kHz = +6dB, 8kHz = -3dB",
+      "Tap 'Save EQ' button",
+      "Tap 'Confirm' on the dialog",
+      "IMMEDIATELY force-kill the app (swipe from recents) \u2014 do NOT navigate away first",
+      "Reopen Poly Studio Mobile app",
+      "Wait for device connection",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+      "Verify preset name shows 'Custom'",
+      "Tap into Custom EQ preset",
+      "Verify slider positions: 32Hz = +3dB, 1kHz = +6dB, 8kHz = -3dB"
     ],
-    "expected": "After step 6 (X close without Save), the slider may or may not persist depending on whether X close auto-saves. After step 12 (Save then X close), the slider MUST show -2 dB. This test reveals the asymmetry: if X close auto-saves but Save button does not, the bug is exposed because step 6 will show persistence but step 12 will show the value reverted to +5 dB (or default)."
+    "expected": "Expected: Slider positions persist at +3, +6, -3 dB after app force-kill and relaunch. Actual (If Bug): Slider positions reset to default (0dB) because Save EQ handler writes to in-memory state only and does not commit to persistent storage before app termination. Bug signature: Save EQ \u2192 Confirm does not synchronously persist to disk/firmware."
   },
   {
-    "title": "TC-FALCON-CEQ-004: Custom EQ Save with Deep Lifecycle \u2014 App Kill and Bluetooth Reconnect on Falcon",
+    "title": "[Falcon] Custom EQ Save Button \u2014 Persistence across Bluetooth disconnect/reconnect",
     "steps": [
-      "Open Poly Studio Mobile app and connect to Falcon device.",
-      "Navigate: Device Screen \u2192 Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Move the 500Hz slider to +3 dB and the 4kHz slider to +2 dB.",
-      "Tap the Save button.",
-      "Force-kill the Poly Studio Mobile app (swipe from recent apps).",
-      "Reopen Poly Studio Mobile app.",
-      "Wait for automatic reconnection to Falcon device (or manually reconnect).",
-      "Navigate: Device Screen \u2192 Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Observe the 500Hz and 4kHz slider values.",
-      "Move the 500Hz slider to +6 dB.",
-      "Tap Save.",
-      "Turn off Falcon device Bluetooth (or power off device).",
-      "Turn on Falcon device and wait for reconnection.",
-      "Navigate: Device Screen \u2192 Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Observe the 500Hz and 4kHz slider values."
+      "Precondition: Falcon device connected.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Set slider values: 32Hz = -6dB, 500Hz = +6dB, 4kHz = +3dB, 8kHz = -3dB",
+      "Tap 'Save EQ' button",
+      "Tap 'Confirm' on the dialog",
+      "Disconnect Bluetooth from phone Settings (or turn off Falcon)",
+      "Wait 10 seconds",
+      "Reconnect Bluetooth (or turn on Falcon)",
+      "Wait for app to reconnect",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+      "Verify preset name shows 'Custom'",
+      "Tap into Custom EQ preset",
+      "Verify slider positions: 32Hz = -6dB, 500Hz = +6dB, 4kHz = +3dB, 8kHz = -3dB"
     ],
-    "expected": "After app kill and relaunch (step 9), the sliders should show +3 dB and +2 dB \u2014 the values that were saved. After Bluetooth disconnect/reconnect cycle (step 15), the sliders should show +6 dB and +2 dB \u2014 confirming the second Save also persisted through device power cycle on Falcon."
+    "expected": "Expected: Slider positions persist at -6, +6, +3, -3 dB after BT disconnect/reconnect cycle. Actual (If Bug): Slider positions reset to flat (0dB) because Save EQ writes to app-local storage but fails to sync to device firmware, and device reconnection triggers a firmware state read that overwrites app state with defaults."
   },
   {
-    "title": "TC-FALCON-CEQ-005: Custom EQ Save \u2014 Multiple Slider Movements Before Single Save",
+    "title": "[Falcon] Custom EQ Save Button \u2014 Phone reboot persistence",
     "steps": [
-      "Open Poly Studio Mobile app and connect to Falcon device.",
-      "Navigate: Device Screen \u2192 Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Move 100Hz slider to +2 dB.",
-      "Move 250Hz slider to +4 dB.",
-      "Move 500Hz slider to -1 dB.",
-      "Move 1kHz slider to +3 dB.",
-      "Move 2kHz slider to +5 dB.",
-      "Move 4kHz slider to -2 dB.",
-      "Move 8kHz slider to +1 dB.",
-      "Verify Save button is enabled.",
-      "Tap Save button.",
-      "Navigate away: tap X close button.",
-      "Re-enter: Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Verify ALL seven slider positions match the values set in steps 3-9."
+      "Precondition: Falcon device connected.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Set slider values: 32Hz = +6dB, 125Hz = -3dB, 1kHz = +3dB, 8kHz = +6dB",
+      "Tap 'Save EQ' button",
+      "Tap 'Confirm' on the dialog",
+      "Verify EQ is applied (audio output reflects boosted bass and treble)",
+      "Reboot the phone",
+      "After reboot, open Poly Studio Mobile app",
+      "Wait for Falcon device to connect automatically",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer",
+      "Verify preset name shows 'Custom'",
+      "Tap into Custom EQ preset",
+      "Verify slider positions: 32Hz = +6dB, 125Hz = -3dB, 1kHz = +3dB, 8kHz = +6dB"
     ],
-    "expected": "All seven EQ band slider values should persist correctly after pressing Save once. No slider should revert to default. The Save button should commit the entire multi-band configuration atomically on Falcon device."
+    "expected": "Expected: Slider positions persist at +6, -3, +3, +6 dB after full phone reboot. Actual (If Bug): Slider positions reset to default (0dB) because Save EQ data is stored in app cache (not persistent storage) and is wiped on reboot. Bug signature: Save EQ does not write to SharedPreferences or database that survives app process restart + phone reboot."
   },
   {
-    "title": "TC-FALCON-CEQ-006: Custom EQ Save \u2014 Rapid Successive Saves",
+    "title": "[Falcon] Custom EQ Save Button \u2014 Rapid slider changes then Save",
     "steps": [
-      "Open Poly Studio Mobile app and connect to Falcon device.",
-      "Navigate: Device Screen \u2192 Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Move 100Hz slider to +3 dB.",
-      "Tap Save.",
-      "Immediately move 100Hz slider to +6 dB.",
-      "Tap Save.",
-      "Immediately move 100Hz slider to 0 dB.",
-      "Tap Save.",
-      "Navigate away: tap X close button.",
-      "Re-enter: Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Observe the 100Hz slider value.",
-      "Move 100Hz slider to -3 dB.",
-      "Tap Save.",
-      "Force-kill the app and relaunch.",
-      "Reconnect to Falcon and navigate to Custom EQ.",
-      "Observe the 100Hz slider value."
+      "Precondition: Falcon device connected.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Rapidly drag all 6 sliders to extreme values in sequence: 32Hz to +12dB, 125Hz to -12dB, 500Hz to +12dB, 1kHz to -12dB, 4kHz to +12dB, 8kHz to -12dB (complete within 3 seconds)",
+      "Immediately tap 'Save EQ' button",
+      "Tap 'Confirm' on the dialog",
+      "Navigate away: Device \u2192 Device Info screen",
+      "Navigate back: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Verify all 6 slider positions: 32Hz = +12dB, 125Hz = -12dB, 500Hz = +12dB, 1kHz = -12dB, 4kHz = +12dB, 8kHz = -12dB"
     ],
-    "expected": "After step 10, the 100Hz slider should show 0 dB (the last saved value). After step 15, the 100Hz slider should show -3 dB. Rapid successive saves should each independently commit to persistent storage without race conditions on Falcon device."
+    "expected": "Expected: All 6 slider positions are saved exactly at extreme values (+12/-12 dB). Actual (If Bug): Some or all sliders are at different values (e.g., 0dB or partial values) because rapid slider changes caused race conditions in the Save EQ handler \u2014 the handler reads slider positions before all UI updates are committed, or the firmware sync command truncates values. Bug signature: Save EQ captures stale/intermediate slider state instead of final positions."
   },
   {
-    "title": "TC-FALCON-CEQ-007: Custom EQ Save \u2014 Preset Switch After Save Clears Custom Values Correctly",
+    "title": "[Falcon] Custom EQ Save Button \u2014 Save, then modify without saving, then verify original save persists",
     "steps": [
-      "Open Poly Studio Mobile app and connect to Falcon device.",
-      "Navigate: Device Screen \u2192 Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Move 250Hz slider to +5 dB and 2kHz slider to +4 dB.",
-      "Tap Save.",
-      "Switch to 'Bass Boost' preset.",
-      "Verify sliders change to Bass Boost curve.",
-      "Switch back to 'Custom' tab.",
-      "Verify 250Hz shows +5 dB and 2kHz shows +4 dB.",
-      "Now switch to 'Voice Clarity' preset.",
-      "Switch back to 'Custom' tab.",
-      "Verify saved custom values are still intact."
+      "Precondition: Falcon device connected.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Set slider values: 32Hz = +6dB, 1kHz = -6dB, 8kHz = +6dB (Profile A)",
+      "Tap 'Save EQ' \u2192 Confirm",
+      "Navigate away and back to verify Profile A is saved (sliders at +6, -6, +6)",
+      "Without leaving the Custom EQ screen, modify sliders to: 32Hz = -6dB, 1kHz = +6dB, 8kHz = -6dB (Profile B)",
+      "Do NOT tap Save EQ",
+      "Navigate away: Device \u2192 Device Info screen",
+      "Navigate back: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Verify slider positions are Profile A: 32Hz = +6dB, 1kHz = -6dB, 8kHz = +6dB"
     ],
-    "expected": "Switching away from Custom to a preset and back should preserve the last saved custom EQ values. The Save button commit should survive preset switching on Falcon device."
+    "expected": "Expected: Slider positions remain at Profile A (+6, -6, +6 dB) \u2014 the unsaved Profile B modifications are discarded. Actual (If Bug): Slider positions show Profile B (-6, +6, -6 dB) because the app auto-saves slider changes on navigation away, bypassing the Save EQ button + Confirm dialog flow. Bug signature: Save EQ button is rendered meaningless if navigation away also triggers a save."
   },
   {
-    "title": "TC-FALCON-CEQ-008: Custom EQ Save \u2014 Device Firmware Readback Verification (Advanced)",
+    "title": "[Falcon] Custom EQ Save Button \u2014 Background app during confirmation dialog",
     "steps": [
-      "Connect Falcon device to a test setup capable of reading device EQ parameters via AT commands or firmware API.",
-      "Open Poly Studio Mobile app and connect to Falcon device.",
-      "Navigate: Device Screen \u2192 Audio Settings \u2192 Equalizer \u2192 Custom.",
-      "Read and record current device EQ parameters via firmware API (baseline).",
-      "Move 100Hz slider to +4 dB and 8kHz slider to -3 dB.",
-      "Tap Save button.",
-      "Immediately read device EQ parameters via firmware API.",
-      "Compare API-read values with UI slider positions.",
-      "Navigate away and back to Custom EQ screen.",
-      "Read device EQ parameters via firmware API again.",
-      "Compare all three data points: UI after save, API after save, API after re-entry."
+      "Precondition: Falcon device connected.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Set slider values: 32Hz = +9dB, 500Hz = -6dB, 8kHz = +9dB",
+      "Tap 'Save EQ' button",
+      "Confirmation dialog appears \u2014 do NOT tap Confirm or Cancel yet",
+      "Press Home button to background the app",
+      "Wait 10 seconds",
+      "Reopen Poly Studio Mobile app from recents",
+      "Observe the confirmation dialog is still visible",
+      "Tap 'Confirm' on the dialog",
+      "Navigate away: Device \u2192 Device Info screen",
+      "Navigate back: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Verify slider positions: 32Hz = +9dB, 500Hz = -6dB, 8kHz = +9dB"
     ],
-    "expected": "The firmware API should return EQ values matching the UI slider positions (+4 dB at 100Hz, -3 dB at 8kHz) immediately after Save and after re-entry. This confirms the Save button actually writes to the Falcon device firmware, not just the app UI layer."
+    "expected": "Expected: Slider positions persist at +9, -6, +9 dB after backgrounding during dialog and then confirming. Actual (If Bug): Slider positions reset to default (0dB) because the dialog's state was lost during backgrounding (Activity destroyed and recreated), and the Confirm callback references a stale or null slider state. Bug signature: Dialog survives backgrounding visually but its save callback loses reference to the slider values."
+  },
+  {
+    "title": "[Falcon] Custom EQ Save Button \u2014 Device asymmetry: Verify Falcon-specific EQ band count and range",
+    "steps": [
+      "Precondition: Falcon device (Voyager Free 60+ UC) connected.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Verify the number of EQ bands/sliders displayed matches Falcon specification (6 bands: 32Hz, 125Hz, 500Hz, 1kHz, 4kHz, 8kHz)",
+      "Verify each slider range is -12dB to +12dB (or as per Falcon spec)",
+      "Set each slider to its maximum value (+12dB)",
+      "Tap 'Save EQ' \u2192 Confirm",
+      "Navigate away and back, verify all sliders at +12dB",
+      "Set each slider to its minimum value (-12dB)",
+      "Tap 'Save EQ' \u2192 Confirm",
+      "Navigate away and back, verify all sliders at -12dB"
+    ],
+    "expected": "Expected: Falcon device shows exactly 6 bands with -12dB to +12dB range, and extreme values persist after Save EQ \u2192 Confirm \u2192 navigation. Actual (If Bug): Different number of bands (e.g., 5 or 10 bands) or different range (e.g., -6dB to +6dB) displayed on Falcon vs. other devices, or extreme values are clamped/truncated on save. Bug signature: Falcon-specific EQ firmware reports different band configuration than the app UI expects, causing save/restore mismatch."
+  },
+  {
+    "title": "[Falcon] Custom EQ Save Button \u2014 Save EQ with all sliders at 0dB (flat)",
+    "steps": [
+      "Precondition: Falcon device connected. Current EQ is set to a non-flat preset (e.g., 'Bass Boost').",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Equalizer \u2192 Custom",
+      "Set all 6 sliders to 0dB (flat)",
+      "Tap 'Save EQ' button",
+      "Tap 'Confirm' on the dialog",
+      "Navigate away: Device \u2192 Device Info screen",
+      "Navigate back: Device \u2192 Audio Settings \u2192 Equalizer",
+      "Verify preset name shows 'Custom' (not 'Flat' or 'Bass Boost')",
+      "Tap into Custom EQ preset",
+      "Verify all 6 slider positions are at 0dB"
+    ],
+    "expected": "Expected: Preset shows 'Custom' with all sliders at 0dB. Actual (If Bug): Preset reverts to 'Flat' or 'Bass Boost' because the app treats all-zero sliders as 'no change' and skips the save, or the firmware rejects a flat Custom EQ as invalid. Bug signature: Save EQ handler has a guard clause that skips persistence when all values are default (0dB), incorrectly assuming no changes were made."
   }
 ]
