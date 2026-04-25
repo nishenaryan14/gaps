@@ -1,132 +1,138 @@
 [
   {
-    "title": "TC-DELETE-001: Verify remaining device name is correct after deleting a disconnected device",
+    "title": "TC-DEL-001: Verify remaining device settings page opens correctly after deleting a powered-off paired device",
     "steps": [
-      "Open Poly Studio Mobile app on Android.",
-      "Ensure two Poly devices are paired and connected: Device A (e.g., 'Poly Sync 20') and Device B (e.g., 'Poly Sync 20+').",
-      "Verify both devices appear in the device list with correct names and 'Connected' status.",
-      "Turn off Device A using the power button (press for 2 seconds).",
-      "Wait 10 seconds for the app to update. Observe Device A shows 'Disconnected' status.",
-      "Tap on the disconnected Device A entry in the device list.",
-      "Tap the gear icon or menu (three dots) next to Device A's name.",
-      "Select 'Delete Device' or 'Remove Device' from the menu.",
+      "Open Poly Studio Mobile app.",
+      "Pair Device A (e.g., Poly Sync 20) and Device B (e.g., Poly Voyager 5200) to the phone.",
+      "Ensure Device A is powered ON and connected.",
+      "Power OFF Device B.",
+      "Navigate to Device Settings \u2192 tap Device B's entry.",
+      "Tap 'Delete Device' or 'Forget' to remove Device B from the paired list.",
       "Confirm deletion when prompted.",
-      "Observe the remaining Device B in the device list.",
-      "Verify Device B's name is displayed correctly as 'Poly Sync 20+' (or its original paired name, not corrupted and not showing Device A's name)."
+      "Observe the device list \u2014 verify Device A is still listed.",
+      "Tap on Device A's entry to open its settings screen.",
+      "Verify Device A's name is displayed correctly (not showing Device B's name or garbled text).",
+      "Verify Device A's connection status shows 'Connected'.",
+      "Verify Device A's Audio Settings page is accessible and all settings (ANC, Transparency Mode, EQ, Volume) are displayed and interactive."
     ],
-    "expected": "After deleting disconnected Device A, the remaining Device B displays its correct original name without corruption or substitution."
+    "expected": "After deleting powered-off Device B, Device A remains in the list with its correct name and 'Connected' status. Tapping Device A opens its full settings page with all audio settings (ANC, Transparency, EQ, Volume) accessible and functional \u2014 no UI corruption, blank screens, or incorrect device name displayed."
   },
   {
-    "title": "TC-DELETE-002: Verify remaining device connection status is correct after deleting a disconnected device",
+    "title": "TC-DEL-002: Verify remaining device settings survive app background/foreground after deletion of a powered-off device",
     "steps": [
-      "Open Poly Studio Mobile app on Android.",
-      "Pair and connect two devices: Device A (e.g., 'Poly Sync 20') and Device B (e.g., 'Poly Sync 20+').",
-      "Confirm both show 'Connected' status in the device list.",
-      "Turn off Device A. Wait for status to change to 'Disconnected'.",
-      "Tap on Device A (disconnected) in the device list.",
-      "Navigate to device options and select 'Delete Device'. Confirm deletion.",
-      "Observe Device B in the device list.",
-      "Verify Device B shows 'Connected' status (not 'Disconnected', 'Unknown', or blank).",
-      "Verify the connection indicator icon (e.g., Bluetooth icon) next to Device B is solid/active, not greyed out."
+      "Open Poly Studio Mobile app.",
+      "Pair Device A and Device B to the phone.",
+      "Ensure Device A is powered ON and connected.",
+      "Power OFF Device B.",
+      "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
+      "Tap Device A to open its settings screen.",
+      "Verify Device A's name, connection status, and settings are correct.",
+      "Press the Home button to background the app.",
+      "Wait 10 seconds, then reopen Poly Studio Mobile from the app switcher.",
+      "Verify the app still shows Device A's settings screen (or navigates back to it).",
+      "Verify Device A's name is still correct and connection status shows 'Connected'.",
+      "Verify ANC, Transparency, EQ, and Volume sliders are still functional and show expected values."
     ],
-    "expected": "After deleting disconnected Device A, the remaining Device B correctly shows 'Connected' status and a solid connection indicator."
+    "expected": "After backgrounding and foregrounding the app post-deletion, Device A's settings screen remains intact with correct name, 'Connected' status, and all audio settings functional \u2014 no UI corruption or data loss."
   },
   {
-    "title": "TC-DELETE-003: Verify remaining device settings remain accessible after deleting a disconnected device",
+    "title": "TC-DEL-003: Verify remaining device settings survive app force-kill and relaunch after deletion of a powered-off device",
     "steps": [
-      "Open Poly Studio Mobile app on Android.",
-      "Pair and connect two devices: Device A and Device B.",
-      "Turn off Device A. Wait for 'Disconnected' status.",
-      "Tap on Device A (disconnected) in the device list.",
-      "Delete Device A via the device options menu and confirm.",
-      "After deletion, tap on Device B's entry in the device list.",
-      "Verify the app navigates to Device B's Device Settings screen (showing options like Audio Settings, Firmware Update, Device Info, etc.).",
-      "Tap 'Audio Settings' from Device B's Device Settings screen.",
-      "Verify Audio Settings screen loads correctly showing options like ANC Level, Transparency Mode, EQ Presets, etc."
-    ],
-    "expected": "After deleting disconnected Device A, tapping Device B successfully opens Device Settings and Audio Settings without error, freeze, or redirect."
-  },
-  {
-    "title": "TC-DELETE-004: Verify remaining device UI elements are intact after deleting a disconnected device (name, status, battery, settings gear)",
-    "steps": [
-      "Open Poly Studio Mobile app on Android.",
-      "Pair and connect two devices: Device A and Device B.",
-      "Turn off Device A. Wait for 'Disconnected' status.",
-      "Delete Device A via device options.",
-      "Observe Device B's entry in the device list.",
-      "Verify Device B's name is fully visible and not truncated/corrupted.",
-      "Verify Device B's connection status shows 'Connected' with correct icon.",
-      "Verify Device B's battery level indicator (if applicable) is displayed correctly.",
-      "Verify the settings gear icon or menu button next to Device B is visible and tappable.",
-      "Tap the settings gear for Device B and confirm it opens Device B's settings."
-    ],
-    "expected": "Device B's UI entry in the device list displays all elements correctly: name, connection status, battery level, and tappable settings icon."
-  },
-  {
-    "title": "TC-DELETE-005: Verify remaining device settings persist after app restart following device deletion",
-    "steps": [
-      "Open Poly Studio Mobile app on Android.",
-      "Pair and connect two devices: Device A and Device B.",
-      "Turn off Device A. Wait for 'Disconnected' status.",
-      "Delete Device A via device options.",
-      "Tap Device B to open Device Settings.",
-      "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment.",
-      "Set Surround level to 75.",
-      "Navigate back to the main device list.",
-      "Force-close the Poly Studio Mobile app (swipe from recent apps).",
+      "Open Poly Studio Mobile app.",
+      "Pair Device A and Device B to the phone.",
+      "Configure Device A with specific settings: ANC level 70, Transparency Mode set to Speech with Free level 40, EQ set to Bass Boost, Volume at 60.",
+      "Ensure Device A is powered ON and connected.",
+      "Power OFF Device B.",
+      "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
+      "Tap Device A to open its settings screen.",
+      "Verify Device A's name, connection status, and configured settings are displayed correctly.",
+      "Force-kill the Poly Studio Mobile app (swipe away from recent apps).",
       "Reopen Poly Studio Mobile app.",
-      "Verify only Device B appears in the device list (Device A should not reappear).",
-      "Tap Device B to open Device Settings.",
-      "Navigate to Audio Settings \u2192 Transparency Mode \u2192 Environment.",
-      "Verify Surround level is still set to 75."
+      "Verify the app shows Device A in the device list with correct name and 'Connected' status.",
+      "Tap Device A to open its settings.",
+      "Verify ANC level is still 70.",
+      "Verify Transparency Mode is still set to Speech with Free level 40.",
+      "Verify EQ is still set to Bass Boost.",
+      "Verify Volume is still 60."
     ],
-    "expected": "After app restart, Device A is permanently removed, Device B appears correctly, and Device B's settings (Surround level = 75) persist."
+    "expected": "After force-kill and relaunch, Device A retains its correct name, 'Connected' status, and all previously configured settings (ANC 70, Transparency Speech/Free 40, EQ Bass Boost, Volume 60) \u2014 no data loss or UI corruption from the deletion of Device B."
   },
   {
-    "title": "TC-DELETE-006: Verify deleting a disconnected device does not affect audio playback on the remaining connected device",
+    "title": "TC-DEL-004: Verify Bluetooth disconnect/reconnect cycle after deleting a powered-off device does not corrupt remaining device",
     "steps": [
-      "Open Poly Studio Mobile app on Android.",
-      "Pair and connect two devices: Device A and Device B.",
-      "Start playing music or a test tone on the phone, routed to Device B.",
-      "Verify audio is playing through Device B.",
-      "Turn off Device A. Wait for 'Disconnected' status.",
-      "Delete Device A via device options.",
-      "During and after deletion, verify audio continues to play through Device B without interruption, stutter, or drop.",
-      "Stop audio playback.",
-      "Restart audio playback and verify it still routes to Device B correctly."
+      "Open Poly Studio Mobile app.",
+      "Pair Device A and Device B to the phone.",
+      "Ensure Device A is powered ON and connected.",
+      "Power OFF Device B.",
+      "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
+      "Tap Device A to open its settings \u2014 verify correct name, status, and settings.",
+      "Power ON Device B (it was only powered off, not unpaired from phone Bluetooth).",
+      "Wait for Device B to reconnect to the phone.",
+      "Observe the Poly Studio Mobile app \u2014 verify how Device B is handled (re-added to list or shown as available for pairing).",
+      "Tap Device A's entry in the device list.",
+      "Verify Device A's name is still correct and connection status shows 'Connected'.",
+      "Verify ANC, Transparency, EQ, and Volume settings are still accessible and functional."
     ],
-    "expected": "Audio playback on the remaining connected Device B continues uninterrupted during and after deletion of the disconnected Device A."
+    "expected": "When Device B is powered back on after deletion, the app handles the reconnection gracefully without corrupting Device A's state. Device A retains correct name, 'Connected' status, and all audio settings remain accessible and functional."
   },
   {
-    "title": "TC-DELETE-007: Verify deleting a disconnected device when remaining device is in a call does not disrupt the call",
+    "title": "TC-DEL-005: Verify rapid deletion of one device followed by immediate navigation to another device's settings causes no UI corruption",
     "steps": [
-      "Open Poly Studio Mobile app on Android.",
-      "Pair and connect two devices: Device A and Device B.",
-      "Place or receive a phone call on Device B (connected).",
-      "Verify call audio is active through Device B.",
-      "Turn off Device A. Wait for 'Disconnected' status.",
-      "Delete Device A via device options.",
-      "During and after deletion, verify call audio on Device B remains clear and uninterrupted.",
-      "Verify call controls (mute, volume, end call) on Device B still function.",
-      "End the call and verify Device B returns to idle state correctly in the app."
+      "Open Poly Studio Mobile app.",
+      "Pair three devices: Device A (Poly Sync 20), Device B (Poly Voyager 5200), Device C (Poly Studio P15) to the phone.",
+      "Ensure Device A is powered ON and connected.",
+      "Power OFF Device B.",
+      "Power OFF Device C.",
+      "Navigate to Device Settings.",
+      "Tap Device B \u2192 Delete Device \u2192 confirm deletion.",
+      "Immediately (within 1 second) tap Device A's entry to open its settings.",
+      "Verify Device A's name is displayed correctly.",
+      "Verify Device A's connection status shows 'Connected'.",
+      "Verify the Audio Settings page loads fully with ANC, Transparency, EQ, and Volume controls visible and interactive.",
+      "Navigate back to the device list.",
+      "Verify Device B is removed from the list.",
+      "Verify Device C is still listed (if it was previously paired).",
+      "Tap Device C's entry \u2014 verify its settings page opens correctly without corruption."
     ],
-    "expected": "An active call on the remaining connected Device B is not disrupted when the disconnected Device A is deleted from the app."
+    "expected": "Rapid navigation to Device A's settings immediately after deleting Device B does not cause UI corruption. Device A shows correct name, 'Connected' status, and all audio settings load fully. Device B is removed from the list. Device C remains listed and its settings are accessible without corruption."
   },
   {
-    "title": "TC-DELETE-008: Verify deleting a disconnected device and then reconnecting it re-pairs correctly without affecting the remaining device",
+    "title": "TC-DEL-006: Verify sub-setting values (Transparency Environment/Speech) persist on remaining device after deleting a powered-off device",
     "steps": [
-      "Open Poly Studio Mobile app on Android.",
-      "Pair and connect two devices: Device A and Device B.",
-      "Turn off Device A. Wait for 'Disconnected' status.",
-      "Delete Device A via device options.",
-      "Verify only Device B remains in the device list with 'Connected' status.",
-      "Turn on Device A.",
-      "Put Device A into pairing mode (press Bluetooth button for 2 seconds until 'pairing' is heard).",
-      "Pair Device A with the phone via Bluetooth settings or the app's add device flow.",
-      "Verify Device A reappears in the Poly Studio Mobile app device list.",
-      "Verify Device B remains in the device list with 'Connected' status and correct name.",
-      "Verify both devices show correct connection statuses."
+      "Open Poly Studio Mobile app.",
+      "Pair Device A and Device B to the phone.",
+      "Ensure Device A is powered ON and connected.",
+      "Navigate to Device A \u2192 Audio Settings \u2192 Transparency Mode.",
+      "Set Transparency Mode to 'Environment' and set Surround level to 85.",
+      "Switch to 'Speech' sub-tab and set Free level to 60.",
+      "Navigate back to the device list.",
+      "Power OFF Device B.",
+      "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
+      "Tap Device A to open its settings.",
+      "Navigate to Audio Settings \u2192 Transparency Mode.",
+      "Verify the active mode is still 'Environment' with Surround level at 85.",
+      "Switch to the 'Speech' sub-tab.",
+      "Verify Free level is still 60.",
+      "Switch back to 'Environment' sub-tab \u2014 verify Surround level is still 85."
     ],
-    "expected": "After deleting and re-pairing Device A, both devices appear correctly in the list with proper names and connection statuses, and Device B's settings remain intact."
+    "expected": "After deleting Device B, Device A's Transparency Mode sub-settings persist correctly: Environment mode with Surround level 85 and Speech mode with Free level 60. Switching between sub-tabs does not reset or corrupt values."
+  },
+  {
+    "title": "TC-DEL-007: Verify deleting a powered-off device while remaining device is in a call does not corrupt UI",
+    "steps": [
+      "Open Poly Studio Mobile app.",
+      "Pair Device A and Device B to the phone.",
+      "Ensure Device A is powered ON and connected.",
+      "Place a call using Device A (or receive an incoming call on Device A).",
+      "While the call is active on Device A, power OFF Device B.",
+      "Navigate to Device Settings \u2192 delete Device B (tap Device B \u2192 Delete Device \u2192 confirm).",
+      "While still on the call, tap Device A's entry to open its settings.",
+      "Verify Device A's name is displayed correctly.",
+      "Verify Device A's connection status shows 'In Call' or 'Connected' as appropriate.",
+      "Verify the Audio Settings page loads with ANC, Transparency, EQ, and Volume controls visible.",
+      "End the call.",
+      "Verify Device A returns to 'Connected' status and settings remain accessible."
+    ],
+    "expected": "Deleting a powered-off device while the remaining device is in an active call does not corrupt the UI. Device A shows correct name, appropriate call/connection status, and all audio settings remain accessible during and after the call."
   }
 ]
