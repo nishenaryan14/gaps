@@ -5,23 +5,34 @@
   "project": "411453",
   "title": "Language Change - Earbuds/Headsets and smart Charge Chase/Stand are out of date",
   "feature": "Firmware Updates",
-  "scenario": "Language change in Device Settings triggers DFU for all outdated components including smart charge case on Voyager Free 60+",
-  "steps": [],
-  "expected": "",
+  "scenario": "Language change DFU updates all components and changes charge case language on Poly Voyager Free 60+",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app on your Android device.",
+    "2. On the Home screen, ensure a multi-component device (e.g., Poly Voyager Free 60+ earbuds with charge case, or a headset with charge stand) is connected and all components are on outdated firmware.",
+    "3. Navigate to Device Settings \u2192 [Device Name] \u2192 Language.",
+    "4. Change the language to a different supported language (e.g., from English to French).",
+    "5. Tap \"Update Now\" on the prompt that appears.",
+    "6. Observe that the software update screen is triggered and displayed.",
+    "7. Allow the DFU (Device Firmware Update) process to complete for all components (earbuds/headset and charge case/stand).",
+    "8. After the update finishes, verify the firmware version of all components shows the latest version.",
+    "9. Check the language displayed on the smart charge case (e.g., Poly Voyager Free 60+ case screen) to confirm it matches the newly selected language."
+  ],
+  "expected": "The software update screen is triggered after tapping \"Update Now\". All components (earbuds/headset and charge case/stand) are updated to the latest firmware version. The language on the smart charge case changes to the newly selected language.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-voyager-free-60-plus",
     "language-change",
-    "device-settings",
     "dfu",
-    "firmware-update",
-    "smart-charge-case",
-    "voyager-free-60-plus",
-    "outdated-components"
+    "charge-case-language",
+    "poly-studio-mobile-app",
+    "device-firmware-update",
+    "multi-component-update",
+    "smart-charge-case"
   ],
   "source_last_updated": "1769432314",
   "source_hash": "108f4e2bd981ee2a5b65d7c9e4a73e9ff31a2bdf9f28287e6016775b566d4e31",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.814266Z",
+  "processed_at": "2026-04-25T07:55:31.890612Z",
   "status": "active"
 }
