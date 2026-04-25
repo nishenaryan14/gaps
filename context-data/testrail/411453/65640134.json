@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Device(headset) inventory details",
   "feature": "Device Management",
-  "scenario": "Verify headset device details (model, serial number, last detected, software version) are displayed in Poly Lens app inventory after login",
+  "scenario": "Poly Lens app inventory section displays correct headset device details (model, serial number, last detected, software version) after login",
   "steps": [
     "1. Launch the Poly Lens app on the mobile device.",
-    "2. Log in with valid user credentials.",
-    "3. Navigate to the Inventory section of the app.",
+    "2. Log in to the Poly Lens app with valid credentials.",
+    "3. Navigate to the Inventory section from the Home screen or main menu.",
     "4. Locate the connected headset device in the inventory list.",
     "5. Tap on the connected headset device to view its details.",
-    "6. Observe the device details screen for the following fields: device model, serial number, last detected, and software version."
+    "6. Observe the displayed device details: device model, serial number, last detected date/time, and software version."
   ],
-  "expected": "The device details screen displays the correct device model, serial number, last detected timestamp, and software version for the connected headset.",
+  "expected": "The device details screen displays the correct device model, serial number, last detected timestamp, and software version for the connected headset, matching the actual device information.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-lens-app",
     "inventory-section",
     "device-details",
-    "device-model",
     "serial-number",
-    "last-detected",
     "software-version",
-    "headset-inventory"
+    "last-detected",
+    "headset-model",
+    "device-inventory"
   ],
   "source_last_updated": "1760949384",
   "source_hash": "1c142f0ab98cab07692d0d63277556aba8099d13fd6d98cb89a5b35ed0b163f4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.983909Z",
+  "processed_at": "2026-04-25T08:21:31.062127Z",
   "status": "active"
 }
