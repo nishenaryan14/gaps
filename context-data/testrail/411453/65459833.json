@@ -5,31 +5,31 @@
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, UI",
   "feature": "Notifications",
-  "scenario": "Notification master toggle shows OFF and individual toggles are greyed out in App Settings > General when notification permission is denied during onboarding",
+  "scenario": "Notification master toggle remains OFF and individual toggles are greyed out when user selects \"Don't Allow\" during onboarding in Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app.",
-    "2. Complete the onboarding flow.",
-    "3. When prompted for notification permission, tap \"Deny\" or \"Don't Allow\".",
+    "1. Launch the Poly Studio Mobile app and begin the onboarding flow.",
+    "2. When prompted for notification permissions, tap \"Don't Allow\".",
+    "3. Complete the onboarding process and reach the Home screen.",
     "4. Navigate to App Settings \u2192 General \u2192 Notifications.",
     "5. Observe the master toggle for Notifications.",
-    "6. Observe the individual notification toggles (e.g., Call alerts, Message alerts, etc.)."
+    "6. Observe the individual notification toggles below the master toggle."
   ],
-  "expected": "The master toggle for Notifications is set to OFF. All individual notification toggles are greyed out and cannot be interacted with.",
+  "expected": "The master toggle for Notifications should be set to OFF. All individual notification toggles should be greyed out and remain OFF, and the user should not be able to change them.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "notification-permission",
+    "poly-studio-mobile",
+    "notification-permissions",
+    "onboarding-flow",
     "master-toggle",
     "individual-toggles",
-    "app-settings-general",
-    "onboarding",
-    "poly-studio-mobile",
-    "notification-denied",
-    "greyed-out-toggles"
+    "dont-allow",
+    "app-settings",
+    "notification-greyed-out"
   ],
   "source_last_updated": "1761296616",
   "source_hash": "26818fc0b335f37451bf87c5c2046d83db78603e5f4946c1d1bb77f37604a5fc",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.943306Z",
+  "processed_at": "2026-04-25T07:55:31.971157Z",
   "status": "active"
 }
