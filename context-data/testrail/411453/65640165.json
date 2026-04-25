@@ -4,28 +4,30 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Events are not gathered if user is logged out and has not opted into data-sharing",
-  "feature": "Analytics",
-  "scenario": "Events are not gathered when user is logged out and has not opted into data-sharing",
+  "feature": "App Settings",
+  "scenario": "Firebase analytics events are still gathered when user is logged out and has not opted into data-sharing",
   "steps": [
-    "Ensure user is not logged in and has not opted into data-sharing (App Settings > General > Account > Share Data toggle is off).",
-    "Trigger any event present on Firebase (e.g., device_added which gathers Device's Serial Number)."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Ensure the user is logged out of their Poly account.",
+    "3. Verify that the user has NOT opted into data-sharing (Analytics/Telemetry consent is disabled).",
+    "4. Trigger a Firebase analytics event, for example by adding a new Poly Bluetooth audio device (this triggers the 'device_added' event which gathers the device's serial number).",
+    "5. Navigate to the Firebase console and check the event count for the 'device_added' event, specifically filtering by the device's serial number parameter."
   ],
-  "expected": "Event count for the Device's Serial Number should not increase.",
+  "expected": "The event count for the device's serial number should NOT increase, as analytics events should not be gathered when the user is logged out and has not opted into data-sharing.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "events not gathered",
-    "logged out",
-    "data-sharing opt-out",
-    "Firebase events",
-    "device_added",
-    "Share Data toggle off",
-    "App Settings",
-    "event tracking disabled"
+    "firebase-analytics",
+    "data-sharing-consent",
+    "poly-studio-mobile",
+    "device-added-event",
+    "telemetry-privacy",
+    "logged-out-state",
+    "serial-number-collection"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "30ba6b8f2fee002cd1d8777870bcb6c661b10588a435e42418a3913239cad78d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.321465Z",
+  "processed_at": "2026-04-25T05:37:16.965946Z",
   "status": "active"
 }
