@@ -4,29 +4,32 @@
   "type": "testcase",
   "project": "411453",
   "title": "Find My Device - Main screen",
-  "feature": "Find My Device",
-  "scenario": "Main screen shows map and headset list after starting app with connected headset, navigating to App Menu, tapping Find My Device, and granting location access.",
+  "feature": "App Settings",
+  "scenario": "Find My Device main screen displays map and headset list after navigating from App Menu with connected headset",
   "steps": [
-    "Start the app with a headset (HS) connected.",
-    "Navigate to the App Menu.",
-    "Tap on 'Find My Device'.",
-    "If prompted, allow location access."
+    "1. Launch the Poly Studio Mobile app on your Android device.",
+    "2. Ensure a Poly Bluetooth headset is connected to the phone.",
+    "3. Tap the App Menu (hamburger icon or three-dot menu) in the top-left or top-right corner of the Home screen.",
+    "4. Select 'Find My Device' from the menu.",
+    "5. If prompted, grant location access permission to the app.",
+    "6. Observe the main Find My Device screen that appears."
   ],
-  "expected": "Main screen displays a map and list of connected/disconnected headsets.",
+  "expected": "The main Find My Device screen displays a map showing the current location of the connected headset, along with a list of connected and/or disconnected headsets.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Find My Device",
-    "headset connected",
-    "App Menu",
-    "location access",
-    "map view",
-    "headset list",
-    "device tracking"
+    "find-my-device",
+    "poly-studio-mobile",
+    "app-menu",
+    "headset-list",
+    "map-view",
+    "location-permission",
+    "bluetooth-headset",
+    "android-app"
   ],
   "source_last_updated": "1759926560",
   "source_hash": "8ca2c6457559f489e663664e5a75fa877914707f07e7662c427be5a339de06f6",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.144442Z",
+  "processed_at": "2026-04-25T05:37:16.762005Z",
   "status": "active"
 }
