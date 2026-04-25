@@ -5,31 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - Connecting multiple headsets",
   "feature": "Device Management",
-  "scenario": "Device home screen fails to display all connected headsets when 2 or 3 devices are paired and connected, with dot indicators and swipe navigation not working properly",
+  "scenario": "Device home screen fails to display all connected headsets when multiple devices are paired and connected",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Pair and connect two or three Bluetooth headsets (e.g., Poly Voyager 5200, Poly Voyager 4320, Poly Savi 8220) to the same phone.",
-    "Ensure all headsets are actively connected via Bluetooth.",
-    "Observe the Home screen of the app.",
-    "Look at the dots at the bottom of the screen indicating the number of connected devices.",
-    "Swipe left or right on the screen to navigate between each connected device."
+    "Open Poly Studio Mobile app on Android",
+    "Pair and connect two or more Poly Bluetooth headsets to the Android device",
+    "Navigate to the Home screen of the app",
+    "Observe the dots at the bottom of the Home screen indicating the number of connected devices",
+    "Swipe left or right on the Home screen to navigate between connected devices"
   ],
-  "expected": "The Home screen displays all connected devices properly. Dots at the bottom indicate the number of connected devices and which device is currently displayed. Users can swipe left or right to navigate between each connected device.",
+  "expected": "The Home screen displays all connected devices properly. Dots at the bottom indicate the number of connected devices and which device is currently displayed. Swiping left or right navigates between each connected device smoothly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "home-screen",
-    "multi-device-connection",
-    "dot-indicators",
-    "swipe-navigation",
-    "connected-headsets",
-    "bluetooth-pairing",
-    "device-switching"
+    "connected-devices",
+    "multi-device-pairing",
+    "bluetooth-headsets",
+    "device-navigation",
+    "device-dots"
   ],
   "source_last_updated": "1761749623",
   "source_hash": "5464078184de509e68e3afb507374ea512ba3582da474bb167200e349b07dfaa",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.801063Z",
+  "processed_at": "2026-04-25T08:21:30.917421Z",
   "status": "active"
 }
