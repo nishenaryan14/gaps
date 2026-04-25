@@ -5,32 +5,34 @@
   "project": "411453",
   "title": "EQ - Changed custom EQ, not saved, reset device, changes are not preset [TO BE VERIFIED]",
   "feature": "Equalizer",
-  "scenario": "Unsaved custom EQ changes persist after device reset instead of reverting to saved preset values",
+  "scenario": "Unsaved custom EQ changes persist as a preset after device reset instead of reverting to previously saved preset values",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Tap on the connected device name to open Device Settings.",
-    "Navigate to Audio Settings \u2192 Equalizer.",
-    "Select a custom EQ preset and modify some frequency bands (do not tap Save).",
-    "Press and hold the Power button on the device to reset it.",
-    "Wait for the device to power back on and reconnect to the app.",
-    "Return to Poly Studio Mobile \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer."
+    "Open Poly Studio Mobile app on the Android device.",
+    "Navigate to Home screen and tap on the connected [Device Name].",
+    "Go to Audio Settings \u2192 Equalizer.",
+    "Select a custom EQ preset and modify some frequency bands (e.g., increase bass or treble).",
+    "Do NOT tap the Save button; instead, exit the Equalizer screen (e.g., press Back or navigate away).",
+    "Power off the Bluetooth audio device by pressing and holding the Power button.",
+    "Power on the device again by pressing the Power button.",
+    "Reconnect to the device via the Poly Studio Mobile app.",
+    "Navigate back to Audio Settings \u2192 Equalizer and observe the current EQ settings."
   ],
-  "expected": "The unsaved EQ changes should be discarded, and the previously saved preset values should be restored.",
+  "expected": "The EQ settings should revert to the previously saved preset values (the values before the unsaved changes were made).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
     "equalizer",
     "custom-eq-preset",
     "eq-persistence",
     "device-reset",
-    "poly-studio-mobile",
+    "unsaved-changes",
     "audio-settings",
-    "eq-revert",
-    "frequency-bands"
+    "eq-frequency-bands"
   ],
   "source_last_updated": "1761213229",
   "source_hash": "dd7562a612e0be67d287216ddba78b03f960c0aee464b02fa5c4823f67ebbab8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.005523Z",
+  "processed_at": "2026-04-25T09:32:26.263275Z",
   "status": "active"
 }
