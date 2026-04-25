@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "Fit test - 2nd screen Fail and Retry",
   "feature": "Device Management",
-  "scenario": "Fit Test Retry button on second screen does not restart the test after Cancel or failure on Voyager Free 60+",
+  "scenario": "Fit Test retry after cancel or failure on screen 2 does not restart the test and display results on Voyager Free 60+",
   "steps": [
     "1. Launch the Poly Studio Mobile app with a device that supports Fit Test connected.",
     "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Fit Test.",
@@ -14,22 +14,22 @@
     "5. Observe the screen and tap the \"Retry\" button.",
     "6. Check the result displayed after retrying."
   ],
-  "expected": "The fit test is performed again and the result is displayed successfully.",
+  "expected": "The test is performed again and the result is displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "fit-test",
-    "retry-button",
-    "voyager-free-60-plus",
-    "poly-studio-mobile-app",
+    "retry",
+    "voyager-free-60+",
+    "poly-studio-mobile",
     "device-settings",
-    "cancel-action",
+    "cancel",
     "test-failure",
-    "fit-test-restart"
+    "fit-test-results"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "26a6f63ff58bd0342c2d353726784333d8b1b422e0c10cd1503d8355d47d21e1",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.984558Z",
+  "processed_at": "2026-04-25T09:32:26.236157Z",
   "status": "active"
 }
