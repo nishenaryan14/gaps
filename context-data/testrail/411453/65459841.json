@@ -5,33 +5,23 @@
   "project": "411453",
   "title": "Notifications - Master Toggle OFF -  Update Available",
   "feature": "Notifications",
-  "scenario": "No \"Update Available\" notification appears upon successful pairing when Notifications master toggle is OFF in App Settings > General > Notifications & Device Alerts",
-  "steps": [
-    "1. Open the Poly Studio Mobile app on the mobile phone.",
-    "2. Navigate to App Settings > General > Notifications & Device Alerts.",
-    "3. Set the Notifications master toggle to OFF.",
-    "4. Ensure the paired Poly audio device has a firmware version lower than the current version available on the server.",
-    "5. Close the app to the background (do not force close).",
-    "6. Initiate pairing between the mobile phone and the Poly audio device (e.g., press the Bluetooth button on the device).",
-    "7. Wait for successful pairing to complete.",
-    "8. Observe the notification area on the mobile phone for any \"Update Available\" notification."
-  ],
-  "expected": "No \"Update Available\" notification appears upon successful pairing.",
+  "scenario": "No \"Update Available\" notification appears upon successful pairing when Notifications master toggle is OFF and app is in background with lower firmware version",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "notifications-master-toggle",
-    "update-available-notification",
-    "app-settings-general",
-    "notifications-and-device-alerts",
-    "poly-studio-mobile",
-    "bluetooth-pairing",
     "firmware-update",
-    "device-alerts"
+    "update-available-notification",
+    "bluetooth-pairing",
+    "notifications-master-toggle",
+    "background-app",
+    "lower-firmware-version",
+    "poly-app"
   ],
   "source_last_updated": "1761230695",
   "source_hash": "8aa44cfc0b1315989d5a470d6000326394abbed79e176f18500af33895198541",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.973249Z",
+  "processed_at": "2026-04-25T08:21:31.046571Z",
   "status": "active"
 }
