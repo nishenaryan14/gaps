@@ -7,28 +7,30 @@
   "feature": "App Settings",
   "scenario": "Quick Setup Guide charge case outside screen zoom toggles when tapping circle button on third screen",
   "steps": [
-    "Open the Quick Setup Guide (QSG) in the Poly Studio Mobile app.",
-    "Navigate to the third screen showing the charge case outside view.",
+    "Open the Poly Studio Mobile app on your Android device.",
+    "Navigate to the Home screen.",
+    "Locate the Quick Setup Guide (QSG) section.",
+    "Tap on the charge case outside / third screen of the QSG.",
     "Tap the right circle button on the screen.",
     "Observe the screen zoom in and display new text.",
     "Tap the same right circle button again.",
     "Observe the screen zoom out to the original charge case outside view."
   ],
-  "expected": "Tapping the right circle button toggles between a zoomed-in view with additional text and the original zoomed-out charge case outside view.",
+  "expected": "Tapping the right circle button zooms in and displays new text. Tapping it again zooms out to the original charge case outside screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "quick-setup-guide",
     "poly-studio-mobile",
+    "quick-setup-guide",
     "charge-case-outside",
     "screen-zoom",
     "circle-button",
     "third-screen",
-    "ui-navigation"
+    "android-app"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "68af485a5115a3eabd5d692da654099984bdf20ccd46149a36e2007fd86a9ba2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.939470Z",
+  "processed_at": "2026-04-25T08:21:31.009092Z",
   "status": "active"
 }
