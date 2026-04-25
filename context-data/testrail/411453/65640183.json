@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "Analytics - Settings Changed",
   "feature": "App Settings",
-  "scenario": "Analytics event logged for setting changes in Poly Studio Mobile app and synced to connected Poly device",
+  "scenario": "Analytics event logged for setting changes in the Poly Studio Mobile app and device sync, tracked via Firebase with device PID, global setting ID, and settings value",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the mobile device.",
-    "2. Ensure a Poly Bluetooth audio device is connected to the app.",
-    "3. Navigate to the Home screen and tap on the connected [Device Name] to enter Device Settings.",
-    "4. Go to Audio Settings and change any available setting (e.g., ANC, Transparency Mode, Equalizer, or Notifications).",
-    "5. Observe the Firebase Analytics dashboard to verify that an analytics event is logged for the setting change.",
-    "6. On the Firebase dashboard, check the event graph, event count by country/gender, events per session, app version, app build, and app environment.",
-    "7. Verify that the logged event includes the device PID, global setting ID, and the new settings value."
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to the Home screen and tap on the connected [Device Name].",
+    "3. Go to Audio Settings and change any setting (e.g., ANC, Transparency Mode, Equalizer, or Notifications).",
+    "4. Observe that the setting change is synced to the Poly Bluetooth audio device.",
+    "5. Open the Firebase dashboard and navigate to the analytics event tracking section.",
+    "6. Verify that the event appears with default elements: graph, event count by country/gender, events per session, app version, app build, and app environment.",
+    "7. Check that the event includes custom parameters: device PID, global setting ID, and settings value.",
+    "8. Wait a few hours and confirm that the event count updates in the Firebase dashboard."
   ],
-  "expected": "An analytics event is logged in Firebase whenever a setting is changed in the Poly Studio Mobile app or synced to the connected Poly device. The Firebase dashboard displays the event with correct event counts, device PID, global setting ID, and settings value, along with default elements (event graph, event count by country/gender, events per session, app version, app build, app environment).",
+  "expected": "An analytics event is logged in Firebase with default elements (graph, event count by country/gender, events per session, app version, app build, app environment) plus custom parameters (device PID, global setting ID, settings value). Event counts update after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "analytics-event",
     "firebase-analytics",
-    "device-settings",
+    "device-pid",
+    "global-setting-id",
+    "settings-value",
+    "device-sync",
     "audio-settings",
-    "anc",
-    "transparency-mode",
-    "equalizer"
+    "analytics-event"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "e752ae2786119cc06ff7c5a82101f97cccf5c93a6070edf991ce0a7030bc1b3e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.970831Z",
+  "processed_at": "2026-04-25T07:55:32.000255Z",
   "status": "active"
 }
