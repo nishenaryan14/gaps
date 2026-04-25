@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Find My Device - Disconnected / Out of range device details",
   "feature": "App Settings",
-  "scenario": "Find My Device shows last known location, device status, and battery percentage when headset is out of range",
+  "scenario": "Find My Device shows last known location address, device status, last connection date, and battery percentage for a disconnected/out-of-range headset",
   "steps": [
-    "1. Ensure the Poly Bluetooth headset is disconnected or out of range from the phone.",
-    "2. Open the Poly Studio Mobile app on the Android device.",
+    "1. Launch Poly Studio Mobile app on the mobile device.",
+    "2. Ensure a Poly Bluetooth headset is paired but currently disconnected (out of range).",
     "3. Navigate to the Home screen and tap the App Menu (hamburger icon or menu icon).",
-    "4. From the menu, tap \"Find My Device\".",
-    "5. If prompted, grant GPS location access to the app.",
-    "6. Observe the gray geo icon displayed on the screen and tap it.",
-    "7. Note the pop-up window that appears showing the last known location details."
+    "4. From the menu, tap \"Find My Device\". (Note: GPS location access must be granted to the app.)",
+    "5. Observe the gray geo icon displayed on the Find My Device screen.",
+    "6. Tap the gray geo icon.",
+    "7. Observe the new window that appears."
   ],
-  "expected": "A window opens displaying the last known location address (street & city), device name & status, date of last connection, and last known battery percentage.",
+  "expected": "A new window is displayed showing: the last known location address (street & city), the device name & status, the date of last connection, and the last known battery percentage.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "last-known-location",
     "device-status",
+    "last-connection-date",
     "battery-percentage",
     "poly-studio-mobile",
-    "out-of-range",
-    "gps-location-access",
-    "geo-icon"
+    "gps-location",
+    "out-of-range"
   ],
   "source_last_updated": "1759927716",
   "source_hash": "155aba18f56f37deea67dd4769664baabf2d0d36362256fc06bd4a0d2996b005",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.940379Z",
+  "processed_at": "2026-04-25T09:32:26.178393Z",
   "status": "active"
 }
