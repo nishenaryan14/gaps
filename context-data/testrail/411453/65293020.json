@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "Onboarding - Organized, Up-to-Date, Personal screens - App in the background",
   "feature": "App Settings",
-  "scenario": "Onboarding flow state and animation are preserved when app is backgrounded and resumed after progressing through Organized, Up-to-Date, and Personal screens",
+  "scenario": "Onboarding flow persists on the same page with animation still working after app is backgrounded for 1-2 minutes on Organized, Up-to-Date, and Personal screens",
   "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Progress through the 'Organized' onboarding screen.",
-    "3. Progress through the 'Up-to-Date' onboarding screen.",
-    "4. Progress through the 'Personal' onboarding screen.",
-    "5. Put the app in the background (e.g., press the Home button or switch to another app).",
-    "6. Wait 1\u20132 minutes.",
-    "7. Reopen the app by tapping the app icon or switching back to it."
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Begin the onboarding flow and navigate to the \"Organized\" screen.",
+    "3. Press the Home button (or gesture) to put the app into the background.",
+    "4. Wait 1\u20132 minutes.",
+    "5. Reopen the app from the recent apps list or home screen.",
+    "6. Observe the current screen and animation state.",
+    "7. Repeat steps 2\u20136 for the \"Up-to-Date\" screen.",
+    "8. Repeat steps 2\u20136 for the \"Personal\" screen."
   ],
-  "expected": "The user is returned to the same onboarding screen they were on (e.g., 'Personal') with the animation still playing/working correctly.",
+  "expected": "The app remains on the same onboarding screen (Organized, Up-to-Date, or Personal) with the animation still playing/working correctly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
     "onboarding-flow",
-    "app-background-resume",
-    "state-persistence",
+    "poly-studio-mobile",
+    "app-backgrounding",
+    "animation-persistence",
     "organized-screen",
     "up-to-date-screen",
     "personal-screen",
-    "animation-preservation"
+    "screen-persistence"
   ],
   "source_last_updated": "1768390358",
   "source_hash": "63a3ed4b21b42bb66c0cdd49b38fc2969205a214a122cb467f57119654734830",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.907830Z",
+  "processed_at": "2026-04-25T09:32:26.130637Z",
   "status": "active"
 }
