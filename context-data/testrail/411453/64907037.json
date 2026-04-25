@@ -5,19 +5,21 @@
   "project": "411453",
   "title": "[IOS]App Settings - General - Account - Log in - Log out - Continue",
   "feature": "App Settings",
-  "scenario": "Account login/logout flow in App Settings > General shows correct states for logged in and logged out user on Poly Studio Mobile app",
+  "scenario": "Account login/logout flow verification in Poly Studio Mobile App Settings > General",
   "steps": [
     "1. Launch the Poly Studio Mobile app as a guest user.",
     "2. Navigate to App Settings \u2192 General \u2192 Account.",
     "3. Tap 'Log in'.",
     "4. Tap 'Continue' and log in with valid credentials.",
-    "5. Verify that 'Your account' text appears with populated Name and Email fields.",
+    "5. Verify that the 'Your account' text is displayed with Name and Email fields populated.",
     "6. Tap 'Log out'.",
     "7. Verify that a login dialog opens with 'Cancel' and 'Continue' options.",
     "8. Tap 'Continue'.",
-    "9. Verify that the user is logged out, 'Your account' text shows 'You aren't currently logged in', and the 'Log in' button is visible."
+    "9. Verify that the user is logged out.",
+    "10. Verify that the 'Your account' text shows 'You aren't currently logged in'.",
+    "11. Verify that the 'Log in' button is visible."
   ],
-  "expected": "After logging in, 'Your account' text appears with populated Name and Email fields. After tapping 'Continue' on the logout dialog, the user is logged out, 'Your account' text shows 'You aren't currently logged in', and the 'Log in' button is visible.",
+  "expected": "After logging in, 'Your account' text appears with Name and Email fields populated. After tapping Log out and confirming with Continue, the user is logged out, 'Your account' shows 'You aren't currently logged in', and the Log in button is visible.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,14 +27,13 @@
     "account-login",
     "account-logout",
     "app-settings",
-    "general-settings",
-    "login-flow",
-    "logout-flow",
-    "user-authentication"
+    "guest-user",
+    "login-dialog",
+    "your-account"
   ],
   "source_last_updated": "1764319845",
   "source_hash": "5be07691c8a9306facad9f3d236084de6d5ea3dc71871470ac976d19169fa7b0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.930707Z",
+  "processed_at": "2026-04-25T09:32:26.160535Z",
   "status": "active"
 }
