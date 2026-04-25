@@ -14,7 +14,7 @@
     "5. Observe the dialog that appears.",
     "6. Tap the 'Ok got it' button on the dialog."
   ],
-  "expected": "A dialog is displayed: 'Feature unavailable. An internet connection is required to access this feature.' with an 'Ok got it' button. Tapping the button dismisses the dialog and returns to the no-device Home screen.",
+  "expected": "A dialog appears with the message: 'Feature unavailable. An internet connection is required to access this feature.' and an 'Ok got it' button. Tapping the button dismisses the dialog and returns to the no-device Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,11 +24,11 @@
     "no-device-connected",
     "offline-behavior",
     "home-screen",
-    "dialog"
+    "error-dialog"
   ],
   "source_last_updated": "1762181111",
   "source_hash": "48fcc4940d2f99e7cf0dcd7ca90e15851d7e0f45b2c7038a1f3113cea2aca099",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.718938Z",
+  "processed_at": "2026-04-25T07:55:31.792834Z",
   "status": "active"
 }
