@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "Device Home Screen - Power on Headset while in the app",
   "feature": "Device Management",
-  "scenario": "Poly Studio Mobile app UI does not update to show headset as connected when a paired headset is powered on while the app is open",
+  "scenario": "Poly Studio Mobile app UI does not update to show headset as connected when paired device is powered on while app is open",
   "steps": [
     "1. Launch the Poly Studio Mobile app on the Android device.",
-    "2. Ensure a Poly Bluetooth headset is already paired with the Android device but currently powered off.",
-    "3. Observe the Home screen of the app \u2014 the headset should appear under 'My Devices' with a 'Disconnected' status.",
-    "4. Power on the paired Poly Bluetooth headset by pressing and holding the Power button.",
-    "5. Wait for the headset to connect (look for the Bluetooth LED to become solid or hear the 'connected' voice prompt).",
-    "6. Observe the Poly Studio Mobile app Home screen for the device status update."
+    "2. Ensure a Poly Bluetooth headset is already paired with the Android device but currently powered OFF.",
+    "3. Observe the Home screen of the app \u2014 the headset should appear in the device list with a 'Disconnected' or 'Not Connected' status.",
+    "4. Power ON the paired Poly Bluetooth headset (e.g., press and hold the Power button until the LED indicates power-on).",
+    "5. Wait for the headset to automatically reconnect to the Android device via Bluetooth.",
+    "6. Observe the Home screen of the Poly Studio Mobile app for the device status update."
   ],
-  "expected": "The app UI on the Home screen updates to show the headset as 'Connected' under 'My Devices', with the device name displayed and a connected status indicator (e.g., green dot or 'Connected' label).",
+  "expected": "The Poly Studio Mobile app Home screen updates to show the headset as 'Connected' (e.g., device name appears with a connected status indicator).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-connection-status",
     "ui-not-updating",
-    "my-devices-screen",
-    "bluetooth-pairing",
-    "headset-power-on",
-    "connection-state-persistence"
+    "bluetooth-reconnection",
+    "home-screen",
+    "paired-device",
+    "power-on-reconnect"
   ],
   "source_last_updated": "1761834387",
   "source_hash": "b1b2acca2fd7dac7a0c8ba14cbe1b29671a0c6b9092e2461b1c58a6570c949b6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.920590Z",
+  "processed_at": "2026-04-25T09:32:26.143814Z",
   "status": "active"
 }
