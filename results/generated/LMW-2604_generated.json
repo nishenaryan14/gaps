@@ -1,104 +1,132 @@
 [
   {
-    "title": "TC-PAIR-IMG-001: Verify headset image displays on Home Screen when Voyager Free 60+ is in pairing mode (no device connected)",
+    "title": "TC-HOME-IMG-001: Verify Voyager Free 60+ product image displays on Home Screen after initial pairing",
     "steps": [
-      "Ensure no Poly device is currently connected to the phone (check Bluetooth settings and Poly Studio Mobile app).",
-      "Open Poly Studio Mobile app.",
-      "Observe the Home Screen UI state.",
-      "Place the Voyager Free 60+ earbuds in the charge case and close the lid.",
-      "Open the charge case lid and press and hold the Bluetooth button on the charge case touchscreen for 3 seconds until the LED flashes blue (pairing mode).",
-      "Return to the Poly Studio Mobile app Home Screen.",
-      "Observe the Home Screen for the presence of a headset product image/illustration of the Voyager Free 60+."
+      "Ensure no Poly device is currently paired or connected to the phone.",
+      "Open Poly Studio Mobile app \u2192 observe the Home Screen (should show 'No device connected' or similar).",
+      "Put Voyager Free 60+ earbuds into pairing mode (open charge case, press and hold pairing button).",
+      "On the phone, go to Bluetooth settings \u2192 pair with 'Poly Voyager Free 60+'.",
+      "Return to Poly Studio Mobile app \u2192 observe the Home Screen.",
+      "Verify the Home Screen displays the Voyager Free 60+ product image/icon (not a generic placeholder or missing image).",
+      "Verify the device name 'Poly Voyager Free 60+' is displayed below or beside the product image.",
+      "Verify the connection status indicator shows 'Connected'."
     ],
-    "expected": "The Poly Studio Mobile app Home Screen displays a headset product image/illustration of the Voyager Free 60+ earbuds, guiding the user that a device is available for pairing. No placeholder, blank space, or generic icon is shown instead of the product image."
+    "expected": "The Home Screen in Poly Studio Mobile app displays the correct Voyager Free 60+ product image/icon, the device name 'Poly Voyager Free 60+', and a 'Connected' status indicator. No broken image placeholder or generic icon is shown."
   },
   {
-    "title": "TC-PAIR-IMG-002: Verify headset image displays on Home Screen when Voyager Free 20 is in pairing mode (no device connected)",
+    "title": "TC-HOME-IMG-002: Verify Voyager Free 20 product image displays on Home Screen after initial pairing",
     "steps": [
-      "Ensure no Poly device is currently connected to the phone (check Bluetooth settings and Poly Studio Mobile app).",
-      "Open Poly Studio Mobile app.",
-      "Observe the Home Screen UI state.",
-      "Place the Voyager Free 20 earbuds in the charge case.",
-      "Open the charge case lid and press and hold the Bluetooth button on the case for 3 seconds until the LED flashes blue (pairing mode).",
-      "Return to the Poly Studio Mobile app Home Screen.",
-      "Observe the Home Screen for the presence of a headset product image/illustration of the Voyager Free 20."
+      "Ensure no Poly device is currently paired or connected to the phone.",
+      "Open Poly Studio Mobile app \u2192 observe the Home Screen (should show 'No device connected' or similar).",
+      "Put Voyager Free 20 earbuds into pairing mode.",
+      "On the phone, go to Bluetooth settings \u2192 pair with 'Poly Voyager Free 20'.",
+      "Return to Poly Studio Mobile app \u2192 observe the Home Screen.",
+      "Verify the Home Screen displays the Voyager Free 20 product image/icon (distinct from the Voyager Free 60+ image).",
+      "Verify the device name 'Poly Voyager Free 20' is displayed below or beside the product image.",
+      "Verify the connection status indicator shows 'Connected'."
     ],
-    "expected": "The Poly Studio Mobile app Home Screen displays a headset product image/illustration of the Voyager Free 20 earbuds, guiding the user that a device is available for pairing. No placeholder, blank space, or generic icon is shown instead of the product image."
+    "expected": "The Home Screen in Poly Studio Mobile app displays the correct Voyager Free 20 product image/icon, the device name 'Poly Voyager Free 20', and a 'Connected' status indicator. The image should be visually distinct from the Voyager Free 60+ product image."
   },
   {
-    "title": "TC-PAIR-IMG-003: Verify headset image persists on Home Screen when Voyager Free 60+ remains in pairing mode and app is backgrounded/foregrounded",
+    "title": "TC-HOME-IMG-003: Verify Home Screen product image persists after app backgrounding and foregrounding with Voyager Free 60+",
     "steps": [
-      "Ensure no Poly device is currently connected to the phone.",
-      "Place Voyager Free 60+ earbuds in pairing mode (open case lid, press and hold Bluetooth button on charge case touchscreen for 3 seconds until LED flashes blue).",
-      "Open Poly Studio Mobile app and verify the headset product image is displayed on Home Screen.",
+      "Pair and connect Voyager Free 60+ to the phone via Bluetooth.",
+      "Open Poly Studio Mobile app \u2192 verify the Home Screen shows the Voyager Free 60+ product image and 'Connected' status.",
       "Press the Home button on the phone to background the app.",
       "Wait 10 seconds.",
-      "Reopen Poly Studio Mobile app from the app switcher or home screen.",
-      "Observe the Home Screen UI."
+      "Reopen Poly Studio Mobile app from the recent apps list.",
+      "Observe the Home Screen."
     ],
-    "expected": "The Voyager Free 60+ product image/illustration continues to be displayed on the Home Screen after the app is backgrounded and foregrounded, as long as the device remains in pairing mode."
+    "expected": "The Home Screen still displays the Voyager Free 60+ product image correctly. No broken image, placeholder, or missing asset is shown. The device name and connection status remain accurate."
   },
   {
-    "title": "TC-PAIR-IMG-004: Verify headset image transitions to connected device screen after pairing Voyager Free 60+ completes",
+    "title": "TC-HOME-IMG-004: Verify Home Screen product image persists after app force-kill and relaunch with Voyager Free 20",
     "steps": [
-      "Ensure no Poly device is currently connected to the phone.",
-      "Place Voyager Free 60+ earbuds in pairing mode (open case lid, press and hold Bluetooth button on charge case touchscreen for 3 seconds until LED flashes blue).",
-      "Open Poly Studio Mobile app and verify the headset product image is displayed on Home Screen.",
-      "Tap the headset image or follow the on-screen pairing prompt to complete the Bluetooth pairing process.",
-      "Wait for the connection to be established (LED on charge case turns solid blue).",
-      "Observe the Home Screen UI after successful connection."
+      "Pair and connect Voyager Free 20 to the phone via Bluetooth.",
+      "Open Poly Studio Mobile app \u2192 verify the Home Screen shows the Voyager Free 20 product image and 'Connected' status.",
+      "Fully close (force-kill) the Poly Studio Mobile app from the recent apps list.",
+      "Wait 5 seconds.",
+      "Reopen Poly Studio Mobile app.",
+      "Observe the Home Screen."
     ],
-    "expected": "After successful pairing and connection, the Home Screen transitions from displaying the pairing headset image to showing the connected device screen with the Voyager Free 60+ device name, battery status, and settings controls."
+    "expected": "The Home Screen displays the Voyager Free 20 product image correctly after app relaunch. No broken image, placeholder, or missing asset is shown. The device name and connection status remain accurate."
   },
   {
-    "title": "TC-PAIR-IMG-005: Verify headset image disappears from Home Screen when Voyager Free 60+ exits pairing mode (times out)",
+    "title": "TC-HOME-IMG-005: Verify Home Screen product image updates correctly when switching from Voyager Free 60+ to Voyager Free 20",
     "steps": [
-      "Ensure no Poly device is currently connected to the phone.",
-      "Place Voyager Free 60+ earbuds in pairing mode (open case lid, press and hold Bluetooth button on charge case touchscreen for 3 seconds until LED flashes blue).",
-      "Open Poly Studio Mobile app and verify the headset product image is displayed on Home Screen.",
-      "Do not complete the pairing process.",
-      "Wait for the Voyager Free 60+ to exit pairing mode automatically (LED stops flashing \u2014 typically 2-3 minutes).",
-      "Observe the Home Screen UI in the Poly Studio Mobile app."
+      "Pair and connect Voyager Free 60+ to the phone via Bluetooth.",
+      "Open Poly Studio Mobile app \u2192 verify the Home Screen shows the Voyager Free 60+ product image.",
+      "Disconnect Voyager Free 60+ (turn off earbuds or disable Bluetooth on the earbuds).",
+      "Put Voyager Free 20 earbuds into pairing mode.",
+      "On the phone, go to Bluetooth settings \u2192 pair with 'Poly Voyager Free 20'.",
+      "Return to Poly Studio Mobile app \u2192 observe the Home Screen.",
+      "Verify the Home Screen now displays the Voyager Free 20 product image (not the Voyager Free 60+ image).",
+      "Verify the device name updates to 'Poly Voyager Free 20'."
     ],
-    "expected": "When the Voyager Free 60+ exits pairing mode (times out), the headset product image/illustration is no longer displayed on the Home Screen. The Home Screen returns to the initial state showing no device image or a 'No device connected' state."
+    "expected": "The Home Screen correctly updates to show the Voyager Free 20 product image and device name after switching devices. The previous Voyager Free 60+ image is no longer displayed."
   },
   {
-    "title": "TC-PAIR-IMG-006: Verify headset image displays correctly when Voyager Free 60+ is put into pairing mode while app is already open on Home Screen",
+    "title": "TC-HOME-IMG-006: Verify Home Screen product image displays correctly after Bluetooth disconnect and reconnect cycle (Voyager Free 60+)",
     "steps": [
-      "Open Poly Studio Mobile app with no device connected.",
-      "Observe the initial Home Screen state (no headset image expected).",
-      "Place the Voyager Free 60+ earbuds in the charge case.",
-      "Open the charge case lid and press and hold the Bluetooth button on the charge case touchscreen for 3 seconds until the LED flashes blue (pairing mode).",
-      "Wait 5 seconds without closing or backgrounding the app.",
-      "Observe the Home Screen UI for any automatic update."
+      "Pair and connect Voyager Free 60+ to the phone via Bluetooth.",
+      "Open Poly Studio Mobile app \u2192 verify the Home Screen shows the Voyager Free 60+ product image and 'Connected' status.",
+      "Turn off the Voyager Free 60+ earbuds (or put them in the case and close the lid).",
+      "Wait for the app to update \u2192 verify the Home Screen shows 'Disconnected' or 'No device connected' and the product image may be grayed out or removed.",
+      "Turn on the Voyager Free 60+ earbuds (or open the case lid) to trigger Bluetooth reconnection.",
+      "Wait for the app to update \u2192 observe the Home Screen.",
+      "Verify the Home Screen displays the Voyager Free 60+ product image again with 'Connected' status."
     ],
-    "expected": "The Poly Studio Mobile app Home Screen automatically detects the Voyager Free 60+ in pairing mode and displays the headset product image/illustration without requiring the user to close and reopen the app."
+    "expected": "After Bluetooth disconnect, the Home Screen correctly reflects the disconnected state. After reconnection, the Voyager Free 60+ product image and 'Connected' status are restored correctly with no missing or broken image."
   },
   {
-    "title": "TC-PAIR-IMG-007: Verify headset image is correct for Voyager Free 60+ vs Voyager Free 20 (distinct product images)",
+    "title": "TC-HOME-IMG-007: Verify Home Screen product image for Voyager Free 60+ after phone reboot",
     "steps": [
-      "Ensure no Poly device is currently connected to the phone.",
-      "Place Voyager Free 60+ earbuds in pairing mode (open case lid, press and hold Bluetooth button on charge case touchscreen for 3 seconds until LED flashes blue).",
-      "Open Poly Studio Mobile app and observe the headset image displayed on Home Screen.",
-      "Note the specific product image shown (design, color, shape of earbuds and case).",
-      "Disconnect/forget the Voyager Free 60+ from Bluetooth settings.",
-      "Place Voyager Free 20 earbuds in pairing mode (open case lid, press and hold Bluetooth button on case for 3 seconds until LED flashes blue).",
-      "Open Poly Studio Mobile app and observe the headset image displayed on Home Screen.",
-      "Compare the two product images."
+      "Pair and connect Voyager Free 60+ to the phone via Bluetooth.",
+      "Open Poly Studio Mobile app \u2192 verify the Home Screen shows the Voyager Free 60+ product image and 'Connected' status.",
+      "Reboot the phone.",
+      "After phone restarts, ensure Bluetooth is enabled.",
+      "Wait for automatic reconnection to Voyager Free 60+ (or manually reconnect via Bluetooth settings).",
+      "Open Poly Studio Mobile app.",
+      "Observe the Home Screen."
     ],
-    "expected": "The Home Screen displays distinct product images for Voyager Free 60+ and Voyager Free 20 that accurately represent each product's unique design. The Voyager Free 60+ image shows the touchscreen charge case, while the Voyager Free 20 image shows its standard charge case without a touchscreen."
+    "expected": "After phone reboot and Bluetooth reconnection, the Home Screen displays the Voyager Free 60+ product image correctly. No broken image, placeholder, or missing asset is shown. The device name and connection status are accurate."
   },
   {
-    "title": "TC-PAIR-IMG-008: Verify headset image on Home Screen when Voyager Free 60+ is in pairing mode and phone rotates",
+    "title": "TC-HOME-IMG-008: Verify Home Screen does not show a generic/incorrect image when Voyager Free 60+ is paired but app was opened before pairing completed",
     "steps": [
-      "Ensure no Poly device is currently connected to the phone.",
-      "Place Voyager Free 60+ earbuds in pairing mode (open case lid, press and hold Bluetooth button on charge case touchscreen for 3 seconds until LED flashes blue).",
-      "Open Poly Studio Mobile app and verify the headset product image is displayed on Home Screen.",
-      "Rotate the phone from portrait to landscape orientation.",
-      "Observe the Home Screen UI in landscape mode.",
-      "Rotate the phone back to portrait orientation.",
-      "Observe the Home Screen UI in portrait mode."
+      "Ensure no Poly device is currently paired or connected.",
+      "Open Poly Studio Mobile app \u2192 Home Screen shows 'No device connected'.",
+      "While the app remains open in the foreground, put Voyager Free 60+ into pairing mode.",
+      "On the phone, go to Bluetooth settings \u2192 pair with 'Poly Voyager Free 60+'.",
+      "Return to Poly Studio Mobile app (do not force-kill or background it).",
+      "Observe the Home Screen for up to 30 seconds as the app detects the newly paired device.",
+      "Verify the Home Screen updates to show the Voyager Free 60+ product image.",
+      "Verify the device name 'Poly Voyager Free 60+' and 'Connected' status appear."
     ],
-    "expected": "The Voyager Free 60+ headset product image/illustration remains displayed on the Home Screen during and after phone rotation. The image scales/repositions correctly for both portrait and landscape orientations without being cut off, distorted, or disappearing."
+    "expected": "The Home Screen dynamically updates to display the correct Voyager Free 60+ product image, device name, and connection status without requiring an app restart or backgrounding. No generic placeholder or incorrect image is shown during the transition."
+  },
+  {
+    "title": "TC-HOME-IMG-009: Verify Home Screen product image for Voyager Free 20 during low battery condition",
+    "steps": [
+      "Pair and connect Voyager Free 20 to the phone via Bluetooth.",
+      "Open Poly Studio Mobile app \u2192 verify the Home Screen shows the Voyager Free 20 product image and 'Connected' status.",
+      "Allow the Voyager Free 20 battery to drain to a low level (or simulate via test fixture if available).",
+      "Observe the Home Screen in Poly Studio Mobile app.",
+      "Verify the Voyager Free 20 product image is still displayed correctly (not replaced by a placeholder).",
+      "Verify the battery indicator shows low battery level next to the product image."
+    ],
+    "expected": "The Voyager Free 20 product image remains correctly displayed on the Home Screen even during low battery conditions. The battery indicator accurately reflects the low charge level, but the product image itself is not affected."
+  },
+  {
+    "title": "TC-HOME-IMG-010: Verify Home Screen product image for Voyager Free 60+ with Touchscreen Charge Case connected via USB-C",
+    "steps": [
+      "Pair and connect Voyager Free 60+ to the phone via Bluetooth.",
+      "Open Poly Studio Mobile app \u2192 verify the Home Screen shows the Voyager Free 60+ product image.",
+      "Connect the Voyager Free 60+ charge case to a power source via USB-C cable.",
+      "Observe the Home Screen in Poly Studio Mobile app.",
+      "Verify the Voyager Free 60+ product image is still displayed correctly.",
+      "Verify the charging indicator on the Home Screen (if applicable) reflects the charging state of the case/earbuds."
+    ],
+    "expected": "The Voyager Free 60+ product image remains correctly displayed on the Home Screen when the charge case is connected via USB-C. The charging state is accurately reflected without affecting the product image rendering."
   }
 ]
