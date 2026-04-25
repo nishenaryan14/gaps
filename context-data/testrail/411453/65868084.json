@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - Power off Headset while in the app",
   "feature": "Device Management",
-  "scenario": "Poly Studio Mobile app UI does not update to show headset as disconnected when headset is powered off while connected",
+  "scenario": "Poly Studio Mobile app UI does not update to show headset as disconnected when headset is powered off",
   "steps": [
-    "1. Launch the Poly Studio Mobile app on your Android device.",
-    "2. Ensure a Poly Bluetooth headset is powered on and connected to the app (Home screen shows the device as connected).",
-    "3. Power off the headset by pressing and holding the Power button.",
-    "4. Observe the app's Home screen UI."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Ensure a Poly Bluetooth headset is connected and appears on the Home screen.",
+    "3. Power off the connected headset by pressing and holding the Power button.",
+    "4. Observe the app's Home screen UI for the device status."
   ],
-  "expected": "The app's Home screen UI updates to show the headset as disconnected (e.g., device status changes from \"Connected\" to \"Disconnected\" or the device is removed from the connected devices list).",
+  "expected": "The app's Home screen should update to show the headset as disconnected (e.g., \"Disconnected\" status or the device card should indicate no connection).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "ui-update",
+    "device-status",
     "disconnected-state",
-    "bluetooth-connection",
+    "bluetooth-headset",
     "power-off",
     "home-screen",
-    "connection-status",
-    "android"
+    "connection-persistence"
   ],
   "source_last_updated": "1761834242",
   "source_hash": "4d0a1e021d5330bfa652bdd78b7d787ba830205eb7e5dbcbc38f8cf2b39f6707",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.797354Z",
+  "processed_at": "2026-04-25T08:21:30.917421Z",
   "status": "active"
 }
