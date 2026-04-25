@@ -4,29 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Home Screen - No Device Connected - Supported List - Other Devices",
-  "feature": "Device Home Screen - No Device Connected",
-  "scenario": "When no devices are connected, tapping \"Supported Devices\" link and then \"Other devices\" button displays correct text and opens Poly support products web page.",
+  "feature": "App Settings",
+  "scenario": "\"Supported Devices\" link and \"Other devices\" button navigation from Device Home Screen with no device connected",
   "steps": [
-    "Ensure no devices are connected.",
-    "Tap the 'Supported Devices' link.",
-    "Tap the 'Other devices' button."
+    "1. Launch the Poly Studio Mobile app.",
+    "2. Ensure no device is connected (Device Home screen shows 'No device connected').",
+    "3. Tap the 'Supported Devices' link.",
+    "4. Observe the displayed text.",
+    "5. Tap the 'Other devices' button.",
+    "6. Observe the resulting action."
   ],
-  "expected": "Tapping the \"Supported Devices\" link displays text matching the Figma design. Tapping the \"Other devices\" button opens the Poly support products web page.",
+  "expected": "1. Tapping 'Supported Devices' displays text matching the Figma design. 2. Tapping 'Other devices' opens the Poly support products web page (https://www.poly.com/us/en/support/products).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "no devices connected",
-    "Supported Devices link",
-    "Other devices button",
-    "correct text displayed",
-    "Poly support products",
-    "web page opens",
-    "device connection status",
-    "support navigation"
+    "poly-studio-mobile",
+    "device-home-screen",
+    "no-device-connected",
+    "supported-devices",
+    "other-devices",
+    "app-navigation",
+    "device-list"
   ],
   "source_last_updated": "1761657130",
   "source_hash": "58d47865c6e84c1cb4e89fcc28c86ffacaedcaaedf0d57fb0230beb4b977e3de",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.113398Z",
+  "processed_at": "2026-04-25T05:37:16.733507Z",
   "status": "active"
 }
