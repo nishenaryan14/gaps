@@ -5,18 +5,18 @@
   "project": "411453",
   "title": "Swipe right, next screen",
   "feature": "App Settings",
-  "scenario": "Quick Start Guide screen navigation: swiping right from right side cycles through onboarding screens showing earbuds, charge case outside, and charge case inside",
+  "scenario": "Quick Start Guide screen navigation: swiping right from right side cycles through earbuds, charge case outside, and charge case inside screens",
   "steps": [
     "Open the Poly Studio Mobile app",
     "If this is a fresh install or first launch, the Quick Start Guide (QSG) onboarding flow should appear",
     "On the first QSG screen, swipe right from the right edge of the screen",
-    "Observe the next onboarding screen showing two earbuds",
+    "Observe the screen transitions to the next onboarding screen showing two earbuds",
     "Swipe right again from the right edge of the screen",
-    "Observe the next onboarding screen showing the charge case (outside view)",
+    "Observe the screen transitions to the next onboarding screen showing the charge case (outside view)",
     "Swipe right again from the right edge of the screen",
-    "Observe the next onboarding screen showing the charge case (inside view)"
+    "Observe the screen transitions to the next onboarding screen showing the charge case (inside view)"
   ],
-  "expected": "Each QSG screen displays the correct illustration (two earbuds, charge case outside, charge case inside) matching the Figma design. Swiping right from the right side of the screen smoothly transitions to the next onboarding screen.",
+  "expected": "All QSG onboarding screens (two earbuds, charge case outside, charge case inside) display correctly and match the Figma design specifications.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -31,6 +31,6 @@
   "source_last_updated": "1761315357",
   "source_hash": "22341cdda76b21748508c112ec6394807128808564f7a34ddb4850155f482aa4",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.010610Z",
+  "processed_at": "2026-04-25T09:32:26.264981Z",
   "status": "active"
 }
