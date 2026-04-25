@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "[App] Flamingo - Unpairing the charge case from headset",
   "feature": "Device Management",
-  "scenario": "Unpairing charge case from headset via Clear Trusted Device list in Device Settings shows headset as standalone without charge case after reconnection",
+  "scenario": "Unpairing the charge case from a Poly Voyager Legend 50 headset results in the device reconnecting as a standalone headset without the charge case",
   "steps": [
-    "Precondition: Headset is paired with the Poly Studio Mobile app and paired with the charge case.",
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to Device Settings \u2192 Reset Device.",
-    "3. Tap \"Clear\" next to the Clear Trusted Device list.",
-    "4. Remove the device from the Poly Studio Mobile app.",
-    "5. Remove the device from the phone's Bluetooth settings.",
-    "6. Reconnect the headset to the Poly Studio Mobile app."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the Poly Voyager Legend 50 headset to open Device Settings.",
+    "In Device Settings, scroll to and tap 'Reset Device'.",
+    "Tap 'Clear' next to 'Clear Trusted Device List'. (Note: The app shows the device as disconnected at this point.)",
+    "Remove the device from the Poly Studio Mobile app (e.g., tap Remove Device or similar option).",
+    "Go to phone Bluetooth settings and unpair/forget the Poly Voyager Legend 50.",
+    "Reconnect the headset to the app by putting the headset in pairing mode and selecting it in the app."
   ],
-  "expected": "1. After step 3, the app shows the device as disconnected. 2. After steps 4-5, the device is properly removed from the app and phone. 3. After step 6, the device connects properly and is displayed as standalone (headset only, without the charge case).",
+  "expected": "The headset connects properly and is displayed as a standalone headset only, without the charge case.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-voyager-legend-50",
+    "charge-case-unpairing",
+    "standalone-headset-reconnection",
+    "poly-studio-mobile-app",
     "clear-trusted-device-list",
-    "device-settings",
     "reset-device",
-    "poly-studio-mobile",
-    "unpairing-charge-case",
-    "headset-reconnection",
-    "bluetooth-pairing",
-    "charge-case-pairing"
+    "bluetooth-unpair",
+    "device-reconnection"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "ec02d9ec3542bbc7c2607541766e19fe2bf0119b7852b7da81cc02aa486d3b15",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.980757Z",
+  "processed_at": "2026-04-25T07:55:32.006789Z",
   "status": "active"
 }
