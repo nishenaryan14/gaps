@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "New DFU screen - Translations",
   "feature": "Firmware Updates",
-  "scenario": "DFU screen displays correctly with proper translations and no broken text across supported languages",
+  "scenario": "DFU screen displays correctly with proper translations when phone language is set to a supported language",
   "steps": [],
   "expected": "",
   "coverage": [],
@@ -13,15 +13,15 @@
   "keywords": [
     "dfu-screen",
     "firmware-update",
-    "ui-localization",
-    "text-translation",
+    "localization",
     "language-support",
-    "ui-rendering",
+    "ui-translations",
+    "phone-language",
     "poly-bluetooth"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "15e112699f208f9ce0ab0c32dcd2b8490fea15e7a400a242089f29a92a0d73a5",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.896428Z",
+  "processed_at": "2026-04-25T07:55:31.963931Z",
   "status": "active"
 }
