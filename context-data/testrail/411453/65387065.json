@@ -5,19 +5,18 @@
   "project": "411453",
   "title": "Feedback - send a Compliment feedback with names/email",
   "feature": "App Settings",
-  "scenario": "Sending a compliment feedback with name and email from App Settings > Feedback fails to attach sender details",
+  "scenario": "Sending a compliment feedback with name and email from App Settings > Feedback fails to attach user details",
   "steps": [
-    "Open the Poly Studio Mobile app on the Android device.",
-    "Tap the Menu icon (hamburger) or navigate to the Home screen.",
-    "Tap App Settings (gear icon).",
-    "Scroll down and tap Feedback.",
-    "In the Feedback screen, tap the dropdown or selector and choose \"Compliment\".",
-    "Enter feedback text in the message field.",
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap the menu icon (hamburger or gear) to navigate to App Settings.",
+    "Scroll to and tap the Feedback section.",
+    "Select the 'Compliment' option from the feedback type choices.",
+    "Enter text in the feedback body field.",
     "Enter the user's name in the Name field.",
     "Enter the user's email address in the Email field.",
-    "Tap the Send button."
+    "Tap the Send button to submit the feedback."
   ],
-  "expected": "The compliment feedback is successfully sent, and the user's name and email are attached to the submission.",
+  "expected": "Feedback is successfully sent with the user's name and email attached to the submission.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -25,14 +24,14 @@
     "app-settings",
     "feedback",
     "compliment",
-    "sender-details",
+    "user-details",
     "name-field",
     "email-field",
-    "send-failure"
+    "send-feedback"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "352896e8199ee307e16f5f6cbf9cdcc700916c2d4378e6551acc5f1f59018737",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.965005Z",
+  "processed_at": "2026-04-25T09:32:26.195378Z",
   "status": "active"
 }
