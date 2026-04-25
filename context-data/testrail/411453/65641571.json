@@ -5,16 +5,16 @@
   "project": "411453",
   "title": "EQ - Tap on button to change presets, blurred screen",
   "feature": "Equalizer",
-  "scenario": "EQ preset picker dialog blurs the background screen when selecting Bass, Flat, Bright, or Custom EQ",
+  "scenario": "EQ preset picker dialog is obscured by background blur when selecting presets (Bass, Flat, Bright, Custom EQ)",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Tap on Audio Settings",
+    "Tap on a connected device to open Device Settings",
+    "Go to Audio Settings",
     "Tap on Equalizer",
-    "Tap the picker button to change EQ presets (e.g., Bass, Flat, Bright, Custom EQ)"
+    "Tap the picker button to change EQ presets"
   ],
-  "expected": "The EQ preset picker dialog opens and the background screen remains clear and visible.",
+  "expected": "The EQ preset selection dialog appears clearly over the screen, showing preset options (Bass, Flat, Bright, Custom EQ) without background blur obscuring the dialog.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -22,14 +22,14 @@
     "equalizer",
     "poly-studio-mobile",
     "audio-settings",
-    "bass",
-    "flat",
-    "bright",
-    "custom-eq"
+    "background-blur",
+    "bass-preset",
+    "flat-preset",
+    "bright-preset"
   ],
   "source_last_updated": "1761143940",
   "source_hash": "fbf2941c582dc8b3929bb9d4894225f96857d028481b10ad5be8d1f525c67ce6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.919234Z",
+  "processed_at": "2026-04-25T08:21:31.000484Z",
   "status": "active"
 }
