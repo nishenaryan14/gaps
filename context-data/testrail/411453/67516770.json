@@ -5,31 +5,29 @@
   "project": "411453",
   "title": "Device Home Screen - Device image updates after changing earcups",
   "feature": "Device Management",
-  "scenario": "Device Home Screen headset image does not update to reflect swapped earcups on Voyager Focus 2 UC",
+  "scenario": "Device image on Device Home Screen does not update immediately after swapping earcups on Voyager Focus 2 UC",
   "steps": [
-    "1. Pair a supported device with swappable earcups (e.g., Voyager Focus 2 UC) to the Poly Studio Mobile Android app.",
-    "2. Navigate to the Home screen and observe the device image displayed.",
-    "3. Remove the currently attached earcups from the headset.",
-    "4. Observe the device image on the Home screen.",
-    "5. Attach a different set of earcups to the headset.",
-    "6. Observe the device image on the Home screen immediately after attaching the new earcups."
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Ensure a supported device (e.g., Voyager Focus 2 UC) with swappable earcups is connected",
+    "Swap the earcups on the connected device to a different color/style",
+    "Observe the device image displayed on the Home screen"
   ],
-  "expected": "The device image on the Home screen should update to reflect the currently attached earcups immediately after the earcups are changed.",
+  "expected": "The device image on the Home screen updates immediately to reflect the newly attached earcups.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "voyager-focus-2-uc",
+    "device-home-screen",
+    "device-image-update",
+    "earcup-swapping",
     "poly-studio-mobile",
-    "home-screen",
-    "device-image",
-    "swappable-earcups",
-    "earcup-detection",
     "ui-refresh",
-    "android-app"
+    "visual-feedback"
   ],
   "source_last_updated": "1769426592",
   "source_hash": "1abb9f74fa7bcdb1d02f7ec1d0cdd43b30a101db9d1a36d6ff6c9f9953436791",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.921617Z",
+  "processed_at": "2026-04-25T09:32:26.140089Z",
   "status": "active"
 }
