@@ -4,30 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Fit test - Onboarding Flow - Start Fit Test",
-  "feature": "Onboarding Flow - Fit Test",
-  "scenario": "Verify that after navigating to the Fit test screen and confirming the Position screen is displayed, clicking the Test button functions correctly.",
+  "feature": "Device Management",
+  "scenario": "Fit Test onboarding flow does not display the Position screen when Test button is clicked from Device Settings > Onboarding",
   "steps": [
-    "Start the app with a device that supports fit test connected.",
-    "Navigate to Device Settings > Onboarding > Fit test screen (after Pairing 2 screen).",
-    "Verify the Position screen is displayed.",
-    "Click the Test button."
+    "1. Launch the Poly Studio Mobile app with a supported device (e.g., Poly Voyager Focus 2) connected.",
+    "2. Go to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Onboarding.",
+    "3. Navigate to the Fit Test screen (located after the Pairing 2 screen in the onboarding flow).",
+    "4. Observe the Fit Test screen.",
+    "5. Tap the Test button."
   ],
-  "expected": "The Position screen is displayed.",
+  "expected": "The first screen of the Fit Test flow is displayed (the Position screen).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Fit test",
-    "Position screen",
-    "Test button",
-    "Onboarding",
-    "Device Settings",
-    "Pairing",
-    "App navigation",
-    "Fit test verification"
+    "fit-test",
+    "onboarding-flow",
+    "position-screen",
+    "device-settings",
+    "poly-studio-mobile",
+    "poly-voyager-focus-2",
+    "test-button",
+    "pairing-2-screen"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "f509c7c7ff4c7e905cee44e3deb4bce741eb90bc820743d37ec2f8e1dc9e4540",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.228934Z",
+  "processed_at": "2026-04-25T05:37:16.820729Z",
   "status": "active"
 }
