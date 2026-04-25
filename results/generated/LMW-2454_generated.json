@@ -1,87 +1,146 @@
 [
   {
-    "title": "TC-LOC-001: Verify Welcome Screen Displays Spanish After Language Change and App Restart",
+    "title": "TC-LOC-WELCOME-001: Spanish language selection \u2014 welcome screen text correctness (direct navigation)",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Account/Settings \u2192 App Language",
-      "Change App Language from 'English (Default)' to 'Espa\u00f1ol (Spanish)'",
-      "Tap 'Apply' or 'Confirm' to save the language change",
-      "Fully kill the Poly Studio Mobile app (swipe from Recent Apps or force stop via Android Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Force Stop)",
-      "Reopen Poly Studio Mobile app",
-      "Observe the Welcome/Splash screen text displayed during app initialization"
+      "Set device system language to English (US).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Observe welcome/splash screen text immediately after language change (if app refreshes in-place).",
+      "If no immediate refresh, proceed to next step.",
+      "Close app (home button, then swipe to kill from recents).",
+      "Reopen app.",
+      "Observe welcome/splash screen text."
     ],
-    "expected": "The Welcome/Splash screen displays all text in Spanish (e.g., 'Bienvenido a Poly Studio Mobile', 'Conectar dispositivo', 'Configurar'). The language matches the selected 'Espa\u00f1ol' preference and does not display Portuguese or English text."
+    "expected": "Welcome/splash screen displays text in Spanish (e.g., 'Bienvenido' or equivalent localized welcome string). Actual (If Bug): Welcome screen incorrectly displays Portuguese text (e.g., 'Bem-vindo') instead of Spanish."
   },
   {
-    "title": "TC-LOC-002: Verify Welcome Screen Displays Spanish After Language Change, App Restart, and Bluetooth Reconnection",
+    "title": "TC-LOC-WELCOME-002: Spanish language selection \u2014 app kill/relaunch persistence",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Account/Settings \u2192 App Language",
-      "Change App Language to 'Espa\u00f1ol (Spanish)' and confirm",
-      "Fully kill the Poly Studio Mobile app",
-      "Turn off Bluetooth on the phone",
-      "Reopen Poly Studio Mobile app and observe the Welcome/Splash screen text",
-      "Turn on Bluetooth and wait for auto-reconnection to the Poly Voyager Free 60+ UC",
-      "Observe the Welcome/Splash screen text again during the reconnection flow"
+      "Set device system language to English (US).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Immediately (without navigating away) force-kill the app via system settings or ADB: adb shell am force-stop com.poly.polystudiomobile",
+      "Reopen app from launcher.",
+      "Observe welcome/splash screen text."
     ],
-    "expected": "The Welcome/Splash screen displays all text in Spanish both on initial launch (Bluetooth off) and during the reconnection flow. No Portuguese or incorrect language text appears. The language preference persists correctly through the Bluetooth state transition."
+    "expected": "Welcome/splash screen displays Spanish text. Actual (If Bug): Welcome screen shows Portuguese text or English text, indicating language preference was not persisted or was incorrectly mapped."
   },
   {
-    "title": "TC-LOC-003: Verify Welcome Screen Displays Spanish After Language Change, App Kill, and Phone Reboot",
+    "title": "TC-LOC-WELCOME-003: Spanish language \u2014 welcome screen after phone reboot",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Account/Settings \u2192 App Language",
-      "Change App Language to 'Espa\u00f1ol (Spanish)' and confirm",
-      "Fully kill the Poly Studio Mobile app",
-      "Reboot the Android phone",
-      "After phone reboot, open Poly Studio Mobile app",
-      "Observe the Welcome/Splash screen text during app initialization"
+      "Set device system language to English (US).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Close app (home button).",
+      "Reboot phone.",
+      "After reboot, open Poly Studio Mobile app.",
+      "Observe welcome/splash screen text."
     ],
-    "expected": "The Welcome/Splash screen displays all text in Spanish after a full phone reboot. The language preference is persisted in app storage and correctly read during app initialization. No Portuguese or English text is shown."
+    "expected": "Welcome/splash screen displays Spanish text. Actual (If Bug): Welcome screen shows Portuguese text, English text, or any other incorrect language, indicating language setting did not survive phone reboot."
   },
   {
-    "title": "TC-LOC-004: Verify Welcome Screen Displays Portuguese When Language Is Set to Portuguese (Control Test)",
+    "title": "TC-LOC-WELCOME-004: Spanish language \u2014 welcome screen after Bluetooth disconnect/reconnect cycle",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Account/Settings \u2192 App Language",
-      "Change App Language to 'Portugu\u00eas (Portuguese)' and confirm",
-      "Fully kill the Poly Studio Mobile app",
-      "Reopen Poly Studio Mobile app",
-      "Observe the Welcome/Splash screen text during app initialization"
+      "Pair and connect a compatible Poly device (e.g., Voyager Free 60+ UC).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Close app.",
+      "Disconnect Bluetooth from quick settings or system Bluetooth menu.",
+      "Wait 5 seconds.",
+      "Reconnect Bluetooth.",
+      "Open Poly Studio Mobile app.",
+      "Observe welcome/splash screen text."
     ],
-    "expected": "The Welcome/Splash screen displays all text in Portuguese (e.g., 'Bem-vindo ao Poly Studio Mobile'). This confirms that Portuguese localization works correctly and serves as a control to differentiate from the Spanish bug scenario."
+    "expected": "Welcome/splash screen displays Spanish text. Actual (If Bug): Welcome screen shows Portuguese text, indicating language setting was reset or corrupted during Bluetooth state transition."
   },
   {
-    "title": "TC-LOC-005: Verify Welcome Screen Displays Correct Language After Switching from Spanish to English and Restarting",
+    "title": "TC-LOC-WELCOME-005: Spanish language \u2014 welcome screen after app backgrounding and foregrounding",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Account/Settings \u2192 App Language",
-      "Change App Language to 'Espa\u00f1ol (Spanish)' and confirm",
-      "Fully kill and reopen the Poly Studio Mobile app to confirm Spanish displays correctly on Welcome screen",
-      "Navigate to Account/Settings \u2192 App Language again",
-      "Change App Language back to 'English (Default)' and confirm",
-      "Fully kill the Poly Studio Mobile app",
-      "Reopen Poly Studio Mobile app",
-      "Observe the Welcome/Splash screen text during app initialization"
+      "Set device system language to English (US).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Close app (home button).",
+      "Reopen app \u2192 verify welcome screen shows Spanish.",
+      "Press home button to background the app.",
+      "Wait 30 seconds.",
+      "Reopen app from recents (not from launcher).",
+      "Observe welcome/splash screen text."
     ],
-    "expected": "The Welcome/Splash screen displays all text in English after switching back from Spanish. The language toggle works bidirectionally and the Welcome screen correctly reflects the current language preference after app restart."
+    "expected": "Welcome/splash screen displays Spanish text both on cold start (step 5) and on resume from background (step 9). Actual (If Bug): Welcome screen shows Portuguese or English after resume."
   },
   {
-    "title": "TC-LOC-006: Verify Welcome Screen Displays Spanish After Language Change Without App Restart (Negative Case)",
+    "title": "TC-LOC-WELCOME-006: Spanish language \u2014 welcome screen after switching away from app and back",
     "steps": [
-      "Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 Account/Settings \u2192 App Language",
-      "Change App Language to 'Espa\u00f1ol (Spanish)' and confirm",
-      "Do NOT kill the app. Press the Home button to background the app",
-      "Reopen Poly Studio Mobile app from the Recent Apps list (app resumes from background)",
-      "Observe the Welcome/Splash screen text"
+      "Set device system language to English (US).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Close app (home button).",
+      "Reopen app \u2192 verify welcome screen shows Spanish.",
+      "Navigate to: Device \u2192 Audio Settings \u2192 Transparency Mode (or any other deep screen).",
+      "Press back repeatedly to return to welcome/splash screen.",
+      "Observe welcome/splash screen text."
     ],
-    "expected": "The Welcome/Splash screen may NOT appear (since the app was not killed) OR if it does appear, it should display in Spanish. This documents the expected behavior difference between backgrounding vs. full app restart."
+    "expected": "Welcome/splash screen displays Spanish text after navigating back from deep settings screens. Actual (If Bug): Welcome screen shows Portuguese or English after navigation."
   },
   {
-    "title": "TC-LOC-007: Verify Welcome Screen Displays Spanish After Language Change via System Settings (Android Locale Override)",
+    "title": "TC-LOC-WELCOME-007: Cross-language regression \u2014 Portuguese text must NOT appear for Spanish",
     "steps": [
-      "Open Android System Settings \u2192 System \u2192 Languages & Input \u2192 Languages",
-      "Add 'Espa\u00f1ol (Espa\u00f1a)' or 'Espa\u00f1ol (Estados Unidos)' as the system language and move it to the top",
-      "Open Poly Studio Mobile app (ensure app language is set to 'Follow System' or default)",
-      "If Welcome screen appears, observe the language",
-      "Fully kill and reopen the Poly Studio Mobile app",
-      "Observe the Welcome/Splash screen text during app initialization"
+      "Set device system language to English (US).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Close app (home button, kill from recents).",
+      "Reopen app.",
+      "Capture screenshot of welcome/splash screen.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Portugu\u00eas (Portuguese)'.",
+      "Close app (home button, kill from recents).",
+      "Reopen app.",
+      "Capture screenshot of welcome/splash screen.",
+      "Compare both screenshots for distinct language strings."
     ],
-    "expected": "If the app respects system locale, the Welcome screen displays in Spanish. If the app has its own language override, the system locale may not affect it. This test documents the interaction between system-level and app-level language settings for the Welcome screen."
+    "expected": "Spanish selection shows Spanish welcome text (e.g., 'Bienvenido'). Portuguese selection shows Portuguese welcome text (e.g., 'Bem-vindo'). The two must NOT be identical. Actual (If Bug): Both show the same text (e.g., both show Portuguese), indicating a language mapping error where Spanish incorrectly resolves to Portuguese strings."
+  },
+  {
+    "title": "TC-LOC-WELCOME-008: Spanish language \u2014 welcome screen text after app update simulation",
+    "steps": [
+      "Set device system language to English (US).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Close app (home button).",
+      "Simulate app data clear via: Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Clear Cache (do NOT clear data).",
+      "Reopen app.",
+      "Observe welcome/splash screen text."
+    ],
+    "expected": "Welcome/splash screen displays Spanish text. Actual (If Bug): Welcome screen shows default English or Portuguese text, indicating language preference is stored in a location that gets wiped on cache clear."
+  },
+  {
+    "title": "TC-LOC-WELCOME-009: Spanish language \u2014 welcome screen text after switching system language to Spanish",
+    "steps": [
+      "Set device system language to English (US).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Close app (home button).",
+      "Change device system language to 'Espa\u00f1ol (Spain)' or 'Espa\u00f1ol (US)'.",
+      "Open Poly Studio Mobile app.",
+      "Observe welcome/splash screen text."
+    ],
+    "expected": "Welcome/splash screen displays Spanish text (app's internal language setting takes precedence or matches system language). Actual (If Bug): Welcome screen shows Portuguese or English, indicating conflict between app language setting and system language."
+  },
+  {
+    "title": "TC-LOC-WELCOME-010: Spanish language \u2014 welcome screen text after rapid language toggle (Spanish \u2192 English \u2192 Spanish)",
+    "steps": [
+      "Set device system language to English (US).",
+      "Open Poly Studio Mobile app.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Close app (home button, kill from recents).",
+      "Reopen app \u2192 verify Spanish welcome text.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'English'.",
+      "Close app (home button, kill from recents).",
+      "Reopen app \u2192 verify English welcome text.",
+      "Navigate to: Settings \u2192 Language \u2192 Select 'Espa\u00f1ol (Spanish)'.",
+      "Close app (home button, kill from recents).",
+      "Reopen app.",
+      "Observe welcome/splash screen text."
+    ],
+    "expected": "Welcome/splash screen correctly cycles: Spanish \u2192 English \u2192 Spanish. Final state shows Spanish text. Actual (If Bug): After toggling back to Spanish, welcome screen shows Portuguese or English, indicating state corruption during language switching."
   }
 ]
