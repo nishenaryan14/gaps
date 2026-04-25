@@ -7,27 +7,28 @@
   "feature": "App Settings",
   "scenario": "EULA page header, description, and instructions text display correctly during first-time app launch onboarding",
   "steps": [
-    "Launch the Poly Studio Mobile app for the first time after installation.",
-    "Observe the EULA (End User License Agreement) page that appears on the Home screen.",
-    "Verify the header text displayed at the top of the EULA page.",
-    "Verify the description text below the header.",
-    "Verify the instructions text (e.g., scroll to read, accept/decline options) displayed on the page."
+    "1. Launch the Poly Studio Mobile app for the first time after installation.",
+    "2. Observe the Onboarding screen that appears.",
+    "3. Verify the EULA (End User License Agreement) page is displayed.",
+    "4. Check the header text on the EULA page.",
+    "5. Check the description text on the EULA page.",
+    "6. Check the instructions text on the EULA page."
   ],
-  "expected": "The EULA page displays a clear header (e.g., \"End User License Agreement\"), a description explaining the agreement, and instructions text guiding the user to scroll and accept or decline the terms.",
+  "expected": "The EULA page displays correctly with a proper header (e.g., \"End User License Agreement\"), a clear description of the agreement terms, and instructions for the user (e.g., scroll to read, accept/decline options). All text is readable, properly formatted, and free of truncation or alignment issues.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "eula",
     "end-user-license-agreement",
+    "onboarding",
+    "first-time-launch",
     "poly-studio-mobile",
-    "first-time-onboarding",
     "app-launch",
-    "home-screen",
-    "accept-decline"
+    "license-agreement-display"
   ],
   "source_last_updated": "1760528295",
   "source_hash": "3881ed5e765d0bbce31a25dd3604bee9809378c982bf458bd0e5c6bbe17fdee3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.694531Z",
+  "processed_at": "2026-04-25T07:55:31.768807Z",
   "status": "active"
 }
