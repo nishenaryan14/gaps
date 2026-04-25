@@ -5,14 +5,14 @@
   "project": "411453",
   "title": "Verify the application does not crash when wifi is turned off and user clicks on Login button",
   "feature": "App Settings",
-  "scenario": "App does not crash when tapping Login button with Wi-Fi turned off during initial setup",
+  "scenario": "App does not crash when tapping Login button with Wi-Fi turned off during first-time setup",
   "steps": [
     "1. Ensure Wi-Fi is turned off on the device.",
     "2. Launch the Poly Studio Mobile app for the first time.",
     "3. If the Notifications dialog appears, tap Accept.",
-    "4. On the License Agreement screen, tap Accept.",
-    "5. On the initial setup screens, tap Skip.",
-    "6. Tap Continue to proceed past the remaining setup screens.",
+    "4. On the License Agreement screen, tap Accept to agree.",
+    "5. On the next setup screen, tap Skip.",
+    "6. On the following setup screen, tap Continue.",
     "7. On the Home screen, tap the Login button."
   ],
   "expected": "App should not crash. The Login page should be displayed.",
@@ -20,16 +20,16 @@
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
+    "first-time-setup",
     "login-button",
-    "initial-setup",
-    "wifi-off",
+    "wifi-offline",
     "app-crash",
     "license-agreement",
-    "home-screen"
+    "setup-flow"
   ],
   "source_last_updated": "1776940160",
   "source_hash": "c3ebd658163846483163f328d5c4012dfdf693a032af96ab1096a1484f2a4e90",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:17.019709Z",
+  "processed_at": "2026-04-25T07:55:32.317242Z",
   "status": "active"
 }
