@@ -4,32 +4,23 @@
   "type": "testcase",
   "project": "411453",
   "title": "Verify Poly studio Settings",
-  "feature": "Poly Studio Settings",
-  "scenario": "Verify all menu options in Poly Studio Settings (General, Find My Device, User Guides, Support, Color Theme, Feedback) display and function correctly.",
-  "steps": [
-    "Open app as guest, tap hamburger icon, go to General, and verify options (Account, About, Notifications & Device Alerts, Privacy Policy, Licenses) are present.",
-    "Go back, click Find My Device, and verify the screen displays.",
-    "Click User Guides and verify the Onboarding page displays.",
-    "Go back, click Support, and verify the Support page displays.",
-    "Go back, click Color Theme, verify options (Follow Phone Theme, Light Theme, Dark Theme) are present, and confirm the theme applies correctly.",
-    "Go back, click Feedback, and verify the Feedback page displays."
-  ],
-  "expected": "All menu items in Poly Studio Settings are functional and display the correct screens/options as described.",
+  "feature": "App Settings",
+  "scenario": "Verify all App Settings menu options are present and functional in Poly Studio Mobile app when launched as a guest",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Poly Studio Settings",
-    "menu options",
-    "General settings",
-    "Find My Device",
-    "User Guides",
-    "Support",
-    "Color Theme",
-    "Feedback"
+    "poly-studio-mobile",
+    "app-settings",
+    "guest-mode",
+    "menu-options",
+    "settings-functionality",
+    "mobile-app-launch"
   ],
   "source_last_updated": "1775492251",
   "source_hash": "374ce6386b60390fd8c47a1e08f06b1505452627495618dc2c93752fe9b26760",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:54.407271Z",
+  "processed_at": "2026-04-25T05:37:17.168984Z",
   "status": "active"
 }
