@@ -5,30 +5,32 @@
   "project": "411453",
   "title": "Find My Device - Playing sound from 2 different devices",
   "feature": "Find My Device",
-  "scenario": "When two devices are paired and connected, playing a sound on the second device fails with an error pop-up until the first device is disconnected.",
+  "scenario": "Find My Device tone fails with error on second connected headset when two devices are paired in Poly Lens",
   "steps": [
-    "Pair and connect two devices.",
-    "Play a sound on the first device.",
-    "Attempt to play a sound on the second device.",
-    "Observe the pop-up error message.",
-    "Disconnect the first device.",
-    "Play a sound on the second device again."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. From the Home screen, tap the Poly Lens menu icon.",
+    "3. Ensure two Poly Bluetooth headsets are paired and connected to the app.",
+    "4. Tap on the first connected headset to select it.",
+    "5. Tap the 'Find My Device' feature and play a tone \u2014 observe that the tone plays correctly.",
+    "6. Return to the Poly Lens menu and tap on the second connected headset to select it.",
+    "7. Tap the 'Find My Device' feature and attempt to play a tone.",
+    "8. Observe the pop-up error message displayed on screen."
   ],
-  "expected": "Playing a sound on the second device should work correctly without any error, regardless of the first device's connection status.",
+  "expected": "The tone should play on the second connected headset without any errors.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "paired devices",
-    "sound playback failure",
-    "error pop-up",
-    "device disconnection",
-    "multi-device audio",
-    "connection conflict",
-    "audio routing"
+    "find-my-device",
+    "poly-studio-mobile",
+    "poly-lens",
+    "dual-headset-pairing",
+    "tone-playback-error",
+    "bluetooth-headset",
+    "error-message"
   ],
   "source_last_updated": "1759930181",
   "source_hash": "2207134fbd8939ffa5af4f8d4d848b218c2b858ad376876d622e29fdbd2f28b5",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.172829Z",
+  "processed_at": "2026-04-25T05:37:16.770006Z",
   "status": "active"
 }
