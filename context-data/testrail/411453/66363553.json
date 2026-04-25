@@ -5,31 +5,32 @@
   "project": "411453",
   "title": "EB and CC have update - Earbuds can be updated and popup for Charge Chase will be displayed",
   "feature": "Firmware Updates",
-  "scenario": "Firmware update popup incorrectly prompts Lens Desktop for Charge Case update after Earbuds DFU completes",
+  "scenario": "DFU popup for Charge Case update via Lens Desktop appears on device home screen after completing Earbuds firmware update",
   "steps": [
     "1. Launch Poly Studio Mobile app on Android.",
-    "2. On the Home screen, ensure a device is connected that has firmware updates available for both the Charge Case (CC) and Earbuds (EB).",
-    "3. Tap the update button displayed on the Home screen.",
-    "4. On the firmware update screen, tap the update button for the Earbuds.",
-    "5. Observe that the Device Firmware Update (DFU) for the Earbuds starts and completes successfully.",
+    "2. Connect a Poly Bluetooth audio device that has firmware updates available for both the Charge Case (CC) and Earbuds (EB).",
+    "3. Observe the firmware update prompt(s) on the Home screen.",
+    "4. Trigger the Device Firmware Update (DFU) for the Earbuds.",
+    "5. Complete the Earbuds firmware update successfully.",
     "6. Return to the device Home screen.",
-    "7. Observe the popup that appears."
+    "7. Observe the popup displayed on screen."
   ],
-  "expected": "After returning to the device Home screen, a popup is displayed informing the user that Lens Desktop is needed to update the Charge Case.",
+  "expected": "After completing the Earbuds DFU and returning to the Home screen, a popup should inform the user that Lens Desktop is needed to update the Charge Case.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "dfu-popup",
+    "charge-case-update",
+    "lens-desktop",
     "firmware-update",
     "poly-studio-mobile",
-    "dfu",
-    "charge-case",
-    "earbuds",
-    "lens-desktop",
-    "popup"
+    "earbuds-firmware",
+    "home-screen",
+    "device-firmware-update"
   ],
   "source_last_updated": "1762331320",
   "source_hash": "dc52b3647047e9e551cf5bef3090b123f0987c6e12ecb93dc7ce586a8cf631d0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.980757Z",
+  "processed_at": "2026-04-25T07:55:32.003768Z",
   "status": "active"
 }
