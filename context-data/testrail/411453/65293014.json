@@ -5,33 +5,30 @@
   "project": "411453",
   "title": "Onboarding - Permission for location tracking is accepted and then revoked [Android]",
   "feature": "App Settings",
-  "scenario": "Find My Device does not prompt for location permission after it is revoked via Android system settings post-onboarding",
+  "scenario": "Find My Device does not prompt for location permission when permission is revoked after onboarding on Poly Studio Mobile app",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and complete the onboarding flow.",
-    "2. During onboarding, accept the Location permission prompt when requested.",
-    "3. Navigate to Android Settings \u2192 Apps \u2192 Poly Studio Mobile \u2192 Permissions.",
-    "4. Revoke the Location permission by toggling it off.",
-    "5. Return to the Poly Studio Mobile app.",
-    "6. From the Home screen, tap the menu icon (hamburger menu) or locate the Find My Device option on the device home screen.",
-    "7. Tap Find My Device.",
-    "8. Observe the app's response."
+    "1. Launch Poly Studio Mobile app and complete onboarding, accepting the Location permission when prompted.",
+    "2. Navigate to Android Settings > Apps > Poly Lens > Permissions and revoke the Location permission.",
+    "3. Return to the Poly Studio Mobile app and go to the Home screen.",
+    "4. Tap the menu icon (hamburger menu) or locate the Find My Device feature on the Home screen.",
+    "5. Tap on Find My Device to attempt using the feature.",
+    "6. Observe the app's response when location permission is missing."
   ],
-  "expected": "The app should detect that Location permission is revoked and display an appropriate prompt requesting the user to grant Location permission again. The user should be able to re-enable Location permission from the prompt, and after granting it, the Find My Device map should load and function correctly.",
+  "expected": "The app should display an appropriate prompt explaining that Location permission is required for Find My Device, and provide a way to re-enable the permission (e.g., a button to go to Android Settings or an in-app grant dialog).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "location-permission",
-    "permission-revocation",
-    "android-settings",
+    "permission-revoked",
     "poly-studio-mobile",
-    "onboarding-flow",
-    "permission-prompt",
-    "app-behavior"
+    "onboarding",
+    "android-permissions",
+    "permission-prompt"
   ],
   "source_last_updated": "1760528524",
   "source_hash": "a198a395f8d20a34bca9f1ee410054e156086656ea04610a45fe64c70887fd0f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.779997Z",
+  "processed_at": "2026-04-25T08:21:30.903790Z",
   "status": "active"
 }
