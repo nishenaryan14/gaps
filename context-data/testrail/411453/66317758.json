@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "Language Change - \"Later\" button",
   "feature": "App Settings",
-  "scenario": "Tapping \"Later\" on firmware update prompt dismisses language selection list and keeps current language unchanged in Poly Studio Mobile app",
+  "scenario": "Tapping \"Later\" on firmware update prompt dismisses language list without applying language change in Poly Studio Mobile app",
   "steps": [
     "Open Poly Studio Mobile app on the Home screen.",
-    "Navigate to Account \u2192 Settings \u2192 Language.",
-    "Select a new language from the list (e.g., French).",
-    "Observe the firmware update prompt appear.",
+    "Tap the Menu or Settings icon to navigate to Account or App Settings.",
+    "Locate and tap the Language option to open the language selection list.",
+    "Select a different language from the list (e.g., French, Spanish, etc.).",
+    "Observe the firmware update prompt popup with the message: \"You must update the software to apply the selected language. The language change only applies to audio\" and buttons \"Later\" and \"Update now\".",
     "Tap the \"Later\" button on the firmware update prompt."
   ],
-  "expected": "The language selection list is dismissed, and the current language remains unchanged (the language does not switch to the selected one).",
+  "expected": "The language selection list is dismissed, and the current language remains unchanged (the previously selected language is still active).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "firmware-update",
-    "language-selection",
+    "language-change",
     "later-button",
-    "settings-language",
-    "dismiss-prompt",
-    "language-persistence"
+    "language-selection",
+    "app-settings",
+    "update-prompt"
   ],
   "source_last_updated": "1762252394",
   "source_hash": "dda47d64465751ad0ad3a04c66e01c33348695f4b250dc4b26e805c536a2a8b0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.803903Z",
+  "processed_at": "2026-04-25T07:55:31.884602Z",
   "status": "active"
 }
