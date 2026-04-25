@@ -6,20 +6,22 @@
   "summary": "iOS | FALCON | Custom Button setting is not properly refreshed after disconnecting headset from PC",
   "feature": "Device Management",
   "scenario": "Custom Button setting not refreshed after disconnecting headset from PC, still shows MS Teams as connected until app restart",
-  "description_clean": "Custom Button setting is not properly refreshed after disconnecting the headset from a PC. After plugging the headset into a PC with Teams, the custom button settings are locked to Teams. When the headset is unplugged from the PC, the custom button setting is not refreshed to reflect the change in available options \u2014 it still shows MS Teams as connected. Only restarting the app restores the ability to change the custom button to other providers.",
+  "description_clean": "Custom Button setting is not properly refreshed after disconnecting the headset from a PC. After plugging the headset into a PC with Teams, the custom button settings lock to Teams. When unplugging, the setting is not refreshed to reflect the change in available options and still shows MS Teams as connected. Only restarting the app restores the ability to change other providers.",
   "steps": [
     "1. Open Poly Studio Mobile app on Android.",
     "2. Navigate to Home screen and ensure a Poly Bluetooth headset is connected.",
-    "3. Go to Device Settings \u2192 [Headset Name] \u2192 Custom Button.",
-    "4. Verify that the custom button can be assigned to a provider other than Microsoft Teams (e.g., default or another assistant).",
-    "5. Connect the headset to a PC running Microsoft Teams via USB cable.",
-    "6. While the headset is connected to the PC, observe the Custom Button setting in the Poly Studio Mobile app \u2014 it should show Microsoft Teams as the assigned provider and be locked.",
-    "7. Disconnect the headset from the PC (unplug USB cable).",
-    "8. Return to the Custom Button setting in the Poly Studio Mobile app without restarting the app.",
-    "9. Observe the current state of the Custom Button setting."
+    "3. Go to Device Settings \u2192 [Device Name] \u2192 Custom Button settings.",
+    "4. Verify that the custom button can be assigned to a non-Teams provider (e.g., default or other).",
+    "5. Connect the headset to a PC running Microsoft Teams via USB/Bluetooth.",
+    "6. While the headset is connected to the PC, observe the Custom Button setting in the Poly Studio Mobile app.",
+    "7. Disconnect the headset from the PC (unplug USB or disconnect Bluetooth).",
+    "8. Return to the Poly Studio Mobile app and check the Custom Button settings page.",
+    "9. Observe whether the setting still shows 'MS Teams' as the connected provider and whether the available options have been updated.",
+    "10. Close and restart the Poly Studio Mobile app.",
+    "11. Navigate again to Device Settings \u2192 [Device Name] \u2192 Custom Button settings and check if the provider options are now correctly refreshed."
   ],
-  "expected": "After disconnecting the headset from the PC, the Custom Button setting should refresh to show available options (e.g., default, other assistants) and allow the user to change the assignment away from Microsoft Teams.",
-  "actual": "After disconnecting the headset from the PC, the Custom Button setting still shows Microsoft Teams as connected and locked. The available options are not refreshed. Only restarting the Poly Studio Mobile app restores the ability to change the custom button to other providers.",
+  "expected": "After disconnecting the headset from the PC, the Custom Button settings should refresh to reflect the change in available providers, allowing the user to select a non-Teams option without restarting the app.",
+  "actual": "After disconnecting the headset from the PC, the Custom Button setting still shows 'MS Teams' as the connected provider and the available options are not updated. Only restarting the app restores the ability to change to other providers.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
@@ -28,16 +30,16 @@
   "keywords": [
     "custom-button",
     "poly-studio-mobile",
-    "microsoft-teams",
+    "ms-teams",
     "device-settings",
-    "bluetooth-headset",
-    "usb-connection",
-    "ui-refresh",
-    "app-restart"
+    "provider-refresh",
+    "bluetooth-disconnect",
+    "app-restart",
+    "button-assignment"
   ],
   "source_last_updated": "2026-04-15T08:56:37.000+0000",
   "source_hash": "cc652422d252219379f2f64e310de01aed7ec949a4973067a7310f73ade4db5e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.898130Z",
+  "processed_at": "2026-04-25T09:32:26.053636Z",
   "status": "active"
 }
