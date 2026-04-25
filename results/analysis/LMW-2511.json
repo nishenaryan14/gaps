@@ -12,158 +12,155 @@
     "65459448",
     "65459456",
     "65459427",
-    "65459458",
     "65459457",
     "65459438",
-    "65459432"
+    "65459432",
+    "65459433"
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test case covers the scenario of an outdated Charge Case firmware update popup appearing briefly at app launch (on the Home Screen) and then disappearing. All existing tests focus on: (a) language-change-triggered DFU flows, (b) manual navigation to the Software Update tab, or (c) popups that appear after a language change \u2014 none test the automatic popup that fires on app launch when the charge case firmware is outdated.",
-    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Missing: Testing the popup's behavior across app lifecycle events. The bug is that the popup appears 'briefly' and then vanishes. No test validates: (1) what happens when the app is backgrounded and foregrounded while the popup is showing, (2) what happens when the app is killed and relaunched (does the popup reappear every time?), (3) whether the popup is dismissed automatically or by user interaction, and (4) whether the popup's transient nature causes users to miss the update notification entirely.",
-    "\ud83e\udde0 STATE TRIGGER \u2014 Missing: Testing exactly WHEN the popup state is evaluated. The bug implies the popup fires on app launch (Home Screen load) but may not persist or may be overridden by another UI event. No test validates: (1) the timing of the popup relative to Home Screen rendering, (2) whether the popup is suppressed if another modal (e.g., Companion Card, Release Notes) is already showing, (3) whether the popup is a one-time trigger or reappears on subsequent launches until dismissed/actioned.",
-    "\ud83e\udde0 DEVICE ASYMMETRY \u2014 Missing: The bug is specific to Voyager Free 60+ (which has a smart charge case with a touchscreen). No test validates this popup behavior specifically for the Free 60+ charge case vs. other Poly devices with charge cases (e.g., Voyager Free 20 which has a non-smart case). The existing tests for 'Case Update Needed' popup (66363596) are tied to language change flows, not to app launch scenarios.",
-    "Missing: No test validates the user experience when the popup appears and disappears before the user can interact with it. This is a UX/notification persistence gap \u2014 the popup should either remain until dismissed or provide a persistent indicator (badge, banner) on the Home Screen that an update is available for the charge case specifically."
+    "The bug is about a BRIEF/MOMENTARY popup that appears upon app LAUNCH (not navigation to a settings screen). No existing test covers the app-launch-triggered popup behavior for Charge Case firmware updates.",
+    "No test validates the timing/duration of the popup ('briefly appears'). This is a transient UI behavior that could be missed if the popup auto-dismisses too quickly or appears only during a specific lifecycle phase.",
+    "No test covers the specific state: app launch \u2192 Charge Case on outdated firmware \u2192 popup appears momentarily. Existing tests focus on language-change-triggered DFU or manual navigation to Software Update screens.",
+    "LIFECYCLE GAP: No test validates what happens when the app is backgrounded (home button) and then foregrounded again \u2014 does the popup reappear? Does it only show once per app session? This is a critical lifecycle persistence gap.",
+    "LIFECYCLE GAP: No test validates what happens when the app is force-killed and relaunched \u2014 does the popup appear again on relaunch? This tests whether the 'already shown' flag persists across app restarts.",
+    "LIFECYCLE GAP: No test validates what happens when Bluetooth disconnects and reconnects \u2014 does the popup reappear after reconnection? This tests whether the popup is tied to the connection event or the app launch event.",
+    "DEVICE ASYMMETRY GAP: The bug is specific to Voyager Free 60+ (which has a touchscreen charge case). No existing test validates the Charge Case firmware popup behavior specifically for this device model vs. other models like Voyager Free 20 (which lacks the touchscreen case).",
+    "STATE TRIGGER GAP: No test validates the exact trigger condition \u2014 does the popup appear because the Charge Case firmware version is checked at app launch, or because of a delayed BLE service discovery? The 'momentary' nature suggests a race condition that is not tested.",
+    "No test validates the user interaction with this popup \u2014 can the user tap it? Does it auto-dismiss? What happens if the user is mid-interaction when it appears? These UX flow gaps are untested."
   ],
   "generated_testcases": [
     {
-      "title": "TC-DFU-001: Charge Case Update Popup Appears on App Launch \u2014 Voyager Free 60+",
+      "title": "VF60+_ChargeCase_Popup_AppLaunch_Transient_Appearance",
       "steps": [
-        "Precondition: Voyager Free 60+ earbuds are connected to the phone. Charge case firmware is outdated (older version available via Poly Studio Mobile app).",
-        "1. Fully close (force-kill) the Poly Studio Mobile app.",
-        "2. Open Poly Studio Mobile app.",
-        "3. Observe the Home Screen immediately after launch.",
-        "4. Note whether a popup appears with text indicating a charge case firmware update is available (e.g., 'Case Update Needed' or similar).",
-        "5. Observe whether the popup persists on screen or disappears automatically after a brief period (e.g., 2-5 seconds).",
-        "6. If the popup disappears, check the Home Screen for any persistent indicator (badge, banner, icon) that an update is still available."
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware is outdated (e.g., v1.0.0 vs latest v2.0.0).",
+        "Force-kill Poly Studio Mobile app.",
+        "Launch Poly Studio Mobile app.",
+        "Observe the screen immediately upon app launch (within first 3 seconds).",
+        "Note: Do not navigate anywhere \u2014 stay on the initial connected device screen."
       ],
-      "expected": "A popup indicating a charge case firmware update is available appears on the Home Screen after app launch. The popup should persist until the user explicitly dismisses it (taps 'Update', 'Later', or closes it). The popup must NOT disappear automatically after a brief period. If the popup does auto-dismiss, a persistent visual indicator (e.g., a badge on the Device card or a banner) must remain on the Home Screen to notify the user of the available update."
+      "expected": "A brief/momentary popup about Charge Case firmware update appears within 2-3 seconds of app launch. Popup auto-dismisses after ~2-3 seconds without user interaction. Popup text references 'Charge Case' firmware (not earbud firmware). Actual (If Bug): Popup appears for <500ms and is unreadable, or does not appear at all despite outdated Charge Case firmware."
     },
     {
-      "title": "TC-DFU-002: Charge Case Update Popup Reappears After App Background/Foreground Cycle",
+      "title": "VF60+_ChargeCase_Popup_AppLaunch_UserDismiss_Interaction",
       "steps": [
-        "Precondition: Voyager Free 60+ connected. Charge case firmware outdated.",
-        "1. Open Poly Studio Mobile app and wait for the charge case update popup to appear on the Home Screen.",
-        "2. Do NOT interact with the popup (do not tap any button).",
-        "3. Press the Home button on the phone to background the app.",
-        "4. Wait 10 seconds.",
-        "5. Reopen Poly Studio Mobile app from the recent apps list (foreground the app).",
-        "6. Observe whether the charge case update popup is still visible or reappears.",
-        "7. If the popup is gone, navigate to Device \u2192 Software Update and verify the charge case update is still listed."
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware outdated.",
+        "Force-kill and relaunch Poly Studio Mobile app.",
+        "When the Charge Case firmware popup appears, tap on it (or tap the 'Update' / action button if present).",
+        "Observe navigation destination.",
+        "If popup auto-dismisses before tap, note the auto-dismiss timing."
       ],
-      "expected": "After backgrounding and foregrounding the app, the charge case update popup should still be visible (if it was not dismissed). If the popup was auto-dismissed during the lifecycle transition, the Software Update screen must still show the charge case update as available. The user must not lose the update notification due to a lifecycle event."
+      "expected": "Tapping the popup navigates to the Software Update / DFU screen for the Charge Case. If popup auto-dismisses before user can tap, it must remain visible for at least 2 seconds. Actual (If Bug): Popup dismisses in <1s making it untappable, or tapping it does nothing, or tapping it navigates to earbud firmware update instead of Charge Case firmware update."
     },
     {
-      "title": "TC-DFU-003: Charge Case Update Popup Reappears After App Force-Kill and Relaunch",
+      "title": "VF60+_ChargeCase_Popup_Lifecycle_Background_Foreground",
       "steps": [
-        "Precondition: Voyager Free 60+ connected. Charge case firmware outdated.",
-        "1. Open Poly Studio Mobile app and wait for the charge case update popup to appear on the Home Screen.",
-        "2. Do NOT interact with the popup (do not tap any button).",
-        "3. Force-kill the Poly Studio Mobile app (swipe away from recent apps or force stop via Settings).",
-        "4. Wait 5 seconds.",
-        "5. Open Poly Studio Mobile app again.",
-        "6. Observe the Home Screen immediately after relaunch.",
-        "7. Verify whether the charge case update popup appears again.",
-        "8. If the popup appears, tap 'Update' and verify the user is taken to the Software Update screen with the charge case update listed.",
-        "9. If the popup does NOT appear, navigate to Device \u2192 Software Update and verify the charge case update is still listed."
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware outdated.",
+        "Force-kill and relaunch app.",
+        "Observe popup appears momentarily and auto-dismisses.",
+        "Press Home button to background the app.",
+        "Wait 10 seconds.",
+        "Re-launch app (bring to foreground via app switcher or tapping icon).",
+        "Observe if popup reappears."
       ],
-      "expected": "After force-killing and relaunching the app, the charge case update popup MUST reappear on the Home Screen, since the update was never actioned or dismissed. The popup should not be a one-time trigger that is lost after app restart. The user must be able to tap 'Update' to proceed to the Software Update screen."
+      "expected": "Popup does NOT reappear when app is foregrounded from background. The 'already shown' flag persists across background/foreground transitions within the same app session. Actual (If Bug): Popup reappears on every foreground transition, causing repeated disruptive UI flashes."
     },
     {
-      "title": "TC-DFU-004: Charge Case Update Popup Dismissal \u2014 'Later' Action Persists Across App Restart",
+      "title": "VF60+_ChargeCase_Popup_Lifecycle_ForceKill_Relaunch",
       "steps": [
-        "Precondition: Voyager Free 60+ connected. Charge case firmware outdated.",
-        "1. Open Poly Studio Mobile app and wait for the charge case update popup to appear on the Home Screen.",
-        "2. Tap 'Later' (or the dismiss/close button) on the popup.",
-        "3. Verify the popup is dismissed and the Home Screen is visible.",
-        "4. Force-kill the Poly Studio Mobile app.",
-        "5. Reopen Poly Studio Mobile app.",
-        "6. Observe whether the charge case update popup reappears on the Home Screen.",
-        "7. Navigate to Device \u2192 Software Update and verify the charge case update is still listed as available."
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware outdated.",
+        "Launch app, observe popup appears and auto-dismisses.",
+        "Force-kill the app (swipe from recents).",
+        "Wait 5 seconds.",
+        "Relaunch the app.",
+        "Observe if popup appears again."
       ],
-      "expected": "After tapping 'Later' and force-killing the app, the charge case update popup should NOT reappear on the next launch (since the user explicitly dismissed it). However, the Software Update screen must still show the charge case update as available for manual installation. The 'Later' action should suppress the popup for a reasonable period (e.g., 24 hours or until next reboot) but not remove the update from the Software Update list."
+      "expected": "Popup DOES appear again on relaunch after force-kill. The 'already shown' flag is NOT persisted across app restarts \u2014 each fresh launch triggers the firmware version check. Actual (If Bug): Popup does not appear on relaunch (stale flag persists), or popup appears multiple times within the same launch cycle."
     },
     {
-      "title": "TC-DFU-005: Charge Case Update Popup Suppression When Another Modal Is Already Showing",
+      "title": "VF60+_ChargeCase_Popup_Lifecycle_Bluetooth_Reconnect",
       "steps": [
-        "Precondition: Voyager Free 60+ connected. Charge case firmware outdated.",
-        "1. Open Poly Studio Mobile app.",
-        "2. Before the charge case update popup appears, trigger another modal to appear on the Home Screen (e.g., Companion Card notification, Release Notes popup, or Bluetooth permission dialog).",
-        "3. Observe whether the charge case update popup appears on top of the existing modal, or is suppressed/queued.",
-        "4. Dismiss the first modal.",
-        "5. Observe whether the charge case update popup now appears, or if it was lost entirely.",
-        "6. Navigate to Device \u2192 Software Update and verify the charge case update is listed."
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware outdated.",
+        "Launch app, observe popup appears and auto-dismisses.",
+        "Disconnect Bluetooth from phone Settings (or turn off earbuds).",
+        "Wait for app to show 'Disconnected' state.",
+        "Reconnect Bluetooth (turn on earbuds, wait for auto-reconnect).",
+        "Observe if popup reappears upon reconnection."
       ],
-      "expected": "If another modal is already showing when the charge case update popup is triggered, the update popup should be queued and appear immediately after the first modal is dismissed. The update notification must NOT be silently dropped due to modal stacking. The Software Update screen must always show the available charge case update regardless of popup behavior."
+      "expected": "Popup does NOT reappear upon Bluetooth reconnection within the same app session. The popup is tied to the app launch event, not the Bluetooth connection event. Actual (If Bug): Popup reappears on every Bluetooth reconnect, causing repeated popups during unstable connection scenarios."
     },
     {
-      "title": "TC-DFU-006: Charge Case Update Popup Timing Relative to Home Screen Rendering",
+      "title": "VF60+_ChargeCase_Popup_Lifecycle_Bluetooth_Reconnect_AfterForceKill",
       "steps": [
-        "Precondition: Voyager Free 60+ connected. Charge case firmware outdated.",
-        "1. Enable screen recording or use a second device to capture the screen of the phone under test.",
-        "2. Force-kill the Poly Studio Mobile app.",
-        "3. Open Poly Studio Mobile app and start screen recording immediately.",
-        "4. Observe the Home Screen loading sequence frame by frame.",
-        "5. Note the exact moment the charge case update popup appears relative to: (a) Home Screen background rendering, (b) Device card rendering, (c) any other UI elements appearing.",
-        "6. Measure the duration the popup remains visible before any auto-dismissal (if applicable).",
-        "7. If the popup auto-dismisses, note the exact time in seconds from appearance to disappearance."
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware outdated.",
+        "Launch app, observe popup appears and auto-dismisses.",
+        "Force-kill the app.",
+        "Disconnect Bluetooth (turn off earbuds).",
+        "Turn on earbuds, wait for auto-reconnect.",
+        "Launch app.",
+        "Observe if popup appears."
       ],
-      "expected": "The charge case update popup should appear only after the Home Screen has fully rendered (all cards and elements visible). The popup must remain visible for at least 5 seconds if auto-dismissal is implemented, or persist indefinitely until user interaction. The popup must not appear and disappear before the user can reasonably interact with it (minimum 3 seconds of visibility)."
+      "expected": "Popup appears on app launch regardless of Bluetooth reconnection state. The trigger is app launch + outdated Charge Case firmware, not the connection event. Actual (If Bug): Popup does not appear because the reconnection event races ahead of the app launch check, or popup appears twice (once from stale connection event + once from launch check)."
     },
     {
-      "title": "TC-DFU-007: Device Asymmetry \u2014 Voyager Free 20 (Non-Smart Case) Does NOT Show Charge Case Update Popup",
+      "title": "VF60+_ChargeCase_Popup_DeviceAsymmetry_VF20_NoPopup",
       "steps": [
-        "Precondition: Voyager Free 20 earbuds are connected to the phone. The Free 20 charge case has no touchscreen/smart functionality.",
-        "1. Force-kill the Poly Studio Mobile app.",
-        "2. Open Poly Studio Mobile app.",
-        "3. Observe the Home Screen for any popup indicating a 'Case Update Needed' or charge case firmware update.",
-        "4. Navigate to Device \u2192 Software Update.",
-        "5. Verify whether any charge case firmware update option is listed (it should NOT be, since Free 20 has a non-smart case)."
+        "Precondition: Voyager Free 20 (non-touchscreen case) connected, earbud firmware is current but no Charge Case firmware concept exists.",
+        "Force-kill and relaunch Poly Studio Mobile app.",
+        "Observe the screen immediately upon app launch.",
+        "Navigate to: Device \u2192 Software Update.",
+        "Verify no Charge Case firmware update option exists."
       ],
-      "expected": "For Voyager Free 20 (non-smart charge case), no charge case update popup should appear on the Home Screen at app launch. The Software Update screen should NOT list any charge case firmware update option. This confirms the popup is correctly gated to devices with smart charge cases (Voyager Free 60+ only)."
+      "expected": "No Charge Case firmware popup appears on app launch for Voyager Free 20. The Software Update screen shows only earbud firmware update options. Actual (If Bug): A Charge Case popup appears for VF20 (which has no touchscreen case), or the popup incorrectly references earbud firmware as 'Charge Case' firmware."
     },
     {
-      "title": "TC-DFU-008: Charge Case Update Popup Persistence During Bluetooth Disconnect/Reconnect",
+      "title": "VF60+_ChargeCase_Popup_StateTrigger_RaceCondition_BLEServiceDiscovery",
       "steps": [
-        "Precondition: Voyager Free 60+ connected. Charge case firmware outdated. Charge case update popup is visible on the Home Screen.",
-        "1. With the charge case update popup visible on the Home Screen, turn off Bluetooth on the phone.",
-        "2. Observe whether the popup remains visible or is dismissed.",
-        "3. Wait 10 seconds.",
-        "4. Turn Bluetooth back on and wait for the Voyager Free 60+ to reconnect.",
-        "5. Observe whether the charge case update popup is still visible or reappears after reconnection.",
-        "6. If the popup is gone, navigate to Device \u2192 Software Update and verify the charge case update is still listed."
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware outdated.",
+        "Enable Bluetooth HCI Snoop Log on phone (developer options).",
+        "Force-kill and relaunch app.",
+        "Capture the exact timestamp of: (a) app process start, (b) BLE service discovery completion for Charge Case, (c) popup appearance, (d) popup dismissal.",
+        "Repeat 5 times.",
+        "Analyze timing deltas between (a)\u2192(c) and (b)\u2192(c)."
       ],
-      "expected": "The charge case update popup should persist during a Bluetooth disconnect event (since the update availability was already determined). After Bluetooth reconnection, the popup should still be visible if it was not dismissed. If the popup was auto-dismissed during the disconnect, it must reappear after reconnection. The Software Update screen must always show the available charge case update."
+      "expected": "Popup appears consistently within 2-3 seconds of app launch across all 5 runs. Popup appearance correlates with app launch (a) not with BLE service discovery completion (b). Timing delta (a)\u2192(c) should be <3000ms. Actual (If Bug): Popup appearance is erratic \u2014 sometimes appears at 500ms, sometimes at 8s, or not at all \u2014 indicating a race condition with BLE service discovery timing."
     },
     {
-      "title": "TC-DFU-009: Charge Case Update Popup \u2014 Verify Update Flow Completes Successfully",
+      "title": "VF60+_ChargeCase_Popup_StateTrigger_UpToDateFirmware_NoPopup",
       "steps": [
-        "Precondition: Voyager Free 60+ connected. Charge case firmware outdated. Phone battery > 50%. Earbuds in charge case with case battery > 30%.",
-        "1. Open Poly Studio Mobile app and wait for the charge case update popup to appear on the Home Screen.",
-        "2. Tap 'Update' on the popup.",
-        "3. Verify the app navigates to the Software Update screen with the charge case firmware update pre-selected or highlighted.",
-        "4. Tap 'Update' or 'Install' to begin the charge case firmware update.",
-        "5. Wait for the update to complete (do not interrupt).",
-        "6. Verify the update completes successfully with a 'Success' or 'Complete' message.",
-        "7. Force-kill and relaunch the Poly Studio Mobile app.",
-        "8. Verify the charge case update popup does NOT appear (since the update is now current).",
-        "9. Navigate to Device \u2192 Software Update and verify the charge case firmware version matches the updated version."
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware is already up-to-date (latest version).",
+        "Force-kill and relaunch Poly Studio Mobile app.",
+        "Observe the screen immediately upon app launch for 10 seconds.",
+        "Navigate to: Device \u2192 Software Update.",
+        "Verify Software Update screen shows 'Up to date' for Charge Case."
       ],
-      "expected": "Tapping 'Update' on the charge case update popup should navigate the user to the Software Update screen where the charge case firmware update can be initiated. The update should complete successfully. After the update, the popup must no longer appear on app launch, and the Software Update screen must show the current firmware version."
+      "expected": "No Charge Case firmware popup appears on app launch when firmware is current. Software Update screen confirms Charge Case is up to date. Actual (If Bug): Popup appears even when firmware is current (false positive), or popup appears but references incorrect version information."
     },
     {
-      "title": "TC-DFU-010: Charge Case Update Popup \u2014 No Popup When Firmware Is Already Current",
+      "title": "VF60+_ChargeCase_Popup_StateTrigger_MidInteraction_Overlay",
       "steps": [
-        "Precondition: Voyager Free 60+ connected. Charge case firmware is already the latest version (no update available).",
-        "1. Force-kill the Poly Studio Mobile app.",
-        "2. Open Poly Studio Mobile app.",
-        "3. Observe the Home Screen for any charge case update popup.",
-        "4. Navigate to Device \u2192 Software Update.",
-        "5. Verify the Software Update screen shows 'Your software is up to date' or similar message for both earbuds and charge case."
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware outdated.",
+        "Force-kill and relaunch app.",
+        "Immediately upon app launch, start tapping rapidly on the device settings area (e.g., tap 'Audio Settings' repeatedly).",
+        "Observe if the popup interrupts the interaction.",
+        "Note whether the tap passes through the popup or is consumed by it."
       ],
-      "expected": "When the charge case firmware is already current, no charge case update popup should appear on the Home Screen at app launch. The Software Update screen should confirm all firmware is up to date. The popup must only trigger when an actual update is available."
+      "expected": "Popup appears as an overlay that consumes taps while visible \u2014 taps do not pass through to underlying UI elements. After popup auto-dismisses, the underlying UI becomes interactive again. Actual (If Bug): Taps pass through the popup (causing unintended navigation), or the popup blocks all UI permanently after dismissal, or the popup causes a touch event to be lost/dropped."
+    },
+    {
+      "title": "VF60+_ChargeCase_Popup_StateTrigger_AppAlreadyOpen_NoPopupOnReconnect",
+      "steps": [
+        "Precondition: Voyager Free 60+ connected, Charge Case firmware outdated.",
+        "Launch app, observe popup appears and auto-dismisses.",
+        "Keep app open and in foreground.",
+        "Turn off earbuds (disconnect Bluetooth).",
+        "Wait for app to show 'Disconnected' state.",
+        "Turn on earbuds (reconnect Bluetooth).",
+        "Observe if popup reappears while app remains continuously open."
+      ],
+      "expected": "Popup does NOT reappear upon Bluetooth reconnection while the app remains continuously open in the foreground. The popup is triggered only once per app session at launch. Actual (If Bug): Popup reappears on every reconnection event, causing repeated interruptions during the same app session."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:40.830475Z"
+  "processed_at": "2026-04-25T09:46:16.259303Z"
 }
