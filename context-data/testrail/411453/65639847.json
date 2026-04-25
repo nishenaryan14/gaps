@@ -11,7 +11,7 @@
     "2. Navigate to Device Settings \u2192 Software Update.",
     "3. Observe the Software Update tab content."
   ],
-  "expected": "Only the Earbuds update is shown. The Charge Case update is not displayed because version 5038 does not support 1-step DFU. Additionally, when the device is on version 5038, a case toast for the device is present with the same pattern as for Tern (after app restart, for a specific number of times, and after earbuds DFU).",
+  "expected": "Only the Earbuds update is shown. The Charge Case update is not displayed because version 5038 does not support 1-step DFU. A case toast for the device is present with the same pattern as for Tern (after app restart, for a specific number of times, and after earbuds DFU).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -27,6 +27,6 @@
   "source_last_updated": "1760949167",
   "source_hash": "13b8fef265a9f9959e3650bdf48244f8d6fd4b4fd3aa7df192b1b04f8bb4cf5c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.966106Z",
+  "processed_at": "2026-04-25T08:21:31.042979Z",
   "status": "active"
 }
