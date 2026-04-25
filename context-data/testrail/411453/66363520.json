@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Flamingo - Software update for just charge case",
   "feature": "Firmware Updates",
-  "scenario": "Software Update screen allows updating only the charging case firmware without updating the headset when both have available DFU updates",
+  "scenario": "Software update can be performed for charge case independently without updating the headset on device settings screen",
   "steps": [
     "1. Open the Poly Studio Mobile app and navigate to the Home screen.",
-    "2. Locate your connected device and tap the Update button on the device card.",
-    "3. On the Software Update tab, confirm that 'Update All' is displayed at the top, and separate 'Update' buttons are shown for both the headset and the charging case.",
-    "4. Tap the 'Update' button next to the charging case.",
-    "5. Complete the DFU (Device Firmware Update) process for the charging case.",
-    "6. After the update completes, verify the firmware version of the charging case has been updated.",
-    "7. Verify that the headset firmware version remains unchanged (still on its previous firmware)."
+    "2. Tap the Update button on the device home screen.",
+    "3. Observe the Device Settings screen. Expected: The Software Update tab is expanded, showing an \"Update All\" button at the top and separate \"Update\" buttons for the headset and charge case.",
+    "4. Tap the \"Update\" button next to the charge case.",
+    "5. Complete the DFU (Device Firmware Update) process as prompted by the app.",
+    "6. After the update completes, verify the firmware version of the charge case.",
+    "7. Verify the firmware version of the headset remains unchanged."
   ],
-  "expected": "Only the charging case firmware is updated; the headset remains on its current firmware version.",
+  "expected": "The DFU process completes successfully for just the charge case. Only the charge case is updated to the latest firmware; the headset firmware remains unchanged.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "software-update",
-    "charging-case-firmware",
-    "dfu",
     "firmware-update",
+    "charge-case",
     "poly-studio-mobile",
-    "update-all",
+    "device-settings-screen",
+    "dfu",
+    "software-update",
     "headset-firmware",
-    "selective-update"
+    "update-all"
   ],
   "source_last_updated": "1762331223",
   "source_hash": "8e878ff69f31f063be12004b84c8e6bdbd06db915fe7ba4f093b8ada8eba7410",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.979750Z",
+  "processed_at": "2026-04-25T07:55:32.005275Z",
   "status": "active"
 }
