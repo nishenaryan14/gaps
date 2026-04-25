@@ -6,22 +6,30 @@
   "title": "Notifications -  Low Battery OFF",
   "feature": "Notifications",
   "scenario": "Low Battery notification suppressed in Poly Lens Menu does not reappear after power cycling a device with battery below 5%",
-  "steps": [],
-  "expected": "",
+  "steps": [
+    "Open Poly Studio Mobile app \u2192 Home screen",
+    "Tap Menu (hamburger icon) \u2192 General \u2192 Notifications & Device Alerts",
+    "Locate 'Low Battery' toggle and turn it OFF",
+    "Go back to Home screen",
+    "Connect a Poly Bluetooth audio device with battery level below 5%",
+    "Power cycle the device: Press and hold the Power button to turn it OFF, then press and hold again to turn it ON",
+    "Observe the phone for any 'Device has a low battery' notification"
+  ],
+  "expected": "No 'Device has a low battery' notification appears on the phone after power cycling the device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "low-battery-notification",
-    "poly-lens-menu",
-    "power-cycling",
-    "battery-persistence",
-    "battery-below-5-percent",
+    "poly-studio-mobile",
+    "notifications-and-device-alerts",
     "notification-suppression",
-    "device-reboot"
+    "power-cycle",
+    "battery-persistence",
+    "device-alerts"
   ],
   "source_last_updated": "1761226813",
   "source_hash": "2a25554afd6231a94fc7930de92bab91faf0238d1ccd0219b5405508a1e0f254",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.047099Z",
+  "processed_at": "2026-04-25T09:32:26.312500Z",
   "status": "active"
 }
