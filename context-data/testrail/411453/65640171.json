@@ -5,29 +5,24 @@
   "project": "411453",
   "title": "Analytics - Share Data",
   "feature": "App Settings",
-  "scenario": "Share Data analytics event is logged when user toggles consent in App Settings > General > Account",
-  "steps": [
-    "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to App Settings > General > Account.",
-    "3. Locate the 'Share Data' toggle.",
-    "4. Log in to an account (or toggle the Share Data switch if already logged in).",
-    "5. Observe the Firebase dashboard for the 'Share Data' event."
-  ],
-  "expected": "The 'Share Data' event is logged in Firebase when the user logs in or changes the Share Data toggle. The Firebase dashboard displays default elements such as event graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, and app environment.",
+  "scenario": "Share Data analytics event does not update Consent Status and Screen Name on Firebase analytics page after toggling in App Settings > General > Account",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "share-data",
-    "data-analytics-event",
+    "firebase-analytics",
+    "consent-status",
+    "screen-name",
     "app-settings",
-    "poly-studio-mobile",
-    "firebase-dashboard",
-    "consent-toggling",
-    "account-settings"
+    "general-account",
+    "data-sharing",
+    "analytics-event",
+    "privacy-settings"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "f732ed9325a60542c99488be18080eb3ac65ff7d18e5e7a91e425a9152a424a8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.991497Z",
+  "processed_at": "2026-04-25T08:21:31.068790Z",
   "status": "active"
 }
