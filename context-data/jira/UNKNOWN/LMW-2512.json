@@ -4,36 +4,35 @@
   "type": "bug",
   "project": "UNKNOWN",
   "summary": "iOS | User can get stuck on Supported Devices screen",
-  "feature": "iOS App - Supported Devices Screen",
-  "scenario": "User gets stuck on Supported Devices screen when navigating back after reopening it within ~2 seconds from the home screen with no headset connected.",
-  "description_clean": "User can get stuck on the Supported Devices screen if it is closed and reopened within ~2 seconds. This occurs when accessing the screen from the home screen while no headset is connected. Steps: launch app with no device, tap \"Select Device\", go back, tap \"Select Device\" again within 2 seconds, then tap back. Expected: user should be able to navigate freely.",
+  "feature": "App Settings",
+  "scenario": "Supported Devices screen becomes unresponsive when closed and reopened within 2 seconds from home screen with no headset connected",
+  "description_clean": "User can get stuck on the Supported Devices screen if it is closed and reopened within ~2 seconds. This occurs only when accessing the screen from the home screen while no headset is connected. The user should be able to freely navigate through the app.",
   "steps": [
-    "Launch app with no device connected",
-    "Tap 'Select Device'",
-    "Go back",
-    "Tap 'Select Device' again within 2 seconds",
-    "Tap back"
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Ensure no Poly Bluetooth headset is connected to the Android device.",
+    "3. From the Home screen, tap the 'Supported Devices' option to open the Supported Devices screen.",
+    "4. Close the Supported Devices screen (e.g., tap the back button or close icon) to return to the Home screen.",
+    "5. Within approximately 2 seconds of closing, tap the 'Supported Devices' option again to reopen the Supported Devices screen."
   ],
-  "expected": "User should be able to navigate freely.",
-  "actual": "User can get stuck on the Supported Devices screen.",
+  "expected": "The Supported Devices screen opens normally, and the user can freely navigate through the app without any issues.",
+  "actual": "The user gets stuck on the Supported Devices screen and cannot navigate away or interact with the app freely.",
   "priority": "P1: High",
   "severity": "",
   "labels": [
     "NeedsEngineeringReview"
   ],
   "keywords": [
-    "Supported Devices screen stuck",
-    "back navigation freeze",
-    "no headset connected",
-    "rapid re-entry bug",
-    "Select Device button",
-    "2-second window",
-    "UI freeze navigation",
-    "device selection screen"
+    "poly-studio-mobile",
+    "supported-devices-screen",
+    "home-screen",
+    "screen-unresponsive",
+    "ui-crash",
+    "android",
+    "no-headset-connected"
   ],
   "source_last_updated": "2026-04-15T08:55:23.000+0000",
   "source_hash": "0c6f17de704111a0acac2651ac859501c24009ab168170b8f4f7b1c2da4b7d3d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.076200Z",
+  "processed_at": "2026-04-25T05:37:16.693524Z",
   "status": "active"
 }
