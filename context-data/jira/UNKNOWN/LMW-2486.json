@@ -11,10 +11,11 @@
     "Open Poly Studio Mobile app",
     "Go to Home screen",
     "Tap on the connected device name to open Device Settings",
-    "Select Software (or Firmware Update) option",
-    "Choose to update only the Charge Stand (not the headset)",
-    "Wait for the DFU (Device Firmware Update) process to complete",
-    "Observe the success screen displayed after the update finishes"
+    "Navigate to Device Settings \u2192 Software",
+    "Select the Charge Stand as the device to update",
+    "Initiate the firmware update for the Charge Stand",
+    "Wait for the DFU process to complete",
+    "Observe the DFU success screen"
   ],
   "expected": "The DFU success screen should display the name of the Charge Stand (e.g., \"Charge Stand updated successfully\").",
   "actual": "The DFU success screen incorrectly displays the name of the headset instead of the name of the Charge Stand.",
@@ -24,16 +25,16 @@
   "keywords": [
     "dfu-success-screen",
     "charge-stand",
-    "device-name-display",
+    "device-name",
     "poly-studio-mobile",
     "device-settings",
-    "firmware-update",
     "software-update",
-    "ui-bug"
+    "firmware-update",
+    "headset-name"
   ],
   "source_last_updated": "2026-04-14T19:23:14.000+0000",
   "source_hash": "d049fb6491ae86860e3e70f25076cc77ffb45710af6d5b8cc5413bf7b7a6295d",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.700581Z",
+  "processed_at": "2026-04-25T07:55:31.761754Z",
   "status": "active"
 }
