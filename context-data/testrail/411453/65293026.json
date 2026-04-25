@@ -5,24 +5,24 @@
   "project": "411453",
   "title": "Onboarding - Complete on-boarding flow",
   "feature": "App Settings",
-  "scenario": "Onboarding flow completes successfully through notification modal, license agreement, Guest login, analytics, location permissions, Welcome screen, feature carousel, and reaches Home screen",
+  "scenario": "App fails to complete onboarding flow after swiping through \"Personal\" screen and tapping Continue to reach Home screen",
   "steps": [],
   "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "onboarding-flow",
-    "guest-login",
-    "license-agreement",
-    "welcome-screen",
-    "feature-carousel",
+    "personal-screen",
     "home-screen",
-    "notification-modal",
-    "location-permissions"
+    "app-crash",
+    "continue-button",
+    "poly-app",
+    "bluetooth-pairing",
+    "setup-wizard"
   ],
   "source_last_updated": "1768392863",
   "source_hash": "396e93e0be99d0a9cc2d8684723dae2095cb3981be64bc00998d36b79839243a",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.909858Z",
+  "processed_at": "2026-04-25T09:32:26.125604Z",
   "status": "active"
 }
