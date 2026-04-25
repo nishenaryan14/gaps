@@ -4,27 +4,34 @@
   "type": "testcase",
   "project": "411453",
   "title": "Rename devis - Restore Defaults returns to official device name",
-  "feature": "Device Settings - Rename Device",
-  "scenario": "After renaming a device, performing \"Restore Defaults\" should revert the device name to its official name (e.g., \"Voyager\" shortened to \"V\").",
+  "feature": "Device Management",
+  "scenario": "Device name reverts to official name after Restore Defaults in Device Settings > General on Poly Studio Mobile app",
   "steps": [
-    "Rename the device to a custom name (e.g., 'Voyager')",
-    "Perform 'Restore Defaults' on the device"
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to the Home screen and tap on the connected Poly device (e.g., Voyager headset).",
+    "3. Go to Device Settings \u2192 General.",
+    "4. Tap on the device name field and rename the device to a custom name (e.g., \"Voyager\").",
+    "5. Confirm the rename and return to the Home screen.",
+    "6. Navigate back to Device Settings \u2192 General.",
+    "7. Tap on \"Restore Defaults\" (or \"Reset to Defaults\") to reset the device settings.",
+    "8. Observe the device name displayed after the restore operation."
   ],
-  "expected": "The device name should return to the official device name (e.g., 'V' instead of 'Voyager')",
+  "expected": "After restoring defaults, the device name should revert to its official name (e.g., \"V\" for Voyager).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Restore Defaults",
-    "device rename",
-    "revert device name",
-    "factory reset",
-    "default device name",
-    "Voyager",
-    "custom name reset"
+    "poly-studio-mobile",
+    "restore-defaults",
+    "device-settings",
+    "device-name",
+    "rename-device",
+    "general-settings",
+    "voyager-headset",
+    "factory-reset"
   ],
   "source_last_updated": "1776241193",
   "source_hash": "e52b6cfda8394a118d9a7fa71af0a3ebaacbd5aa5ee00752ad8035619780ca88",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.222303Z",
+  "processed_at": "2026-04-25T05:37:16.803903Z",
   "status": "active"
 }
