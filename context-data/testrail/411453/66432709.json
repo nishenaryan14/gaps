@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "Application - Update from previous app version while using cloud account (TBD)",
   "feature": "App Settings",
-  "scenario": "Cloud account user experiences issue when updating Poly Studio Mobile app from previous version",
+  "scenario": "Cloud account user updates Poly Studio Mobile app from previous version",
   "steps": [
     "1. Launch Poly Studio Mobile app on Android device.",
-    "2. Ensure user is logged in with a cloud account.",
-    "3. Navigate to Account screen and note the current app version (e.g., under Settings \u2192 About or Account).",
-    "4. Close the app.",
-    "5. Open Google Play Store and search for Poly Studio Mobile.",
-    "6. If an update is available, tap Update to install the latest version.",
-    "7. Once the update completes, launch Poly Studio Mobile app again.",
-    "8. Observe the app behavior after the update."
+    "2. Ensure you are signed in with a cloud account.",
+    "3. Navigate to Account screen and note the current app version.",
+    "4. Go to Google Play Store and check for available updates for Poly Studio Mobile.",
+    "5. If an update is available, download and install the update.",
+    "6. After the update completes, relaunch Poly Studio Mobile app.",
+    "7. Observe the app behavior after the update while still signed in with the cloud account."
   ],
-  "expected": "The app updates successfully. The user remains logged in with the same cloud account. All account data, device pairings, and settings are preserved after the update.",
+  "expected": "The app updates successfully, the user remains signed in to their cloud account, and all settings and device pairings are preserved.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "cloud-account",
     "app-update",
-    "android",
     "google-play-store",
     "firmware-update",
+    "android",
     "account-screen",
-    "version-upgrade"
+    "app-version"
   ],
   "source_last_updated": "1762420689",
   "source_hash": "b026e7712943a6f194adb875237299e74859013e401cebba4975296344c0eb17",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.021423Z",
+  "processed_at": "2026-04-25T09:32:26.275592Z",
   "status": "active"
 }
