@@ -1,43 +1,159 @@
 [
   {
-    "title": "DFU Language Pack Update - Timeout and Recovery at 99%",
+    "title": "TC-LANG-DFU-001: Language DFU progress bar stuck at 99% on Voyager 5200 \u2014 timeout behavior",
     "steps": [
-      "1. Connect a Morpheus device to the system.",
-      "2. Initiate a DFU language pack update.",
-      "3. Monitor the update progress and observe when it reaches 99%.",
-      "4. Start a timer as soon as the progress hits 99%.",
-      "5. Verify that the update does NOT complete within 5 minutes (i.e., stuck at 99%).",
-      "6. After 8 minutes, verify that the update either completes or a timeout recovery mechanism is triggered (e.g., rollback, retry, error message).",
-      "7. Check system logs for any timeout or hang events during the language pack update."
+      "Precondition: Voyager 5200 headset is paired and connected to the phone. Poly Studio Mobile app is open and on the Device screen.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 5200] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack to download and install (e.g., 'Deutsch' or 'Fran\u00e7ais').",
+      "3. Tap 'Update' or 'Install' to begin the language DFU process.",
+      "4. Observe the progress bar on the Language Update screen.",
+      "5. When the progress bar reaches 99%, start a timer.",
+      "6. Continue observing the progress bar for 10 minutes without interacting with the app or device.",
+      "7. Note the time elapsed when the progress bar moves past 99% or when any status change occurs (success/failure/timeout)."
     ],
-    "expected": "The language pack update should not remain stuck at 99% indefinitely. Either the update completes within a reasonable time (< 8 minutes), or a proper timeout/error handling mechanism is triggered (e.g., rollback to previous version, clear error message, or automatic retry). No silent hang should occur."
+    "expected": "The progress bar should not remain stuck at 99% indefinitely. Within 10 minutes, one of the following should occur: (a) the update completes and shows a 'Success' message, (b) the update fails with an appropriate error message, or (c) a timeout mechanism triggers and provides user feedback. The app should not freeze, crash, or become unresponsive during this period."
   },
   {
-    "title": "Post-Update State Refresh - FW Update Still Showing as Available After Successful Update",
+    "title": "TC-LANG-DFU-002: Language DFU stuck at 99% on Voyager 5200 \u2014 app force-kill and restart recovery",
     "steps": [
-      "1. Connect a Morpheus device with an available FW update.",
-      "2. Initiate and complete the FW update successfully.",
-      "3. After the update completes and the device reboots, navigate to the system update/DFU settings page.",
-      "4. Observe the displayed update status for the just-installed FW version.",
-      "5. Refresh the update status page manually (e.g., pull-to-refresh or re-query).",
-      "6. Check the backend/API response for the current firmware version vs. available update.",
-      "7. Reboot the device again and re-check the update status."
+      "Precondition: Voyager 5200 headset is paired and connected. Poly Studio Mobile app is open on the Language Update screen.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 5200] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack and tap 'Update' to begin the DFU.",
+      "3. Wait for the progress bar to reach 99% and remain there for at least 2 minutes.",
+      "4. While the progress bar is stuck at 99%, force-kill the Poly Studio Mobile app (swipe away from recent apps).",
+      "5. Wait 30 seconds.",
+      "6. Reopen Poly Studio Mobile app.",
+      "7. Navigate to [Voyager 5200] \u2192 Settings \u2192 Language Update.",
+      "8. Observe the status of the language update and the headset's connection state.",
+      "9. Check if the headset is still responsive (play media, make a test call)."
     ],
-    "expected": "After a successful FW update, the device should NOT show the same update as still available. The UI should reflect the current firmware version and indicate that no updates are pending. The state should persist across page refreshes and device reboots."
+    "expected": "After force-killing and reopening the app, the Language Update screen should show a consistent state: either the update is still in progress (with progress bar), or it has completed/failed. The headset should remain connected and functional for media playback and calls. The app should not crash upon reopening. The update should not be in an inconsistent state (e.g., showing 99% indefinitely with no way to cancel or retry)."
   },
   {
-    "title": "In-Call DFU Interruption Handling - DFU Stuck at 26% During Active Call",
+    "title": "TC-LANG-DFU-003: Language DFU on Voyager 5200 \u2014 maximum expected duration validation",
     "steps": [
-      "1. Connect a Morpheus device and ensure it is not on a call.",
-      "2. Initiate a DFU firmware update process.",
-      "3. While the DFU is in progress, place or receive an active phone call on the device.",
-      "4. Observe the DFU progress bar when the call becomes active.",
-      "5. Check if a pop-up or notification appears warning about DFU interruption during the call.",
-      "6. Monitor whether the DFU progress stalls at a specific percentage (e.g., 26%).",
-      "7. End the phone call and observe whether the DFU resumes automatically.",
-      "8. If DFU remains stuck, attempt to manually resume or restart the DFU process.",
-      "9. Check system logs for any DFU interruption handling events during the call."
+      "Precondition: Voyager 5200 headset is fully charged (\u226580% battery), paired and connected. Poly Studio Mobile app is open.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 5200] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack (e.g., 'Espa\u00f1ol') and tap 'Update'.",
+      "3. Start a timer immediately when the update begins.",
+      "4. Record the progress bar percentage at 30-second intervals.",
+      "5. Note the total time elapsed when the progress bar reaches 100% and a success message is displayed.",
+      "6. If the update does not complete within 15 minutes, record the status and any error messages shown.",
+      "7. Repeat steps 1-6 for two additional language packs (e.g., 'Italiano', 'Portugu\u00eas')."
     ],
-    "expected": "When a DFU update is in progress and an active call is initiated, the system should display a clear pop-up or notification warning the user that the DFU may be interrupted. The DFU should not get permanently stuck at 26% \u2014 either it pauses and resumes after the call ends, or it fails gracefully with a clear error and option to retry. No silent indefinite hang should occur."
+    "expected": "The language DFU update should complete within a reasonable time (expected baseline: under 10 minutes for a full language pack). If the update exceeds 15 minutes without completing, the app should either show a timeout error, allow the user to cancel/retry, or provide feedback that the update is still in progress. The headset should remain connected and not enter a bricked state regardless of duration."
+  },
+  {
+    "title": "TC-LANG-DFU-004: Language DFU on Voyager 5200 \u2014 no success/failure feedback when stuck at 99%",
+    "steps": [
+      "Precondition: Voyager 5200 headset is paired and connected. Poly Studio Mobile app is open.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 5200] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack and tap 'Update'.",
+      "3. Wait for the progress bar to reach 99%.",
+      "4. Once at 99%, do not interact with the app for 8 minutes.",
+      "5. After 8 minutes, check if the progress bar has moved past 99% or if any status message is displayed.",
+      "6. Navigate away from Language Update screen to Device screen, then back to Language Update.",
+      "7. Check the current status of the language pack (installed/not installed/in progress).",
+      "8. Verify headset functionality: play audio, test microphone, check Bluetooth connection stability.",
+      "9. Check if the language pack was actually applied by verifying the headset's voice prompts language (if supported)."
+    ],
+    "expected": "After 8 minutes stuck at 99%, the app should provide clear feedback: either a success confirmation, a failure error message, or a timeout notification. Navigating away and back should show a consistent state. The headset should remain functional. If the update actually completed, the language should be applied to voice prompts. The user should never be left in an ambiguous state where the update appears stuck with no feedback."
+  },
+  {
+    "title": "TC-LANG-DFU-005: Language DFU on Voyager 8200 UC \u2014 progress bar stuck at 99% for extended period",
+    "steps": [
+      "Precondition: Voyager 8200 UC headset is paired and connected to the phone. Poly Studio Mobile app is open on the Device screen.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 8200 UC] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack (e.g., 'Fran\u00e7ais') and tap 'Update'.",
+      "3. Observe the progress bar during the update process.",
+      "4. When the progress bar reaches 99%, start a timer.",
+      "5. Monitor the progress bar for 10 minutes without any user interaction.",
+      "6. Record the exact time when the progress bar changes from 99% or when any status update appears.",
+      "7. If no change occurs after 10 minutes, check if the app is still responsive (tap back, navigate to other screens).",
+      "8. Check if the headset is still connected and functional."
+    ],
+    "expected": "The progress bar should not remain stuck at 99% for more than 10 minutes. The app should remain responsive throughout. The headset should stay connected. If the update completes, a success message should appear. If it fails, an appropriate error message should be shown. The app should not crash or become unresponsive."
+  },
+  {
+    "title": "TC-LANG-DFU-006: Language DFU on Voyager 8200 UC \u2014 app backgrounding while stuck at 99%",
+    "steps": [
+      "Precondition: Voyager 8200 UC headset is paired and connected. Poly Studio Mobile app is open on Language Update screen.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 8200 UC] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack and tap 'Update'.",
+      "3. Wait for the progress bar to reach 99% and remain there for 1 minute.",
+      "4. Press the Home button to background the app.",
+      "5. Wait 5 minutes while the app is in the background.",
+      "6. Reopen the Poly Studio Mobile app from the app switcher or home screen.",
+      "7. Observe the Language Update screen status.",
+      "8. Check if the progress bar has changed, if a success/failure message is shown, or if the update is still at 99%.",
+      "9. Verify the headset connection status and basic functionality (play/pause media, answer a call)."
+    ],
+    "expected": "After backgrounding and reopening the app, the Language Update status should be consistent. If the update completed in the background, a success message should be shown. If still in progress, the progress bar should reflect the current state. The app should not crash upon return. The headset should remain connected and functional."
+  },
+  {
+    "title": "TC-LANG-DFU-007: Language DFU on Voyager 8200 UC \u2014 Bluetooth disconnect during 99% stall",
+    "steps": [
+      "Precondition: Voyager 8200 UC headset is paired and connected. Poly Studio Mobile app is open on Language Update screen.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 8200 UC] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack and tap 'Update'.",
+      "3. Wait for the progress bar to reach 99% and remain there for 1 minute.",
+      "4. While the progress bar is at 99%, turn off the Voyager 8200 UC headset (press and hold the Power button for 5 seconds until LED turns off).",
+      "5. Wait 2 minutes.",
+      "6. Turn on the Voyager 8200 UC headset (press and hold the Power button for 2 seconds).",
+      "7. Wait for the headset to reconnect to the phone automatically.",
+      "8. Open Poly Studio Mobile app and navigate to [Voyager 8200 UC] \u2192 Settings \u2192 Language Update.",
+      "9. Observe the language update status.",
+      "10. Check if the language pack was successfully installed or if a retry is needed."
+    ],
+    "expected": "After a Bluetooth disconnect and reconnect during the 99% stall, the Language Update screen should show a consistent state. The headset should reconnect successfully. The app should not crash. The language pack should either show as installed (if the DFU completed despite the disconnect) or allow the user to retry the update. The headset should not be bricked or in an unusable state."
+  },
+  {
+    "title": "TC-LANG-DFU-008: Language DFU on Voyager 8200 UC \u2014 rapid navigation away and back during 99% stall",
+    "steps": [
+      "Precondition: Voyager 8200 UC headset is paired and connected. Poly Studio Mobile app is open on Language Update screen.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 8200 UC] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack and tap 'Update'.",
+      "3. Wait for the progress bar to reach 99% and remain there for 30 seconds.",
+      "4. Tap the back arrow to navigate to the Settings screen.",
+      "5. Immediately tap 'Language Update' again to return to the update screen.",
+      "6. Observe the progress bar and status.",
+      "7. Repeat steps 4-6 three more times rapidly.",
+      "8. After the fourth return, wait 2 minutes and observe any status changes.",
+      "9. Check if the app remains responsive and the headset stays connected."
+    ],
+    "expected": "Rapidly navigating away from and back to the Language Update screen should not cause the app to crash, freeze, or display inconsistent state. The progress bar should continue to show the update status correctly. The headset should remain connected. The update should not be disrupted by the navigation actions."
+  },
+  {
+    "title": "TC-LANG-DFU-009: Language DFU on Voyager 5200 \u2014 concurrent media playback during 99% stall",
+    "steps": [
+      "Precondition: Voyager 5200 headset is paired and connected. Poly Studio Mobile app is open on Language Update screen. A music app (e.g., Spotify, Apple Music) is installed and logged in.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 5200] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack and tap 'Update'.",
+      "3. Wait for the progress bar to reach 99% and remain there for 1 minute.",
+      "4. While the progress bar is at 99%, open the music app and start playing music on the Voyager 5200 headset.",
+      "5. Observe if audio plays through the headset during the stalled update.",
+      "6. After 2 minutes of music playback, pause the music.",
+      "7. Return to Poly Studio Mobile \u2192 Language Update screen.",
+      "8. Observe the update status.",
+      "9. Check if the headset is still connected and if the update progressed or completed."
+    ],
+    "expected": "Media playback should be possible during a stalled language DFU update. The headset should remain connected for audio. Returning to the Language Update screen should show a consistent update status. The DFU process should not be negatively impacted by concurrent media playback. The app should not crash."
+  },
+  {
+    "title": "TC-LANG-DFU-010: Language DFU on Voyager 5200 \u2014 phone call during 99% stall",
+    "steps": [
+      "Precondition: Voyager 5200 headset is paired and connected. Poly Studio Mobile app is open on Language Update screen. A second phone is available to place a call.",
+      "1. Open Poly Studio Mobile \u2192 tap [Voyager 5200] \u2192 Settings \u2192 Language Update.",
+      "2. Select a language pack and tap 'Update'.",
+      "3. Wait for the progress bar to reach 99% and remain there for 1 minute.",
+      "4. While the progress bar is at 99%, have the second phone call the phone connected to the Voyager 5200.",
+      "5. Answer the incoming call on the Voyager 5200 headset (tap the Call button on the headset).",
+      "6. Conduct a 2-minute test call (verify microphone and speaker work).",
+      "7. End the call (tap the Call button on the headset).",
+      "8. Return to Poly Studio Mobile \u2192 Language Update screen.",
+      "9. Observe the update status.",
+      "10. Check if the headset is still connected and if the language update completed or failed."
+    ],
+    "expected": "The Voyager 5200 should be able to receive and conduct a phone call during a stalled language DFU. After the call ends, returning to the Language Update screen should show a consistent status. The DFU process should not be corrupted by the call interruption. The headset should remain functional for calls."
   }
 ]
