@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Find My Device - Device list with more then 4 devices",
-  "feature": "App Settings",
-  "scenario": "Find My Device device list becomes scrollable with fade indicator when more than 4 headsets are paired",
+  "feature": "Device Management",
+  "scenario": "Find My Device list becomes scrollable with fade indicator when more than 4 headsets are paired",
   "steps": [
-    "Open Poly Studio Mobile app on the Home screen.",
-    "Pair and connect more than 4 Poly Bluetooth headsets to the mobile device (e.g., 5 or more).",
-    "Navigate to Find My Device from the Home screen or Account menu.",
-    "Observe the device list showing all paired headsets.",
-    "Attempt to scroll the device list vertically."
+    "Open Poly Studio Mobile app on Android.",
+    "Navigate to the Home screen.",
+    "Pair more than 4 Poly Bluetooth audio devices (e.g., headsets) to the Android device. Ensure some are connected and some are disconnected.",
+    "Tap on the Find My Device feature or section on the Home screen.",
+    "Observe the list of paired devices.",
+    "Attempt to scroll the list vertically."
   ],
-  "expected": "The device list in Find My Device expands to show all paired headsets, is scrollable, and displays a slight fade effect at the bottom of the list to indicate scrolling ability.",
+  "expected": "The Find My Device list expands to show all paired devices (more than 4). The list is scrollable, and a slight fade effect appears at the bottom of the list to indicate that more items are available to scroll to.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "poly-studio-mobile",
-    "device-list",
-    "scrollable",
-    "fade-indicator",
     "bluetooth-pairing",
-    "headset-list",
-    "multi-device"
+    "device-list-scrollable",
+    "fade-indicator",
+    "home-screen",
+    "paired-headsets"
   ],
   "source_last_updated": "1761208524",
   "source_hash": "ba0c4cc8a3ca0598ec36ff146bb806b84d0cd5a50d45b36418cf88798aa0364b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.933298Z",
+  "processed_at": "2026-04-25T09:32:26.166655Z",
   "status": "active"
 }
