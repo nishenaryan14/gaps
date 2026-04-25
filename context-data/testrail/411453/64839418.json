@@ -9,31 +9,31 @@
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
-    "Observe battery icon display for a headset (single icon)",
-    "Observe battery icon display for a headset with charging case (two icons: 'H' and 'C')",
-    "Observe battery icon display for earbuds (three icons: 'L', 'R', and 'C')",
-    "Check battery icon color at 100%-40% charge level (black in light mode, white in dark mode)",
-    "Check battery icon color at 39%-20% charge level (yellow)",
-    "Check battery icon color at 19%-1% charge level (red)",
-    "Check battery icon color at 0% charge level (empty icon)",
-    "Turn off the headset and observe battery icons (greyed out with last known percentage displayed)"
+    "Observe battery icon display for a headset (single device)",
+    "Observe battery icon display for a headset with a charging case",
+    "Observe battery icon display for earbuds (left, right, case)",
+    "Check battery icon color at charge level 100%-40%",
+    "Check battery icon color at charge level 39%-20%",
+    "Check battery icon color at charge level 19%-1%",
+    "Check battery icon color at 0% charge",
+    "Turn off the headset and observe battery icon display"
   ],
-  "expected": "- Headset: single battery icon displayed\\n- Headset with charging case: two icons marked \"H\" (headset) and \"C\" (case) displayed\\n- Earbuds: three icons marked \"L\" (left), \"R\" (right), and \"C\" (case) displayed\\n- Battery icon colors: 100%-40% = black (white in dark mode), 39%-20% = yellow, 19%-1% = red, 0% = empty icon\\n- When headset is turned off: battery icons are greyed out with last known percentage displayed",
+  "expected": "- For headsets: single battery icon shown.\\n- For headsets with charging case: two icons marked \"H\" (headset) and \"C\" (case) shown.\\n- For earbuds: three icons marked \"L\" (left), \"R\" (right), and \"C\" (case) shown.\\n- Battery icon color: 100%-40% = black (white in dark mode), 39%-20% = yellow, 19%-1% = red, 0% = empty.\\n- When headset is turned off: battery icons are greyed out with last known percentage displayed.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "home-screen",
     "battery-icon-display",
-    "battery-persistence",
     "greyed-out-icons",
     "last-known-percentage",
-    "power-off-state",
-    "charging-case-icons"
+    "poly-studio-mobile",
+    "home-screen",
+    "charging-case",
+    "powered-off-state",
+    "battery-level-indicator"
   ],
   "source_last_updated": "1776242372",
   "source_hash": "abecc50b7e2e1bebd4ad89e32eb493dc652a020128cdfca5a2e27432253ceaf3",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.750644Z",
+  "processed_at": "2026-04-25T07:55:31.807926Z",
   "status": "active"
 }
