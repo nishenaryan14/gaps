@@ -19,119 +19,122 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test covers the Home screen rendering of the headset image/icon after pairing a Poly Voyager Free 20 device on a fresh app install.",
-    "No test verifies that the Home screen correctly displays the connected device's visual representation (headset image) immediately after the pairing flow completes.",
-    "No test covers the specific scenario of a fresh app install + first-time pairing + Home screen UI element visibility for Poly Voyager Free 20.",
-    "No test validates that the headset image asset loads correctly for the Poly Voyager Free 20 model specifically (as opposed to other models like Voyager Free 60+ or Voyager Surround 80).",
-    "No test covers the app's behavior when transitioning from the onboarding/pairing flow to the Home screen for the first time, specifically checking that all device-specific UI elements (images, icons) render properly."
+    "No test case covers the Home screen rendering of a headset image after pairing. All existing test cases focus on onboarding/EULA screens, dark mode, and location permissions \u2014 none address post-pairing Home screen behavior.",
+    "No test case validates that a headset image/icon appears on the Home screen after a fresh install + pairing flow for Poly Voyager Free 20 specifically.",
+    "No test case covers the device image asset loading/rendering on the Home screen for any Poly headset model, let alone the Free 20.",
+    "No test case validates the Home screen state transition from 'no device' to 'paired device' \u2014 the moment when the app should display the headset image after a successful pairing.",
+    "No lifecycle testing exists for the Home screen headset image: e.g., does the image persist after app background/foreground, app kill/relaunch, or Bluetooth disconnect/reconnect?",
+    "No test case validates device-specific image assets for the Free 20 (or any specific model) on the Home screen \u2014 the Free 20 may have a unique image asset that could fail to load or be missing from the app bundle.",
+    "No test case covers the scenario of a fresh install (first launch after install) combined with pairing \u2014 the app may need to download or cache device images on first connection, which could fail."
   ],
   "generated_testcases": [
     {
-      "title": "TC-HOME-IMG-001: Verify Poly Voyager Free 20 headset image displays on Home screen after fresh install and first-time pairing",
+      "title": "[Home Screen] Verify Poly Voyager Free 20 headset image appears after fresh install + pairing",
       "steps": [
-        "1. Ensure Poly Studio Mobile app is not installed on the phone. If installed, clear app data or uninstall and reinstall.",
-        "2. Ensure Poly Voyager Free 20 earbuds are in factory reset state (not previously paired to this phone).",
-        "3. Open Poly Studio Mobile app for the first time after fresh install.",
-        "4. Complete the onboarding flow (grant necessary permissions: Location, Bluetooth, Notifications).",
-        "5. On the 'Add Device' screen, tap 'Pair New Device'.",
-        "6. Place Poly Voyager Free 20 earbuds in pairing mode (press and hold the button on the charge case for 3 seconds until LED flashes blue/red).",
-        "7. From the list of discovered devices, tap 'Poly Voyager Free 20'.",
-        "8. Complete the Bluetooth pairing confirmation on both phone and device if prompted.",
-        "9. Wait for the pairing flow to complete and the app to transition to the Home screen.",
-        "10. Observe the Home screen for the headset image/icon representing the connected Poly Voyager Free 20 device."
+        "Ensure Poly Voyager Free 20 is in pairing mode (LED flashing).",
+        "Clear app data / uninstall Poly Studio Mobile app.",
+        "Fresh install Poly Studio Mobile app from Play Store / App Store.",
+        "Launch Poly Studio Mobile app.",
+        "Complete EULA/Onboarding flow (accept permissions as prompted).",
+        "On the Home screen, verify the 'No Device' state is displayed (no headset image).",
+        "Tap 'Add Device' or 'Pair New Device' button.",
+        "Select 'Poly Voyager Free 20' from the device list.",
+        "Complete Bluetooth pairing flow (confirm pairing code on phone and earbuds).",
+        "After successful pairing, observe the Home screen."
       ],
-      "expected": "The Home screen displays the correct Poly Voyager Free 20 headset image/icon. The image is fully rendered (not broken, not a placeholder, not blank). The device name 'Poly Voyager Free 20' is displayed alongside or below the image."
+      "expected": "The Home screen displays the Poly Voyager Free 20 headset image/icon prominently. The image is correctly rendered (not a broken image placeholder, not blank, not a generic/default icon). The device name 'Poly Voyager Free 20' is shown alongside the image."
     },
     {
-      "title": "TC-HOME-IMG-002: Verify headset image persists on Home screen after app restart following fresh install pairing",
+      "title": "[Home Screen] Verify Free 20 headset image persists after app background/foreground",
       "steps": [
-        "1. Perform steps 1-9 from TC-HOME-IMG-001 to pair Poly Voyager Free 20 on a fresh app install and reach the Home screen.",
-        "2. Verify the headset image is displayed correctly on the Home screen.",
-        "3. Press the Home button on the phone to background the app.",
-        "4. Swipe the app away from the recent apps list to fully kill the Poly Studio Mobile app.",
-        "5. Reopen Poly Studio Mobile app.",
-        "6. Observe the Home screen for the headset image/icon."
+        "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20 (see previous test case for pairing steps).",
+        "Confirm the Free 20 headset image is displayed on the Home screen.",
+        "Press the Home button to background the app.",
+        "Wait 30 seconds.",
+        "Reopen Poly Studio Mobile app from the app switcher or launcher.",
+        "Observe the Home screen."
       ],
-      "expected": "After app restart, the Home screen still displays the correct Poly Voyager Free 20 headset image. The image is fully rendered and not replaced by a generic placeholder or missing icon."
+      "expected": "The Poly Voyager Free 20 headset image is still displayed correctly on the Home screen. No broken image, no placeholder, no regression to 'No Device' state."
     },
     {
-      "title": "TC-HOME-IMG-003: Verify headset image renders correctly after Bluetooth disconnect and reconnect cycle",
+      "title": "[Home Screen] Verify Free 20 headset image persists after app kill and relaunch",
       "steps": [
-        "1. Perform steps 1-9 from TC-HOME-IMG-001 to pair Poly Voyager Free 20 on a fresh app install and reach the Home screen.",
-        "2. Verify the headset image is displayed correctly on the Home screen.",
-        "3. Turn off Bluetooth on the phone via Quick Settings.",
-        "4. Wait 5 seconds. Observe the Home screen.",
-        "5. Turn on Bluetooth on the phone via Quick Settings.",
-        "6. Wait for the Poly Voyager Free 20 to automatically reconnect (up to 10 seconds).",
-        "7. Observe the Home screen for the headset image/icon."
+        "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20.",
+        "Confirm the Free 20 headset image is displayed on the Home screen.",
+        "Force-kill the Poly Studio Mobile app (swipe away from recent apps or use OS settings to force stop).",
+        "Relaunch Poly Studio Mobile app.",
+        "Observe the Home screen."
       ],
-      "expected": "When Bluetooth is turned off, the Home screen shows the device as disconnected (grayed out or 'Disconnected' status) but the headset image remains visible. After Bluetooth is turned back on and the device reconnects, the headset image is fully rendered and the device shows as connected."
+      "expected": "The Home screen displays the Poly Voyager Free 20 headset image correctly. The image is not broken, missing, or replaced with a generic placeholder. The device is still recognized and shown."
     },
     {
-      "title": "TC-HOME-IMG-004: Verify correct headset image for Poly Voyager Free 20 vs other device models",
+      "title": "[Home Screen] Verify Free 20 headset image persists after Bluetooth disconnect/reconnect",
       "steps": [
-        "1. Ensure Poly Studio Mobile app is freshly installed (clear data or uninstall/reinstall).",
-        "2. Open Poly Studio Mobile app and complete onboarding.",
-        "3. Pair a Poly Voyager Free 20 device following steps 5-9 from TC-HOME-IMG-001.",
-        "4. On the Home screen, take a screenshot of the headset image.",
-        "5. Go to Device Settings \u2192 'Forget Device' and confirm to unpair the Poly Voyager Free 20.",
-        "6. Pair a different device model (e.g., Poly Voyager Free 60+ or Poly Voyager Surround 80 UC) following the same pairing flow.",
-        "7. On the Home screen, observe the headset image for the newly paired device.",
-        "8. Compare the headset images from step 4 and step 7."
+        "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20.",
+        "Confirm the Free 20 headset image is displayed on the Home screen.",
+        "Turn off Bluetooth on the phone or put the earbuds in the case and close the lid to disconnect.",
+        "Wait 10 seconds.",
+        "Observe the Home screen in disconnected state.",
+        "Reconnect Bluetooth (turn Bluetooth back on or open the case).",
+        "Wait for the app to update the connection state.",
+        "Observe the Home screen."
       ],
-      "expected": "The headset image for Poly Voyager Free 20 is visually distinct from the image for other device models (e.g., Voyager Free 60+ or Voyager Surround 80 UC). Each device model shows its own unique, correctly rendered product image on the Home screen."
+      "expected": "During disconnection: The Home screen may show the device with a 'Disconnected' status, but the Free 20 headset image should still be visible (not replaced by a generic icon). After reconnection: The Free 20 headset image is displayed correctly with 'Connected' status. No broken image asset."
     },
     {
-      "title": "TC-HOME-IMG-005: Verify headset image loads correctly after orientation change on Home screen",
+      "title": "[Home Screen] Verify Free 20 headset image is model-specific (not generic placeholder)",
       "steps": [
-        "1. Perform steps 1-9 from TC-HOME-IMG-001 to pair Poly Voyager Free 20 on a fresh app install and reach the Home screen.",
-        "2. Verify the headset image is displayed correctly in portrait orientation.",
-        "3. Rotate the phone to landscape orientation.",
-        "4. Observe the Home screen headset image.",
-        "5. Rotate the phone back to portrait orientation.",
-        "6. Observe the Home screen headset image."
+        "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20.",
+        "On the Home screen, take a screenshot of the headset image.",
+        "Compare the screenshot against the official Poly Voyager Free 20 product image assets.",
+        "Check for distinguishing visual features: earbud shape, charging case design, color scheme, Poly branding.",
+        "Repeat the test with a different model (e.g., Poly Voyager Surround 80 UC) if available, and compare the Home screen images."
       ],
-      "expected": "The headset image for Poly Voyager Free 20 renders correctly in both portrait and landscape orientations. The image is not stretched, cropped, or replaced by a placeholder after orientation changes. The image returns to its correct appearance when rotated back to portrait."
+      "expected": "The headset image on the Home screen is a unique, model-specific asset for the Poly Voyager Free 20 \u2014 not a generic earbud icon, not a placeholder, and not the same image used for other Poly headset models. The image accurately represents the Free 20 form factor (TWS earbuds with charging case)."
     },
     {
-      "title": "TC-HOME-IMG-006: Verify headset image displays correctly when app is restored from background after fresh install pairing",
+      "title": "[Home Screen] Verify Free 20 headset image loads correctly on first pairing after fresh install (asset caching test)",
       "steps": [
-        "1. Perform steps 1-9 from TC-HOME-IMG-001 to pair Poly Voyager Free 20 on a fresh app install and reach the Home screen.",
-        "2. Verify the headset image is displayed correctly on the Home screen.",
-        "3. Press the Home button to send the app to the background.",
-        "4. Open 3-4 other apps (e.g., Settings, Chrome, Camera, Messages).",
-        "5. After 2 minutes, reopen Poly Studio Mobile app from the recent apps list.",
-        "6. Observe the Home screen for the headset image/icon."
+        "Enable Airplane Mode on the phone (no internet connection).",
+        "Clear app data / uninstall Poly Studio Mobile app.",
+        "Fresh install Poly Studio Mobile app while still in Airplane Mode.",
+        "Launch the app and complete EULA/Onboarding (offline).",
+        "Turn on Bluetooth (keep Airplane Mode on).",
+        "Put Poly Voyager Free 20 into pairing mode.",
+        "Tap 'Add Device' and pair the Free 20.",
+        "After successful pairing, observe the Home screen headset image.",
+        "Disable Airplane Mode (restore internet).",
+        "Force-kill and relaunch the app.",
+        "Observe the Home screen again."
       ],
-      "expected": "After being in the background for an extended period while other apps were used, the Poly Studio Mobile app restores correctly and the Poly Voyager Free 20 headset image is fully rendered on the Home screen without any loading delay or placeholder."
+      "expected": "The Free 20 headset image appears correctly on the Home screen even when paired for the first time offline \u2014 indicating the image asset is bundled in the app APK/IPA and does not require a download. After restoring internet and relaunching, the image still displays correctly."
     },
     {
-      "title": "TC-HOME-IMG-007: Verify headset image appears correctly when pairing via charge case touchscreen (if applicable)",
+      "title": "[Home Screen] Verify Home screen transitions from 'No Device' to Free 20 image immediately after pairing completes",
       "steps": [
-        "1. Ensure Poly Studio Mobile app is freshly installed (clear data or uninstall/reinstall).",
-        "2. Open Poly Studio Mobile app and complete onboarding.",
-        "3. On the 'Add Device' screen, select 'Pair New Device'.",
-        "4. On the Poly Voyager Free 20 charge case, navigate to Settings \u2192 Bluetooth \u2192 Pairing Mode on the charge case touchscreen.",
-        "5. From the app's discovered devices list, tap 'Poly Voyager Free 20'.",
-        "6. Complete the Bluetooth pairing confirmation on both phone and device if prompted.",
-        "7. Wait for the pairing flow to complete and the app to transition to the Home screen.",
-        "8. Observe the Home screen for the headset image/icon."
+        "Fresh install Poly Studio Mobile app and launch it.",
+        "On the Home screen, verify the 'No Device' placeholder state is shown (no headset image, prompt to add device).",
+        "Begin the pairing flow for Poly Voyager Free 20.",
+        "Complete the pairing process.",
+        "Immediately upon returning to the Home screen (do not navigate away), observe the transition."
       ],
-      "expected": "The Home screen displays the correct Poly Voyager Free 20 headset image/icon regardless of whether pairing was initiated from the app or from the charge case touchscreen. The image is fully rendered and not broken."
+      "expected": "The Home screen transitions smoothly from the 'No Device' state to displaying the Poly Voyager Free 20 headset image. There is no intermediate blank state, no loading spinner that hangs, no broken image, and no delay longer than 2 seconds. The image renders immediately upon successful pairing."
     },
     {
-      "title": "TC-HOME-IMG-008: Verify headset image visibility during low battery condition on fresh install",
+      "title": "[Home Screen] Verify Free 20 headset image survives phone rotation and configuration changes",
       "steps": [
-        "1. Ensure Poly Studio Mobile app is freshly installed (clear data or uninstall/reinstall).",
-        "2. Ensure Poly Voyager Free 20 earbuds have low battery (less than 10% charge remaining).",
-        "3. Open Poly Studio Mobile app and complete onboarding.",
-        "4. Pair the Poly Voyager Free 20 device following steps 5-9 from TC-HOME-IMG-001.",
-        "5. Observe the Home screen for the headset image/icon.",
-        "6. Note any battery indicator displayed on or near the headset image."
+        "Fresh install Poly Studio Mobile app and pair Poly Voyager Free 20.",
+        "Confirm the Free 20 headset image is displayed on the Home screen.",
+        "Rotate the phone to landscape orientation.",
+        "Observe the Home screen.",
+        "Rotate the phone back to portrait orientation.",
+        "Observe the Home screen.",
+        "Trigger a configuration change (e.g., change system font size, then return to app).",
+        "Observe the Home screen."
       ],
-      "expected": "The Poly Voyager Free 20 headset image is fully rendered on the Home screen even when the device battery is low. The low battery indicator (if shown) does not obscure or replace the headset image. The image is not replaced by a generic placeholder due to low battery state."
+      "expected": "The Poly Voyager Free 20 headset image is displayed correctly in both portrait and landscape orientations. The image scales appropriately without distortion, clipping, or disappearing. After font size changes, the image remains intact and properly positioned."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T05:50:17.144525Z"
+  "processed_at": "2026-04-25T08:35:09.757595Z"
 }
