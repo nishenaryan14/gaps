@@ -7,26 +7,26 @@
   "feature": "App Settings",
   "scenario": "Find My Device warning dialog does not match Figma design when Play button is clicked",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on Find My Device",
-    "On the Find My Device screen, tap the Play button"
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap on the device name to go to Device Settings.",
+    "Tap on Find My Device.",
+    "Tap the Play button on the Find My Device screen."
   ],
-  "expected": "A warning dialog appears that matches the Figma design specifications (correct text, layout, colors, fonts, button labels, and spacing).",
+  "expected": "A warning dialog appears that matches the Figma design specifications (correct layout, text, colors, fonts, and button styling).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
     "play-button",
-    "poly-studio-mobile",
     "warning-dialog",
+    "poly-studio-mobile",
+    "device-settings",
     "ui-mismatch",
-    "figma-design",
-    "home-screen"
+    "figma-design"
   ],
   "source_last_updated": "1760013661",
   "source_hash": "20d53172a7bda88abba5cc972e5f51ed45e3d95a28220af9a75b645533468b15",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.764043Z",
+  "processed_at": "2026-04-25T07:55:31.826226Z",
   "status": "active"
 }
