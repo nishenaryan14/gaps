@@ -5,15 +5,23 @@
   "project": "411453",
   "title": "Software Update - DFU - Charge Case at low battery - Software update tab in device settings",
   "feature": "Firmware Update",
-  "scenario": "DFU is blocked with low battery popup when headset or charge case battery is below 5%",
+  "scenario": "DFU blocked with low battery popup when headset or charge case battery is below 5%",
   "steps": [
-    "1. Open Poly Studio Mobile app on the Home screen.",
-    "2. Ensure the headset or charge case battery level is below 5%.",
-    "3. Navigate to Poly Studio Mobile \u2192 [Device Name] \u2192 Device Settings.",
-    "4. Locate and tap the Firmware Update (DFU) option.",
-    "5. Observe the app response when attempting to initiate the update."
+    "Open Poly Studio Mobile app on Android",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Scroll to and tap on 'Firmware Update' or 'DFU' option",
+    "Observe the app behavior when headset or charge case battery is below 5%",
+    "Verify a popup appears with the message: 'Update currently not available, please try back later'",
+    "Plug the charge case into a power source",
+    "Attempt the firmware update again",
+    "Verify the update proceeds normally",
+    "During the update flow, unplug the charge case from power",
+    "Check if the device battery is still below 5%",
+    "Attempt to continue or restart the firmware update",
+    "Verify the update is blocked again and the same popup appears"
   ],
-  "expected": "The app should display a popup message: \"Update currently not available, please try back later\". The DFU update should not proceed. The update should only become available once the charge case is plugged into power.",
+  "expected": "DFU is blocked when headset or charge case battery is below 5%. A popup displays: \"Update currently not available, please try back later\". When the charge case is plugged into power, the update proceeds normally. If the device is unplugged during the update flow and battery remains below 5%, the update is blocked again with the same popup.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -21,13 +29,13 @@
     "low-battery-popup",
     "firmware-update",
     "poly-studio-mobile",
+    "charge-case-battery",
     "battery-persistence",
-    "device-settings",
-    "charge-case-battery"
+    "update-blocked"
   ],
   "source_last_updated": "1763369632",
   "source_hash": "2fa50f275a2b8df92cf5bafd12c8b567932e35e17eca3c654393c5a472307dcc",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.882088Z",
+  "processed_at": "2026-04-25T07:55:31.960746Z",
   "status": "active"
 }
