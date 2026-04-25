@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "CCL - Put the app in the background",
-  "feature": "CCL (Camera Color Lens)",
-  "scenario": "Verify that the previously selected CCL setting persists after the app is backgrounded and then brought back to the foreground.",
+  "feature": "App Settings",
+  "scenario": "CCL setting persists correctly after app is backgrounded and foregrounded on Device Settings > Advanced",
   "steps": [
-    "Launch the app.",
-    "Select a CCL setting.",
-    "Put the app in the background (e.g., press the Home button or switch to another app).",
-    "Bring the app back to the foreground (e.g., tap the app icon or switch back to it).",
-    "Observe the displayed CCL setting."
+    "1. Launch the Poly Studio Mobile app and ensure a device that supports CCL (Call/Chat Control Language) is connected.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Advanced.",
+    "3. Select any CCL value from the available options.",
+    "4. Press the Home button or recent apps button to put the app in the background.",
+    "5. After a few seconds, bring the app back to the foreground by tapping the app icon or selecting it from the recent apps list.",
+    "6. Navigate back to Device Settings \u2192 Advanced."
   ],
-  "expected": "The previously selected CCL setting is still displayed.",
+  "expected": "The app displays the previously selected CCL setting that was chosen in step 3.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "CCL setting",
-    "persist",
-    "background",
-    "foreground",
-    "app state",
-    "setting retention",
-    "backgrounding",
-    "foregrounding"
+    "ccl",
+    "call-chat-control-language",
+    "device-settings",
+    "advanced-settings",
+    "background-foreground",
+    "setting-persistence",
+    "poly-studio-mobile"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "d1b30a7c25ac568daabad0dcecada69bcd5103be540e11165b0d4d587dc029e2",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.263445Z",
+  "processed_at": "2026-04-25T05:37:16.858583Z",
   "status": "active"
 }
