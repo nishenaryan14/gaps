@@ -5,27 +5,31 @@
   "project": "411453",
   "title": "Fit Test - Tab is present and accessible in Device Settings",
   "feature": "Device Settings",
-  "scenario": "Verify the Fit Test tab is present and accessible in Device Settings when a supported device is connected.",
+  "scenario": "Fit Test tab is present and accessible in Device Settings when a supported device is connected",
   "steps": [
-    "Start the app with a supported device connected and open Device Settings.",
-    "Check for the Fit Test tab.",
-    "Click on the Fit Test tab."
+    "1. Launch Poly Studio Mobile app on the Android device.",
+    "2. Connect a supported Poly Bluetooth audio device (e.g., Poly Voyager 5200, Poly Voyager 4320, etc.).",
+    "3. Open the Home screen and tap on the connected [Device Name] to enter Device Settings.",
+    "4. On the Device Settings screen, locate the Fit Test tab.",
+    "5. Confirm the Fit Test tab is visible and displayed in the list of available tabs/settings.",
+    "6. Tap the Fit Test tab.",
+    "7. Verify that the Fit Test screen opens and displays the Fit Test interface."
   ],
-  "expected": "Fit Test tab is present and accessible. When clicked, the fit test screen opens.",
+  "expected": "The Fit Test tab is visible in Device Settings when a supported device is connected. Tapping the Fit Test tab opens the Fit Test screen successfully.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Fit Test tab",
-    "Device Settings",
-    "supported device",
-    "tab presence",
-    "tab accessibility",
-    "connected device",
-    "tab navigation"
+    "fit-test",
+    "device-settings",
+    "poly-studio-mobile",
+    "poly-voyager-5200",
+    "poly-voyager-4320",
+    "bluetooth-audio-device",
+    "fit-test-interface"
   ],
   "source_last_updated": "1760957096",
   "source_hash": "39e370c36900d4dcd1d1465d34ff62f5888cf4e953c5521abe7401a941047f5d",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.222303Z",
+  "processed_at": "2026-04-25T05:37:16.807948Z",
   "status": "active"
 }
