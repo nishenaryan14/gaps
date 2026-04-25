@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "DFU - Emu/Tern - Charge Case update needed popup after earbud DFU",
   "feature": "Firmware Update",
-  "scenario": "\"Case Update Needed\" popup appears on Device Home Screen after earbud DFU when charge case firmware is outdated, directing user to Poly Lens Desktop app",
+  "scenario": "Post-DFU popup incorrectly directs user to Poly Lens Desktop for case update instead of allowing in-app case update on Device Home Screen",
   "steps": [
     "1. Open Poly Studio Mobile app on Android.",
-    "2. Navigate to the Home screen.",
-    "3. Connect a pair of Voyager Free 60+ or Free 20 earbuds where both the earbuds and the charge case are on outdated firmware.",
-    "4. Initiate and complete a Device Firmware Update (DFU) for the earbuds via the app.",
-    "5. Observe the Home screen after the earbud DFU completes."
+    "2. Navigate to Home screen.",
+    "3. Connect to a pair of earbuds where both the earbuds and the charge case are on outdated firmware.",
+    "4. Initiate a Device Firmware Update (DFU) for the earbuds via the app.",
+    "5. Wait for the DFU to complete successfully.",
+    "6. Observe the Home screen after the update completes."
   ],
-  "expected": "A popup appears on the Device Home Screen stating \"Case Update Needed\" with a message that the earbuds have been updated but the case update must be done using the Poly Lens Desktop app.",
+  "expected": "After the DFU completes, the user should be returned to the Home screen with no popup, or a clear in-app prompt to update the case firmware within the Poly Studio Mobile app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "case-update-needed",
     "poly-studio-mobile",
-    "voyager-free-60-plus",
-    "voyager-free-20",
     "device-firmware-update",
-    "charge-case-firmware",
+    "dfu",
+    "home-screen",
+    "case-update",
     "poly-lens-desktop",
-    "home-screen-popup"
+    "post-dfu-popup",
+    "android"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "a4c24963db074d8790b9c7300aed625f773a899faad801748db4da62a4fe52c6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.748100Z",
+  "processed_at": "2026-04-25T08:21:31.782053Z",
   "status": "active"
 }
