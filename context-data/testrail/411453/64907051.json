@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "App Settings - General - Notifications & Device Alerts - Tab is present",
   "feature": "App Settings",
-  "scenario": "\"Notifications & Device Alerts\" tab is present under General section in App Settings per Figma design",
+  "scenario": "Verify \"Notifications & Device Alerts\" tab is present under General section in App Settings per Figma design",
   "steps": [
-    "Open the Poly Studio Mobile app.",
-    "Tap the Account or Settings icon to navigate to App Settings.",
-    "Scroll down to the General section.",
-    "Verify that the \"Notifications & Device Alerts\" tab is present under the General section.",
-    "Compare the appearance and placement of the tab against the Figma design specification."
+    "Open the Poly Studio Mobile app",
+    "Tap the Account icon or navigate to App Settings",
+    "Scroll down to the General section",
+    "Verify that the \"Notifications & Device Alerts\" tab is present under the General section"
   ],
-  "expected": "The \"Notifications & Device Alerts\" tab is displayed under the General section in App Settings, matching the Figma design in terms of placement, label, and styling.",
+  "expected": "The \"Notifications & Device Alerts\" tab is displayed under the General section in App Settings, matching the Figma design.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
+    "notifications-and-device-alerts",
     "app-settings",
     "general-section",
-    "notifications-device-alerts",
+    "poly-studio-mobile",
     "figma-design",
     "settings-ui",
-    "device-alerts"
+    "account-icon"
   ],
   "source_last_updated": "1759416416",
   "source_hash": "32ebd4cc91f526ed078e412af4272f18648fc7569ed516e8c41f5facac71f065",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.818092Z",
+  "processed_at": "2026-04-25T08:21:30.930707Z",
   "status": "active"
 }
