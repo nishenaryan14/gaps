@@ -7,31 +7,30 @@
   "feature": "App Settings",
   "scenario": "Policy-locked settings remain locked and show offline modification pop-up after app restart when Wi-Fi is turned off",
   "steps": [
-    "1. Open Poly Studio Mobile app on the Android device.",
-    "2. Navigate to Home screen and ensure a Poly Bluetooth audio device is connected.",
-    "3. Apply a Policy to the device (e.g., lock ANC, Transparency Mode, or Equalizer settings) via the Policy management system.",
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "3. Ensure that Policies have been applied to the connected Poly Bluetooth audio device (e.g., via MDM or Poly Lens).",
     "4. Turn off Wi-Fi on the Android device.",
     "5. Force close and restart the Poly Studio Mobile app.",
-    "6. Navigate to Poly Studio Mobile \u2192 [Device Name] \u2192 Audio Settings.",
-    "7. Attempt to modify a setting that is locked by the Policy (e.g., toggle ANC, change Equalizer preset).",
-    "8. Observe the app behavior when attempting to change the locked setting."
+    "6. Reopen the app and navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "7. Attempt to modify a setting that is locked by the applied Policy (e.g., ANC, Transparency Mode, Equalizer, or Audio Settings)."
   ],
-  "expected": "The locked setting should remain unmodifiable. A pop-up message should appear indicating that the setting cannot be modified offline.",
+  "expected": "The locked setting should remain grayed out / non-editable. Attempting to modify it should display a pop-up message indicating that the setting cannot be modified offline.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "policy-locked-settings",
-    "offline-modification-popup",
+    "offline-modification-pop-up",
     "poly-studio-mobile",
-    "app-restart",
+    "device-settings",
     "wifi-off",
-    "anc-lock",
-    "transparency-mode-lock",
-    "equalizer-lock"
+    "app-restart",
+    "anc",
+    "transparency-mode"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "8694f6b90522f23987b69d0c61dba041518ba9646da131081eaeb1b5d3e65491",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.055843Z",
+  "processed_at": "2026-04-25T09:32:26.317899Z",
   "status": "active"
 }
