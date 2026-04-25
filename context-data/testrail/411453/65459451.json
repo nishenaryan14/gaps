@@ -4,28 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Software update - background DFU for Language update",
-  "feature": "Software Update / DFU",
-  "scenario": "Verify successful language update via background DFU when app is sent to background",
+  "feature": "Firmware Update",
+  "scenario": "Language update via background DFU completes successfully when app is sent to background during update process",
   "steps": [
-    "Start the app with an attached headset that has an update available.",
-    "Initiate the language update from the Dev Settings screen and put the app in background.",
-    "Wait for the DFU to finish."
+    "1. Launch the Poly Studio Mobile app with a connected headset that has a language update available.",
+    "2. Navigate to Dev Settings and start the language update.",
+    "3. Immediately send the app to the background (e.g., press the Home button or switch to another app).",
+    "4. Wait for the DFU (Device Firmware Update) to complete in the background.",
+    "5. Bring the app back to the foreground.",
+    "6. Verify the language has been updated correctly on the headset."
   ],
-  "expected": "DFU finishes successfully and the language is changed correctly.",
+  "expected": "The DFU completes successfully in the background, and the headset language is changed correctly.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "language update",
-    "background DFU",
-    "app background",
-    "Dev Settings",
-    "headset firmware",
-    "DFU completion",
-    "update verification"
+    "background-dfu",
+    "language-update",
+    "poly-studio-mobile",
+    "device-firmware-update",
+    "app-background-foreground",
+    "headset-language",
+    "dfu-completion"
   ],
   "source_last_updated": "1763381953",
   "source_hash": "05b9a73cbd3bd119f7dad41e3e51f634d2bd3a982e8851ebe89bcd20b3139558",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.292091Z",
+  "processed_at": "2026-04-25T05:37:16.881571Z",
   "status": "active"
 }
