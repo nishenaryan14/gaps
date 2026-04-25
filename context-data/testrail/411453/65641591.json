@@ -5,24 +5,30 @@
   "project": "411453",
   "title": "EQ - Change propagation, use two mobile phones",
   "feature": "Equalizer",
-  "scenario": "EQ settings (Bass, Flat, Bright, Custom) made on one phone are not propagated to the second phone when the same Poly device is connected to both via the Poly Studio Mobile app",
-  "steps": [],
-  "expected": "",
+  "scenario": "EQ settings (Bass, Flat, Bright, or Custom) applied on one phone are not reflected on the second phone when the same Poly device is paired to both phones simultaneously via the Poly Studio Mobile app",
+  "steps": [
+    "Open Poly Studio Mobile app on Phone A and ensure the Poly device is connected.",
+    "Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "Select an EQ preset (e.g., Bass, Flat, Bright, or Custom) and apply it.",
+    "Without disconnecting the device from Phone A, open Poly Studio Mobile app on Phone B and pair/connect to the same Poly device.",
+    "On Phone B, navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
+    "Observe the currently selected EQ preset on Phone B."
+  ],
+  "expected": "The EQ preset selected on Phone A (e.g., Bass, Flat, Bright, or Custom) is reflected and shown as active on Phone B's Equalizer screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "eq-settings",
-    "bass",
-    "flat",
-    "bright",
-    "custom",
+    "equalizer-preset",
     "poly-studio-mobile",
-    "multi-device-connection",
-    "settings-propagation"
+    "multi-device-pairing",
+    "audio-settings-sync",
+    "bass-flat-bright-custom",
+    "dual-phone-connection"
   ],
   "source_last_updated": "1761211347",
   "source_hash": "0b9c11b4814bc42541f04df174790d41318392f6588598085526727901d2050e",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.004012Z",
+  "processed_at": "2026-04-25T09:32:26.260748Z",
   "status": "active"
 }
