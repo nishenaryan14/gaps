@@ -5,17 +5,14 @@
   "project": "411453",
   "title": "Find My Device - Stop button",
   "feature": "App Settings",
-  "scenario": "Find My Device Stop button does not stop the tone or re-enable the Play button after starting the tone",
+  "scenario": "Find My Device Stop button does not stop the tone or re-enable the Play button after starting a tone",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Locate the Find My Device section",
-    "Tap the Play button (blue geo icon) to start the Find My Device tone",
-    "Wait for the tone to begin playing on the device",
-    "Tap the Stop button"
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Tap the blue Geo icon (Find My Device) next to the connected device name.",
+    "Tap the Play button to start the tone on the device.",
+    "While the tone is playing, tap the Stop button."
   ],
-  "expected": "The Find My Device tone stops playing, and the Play button becomes available again for re-tapping.",
+  "expected": "The tone stops playing immediately, and the Play button becomes available again (i.e., the Stop button is no longer shown, and the Play button is tappable).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,12 +21,12 @@
     "play-button",
     "tone",
     "poly-studio-mobile",
-    "device-settings",
-    "geo-icon"
+    "geo-icon",
+    "device-location"
   ],
   "source_last_updated": "1759929949",
   "source_hash": "8004f6e32be76e83fccb8017e3b02740aa910acf9e72acba822e73cf076f88eb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.935975Z",
+  "processed_at": "2026-04-25T09:32:26.172384Z",
   "status": "active"
 }
