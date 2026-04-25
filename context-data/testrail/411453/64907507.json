@@ -5,31 +5,33 @@
   "project": "411453",
   "title": "Support - Tenant info persists after updating the app",
   "feature": "App Settings",
-  "scenario": "Tenant information persists in Poly Lens Menu > Support > App after updating the Poly Studio Mobile app",
+  "scenario": "Tenant info persists unchanged after updating the Poly Studio Mobile app",
   "steps": [
     "1. Open the Poly Studio Mobile app.",
-    "2. Navigate to Home \u2192 Poly Lens Menu \u2192 Support \u2192 App.",
-    "3. Note the displayed tenant information.",
-    "4. Install a new version of the Poly Studio Mobile app (e.g., via the app store or sideload an updated APK).",
-    "5. Launch the updated Poly Studio Mobile app.",
-    "6. Navigate again to Home \u2192 Poly Lens Menu \u2192 Support \u2192 App.",
-    "7. Verify the tenant information displayed matches the information noted in step 3."
+    "2. Register on a tenant (e.g., via Account or login flow).",
+    "3. Navigate to Poly Lens Menu \u2192 Support \u2192 App.",
+    "4. Note the tenant info displayed.",
+    "5. Install a new version of the Poly Studio Mobile app (e.g., via app store or sideload).",
+    "6. Launch the updated app.",
+    "7. Navigate again to Poly Lens Menu \u2192 Support \u2192 App.",
+    "8. Verify the tenant info displayed."
   ],
-  "expected": "After updating the app, the tenant information should be cleared or reset to default, as tenant info should not persist across app updates.",
+  "expected": "Tenant info should be cleared or reset after updating the app, as tenant registration is tied to the app session/installation.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "poly-lens-menu",
-    "tenant-information",
-    "support-app",
+    "tenant-persistence",
     "app-update",
-    "data-persistence",
-    "firmware-update"
+    "poly-lens-menu",
+    "support-app",
+    "account-registration",
+    "login-flow",
+    "app-version-upgrade"
   ],
   "source_last_updated": "1759752032",
   "source_hash": "3ede487d871c29b92d8d4609f8c684a821c980ac12effd4a027cf7ef43502879",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.780120Z",
+  "processed_at": "2026-04-25T07:55:31.849472Z",
   "status": "active"
 }
