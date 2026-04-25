@@ -4,19 +4,17 @@
   "type": "testcase",
   "project": "411453",
   "title": "Device Settings  - Custom Button - Teams Detected",
-  "feature": "Device Management",
-  "scenario": "Custom Button \"Other Providers\" option is greyed out and inaccessible when Microsoft Teams is connected on Falcon headsets",
+  "feature": "Device Settings",
+  "scenario": "Custom Button \"Other Providers\" option is greyed out when Microsoft Teams is connected on Falcon headsets",
   "steps": [
     "Open Poly Studio Mobile app on Android.",
-    "Ensure a Falcon headset (e.g., Voyager 5200, Voyager 4320, etc.) is paired and connected to the Android device.",
+    "Ensure a Falcon headset (e.g., Voyager 5200, Voyager Focus 2) is paired and connected to the Android device.",
     "Ensure the same headset is also connected to a PC running Microsoft Teams.",
-    "Navigate to Home \u2192 Device Settings \u2192 [Connected Falcon Headset Name].",
-    "Locate the 'Custom Button' settings option and tap it.",
-    "Observe the two options displayed: 'Microsoft Teams' (selected by default) and 'Other Providers' (greyed out).",
-    "Read the message shown below the options.",
-    "Attempt to tap the 'Other Providers' option."
+    "Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
+    "Tap on 'Custom Button' configuration.",
+    "Observe the available options under Custom Button settings."
   ],
-  "expected": "The 'Custom Button' settings page shows 'Microsoft Teams' selected by default and 'Other Providers' greyed out. A message reads: 'Microsoft Teams is connected. Other Providers is not available when Microsoft Teams is connected.' Tapping 'Other Providers' does nothing as it is inaccessible.",
+  "expected": "The Custom Button settings should display two options: \"Microsoft Teams\" (selected by default) and \"Other Providers\". \"Other Providers\" should be greyed out and inaccessible. A message should be displayed: \"Microsoft Teams is connected. Other Providers is not available when Microsoft Teams is connected.\"",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -26,12 +24,12 @@
     "falcon-headsets",
     "poly-studio-mobile",
     "voyager-5200",
-    "voyager-4320",
+    "voyager-focus-2",
     "device-settings"
   ],
   "source_last_updated": "1769430868",
   "source_hash": "5a9b1a7d8353bacbfc00e4b501803d3edf0d8534aa8bfb94e56eb3fe68a07b95",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.801897Z",
+  "processed_at": "2026-04-25T07:55:31.872546Z",
   "status": "active"
 }
