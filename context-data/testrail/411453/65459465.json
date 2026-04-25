@@ -7,14 +7,14 @@
   "feature": "Firmware Update",
   "scenario": "Firmware update via Device Settings > Software Update shows \"Update complete\" screen with 100% progress and success message, and tapping \"Close\" returns to home screen",
   "steps": [
-    "Open Poly Studio Mobile app \u2192 Home screen",
-    "Tap on the desired device name \u2192 Device Settings screen",
-    "Scroll to and tap 'Software Update'",
-    "If an update is available, tap 'Update' to begin the firmware update process",
-    "Wait for the update to complete",
-    "Observe the screen shown after the update finishes"
+    "1. Open the Poly Studio Mobile app on the Android device.",
+    "2. On the Home screen, tap the desired Poly device name to open Device Settings.",
+    "3. In Device Settings, tap 'Software Update'.",
+    "4. If an update is available, tap 'Update' to begin the firmware update process.",
+    "5. Wait for the firmware update to complete.",
+    "6. Observe the screen after the update finishes."
   ],
-  "expected": "The \"Update complete\" screen is displayed with the progress bar at 100% and a success message indicating the device has been updated. Tapping \"Close\" returns the user to the Home screen.",
+  "expected": "The \"Update complete\" screen is displayed with a progress bar at 100% and a success message indicating the device has been updated. Tapping \"Close\" returns the user to the Home screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -29,6 +29,6 @@
   "source_last_updated": "1763132567",
   "source_hash": "cf32727fabb515bff1ac0591eba2e2b7a09e9633c56a7c0b79755ccb4ac06cc0",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.881045Z",
+  "processed_at": "2026-04-25T07:55:31.955200Z",
   "status": "active"
 }
