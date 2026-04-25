@@ -5,32 +5,33 @@
   "project": "411453",
   "title": "ANC - changes are present after closing/opening the ANC tab",
   "feature": "ANC",
-  "scenario": "ANC settings do not persist when closing and reopening the ANC tab on Poly Studio Mobile app",
+  "scenario": "ANC level does not persist after closing and reopening the ANC settings tab in Poly Studio Mobile app",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Home screen",
-    "Tap on the connected device name to open Device Settings",
-    "Select Audio Settings",
-    "Tap on ANC (Active Noise Cancellation) tab",
-    "Change ANC settings (e.g., adjust ANC level or toggle ANC modes)",
-    "Close the ANC tab by navigating back to Audio Settings or Home screen",
-    "Reopen the ANC tab by navigating again: Device Settings \u2192 Audio Settings \u2192 ANC"
+    "Open the Poly Studio Mobile app.",
+    "Navigate to Home screen.",
+    "Tap on the connected device name to open Device Settings.",
+    "Tap on Audio Settings.",
+    "Tap on ANC to open the ANC tab.",
+    "Set ANC to a specific value (e.g., High, Low, or Adaptive).",
+    "Close the ANC tab by tapping the back arrow or swiping back.",
+    "Reopen the ANC tab by navigating again: Device Settings \u2192 Audio Settings \u2192 ANC.",
+    "Observe the ANC value displayed."
   ],
-  "expected": "Previously set ANC values should be retained and displayed when the ANC tab is reopened.",
+  "expected": "The ANC value should remain as previously set (e.g., High, Low, or Adaptive).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "anc",
-    "anc-settings-persistence",
+    "anc-persistence",
+    "anc-level",
     "poly-studio-mobile",
     "audio-settings",
-    "active-noise-cancellation",
+    "anc-tab",
     "device-settings",
-    "anc-tab"
+    "anc-value-retention"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "f6acf65166997d34f7ea7dcce867e3f5694f374a644459b2c60bf56a02feadef",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.908286Z",
+  "processed_at": "2026-04-25T08:21:30.989644Z",
   "status": "active"
 }
