@@ -4,28 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Fit test - 2nd screen \"Cancel\" during test",
-  "feature": "Fit Test",
-  "scenario": "Tapping \"Cancel\" on the second screen during a fit test interrupts the test and shows Cancel/Retry options at the bottom.",
+  "feature": "Device Management",
+  "scenario": "Fit Test Cancel button on second screen shows Cancel/Retry buttons instead of returning to previous screen",
   "steps": [
-    "Start a fit test",
-    "Navigate to the second screen of the fit test",
-    "Tap 'Cancel' on the second screen"
+    "Open Poly Studio Mobile app",
+    "Navigate to Home screen",
+    "Tap on the connected device name to open Device Settings",
+    "Select Audio Settings",
+    "Tap on Fit Test to start the fit test",
+    "On the second screen of the fit test, tap the 'Cancel' button"
   ],
-  "expected": "The test should be interrupted and Cancel/Retry options should be displayed at the bottom of the screen.",
+  "expected": "The fit test is interrupted and returns to the previous screen or fit test setup.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "fit test",
-    "cancel",
-    "second screen",
-    "interrupt test",
-    "retry",
-    "cancel options",
-    "fit test navigation"
+    "fit-test",
+    "cancel-button",
+    "poly-studio-mobile",
+    "audio-settings",
+    "device-settings",
+    "ui-navigation",
+    "fit-test-cancel"
   ],
   "source_last_updated": "1760963417",
   "source_hash": "f6de53635e03492f97f5eeab9a071c34686230e05bf6dba95a770573ad773ce1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.226428Z",
+  "processed_at": "2026-04-25T05:37:16.811755Z",
   "status": "active"
 }
