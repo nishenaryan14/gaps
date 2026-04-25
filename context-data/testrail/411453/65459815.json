@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "PPIP - Login during Onboarding - Share Data toggle is not present",
   "feature": "App Settings",
-  "scenario": "Share Data toggle is not displayed in App Settings > General > Account for logged-in Poly users, as data sharing is automatically enabled",
+  "scenario": "Share Data toggle incorrectly displayed in App Settings > General > Account for logged-in Poly users during onboarding",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
     "2. Complete the onboarding flow.",
     "3. Log in with valid Poly credentials.",
-    "4. Navigate to App Settings > General > Account.",
-    "5. Observe the Share Data toggle."
+    "4. Navigate to App Settings \u2192 General \u2192 Account.",
+    "5. Observe the presence of the \"Share Data\" toggle or info section."
   ],
-  "expected": "The Share Data toggle is not present in App Settings > General > Account, as logged-in users are automatically allowed to send data.",
+  "expected": "Since logged-in users are automatically allowed to send data, the \"Share Data\" toggle/info should not be shown in App Settings > General > Account.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "share-data-toggle",
     "app-settings",
+    "general-account",
     "poly-studio-mobile",
-    "data-sharing",
-    "account-settings",
-    "onboarding-flow",
-    "poly-credentials"
+    "onboarding",
+    "logged-in-user",
+    "account-settings-ui"
   ],
   "source_last_updated": "1760538032",
   "source_hash": "03ff497493e93e0893a649797c4b9913b69db2b9d283cbd74bae0ca484d45d75",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.716422Z",
+  "processed_at": "2026-04-25T07:55:31.783573Z",
   "status": "active"
 }
