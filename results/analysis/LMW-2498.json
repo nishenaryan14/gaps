@@ -19,123 +19,102 @@
   ],
   "coverage_status": "none",
   "gaps": [
-    "No test case covers the Device Settings screen structure or section visibility for any device type, let alone Voyager Focus 2.",
-    "No test case validates that the 'Apps' section (or any specific section) appears in Device Settings after pairing a specific device model.",
-    "No test case covers device-specific settings screen differences \u2014 e.g., Voyager Focus 2 may have different available sections compared to Voyager Free 60+ or other devices.",
-    "No test case validates the post-pairing Device Settings UI for Voyager Focus 2 on iOS specifically.",
-    "No lifecycle or state-transition tests exist for Device Settings sections (e.g., what happens to section visibility after reconnect, app restart, or firmware update)."
+    "No existing test case validates that the 'Apps' section appears in Device Settings for Voyager Focus 2 on iOS after pairing.",
+    "No existing test case covers the Device Settings screen structure/content validation for Voyager Focus 2 specifically.",
+    "No existing test case validates section-level UI elements (Apps, Audio, etc.) within Device Settings for any headset model.",
+    "No existing test case covers iOS-specific behavior of Device Settings sections for Voyager Focus 2.",
+    "No existing test case validates that all expected sections render correctly after the pairing flow completes."
   ],
   "generated_testcases": [
     {
-      "title": "TC-001: Verify Apps section appears in Device Settings after pairing Voyager Focus 2 on iOS",
+      "title": "TC-APPS-001: Apps Section Present in Device Settings \u2014 Voyager Focus 2 (iOS) \u2014 Post-Pairing Validation",
       "steps": [
-        "Ensure Voyager Focus 2 is in pairing mode (power off, then hold the Call button until LED flashes red/blue).",
-        "Open Poly Studio Mobile app on iOS.",
-        "If no device is paired, tap 'Add Device' and follow pairing flow to pair Voyager Focus 2.",
-        "Once paired and connected, tap the Voyager Focus 2 device name tile on the home screen.",
-        "Observe the Device Settings screen that appears.",
-        "Scroll through all available sections in Device Settings.",
-        "Verify the presence of the 'Apps' section in the settings list."
+        "Precondition: Voyager Focus 2 is unpaired. Phone is iOS.",
+        "1. Open Poly Studio Mobile app.",
+        "2. Pair Voyager Focus 2 via Bluetooth (Settings \u2192 Bluetooth \u2192 tap device).",
+        "3. Launch Poly Studio Mobile app \u2192 tap connected Voyager Focus 2 device card.",
+        "4. Navigate to: Device Settings (gear icon or settings row).",
+        "5. Observe all section headers visible on the Device Settings screen."
       ],
-      "expected": "The 'Apps' section is visible in the Device Settings screen for Voyager Focus 2 on iOS. All expected sections (e.g., Audio Settings, Device Info, Apps, etc.) are displayed correctly."
+      "expected": "Device Settings screen displays the following sections in order: 'Apps', 'Audio', 'Headset Settings', 'More'. The 'Apps' section is present and rendered above 'Audio'. Actual (If Bug): 'Apps' section is missing entirely; only 'Audio', 'Headset Settings', and 'More' appear."
     },
     {
-      "title": "TC-002: Verify Apps section persists in Device Settings after app restart on Voyager Focus 2 (iOS)",
+      "title": "TC-APPS-002: Apps Section Content \u2014 Voyager Focus 2 (iOS) \u2014 Section Structure Validation",
       "steps": [
-        "Pair and connect Voyager Focus 2 to the iOS device following standard pairing flow.",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
-        "Confirm the 'Apps' section is visible.",
-        "Press the Home button to background the app.",
-        "Swipe up on the app preview to fully kill the Poly Studio Mobile app process.",
-        "Reopen Poly Studio Mobile app.",
-        "Tap the Voyager Focus 2 device name tile.",
-        "Observe the Device Settings screen and scroll to find the 'Apps' section."
+        "Precondition: Voyager Focus 2 is paired and connected to iOS device.",
+        "1. Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 device card.",
+        "2. Navigate to: Device Settings.",
+        "3. Tap the 'Apps' section header to expand/collapse (if collapsible).",
+        "4. Observe the list of items/rows under the 'Apps' section.",
+        "5. Scroll the entire Device Settings screen and verify no other section contains app-related rows."
       ],
-      "expected": "The 'Apps' section remains visible in Device Settings after app force-kill and relaunch. No sections are missing or altered."
+      "expected": "The 'Apps' section contains at least one row (e.g., 'App Alerts' or similar app management option). No app-related rows appear under 'Audio', 'Headset Settings', or 'More' sections. All app functionality is scoped exclusively under the 'Apps' section header."
     },
     {
-      "title": "TC-003: Verify Apps section visibility after Bluetooth disconnect/reconnect on Voyager Focus 2 (iOS)",
+      "title": "TC-APPS-003: Apps Section Persists After App Restart \u2014 Voyager Focus 2 (iOS)",
       "steps": [
-        "Pair and connect Voyager Focus 2 to the iOS device.",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
-        "Confirm the 'Apps' section is visible.",
-        "On the iOS device, go to Settings \u2192 Bluetooth \u2192 tap the 'i' icon next to Voyager Focus 2 \u2192 tap 'Disconnect'.",
-        "Wait 5 seconds.",
-        "Reconnect Voyager Focus 2 via Bluetooth settings or by power-cycling the headset.",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 device name.",
-        "Observe the Device Settings screen and check for the 'Apps' section."
+        "Precondition: Voyager Focus 2 is paired and connected to iOS device.",
+        "1. Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
+        "2. Verify 'Apps' section is visible. Note its position and content.",
+        "3. Press Home button to background the app.",
+        "4. Force-kill the app (swipe up from app switcher).",
+        "5. Reopen Poly Studio Mobile app.",
+        "6. Tap Voyager Focus 2 device card \u2192 Device Settings.",
+        "7. Observe section headers."
       ],
-      "expected": "The 'Apps' section is visible in Device Settings after Bluetooth disconnect and reconnection. The Device Settings screen structure is fully restored."
+      "expected": "'Apps' section remains present in Device Settings after app force-kill and relaunch. Section order and content match pre-kill state. Actual (If Bug): 'Apps' section missing after app restart, indicating a lifecycle state loss bug."
     },
     {
-      "title": "TC-004: Verify Device Settings section list for Voyager Focus 2 vs Voyager Free 60+ (iOS) \u2014 device-specific differences",
+      "title": "TC-APPS-004: Apps Section Persists After Bluetooth Disconnect/Reconnect \u2014 Voyager Focus 2 (iOS)",
       "steps": [
-        "Pair and connect Voyager Focus 2 to the iOS device.",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
-        "Note all visible sections (e.g., Audio Settings, Device Info, Apps, etc.).",
-        "Disconnect Voyager Focus 2.",
-        "Pair and connect Voyager Free 60+ to the same iOS device.",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Free 60+ \u2192 Device Settings.",
-        "Note all visible sections for Voyager Free 60+.",
-        "Compare the two section lists side by side."
+        "Precondition: Voyager Focus 2 is paired and connected to iOS device.",
+        "1. Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
+        "2. Verify 'Apps' section is visible.",
+        "3. Turn off Voyager Focus 2 headset (power slider OFF).",
+        "4. Wait 10 seconds. Observe app connection state (should show 'Disconnected').",
+        "5. Turn on Voyager Focus 2 headset. Wait for auto-reconnect.",
+        "6. Tap device card \u2192 Device Settings.",
+        "7. Observe section headers."
       ],
-      "expected": "The Device Settings screen shows device-appropriate sections. Voyager Focus 2 includes the 'Apps' section. Voyager Free 60+ may have different sections (e.g., Touchscreen Charge Case settings). The section list is correct for each device model."
+      "expected": "'Apps' section remains present in Device Settings after Bluetooth disconnect and reconnection cycle. Actual (If Bug): 'Apps' section missing after reconnect, indicating the section is not re-initialized on reconnection."
     },
     {
-      "title": "TC-005: Verify Apps section visibility after firmware update on Voyager Focus 2 (iOS)",
+      "title": "TC-APPS-005: Apps Section Not Present for Non-Voyager Focus 2 Devices (iOS Negative Test)",
       "steps": [
-        "Pair and connect Voyager Focus 2 to the iOS device.",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
-        "Confirm the 'Apps' section is visible.",
-        "Navigate to Device Info \u2192 Firmware Update.",
-        "If an update is available, proceed with the firmware update to completion.",
-        "After update completes and device reconnects, tap Voyager Focus 2 \u2192 Device Settings.",
-        "Scroll through all sections and verify the 'Apps' section is present."
+        "Precondition: A non-Voyager Focus 2 headset (e.g., Voyager 4220, Voyager Free 60+) is paired and connected to iOS device.",
+        "1. Open Poly Studio Mobile app \u2192 tap the non-Focus 2 device card.",
+        "2. Navigate to: Device Settings.",
+        "3. Observe all section headers on the screen.",
+        "4. Repeat steps 1-3 for at least 2 different non-Focus 2 models."
       ],
-      "expected": "The 'Apps' section remains visible in Device Settings after a firmware update completes. No sections are lost or altered due to the update process."
+      "expected": "For non-Voyager Focus 2 devices, the 'Apps' section is NOT present in Device Settings. Only 'Audio', 'Headset Settings', and 'More' sections appear. This confirms the 'Apps' section is model-specific to Voyager Focus 2 and not a universal rendering bug."
     },
     {
-      "title": "TC-006: Verify Apps section visibility after phone reboot on Voyager Focus 2 (iOS)",
+      "title": "TC-APPS-006: Apps Section Visible Immediately After Pairing Completion \u2014 Voyager Focus 2 (iOS)",
       "steps": [
-        "Pair and connect Voyager Focus 2 to the iOS device.",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
-        "Confirm the 'Apps' section is visible.",
-        "Close the Poly Studio Mobile app.",
-        "Reboot the iOS device.",
-        "After reboot, ensure Bluetooth is enabled on the iOS device.",
-        "Wait for Voyager Focus 2 to auto-reconnect (or manually reconnect via Bluetooth settings).",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 device name.",
-        "Observe the Device Settings screen and verify the 'Apps' section."
+        "Precondition: Voyager Focus 2 is in pairing mode. iOS Bluetooth settings are open.",
+        "1. Open Poly Studio Mobile app (fresh launch, no cached device).",
+        "2. Pair Voyager Focus 2 via in-app pairing flow (or system Bluetooth \u2192 return to app).",
+        "3. IMMEDIATELY after pairing completes and device shows as 'Connected', tap the device card.",
+        "4. Navigate to: Device Settings.",
+        "5. Observe section headers without any delay or navigation away."
       ],
-      "expected": "The 'Apps' section is visible in Device Settings after a full phone reboot and reconnection. The Device Settings screen structure is fully restored."
+      "expected": "'Apps' section is visible immediately upon first entry to Device Settings after pairing completes. No additional refresh, navigation away, or app restart is required for the section to render. Actual (If Bug): 'Apps' section absent on first entry, only appearing after a subsequent app restart or reconnection."
     },
     {
-      "title": "TC-007: Verify Apps section visibility after unpairing and re-pairing Voyager Focus 2 (iOS)",
+      "title": "TC-APPS-007: Device Settings Section Order Consistency \u2014 Voyager Focus 2 (iOS) \u2014 UI Layout Validation",
       "steps": [
-        "Pair and connect Voyager Focus 2 to the iOS device.",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
-        "Confirm the 'Apps' section is visible.",
-        "On iOS, go to Settings \u2192 Bluetooth \u2192 tap the 'i' icon next to Voyager Focus 2 \u2192 tap 'Forget This Device'.",
-        "Confirm the unpairing action.",
-        "Put Voyager Focus 2 back into pairing mode (hold Call button until LED flashes red/blue).",
-        "Open Poly Studio Mobile app \u2192 tap 'Add Device' and re-pair Voyager Focus 2.",
-        "After successful pairing, tap the Voyager Focus 2 device name tile.",
-        "Observe the Device Settings screen and check for the 'Apps' section."
+        "Precondition: Voyager Focus 2 is paired and connected to iOS device.",
+        "1. Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
+        "2. Capture screenshot of the full Device Settings screen.",
+        "3. Note the vertical order of all section headers from top to bottom.",
+        "4. Navigate back to device list, then re-enter Device Settings.",
+        "5. Repeat step 2 and compare section order.",
+        "6. Repeat steps 1-5 across 3 separate app sessions (force-kill between each)."
       ],
-      "expected": "The 'Apps' section appears in Device Settings after re-pairing Voyager Focus 2. The full Device Settings screen structure is correctly populated for a fresh pairing."
-    },
-    {
-      "title": "TC-008: Verify all expected sections in Device Settings for Voyager Focus 2 on iOS",
-      "steps": [
-        "Pair and connect Voyager Focus 2 to the iOS device.",
-        "Open Poly Studio Mobile app \u2192 tap Voyager Focus 2 \u2192 Device Settings.",
-        "Scroll through the entire Device Settings screen from top to bottom.",
-        "Document every section heading visible (e.g., Audio Settings, Device Info, Apps, etc.).",
-        "Verify that no expected sections are missing and no unexpected/duplicate sections appear."
-      ],
-      "expected": "The Device Settings screen for Voyager Focus 2 displays all expected sections correctly. The 'Apps' section is present along with other standard sections (Audio Settings, Device Info, etc.). No sections are missing or duplicated."
+      "expected": "Section order is consistent across all entries: 'Apps' (top), 'Audio', 'Headset Settings', 'More' (bottom). No sections are reordered, duplicated, or missing across sessions. The 'Apps' section is always the first section in Device Settings for Voyager Focus 2 on iOS."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T08:35:16.302930Z"
+  "processed_at": "2026-04-25T09:45:57.804629Z"
 }
