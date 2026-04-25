@@ -5,18 +5,17 @@
   "project": "411453",
   "title": "Software Update - DFU -  Going to sleep mode during update",
   "feature": "Firmware Update",
-  "scenario": "DFU continues successfully after mobile phone exits sleep mode during firmware update",
+  "scenario": "DFU does not resume or complete successfully after phone wakes from sleep mode during firmware update",
   "steps": [
     "1. Open Poly Studio Mobile app on the mobile device.",
-    "2. Connect to the Poly Bluetooth audio device.",
-    "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "4. Initiate a Device Firmware Update (DFU) from the Device Settings screen.",
+    "2. Navigate to Home screen and ensure a Poly Bluetooth audio device is connected.",
+    "3. Go to Device Settings \u2192 [Device Name] \u2192 Firmware Update.",
+    "4. Initiate a Device Firmware Update (DFU) on the connected device.",
     "5. During the DFU process, allow the mobile phone to enter sleep mode (e.g., press the Power button or let the screen time out).",
-    "6. Wait for a few seconds while the phone is in sleep mode.",
-    "7. Wake the phone from sleep mode (e.g., press the Power button or tap the screen).",
-    "8. Open the Poly Studio Mobile app and observe the DFU status."
+    "6. Wait for a few seconds, then wake the phone (e.g., press the Power button again).",
+    "7. Unlock the phone and return to the Poly Studio Mobile app."
   ],
-  "expected": "The DFU process should continue running or complete successfully. The app should show the update progress or completion status when the user returns from sleep mode.",
+  "expected": "The DFU process should continue running or complete successfully after waking the phone and returning to the app. The app should show the update progress or a completion status.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,13 +23,14 @@
     "firmware-update",
     "sleep-mode",
     "poly-studio-mobile",
-    "device-settings",
-    "battery-persistence",
-    "bluetooth-connection"
+    "bluetooth-audio-device",
+    "device-firmware-update-resume",
+    "phone-wake",
+    "firmware-update-interruption"
   ],
   "source_last_updated": "1763371049",
   "source_hash": "eba6006187c6b52e04f506e847c8387649de759572a0205759081590d73c97eb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.030184Z",
+  "processed_at": "2026-04-25T09:32:26.291200Z",
   "status": "active"
 }
