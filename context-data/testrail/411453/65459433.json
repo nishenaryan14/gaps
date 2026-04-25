@@ -5,29 +5,29 @@
   "project": "411453",
   "title": "Software Update - DFU is not available if phone's battery is below 30%",
   "feature": "Firmware Updates",
-  "scenario": "DFU is blocked with low battery pop-up when phone battery is below 30% on Poly Studio Mobile app",
+  "scenario": "DFU process blocked with low battery pop-up when phone battery is below 30% in Poly Studio Mobile app",
   "steps": [
     "1. Open the Poly Studio Mobile app on the phone.",
     "2. Ensure the phone's battery level is below 30%.",
     "3. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "4. Tap on Firmware Update or Language Change option.",
-    "5. Observe the pop-up that appears."
+    "4. Locate and tap the DFU (Device Firmware Update) option.",
+    "5. Observe the pop-up message that appears."
   ],
-  "expected": "A pop-up appears stating the device battery doesn't have enough power to update. The user can tap OK to dismiss the pop-up and remain on the Settings page without the DFU starting.",
+  "expected": "A pop-up appears stating the device battery doesn't have enough power to update the software, advising the user to fully charge the device or plug it into a power source. Tapping OK returns the user to the Settings page without starting the DFU process.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "dfu-blocked",
     "low-battery-pop-up",
     "poly-studio-mobile",
-    "firmware-update",
-    "battery-persistence",
+    "device-firmware-update",
+    "battery-below-30-percent",
     "device-settings",
-    "language-change"
+    "firmware-update-blocked"
   ],
   "source_last_updated": "1763043814",
   "source_hash": "70ff4f5c75187970cccae340c91f1da936fd2adccf89799a583c575b0bab66a9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.956209Z",
+  "processed_at": "2026-04-25T08:21:31.024595Z",
   "status": "active"
 }
