@@ -5,34 +5,30 @@
   "project": "411453",
   "title": "FMD - Both earbuds disconnected",
   "feature": "Bluetooth Pairing",
-  "scenario": "Find My Device map shows all Voyager Free 60+ devices (Case, Left, Right) as disconnected, and Voyager Free 20 shows only earbuds (no case) both disconnected",
+  "scenario": "Find My Device map shows three devices (case, left earbud, right earbud) for Voyager Free 60 Series but only two earbuds (no case) for Voyager Free 20 when disconnected",
   "steps": [
-    "Open Poly Studio Mobile app on Android",
-    "Navigate to Home screen",
-    "Tap on the Find My Device feature",
-    "Select Poly Voyager Free 60 Series (Osprey) from the device list",
-    "Observe the map view showing device locations",
-    "Note the status indicators for Case, Left earbud, and Right earbud",
-    "Return to device list and select Poly Voyager Free 20 (Tern)",
-    "Observe the map view showing device locations",
-    "Note the status indicators for Left earbud and Right earbud"
+    "Open Poly Studio Mobile app on your phone.",
+    "Ensure the Voyager Free 60 Series (Osprey) device is paired but currently disconnected from the phone.",
+    "Navigate to the Home screen.",
+    "Tap on the Find My Device feature.",
+    "Observe the map view showing device locations."
   ],
-  "expected": "For Poly Voyager Free 60 Series (Osprey): All three devices (Case, Left earbud, Right earbud) should show as connected or at least display their last known location/status properly. For Poly Voyager Free 20 (Tern): The Case should be shown alongside the two earbuds, and all devices should display their connection status correctly.",
+  "expected": "For Voyager Free 60 Series (Osprey): The map should display three devices \u2014 the charging case, left earbud, and right earbud \u2014 all shown in a disconnected state.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
-    "poly-studio-mobile",
-    "voyager-free-60-plus",
+    "voyager-free-60-series",
     "voyager-free-20",
-    "disconnected-status",
+    "poly-studio-mobile",
     "map-view",
-    "case-earbud-indicators",
-    "osprey-tern"
+    "disconnected-state",
+    "case-tracking",
+    "earbud-tracking"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "b20248c05211464ed3eeb5547d1180bb7602f20acc58acf22299aa647793ebea",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.291540Z",
+  "processed_at": "2026-04-25T08:21:31.383055Z",
   "status": "active"
 }
