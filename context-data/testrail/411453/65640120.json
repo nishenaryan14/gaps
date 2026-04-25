@@ -5,34 +5,23 @@
   "project": "411453",
   "title": "Headset settings are changed",
   "feature": "Device Management",
-  "scenario": "Headset settings changed in Poly Studio Mobile app are not reflected correctly on the Lens tenant Inventory or Device user profile",
-  "steps": [
-    "1. Open the Poly Studio Mobile app on the paired smartphone.",
-    "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings.",
-    "3. Note the current settings (e.g., ANC mode, Transparency mode, Equalizer preset, etc.).",
-    "4. Log in to the Lens tenant (Inventory or Device user profile) via a web browser.",
-    "5. Locate the registered headset and verify its settings match the values observed in the Poly Studio Mobile app.",
-    "6. Return to the Poly Studio Mobile app and change a setting value (e.g., toggle ANC from On to Off, or change an Equalizer preset).",
-    "7. Confirm the change is applied on the device (e.g., hear the audio mode change).",
-    "8. Refresh the Lens tenant page for the same headset.",
-    "9. Verify the new setting values are displayed on the Lens tenant page."
-  ],
-  "expected": "The Lens tenant page displays the updated settings values that match the changes made in the Poly Studio Mobile app.",
+  "scenario": "Headset settings changed in Poly Studio Mobile app are not reflected correctly on the Lens tenant device inventory or user profile",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "lens-tenant",
-    "device-settings",
-    "anc",
-    "transparency-mode",
-    "equalizer-preset",
-    "inventory-sync",
-    "device-user-profile"
+    "device-inventory",
+    "user-profile",
+    "settings-sync",
+    "headset-configuration",
+    "cloud-management"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "9008db5bcac2b2c964a1708e4767df9acf82cd83ff5ab9e13576eaff86a390f8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.988454Z",
+  "processed_at": "2026-04-25T08:21:31.063734Z",
   "status": "active"
 }
