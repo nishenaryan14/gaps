@@ -5,23 +5,33 @@
   "project": "411453",
   "title": "Notifications -  Update Available OFF",
   "feature": "Notifications",
-  "scenario": "No device software update notification appears when notification setting is OFF and app is in background after pairing a device with outdated firmware",
-  "steps": [],
-  "expected": "",
+  "scenario": "No device software update notification appears when notification is disabled in App Settings and app is in background after pairing a device with outdated firmware",
+  "steps": [
+    "1. Open the Poly Studio Mobile app on the mobile device.",
+    "2. Navigate to App Settings \u2192 General \u2192 Notifications & Device Alerts.",
+    "3. Locate the 'Device Software Update' notification toggle and set it to OFF.",
+    "4. Press the Home button or switch to another app to send the Poly Studio Mobile app to the background.",
+    "5. Ensure a Poly Bluetooth audio device with a firmware version lower than the current version available on the cloud server is powered off.",
+    "6. Put the device into pairing mode (e.g., press and hold the Bluetooth button).",
+    "7. On the mobile device, go to Bluetooth settings and pair the device.",
+    "8. Observe whether any 'Device Software Update' notification appears on the mobile device's notification shade or lock screen."
+  ],
+  "expected": "No 'Device Software Update' notification appears on the mobile device after pairing, since the notification is disabled in app settings.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "firmware-update",
-    "notification-setting",
-    "background-app",
+    "device-software-update",
+    "notification-toggle",
+    "app-settings",
+    "poly-studio-mobile",
     "bluetooth-pairing",
-    "outdated-firmware",
-    "update-notification",
-    "poly-app"
+    "firmware-update",
+    "background-app",
+    "notifications-device-alerts"
   ],
   "source_last_updated": "1761223725",
   "source_hash": "3e969ead7e72816a08f6f5c250048ff14107521fb7c2891a5ec6a3fe9248b899",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.967112Z",
+  "processed_at": "2026-04-25T08:21:31.045061Z",
   "status": "active"
 }
