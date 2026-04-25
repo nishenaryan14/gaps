@@ -4,30 +4,23 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Product Support Opened",
-  "feature": "Analytics",
-  "scenario": "Verify that opening the Product Support page logs a \"product_support_opened\" event and that event count increases after navigating to Support > Product Support on mobile.",
-  "steps": [
-    "Open the Product Support page.",
-    "In Firebase, confirm default elements are present: graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment.",
-    "On mobile, navigate to Support > Product Support.",
-    "Wait a few hours and confirm the event count increases."
-  ],
-  "expected": "The event \\\"product_support_opened\\\" is logged when the Product Support page is opened. Default elements are present in Firebase, and the event count increases after a few hours on mobile.",
+  "feature": "App Settings",
+  "scenario": "Analytics event logged when navigating to Product Support page in Poly Studio Mobile app",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Product Support page",
-    "product_support_opened event",
-    "Firebase analytics",
-    "event count",
-    "mobile navigation",
-    "Support menu",
-    "event tracking",
-    "analytics verification"
+    "poly-studio-mobile",
+    "product-support",
+    "analytics-event",
+    "in-app-navigation",
+    "support-page",
+    "mobile-app-analytics"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "62d22b29714c5195c2b1741ac4b90b3504e88719c57c7413f08d7cf311f3fe63",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.342815Z",
+  "processed_at": "2026-04-25T05:37:16.970831Z",
   "status": "active"
 }
