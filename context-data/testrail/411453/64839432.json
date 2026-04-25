@@ -5,28 +5,32 @@
   "project": "411453",
   "title": "Software Update - DFU  - Onboarding in not displayed over DFU screens after connecting new device",
   "feature": "Firmware Update",
-  "scenario": "Onboarding dialog is suppressed when a new device is connected during an active DFU process, remaining hidden until DFU completes and user returns to Home screen",
+  "scenario": "Onboarding dialog is not displayed over DFU screens when a new device is connected during active firmware update",
   "steps": [
-    "1. Launch Poly Studio Mobile app and navigate to Home screen.",
-    "2. Connect a first device that supports DFU (e.g., Voyager 5200 series) and begin a Device Firmware Update process.",
-    "3. While the DFU is in progress, connect a second device that supports onboarding (e.g., Emu, Tern, or Osprey).",
-    "4. Observe the current screen displayed on the app."
+    "1. Open Poly Studio Mobile app and navigate to Home screen.",
+    "2. Initiate a Device Firmware Update (DFU) process on a currently connected device.",
+    "3. While the DFU process is active, connect a new device that supports onboarding (e.g., Emu, Tern, Osprey).",
+    "4. Observe the screen during the active DFU process.",
+    "5. Wait for the DFU process to complete.",
+    "6. Return to the Home screen.",
+    "7. Observe the Home screen."
   ],
-  "expected": "The onboarding dialog for the newly connected device should be displayed over the DFU screen immediately upon connection.",
+  "expected": "The onboarding dialog should be displayed immediately when the new device that supports onboarding is connected, even during an active DFU process.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "dfu-suppression",
     "onboarding-dialog",
-    "device-firmware-update",
+    "dfu-screen",
+    "firmware-update",
     "poly-studio-mobile",
     "home-screen",
-    "multi-device-connection",
-    "dfu-in-progress"
+    "device-connection",
+    "dfu-overlay",
+    "onboarding-flow"
   ],
   "source_last_updated": "1763378013",
   "source_hash": "7fc59a8f3017aa12ae366fa0b0615836289ac7e7ef61be9007be5f020227ff45",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.030690Z",
+  "processed_at": "2026-04-25T09:32:26.289573Z",
   "status": "active"
 }
