@@ -5,31 +5,30 @@
   "project": "411453",
   "title": "Feedback - send a Suggestion feedback without names/email",
   "feature": "App Settings",
-  "scenario": "Feedback submission fails when sending a suggestion without providing name or email in Poly Studio Mobile app",
+  "scenario": "Suggestion feedback can be submitted without providing name or email in Poly Studio Mobile app's Feedback screen",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Home screen.",
-    "2. Tap the menu icon (hamburger or gear) to navigate to App Settings.",
-    "3. Tap on Feedback.",
-    "4. Select the \"Suggestion\" option.",
-    "5. Enter feedback text in the text field (leave Name and Email fields blank).",
-    "6. Tap Send."
+    "Open the Poly Studio Mobile app",
+    "Go to App Settings",
+    "Tap Feedback",
+    "Select the \"Suggestion\" option",
+    "Enter feedback text (leave Name and Email fields blank)",
+    "Click Send"
   ],
-  "expected": "Feedback is sent successfully despite not providing a name or email.",
+  "expected": "Feedback is sent successfully.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "feedback-submission",
-    "suggestion",
-    "app-settings",
+    "feedback-screen",
+    "suggestion-feedback",
     "name-field",
     "email-field",
-    "send-button",
-    "form-validation"
+    "app-settings",
+    "send-feedback"
   ],
   "source_last_updated": "1776241074",
   "source_hash": "0301a1538e0bd8d1927ac08ecfe27e6bc1aee7f3ee6373b5a5d09ab057c2dd32",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.786175Z",
+  "processed_at": "2026-04-25T07:55:31.857187Z",
   "status": "active"
 }
