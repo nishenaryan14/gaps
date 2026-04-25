@@ -5,33 +5,32 @@
   "project": "411453",
   "title": "EQ - Select a value, close the EQ tab, reopen it - the selected value persists",
   "feature": "Equalizer",
-  "scenario": "EQ selection does not persist after closing and reopening the EQ tab in Device Settings",
+  "scenario": "EQ setting does not persist after closing and reopening the EQ tab in Device Settings",
   "steps": [
     "1. Open Poly Studio Mobile app on the Android device.",
     "2. Navigate to Home screen and tap on the connected [Device Name].",
     "3. Go to Device Settings \u2192 Audio Settings \u2192 Equalizer.",
     "4. Select an EQ value (e.g., Bass).",
-    "5. Close the Equalizer tab by tapping the back arrow or swiping down.",
-    "6. Reopen the Equalizer by navigating back to Device Settings \u2192 Audio Settings \u2192 Equalizer.",
+    "5. Close the Equalizer tab by tapping the back arrow or navigating away.",
+    "6. Reopen Device Settings \u2192 Audio Settings \u2192 Equalizer.",
     "7. Observe the currently selected EQ value.",
     "8. Repeat steps 4\u20137 for each remaining EQ value: Flat, Bright, and Custom EQ."
   ],
-  "expected": "The previously selected EQ value (Bass, Flat, Bright, or Custom EQ) persists and is displayed as selected when the Equalizer tab is reopened.",
+  "expected": "The previously selected EQ value (Bass, Flat, Bright, or Custom EQ) persists and is shown as selected when reopening the Equalizer tab.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "equalizer",
     "eq-persistence",
-    "device-settings",
+    "eq-setting",
     "audio-settings",
     "poly-studio-mobile",
-    "eq-selection",
-    "custom-eq",
-    "bass"
+    "device-settings",
+    "eq-tab"
   ],
   "source_last_updated": "1761144510",
   "source_hash": "04c15b433f195aeded068205289b3ebbb70517b7687ddf33c565529ce789fc2b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.923546Z",
+  "processed_at": "2026-04-25T08:21:31.000484Z",
   "status": "active"
 }
