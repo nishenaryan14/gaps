@@ -4,31 +4,31 @@
   "type": "testcase",
   "project": "411453",
   "title": "Analytics - Device Release Notes Opened",
-  "feature": "Analytics",
-  "scenario": "Logs when device-specific release notes are viewed, with event counts updating after a few hours and default analytics elements present.",
+  "feature": "App Settings",
+  "scenario": "Analytics events logged when viewing device-specific release notes in Poly Studio Mobile app",
   "steps": [
-    "Open the app and navigate to device-specific release notes.",
-    "View the release notes for a specific device.",
-    "Check the event logs to confirm the event was logged.",
-    "Wait a few hours for event counts to update.",
-    "Verify the default elements are present for the event: graph for this event, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, and app environment."
+    "Open Poly Studio Mobile app on the Home screen.",
+    "Navigate to Account screen.",
+    "Select a connected Poly Bluetooth audio device.",
+    "Go to Device Settings for the selected device.",
+    "Locate and tap on Release Notes (device-specific).",
+    "View the release notes content on screen."
   ],
-  "expected": "Event is logged when device-specific release notes are viewed. Event counts update after a few hours. Default elements (graph for this event, events in last 30 minutes, event count by country, event count by gender, events per session, app version, app build, app environment) are present for every event.",
+  "expected": "Analytics logs are generated when device-specific release notes are viewed. Default analytics elements (graph, events in last 30 minutes, event count by country/gender, events per session, app version, app build, app environment) are captured. Event counts update after a few hours.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "device-specific release notes",
-    "event logs",
-    "event counts",
-    "analytics elements",
-    "graph for event",
-    "events in last 30 minutes",
-    "event count by country",
-    "event count by gender"
+    "poly-studio-mobile",
+    "release-notes",
+    "device-settings",
+    "analytics-events",
+    "bluetooth-audio-device",
+    "account-screen",
+    "home-screen"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "c652329339d2514f1b91b14479bea31943db4e5a8180f328c848dd4d039c74b1",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.341805Z",
+  "processed_at": "2026-04-25T05:37:16.969824Z",
   "status": "active"
 }
