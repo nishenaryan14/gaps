@@ -5,17 +5,17 @@
   "project": "411453",
   "title": "Charge case outside screen/third screen, left zoom in/out",
   "feature": "App Settings",
-  "scenario": "Charge case outside screen: tapping left circle button zooms in to show new text and tapping again zooms out to original view",
+  "scenario": "Charge case outside screen: tapping the left circle button zooms in to show new text, and tapping again zooms out to the original view",
   "steps": [
     "1. Open the Poly Studio Mobile app on the Android device.",
     "2. Navigate to the Home screen.",
     "3. Locate the charge case outside screen (third screen) on the device UI.",
-    "4. Tap the left circle button on the screen.",
+    "4. Tap the left circle button on the charge case outside screen.",
     "5. Observe the screen for zoom-in behavior and any new text that appears.",
     "6. Tap the left circle button again.",
     "7. Observe the screen for zoom-out behavior returning to the original charge case outside screen."
   ],
-  "expected": "Tapping the left circle button zooms in, showing new text. Tapping it again zooms out, returning to the original charge case outside screen.",
+  "expected": "Tapping the left circle button zooms in, showing new text. Tapping the left circle button again zooms out, returning to the original charge case outside screen.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -30,6 +30,6 @@
   "source_last_updated": "1761315357",
   "source_hash": "67bf9214da83b3f8598a19052bbd78741d53994963797cc70394debb25d257e9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.937961Z",
+  "processed_at": "2026-04-25T08:21:31.010610Z",
   "status": "active"
 }
