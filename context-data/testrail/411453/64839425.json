@@ -5,18 +5,19 @@
   "project": "411453",
   "title": "[IOS] Location sharing dialogue - Allow While Using App is selected",
   "feature": "App Settings",
-  "scenario": "Location permission prompt reappears for Find My Device after user selected 'Allow While Using App' during initial onboarding",
+  "scenario": "Location permission prompt reappears for Find My Device after restarting the app despite selecting 'Allow While Using App' during onboarding",
   "steps": [
     "1. Install Poly Studio Mobile app and launch it for the first time.",
     "2. Complete the onboarding flow.",
-    "3. When the location sharing dialogue appears, select 'Allow While Using App'.",
-    "4. Navigate to Poly Studio Mobile \u2192 App Settings \u2192 Find My Device (FMD).",
-    "5. Observe whether the location dialogue appears again.",
-    "6. Close and restart the Poly Studio Mobile app.",
-    "7. Navigate again to Poly Studio Mobile \u2192 App Settings \u2192 Find My Device (FMD).",
-    "8. Observe whether the location dialogue appears again."
+    "3. Observe the location sharing dialog that appears with options: 'Allow Once', 'Allow While Using App', and 'Don't Allow'.",
+    "4. Select 'Allow While Using App'.",
+    "5. Navigate to Poly Studio Mobile \u2192 App Settings \u2192 Find My Device (FMD).",
+    "6. Verify that FMD opens without any additional location consent prompt.",
+    "7. Close and restart the Poly Studio Mobile app.",
+    "8. Navigate again to Poly Studio Mobile \u2192 App Settings \u2192 Find My Device (FMD).",
+    "9. Observe whether a location consent dialog is shown again."
   ],
-  "expected": "After selecting 'Allow While Using App' during onboarding, the user should be able to access Find My Device (FMD) from App Settings without seeing the location dialogue again. After restarting the app and opening FMD, the user should not be prompted again for location consent.",
+  "expected": "After selecting 'Allow While Using App' during the initial location sharing dialog, the user should be able to access Find My Device (FMD) from App Settings without being prompted again. After restarting the app and opening FMD again, the user should not be asked for location consent again.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -24,13 +25,14 @@
     "find-my-device",
     "location-permission",
     "allow-while-using-app",
-    "onboarding",
+    "permission-persistence",
     "app-settings",
-    "permission-persistence"
+    "onboarding-flow",
+    "location-consent"
   ],
   "source_last_updated": "1759149575",
   "source_hash": "b142b7dd9a41356808f99d2073e414d7c083945a4664a43200b9e2a0a8631ee8",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.793843Z",
+  "processed_at": "2026-04-25T08:21:30.914908Z",
   "status": "active"
 }
