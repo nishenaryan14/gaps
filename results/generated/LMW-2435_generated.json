@@ -1,76 +1,124 @@
 [
   {
-    "title": "Verify Free60+ earbuds battery level displays correctly after successful connection",
+    "title": "TC-BAT-001: Verify earbud and case battery percentages display correct values immediately after initial connection",
     "steps": [
-      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
-      "Navigate to the device connection screen.",
-      "Connect to Free60+ device.",
-      "Wait for the 'Connected' status to appear.",
-      "Observe the battery level indicator for the left earbud.",
-      "Observe the battery level indicator for the right earbud.",
-      "Record the displayed battery percentage for each earbud."
+      "1. Ensure Poly Voyager Free 60+ UC earbuds are charged (both earbuds in case, case charged above 50%).",
+      "2. Open Poly Studio Mobile app on the phone.",
+      "3. If a device is already connected, tap [Device Name] \u2192 Disconnect, then forget the device.",
+      "4. Open the charge case lid with earbuds inside.",
+      "5. Put the earbuds in pairing mode (press and hold the Bluetooth button on the charge case for 2 seconds).",
+      "6. On the phone, go to Settings \u2192 Bluetooth \u2192 tap 'Poly Voyager Free 60+ UC' to pair and connect.",
+      "7. Open Poly Studio Mobile app.",
+      "8. Observe the Home screen \u2014 verify the app shows 'Connected' status for the device.",
+      "9. On the Home screen, locate the battery indicator section showing: Left earbud battery %, Right earbud battery %, and Charge case battery %.",
+      "10. Record the displayed battery percentages for all three indicators."
     ],
-    "expected": "After connection, the battery level for both left and right earbuds displays a value between 1% and 100% (not 0%) within a reasonable time after 'Connected' status appears."
+    "expected": "The Home screen displays 'Connected' status. The Left earbud, Right earbud, and Charge case battery percentages show realistic non-zero values (e.g., >0%) that reflect the actual charge state of the hardware. No indicator shows 0% unless the respective component is truly depleted."
   },
   {
-    "title": "Verify Free60+ charging case battery level displays correctly after successful connection",
+    "title": "TC-BAT-002: Verify battery percentages remain accurate 5 minutes after connection (stale data detection)",
     "steps": [
-      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
-      "Navigate to the device connection screen.",
-      "Connect to Free60+ device.",
-      "Wait for the 'Connected' status to appear.",
-      "Observe the battery level indicator for the charging case.",
-      "Record the displayed battery percentage for the charging case."
+      "1. Ensure Poly Voyager Free 60+ UC earbuds are charged (both earbuds >50%, case >50%).",
+      "2. Open Poly Studio Mobile app \u2192 tap [Device Name] \u2192 connect if not already connected.",
+      "3. Verify Home screen shows 'Connected' status.",
+      "4. Record the Left earbud, Right earbud, and Charge case battery percentages shown on the Home screen.",
+      "5. Do NOT navigate away from the app. Leave the app open and visible.",
+      "6. Wait 2 minutes. Observe if the battery percentages update or remain static.",
+      "7. Wait an additional 3 minutes (total 5 minutes). Observe if the battery percentages update or remain static.",
+      "8. After 5 minutes, tap the Home screen refresh/pull-down gesture (if available) or navigate to Device \u2192 Audio Settings and back to Home to force a refresh.",
+      "9. Record the battery percentages again."
     ],
-    "expected": "After connection, the battery level for the charging case displays a value between 1% and 100% (not 0%) within a reasonable time after 'Connected' status appears."
+    "expected": "Battery percentages remain accurate and non-zero throughout the 5-minute observation period. If the app auto-refreshes, values should remain consistent with actual hardware state. After manual refresh, values should still be non-zero and realistic. No indicator shows 0% while the device is connected and operational."
   },
   {
-    "title": "Verify Free60+ battery levels update dynamically over time after connection",
+    "title": "TC-BAT-003: Verify battery percentages after disconnect and reconnect cycle (no 0% false reading)",
     "steps": [
-      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
-      "Connect to Free60+ device.",
-      "Wait for 'Connected' status and record initial battery levels for left earbud, right earbud, and charging case.",
-      "Wait for 30 seconds without disconnecting.",
-      "Re-check and record the battery levels for left earbud, right earbud, and charging case.",
-      "Wait for another 30 seconds.",
-      "Re-check and record the battery levels again."
+      "1. Ensure Poly Voyager Free 60+ UC earbuds are charged (>50%).",
+      "2. Open Poly Studio Mobile app \u2192 verify Home screen shows 'Connected' and battery percentages are non-zero.",
+      "3. Record the current battery percentages for Left earbud, Right earbud, and Charge case.",
+      "4. Place earbuds in the charge case and close the lid.",
+      "5. Wait 10 seconds. Observe the Home screen \u2014 verify status changes to 'Disconnected' or device disappears.",
+      "6. Open the charge case lid.",
+      "7. Wait up to 30 seconds for reconnection.",
+      "8. Verify the Home screen shows 'Connected' status again.",
+      "9. Immediately observe the battery percentages for Left earbud, Right earbud, and Charge case.",
+      "10. Record the displayed values."
     ],
-    "expected": "Battery levels for earbuds and charging case update dynamically over time and do not remain stuck at the same value (especially 0%) for the entire monitoring period."
+    "expected": "After reconnection, the Home screen shows 'Connected' status. Battery percentages for Left earbud, Right earbud, and Charge case display realistic non-zero values. No indicator shows 0% immediately after reconnection."
   },
   {
-    "title": "Verify Free60+ battery levels do not show 0% for an extended period after connection",
+    "title": "TC-BAT-004: Verify battery percentages after app force-kill and relaunch (no 0% false reading)",
     "steps": [
-      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
-      "Connect to Free60+ device.",
-      "Wait for 'Connected' status to appear.",
-      "Immediately check and record battery levels for left earbud, right earbud, and charging case.",
-      "Wait for 60 seconds, checking battery levels every 10 seconds.",
-      "Note any instances where battery level shows 0%."
+      "1. Ensure Poly Voyager Free 60+ UC earbuds are charged (>50%) and connected to the phone.",
+      "2. Open Poly Studio Mobile app \u2192 verify Home screen shows 'Connected' and battery percentages are non-zero.",
+      "3. Record the current battery percentages for Left earbud, Right earbud, and Charge case.",
+      "4. Fully close (force-kill) the Poly Studio Mobile app from the phone's recent apps menu (swipe away).",
+      "5. Wait 10 seconds.",
+      "6. Reopen Poly Studio Mobile app.",
+      "7. Observe the Home screen \u2014 verify 'Connected' status appears.",
+      "8. Immediately observe the battery percentages for Left earbud, Right earbud, and Charge case.",
+      "9. Record the displayed values."
     ],
-    "expected": "Battery levels for earbuds and charging case should not show 0% for more than 10 seconds after 'Connected' status appears. If 0% is shown initially, it should update to a valid percentage within 10 seconds."
+    "expected": "After app force-kill and relaunch, the Home screen shows 'Connected' status. Battery percentages for Left earbud, Right earbud, and Charge case display realistic non-zero values. No indicator shows 0% due to stale cached data or failed re-fetch on app restart."
   },
   {
-    "title": "Verify Free60+ battery level display consistency after reconnection",
+    "title": "TC-BAT-005: Verify battery percentages after phone reboot (no 0% false reading)",
     "steps": [
-      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
-      "Connect to Free60+ device and wait for 'Connected' status.",
-      "Record battery levels for left earbud, right earbud, and charging case.",
-      "Disconnect the Free60+ device.",
-      "Reconnect to the Free60+ device.",
-      "Wait for 'Connected' status to reappear.",
-      "Record battery levels again for left earbud, right earbud, and charging case."
+      "1. Ensure Poly Voyager Free 60+ UC earbuds are charged (>50%) and connected to the phone.",
+      "2. Open Poly Studio Mobile app \u2192 verify Home screen shows 'Connected' and battery percentages are non-zero.",
+      "3. Record the current battery percentages for Left earbud, Right earbud, and Charge case.",
+      "4. Reboot the phone.",
+      "5. After phone restarts, ensure Bluetooth is enabled.",
+      "6. Wait for automatic reconnection (up to 60 seconds).",
+      "7. Open Poly Studio Mobile app.",
+      "8. Observe the Home screen \u2014 verify 'Connected' status appears.",
+      "9. Immediately observe the battery percentages for Left earbud, Right earbud, and Charge case.",
+      "10. Record the displayed values."
     ],
-    "expected": "After reconnection, battery levels for earbuds and charging case display valid percentages (1%-100%) and are not stuck at 0%. Battery values should be consistent with the device's actual battery state."
+    "expected": "After phone reboot and reconnection, the Home screen shows 'Connected' status. Battery percentages for Left earbud, Right earbud, and Charge case display realistic non-zero values. No indicator shows 0% due to stale cached data or failed re-fetch after phone restart."
   },
   {
-    "title": "Verify Free60+ battery level does not display 0% when device battery is known to be charged",
+    "title": "TC-BAT-006: Verify battery percentages when one earbud is at low battery and the other is charged",
     "steps": [
-      "Launch the app and complete onboarding (EULA, splash screen, location permissions).",
-      "Ensure Free60+ device has been charged (e.g., earbuds in case, case charged).",
-      "Connect to Free60+ device.",
-      "Wait for 'Connected' status to appear.",
-      "Observe battery level indicators for left earbud, right earbud, and charging case."
+      "1. Prepare Poly Voyager Free 60+ UC with one earbud at low battery (<10%) and the other earbud charged (>50%). Charge case should be >50%.",
+      "2. Open Poly Studio Mobile app \u2192 ensure device is connected (Home screen shows 'Connected').",
+      "3. Observe the battery percentages for Left earbud, Right earbud, and Charge case.",
+      "4. Record the displayed values.",
+      "5. Tap the battery indicator area (if tappable) to see detailed view.",
+      "6. Observe if the low-battery earbud shows the correct low percentage (not 0%) and the charged earbud shows a higher percentage.",
+      "7. Navigate to Device \u2192 Audio Settings \u2192 Transparency Mode \u2192 Environment, then navigate back to Home.",
+      "8. Observe battery percentages again."
     ],
-    "expected": "When the Free60+ device is known to have charge, battery levels for earbuds and charging case display values greater than 0% after connection."
+    "expected": "The low-battery earbud shows its actual low percentage (e.g., 5-10%), not 0%. The charged earbud shows its actual higher percentage. The charge case shows its actual percentage. Values persist correctly after navigating away and back. No indicator incorrectly shows 0%."
+  },
+  {
+    "title": "TC-BAT-007: Verify battery percentages do not show 0% when charge case is open and earbuds are in use",
+    "steps": [
+      "1. Ensure Poly Voyager Free 60+ UC earbuds are charged (>50%) and connected.",
+      "2. Open Poly Studio Mobile app \u2192 verify Home screen shows 'Connected'.",
+      "3. Record battery percentages for Left earbud, Right earbud, and Charge case.",
+      "4. Remove both earbuds from the charge case and wear them.",
+      "5. Leave the charge case lid OPEN.",
+      "6. Observe the Home screen battery indicators \u2014 verify all three percentages are still displayed and non-zero.",
+      "7. Wait 1 minute. Observe if any battery percentage drops to 0%.",
+      "8. Place earbuds back in the charge case and close the lid.",
+      "9. Open the lid again and observe battery percentages."
+    ],
+    "expected": "With earbuds removed and case lid open, all three battery indicators (Left earbud, Right earbud, Charge case) continue to display realistic non-zero values. No indicator shows 0% while the device is connected and operational."
+  },
+  {
+    "title": "TC-BAT-008: Verify battery percentages after firmware update (no 0% false reading post-update)",
+    "steps": [
+      "1. Ensure Poly Voyager Free 60+ UC earbuds are charged (>50%) and connected.",
+      "2. Open Poly Studio Mobile app \u2192 verify Home screen shows 'Connected' and battery percentages are non-zero.",
+      "3. Record the current battery percentages.",
+      "4. Navigate to Device \u2192 Firmware Update.",
+      "5. If an update is available, proceed with the firmware update. If no update is available, note this and proceed to step 6.",
+      "6. After firmware update completes (or skip if no update), navigate back to Home screen.",
+      "7. Observe the Home screen \u2014 verify 'Connected' status appears.",
+      "8. Observe the battery percentages for Left earbud, Right earbud, and Charge case.",
+      "9. Record the displayed values."
+    ],
+    "expected": "After firmware update (or checking for update), the Home screen shows 'Connected' status. Battery percentages for Left earbud, Right earbud, and Charge case display realistic non-zero values. No indicator shows 0% due to post-update state mismatch."
   }
 ]
