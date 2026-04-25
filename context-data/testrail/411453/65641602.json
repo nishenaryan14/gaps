@@ -5,30 +5,31 @@
   "project": "411453",
   "title": "CCL - Put the app in the background",
   "feature": "App Settings",
-  "scenario": "CCL setting persists correctly after app is backgrounded and foregrounded on Device Settings > Advanced",
+  "scenario": "CCL setting persists correctly when app is backgrounded and foregrounded in Device Settings > Advanced",
   "steps": [
-    "1. Launch the Poly Studio Mobile app and ensure a device that supports CCL (Call/Chat Control Language) is connected.",
+    "1. Open Poly Studio Mobile app.",
     "2. Navigate to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Advanced.",
-    "3. Select any CCL value from the available options.",
-    "4. Press the Home button or recent apps button to put the app in the background.",
-    "5. After a few seconds, bring the app back to the foreground by tapping the app icon or selecting it from the recent apps list.",
-    "6. Navigate back to Device Settings \u2192 Advanced."
+    "3. Select a CCL (Call/Chat/Location) setting (e.g., Call).",
+    "4. Press the Home button or recent apps button to put the app into the background.",
+    "5. Wait a few seconds, then bring the app back to the foreground (e.g., tap the app icon or select it from recent apps).",
+    "6. Navigate back to Home \u2192 [Device Name] \u2192 Device Settings \u2192 Advanced.",
+    "7. Observe the currently selected CCL setting."
   ],
-  "expected": "The app displays the previously selected CCL setting that was chosen in step 3.",
+  "expected": "The previously selected CCL setting (e.g., Call) is still displayed correctly in Device Settings > Advanced.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "ccl",
-    "call-chat-control-language",
+    "ccl-setting",
+    "call-chat-location",
     "device-settings",
     "advanced-settings",
-    "background-foreground",
+    "app-background-foreground",
     "setting-persistence",
     "poly-studio-mobile"
   ],
   "source_last_updated": "1772468639",
   "source_hash": "d1b30a7c25ac568daabad0dcecada69bcd5103be540e11165b0d4d587dc029e2",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.858583Z",
+  "processed_at": "2026-04-25T07:55:31.936365Z",
   "status": "active"
 }
