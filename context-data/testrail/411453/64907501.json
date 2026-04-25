@@ -5,24 +5,33 @@
   "project": "411453",
   "title": "Support - App, user not logged ever, login, dialog, Continue, Cancel",
   "feature": "App Settings",
-  "scenario": "Guest user can navigate from Support via hamburger menu to Login dialog with Cancel and Continue buttons, and Cancel returns to Support App section with Later/Login modal",
-  "steps": [],
-  "expected": "",
+  "scenario": "Guest user can navigate from Support via hamburger menu to Login dialog with Cancel and Continue buttons, where Cancel returns to Support App section with Later/Login modal still present",
+  "steps": [
+    "1. Launch the Poly Studio Mobile app as a new user and select \"Guest\" during onboarding.",
+    "2. From the Home screen, tap the hamburger menu (\u2630) in the top-left corner.",
+    "3. Tap \"Support\" from the menu.",
+    "4. In the Support section, tap the \"App\" button.",
+    "5. Tap \"Login\".",
+    "6. Observe the login dialog that appears.",
+    "7. Tap \"Continue\" on the login dialog.",
+    "8. Tap \"Cancel\" (upper-left corner) to return to the Poly Support App section."
+  ],
+  "expected": "Step 6: A login dialog with Cancel and Continue buttons is displayed. Step 7: Tapping Continue opens the login page. Step 8: Tapping Cancel (upper-left corner) returns the user to the Poly Support App section with the Later/Login modal still present.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "poly-studio-mobile",
+    "guest-user",
     "hamburger-menu",
     "support-section",
     "login-dialog",
     "cancel-button",
     "continue-button",
-    "later-modal",
-    "guest-user",
-    "navigation-flow"
+    "app-section"
   ],
   "source_last_updated": "1759751921",
   "source_hash": "857376c5b7e9c2fcff65ddcfea778ef7e7bce0af9d7264a0aca1105eebf1ccb6",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.949470Z",
+  "processed_at": "2026-04-25T09:32:26.191524Z",
   "status": "active"
 }
