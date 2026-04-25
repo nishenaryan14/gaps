@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "ANC - changes are present after closing/opening the ANC tab",
   "feature": "ANC",
-  "scenario": "ANC settings do not persist after closing and reopening the ANC tab in the Poly Studio Mobile app",
+  "scenario": "ANC settings do not persist when closing and reopening the ANC tab on Poly Studio Mobile app",
   "steps": [
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
     "Tap on the connected device name to open Device Settings",
     "Select Audio Settings",
-    "Tap on ANC to open the ANC tab",
-    "Adjust ANC values (e.g., change slider positions or toggle ANC modes)",
-    "Close the ANC tab (e.g., tap Back or navigate away)",
-    "Reopen the ANC tab by following the same path: Audio Settings \u2192 ANC"
+    "Tap on ANC (Active Noise Cancellation) tab",
+    "Change ANC settings (e.g., adjust ANC level or toggle ANC modes)",
+    "Close the ANC tab by navigating back to Audio Settings or Home screen",
+    "Reopen the ANC tab by navigating again: Device Settings \u2192 Audio Settings \u2192 ANC"
   ],
-  "expected": "The ANC settings should retain the previously set values after closing and reopening the ANC tab.",
+  "expected": "Previously set ANC values should be retained and displayed when the ANC tab is reopened.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "anc",
     "anc-settings-persistence",
     "poly-studio-mobile",
-    "anc-tab",
     "audio-settings",
+    "active-noise-cancellation",
     "device-settings",
-    "anc-mode-toggle",
-    "anc-slider"
+    "anc-tab"
   ],
   "source_last_updated": "1760956286",
   "source_hash": "f6acf65166997d34f7ea7dcce867e3f5694f374a644459b2c60bf56a02feadef",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.821756Z",
+  "processed_at": "2026-04-25T07:55:31.908286Z",
   "status": "active"
 }
