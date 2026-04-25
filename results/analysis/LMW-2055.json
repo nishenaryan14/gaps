@@ -17,173 +17,156 @@
     "65293034",
     "65293028"
   ],
-  "coverage_status": "none",
+  "coverage_status": "partial",
   "gaps": [
-    "No test covers the scenario where a newly paired headset (via phone Bluetooth settings, not via app) fails to appear in the Poly Studio Mobile app device list without an app restart.",
-    "No test covers the scenario where a device that is displayed in the device list but powered off fails to update its status to 'Connected' when the device is powered on, without manual refresh or app restart.",
-    "No test covers the Bluetooth state transition of 'device powered off -> powered on' and whether the app's device status updates reactively.",
-    "No test covers the app's failure to detect a newly paired Bluetooth device via the system Bluetooth pairing flow (external to the app) and reflect it in the device list without app lifecycle restart."
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 App restart dependency: The bug states the device is 'intermittently missing until app restart.' None of the existing test cases validate that a newly paired device appears in the device list after app background/foreground or app kill/relaunch. Test 65868076 checks 'returning from Bluetooth menu' but does not cover the scenario where the device fails to appear and requires an app restart to surface.",
+    "\ud83e\udde0 STATE TRIGGER \u2014 Timing of device list refresh: The bug involves an intermittent failure where the device list does not update after the OS-level Bluetooth pairing completes. No existing test validates the exact moment the app syncs its device list with the OS Bluetooth bond table. The gap is testing whether the app polls for new paired devices on Home screen resume vs. requiring a lifecycle restart to trigger the refresh.",
+    "\ud83e\udde0 DEVICE ASYMMETRY \u2014 Multi-device behavior: The bug scenario lists Focus 2, Legend 30, and Voyager 6200 as example devices. No existing test validates whether the intermittent missing-device behavior is device-specific (e.g., occurs only with certain firmware versions or Bluetooth chipset types). Tests are written generically without device-specific coverage.",
+    "\ud83e\udde0 LIFECYCLE DIMENSION \u2014 Power cycle sequence: Steps 8-11 involve turning the device off and back on, then checking if status updates to 'Connected.' No existing test covers the sequence of: pair \u2192 appear in list \u2192 power off \u2192 power on \u2192 status update. Test 65868080 covers Bluetooth toggle on the phone side, but not device power cycling.",
+    "\ud83e\udde0 STATE TRIGGER \u2014 Intermittent/race condition: The bug is described as 'intermittent,' implying a race condition between the Android Bluetooth stack bonding callback and the app's UI refresh. No existing test covers repeated pairing attempts (e.g., pair, unpair, re-pair 5-10 times) to catch flaky behavior."
   ],
   "generated_testcases": [
     {
-      "title": "TC-BT-DISCOVERY-001: Newly Paired Headset via Phone Bluetooth Settings Does Not Appear in App Device List Without App Restart",
+      "title": "TC-BT-001: Newly paired device appears in device list after app background/foreground cycle",
       "steps": [
-        "Precondition: Headset is fully charged, powered off, and not currently paired to the phone.",
-        "Open Poly Studio Mobile app on the Android device.",
-        "Navigate to the main Device List screen. Verify no headset is listed (or only previously paired devices).",
-        "Minimize the app (press Home button) but do not close it.",
-        "Open phone Settings \u2192 Bluetooth.",
-        "Put the headset into pairing mode (e.g., slide and hold Power switch away from off position until LCDs flash red and blue).",
-        "From the phone's Bluetooth settings, select the headset from 'Available devices' to pair. Confirm pairing is successful (status shows 'Connected' or 'Paired').",
-        "Return to Poly Studio Mobile app by tapping the app icon or switching to it from the recent apps list.",
-        "Observe the Device List screen in the app.",
-        "Do NOT restart the app. Do NOT pull-to-refresh or tap any refresh button.",
-        "Verify whether the newly paired headset appears in the app's device list."
+        "Precondition: No Poly devices currently paired to the phone. Poly Studio Mobile app is installed and logged in.",
+        "1. Open Poly Studio Mobile app on the Home screen.",
+        "2. Tap the '+' (Add Device) icon or navigate to the device list.",
+        "3. Put the target device (e.g., Poly Focus 2) into Bluetooth pairing mode.",
+        "4. On the phone, go to Settings \u2192 Bluetooth and pair with the device (select 'Poly Focus 2' from available devices).",
+        "5. Once pairing is successful, press the Home button to background the Poly Studio Mobile app.",
+        "6. Wait 5 seconds, then reopen Poly Studio Mobile app from the app switcher or home screen.",
+        "7. Observe the device list on the Home screen."
       ],
-      "expected": "The newly paired headset SHOULD appear in the Poly Studio Mobile app device list automatically without requiring an app restart. If the headset does not appear, this is a bug indicating the app fails to detect system Bluetooth pairing events."
+      "expected": "The newly paired Poly Focus 2 appears in the device list on the Home screen immediately upon returning to the app, without requiring an app restart. The device shows as 'Connected' or 'Available' status."
     },
     {
-      "title": "TC-BT-DISCOVERY-002: Newly Paired Headset Persists in App Device List After App Force-Kill and Restart",
+      "title": "TC-BT-002: Newly paired device appears in device list after app force-kill and relaunch",
       "steps": [
-        "Precondition: Headset is paired to the phone via phone Bluetooth settings (not via app). Headset is powered ON and connected.",
-        "Open Poly Studio Mobile app. Verify the headset is NOT visible in the device list (baseline for bug reproduction).",
-        "Force-kill the app completely (swipe from recent apps).",
-        "Reopen Poly Studio Mobile app.",
-        "Navigate to the main Device List screen.",
-        "Observe whether the headset now appears in the device list."
+        "Precondition: No Poly devices currently paired to the phone. Poly Studio Mobile app is installed and logged in.",
+        "1. Open Poly Studio Mobile app on the Home screen.",
+        "2. Tap the '+' (Add Device) icon or navigate to the device list.",
+        "3. Put the target device (e.g., Poly Legend 30) into Bluetooth pairing mode.",
+        "4. On the phone, go to Settings \u2192 Bluetooth and pair with the device (select 'Poly Legend 30' from available devices).",
+        "5. Once pairing is successful, fully close (force-kill) the Poly Studio Mobile app from the recent apps menu.",
+        "6. Wait 3 seconds, then relaunch Poly Studio Mobile app.",
+        "7. Observe the device list on the Home screen."
       ],
-      "expected": "After app force-kill and restart, the newly paired headset should appear in the device list. If it appears only after restart, this confirms the bug that the app does not dynamically detect new Bluetooth pairings."
+      "expected": "The newly paired Poly Legend 30 appears in the device list on the Home screen after the app is relaunched. The device shows as 'Connected' or 'Available' status."
     },
     {
-      "title": "TC-BT-DISCOVERY-003: Device Status Fails to Update from 'Disconnected' to 'Connected' When Powered On Without App Restart",
+      "title": "TC-BT-003: Device list refresh timing \u2014 app polls for new paired devices on Home screen resume without lifecycle restart",
       "steps": [
-        "Precondition: Headset is already paired and visible in the Poly Studio Mobile app device list.",
-        "Open Poly Studio Mobile app and navigate to the main Device List screen.",
-        "Verify the headset is listed and currently shows status as 'Connected' (power it on and let it connect first).",
-        "Power OFF the headset (slide Power switch to OFF position).",
-        "Wait 10 seconds. Observe the device status in the app updates to 'Disconnected' or the device shows as unavailable.",
-        "Do NOT restart the app. Do NOT navigate away or pull-to-refresh.",
-        "Power ON the headset (slide Power switch to ON position).",
-        "Wait up to 30 seconds for Bluetooth reconnection.",
-        "Observe the device status in the app's Device List screen.",
-        "Check if the status automatically updates to 'Connected' without any manual intervention."
+        "Precondition: No Poly devices currently paired to the phone. Poly Studio Mobile app is installed and logged in.",
+        "1. Open Poly Studio Mobile app and stay on the Home screen.",
+        "2. Tap the Home button to background the app.",
+        "3. While the app is backgrounded, go to Settings \u2192 Bluetooth on the phone.",
+        "4. Put the target device (e.g., Poly Voyager 6200) into pairing mode and pair it with the phone.",
+        "5. After pairing completes, immediately switch back to Poly Studio Mobile app (do NOT force-kill).",
+        "6. Observe the device list on the Home screen within 3 seconds of returning."
       ],
-      "expected": "The app should reactively update the device status from 'Disconnected' to 'Connected' when the headset is powered on and reconnects via Bluetooth, without requiring an app restart or manual refresh."
+      "expected": "The newly paired Poly Voyager 6200 appears in the device list on the Home screen within 3 seconds of returning to the app, without requiring any app restart or manual refresh. This validates that the app polls/syncs its device list on Home screen resume."
     },
     {
-      "title": "TC-BT-DISCOVERY-004: Device Status Update After Power Cycle with App Backgrounding",
+      "title": "TC-BT-004: Device-specific coverage \u2014 Pair, power cycle, and status update for Focus 2",
       "steps": [
-        "Precondition: Headset is paired and visible in the Poly Studio Mobile app device list. Headset is powered ON and connected.",
-        "Open Poly Studio Mobile app and navigate to the main Device List screen.",
-        "Verify the headset shows status 'Connected'.",
-        "Power OFF the headset.",
-        "Immediately press the Home button to background the app.",
-        "Wait 15 seconds.",
-        "Power ON the headset.",
-        "Wait 10 seconds for reconnection.",
-        "Bring the Poly Studio Mobile app back to the foreground (tap app icon or switch from recent apps).",
-        "Observe the device status on the Device List screen."
+        "Precondition: Poly Focus 2 is fully charged and in pairing mode. Phone Bluetooth is enabled. Poly Studio Mobile app is installed.",
+        "1. Open Poly Studio Mobile app \u2192 Home screen.",
+        "2. Pair Poly Focus 2 with the phone via Settings \u2192 Bluetooth.",
+        "3. Return to Poly Studio Mobile app and verify the device appears in the device list as 'Connected'.",
+        "4. Power OFF the Poly Focus 2 headset by sliding the power switch to OFF.",
+        "5. Wait 10 seconds. Observe the device status in the Poly Studio Mobile app device list.",
+        "6. Power ON the Poly Focus 2 headset by sliding the power switch to ON.",
+        "7. Wait up to 15 seconds for Bluetooth reconnection. Observe the device status in the Poly Studio Mobile app device list."
       ],
-      "expected": "The device status should update to 'Connected' after the headset is powered on and reconnects, even when the app was backgrounded during the power cycle. The app should detect the state change upon returning to the foreground."
+      "expected": "Step 3: Poly Focus 2 appears in the device list as 'Connected'. Step 5: Device status changes to 'Disconnected' or 'Not Connected' within 10 seconds of power-off. Step 7: Device status updates to 'Connected' within 15 seconds of power-on, without requiring app restart or manual refresh."
     },
     {
-      "title": "TC-BT-DISCOVERY-005: Device Status Update After Power Cycle with App in Foreground - No Manual Refresh",
+      "title": "TC-BT-005: Device-specific coverage \u2014 Pair, power cycle, and status update for Legend 30",
       "steps": [
-        "Precondition: Headset is paired and visible in the Poly Studio Mobile app device list. Headset is powered ON and connected.",
-        "Open Poly Studio Mobile app and navigate to the main Device List screen.",
-        "Verify the headset shows status 'Connected'.",
-        "Keep the app in the foreground. Do NOT navigate away.",
-        "Power OFF the headset.",
-        "Observe the device status on screen. Note whether it changes to 'Disconnected' within 15 seconds.",
-        "Power ON the headset.",
-        "Observe the device status on screen continuously for up to 30 seconds.",
-        "Do NOT tap any refresh button, do NOT navigate away, do NOT restart the app.",
-        "Record whether the status automatically transitions from 'Disconnected' to 'Connected'."
+        "Precondition: Poly Legend 30 is fully charged and in pairing mode. Phone Bluetooth is enabled. Poly Studio Mobile app is installed.",
+        "1. Open Poly Studio Mobile app \u2192 Home screen.",
+        "2. Pair Poly Legend 30 with the phone via Settings \u2192 Bluetooth.",
+        "3. Return to Poly Studio Mobile app and verify the device appears in the device list as 'Connected'.",
+        "4. Power OFF the Poly Legend 30 headset.",
+        "5. Wait 10 seconds. Observe the device status in the Poly Studio Mobile app device list.",
+        "6. Power ON the Poly Legend 30 headset.",
+        "7. Wait up to 15 seconds for Bluetooth reconnection. Observe the device status in the Poly Studio Mobile app device list."
       ],
-      "expected": "The app should reactively update the device status from 'Connected' \u2192 'Disconnected' (when powered off) and then from 'Disconnected' \u2192 'Connected' (when powered on) in real-time without any manual refresh or app restart."
+      "expected": "Step 3: Poly Legend 30 appears in the device list as 'Connected'. Step 5: Device status changes to 'Disconnected' within 10 seconds of power-off. Step 7: Device status updates to 'Connected' within 15 seconds of power-on, without requiring app restart."
     },
     {
-      "title": "TC-BT-DISCOVERY-006: Rapid Power Cycle - Device Status Consistency After Multiple Off/On Transitions",
+      "title": "TC-BT-006: Device-specific coverage \u2014 Pair, power cycle, and status update for Voyager 6200",
       "steps": [
-        "Precondition: Headset is paired and visible in the Poly Studio Mobile app device list. Headset is powered ON and connected.",
-        "Open Poly Studio Mobile app and navigate to the main Device List screen.",
-        "Verify the headset shows status 'Connected'.",
-        "Power OFF the headset. Wait for status to show 'Disconnected'.",
-        "Within 5 seconds of seeing 'Disconnected', power ON the headset.",
-        "Wait 15 seconds. Observe the status.",
-        "Immediately power OFF the headset again.",
-        "Wait 5 seconds, then power ON the headset.",
-        "Wait 20 seconds.",
-        "Record the final device status displayed in the app."
+        "Precondition: Poly Voyager 6200 is fully charged and in pairing mode. Phone Bluetooth is enabled. Poly Studio Mobile app is installed.",
+        "1. Open Poly Studio Mobile app \u2192 Home screen.",
+        "2. Pair Poly Voyager 6200 with the phone via Settings \u2192 Bluetooth.",
+        "3. Return to Poly Studio Mobile app and verify the device appears in the device list as 'Connected'.",
+        "4. Power OFF the Poly Voyager 6200 headset.",
+        "5. Wait 10 seconds. Observe the device status in the Poly Studio Mobile app device list.",
+        "6. Power ON the Poly Voyager 6200 headset.",
+        "7. Wait up to 15 seconds for Bluetooth reconnection. Observe the device status in the Poly Studio Mobile app device list."
       ],
-      "expected": "After rapid power cycles, the app should correctly reflect the final state of the headset. If the headset is ON and connected, status should show 'Connected'. The app should not get stuck in a 'Disconnected' state or show stale status after multiple rapid transitions."
+      "expected": "Step 3: Poly Voyager 6200 appears in the device list as 'Connected'. Step 5: Device status changes to 'Disconnected' within 10 seconds of power-off. Step 7: Device status updates to 'Connected' within 15 seconds of power-on, without requiring app restart."
     },
     {
-      "title": "TC-BT-DISCOVERY-007: Device Status Update After Power On When App Was Force-Killed During Power-Off State",
+      "title": "TC-BT-007: Intermittent/race condition \u2014 Repeated pair/unpair/re-pair cycle (10 iterations) to catch flaky device list refresh",
       "steps": [
-        "Precondition: Headset is paired and visible in the Poly Studio Mobile app device list.",
-        "Open Poly Studio Mobile app and navigate to the main Device List screen.",
-        "Verify the headset shows status 'Connected'.",
-        "Power OFF the headset.",
-        "Wait 10 seconds. Verify the app shows 'Disconnected' or similar.",
-        "Force-kill the Poly Studio Mobile app (swipe from recent apps).",
-        "Power ON the headset.",
-        "Wait 15 seconds for the headset to connect to the phone via Bluetooth.",
-        "Reopen Poly Studio Mobile app.",
-        "Navigate to the main Device List screen.",
-        "Observe the device status."
+        "Precondition: Poly Focus 2 is charged and ready. Phone Bluetooth is enabled. Poly Studio Mobile app is installed and open on Home screen.",
+        "For iteration = 1 to 10:",
+        "1. Put Poly Focus 2 into pairing mode (slide and hold Power switch away from OFF until LCDs flash red/blue).",
+        "2. On phone, go to Settings \u2192 Bluetooth \u2192 tap 'Poly Focus 2' to pair.",
+        "3. Wait for pairing success confirmation on phone.",
+        "4. Switch to Poly Studio Mobile app (do NOT force-kill).",
+        "5. Observe the device list on the Home screen. Check if Poly Focus 2 appears.",
+        "6. If device appears, tap 'Forget' or 'Unpair' in the Poly Studio Mobile app device list (or go to phone Bluetooth settings and unpair).",
+        "7. Wait 5 seconds.",
+        "8. Repeat from step 1 for next iteration."
       ],
-      "expected": "The app should detect the headset as 'Connected' upon launch, since the headset was powered on and connected to the phone via Bluetooth before the app was reopened. The app should read the current Bluetooth state from the system on startup."
+      "expected": "Across all 10 iterations, the Poly Focus 2 appears in the Poly Studio Mobile app device list within 5 seconds of returning to the app after pairing, with zero failures. If any iteration fails (device missing without app restart), the test FAILS and the iteration number is logged."
     },
     {
-      "title": "TC-BT-DISCOVERY-008: Newly Paired Headset via Phone Bluetooth - App Device List Update After Bluetooth Toggle",
+      "title": "TC-BT-008: Intermittent/race condition \u2014 Rapid pair/unpair with app background/foreground between each cycle (5 iterations)",
       "steps": [
-        "Precondition: Headset is fully charged and in pairing mode. Headset is NOT yet paired to the phone.",
-        "Open Poly Studio Mobile app. Navigate to the main Device List screen. Verify no headset is listed.",
-        "Minimize the app (Home button).",
-        "Open phone Settings \u2192 Bluetooth.",
-        "Pair the headset via phone Bluetooth settings. Confirm pairing is successful.",
-        "Return to Poly Studio Mobile app (bring to foreground).",
-        "Verify the headset is NOT yet visible in the device list (baseline).",
-        "Do NOT restart the app. Instead, toggle Bluetooth OFF and then ON from the phone's quick settings panel.",
-        "Wait 10 seconds.",
-        "Observe the Device List screen in the app."
+        "Precondition: Poly Legend 30 is charged and ready. Phone Bluetooth is enabled. Poly Studio Mobile app is installed.",
+        "For iteration = 1 to 5:",
+        "1. Put Poly Legend 30 into pairing mode.",
+        "2. On phone, go to Settings \u2192 Bluetooth \u2192 pair with 'Poly Legend 30'.",
+        "3. Wait for pairing success.",
+        "4. Press Home button to background Poly Studio Mobile app.",
+        "5. Immediately reopen the app from app switcher.",
+        "6. Observe the device list on the Home screen. Check if Poly Legend 30 appears.",
+        "7. If device appears, go to phone Bluetooth settings \u2192 tap 'Forget This Device' to unpair Poly Legend 30.",
+        "8. Wait 3 seconds.",
+        "9. Repeat from step 1 for next iteration."
       ],
-      "expected": "After toggling Bluetooth off and on, the app should detect the newly paired headset and display it in the device list. If the headset still does not appear, this indicates the app only discovers devices on initial startup and does not respond to Bluetooth adapter state changes."
+      "expected": "Across all 5 iterations, the Poly Legend 30 appears in the Poly Studio Mobile app device list immediately upon returning to the app after background/foreground, with zero failures. This validates the app's device list refresh is robust against rapid lifecycle transitions."
     },
     {
-      "title": "TC-BT-DISCOVERY-009: Device Status Stays 'Connected' After Headset Powers Off While App is Backgrounded",
+      "title": "TC-BT-009: Device list refresh when pairing completes while app is on a different screen (not Home)",
       "steps": [
-        "Precondition: Headset is paired, powered ON, and connected to the phone.",
-        "Open Poly Studio Mobile app and navigate to the main Device List screen.",
-        "Verify the headset shows status 'Connected'.",
-        "Press Home button to background the app.",
-        "Power OFF the headset.",
-        "Wait 20 seconds.",
-        "Bring Poly Studio Mobile app back to foreground.",
-        "Observe the device status on the Device List screen.",
-        "Do NOT tap any refresh or navigate away."
+        "Precondition: No Poly devices currently paired. Poly Studio Mobile app is installed.",
+        "1. Open Poly Studio Mobile app \u2192 navigate to a non-Home screen (e.g., Settings or Profile tab).",
+        "2. Put the target device (e.g., Poly Focus 2) into pairing mode.",
+        "3. On the phone, go to Settings \u2192 Bluetooth and pair with the device.",
+        "4. After pairing completes, navigate back to the Home screen by tapping the Home tab.",
+        "5. Observe the device list on the Home screen."
       ],
-      "expected": "The device status should update to 'Disconnected' after the headset is powered off, even when the app was backgrounded during the power-off event. The app should detect the disconnection upon returning to the foreground."
+      "expected": "The newly paired Poly Focus 2 appears in the device list on the Home screen immediately upon navigating to the Home tab, without requiring app restart. This validates that the device list refresh is triggered by Home screen visibility, not just app resume."
     },
     {
-      "title": "TC-BT-DISCOVERY-010: Device Status Update After Power On - Verify Tappable/Selectable State",
+      "title": "TC-BT-010: Device list refresh when pairing completes while app is in foreground on Home screen",
       "steps": [
-        "Precondition: Headset is paired and visible in the Poly Studio Mobile app device list.",
-        "Open Poly Studio Mobile app and navigate to the main Device List screen.",
-        "Power OFF the headset.",
-        "Wait for the device status to show 'Disconnected' or the device card to appear grayed out.",
-        "Tap on the device card/row in the device list.",
-        "Observe the app's response (e.g., does it show 'Device not available' or navigate to a details screen?).",
-        "Power ON the headset.",
-        "Wait 20 seconds for reconnection.",
-        "Observe the device status update to 'Connected'.",
-        "Tap on the device card/row again.",
-        "Verify the app navigates to the device details/settings screen (e.g., Audio Settings, Device Info)."
+        "Precondition: No Poly devices currently paired. Poly Studio Mobile app is installed.",
+        "1. Open Poly Studio Mobile app and stay on the Home screen.",
+        "2. Put the target device (e.g., Poly Voyager 6200) into pairing mode.",
+        "3. Without leaving the app, use the phone's quick settings or split-screen to navigate to Settings \u2192 Bluetooth and pair with the device.",
+        "4. After pairing completes, return focus to Poly Studio Mobile app (still on Home screen).",
+        "5. Observe the device list on the Home screen for up to 10 seconds."
       ],
-      "expected": "When the headset is powered off and disconnected, tapping the device card should either show a 'device not available' message or gracefully handle the unavailable state. After the headset is powered on and status updates to 'Connected', tapping the device card should successfully navigate to the device settings screen without requiring an app restart."
+      "expected": "The newly paired Poly Voyager 6200 appears in the device list on the Home screen within 10 seconds, without any app navigation, backgrounding, or restart. This validates that the app actively polls for new bonded devices even while in the foreground."
     }
   ],
   "analysis_version": "v1",
-  "processed_at": "2026-04-25T05:50:39.409374Z"
+  "processed_at": "2026-04-25T08:35:40.509517Z"
 }
