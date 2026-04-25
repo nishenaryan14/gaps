@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Policy: Policies Applied - Restart the app",
   "feature": "App Settings",
-  "scenario": "Admin tenant device policies are not enforced or updated after restarting the Poly Studio Mobile app",
+  "scenario": "Admin portal device policies remain locked/enforced after restarting the Poly Studio Mobile app",
   "steps": [
-    "1. Launch Poly Studio Mobile app and log in to the admin tenant with a device connected.",
-    "2. From the admin tenant, create a device policy that locks specific settings (e.g., ANC, Transparency Mode, Equalizer).",
+    "1. Launch Poly Studio Mobile app and log in to the tenant with a device connected.",
+    "2. From the admin portal, create and apply a device policy for the connected device (e.g., lock ANC, Transparency Mode, or Equalizer settings).",
     "3. Close and re-launch the Poly Studio Mobile app.",
-    "4. Navigate to Poly Studio Mobile \u2192 [Device Name] \u2192 Audio Settings and verify that settings affected by the policy remain locked/disabled.",
-    "5. Close the Poly Studio Mobile app.",
-    "6. From the admin tenant, modify the existing device policy (e.g., unlock a previously locked setting or lock a new setting).",
-    "7. Re-launch the Poly Studio Mobile app.",
-    "8. Navigate to Poly Studio Mobile \u2192 [Device Name] \u2192 Audio Settings and verify that the policy changes are properly applied (e.g., previously locked settings are now editable, or newly locked settings are now disabled)."
+    "4. Navigate to Poly Studio Mobile \u2192 [Device Name] \u2192 Audio Settings and verify that settings affected by the policy are still locked/disabled (grayed out).",
+    "5. Fully close (force stop) the Poly Studio Mobile app.",
+    "6. From the admin portal, modify the existing device policy (e.g., change which settings are locked or add new restrictions).",
+    "7. Re-launch the Poly Studio Mobile app and log in to the tenant again.",
+    "8. Navigate to Poly Studio Mobile \u2192 [Device Name] \u2192 Audio Settings and verify that the updated policy changes are properly applied (e.g., previously unlocked settings are now locked, or new restrictions are enforced)."
   ],
-  "expected": "After restarting the app, all device policies applied via the admin tenant are properly enforced. Settings affected by the policy remain locked/disabled, and any policy changes made on the admin tenant are reflected in the app after relaunch.",
+  "expected": "After restarting the app, all device policies applied via the admin portal remain locked/enforced. After modifying the policy and restarting the app again, the updated policy changes are properly reflected and enforced in the app.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
+    "admin-portal",
     "device-policy",
-    "policy-enforcement",
     "policy-persistence",
-    "admin-tenant",
-    "anc",
-    "transparency-mode",
-    "equalizer"
+    "anc-lock",
+    "transparency-mode-lock",
+    "equalizer-lock",
+    "audio-settings"
   ],
   "source_last_updated": "1760949373",
   "source_hash": "aad7077667aa415712daea04670ef3c7e74da3c6c494d575e2d11f978b6fe3e9",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.979764Z",
+  "processed_at": "2026-04-25T08:21:31.060609Z",
   "status": "active"
 }
