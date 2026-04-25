@@ -5,30 +5,30 @@
   "project": "411453",
   "title": "1 step DFU - User can trigger firmware update for just earbuds",
   "feature": "Firmware Updates",
-  "scenario": "Voyager Free 60+ UC earbuds firmware update completes independently without updating the charging case firmware",
+  "scenario": "Selective firmware update for earbuds only without updating charging case on Voyager Free 60+ UC",
   "steps": [
     "1. Open the Poly Studio Mobile app on your Android device.",
-    "2. Ensure both the Voyager Free 60+ UC earbuds and the charging case are connected and on firmware version 5039 or higher.",
+    "2. Ensure both earbuds (Voyager Free 60+ UC) and the charging case are connected and both are on firmware version 5039 or higher.",
     "3. From the Home screen, navigate to Settings \u2192 Update.",
     "4. Tap the Update button to check for available firmware updates.",
-    "5. On the firmware update screen, locate the section for the earbuds and tap the Update button specifically for the earbuds.",
-    "6. Wait for the earbuds firmware update process to complete."
+    "5. In the update screen, locate the earbuds section and tap the Update button specifically for the earbuds.",
+    "6. Wait for the firmware update process to complete."
   ],
   "expected": "Only the earbuds DFU (Device Firmware Update) completes successfully. The charging case remains on the lower firmware version (5039 or higher, unchanged).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "selective-firmware-update",
     "voyager-free-60-uc",
-    "firmware-update",
-    "charging-case",
     "poly-studio-mobile",
-    "earbuds-firmware",
-    "update-independence",
-    "android"
+    "earbuds-only-update",
+    "charging-case",
+    "firmware-5039",
+    "settings-update"
   ],
   "source_last_updated": "1760949167",
   "source_hash": "dbcf5b575fc9a297204bf4e59a6159a904609759efd91d0041ac1419a3b4e093",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.884608Z",
+  "processed_at": "2026-04-25T07:55:31.961872Z",
   "status": "active"
 }
