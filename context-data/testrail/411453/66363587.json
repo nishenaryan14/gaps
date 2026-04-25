@@ -5,29 +5,30 @@
   "project": "411453",
   "title": "FMD - Both earbuds connected",
   "feature": "App Settings",
-  "scenario": "Find My Device in Lens app shows both earbuds as a single device on the map for Voyager Free 60+ and Voyager Free 20",
+  "scenario": "Find My Device map shows Osprey and Tern devices as single entities when accessed via Lens app settings",
   "steps": [
-    "Open the Poly Lens app on your mobile device.",
-    "Ensure a Poly Voyager Free 60+ (Osprey) device is connected via Bluetooth.",
-    "Navigate to the Find My Device feature within the app.",
-    "Observe the map view showing the location of the connected earbuds."
+    "1. Ensure both earbuds are connected to the Poly Studio Mobile app.",
+    "2. Open the Lens app with an Osprey device connected.",
+    "3. Tap the App Settings (hamburger) icon in the top-left or top-right corner.",
+    "4. Select \"Find My Device\" from the settings menu.",
+    "5. Observe the device shown on the map."
   ],
-  "expected": "Both earbuds (left and right) should be recognized and displayed as two separate devices on the map.",
+  "expected": "The Osprey device is recognized on the map as a single device. Similarly, a Tern device should also be recognized on the map as one device.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "find-my-device",
-    "poly-lens-app",
-    "voyager-free-60-plus",
-    "voyager-free-20",
-    "map-view",
-    "bluetooth-location",
-    "earbuds-single-device",
-    "osprey"
+    "osprey",
+    "tern",
+    "poly-studio-mobile",
+    "lens-app",
+    "app-settings",
+    "device-map",
+    "single-entity"
   ],
   "source_last_updated": "1762331664",
   "source_hash": "701b3f0353a91854193e87ec8d885c0b87d3842de349878ee56287a407779423",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.091233Z",
+  "processed_at": "2026-04-25T09:32:26.344537Z",
   "status": "active"
 }
