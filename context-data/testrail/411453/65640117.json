@@ -4,31 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "Mobile user changes the Lens tenant, the change in the mobile app",
-  "feature": "Mobile App - Lens Tenant Switching",
-  "scenario": "Mobile user switches Lens tenant and the app displays the new tenant data on the Poly Support/App page, either automatically (if accepted in-app) or after restart (if accepted externally).",
-  "steps": [
-    "1. Change the Lens tenant of a mobile user (e.g., by accepting an invite to another Lens tenant).",
-    "2. If the invite is accepted within the mobile app, verify the change is applied automatically.",
-    "3. If the invite is accepted via an external source (e.g., laptop), restart the mobile app.",
-    "4. Navigate to the Poly Support/App page.",
-    "5. Verify the app displays the new tenant data (tenant name, tenant ID, user ID, app ID)."
-  ],
-  "expected": "The mobile app reflects the tenant change. If accepted within the app, the change applies automatically. If accepted externally, the change applies after restart. The Poly Support/App page shows the new tenant name, tenant ID, user ID, and app ID.",
+  "feature": "App Settings",
+  "scenario": "Lens tenant change after accepting invite via external source is not reflected in Poly mobile app until restart",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "Lens tenant switch",
-    "mobile app",
-    "Poly Support/App page",
-    "tenant data display",
-    "in-app acceptance",
-    "external acceptance",
-    "app restart",
-    "tenant verification"
+    "poly-mobile-app",
+    "lens-tenant-change",
+    "invite-acceptance",
+    "external-source",
+    "app-restart",
+    "tenant-refresh",
+    "account-switching"
   ],
   "source_last_updated": "1760949362",
   "source_hash": "fccd2d78a86994e50e65bfa5b51ec9965469764b350af0bc40bf67b9dd08e3a4",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.325358Z",
+  "processed_at": "2026-04-25T05:37:16.962109Z",
   "status": "active"
 }
