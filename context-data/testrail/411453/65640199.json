@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "Soak Test - Headset connected, app in background, phone actively used",
   "feature": "App Settings",
-  "scenario": "App remains responsive and does not crash after prolonged background use with music playback on paired headset",
+  "scenario": "App remains responsive and does not crash after prolonged background use with music playback on Poly Studio Mobile",
   "steps": [
     "1. Install and launch the Poly Studio Mobile app.",
     "2. Pair a Poly Bluetooth headset with the mobile device.",
     "3. Navigate to the Home screen.",
-    "4. Start playing music via a media app (e.g., YouTube or Spotify).",
+    "4. Start playing music from a media app (e.g., YouTube or Spotify).",
     "5. Put the Poly Studio Mobile app into the background (e.g., press the Home button or switch to another app).",
     "6. Leave the app in the background for several hours while music continues playing.",
     "7. After several hours, bring the Poly Studio Mobile app back to the foreground.",
-    "8. Verify the app is still running, responsive, and does not display any crash dialog or memory warning."
+    "8. Verify the app is still running and responsive (e.g., UI updates, no crash, no freeze)."
   ],
-  "expected": "The Poly Studio Mobile app remains running and responsive after several hours in the background. No crashes, freezes, or memory-related errors occur.",
+  "expected": "The Poly Studio Mobile app remains running and responsive after several hours in the background. No memory leaks, crashes, or freezes occur.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
-    "background-stability",
-    "crash-recovery",
-    "bluetooth-pairing",
+    "background-usage",
+    "app-stability",
     "music-playback",
-    "app-responsiveness",
-    "memory-management",
+    "bluetooth-pairing",
+    "app-crash",
+    "ui-responsiveness",
     "foreground-resume"
   ],
   "source_last_updated": "1760949727",
   "source_hash": "040fc00cc1d81ce84bf3dcc8a4222476d39e83caf9fe2bcb0b51e864cd12f25b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.976724Z",
+  "processed_at": "2026-04-25T07:55:32.002770Z",
   "status": "active"
 }
