@@ -4,32 +4,24 @@
   "type": "testcase",
   "project": "411453",
   "title": "Notifications - Onboarding - Don't Allow, enabled, master toggle is working",
-  "feature": "Notifications - Onboarding",
-  "scenario": "Verify that after enabling notifications in OS settings during onboarding with \"Don't Allow\", the master toggle in Notification tab can be turned OFF and ON, and turning OFF disables all sub-settings.",
-  "steps": [
-    "1. Start onboarding with notifications set to 'Don't Allow'.",
-    "2. Navigate to App Settings > General > Notification tab.",
-    "3. Enable notifications in the OS settings.",
-    "4. Observe the master toggle in the app's notification settings.",
-    "5. Turn the master toggle OFF.",
-    "6. Check all sub-settings below the master toggle."
-  ],
-  "expected": "The master toggle should allow the user to turn it OFF and ON. When OFF is selected, all sub-settings below are also set to OFF.",
+  "feature": "Notifications",
+  "scenario": "Master Notification toggle in App Settings > General still functions correctly when OS-level notifications are initially denied during onboarding",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "notifications",
-    "master toggle",
+    "master-notification-toggle",
+    "app-settings",
+    "general-settings",
+    "os-level-notifications",
     "onboarding",
-    "Don't Allow",
-    "OS settings",
-    "sub-settings",
-    "Notification tab",
-    "enable/disable"
+    "notification-permissions",
+    "poly-app"
   ],
   "source_last_updated": "1761228589",
   "source_hash": "81dca0a5c9ebcc3010dc29e12e55e7a2102e1a8e8b4e6cdaa8937027d7b65e11",
   "context_version": "v1",
-  "processed_at": "2026-04-24T11:50:53.318318Z",
+  "processed_at": "2026-04-25T05:37:16.945328Z",
   "status": "active"
 }
