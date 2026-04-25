@@ -10,19 +10,20 @@
     "Open Poly Studio Mobile app",
     "Navigate to Home screen",
     "Tap on the connected device name to open Device Settings",
-    "Go to General \u2192 Device Name",
+    "Go to General section",
+    "Tap on Device Name",
     "Clear the existing device name",
     "Enter a single character (1 byte / 1 char) as the new device name",
     "Tap Done"
   ],
-  "expected": "The device name is updated successfully to the single character name. The new name is reflected in Device Settings and on the Home screen.",
+  "expected": "The device name is updated successfully to the single character entered.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "device-name",
     "device-settings",
-    "general-settings",
+    "general-section",
     "single-character",
     "name-update",
     "bluetooth-rename"
@@ -30,6 +31,6 @@
   "source_last_updated": "1772624495",
   "source_hash": "3146ae9d7cd9d7354e062d1369edff03db5cfb30b3411147756db43b3460702f",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.970834Z",
+  "processed_at": "2026-04-25T09:32:26.208547Z",
   "status": "active"
 }
