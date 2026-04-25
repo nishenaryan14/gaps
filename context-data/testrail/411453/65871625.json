@@ -5,31 +5,23 @@
   "project": "411453",
   "title": "Home Screen - Onboarding in not displayed over DFU screens after connecting new device",
   "feature": "Firmware Updates",
-  "scenario": "Onboarding dialog is not displayed over DFU screen when a new device is connected during firmware update",
-  "steps": [
-    "1. Launch the Poly Studio Mobile app and connect to a Bluetooth audio device (e.g., Voyager 5200).",
-    "2. Initiate a Device Firmware Update (DFU) process for the connected device.",
-    "3. While the DFU is in progress, pair a new device that supports onboarding (e.g., Emu, Tern, Osprey) via the phone's Bluetooth settings.",
-    "4. Observe the app screen during the DFU process.",
-    "5. After the DFU completes, tap the Close button on the DFU completion screen.",
-    "6. Observe the app screen after closing the DFU screen."
-  ],
-  "expected": "The onboarding dialog for the newly paired device should appear immediately, even while the DFU screen is displayed, or at least as soon as the DFU process completes and before returning to the Home screen.",
+  "scenario": "Onboarding dialog is not displayed over DFU screen when a new device is paired during firmware update",
+  "steps": [],
+  "expected": "",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
-    "device-firmware-update",
+    "firmware-update",
     "dfu-screen",
     "onboarding-dialog",
     "bluetooth-pairing",
-    "voyager-5200",
-    "dfu-completion",
-    "ui-overlay-priority"
+    "device-pairing",
+    "ui-overlay",
+    "poly-studio-mobile"
   ],
   "source_last_updated": "1763381751",
   "source_hash": "35666c47341454f508f34164d2b272579703a4238695e87c951eebf684d4843b",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.042979Z",
+  "processed_at": "2026-04-25T09:32:26.299444Z",
   "status": "active"
 }
