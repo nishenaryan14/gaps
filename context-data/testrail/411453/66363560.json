@@ -5,7 +5,7 @@
   "project": "411453",
   "title": "New DFU screen - translations",
   "feature": "Firmware Updates",
-  "scenario": "DFU screen displays correctly with fully visible, non-broken translated text for all supported languages",
+  "scenario": "DFU screen displays correctly with fully visible, non-broken translated text for supported languages on Tern/Emu devices",
   "steps": [],
   "expected": "",
   "coverage": [],
@@ -13,15 +13,16 @@
   "keywords": [
     "dfu-screen",
     "firmware-update",
-    "localization",
     "translated-text",
+    "localization",
+    "tern",
+    "emu",
     "ui-display",
-    "language-support",
-    "text-rendering"
+    "language-support"
   ],
   "source_last_updated": "1762331320",
   "source_hash": "48234d326f02030e09057c1cb8aa9a81056dcbba8068abe2118cc7a667aa2c46",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:32.010355Z",
+  "processed_at": "2026-04-25T08:21:31.085240Z",
   "status": "active"
 }
