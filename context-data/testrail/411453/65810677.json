@@ -5,29 +5,28 @@
   "project": "411453",
   "title": "Swipe left, previous screen",
   "feature": "App Settings",
-  "scenario": "Quick Setup Guide swiping left from fourth screen navigates backward instead of forward through setup screens",
+  "scenario": "Quick Setup Guide screens loop back to previous screens when swiping left from the fourth screen instead of advancing forward",
   "steps": [
-    "Open Poly Studio Mobile app",
-    "Navigate to Quick Setup Guide (QSG)",
-    "Swipe left from the fourth screen of the QSG",
-    "Swipe left again",
-    "Swipe left a third time"
+    "Open the Poly Studio Mobile app.",
+    "Navigate to the Quick Setup Guide (QSG) screens (e.g., via Home \u2192 Account \u2192 Quick Setup Guide or similar path).",
+    "Swipe left on the fourth (last) QSG screen.",
+    "Observe the navigation behavior."
   ],
-  "expected": "Swiping left from the fourth screen should navigate forward through the setup screens, or swiping left should have no effect if already on the first screen.",
+  "expected": "Swiping left on the fourth (last) QSG screen should exit the QSG or show a completion/dismiss action (e.g., \"Get Started\" button), not navigate back to previous screens.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "quick-setup-guide",
     "poly-studio-mobile",
-    "swipe-navigation",
-    "setup-screens",
-    "screen-navigation",
-    "qsg",
-    "gesture-direction"
+    "quick-setup-guide",
+    "qsg-navigation",
+    "screen-loop",
+    "swipe-gesture",
+    "ui-navigation-bug",
+    "onboarding-flow"
   ],
   "source_last_updated": "1761315357",
   "source_hash": "3023f8cf959a34aec81b41df3db7a0ffc429be5e50eaf122cd4e1bbd7d492f5c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.012135Z",
+  "processed_at": "2026-04-25T09:32:26.264981Z",
   "status": "active"
 }
