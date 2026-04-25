@@ -5,32 +5,32 @@
   "project": "411453",
   "title": "Device Home Screen - Device image updates after changing earcups",
   "feature": "Device Management",
-  "scenario": "Device Home Screen headset image does not update to reflect swapped earcups on Falcon devices",
+  "scenario": "Device Home Screen headset image does not update to reflect swapped earcups on supported Falcon devices",
   "steps": [
     "1. Pair a device that supports swappable earcups (e.g., a Falcon device) with the Poly Studio Mobile app.",
     "2. Navigate to the Home screen in the Poly Studio Mobile app.",
     "3. Observe the device image displayed on the Home screen \u2014 it should show the currently attached earcups.",
     "4. Remove the currently attached earcups from the device.",
-    "5. Observe the device image on the Home screen \u2014 it remains unchanged (does not update to reflect the removed earcups).",
+    "5. Observe the device image on the Home screen \u2014 it should remain unchanged after removal.",
     "6. Attach a different set of earcups to the device.",
     "7. Observe the device image on the Home screen \u2014 it should update immediately to reflect the newly attached earcups."
   ],
-  "expected": "The device image on the Home screen updates immediately to reflect the currently attached earcups when they are swapped.",
+  "expected": "The device image on the Home screen updates immediately to reflect the newly attached earcups after they are swapped.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
+    "device-home-screen",
+    "headset-image",
+    "swappable-earcups",
     "falcon-devices",
     "poly-studio-mobile",
-    "home-screen",
-    "device-image",
-    "swappable-earcups",
     "earcup-detection",
     "ui-update",
-    "earcup-persistence"
+    "earcup-swap"
   ],
   "source_last_updated": "1769426592",
   "source_hash": "1abb9f74fa7bcdb1d02f7ec1d0cdd43b30a101db9d1a36d6ff6c9f9953436791",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.737539Z",
+  "processed_at": "2026-04-25T07:55:31.802069Z",
   "status": "active"
 }
