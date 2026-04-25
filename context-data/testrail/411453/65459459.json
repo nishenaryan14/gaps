@@ -8,13 +8,13 @@
   "scenario": "Software Update screen displays correct message and active Continue button when headset on outdated firmware is connected",
   "steps": [
     "1. Pair and connect a headset running outdated firmware to the Poly Studio Mobile Android app.",
-    "2. Open the Poly Studio Mobile app on the Android device.",
-    "3. Navigate to the Home screen and tap on the connected [Device Name] to access Device Settings.",
-    "4. In Device Settings, locate and tap the 'Software Update' tab.",
-    "5. Tap the 'Update' button on the Software Update screen.",
+    "2. Open the Poly Studio Mobile app.",
+    "3. Navigate to the Home screen and tap on the connected device name to open Device Settings.",
+    "4. In Device Settings, tap on the \"Software Update\" tab.",
+    "5. Tap the \"Update\" button.",
     "6. Observe the Software Update screen that appears."
   ],
-  "expected": "The Software Update screen displays the message: \"An update is available for your device. The update takes a few minutes to complete. Let's get started\" and the 'Continue' button is available and active.",
+  "expected": "The Software Update screen appears with the message \"An update is available for your device. The update takes a few minutes to complete. Let's get started\" and the \"Continue\" button is available and active.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
@@ -29,6 +29,6 @@
   "source_last_updated": "1763122636",
   "source_hash": "16e6c3db2e3e17e2ed89acaf26d854e9fbe1ba032a3b8a0c3e5992e8e1184fdb",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.953695Z",
+  "processed_at": "2026-04-25T08:21:31.024595Z",
   "status": "active"
 }
