@@ -5,33 +5,31 @@
   "project": "411453",
   "title": "[IOS] Location Sharing Dialogue - Don't Allow - Cancel",
   "feature": "App Settings",
-  "scenario": "Tapping Cancel on Find My Device permission popup after denying Location Sharing during onboarding does not navigate back to Poly Lens Menu",
+  "scenario": "Location permission popup appears in Find My Device after declining location sharing during onboarding; tapping Cancel returns to Poly Lens Menu",
   "steps": [
     "1. Launch the Poly Studio Mobile app.",
     "2. During onboarding, when the Location Sharing dialogue appears, tap \"Don't Allow\".",
-    "3. Complete the onboarding flow.",
-    "4. Navigate to the Home screen.",
-    "5. Tap the menu icon (hamburger) or navigate to App Settings.",
-    "6. Select \"Find My Device\".",
-    "7. Observe a permission popup with \"Cancel\" and \"Enable Now\" options.",
-    "8. Tap \"Cancel\"."
+    "3. Complete the remaining onboarding steps to reach the Home screen.",
+    "4. Navigate to App Settings (gear icon) \u2192 Find My Device.",
+    "5. Observe the permission popup that appears.",
+    "6. Tap \"Cancel\" on the permission popup."
   ],
-  "expected": "The user is navigated back to the Poly Lens Menu screen.",
+  "expected": "The user remains on the Find My Device screen within the app, or the permission request is dismissed without navigating away.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "poly-studio-mobile",
     "find-my-device",
-    "location-sharing",
+    "location-permission",
     "permission-popup",
-    "onboarding-flow",
-    "cancel-button",
-    "navigation-issue",
-    "poly-lens-menu"
+    "onboarding",
+    "location-sharing",
+    "poly-lens-menu",
+    "app-settings"
   ],
   "source_last_updated": "1759150486",
   "source_hash": "62f7efea81a876f1627372dd7e7c2f56f14a07f7f4163a75c1e8a3a5861ab981",
   "context_version": "v1",
-  "processed_at": "2026-04-25T07:55:31.786088Z",
+  "processed_at": "2026-04-25T08:21:30.910862Z",
   "status": "active"
 }
