@@ -5,33 +5,30 @@
   "project": "411453",
   "title": "Language change - Case Update Needed popup is not present after Language Change",
   "feature": "Firmware Updates",
-  "scenario": "\"Case Update Needed\" popup incorrectly triggers or fails to appear after changing app language in Device Settings on Poly Studio Mobile",
+  "scenario": "\"Case Update Needed\" popup incorrectly appears on Home Screen after language change in Device Settings, instead of only after a firmware DFU update",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to Home screen and ensure a Poly Bluetooth audio device (e.g., earbuds) is connected.",
-    "3. Go to Device Settings by tapping on the connected device name.",
-    "4. Tap on 'Languages' under Device Settings.",
-    "5. Change the app language to a different language (e.g., from English to Spanish).",
-    "6. Exit Device Settings and return to the Home screen.",
-    "7. Trigger a software/firmware update check by navigating to Settings > Software Update (or equivalent path).",
-    "8. Observe whether the 'Case Update Needed' popup or card is displayed."
+    "1. Open the Poly Studio Mobile app on your Android device.",
+    "2. Navigate to Home \u2192 Device Settings \u2192 [Device Name].",
+    "3. Tap on Languages and change the language to a different option.",
+    "4. Complete the language update process.",
+    "5. Return to the Home screen.",
+    "6. Observe whether the \"Case Update Needed\" popup/card is displayed."
   ],
-  "expected": "The 'Case Update Needed' popup/card should NOT appear after a language change alone. It should only appear after a firmware DFU (Device Firmware Update) for the earbuds is required or triggered via Settings > Software Update.",
+  "expected": "The \"Case Update Needed\" popup should NOT be displayed on the Home screen after a language change. This card should only appear after a firmware DFU update for the earbuds (Settings > Software Update).",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "case-update-needed",
     "poly-studio-mobile",
+    "case-update-needed",
+    "language-change",
     "device-settings",
-    "app-language-change",
-    "software-update",
-    "popup-trigger",
-    "bluetooth-audio-device",
-    "firmware-update-check"
+    "home-screen",
+    "firmware-dfu-update",
+    "android"
   ],
   "source_last_updated": "1763382835",
   "source_hash": "2f7419fff0d1f7c9ff04fdab2ee49b38fbf130529d4db896bb6d3beb9be8e492",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:30.981019Z",
+  "processed_at": "2026-04-25T09:32:26.231960Z",
   "status": "active"
 }
