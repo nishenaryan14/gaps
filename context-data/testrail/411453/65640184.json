@@ -7,27 +7,33 @@
   "feature": "App Settings",
   "scenario": "Analytics event logged when Fit Test screen is opened in Poly Studio Mobile app",
   "steps": [
-    "Open the Poly Studio Mobile app on the Android device.",
-    "Navigate to the Home screen.",
-    "Tap on the connected Poly Bluetooth audio device to open Device Settings.",
-    "In Device Settings, locate and tap on 'Fit Test' (or navigate to Audio Settings \u2192 Fit Test if applicable).",
-    "Observe that the Fit Test screen opens."
+    "1. Open the Poly Studio Mobile app on the connected mobile device.",
+    "2. Navigate to the Home screen.",
+    "3. Tap on the device name to open Device Settings.",
+    "4. In Device Settings, locate and tap on 'Fit Test' to open the Fit Test screen.",
+    "5. Observe the Fit Test screen loading completely.",
+    "6. Open the Firebase Analytics console for the Poly Studio Mobile app.",
+    "7. Navigate to the Fit Test analytics event page.",
+    "8. Note the current event count for the Fit Test screen opened event (filtered by country, gender, per session, app version, app build, and app environment as needed).",
+    "9. Return to the Poly Studio Mobile app and close the Fit Test screen (e.g., tap Back or navigate away).",
+    "10. Re-open the Fit Test screen by repeating steps 2-4.",
+    "11. Check the Firebase Analytics console again and verify that the event count for the Fit Test screen opened event has increased by 1 (or more, depending on the number of times the screen was opened)."
   ],
-  "expected": "An analytics event is logged when the Fit Test screen is opened. The event should include the following data fields: event count, country, gender, sessions, app version, build, and environment.",
+  "expected": "The Fit Test screen opened analytics event is logged each time the Fit Test screen is opened. The event count in Firebase Analytics increases accordingly, and the event metadata (country, gender, per session, app version, app build, app environment) is correctly tracked.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "fit-test",
+    "fit-test-screen",
     "poly-studio-mobile",
-    "device-settings",
     "analytics-event",
-    "audio-settings",
-    "bluetooth-audio-device",
-    "android"
+    "firebase-analytics",
+    "device-settings",
+    "screen-opened-event",
+    "event-count-verification"
   ],
   "source_last_updated": "1760949700",
   "source_hash": "135380f9db72cfe8ddd827d0392be3ca8b3ecfab3c3cd27ae981162a4033944c",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.066786Z",
+  "processed_at": "2026-04-25T09:32:26.330620Z",
   "status": "active"
 }
