@@ -5,32 +5,30 @@
   "project": "411453",
   "title": "Device Settings - Settings screen for disconnected device",
   "feature": "Device Management",
-  "scenario": "Device Settings overflow menu does not display Onboarding, User Guides, and Delete Device options when headset is disconnected",
+  "scenario": "Device Settings tabs (Onboarding, User Guides, Quick Start Guide, Delete Device) display correctly when navigating from disconnected headset state on Poly Studio Mobile app",
   "steps": [
-    "1. Open the Poly Studio Mobile app on the Android device.",
-    "2. Navigate to the Home screen.",
-    "3. Ensure a Poly Bluetooth headset is currently connected to the app.",
-    "4. Disconnect the headset (e.g., turn off the headset or move out of range).",
-    "5. On the Home screen, tap the device name or icon to enter the Device Settings screen for the disconnected headset.",
-    "6. On the Device Settings screen, locate and tap the \"...\" (More options) button.",
-    "7. Observe the list of settings tabs that appear."
+    "1. Launch the Poly Studio Mobile app on the Android device.",
+    "2. Ensure no Poly Bluetooth headset is connected to the phone.",
+    "3. On the Home screen, tap the \"...\" (More Options) button.",
+    "4. Select \"Device Settings\" from the menu.",
+    "5. Observe the tabs displayed on the Device Settings screen."
   ],
-  "expected": "The \\\"...\\\" button displays settings tabs such as Onboarding, User Guides, Quick Start Guide, and Delete Device. The available tabs may vary slightly between different Poly devices.",
+  "expected": "The Device Settings screen should display tabs such as Onboarding, User Guides, Quick Start Guide, and Delete Device. The available tabs may vary slightly between different device models.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
-    "poly-studio-mobile",
+    "poly-studio-mobile-app",
     "device-settings",
-    "overflow-menu",
-    "more-options",
-    "onboarding",
-    "user-guides",
-    "delete-device",
-    "disconnected-headset"
+    "disconnected-headset",
+    "onboarding-tab",
+    "user-guides-tab",
+    "quick-start-guide-tab",
+    "delete-device-tab",
+    "android"
   ],
   "source_last_updated": "1763028795",
   "source_hash": "cddd7b24e74aa35be36c281b3e98f4fb23d9dfe30d7b2e13f340a62547444f45",
   "context_version": "v1",
-  "processed_at": "2026-04-25T05:37:16.788272Z",
+  "processed_at": "2026-04-25T07:55:31.865383Z",
   "status": "active"
 }
