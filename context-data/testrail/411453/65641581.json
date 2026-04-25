@@ -5,33 +5,33 @@
   "project": "411453",
   "title": "EQ - Custom EQ - White circle when changing value on sliders",
   "feature": "Equalizer",
-  "scenario": "Custom EQ slider touch indicator (white circle) does not appear, follow, or disappear correctly on all 7 sliders in the Custom EQ screen",
+  "scenario": "Custom EQ slider interaction indicator (white circle) does not appear and follow user movement on all 7 sliders in Custom EQ mode",
   "steps": [
     "1. Open the Poly Studio Mobile app.",
     "2. Navigate to Home \u2192 [Device Name] \u2192 Audio Settings \u2192 Equalizer.",
     "3. Select the 'Custom' EQ mode.",
-    "4. On the Custom EQ screen, locate any one of the 7 frequency sliders.",
-    "5. Touch and hold the slider dot on that frequency slider.",
-    "6. While holding, slide the dot left or right along the slider.",
-    "7. Release the slider dot.",
-    "8. Repeat steps 4\u20137 for each of the remaining 6 frequency sliders."
+    "4. Tap and drag any one of the 7 EQ sliders (e.g., 32 Hz, 64 Hz, 125 Hz, 250 Hz, 500 Hz, 1 kHz, 2 kHz, 4 kHz, 8 kHz, 16 kHz) to change its value.",
+    "5. While dragging, observe the slider dot.",
+    "6. Release the slider.",
+    "7. Observe the slider dot after release.",
+    "8. Repeat steps 4\u20137 for each of the remaining 6 sliders."
   ],
-  "expected": "A white circle appears around the slider dot when the user touches and holds it. The white circle follows the dot as the user slides left/right. The white circle disappears when the user releases the dot. This behavior is consistent across all 7 sliders in the Custom EQ screen.",
+  "expected": "A white circle appears around the slider dot while the user is interacting with it, follows the user's finger movement, and disappears upon release. This behavior is consistent across all 7 sliders in Custom EQ mode.",
   "coverage": [],
   "edge_cases": [],
   "keywords": [
     "custom-eq",
     "eq-slider",
-    "touch-indicator",
-    "frequency-slider",
+    "slider-indicator",
+    "white-circle",
     "poly-studio-mobile",
     "audio-settings",
-    "equalizer-screen",
-    "slider-dot"
+    "equalizer",
+    "touch-interaction"
   ],
   "source_last_updated": "1760956310",
   "source_hash": "6180b2dd6d57b87c4674d05b1067eadafe2966cebec098af1182b100e2a0d618",
   "context_version": "v1",
-  "processed_at": "2026-04-25T08:21:31.006054Z",
+  "processed_at": "2026-04-25T09:32:26.259221Z",
   "status": "active"
 }
